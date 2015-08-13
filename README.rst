@@ -1,5 +1,5 @@
-[T]ROIA for [Y]ou and [M]e
+TROIA for you and me
 =====================
 A fast paced TROIA book for you and me.
 
-Read it `here <http://tym.readthedocs.org/en/latest>`_.
+Read it `here <http://tym.readthedocs.org/en/latest>`_
