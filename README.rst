@@ -1,4 +1,4 @@
-TROIA for you and me
+[T]ROIA for [Y]ou and [M]e
 =====================
 A fast paced TROIA book for you and me.
 
