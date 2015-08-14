@@ -6,8 +6,7 @@
 Welcome to TROIA for you and me
 ==================================
 
-This is an open book to learn TROIA programming language, it is for both for the programmers who are new to TROIA.
-Even it's for the programmers who are new to TROIA, also it contains useful information for experienced programmers and colsultants.
+This is an open book to learn TROIA programming language. Even it's for the programmers who are new to TROIA, also it contains useful information for experienced programmers and colsultants.
 
 Contents:
 
