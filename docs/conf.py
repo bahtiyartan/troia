@@ -44,8 +44,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Python for you and me'
-copyright = u'2008-2015, Kushal Das'
+project = u'TROIA for you and me'
+copyright = u'2014-2015, Bahtiyar Tan'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -174,7 +174,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Pythonforyouandmedoc'
+htmlhelp_basename = 'Troiaforyouandmedoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -193,8 +193,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Pythonforyouandme.tex', u'Python for you and me',
-   u'Kushal Das', 'manual'),
+  ('index', 'Troiaforyouandme.tex', u'TROIA for you and me',
+   u'Bahtiyar Tan', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -223,7 +223,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'pythonforyouandme', u'Python for you and me Documentation',
+    ('index', 'troiaforyouandme', u'TROIA for you and me Documentation',
      [u'Kushal Das'], 1)
 ]
 
@@ -237,8 +237,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Pythonforyouandme', u'Python for you and me Documentation',
-   u'Kushal Das', 'Pythonforyouandme', 'One line description of project.',
+  ('index', 'Troiaforyouandme', u'Python for you and me Documentation',
+   u'Bahtiyar Tan', 'Troiaforyouandme', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -255,10 +255,10 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Python for you and me'
-epub_author = u'Kushal Das'
-epub_publisher = u'Kushal Das'
-epub_copyright = u'2008-2014, Kushal Das'
+epub_title = u'TROIA for you and me'
+epub_author = u'Bahtiyar Tan'
+epub_publisher = u'Bahtiyar Tan'
+epub_copyright = u'2014-2015, Bahtiyar Tan'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
