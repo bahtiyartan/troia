@@ -6,7 +6,7 @@
 Welcome to TROIA for you and me
 ==================================
 
-This is an open and unofficial book to learn TROIA Platfotm and Programming Language. Even it's for the programmers who are new to TROIA, also it contains useful information for experienced programmers, colsultants, system administrators.
+This is an open and <u>unofficial</u> book to learn TROIA Platfotm and Programming Language. Even it's for the programmers who are new to TROIA, also it contains useful information for experienced programmers, colsultants, system administrators.
 
 .. toctree::
    :maxdepth: 2
