@@ -10,7 +10,7 @@ This is an open and unofficial book to learn TROIA Platfotm and Programming Lang
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    installation
    thebeginning
