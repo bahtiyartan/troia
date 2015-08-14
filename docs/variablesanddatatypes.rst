@@ -41,6 +41,12 @@ From the above example you can understand that to declare a variable in Python ,
     >>> "Hello World!"
     'Hello World!'
 
+	
+Helo World
+------------
+
+this is a hello world text	
+	
 Reading input from the Keyboard
 ===============================
 
