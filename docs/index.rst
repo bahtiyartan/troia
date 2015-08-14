@@ -8,8 +8,6 @@ Welcome to TROIA for you and me
 
 This is an open book to learn TROIA programming language. Even it's for the programmers who are new to TROIA, also it contains useful information for experienced programmers and colsultants.
 
-Contents:
-
 .. toctree::
    :maxdepth: 2
 
