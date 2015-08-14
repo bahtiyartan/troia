@@ -1,7 +1,7 @@
 
 
 =======================
-Variables and Datatypes
+Data Types/Structures and Variables
 =======================
 
 Every programming language is having own grammar rules just like the other languages we speak.
