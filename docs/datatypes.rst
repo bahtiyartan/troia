@@ -33,7 +33,8 @@ table in detail...
 Keywords and Identifiers
 ------------------------
 
-The following identifiers are used as reserved words, or keywords of the language, and cannot be used as ordinary identifiers. They must be spelled exactly as written here:
+As mentioned in previous sections TROIA is a command based language, as a result of it's structure TROIA has more reserved words compared to an ordinary programming language.
+
 
 ::
 
