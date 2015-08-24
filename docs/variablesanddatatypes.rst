@@ -4,25 +4,7 @@
 Data Types and Structures
 =======================
 
-Every programming language is having own grammar rules just like the other languages we speak.
-
-::
-
-    >>> a = 13
-    >>> b = 23
-    >>> a + b
-    36
-
-From the above example you can understand that to declare a variable in Python , what you need is just to type the name and the value. Python can also manipulate strings They can be enclosed in single quotes or double quotes like
-
-::
-
-    >>> 'India'
-    'India'
-    >>> 'India\'s best'
-    "India's best"
-    >>> "Hello World!"
-    'Hello World!'
+Like other programming languages, TROIA has data types and structurs.
 
 	
 Helo World
