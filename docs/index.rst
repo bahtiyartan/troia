@@ -15,7 +15,7 @@ This is an open and unofficial book to learn TROIA Platfotm and Programming Lang
 
    installation
    thebeginning
-   variablesanddatatypes
+   datatypes
    operatorsexpressions
    ifelse
    looping
