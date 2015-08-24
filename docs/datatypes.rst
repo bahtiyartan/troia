@@ -33,7 +33,7 @@ table in detail...
 Keywords and Identifiers
 ------------------------
 
-As mentioned in previous sections TROIA is a command based language, as a result of it's structure TROIA has more reserved words compared to an ordinary programming language.
+As mentioned in previous sections TROIA is a command based language. As a result of it's structure TROIA has more reserved words compared to an ordinary programming language.
 
 
 ::
