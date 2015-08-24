@@ -10,62 +10,16 @@ Like any other programming language, TROIA has primitive and complex data types 
 Primitive Data Types
 --------------------
 
-this is a hello world text	
+primitive data types...	
 	
-Reading input from the Keyboard
-===============================
+STRING
+====================
 
-Generally the real life Python codes do not need to read input from the keyboard. In Python we use input function to do input. *input("String to show")* , this will return a string as output. Let us write a program to read a number from the keyboard and check if it is less than 100 or not. Name of the program is testhundred.py
+strings in detail...
 
-.. code-block:: python
 
-    #!/usr/bin/env python3
-    number = int(input("Enter an integer: "))
-    if number < 100:
-        print("Your number is smaller than 100")
-    else:
-        print("Your number is greater than 100")
-
-The output
-
-::
-
-    $ ./testhundred.py
-    Enter an integer: 13
-    Your number is smaller than 100
-    $ ./testhundred.py
-    Enter an integer: 123
-    Your number is greater than 100
-
-In the next program we are going to calculate investments.
-
-::
-
-    #!/usr/bin/env python
-    amount = float(input("Enter amount: "))
-    inrate = float(input("Enter Interest rate: "))
-    period = int(input("Enter period: "))
-    value = 0
-    year = 1
-    while year <= period:
-        value = amount + (inrate * amount)
-        print("Year %d Rs. %.2f" % (year, value))
-        amount = value
-        year = year + 1
-
-The output
-
-::
-
-    $ ./investment.py
-    Enter amount: 10000
-    Enter Interest rate: 0.14
-    Enter period: 5
-    Year 1 Rs. 11400.00
-    Year 2 Rs. 12996.00
-    Year 3 Rs. 14815.44
-    Year 4 Rs. 16889.60
-    Year 5 Rs. 19254.15
+Main Data Type : Table
+--------------------
 
 Some Examples
 =============
