@@ -4,7 +4,7 @@
 Data Types and Structures
 =======================
 
-Like any other language, TROIA has primitive and complex data types and structures.
+Like any other programming language, TROIA has primitive and complex data types and structures.
 
 	
 Primitive Data Types
