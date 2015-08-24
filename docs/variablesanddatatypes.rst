@@ -13,7 +13,7 @@ The following identifiers are used as reserved words, or keywords of the languag
 
 ::
 
-    False      class      finally    is         return
+    CONFIRM    class      finally    is         return
     None       continue   for        lambda     try
     True       def        from       nonlocal   while
     and        del        global     not        with
