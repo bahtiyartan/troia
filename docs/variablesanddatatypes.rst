@@ -1,27 +1,10 @@
 
 
 =======================
-Data Types/Structures and Variables
+Data Types and Structures
 =======================
 
 Every programming language is having own grammar rules just like the other languages we speak.
-
-Keywords and Identifiers
-========================
-
-The following identifiers are used as reserved words, or keywords of the language, and cannot be used as ordinary identifiers. They must be spelled exactly as written here:
-
-::
-
-    CONFIRM    class      finally    is         return
-    None       continue   for        lambda     try
-    True       def        from       nonlocal   while
-    and        del        global     not        with
-    as         elif       if         or         yield
-    assert     else       import     pass
-    break      except     in         raise
-
-In Python we don't specify what kind of data we are going to put in a variable. So you can directly write abc = 1 and abc will become an integer datatype. If you write abc = 1.0 abc will become of floating type. Here is a small program to add two given numbers
 
 ::
 
@@ -217,3 +200,17 @@ Below we have another example of tuple unpacking.
     'Python'
 
 
+Keywords and Identifiers
+========================
+
+The following identifiers are used as reserved words, or keywords of the language, and cannot be used as ordinary identifiers. They must be spelled exactly as written here:
+
+::
+
+    CONFIRM    class      finally    is         return
+    None       continue   for        lambda     try
+    True       def        from       nonlocal   while
+    and        del        global     not        with
+    as         elif       if         or         yield
+    assert     else       import     pass
+    break      except     in         raise
