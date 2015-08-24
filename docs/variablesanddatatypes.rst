@@ -4,11 +4,11 @@
 Data Types and Structures
 =======================
 
-Like other programming languages, TROIA has data types and structurs.
+Like any other language, TROIA has primitive and complex data types and structures.
 
 	
-Helo World
-------------
+Primitive Data Types
+--------------------
 
 this is a hello world text	
 	
