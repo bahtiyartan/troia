@@ -39,7 +39,7 @@ Basically, TROIA keywords are consisted from command, function and predefined sy
 It is not allowed to use these words as variable and functions name.
 To avoid using TROIA keywords as variable/function name programmers must not use the word that has extra color in TROIA Editor.
 
-Some of the most important TROIA Idendifiers are listed below. 
+Some of the most used TROIA idendifiers are listed below. 
 
 ::
 
