@@ -43,11 +43,11 @@ Some of the most important TROIA Idendifiers are listed below.
 ::
 
 	GET            IF             MARKERSET      RETURNVALUE    COPY
-	EXECUTE        MESSAGE        SELECT         MARKERPOINT	RETURN
+	EXECUTE        MESSAGE        SELECT         MARKERPOINT    RETURN
 	BREAK          DECIMAL        INSERT         MOVE           SELECTED
 	BREAKPOINT     DELETE         INSERTED       NOTFOUND       SET              
 	CALL           DELETED        ZOOMID         NOTSELECTED    SQL
-	CLASS          DEQUE          JAVA           NULL   		ZOOM
+	CLASS          DEQUE          JAVA           NULL           ZOOM
 	CLEAR          ENQUE          VOID           PAGENUM        WHILE
 	CONFIRM        ENTITYID       LOOP           RETURN         SWITCH
 	TRUE           TIMES          FALSE          UPDATED        ZOOMFYI
