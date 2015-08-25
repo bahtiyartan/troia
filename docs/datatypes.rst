@@ -10,12 +10,25 @@ Like any other programming language, TROIA has primitive and complex data types 
 Primitive Data Types
 --------------------
 
-primitive data types...	
-	
-String in Details
-====================
+::
 
-strings in detail...
+	STRING
+	INTEGER
+	LONG
+	DECIMAL
+	DATETIME
+	DATE
+	TIME
+	TIMES
+
+	BOOLEAN
+	STRINGBUILDER
+
+
+StringBuilder
+--------------------
+
+string builder in detail...
 
 
 Table
@@ -27,7 +40,7 @@ table in detail...
 Vector
 --------------------
 
-table in detail...
+vector in detail...
 
 
 Keywords and Identifiers
@@ -39,7 +52,7 @@ Basically, TROIA keywords are consisted from command, function and predefined sy
 It is not allowed to use these words as variable and functions name.
 To avoid using TROIA keywords as variable/function name programmers must not use the word that has extra color in TROIA Editor.
 
-Some of the most used TROIA idendifiers are listed below. 
+Some of the most subtle/used TROIA idendifiers are listed below.
 
 ::
 
