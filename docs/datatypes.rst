@@ -34,14 +34,21 @@ Keywords and Identifiers
 ------------------------
 
 As mentioned in previous sections TROIA is a command based language. As a result of it's structure TROIA has more reserved words compared to an ordinary programming language.
+Basically, TROIA keywords are consisted from command, function and predefined system variable names and it is not allowed to use these words as variable and functions name.
 
+To avoid using TROIA keywords as variable/function name programmers must not use the word that has extra color in TROIA Editor.
+
+Some of the most important TROIA Idendifiers are listed below. 
 
 ::
 
-    CONFIRM    class      finally    is         return
-    None       continue   for        lambda     try
-    True       def        from       nonlocal   while
-    and        del        global     not        with
-    as         elif       if         or         yield
-    assert     else       import     pass
-    break      except     in         raise
+	GET            IF             MARKERSET      RETURNVALUE    COPY
+	EXECUTE        MESSAGE        SELECT         MARKERPOINT	RETURN
+	BREAK          DECIMAL        INSERT         MOVE           SELECTED
+	BREAKPOINT     DELETE         INSERTED       NOTFOUND       SET              
+	CALL           DELETED        ZOOMID         NOTSELECTED    SQL
+	CLASS          DEQUE          JAVA           NULL   		ZOOM
+	CLEAR          ENQUE          VOID           PAGENUM        WHILE
+	CONFIRM        ENTITYID       LOOP           RETURN         SWITCH
+	TRUE           TIMES          FALSE          UPDATED        ZOOMFYI
+	PUT            
