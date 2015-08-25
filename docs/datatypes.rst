@@ -51,4 +51,4 @@ Some of the most important TROIA Idendifiers are listed below.
 	CLEAR          ENQUE          VOID           PAGENUM        WHILE
 	CONFIRM        ENTITYID       LOOP           RETURN         SWITCH
 	TRUE           TIMES          FALSE          UPDATED        ZOOMFYI
-	PUT            
+	PUT            BEGINTRAN      COMMITTRAN     ROLLBACKTRAN   
