@@ -34,8 +34,9 @@ Keywords and Identifiers
 ------------------------
 
 As mentioned in previous sections TROIA is a command based language. As a result of it's structure TROIA has more reserved words compared to an ordinary programming language.
-Basically, TROIA keywords are consisted from command, function and predefined system variable names and it is not allowed to use these words as variable and functions name.
+Basically, TROIA keywords are consisted from command, function and predefined system variable names. 
 
+It is not allowed to use these words as variable and functions name.
 To avoid using TROIA keywords as variable/function name programmers must not use the word that has extra color in TROIA Editor.
 
 Some of the most important TROIA Idendifiers are listed below. 
