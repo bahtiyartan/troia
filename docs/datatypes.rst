@@ -26,6 +26,9 @@ Basic built-in data types are listed below:
 	
 	STRING       (Single quote (') is used to limit hardcode strings)
 	STRINGBUILDER
+	
+	TABLE
+	VECTOR
 
 StringBuilder & String
 --------------------
