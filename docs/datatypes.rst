@@ -28,7 +28,12 @@ Primitive Data Types
 StringBuilder
 --------------------
 
-string builder in detail...
+STRINGBUILDER is a string like symbol type which is designed for only string building operation.
+
+Using a STRINGBUILDER variable instead of STRING increases string concatenation performance dramatically.
+To get higher performance on string concatenation, you must use APPENDSTRING command instead of '+' operator.
+
+Although there is not any other distictive feature between STRINGBUILDER and STRING, it is not recomended to use STRINGBUILDER type instead of STRING on regular string opreations except string concateantion.
 
 
 Table
