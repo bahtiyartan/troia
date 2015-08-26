@@ -10,22 +10,25 @@ Like any other programming language, TROIA has primitive and complex data types 
 Primitive Data Types
 --------------------
 
+Basic built-in data types are listed below:
+
 ::
 
-	STRING
-	INTEGER
-	LONG
-	DECIMAL
-	DATETIME
-	DATE
-	TIME
-	TIMES
-
-	BOOLEAN
+	INTEGER     (Ex: 5)
+	LONG		(Ex: 12312312)
+	DECIMAL		(Ex: 1.32)
+	BOOLEAN     (0 or 1, commonly INTEGER type is used instead of BOOLEAN type)
+	
+	DATETIME	(Ex: 29.10.1923 16:30:30) 
+	DATE		(Ex: 23.04.1920) 
+	TIME		(Ex: 21:30)
+	TIMES		(Ex: 21:30:13)
+	
+	STRING		(Single quote (') character is used to define/limit hardcode strings)
 	STRINGBUILDER
 
 
-StringBuilder
+StringBuilder & String
 --------------------
 
 STRINGBUILDER is a string like symbol type which is designed for only string building operation.
@@ -34,6 +37,8 @@ Using a STRINGBUILDER variable instead of STRING increases string concatenation 
 To get higher performance on string concatenation, you must use APPENDSTRING command instead of '+' operator.
 
 Although there is not any other distictive feature between STRINGBUILDER and STRING, it is not recomended to use STRINGBUILDER type instead of STRING on regular string opreations except string concateantion.
+
+Both STRING and STRINGBUILDER types don't have hardcoded maximum length.
 
 
 Table

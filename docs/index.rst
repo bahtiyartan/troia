@@ -13,7 +13,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
 .. toctree::
    :maxdepth: 2
 
-   installation
+   platformbasics
    languagebasics
    datatypes
    operatorsexpressions
