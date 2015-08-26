@@ -58,7 +58,6 @@ Vector
 
 VECTOR is a kind of one dimensional array type that is able to store different types of variables.
 We will study on VECTOR Type, related commands and functions in next sections, detailly.
-[] operator is used to access elements of a VECTOR.
 
 
 Keywords and Identifiers
