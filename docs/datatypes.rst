@@ -24,7 +24,7 @@ Basic built-in data types are listed below:
 	TIME         (Ex: 21:30)
 	TIMES        (Ex: 21:30:13)
 	
-	STRING       (Single quote (') character is used to define/limit hardcode strings)
+	STRING       (Single quote (') is used to limit hardcode strings)
 	STRINGBUILDER
 
 StringBuilder & String
