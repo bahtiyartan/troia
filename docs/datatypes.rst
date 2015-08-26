@@ -46,13 +46,16 @@ Both STRING and STRINGBUILDER types don't have hardcoded maximum length.
 Table
 --------------------
 
-table in detail...
+TABLE is the most important build in type of TROIA programming language. TABLE type represents a two dimensional in memory structure similar to database tables.
+We will study on TABLE Type, related command and functions in next sections detailly.
 
 
 Vector
 --------------------
 
-vector in detail...
+VECTOR is a kind of one dimensional array type that is able to store different types of variables.
+We will study on VECTORs, table related command and functions in next sections, detailly.
+[] operator is used to access elements of a VECTOR
 
 
 Keywords and Identifiers
