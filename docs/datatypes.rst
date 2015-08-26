@@ -70,4 +70,5 @@ Some of the most subtle/used TROIA idendifiers are listed below.
 	CLEAR          ENQUE          VOID           PAGENUM        WHILE
 	CONFIRM        ENTITYID       LOOP           RETURN         SWITCH
 	TRUE           TIMES          FALSE          UPDATED        ZOOMFYI
-	PUT            BEGINTRAN      COMMITTRAN     ROLLBACKTRAN   
+	PUT            BEGINTRAN      COMMITTRAN     ROLLBACKTRAN   BOOLEAN
+	STRINGBUILDER  
