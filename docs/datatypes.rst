@@ -16,7 +16,7 @@ Basic built-in data types are listed below:
 
 	INTEGER        (Ex: 5)
 	LONG           (Ex: 12312312)
-	DECIMAL        (Ex: 1.32)
+	DECIMAL        (Ex: 1.32 , all floating point numbers)
 	BOOLEAN        (0 or 1, commonly INTEGER type is used instead of BOOLEAN type)
 	
 	DATETIME       (Ex: 29.10.1923 16:30:30) 
@@ -30,6 +30,9 @@ Basic built-in data types are listed below:
 	TABLE
 	VECTOR
 
+TROIA, does not support low level types like byte, char, short, float etc.	
+	
+	
 StringBuilder & String
 --------------------
 
