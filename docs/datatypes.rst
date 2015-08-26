@@ -14,19 +14,18 @@ Basic built-in data types are listed below:
 
 ::
 
-	INTEGER     (Ex: 5)
-	LONG		(Ex: 12312312)
-	DECIMAL		(Ex: 1.32)
-	BOOLEAN     (0 or 1, commonly INTEGER type is used instead of BOOLEAN type)
+	INTEGER      (Ex: 5)
+	LONG         (Ex: 12312312)
+	DECIMAL      (Ex: 1.32)
+	BOOLEAN      (0 or 1, commonly INTEGER type is used instead of BOOLEAN type)
 	
-	DATETIME	(Ex: 29.10.1923 16:30:30) 
-	DATE		(Ex: 23.04.1920) 
-	TIME		(Ex: 21:30)
-	TIMES		(Ex: 21:30:13)
+	DATETIME     (Ex: 29.10.1923 16:30:30) 
+	DATE         (Ex: 23.04.1920) 
+	TIME         (Ex: 21:30)
+	TIMES        (Ex: 21:30:13)
 	
-	STRING		(Single quote (') character is used to define/limit hardcode strings)
+	STRING       (Single quote (') character is used to define/limit hardcode strings)
 	STRINGBUILDER
-
 
 StringBuilder & String
 --------------------
