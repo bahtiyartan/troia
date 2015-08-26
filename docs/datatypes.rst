@@ -47,14 +47,14 @@ Table
 --------------------
 
 TABLE is the most important build in type of TROIA programming language. TABLE type represents a two dimensional in memory structure similar to database tables.
-We will study on TABLE Type, related command and functions in next sections detailly.
+We will study on TABLE Type, related commands and functions in next sections detailly.
 
 
 Vector
 --------------------
 
 VECTOR is a kind of one dimensional array type that is able to store different types of variables.
-We will study on VECTORs, table related command and functions in next sections, detailly.
+We will study on VECTOR Type, related commands and functions in next sections, detailly.
 [] operator is used to access elements of a VECTOR
 
 
