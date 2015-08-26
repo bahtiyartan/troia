@@ -4,13 +4,7 @@
 Built-in Data Types and Structures
 =======================
 
-Like any other programming language, TROIA has primitive and complex data types and structures.
-
-	
-Primitive Data Types
---------------------
-
-Basic built-in data types are listed below:
+Built-in data types are listed below:
 
 ::
 
@@ -30,7 +24,7 @@ Basic built-in data types are listed below:
 	TABLE
 	VECTOR
 
-TROIA does not support low level types like byte, char, short, float etc.	
+TROIA does not support low level types like byte, char, short, float etc.
 	
 	
 StringBuilder & String
