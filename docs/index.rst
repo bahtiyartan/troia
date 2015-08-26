@@ -14,7 +14,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    :maxdepth: 3
 
    installation
-   thebeginning
+   languagebasics
    datatypes
    operatorsexpressions
    ifelse
