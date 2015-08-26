@@ -30,7 +30,7 @@ Basic built-in data types are listed below:
 	TABLE
 	VECTOR
 
-TROIA, does not support low level types like byte, char, short, float etc.	
+TROIA does not support low level types like byte, char, short, float etc.	
 	
 	
 StringBuilder & String
