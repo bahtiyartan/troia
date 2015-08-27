@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to TROIA for you and me
+Welcome to 'Programming with TROIA'
 ==================================
 
 This is an open and unofficial book to learn TROIA Platform and Programming Language. Even it's for the programmers who are new to TROIA, also it contains useful information for experienced programmers, colsultants, system administrators.
