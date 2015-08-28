@@ -6,7 +6,7 @@
 Programming with TROIA
 ==================================
 
-This is an open and unofficial book to learn TROIA Platform and Programming Language. Even it's for the programmers who are new to TROIA, also it contains useful information for experienced programmers, colsultants, system administrators.
+This is an open and unofficial book to learn TROIA Platform and Programming Language. Although it targets the programmers who are new to TROIA, it also contains useful information for experienced programmers, consultants and system administrators.
  
  
 
