@@ -82,6 +82,6 @@ Hotline
 Hotline is "Change Request" in TROIA Platform. Hotlines are created/managed on 'DEVT06 Hotline Management' transaction (application) and they are stored in database.
 
 It is not allowed to change any TROIA Item(dialog, class etc.) without a change request. 
-All development tools asks programmer to select hotline before modification and modifications are logged related with selected hotline.
+All development tools ask programmer to select hotline before modification and modifications are logged related with selected hotline.
 
 
