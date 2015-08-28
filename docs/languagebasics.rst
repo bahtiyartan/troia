@@ -1,7 +1,7 @@
 
 
 =======================
-TROIA Language Basics
+Language Basics
 =======================
 
 troia language basics...
@@ -79,4 +79,7 @@ sys and dev transactions...
 Hotline
 ------------------------
 
-hotline....  
+Hotline is "Change Request" in TROIA Platform. It is not allowed to change any dialog, class, report, component etc. without a change request. 
+Hotlines are created/managed on DEVT06 Transaction and they are stored in database.
+
+
