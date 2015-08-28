@@ -44,7 +44,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'TROIA for you and me'
+project = u'Programming with TROIA'
 copyright = u'2014-2015, Bahtiyar Tan'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -174,7 +174,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Troiaforyouandmedoc'
+htmlhelp_basename = 'ProgrammingWithTROIA'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -193,7 +193,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Troiaforyouandme.tex', u'TROIA for you and me',
+  ('index', 'ProgrammingWithTROIA.tex', u'Programming with TROIA',
    u'Bahtiyar Tan', 'manual'),
 ]
 
@@ -223,8 +223,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'troiaforyouandme', u'TROIA for you and me Documentation',
-     [u'Kushal Das'], 1)
+    ('index', 'ProgrammingWithTROIA', u'Programming with TROIA',
+     [u'Bahtiyar Tan'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -237,8 +237,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Troiaforyouandme', u'Python for you and me Documentation',
-   u'Bahtiyar Tan', 'Troiaforyouandme', 'One line description of project.',
+  ('index', 'ProgrammingWithTROIA', u'Programming with TROIA',
+   u'Bahtiyar Tan', 'ProgrammingWithTROIA', 'Programming with TROIA',
    'Miscellaneous'),
 ]
 
@@ -255,7 +255,7 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'TROIA for you and me'
+epub_title = u'Programming with TROIA'
 epub_author = u'Bahtiyar Tan'
 epub_publisher = u'Bahtiyar Tan'
 epub_copyright = u'2014-2015, Bahtiyar Tan'
