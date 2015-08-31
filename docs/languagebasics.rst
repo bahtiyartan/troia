@@ -9,7 +9,7 @@ TROIA is a high level programming language which is designed by IAS (Industrial 
 As a fourth generation programming language (4GL), TROIA has strong abstraction from all hardware specific details, bytes and bits etc.
 It has strong ability to operate large collections of information, in a programmer-friendly manner.
 
-TROIA is executed by TROIA Interpreter which is one of the main components of Application Server.
+TROIA is executed by "TROIA Interpreter" which is one of the main components of Application Server.
 	
 Understanding the Purpose
 -------------------------
