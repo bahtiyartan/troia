@@ -4,14 +4,16 @@
 Language Basics
 =======================
 
-troia language basics...
+TROIA is a high level programming language which is designed by IAS (Industrial Application Software) for developing business applications.
+
+As a fourth generation programming language (4GL) and TROIA has strong abstraction from all hardware specific details, bytes and bits etc.
+It has strong ability to operate large collections of information, in a programmer-friendly manner.
 
 	
-Purpose
---------------------
+Understanding the Purpose
+-------------------------
 
-purpose...
-
+.....
 
 Language Elements
 --------------------
