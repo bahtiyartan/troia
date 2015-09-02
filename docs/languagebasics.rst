@@ -17,7 +17,11 @@ TROIA codes are executed by "TROIA Interpreter" which is one of **the main compo
 Understanding the Purpose
 -------------------------
 
-.
+The main purpose of TROIA Language is developing business applications, so it contains too many useful features to access, operate and report business layer information.
+
+Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues.
+Timezone, localization, multi-language support, cross platform & database, formatters, validators, api&dlls etc. are the examples of these painful technnical details.
+
 
 Language Elements
 --------------------
