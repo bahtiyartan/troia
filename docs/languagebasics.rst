@@ -37,13 +37,13 @@ Report
 
 report...
 
-Transaction (Application)
+Transaction
 =========================
 
-transaction...
+Transaction is simply a database record that defines a standalone TROIA application.
+The main attributes of a transaction are name, description and start dialog.
 
-
-
+When you call/start a transaction, start dialog of this transaction is opened automatically.
 
 TROIA Interpreter
 --------------------
