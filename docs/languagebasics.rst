@@ -45,7 +45,7 @@ Dialogs have methods similar to classes, so TROIA programmers define and call me
 Additionally they have predefined events. **Events** are TROIA methods which are called by TROIA runtime when a specific action performed like "form load", "button clicked" etc.
 
 .. figure:: img/language_basics_dialog.png
-   :width: 670 px
+   :width: 700 px
    :target: img/language_basics_dialog.png
    :align: center
 
