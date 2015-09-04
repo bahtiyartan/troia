@@ -23,10 +23,8 @@ Thanks to these features, TROIA reduces "the pain" caused by technical details o
 Timezone, localization, multi-language support, cross platform & database, formatters, validators, api&dlls etc. are the examples of these painful technnical details.
 
 
-Language Elements
+Basic Language Elements
 --------------------
-
-language elements...
 
 Class
 ====================
@@ -44,7 +42,7 @@ Dialog is a **user interface form** designed to perform a task on, like a web fo
 Usually, dialog a is acombination of simple or complex TROIA controls such as textfields, buttons, comboboxes, checkboxes, tables, charts etc.
 
 Dialogs have methods similar to classes, so TROIA programmers define and call methods on dialogs.
-Additionally they have predefined events. Events are TROIA methods which are called by TROIA runtime when a specific action performed like "form load", "button clicked" etc.
+Additionally they have predefined events. **Events** are TROIA methods which are called by TROIA runtime when a specific action performed like "form load", "button clicked" etc.
 
 Report
 ====================
