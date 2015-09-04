@@ -28,16 +28,23 @@ Language Elements
 
 language elements...
 
-Dialog
-====================
-
-dialogs...
-
 Class
 ====================
 
-class...
+TROIA is an object oriented language, so it allows programmerts to define classes to perform a task or model a business entity.
+Like any other object oriented language, cleses have members and methods and they support inheritance and encapsulation.
 
+Although TROIA classes able to model any kind of business entity and its behaviors, classes are usually used as a set of methods as a TROIA programming convension.
+TROIA Programmers usually use tables to store an entity's fields because of advantages of using tables.
+
+Dialog
+====================
+
+Dialog is a **user interface form** designed to perform a task on, like a web form or a swing dialog.
+Usually, dialog a is acombination of simple or complex TROIA controls such as textfields, buttons, comboboxes, checkboxes, tables, charts etc.
+
+Dialogs have methods similar to classes, so TROIA programmers define and call methods on dialogs.
+Additionally they have predefined events. Events are TROIA methods which are called by TROIA runtime when a specific action performed like "form load", "button clicked" etc.
 
 Report
 ====================
