@@ -16,7 +16,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    platformbasics
    languagebasics
    datatypes
-   operatorsexpressions
+   variablesscope.rst
    ifelse
    looping
    datastructure
