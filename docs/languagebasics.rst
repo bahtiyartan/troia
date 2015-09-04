@@ -46,7 +46,7 @@ Additionally they have predefined events. **Events** are TROIA methods which are
 
 .. figure:: images/languagebasics/dialog.png
    :width: 700 px
-   :target: img/language_basics_dialog.png
+   :target: images/languagebasics/dialog.png
    :align: center
 
 Report
