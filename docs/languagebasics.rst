@@ -44,7 +44,7 @@ Usually, dialog a is acombination of simple or complex TROIA controls such as te
 Dialogs have methods similar to classes, so TROIA programmers define and call methods on dialogs.
 Additionally they have predefined events. **Events** are TROIA methods which are called by TROIA runtime when a specific action performed like "form load", "button clicked" etc.
 
-.. figure:: img/language_basics_dialog.png
+.. figure:: images/languagebasics/dialog.png
    :width: 700 px
    :target: img/language_basics_dialog.png
    :align: center
