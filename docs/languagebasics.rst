@@ -100,15 +100,15 @@ There are two access levels to TROIA IDE, first one is "read-only" which allows 
 Second one is read-write which allows create/modify TROIA codes and items. "TROIA IDE" menu is only visible for users which has one of this access rights.
 
 
-+--------------+-----------------------------+
-| IDE Access   | Permission(*)               |
-+--------------+-----------------------------+
-| No access    |                             |
-+--------------+-----------------------------+
-| Read-Only    | DEVELOPMENT(READ-ONLY)      |
-+--------------+-----------------------------+
-| Read-Write   | DEVELOPMENT                 |
-+--------------+-----------------------------+
++------------------+-----------------------------+
+| **IDE Access**   | **Permission** *            |
++------------------+-----------------------------+
+| No access        |                             |
++------------------+-----------------------------+
+| Read-Only        | DEVELOPMENT(READ-ONLY)      |
++------------------+-----------------------------+
+| Read-Write       | DEVELOPMENT                 |
++------------------+-----------------------------+
 
 
 (*) Permissions will be discussed detailly on next chapters.
