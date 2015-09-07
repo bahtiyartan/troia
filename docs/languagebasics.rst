@@ -87,7 +87,7 @@ development tools...
 TROIA IDE
 ====================
 
-ide...
+TROIA IDE is the primary development tool of TROIA Platform.
 
 
 SYS & DEV Transactions
