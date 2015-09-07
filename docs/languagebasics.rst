@@ -91,7 +91,8 @@ TROIA IDE
 Additionally, it contains useful tools such as optimization tools, code comparing tools, import/export tools etc.
 
 ::
-	To access TROIA IDE, users must have "DEVELOPMENT" right.
+	
+	To access TROIA IDE, users must have "DEVELOPMENT" right. 
 
 SYS & DEV Transactions
 =========================
