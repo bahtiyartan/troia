@@ -90,9 +90,7 @@ TROIA IDE
 **TROIA IDE** is the primary development tool of TROIA Platform. It's main functionality is defineing/modifing TROIA items such as dialogs, classes, reports and components.
 Additionally, it contains useful tools such as optimization tools, code comparing tools, import/export tools etc.
 
-::
-	
-	To access TROIA IDE, users must have "DEVELOPMENT" right. 
+As default users can not access TROIA IDE,to access users must have "DEVELOPMENT" right. Also, "DEVELOPMENT(READ-ONLY)" right allow users to access TROIA IDE and only read/view existing TROIA items. 
 
 SYS & DEV Transactions
 =========================
