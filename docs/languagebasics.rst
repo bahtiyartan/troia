@@ -101,7 +101,7 @@ Second one is read-write which allows create/modify TROIA codes and items. "TROI
 
 
 +------------------+-----------------------------+
-| **IDE Access**   | **Permission** *            |
+| **IDE Access**   | **Permission***             |
 +------------------+-----------------------------+
 | No access        |                             |
 +------------------+-----------------------------+
