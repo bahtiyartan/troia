@@ -41,4 +41,8 @@ object command...
 System Variables
 --------------------
 
-system variables...
+System variables are global and predefined variables that stores information about system, user session or some specific actions to use these values on TROIA level.
+
+
+
+Most used system variables are listed below, for more please view TROIA Help.
