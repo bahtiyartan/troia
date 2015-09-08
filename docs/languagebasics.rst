@@ -76,11 +76,11 @@ Trace
 
 Trace is file that contains log records of running TROIA code. Using traces, developers are able to review whole flow after code executed.
 
-Creating trace is optional and it depends on a simple configuration which is set on runtime, so programmers does not need to build their application in relase or debug mode. It is also possible to get trace in productive environments.
+Creating trace is optional and it depends on a simple configuration which is set on runtime, so programmers do not need to build their application in relase or debug mode. It is also possible to get trace in productive environments.
 
-As default users are not allowed to create trace files, to access trace on/off ui items user must have "TRACE" permission. Trace files can be read/managed/downloaded from server using TROIA IDE trace tool or 'DEVT31 Trace (Files)' transaction.
+As default, users are not allowed to create trace files, to access trace on/off ui items user must have "TRACE" permission. Trace files can be read/managed/downloaded from server using TROIA IDE trace tool or 'DEVT31 Trace (Files)' transaction.
 
-Although TROIA Interpreter also supports debugging, TROIA developers usually use traces to detect/fix bugs of TROIA Applications.
+Although TROIA Interpreter also supports debugging, TROIA developers usually use traces to detect and fix bugs of TROIA Applications.
 
 
 Development Tools
