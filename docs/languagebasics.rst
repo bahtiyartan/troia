@@ -80,7 +80,7 @@ Trace is file that contains log records of running TROIA code. Using traces, dev
 
 Creating trace is optional and it depends on a simple configuration which is set on runtime, so programmers does not need to build their application in relase or debug mode. It is also possible to get trace in productive environments.
 
-Although TROIA Interpreter is also supports debugging, TROIA developers usually use traces to detect/fix bugs of TROIA Applications.
+Although TROIA Interpreter also supports debugging, TROIA developers usually use traces to detect/fix bugs of TROIA Applications.
 
 
 Development Tools
