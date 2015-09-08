@@ -4,7 +4,7 @@
 Language Basics
 =======================
 
-*This section aims to introduce language and it's basic terms. Most of subtopics will be discussed detailly in next chapters.*
+*This section aims to introduce language and it's basic terms. Most of subtopics will be discussed in detail in next chapters.*
 
 
 TROIA is a high level programming language which is designed by IAS (Industrial Application Software) for developing business applications.
@@ -20,7 +20,7 @@ Understanding the Purpose
 The main purpose of TROIA Language is developing business applications, so it contains too many useful features to access, operate and report business layer information.
 
 Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues.
-Timezone, localization, multi-language support, cross platform & database, formatters, validators, api&dlls etc. are the examples of these painful technnical details.
+Time zone, localization, multi-language support, cross platform & database, formatters, validators, api&dlls etc. are the examples of these painful technnical details.
 
 
 Basic Language Elements
@@ -29,17 +29,17 @@ Basic Language Elements
 Class
 ====================
 
-TROIA is an object oriented language, so it allows programmerts to define classes to perform a task or model a business entity.
+TROIA is an object oriented language, so it allows programmers to define classes to perform a task or model a business entity.
 Like any other object oriented language, cleses have members and methods and they support inheritance and encapsulation.
 
-Although TROIA classes able to model any kind of business entity and its behaviors, classes are usually used as a set of methods as a TROIA programming convension.
+Although TROIA classes able to model any kind of business entity and its behaviours, classes are usually used as a set of methods as a TROIA programming convension.
 TROIA Programmers usually use tables to store an entity's fields because of advantages of using tables.
 
 Dialog
 ====================
 
 Dialog is a **user interface form** designed to perform a task on, like a web form or a swing dialog.
-Usually, dialog a is acombination of simple or complex TROIA controls such as textfields, buttons, comboboxes, checkboxes, tables, charts etc.
+Usually, dialog is a combination of simple or complex TROIA controls such as textfields, buttons, comboboxes, checkboxes, tables, charts etc.
 
 Dialogs have methods similar to classes, so TROIA programmers define and call methods on dialogs.
 Additionally they have predefined events. **Events** are TROIA methods which are called by TROIA runtime when a specific action performed like "form load", "button clicked" etc.
@@ -76,7 +76,7 @@ Trace
 
 Trace is file that contains log records of running TROIA code. Using traces, developers are able to review whole flow after code executed.
 
-Creating trace is optional and it depends on a simple configuration which is set on runtime, so programmers do not need to build their application in relase or debug mode. It is also possible to get trace in productive environments.
+Creating trace is optional and it depends on a simple configuration which is set on runtime, so programmers do not need to build their application in release or debug mode. It is also possible to get trace in productive environments.
 
 As default, users are not allowed to create trace files, to access trace on/off ui items user must have "TRACE" permission. Trace files can be read/managed/downloaded from server using TROIA IDE trace tool or 'DEVT31 Trace (Files)' transaction.
 
@@ -89,7 +89,7 @@ Development Tools
 TROIA IDE
 ====================
 
-**TROIA IDE** is the primary development tool of TROIA Platform. It's main functionality is defineing/modifing TROIA items such as dialogs, classes, reports etc.
+**TROIA IDE** is the primary development tool of TROIA Platform. It's main functionality is defining/modifying TROIA items such as dialogs, classes, reports etc.
 Additionally, it contains useful tools such as optimization tools, code comparing tools, import/export tools etc.
 
 .. figure:: images/languagebasics/troiaide.png
@@ -113,16 +113,16 @@ Second one is read-write which allows create/modify TROIA codes and items. "TROI
 +------------------+-----------------------------+
 
 
-(*) Permissions will be discussed detailly on next chapters.
+(*) Permissions will be discussed in detail on next chapters.
 
 
 
 SYS & DEV Transactions
 =========================
 
-Although most of operations about TROIA development can be performed on TROIA IDE, there are usefuls tool which is implemented using TROIA.
+Although most of operations about TROIA development can be performed on TROIA IDE, there are useful tools which is implemented using TROIA.
 
-Most used TROIA Applications are listed below, for all appliations please check all transactions that starts with SYS and DEV prefix. (SYS & DEV Modules)
+Most used TROIA Applications are listed below, for all applications please check all transactions that starts with SYS and DEV prefix. (SYS & DEV Modules)
 
 +----------+-------------------------------+----------------------------------------------------+
 | **Name** | **Description**               | **Note**                                           |
@@ -135,7 +135,7 @@ Most used TROIA Applications are listed below, for all appliations please check 
 +----------+-------------------------------+----------------------------------------------------+
 | SYST17   | Release Notes                 |                                                    |
 +----------+-------------------------------+----------------------------------------------------+
-| DEVT01   | Database Browser (ODBA)       | also avaliable on TROIA IDE for limited operations |
+| DEVT01   | Database Browser (ODBA)       | also available on TROIA IDE for limited operations |
 +----------+-------------------------------+----------------------------------------------------+
 | DEVT02   | Dialog Translator             |                                                    |
 +----------+-------------------------------+----------------------------------------------------+
@@ -161,5 +161,3 @@ Hotline is "Change Request" in TROIA Platform. Hotlines are created/managed on '
 
 It is not allowed to change any TROIA Item(dialog, class etc.) without a change request. 
 All development tools ask programmer to select hotline before modification and modifications are logged related with selected hotline.
-
-
