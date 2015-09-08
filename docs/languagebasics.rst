@@ -76,7 +76,10 @@ convert/save...
 Trace
 =========================
 
-trace...
+Trace file that contains log records of running TROIA code. Creating trace is optional and it depends on a simple configuration which is set on runtime.
+Using traces, developers are able to review whole flow after code executed. It is also possible to get trace in productive environments.
+
+Although TROIA Interpreter is also supports debugging, TROIA developers usually use traces to detect/fix bugs of TROIA Applications.
 
 
 Development Tools
