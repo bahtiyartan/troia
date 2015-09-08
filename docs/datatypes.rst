@@ -35,23 +35,23 @@ STRINGBUILDER is a string like symbol type which is designed for only string bui
 Using a STRINGBUILDER variable instead of STRING increases string concatenation performance dramatically.
 To get higher performance on string concatenation, you must use APPENDSTRING command instead of '+' operator.
 
-Although there is not any other distictive feature between STRINGBUILDER and STRING, it is not recomended to use STRINGBUILDER type instead of STRING on regular string opreations except string concateantion.
+Although there is not any other distinctive feature between STRINGBUILDER and STRING, it is not recommended to use STRINGBUILDER type instead of STRING on regular string opreations except string concateantion.
 
-Both STRING and STRINGBUILDER types don't have hardcoded maximum length.
+Both STRING and STRINGBUILDER types don't have hard-coded maximum length.
 
 
 Table
 --------------------
 
 TABLE is the most important build in type of TROIA programming language. TABLE type represents a two dimensional in memory structure similar to database tables.
-We will study on TABLE Type, related commands and functions in next sections detailly.
+We will discuss TABLE Type, related commands and functions in next sections, in detail.
 
 
 Vector
 --------------------
 
 VECTOR is a kind of one dimensional array type that is able to store different types of variables.
-We will study on VECTOR Type, related commands and functions in next sections, detailly.
+VECTOR Type, related commands and functions will be discussed in next sections, in detail.
 
 
 Keywords and Identifiers
@@ -63,7 +63,7 @@ Basically, TROIA keywords are consisted from command, function and predefined sy
 It is not allowed to use these words as variable and functions name.
 To avoid using TROIA keywords as variable/function name programmers must not use the word that has extra color in TROIA Editor.
 
-Some of the most subtle/used TROIA idendifiers are listed below.
+Some of the most subtle/used TROIA identifiers are listed below.
 
 ::
 
