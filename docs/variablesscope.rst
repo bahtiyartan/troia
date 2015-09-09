@@ -58,4 +58,4 @@ Some examples of system variables are listed below, for more please view TROIA H
 	CONFIRM                : Selected value after a confirm or option message.
 	SQL                    : Latest SQL Query that is sent to database.
 	
-It is not allowed to define variables which have same name with a system variable. Most of them starts with SYS_ or SYS prefix, although there are exceptions such as SQL, CONFIRM etc.
+It is not allowed to define variables which have same name with a system variable. Most of them starts with SYS prefix, although there are exceptions such as SQL, CONFIRM etc.
