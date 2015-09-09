@@ -48,14 +48,14 @@ Some examples of system variables are listed below, for more please view TROIA H
 
 ::
 
-	SYS_CURRENTDATE        : Returns long value of now.
-	SYS_CLIENT             : Client value that is used while login.
-	SYS_LANGU              : Language value that is used while login.
-	SYS_USER               : Username of current user.
-	SYS_VERSION            : TROIA platform server version.
-	SYS_AFFECTEDROWCOUNT   : Number of affected rows after a db update/insert.
-	SYS_CURRENTDIALOG      : Name of current dailog..
-	CONFIRM                : Selected value after a confirm or option message.
-	SQL                    : Latest SQL Query that is sent to database.
+	SYS_CURRENTDATE       : Returns long value of now.
+	SYS_CLIENT            : Client value that is used while login.
+	SYS_LANGU             : Language value that is used while login.
+	SYS_USER              : Username of current user.
+	SYS_VERSION           : TROIA platform server version.
+	SYS_AFFECTEDROWCOUNT  : Number of affected rows after a db update/insert/delete.
+	SYS_CURRENTDIALOG     : Name of current dailog.
+	CONFIRM               : Selected value after a confirm or option message.
+	SQL                   : Latest SQL Query that is sent to database.
 	
 It is not allowed to define variables which have same name with a system variable. Most of them starts with SYS prefix, although there are exceptions such as SQL, CONFIRM etc.
