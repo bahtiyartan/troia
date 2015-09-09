@@ -8,7 +8,7 @@ Variables and Scope
 Scope
 --------------------
 
-Simply, **scope** of a variable definition is the part or range of your application that definition is valid.
+Simply, **scope** of a variable definition is the part or range of software that definition is valid.
 
 In TROIA there are three levels of scope: local, member, global.
 
