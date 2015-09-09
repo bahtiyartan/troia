@@ -47,6 +47,7 @@ Most of system variables are read-only and their data types depends on variable'
 Here is some examples of system variables, for more please view TROIA Help.
 
 ::
+
     SYS_CURRENTDATE
     SYS_CLIENT
     SYS_LANGU
