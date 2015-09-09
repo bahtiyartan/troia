@@ -53,7 +53,7 @@ Some examples of system variables are listed below, for more please view TROIA H
 	SYS_LANGU             : Language value that is used while login.
 	SYS_USER              : Username of current user.
 	SYS_VERSION           : TROIA platform server version.
-	SYS_AFFECTEDROWCOUNT  : Number of affected rows after a db update/insert/delete.
+	SYS_AFFECTEDROWCOUNT  : Number of affected rows after db update/insert/delete.
 	SYS_CURRENTDIALOG     : Name of current dailog.
 	CONFIRM               : Selected value after a confirm or option message.
 	SQL                   : Latest SQL Query that is sent to database.
