@@ -52,7 +52,7 @@ Additionally they have predefined events. **Events** are TROIA methods which are
 Report
 ====================
 
-report...
+Reports are similar items to dialog, that their ui output can be redirected to a PDF file, text file or printer. Like diailogs, they have predefined events and also supports defining and calling methods.
 
 Transaction
 =========================
