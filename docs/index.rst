@@ -13,11 +13,11 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
 .. toctree::
    :maxdepth: 2
 
-   05_platformbasics
-   10_languagebasics
-   15_datatypes
-   20_variablesscope
-   25_operators
+   05Platformbasics
+   10Languagebasics
+   15Datatypes
+   20Variablesscope
+   25Operators
    looping
    datastructure
    strings
