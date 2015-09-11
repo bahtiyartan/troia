@@ -1,7 +1,7 @@
 
 
 =======================
-Variables and Scope
+Operators and Assignment
 =======================
 
 	
