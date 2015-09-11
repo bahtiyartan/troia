@@ -37,7 +37,7 @@ Type Conversion and Casting
 type conversion and casting...
 
 
-Example: Arithmetics Example
+Example: Integer Arithmetics
 ---------------------------
 
 integer arigtmetics example...
