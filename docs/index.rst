@@ -27,12 +27,15 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    transactions
    dialogs
    classes
+   reports and printing
+   components
    
+   inheritanceandcross
    
    tables
    messagesandalerts
    databaseaccess
-   reports and printing
+   
    advancedcontrols
    datemanipulation
    filehandling
@@ -42,7 +45,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    webservices and http
    mailing
    smsinfrastructure
-   inheritanceandcross
+   
    draganddrop
    xmlandjsonparsing
    authorization
