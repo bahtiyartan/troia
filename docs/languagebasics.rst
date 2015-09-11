@@ -52,7 +52,8 @@ Additionally they have predefined events. **Events** are TROIA methods which are
 Report
 ====================
 
-Reports are similar items to dialog, that their ui output can be redirected to a PDF file, text file or printer. Like diailogs, they have predefined events and also supports defining and calling methods.
+Reports are similar items to dialog, whose ui output can be redirected to a PDF file, text file or printer. Like diailogs, they have predefined events and also support defining and calling methods.
+Report also has controls such as labels, symbol fields, images,barcodes, shapes etc, and they are desinged in a graphical user interface.
 
 Transaction
 =========================
@@ -65,12 +66,6 @@ When you call/start a transaction, start dialog of this transaction is opened au
 Some Key Terms
 --------------------
 
-Convert/Save
-====================
-
-convert/save...
-
-
 Trace
 =========================
 
@@ -82,6 +77,13 @@ As default, users are not allowed to create trace files, to access trace on/off 
 
 Although TROIA Interpreter also supports debugging, TROIA developers usually use traces to detect and fix bugs of TROIA Applications.
 
+Convert/Save
+====================
+
+In TROIA, coverting is parsing and compiling a TROIA item such as dialog, report, class. In this process, TROIA codes are transformed into a binary form that can be executed by TROIA Interpreter and this binary information is stored temporarily. Convert process is related about TROIA code and its flow, so it is totally language independent. Its obvious that, if TROIA code contains parse errors, systen can not create binary codes so convert operation fails.
+
+Save process is performed after converting,in this stage binary codes are consolidated with language elements and resulting content is written to files with '.dlg' & '.cls' extensions. 
+A '.dlg' is a ready to run binary file that contains all information about a TROIA dialog (&report&component) such as controls, events, methods etc.  '.cls' file is similar, but its for TROIA classes.
 
 Development Tools
 --------------------
