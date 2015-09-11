@@ -18,18 +18,31 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    15Datatypes
    20Variablesscope
    25Operators
-   looping
-   datastructure
-   strings
-   functions
-   file
-   exceptions
+   
+   flowcontrol
+   
+   stringmanipulation
+   exceptionhandling
+   
+   transactions
+   dialogs
    classes
-   modules
-   collections
-   pep8
-   igd
-   virtualenv
-   testing
-   projectstructure
-   flask
+   
+   
+   tables
+   messagesandalerts
+   databaseaccess
+   reports and printing
+   advancedcontrols
+   datemanipulation
+   filehandling
+   imagehandling
+   ftpinfrastructure
+   portcommunication
+   webservices and http
+   mailing
+   smsinfrastructure
+   inheritanceandcross
+   draganddrop
+   xmlandjsonparsing
+   authorization
