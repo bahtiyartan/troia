@@ -23,7 +23,7 @@ In TROIA, it is not possible to define a variable for a narrower scope like a bl
 
 	A local variable overrides other variables which are defined for a larger scope (member, global).
 	
-Local variables are created for each instance of the method/event (recursive calls).
+Local variables are created for each instance of the method/event like any other language (think on recursive calls).
 
 ::
 
@@ -40,7 +40,7 @@ To access a member variable of a class instance @ operator is used. (It is simil
 
 ::
 	
-	In a class method, a member variable overrides variables that is defined for a larger scope (global). For example if you have an integer type member variable named XPOS and a global variable with same name, all methods use member variable when XPOS is accessed to do any operation.
+	In a class method, a member variable overrides variables that is defined for a larger scope (global). For example if you have an integer type member variable named XPOS and a global variable with same name, all methods use member when XPOS is accessed to do any operation.
 	
 
 Global Scope
