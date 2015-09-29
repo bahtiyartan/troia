@@ -28,8 +28,8 @@ Local variables are created for each instance of the method/event like any other
 
 ::
 
-	A static local variables is a variable that is defined for once and shared 
-	    by all instances of method. Static local variables are not supported in TROIA.
+	A static local variable is a variable that is defined for once and shared by all
+    	instances of method. Static local variables are not supported in TROIA.
 
 
 Member Scope
