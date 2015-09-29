@@ -15,7 +15,7 @@ In TROIA there are three levels of scope: local, member, global.
 Local Scope
 ====================
 
-If a variable defined as a local variable, it is accessable only in the method/event that it is defined in. 
+If a variable defined as a local variable, it is accessable only in the method/event that it is defined in, so method/event is the largest boundary for a local variable.
 
 It is not possible to define a variable for a narrower scope like a block, so if you define a local variable you can access it anywhere in method/event.
 
@@ -26,13 +26,15 @@ It is not possible to define a variable for a narrower scope like a block, so if
 Member Scope
 ====================
 
-If a variable defined as a member variable, it is accessible in all methods of the class that is defined in.
+If a variable defined as a member variable, it is accessible in all methods of the class that is defined in, so class is the largest boundary for a member variable.
 
-It is not possible to access member variables using only their name, because they are defined for each instance of class. To access a member variable of a class instance @ operator is used. (it is similar to . operator in other languages, INSTANCE1@XPOS	: XPOS member of a class instance named INSTANCE1)
+It is not possible to access member variables using only their name outside of the class, because they are defined for each instance of class. 
+To access a member variable of a class instance @ operator is used. (It is similar to . operator in other languages, INSTANCE1@XPOS	: XPOS member of a class instance named INSTANCE1)
 
 ::
 	
 	In a class method, a member variable overrides variables that is defined for a larger scope (global). For example if you have an integer type member variable named XPOS and a global variable with same name, all methods use member variable when XPOS is accessed to do any operation.
+	
 
 Global Scope
 ====================
