@@ -47,7 +47,7 @@ To access a member variable of a class instance @ operator is used. (It is simil
 	In a class method, a member variable overrides variables that is 
 	    defined for a larger scope (global). For example if you have an integer
 	    type member variable named XPOS and a global variable with same name,
-	    all methods use member when XPOS is accessed to do any operation.
+	    all methods use member when XPOS is accessed to do anything.
 	
 
 Global Scope
@@ -81,12 +81,6 @@ OBJECT Command
 object command...
 
 
-Some Facts About Data Variable Definitions
-------------------------------------------------------------
-
-....
-
-
 System Variables
 --------------------
 
@@ -108,3 +102,9 @@ Some examples of system variables are listed below, for more please view TROIA H
 	SQL                   : Latest SQL Query that is sent to database.
 	
 It is not allowed to define variables which have same name with a system variable. Most of them starts with SYS prefix, although there are exceptions such as SQL, CONFIRM etc.
+
+
+Some Facts About Variable Definitions
+------------------------------------------------------------
+
+....
