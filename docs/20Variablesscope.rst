@@ -21,13 +21,17 @@ In TROIA, it is not possible to define a variable for a narrower scope like a bl
 
 ::
 
-	A local variable overrides other variables which are defined for a larger scope (member, global).
+	A local variable overrides other variables 
+	    which are defined for a larger scope (member, global).
 	
 Local variables are created for each instance of the method/event like any other language (think on recursive calls).
 
 ::
 
-	A static local variables is a variable that is defined for once and shared by all instances of method. Static local variables are not supported in TROIA. 
+	A static local variables is a variable that is defined for once 
+	    and shared by all instances of method. 
+		
+	**Static local variables are not supported in TROIA.**
 
 
 Member Scope
