@@ -53,11 +53,23 @@ To access a member variable of a class instance @ operator is used. (It is simil
 Global Scope
 ====================
 
+If a variable defined as global variable, it is accessible from any part of the software. In TROIA, largest scope is global and it is bounded by transaction (application).
+In other words, if you define a global variable, you can access it from any dialog or class method/event providing that all items run in a transaction (application).
 
-Data Definition Commands
+
+Defining Variables
 --------------------
 
-definition commands...
+In TROIA, there are multiple variable definition methods. The first and most common method is using data definition commands such as LOCAL, GLOBAL, OBJECT.
+
+Another common method is using controls on dialogs. When a dialog which has a textfield as a TROIA control, system automatically defines a global string symbol which has same name with textfield.	Each control type/subtype has a corresponding variable type to define automatically. Controls, types and subtypes will be discussed in next sections detailly.
+
+Additionally, there are (limited) special commands which are able to define fixed type global variables (ex:SELECT, TABLE).
+
+
+
+Variable Definition Commands
+-------------------------------------
 
 GLOBAL Command
 ====================
@@ -107,4 +119,4 @@ It is not allowed to define variables which have same name with a system variabl
 Some Facts About Variable Definitions
 ------------------------------------------------------------
 
-....
+some facts...
