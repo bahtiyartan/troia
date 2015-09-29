@@ -17,11 +17,11 @@ Local Scope
 
 If a variable defined as a local variable, it is accessable only in the method/event that it is defined in, so method/event is the largest boundary for a local variable.
 
-It is not possible to define a variable for a narrower scope like a block, so if you define a local variable you can access it anywhere in method/event.
+In TROIA, it is not possible to define a variable for a narrower scope like a block, so if you define a local variable you can access it anywhere in method/event.
 
 ::
 
-	A local variable overrides other variables with same name that is defined for a larger scope (member, global).
+	A local variable overrides other variables which are defined for a larger scope (member, global).
 	
 Local variables are created for each instance of the method/event (recursive calls).
 
