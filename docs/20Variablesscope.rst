@@ -75,7 +75,21 @@ Variable Definition Commands
 GLOBAL Command
 ====================
 
-global command...
+GLOBAL command defines a global variable with given data type. Defining multiple variables with a single GLOBAL command is allowed, even if data types are different.
+
+::
+
+	/* define a single variable */
+	GLOBAL:
+		STRING STRINGVAR1;
+		
+	/* define multiple variables */
+	GLOBAL:
+		STRING STRINGVAR1,
+		STRING STRINGVAR2,
+		TABLE TABLEVAR1,
+		INTEGER INTVAR;
+
 
 MEMBER Command
 ====================
