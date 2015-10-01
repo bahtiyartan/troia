@@ -94,7 +94,7 @@ GLOBAL command defines a global variable with given data type. Defining multiple
 MEMBER Command
 ====================
 
-MEMBER command defines a member variable which is accessible from all methods of the class. MEMBER command can be used only class methods including constructor and others, so using MEMBER command in dialogs, reports (etc.) is a programming error. It is possible to define multiple members variables in a single MEMBER command even if data types are different.
+MEMBER command defines a member variable which is accessible from all methods of the class. It can be used in only class methods including constructor and others, so using MEMBER command in dialogs, reports (etc.) is a programming error. It is possible to define multiple members variables in a single MEMBER command even if data types are different.
 
 ::
 
@@ -109,7 +109,7 @@ MEMBER command defines a member variable which is accessible from all methods of
 		TABLE ITEMLIST,
 		INTEGER XPOSITION;
 		
-*TROIA Classes will be discussed detailly in next sections.*
+*TROIA Classes, its constructor and other methods will be discussed detailly in next sections.*
 
 
 LOCAL & PARAMETERS Command
