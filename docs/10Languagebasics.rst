@@ -82,7 +82,7 @@ Convert/Save
 
 In TROIA, coverting is parsing and compiling a TROIA item such as dialog, report, class. In this process, TROIA codes are transformed into a binary form that can be executed by TROIA Interpreter and this binary information is stored temporarily. 
 
-Convert process is related about TROIA code and its flow, so it is totally language independent. **It is obvious that, if TROIA code contains parse errors, systen can not create binary codes so convert operation fails.**
+Convert process is related about TROIA code and its flow, so it is totally language independent. **It is obvious that, if TROIA code contains parse errors, system can not create binary codes so convert operation fails.**
 
 Save process is performed after converting,in this stage binary codes are consolidated with language elements and resulting content is written to files with '.dlg' & '.cls' extensions. 
 A '.dlg' is a ready to run binary file that contains all information about a TROIA dialog (&report&component) such as controls, events, methods etc.  '.cls' file is similar, but its for TROIA classes.
