@@ -135,7 +135,7 @@ Some examples of system variables are listed below, for more please view TROIA H
 It is not allowed to define variables which have same name with a system variable. Most of them starts with SYS prefix, although there are exceptions such as SQL, CONFIRM etc.
 
 
-Some Facts About Variable Definitions
+Some Facts About Defining Variables
 ------------------------------------------------------------
 
 + Defining a variable which has same name with a TROIA command, function or system variable is considered as TROIA coding error.
