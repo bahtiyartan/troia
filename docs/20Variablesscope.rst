@@ -89,16 +89,27 @@ GLOBAL command defines a global variable with given data type. Defining multiple
 		STRING STRINGVAR2,
 		TABLE TABLEVAR1,
 		INTEGER INTVAR;
-		
-::
-	
-	As a TROIA programming convention, TROIA codes are written in uppercase.
 
 
 MEMBER Command
 ====================
 
-member command...
+MEMBER command defines a member variable which is accessible from all methods of the class. MEMBER command can be used only class methods including constructor and others, so using MEMBER command in dialogs, reports (etc.) is a programming error. It is possible to define multiple members variables in a single MEMBER command even if data types are different.
+
+::
+
+	/* define a single member */
+	MEMBER:
+		STRING STUDENTNAME;
+		
+	/* define multiple members */
+	MEMBER:
+		STRING FIRSTNAME,
+		STRING LASTNAME,
+		TABLE ITEMLIST,
+		INTEGER XPOSITION;
+		
+*TROIA Classes will be discussed detailly in next sections.*
 
 
 LOCAL & PARAMETERS Command
@@ -137,6 +148,8 @@ It is not allowed to define variables which have same name with a system variabl
 
 Some Facts About Defining Variables
 ------------------------------------------------------------
+
++ As a TROIA programming convention TROIA codes are written in uppercase, so using uppercase for variable names is recommended.
 
 + Defining a variable which has same name with a TROIA command, function or system variable is considered as TROIA coding error.
 
