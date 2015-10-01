@@ -174,10 +174,13 @@ Using /* */ block is the only way to add comment to TROIA Code.
 
 ::
 	
-	/* this is a comment */
+	/* this is a single line comment */
 	RESULT = THIS.CALCULATE(P1, P2);
 	
 	/* first line of multiline comment 
 	   second line of multiline comment
 	*/
 	RESULT = RESULT * 3;
+	
+	
+Line commenting with // , # or any other character is not supported.
