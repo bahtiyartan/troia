@@ -89,6 +89,10 @@ GLOBAL command defines a global variable with given data type. Defining multiple
 		STRING STRINGVAR2,
 		TABLE TABLEVAR1,
 		INTEGER INTVAR;
+		
+::
+	
+	As a TROIA Programming convention, TROIA codes are written in uppercase.
 
 
 MEMBER Command

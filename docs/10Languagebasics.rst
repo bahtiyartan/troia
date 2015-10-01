@@ -165,3 +165,19 @@ Hotline is "Change Request" in TROIA Platform. Hotlines are created/managed on '
 
 It is not allowed to change any TROIA Item(dialog, class etc.) without a change request. 
 All development tools ask programmer to select hotline before modification and modifications are logged related with selected hotline.
+
+
+Commenting
+-------------------------
+
+Using /* */ block is the only way to add comment to TROIA Code.
+
+::
+	
+	/* this is a comment */
+	RESULT = THIS.CALCULATE(P1, P2);
+	
+	/* first line of multiline comment 
+	   second line of multiline comment
+	*/
+	RESULT = RESULT * 3;
