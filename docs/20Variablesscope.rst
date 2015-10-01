@@ -138,4 +138,8 @@ It is not allowed to define variables which have same name with a system variabl
 Some Facts About Variable Definitions
 ------------------------------------------------------------
 
-some facts...
++ Defining a variable which has same name with a TROIA command, function or system variable is considered as TROIA coding error.
++ Defining varaibles that starts with 'SYS' prefix is not a recommended naming convention.
++ Although using numbers in variable names is supported, using a number as a first character is not recommended.
++ Defining variables using commands except variable definition commands is not recommended because it reduces readibility.
++ Even if most of existing TROIA codes contains OBJECT command to define variables, using GLOBAL, LOCAL and MEMBER commands is recommended to increase readibility.
