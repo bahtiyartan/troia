@@ -170,14 +170,15 @@ All development tools ask programmer to select hotline before modification and m
 Commenting
 -------------------------
 
-Using /* */ block is the only way to add comment to TROIA Code.
+Using /*  */ block is the only way to add comment to TROIA Code.
 
 ::
 	
 	/* this is a single line comment */
 	RESULT = THIS.CALCULATE(P1, P2);
 	
-	/* first line of multiline comment 
+	/* 
+	   first line of multiline comment 
 	   second line of multiline comment
 	*/
 	RESULT = RESULT * 3;
