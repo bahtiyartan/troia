@@ -56,6 +56,7 @@ Local variables are created for each instance of the method/event like any other
 	
 	Static local variables are not supported in TROIA.	
 	
+Function parameters are local symbols that, programmer can access them only inside the method using parameter name.
 
 
 Defining Variables
@@ -119,7 +120,21 @@ All kind of data types such as STRING, INTEGER, TABLE or TROIA classes can be de
 LOCAL Command
 ====================
 
-local command...
+LOCAL Command defines a local variable with given data type. Similar to other data definition commands it is possible to define multiple variables with a single LOCAL command.
+
+::
+
+	/* define a single local variable */
+	LOCAL:
+		STRING STRINGVAR1;
+		
+	/* define multiple local variables */
+	LOCAL:
+		STRING STRINGVAR1,
+		STRING STRINGVAR2,
+		TABLE TABLEVAR1,
+		INTEGER INTVAR,
+		MYCLASS MYCLASSREC;
 
 OBJECT Command
 ====================
@@ -160,6 +175,8 @@ Defining same variable more than once, ...
 
 Variable Definition Conventions
 ------------------------------------------------------------
+
++ Defining all variables as global is not a good programming convention, variables must be defined narrowest scope that is possible, to save memory, eleminate possible bugs and readibility.
 
 + Even if most of existing TROIA codes contain OBJECT command, using GLOBAL, LOCAL and MEMBER instead of OBJECT command is recommended to increase readibility.
 
