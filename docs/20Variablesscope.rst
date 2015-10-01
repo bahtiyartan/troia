@@ -113,7 +113,7 @@ MEMBER command defines a member variable which is accessible from all methods of
 		
 All kind of data types such as STRING, INTEGER, TABLE or TROIA classes can be defined as member variable.
 		
-*TROIA Classes, its constructors(_CONSTRUCTOR & _VARIABLES) will be discussed detailly in next sections.*
+*TROIA Classes and its constructors (_CONSTRUCTOR & _VARIABLES) will be discussed detailly in next sections.*
 
 
 LOCAL Command
