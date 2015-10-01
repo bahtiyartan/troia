@@ -88,7 +88,8 @@ GLOBAL command defines a global variable with given data type. Defining multiple
 		STRING STRINGVAR1,
 		STRING STRINGVAR2,
 		TABLE TABLEVAR1,
-		INTEGER INTVAR;
+		INTEGER INTVAR,
+		MYCLASS MYCLASSREC;
 
 
 MEMBER Command
@@ -107,15 +108,18 @@ MEMBER command defines a member variable which is accessible from all methods of
 		STRING FIRSTNAME,
 		STRING LASTNAME,
 		TABLE ITEMLIST,
-		INTEGER XPOSITION;
+		INTEGER XPOSITION
+		MYCLASS MYCLASSREC;
 		
-*TROIA Classes, its constructor and other methods will be discussed detailly in next sections.*
+All kind of data types such as STRING, INTEGER, TABLE or TROIA classes can be defined as member variable.
+		
+*TROIA Classes, its special methods(_CONSTRUCTOR & _VARIABLES) and any other methods will be discussed detailly in next sections.*
 
 
-LOCAL & PARAMETERS Command
+LOCAL Command
 ====================
 
-local & parameters commands...
+local command...
 
 OBJECT Command
 ====================
