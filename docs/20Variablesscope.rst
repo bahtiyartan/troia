@@ -153,14 +153,22 @@ It is not allowed to define variables which have same name with a system variabl
 Some Facts About Defining Variables
 ------------------------------------------------------------
 
-+ As a TROIA programming convention TROIA codes are written in uppercase, so using uppercase for variable names is recommended.
+Using undefined variables, ...
 
-+ Defining a variable which has same name with a TROIA command, function or system variable is considered as TROIA coding error.
+Defining same variable more than once, ...
+
+
+Variable Definition Conventions
+------------------------------------------------------------
+
++ Even if most of existing TROIA codes contain OBJECT command, using GLOBAL, LOCAL and MEMBER instead of OBJECT command is recommended to increase readibility.
+
++ Defining variables using commands except variable definition commands is not recommended because it reduces readibility.
+
++ As a TROIA programming convention TROIA codes are written in uppercase, so using uppercase for variable names is recommended.
 
 + Defining variables that start with 'SYS' prefix is not a recommended naming convention.
 
 + Although using numbers in variable names is supported, using a number as a first character is not recommended.
 
-+ Defining variables using commands except variable definition commands is not recommended because it reduces readibility.
-
-+ Even if most of existing TROIA codes contain OBJECT command, using GLOBAL, LOCAL and MEMBER instead of OBJECT command is recommended to increase readibility.
++ Defining a variable which has same name with a TROIA command, function or system variable is considered as TROIA coding error.
