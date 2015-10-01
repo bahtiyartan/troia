@@ -92,7 +92,7 @@ GLOBAL command defines a global variable with given data type. Defining multiple
 		
 ::
 	
-	As a TROIA Programming convention, TROIA codes are written in uppercase.
+	As a TROIA programming convention, TROIA codes are written in uppercase.
 
 
 MEMBER Command
