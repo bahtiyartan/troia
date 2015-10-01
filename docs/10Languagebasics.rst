@@ -167,7 +167,7 @@ It is not allowed to change any TROIA Item(dialog, class etc.) without a change 
 All development tools ask programmer to select hotline before modification and modifications are logged related with selected hotline.
 
 
-Commenting
+Comments in TROIA
 -------------------------
 
 Using /*  */ block is the only way to add comment to TROIA Code.
@@ -184,4 +184,4 @@ Using /*  */ block is the only way to add comment to TROIA Code.
 	RESULT = RESULT * 3;
 	
 	
-Line commenting with // , # or any other character is not supported.
+Line comment with // , # or any other character(s) is not supported.
