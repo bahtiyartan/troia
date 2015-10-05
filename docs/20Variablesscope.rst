@@ -139,7 +139,15 @@ LOCAL Command defines a local variable with given data type. Similar to other da
 OBJECT Command
 ====================
 
-object command...
++----------------+------------------------------+------------------------------+----------------+
+|                | Dialog/Report Events&Methods | Class Constructor&Variables  | Class Methods  |
++----------------+------------------------------+------------------------------+----------------+
+| Table          |            Global            |            Global            |     Global     |
++----------------+------------------------------+------------------------------+----------------+
+| Class Instance |            Global            |            Global            |     Global     |
++----------------+------------------------------+------------------------------+----------------+
+| Simple Types   |            Global            |            Member            |     Local      |
++----------------+------------------------------+------------------------------+----------------+
 
 
 System Variables
