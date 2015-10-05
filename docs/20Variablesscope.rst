@@ -168,7 +168,7 @@ It is not allowed to define variables which have same name with a system variabl
 Some Facts About Defining Variables
 ------------------------------------------------------------
 
-Using undefined variables, ...
+Using undefined variables do not cause compiling errors because of TROIA's structure (data transfer between dialogs). If a variable is used before it is defined, it returns its name as value like a string variable that has same value with its name.
 
 Defining same variable more than once, ...
 
