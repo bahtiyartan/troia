@@ -172,7 +172,7 @@ It is also supported multiple variable definitions on a single OBJECT command.
 		INTEGER INTVAR,
 		MYCLASS MYCLASSREC;
 
-At first glance, it is a little bit hard to decide scope of a variable that is defined by OBJECT command. As a result of this fact, using GLOBAL, LOCAL and MEMBER instead of OBJECT command is recommended to increase readibility. (Unfortunately, you must know that OBJECT command is the most used data definition command on existing TROIA applications.)
+At first glance, it is a little bit hard to decide scope of a variable that is defined by OBJECT command. As a result of this fact, using GLOBAL, LOCAL and MEMBER instead of OBJECT is recommended to increase readibility. (Unfortunately, you must know that OBJECT is the most used data definition command on existing TROIA applications.)
 
 System Variables
 --------------------
