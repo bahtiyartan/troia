@@ -64,7 +64,8 @@ Defining Variables
 
 In TROIA, there are multiple variable definition methods. The first and most common method is using data definition commands such as LOCAL, GLOBAL, OBJECT.
 
-Another common method is using controls on dialogs. When a dialog which has a textfield as a TROIA control, system automatically defines a global string symbol which has same name with textfield.	Each control type/subtype has a corresponding variable type to define automatically. Controls, types and subtypes will be discussed in next sections detailly.
+Another common method is using controls on dialogs. For example, when a dialog containing textfield is opened, system automatically defines a global string symbol which has same name with textfield. They are called as "control symbols", anc all control symbols are global.
+Each control type/subtype has a corresponding variable type to define automatically. Controls, types and subtypes will be discussed in next sections detailly.
 
 Additionally, there are (limited) special commands which are able to define fixed type global variables (ex:SELECT, TABLE).
 
@@ -155,7 +156,21 @@ Here is a simple table that shows OBJECT commands behavior, depending on data ty
 | **Simple Types**   |              Global              |              Member              |       Local        |
 +--------------------+----------------------------------+----------------------------------+--------------------+
 
+It is also supported multiple variable definitions on a single OBJECT command.
 
+::
+
+	/* suppose that, this is a dialog method, think on its scope */
+	OBJECT:
+		STRING STRINGVAR1;
+		
+	/* suppose that this is a class method, think on their scope */
+	OBJECT:
+		STRING STRINGVAR1,
+		STRING STRINGVAR2,
+		TABLE TABLEVAR1,
+		INTEGER INTVAR,
+		MYCLASS MYCLASSREC;
 
 System Variables
 --------------------
