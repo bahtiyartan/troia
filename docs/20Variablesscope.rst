@@ -217,14 +217,55 @@ Using undefined variables do not cause compiling errors because of TROIA's struc
 		
 		MYVAR = MYUNDEFINEDVAR;
 		
-		/* MYVAR's value is now MYUNDEFINEDVAR */
+		/* MYVAR's value: MYUNDEFINEDVAR */
 		
 
 Defining Same Variable More Than Once
 ========================================
 
-Defining same variable more than once, ...
+The first way of defining same variable more than once is writing different definition commands which define same variable. In this case second command ignores the definition. Here is the sample:
 
+::
+	
+	OBJECT:
+		STRING RESULT,
+		STRING MYVAR;
+		
+	MYVAR = 'Hello World';
+	
+	OBJECT:
+		STRING MYVAR;
+		
+	RESULT = MYVAR;
+	
+	/*  RESULT's value: Hello World
+		Second OBJECT command ingored the MYVAR definition. */
+		
+
+Second method is running same definiton command multiple times. In a loop or an event which is triggered multiple times. In this case, the definiton command which defines the variable initializes it. (sets its default value)
+
+
+::
+	
+	loop block that runs twice:
+	start loop
+		OBJECT:
+			STRING MYVAR;
+			
+		RESULT = MYVAR;
+			
+		MYVAR = 'Hello World';
+	end loop
+
+	OBJECT:
+		STRING MYVAR;
+		
+	RESULT = MYVAR;
+		
+	/* in first and second iteration RESULT's value is empty string.
+	   after last assignment RESULT's value: Hello World				*/
+	   
+*looping and assignments will be discussed detailly in next sections.*
 
 Naming & Conventions
 ======================

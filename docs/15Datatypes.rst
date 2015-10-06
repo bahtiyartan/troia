@@ -8,18 +8,18 @@ Built-in data types are listed below:
 
 ::
 
-	INTEGER        (Ex: 5)
-	LONG           (Ex: 12312312)
-	DECIMAL        (Ex: 1.32 , all floating point numbers)
-	BOOLEAN        (0 or 1, commonly INTEGER type is used instead of BOOLEAN type)
+	INTEGER        (Ex: 5, default value is: 0)
+	LONG           (Ex: 12312312, default value:0)
+	DECIMAL        (Ex: 1.32 , all floating point numbers, default value:0.0)
+	BOOLEAN        (0 or 1, commonly INTEGER type is used instead of BOOLEAN type, default value:0)
 	
-	DATETIME       (Ex: 29.10.1923 16:30:30) 
-	DATE           (Ex: 23.04.1920) 
+	DATETIME       (Ex: 29.10.1923 16:30:30, default value:definition time) 
+	DATE           (Ex: 23.04.1920, default value:definition date) 
 	TIME           (Ex: 21:30)
 	TIMES          (Ex: 21:30:13)
 	
-	STRING         (Single quote (') is used to limit hardcode strings)
-	STRINGBUILDER
+	STRING         (Single quote (') is used to limit hardcode strings, default value is empty string)
+	STRINGBUILDER  (default value is empty string)
 	
 	TABLE
 	VECTOR
