@@ -62,9 +62,9 @@ Function parameters are local symbols that, programmer can access them only insi
 Defining Variables
 --------------------
 
-In TROIA, there are multiple variable definition methods. The first and most common method is using data definition commands such as LOCAL, GLOBAL, OBJECT.
+In TROIA, there are multiple variable definition methods. The first and most common method is using data definition commands such as LOCAL, GLOBAL, MEMBER and OBJECT.
 
-Another common method is using controls on dialogs. For example, when a dialog containing textfield is opened, system automatically defines a global string symbol which has same name with textfield. They are called as "control symbols", anc all control symbols are global.
+Another common method is using controls on dialogs. For example, when a dialog containing textfield is opened, system automatically defines a global string symbol which has same name with textfield. They are called as "control symbols". All control symbols are global.
 Each control type/subtype has a corresponding variable type to define automatically. Controls, types and subtypes will be discussed in next sections detailly.
 
 Additionally, there are (limited) special commands which are able to define fixed type global variables (ex:SELECT, TABLE).
