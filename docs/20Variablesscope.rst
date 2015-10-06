@@ -142,7 +142,8 @@ OBJECT Command
 
 OBJECT command is the oldest and most used variable definition command. When a variable is defined with OBJECT command, it's scope depends on data type of the variable and which method that OBJECT command is used in.
 
-The main parameter is data type to decide scope. Tables and class instances are always global. But scope of simple type (STRING, DECIMAL, LONG, INTEGER,...) variables depends on the method that they defined in. Simple typed variables are global if definition is made on a dialog/report method or event, if method is a class constructor ( _CONSTRUCTOR & _VARIABLES) scope is member, but if method is a regular class method simple variables are defined as local. 
+The main parameter is data type to decide scope. Tables and class instances are always global. But scope of simple type (STRING, DECIMAL, LONG, INTEGER,...) variables depends on the method that they defined in. 
+Simple typed variables are defined as global if definition is made on a dialog/report method or event, if method is a class constructor ( _CONSTRUCTOR & _VARIABLES) scope is member, but if method is a regular class method simple variables are defined as local. 
 
 Here is a simple table that shows OBJECT commands behavior, depending on data type and method type.
 
