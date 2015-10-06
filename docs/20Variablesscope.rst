@@ -263,9 +263,9 @@ Second method is running same definiton command multiple times. In a loop or an 
 	RESULT = MYVAR;
 		
 	/* in first and second iteration RESULT's value is empty string.
-	   after last assignment RESULT's value: Hello World				*/
+	   after last assignment RESULT's value: Hello World			*/
 	   
-*looping and assignments will be discussed detailly in next sections.*
+*Looping and assignments will be discussed detailly in next sections, in this section please focus on defining same variable in multiple times.*
 
 Naming & Conventions
 ======================
