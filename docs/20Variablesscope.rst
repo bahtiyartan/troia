@@ -139,7 +139,7 @@ LOCAL Command defines a local variable with given data type. Similar to other da
 OBJECT Command
 ====================
 
-OBJECT commmand is the oldest and most used variable definition command in TROIA. When a variable is defined with OBJECT command, it's scope depends on data type of the variable and which method that OBJECT command is used in.
+OBJECT command is the oldest and most used variable definition command in TROIA. When a variable is defined with OBJECT command, it's scope depends on data type of the variable and which method that OBJECT command is used in.
 
 +--------------------+----------------------------------+----------------------------------+--------------------+
 |                    | **Dialog/Report Events&Methods** | **Class Constructor&Variables**  | **Class Methods**  |
