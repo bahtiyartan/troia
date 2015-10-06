@@ -67,7 +67,7 @@ In TROIA, there are multiple variable definition methods. The first and most com
 Another common method is using controls on dialogs. For example, when a dialog containing textfield is opened, system automatically defines a global string symbol which has same name with textfield. They are called as "control symbols". All control symbols are global.
 Each control type/subtype has a corresponding variable type to define automatically. Controls, types and subtypes will be discussed in next sections detailly.
 
-Additionally, there are (limited) special commands which are able to define fixed type global variables (ex:SELECT, TABLE), however this method is not recommended because of readibility.
+Additionally, there are (limited) special commands which are able to define fixed type global variables if target variables do not exist. (ex:SELECT, TABLE), however this method is not recommended because of readibility.
 
 
 
@@ -241,7 +241,6 @@ The first way of defining same variable more than once is writing different defi
 	/*  RESULT's value: Hello World
 		Second OBJECT command ingored the MYVAR definition. */
 		
-
 Second method is running same definiton command multiple times. In a loop or an event which is triggered multiple times. In this case, the definiton command which defines the variable initializes it (sets its default value, to see the default values please see data types section).
 
 
@@ -265,6 +264,8 @@ Second method is running same definiton command multiple times. In a loop or an 
 	   after last assignment RESULT's value: Hello World			*/
 	   
 *Looping and assignments will be discussed detailly in next sections, in this section please focus on defining same variable in multiple times.*
+
+Third method is running a data definition command for a variable that is already defined as control symbol. This case is ignored by the interpreter.
 
 Naming & Conventions
 ======================
