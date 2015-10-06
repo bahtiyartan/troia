@@ -247,8 +247,7 @@ Second method is running same definiton command multiple times. In a loop or an 
 
 ::
 	
-	loop block that runs twice:
-	start loop
+	start loop block that runs twice:
 		OBJECT:
 			STRING MYVAR;
 			
