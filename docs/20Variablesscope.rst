@@ -142,8 +142,7 @@ OBJECT Command
 
 OBJECT command is the oldest and most used variable definition command. When a variable is defined with OBJECT command, it's scope depends on data type of the variable and which method that OBJECT command is used in.
 
-The main parameter is data type to decide scope. Tables and class instances are always global. But scope of simple type (STRING, DECIMAL, LONG, INTEGER,...) variables depends on the method that they defined in. 
-Simple typed variables are defined as global if definition is made on a dialog/report method or event, if method is a class constructor ( _CONSTRUCTOR & _VARIABLES) scope is member, but if method is a regular class method simple variables are defined as local. 
+The main parameter is data type to decide scope. Tables and class instances are always global. But scope of simple type (STRING, DECIMAL, LONG, INTEGER,...) variables depends on the method that they defined in. Simple typed variables are defined as global if definition is made on a dialog/report method or event, if method is a class constructor ( _CONSTRUCTOR & _VARIABLES) scope is member, but if method is a regular class method simple variables are defined as local. 
 
 Here is a simple table that shows how OBJECT command decides scope, depending on data type and method type.
 
@@ -172,6 +171,8 @@ It is also supported multiple variable definitions on a single OBJECT command.
 		TABLE TABLEVAR1,
 		INTEGER INTVAR,
 		MYCLASS MYCLASSREC;
+
+At first glance, it is a little bit hard to decide scope of a variable that is defined by OBJECT command. As a result of this fact, using GLOBAL, LOCAL and MEMBER instead of OBJECT command is recommended to increase readibility. (Unfortunately, you must know that OBJECT command is the most used data definition command on existing TROIA applications.)
 
 System Variables
 --------------------
@@ -208,8 +209,6 @@ Variable Definition Conventions
 ------------------------------------------------------------
 
 + Defining all variables as global is not a good programming convention, variables must be defined narrowest scope that is possible, to save memory, eleminate possible bugs and readibility.
-
-+ Even if most of existing TROIA codes contain OBJECT command, using GLOBAL, LOCAL and MEMBER instead of OBJECT command is recommended to increase readibility.
 
 + Defining variables using commands except variable definition commands is not recommended because it reduces readibility.
 
