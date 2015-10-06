@@ -205,18 +205,34 @@ It is not allowed to define variables which have same name with a system variabl
 Some Facts About Defining Variables
 ------------------------------------------------------------
 
+Using Undefined Variables
+===========================
+
 Using undefined variables do not cause compiling errors because of TROIA's structure (data transfer between dialogs). If a variable is used before it is defined, it returns its name as value like a string variable that has same value with its name.
+
+::
+
+	LOCAL:
+		STRING MYVAR;
+		
+		MYVAR = MYUNDEFINEDVAR;
+		
+		/* MYVAR's value is now MYUNDEFINEDVAR */
+		
+
+Defining Same Variable More Than Once
+========================================
 
 Defining same variable more than once, ...
 
 
-Variable Definition Conventions
-------------------------------------------------------------
-
-+ Defining all variables as global is not a good programming convention, variables must be defined narrowest scope that is possible, to save memory, eleminate possible bugs and readibility.
-
-+ As a TROIA programming convention TROIA codes are written in uppercase, so using uppercase for variable names is recommended.
+Naming & Conventions
+======================
 
 + Although using numbers in variable names is supported, using a number as a first character is not recommended.
 
-+ Defining a variable which has same name with a TROIA command, function or system variable is considered as TROIA coding error.
++ Defining a variable which has same name with a TROIA command, function, system variable or data type is considered as TROIA coding error.
+
++ As a TROIA programming convention TROIA codes are written in uppercase, so using uppercase for variable names is recommended.
+
++ Defining all variables as global is not a good programming convention, variables must be defined narrowest scope that is possible, to save memory, eleminate possible bugs and readibility.
