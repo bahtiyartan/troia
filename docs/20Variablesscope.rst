@@ -242,7 +242,7 @@ The first way of defining same variable more than once is writing different defi
 		Second OBJECT command ingored the MYVAR definition. */
 		
 
-Second method is running same definiton command multiple times. In a loop or an event which is triggered multiple times. In this case, the definiton command which defines the variable initializes it. (sets its default value)
+Second method is running same definiton command multiple times. In a loop or an event which is triggered multiple times. In this case, the definiton command which defines the variable initializes it (sets its default value, to see the default values please see data types section).
 
 
 ::
