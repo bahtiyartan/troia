@@ -67,7 +67,7 @@ In TROIA, there are multiple variable definition methods. The first and most com
 Another common method is using controls on dialogs. For example, when a dialog containing textfield is opened, system automatically defines a global string symbol which has same name with textfield. They are called as "control symbols". All control symbols are global.
 Each control type/subtype has a corresponding variable type to define automatically. Controls, types and subtypes will be discussed in next sections detailly.
 
-Additionally, there are (limited) special commands which are able to define fixed type global variables (ex:SELECT, TABLE).
+Additionally, there are (limited) special commands which are able to define fixed type global variables (ex:SELECT, TABLE), however this method is not recommended because of readibility.
 
 
 
@@ -194,7 +194,12 @@ Some examples of system variables are listed below, for more please view TROIA H
 	CONFIRM               : Selected value after a confirm or option message.
 	SQL                   : Latest SQL Query that is sent to database.
 	
-It is not allowed to define variables which have same name with a system variable. Most of them starts with SYS prefix, although there are exceptions such as SQL, CONFIRM etc.
+It is not allowed to define variables which have same name with a system variable. Most of them starts with SYS prefix, although there are exceptions such as SQL, CONFIRM etc. 
+
+::
+
+	Defining variables that start with 'SYS' prefix 
+	    is not a good programming practice.
 
 
 Some Facts About Defining Variables
@@ -210,11 +215,7 @@ Variable Definition Conventions
 
 + Defining all variables as global is not a good programming convention, variables must be defined narrowest scope that is possible, to save memory, eleminate possible bugs and readibility.
 
-+ Defining variables using commands except variable definition commands is not recommended because it reduces readibility.
-
 + As a TROIA programming convention TROIA codes are written in uppercase, so using uppercase for variable names is recommended.
-
-+ Defining variables that start with 'SYS' prefix is not a recommended naming convention.
 
 + Although using numbers in variable names is supported, using a number as a first character is not recommended.
 
