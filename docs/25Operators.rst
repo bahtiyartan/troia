@@ -67,7 +67,7 @@ In TROIA codes, there are two set of logical operators. The first set is about T
 Elements of second logical operator set are OR, AND and NOT. This operators are not elements of TROIA language, they are just used in SQL commands that written inside TROIA codes.
 This operators are not supported on if, where or loop statement conditions etc.
 
-Assingment
+Assignment
 --------------------
 
 There are two assignment methods in TROIA. First method is using MOVE command, which does not support expressions for source value.
