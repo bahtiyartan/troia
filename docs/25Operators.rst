@@ -78,8 +78,8 @@ There are two assignment methods in TROIA. First method is using MOVE command, w
 	MOVE STRINGVAR1 TO STRINGVAR2;
 	MOVE 3 TO INTEGERVAR1;
 	
-	MOVE 3 + 1 TO INTEGERVAR1;     /* is not valid, expression are not supported */
-	MOVE METHOD1() TO INTEGERVAR1; /* is not valid, expression are not supported */
+	MOVE 3 + 1 TO INTEGERVAR1;   /* is not valid, expression are not supported */
+	MOVE F1() TO INTEGERVAR1;    /* is not valid, expression are not supported */
 
 Expressions
 --------------------
