@@ -70,7 +70,16 @@ This operators are not supported on if, where or loop statement conditions etc.
 Assingment
 --------------------
 
-asignment...
+There are two assignment methods in TROIA. First method is using MOVE command, which does not support expressions for source value.
+
+::
+
+	MOVE 'Hello World' TO STRINGVAR1;
+	MOVE STRINGVAR1 TO STRINGVAR2;
+	MOVE 3 TO INTEGERVAR1;
+	
+	MOVE 3 + 1 TO INTEGERVAR1;     /* is not valid, expression are not supported */
+	MOVE METHOD1() TO INTEGERVAR1; /* is not valid, expression are not supported */
 
 Expressions
 --------------------
