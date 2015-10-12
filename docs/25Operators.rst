@@ -65,7 +65,7 @@ In TROIA codes, there are two set of logical operators. The first set is about T
 +---------------+---------------------------------+
 
 Elements of second logical operator set are OR, AND and NOT. This operators are not elements of TROIA language, they are just used in SQL commands that written inside TROIA codes.
-This operators are not supported on logical operations on if, where or loop conditions etc.
+This operators are not supported on if, where or loop statement conditions etc.
 
 Assingment
 --------------------
