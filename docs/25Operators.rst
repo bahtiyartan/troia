@@ -52,6 +52,8 @@ Relational Operators
 Logical Operators
 ====================
 
+In TROIA codes, there are two set of logical operators. The first set is about TROIA expressions that is used on if, where, loop etc. conditions.
+
 +---------------+---------------------------------+
 |   Operator    |   Meaning                       |
 +---------------+---------------------------------+
@@ -61,6 +63,9 @@ Logical Operators
 +---------------+---------------------------------+
 |      ||       |   or                            |
 +---------------+---------------------------------+
+
+Elements of second logical operator set are OR, AND and NOT. This operators are not elements of TROIA language, they are just used in SQL commands that written inside TROIA codes.
+This operators are not supported on logical operations on if, where or loop conditions etc.
 
 Assingment
 --------------------
