@@ -15,7 +15,7 @@ Arithmetic Operators
 +---------------+---------------------------------+
 |   Operator    |   Meaning                       |
 +---------------+---------------------------------+
-|    **+**      |   add                           |
+|    **+**      |   add, string concat            |
 +---------------+---------------------------------+
 |    **-**      |   substract                     |
 +---------------+---------------------------------+
@@ -78,13 +78,27 @@ There are two assignment methods in TROIA. First method is using MOVE command, w
 	MOVE STRINGVAR1 TO STRINGVAR2;
 	MOVE 3 TO INTEGERVAR1;
 	
-	MOVE 3 + 1 TO INTEGERVAR1;   /* is not valid, expression are not supported */
-	MOVE F1() TO INTEGERVAR1;    /* is not valid, expression are not supported */
+	MOVE 3 + 1 TO INTEGERVAR1;      /* is not valid, expressions are not supported */
+	MOVE THIS.F1() TO INTEGERVAR1;  /* is not valid, expressions are not supported */
+	
+
+
+Second assignment method is using = operator. This method also supports expressions in right hand side.
+
+::
+
+	STRINGVAR1 = 'Hello World';
+	STRINGVAR1 = STRINGVAR1 + 'Hello World';
+	INTEGERVAR1 = 3 * (5 + INTEGERVAR1);
+	
+	INTEGERVAR1 = REPLACE('abc cde', 'cde', 'xyz');
+	INTEGERVAR1 = THIS.F1(4+INTEGERVAR2, 'parameter value', P3);
+	
 
 Expressions
 --------------------
 
-expressions...
+Expressions can be used on a
 
 
 Type Conversion and Casting
