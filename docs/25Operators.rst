@@ -7,7 +7,7 @@ Operators and Expressions
 Operators
 --------------------
 
-Operators are the commands which tells the TROIA interpreter to do some mathematical or logical operations using their operands.
+Operators are the commands which tells the TROIA interpreter to do some mathematical,relationala and logical operations using their operands.
 
 Arithmetic Operators
 ====================
@@ -78,8 +78,8 @@ There are two assignment methods in TROIA. First method is using MOVE command, w
 	MOVE STRINGVAR1 TO STRINGVAR2;
 	MOVE 3 TO INTEGERVAR1;
 	
-	MOVE 3 + 1 TO INTEGERVAR1;      /* is not valid, expressions are not supported */
-	MOVE THIS.F1() TO INTEGERVAR1;  /* is not valid, expressions are not supported */
+	MOVE 3 + 1 TO INTEGERVAR1;      /* not valid, expressions are not supported */
+	MOVE THIS.F1() TO INTEGERVAR1;  /* not valid, expressions are not supported */
 	
 
 
