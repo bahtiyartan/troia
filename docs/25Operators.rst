@@ -92,13 +92,31 @@ Second assignment method is using = operator. This method also supports expressi
 	INTEGERVAR1 = 3 * (5 + INTEGERVAR1);
 	
 	INTEGERVAR1 = REPLACE('abc cde', 'cde', 'xyz');
-	INTEGERVAR1 = THIS.F1(4+INTEGERVAR2, 'parameter value', P3);
 	
 
 Expressions
 --------------------
 
-Expressions can be used on a
+Simply an expression is right hand side of = operator and it can be consisted of even a single variable or combinations of multiple operators and function calls.
+Expressions are not for only using assignment operations. They are also used on function calls as a parameter or on RETURN command when you need to return result of an expression.	
+Here is a simple list of mostly used commands that support expressions, details of this commands discussed in next sections.
+
+::
+
+	on function call as function parameter
+	on IF command condition
+	on WHILE command condition
+	on LOOP command condition
+	on RETURN command
+	
+::
+
+	. . .
+	INTEGERVAR1 = THIS.F1(4+INTEGERVAR2, 'parameter value', P3);
+	
+	RETURN INTEGERVAR1 + 5;
+
+
 
 
 Type Conversion and Casting
