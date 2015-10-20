@@ -140,7 +140,7 @@ Some facts about calling functions/methods
 
 Sending more parameters than called method requests is not considered a TROIA programming error. System ignores extra parameters. This is also valid for system function calls.
 
-If you send less parameters, system assigns default values to missing parameters. In system function calls, sending less parameters is not recommended, if default values of missing parameters are not documented in called function's help.
+If you send less parameters, system assigns default values to missing parameters. In system function calls, sending less parameters is not recommended, if it is not documented in function help.
 
 
 
