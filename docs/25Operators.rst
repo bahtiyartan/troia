@@ -117,7 +117,7 @@ Here is a simple list of mostly used commands that support expressions, details 
 	RETURN INTEGERVAR1 + 5;
 
 
-Function/Method Call & THIS Keyword
+THIS Keyword
 ============================
 
 One of the most used elements of expressions is function call. In TROIA language, specifying instance name of class/dialog is a must.
@@ -135,8 +135,14 @@ A function calls which does not include instance name is considered as a system 
 	RESULT = ABS(5 - 10);	 /* call a system function */
 	
 
-- - - send more parameters - - -
-- - - send less parameters - - - 
+Some facts about calling functions/methods
+==========================================
+
+Sending more parameters than called method requests is not considered a TROIA programming error. System ignores extra parameters. This is also valid for system function calls.
+
+If you send less parameters, system assigns default values to missing parameters. In system function calls, sending less parameters is not recommended, if default values of missing parameters are not documented in called function's help.
+
+
 
 
 Type Conversion and Casting
