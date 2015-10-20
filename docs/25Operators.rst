@@ -129,9 +129,7 @@ A function calls which does not include instance name is considered as a system 
 ::
 	
 	CUSTREC.CALCULATE(P1);   /* call CALCULATE method of CUSTREC object */
-	
 	THIS.SEARCH(P1);         /* call SEARCH method of same class/dialog */
-	
 	RESULT = ABS(5 - 10);	 /* call a system function 					*/
 	
 
