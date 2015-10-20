@@ -91,7 +91,7 @@ Second assignment method is using = operator. This method also supports expressi
 	STRINGVAR1 = STRINGVAR1 + 'Hello World';
 	INTEGERVAR1 = 3 * (5 + INTEGERVAR1);
 	
-	INTEGERVAR1 = REPLACE('abc cde', 'cde', 'xyz');
+	INTEGERVAR1 = ABS(5 - 10);
 	
 
 Expressions
@@ -117,6 +117,25 @@ Here is a simple list of mostly used commands that support expressions, details 
 	RETURN INTEGERVAR1 + 5;
 
 
+Function/Method Call & THIS Keyword
+============================
+
+One of the most used elements of expressions is function call. In TROIA language, specifying instance name of class/dialog is a must.
+THIS keyword is used for indicating same instance. In other words, if you want to call another method of the class/dialog in its method you must use THIS keyword.
+
+A function calls which does not include instance name is considered as a system function. System functions are predefined functions to ease some mostly used operations. (SIN(), ABS(), REPLACE() etc)
+
+::
+	
+	RESULT = CUSTREC.DOSOMETHING(PARAM); /* call DOSOMETHING method of CUSTREC object */
+	
+	RESULT = THIS.SEARCH(PARAM);         /* call SEARCH method of this class/dialog/report */
+	
+	INTEGERVAR1 = ABS(5 - 10);			 /* call a system function */
+	
+
+- - - send more parameters - - -
+- - - send less parameters - - - 
 
 
 Type Conversion and Casting
