@@ -132,7 +132,7 @@ A function calls which does not include instance name is considered as a system 
 	
 	THIS.SEARCH(P1);         /* call SEARCH method of same class/dialog */
 	
-	RESULT = ABS(5 - 10);	 /* call a system function */
+	RESULT = ABS(5 - 10);	 /* call a system function 					*/
 	
 
 Some facts about calling functions/methods
