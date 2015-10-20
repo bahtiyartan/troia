@@ -127,11 +127,11 @@ A function calls which does not include instance name is considered as a system 
 
 ::
 	
-	RESULT = CUSTREC.DOSOMETHING(PARAM); /* call DOSOMETHING method of CUSTREC object */
+	CUSTREC.CALCULATE(P1);   /* call CALCULATE method of CUSTREC object */
 	
-	RESULT = THIS.SEARCH(PARAM);         /* call SEARCH method of this class/dialog/report */
+	THIS.SEARCH(P1);         /* call SEARCH method of same class/dialog */
 	
-	INTEGERVAR1 = ABS(5 - 10);			 /* call a system function */
+	RESULT = ABS(5 - 10);	 /* call a system function */
 	
 
 - - - send more parameters - - -
