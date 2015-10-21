@@ -130,15 +130,16 @@ A function calls which does not include instance name is considered as a system 
 	
 	CUSTREC.CALCULATE(P1);   /* call CALCULATE method of CUSTREC object */
 	THIS.SEARCH(P1);         /* call SEARCH method of same class/dialog */
-	RESULT = ABS(5 - 10);	 /* call a system function 					*/
+	RESULT = ABS(5 - 10);	 /* call a system function                  */
 	
 
 Some facts about calling functions/methods
 ==========================================
 
-Sending more parameters than called method requests is not considered a TROIA programming error. System ignores extra parameters. This is also valid for system function calls.
+Sending more parameters than called method requests is not considered a TROIA programming error. System just ignores extra parameters. 
+If you send less parameters, system assigns default values to missing parameters. 
 
-If you send less parameters, system assigns default values to missing parameters. In system function calls, sending less parameters is not recommended, if it is not documented in function help.
+In system function calls, sending less or more parameters is not recommended, if it is not documented in function help.
 
 
 
