@@ -139,9 +139,15 @@ Some facts about calling functions/methods
 Sending more parameters than called method requests is not considered a TROIA programming error. System just ignores extra parameters. 
 If you send less parameters, system assigns default values to missing parameters. 
 
+If you want to pass default values for parameters except last parameter, you must leave parameter empty.
+
+::
+
+	RESULT = MYINS1.CALCULATE(P1,,,P4);
+	
+	/* send default values to P2 and P3 */
+
 In system function calls, sending less or more parameters is not recommended, if it is not documented in function help.
-
-
 
 
 Type Conversion and Casting
