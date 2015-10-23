@@ -153,7 +153,36 @@ In system function calls, sending less or more parameters is not recommended, if
 Type Conversion and Casting
 ---------------------------
 
-type conversion and casting...
+In TROIA, simple typed variables casted automatically, so there is not an extra operator or method for type casting. For example, you can directly assing an double to string, or a string to a double symbol.
+If system fails to convert types assings default value of destination symbol.
+
+Type casting is not supported for complex types such as TABLE, VECTOR or class instance. 
+Actually, assigning this complex types is not mostly used method because TROIA has special commands for data transfer between complex types, especially for tables.
+
+::
+
+	OBJECT:
+		STRING SOURCESTR,
+		DOUBLE DESTDOUBLE,
+		INTEGER DESTINT,
+		DATE DESTDATE,
+		LONG DESTLONG,
+		DATETIME DESTDATETIME;
+		
+		SOURCESTR = '6.0';
+		
+		DESTDOUBLE = SOURCESTR;   /* double is now 6.0 */
+		DESTINT = DESTDOUBLE;     /* integet is now 6  */
+		
+		SOURCESTR = '25.11.1984';
+		
+		DESTDATE = SOURCESTR;     /* date is now 25.11.1984 */
+		DESTLONG = DESTDATE;      /* long is now long value of given date */
+		DESTDATETIME = DESTLONG;  /* datetime is now 25.11.1984 00:00:00  */
+		SOURCESTR = DESTDATETIME; /* string is now '25.11.1984 00:00:00' as string */
+		
+
+Here is as simple table that shows casting operation between source and destination simple types.                           
 
 
 Example: Integer Arithmetics
