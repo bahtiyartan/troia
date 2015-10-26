@@ -179,7 +179,7 @@ Actually, assigning this complex types is not mostly used method because TROIA h
 		DESTDATE = SOURCESTR;     /* date is now 25.11.1984 */
 		DESTLONG = DESTDATE;      /* long is now long value of given date */
 		DESTDATETIME = DESTLONG;  /* datetime is now 25.11.1984 00:00:00  */
-		SOURCESTR = DESTDATETIME; /* string is now '25.11.1984 00:00:00' as string */
+		SOURCESTR = DESTDATETIME; /* string is now '25.11.1984 00:00:00'  */
 		
 
 Here is as simple table that shows casting operation between source and destination simple types.                           
