@@ -185,7 +185,7 @@ Actually, assigning this complex types is not a usual method, because TROIA has 
 Here is as simple table that shows casting operation between source and destination simple types.  In this table x-axis shows destination variable type and y-axis shows source variable type.
 
 +----------+----------+-----------+-----------+------------+----------+----------+
-|          | DESTINATION VALUE                                                 |
+|          | DESTINATION VALUE                                                   |
 +----------+----------+-----------+-----------+------------+----------+----------+
 |          |  STRING  | INTEGER   | LONG      | DECIMAL    | DATE     | DATETIME |
 +----------+----------+-----------+-----------+------------+----------+----------+
