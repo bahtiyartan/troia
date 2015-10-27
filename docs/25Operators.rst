@@ -184,23 +184,23 @@ Actually, assigning this complex types is not a usual method, because TROIA has 
 
 Here is as simple table that shows casting operation between source and destination simple types.  In this table x-axis shows destination variable type and y-axis shows source variable type.This conversion table is valid for both of MOVE and assingment operetor.
 
-+----------+----------+-----------+-----------+------------+-----------+-----------+
-|          | DESTINATION VALUE                                                     |
-+----------+----------+-----------+-----------+------------+-----------+-----------+
-|          |  STRING  | INTEGER   | LONG      | DECIMAL    | DATE      | DATETIME  |
-+----------+----------+-----------+-----------+------------+-----------+-----------+
-|          |          |parse,if   |parse,if   |parse,use . |parse, if  |parse, if  |
-|  STRING  |          |fails-> 0  |fails-> 0  |as sep. if  |fails set  |fails set  |
-|          |          |           |           |fails-> 0.0 |NULLDATE(?)|NULLDATE(?)|
-+----------+----------+-----------+-----------+------------+-----------+-----------+
-|          | convert  |           |no extra   |            |           |           |
-| INTEGER  | to string|           |operation, |            |           |           |
-|          |          |           |just assign|            |           |           |
-+----------+----------+-----------+-----------+------------+-----------+-----------+
-|          | convert  |           |           |            |           |           |
-| LONG     | to string|           |           |            |           |           |
-|          |          |           |           |            |           |           |
-+----------+----------+-----------+-----------+------------+-----------+-----------+
++----------+----------+-----------+-----------+---------------+-----------+-----------+
+|          | DESTINATION VALUE                                                        |
++----------+----------+-----------+-----------+---------------+-----------+-----------+
+|          |  STRING  | INTEGER   | LONG      | DECIMAL       | DATE      | DATETIME  |
++----------+----------+-----------+-----------+---------------+-----------+-----------+
+|          |          |parse,if   |parse,if   |parse,use .    |parse, if  |parse, if  |
+|  STRING  |          |fails-> 0  |fails-> 0  |as sep. if     |fails set  |fails set  |
+|          |          |           |           |fails-> 0.0    |NULLDATE(?)|NULLDATE(?)|
++----------+----------+-----------+-----------+---------------+-----------+-----------+
+|          | convert  |           |no extra   |assign int val,|           |           |
+| INTEGER  | to string|           |operation, |use .0 as      |           |           |
+|          |          |           |just assign|fractional part|           |           |
++----------+----------+-----------+-----------+---------------+-----------+-----------+
+|          | convert  |           |           |               |           |           |
+| LONG     | to string|           |           |               |           |           |
+|          |          |           |           |               |           |           |
++----------+----------+-----------+-----------+---------------+-----------+-----------+
                        
 (?) NULLDATE:
 
