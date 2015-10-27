@@ -189,11 +189,16 @@ Here is as simple table that shows casting operation between source and destinat
 +----------+----------+-----------+-----------+------------+-----------+-----------+
 |          |  STRING  | INTEGER   | LONG      | DECIMAL    | DATE      | DATETIME  |
 +----------+----------+-----------+-----------+------------+-----------+-----------+
-| STRING   |          |parse,if   |parse,if   |parse,use . |parse, if  |parse, if  |
-|          |          |fails-> 0  |fails-> 0  |as sep. if  |fails set  |fails set  |
+|          |          |parse,if   |parse,if   |parse,use . |parse, if  |parse, if  |
+|  STRING  |          |fails-> 0  |fails-> 0  |as sep. if  |fails set  |fails set  |
 |          |          |           |           |fails-> 0.0 |NULLDATE(?)|NULLDATE(?)|
 +----------+----------+-----------+-----------+------------+-----------+-----------+
-| INTEGER  |          |           |           |            |           |           |
+|          | convert  |           |no extra   |            |           |           |
+| INTEGER  | to string|           |operation, |            |           |           |
+|          |          |           |just assign|            |           |           |
++----------+----------+-----------+-----------+------------+-----------+-----------+
+|          | convert  |           |           |            |           |           |
+| LONG     | to string|           |           |            |           |           |
 |          |          |           |           |            |           |           |
 +----------+----------+-----------+-----------+------------+-----------+-----------+
                        
