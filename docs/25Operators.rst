@@ -182,7 +182,16 @@ Actually, assigning this complex types is not mostly used method because TROIA h
 		SOURCESTR = DESTDATETIME; /* string is now '25.11.1984 00:00:00'  */
 		
 
-Here is as simple table that shows casting operation between source and destination simple types.                           
+Here is as simple table that shows casting operation between source and destination simple types.  In this table x-axis shows destination variable type and y-axis shows source variable type.
+
++----------+----------+----------+----------+----------+----------+----------+
+|          |          |          |          |          |          |          |
+|   a      |    b     |      c   |          |          |          |          |
++----------+----------+----------+----------+----------+----------+----------+
+|          |          |          |          |          |          |          |
+|          |          |          |          |          |          |          |
++----------+----------+----------+----------+----------+----------+----------+
+                       
 
 
 Example: Integer Arithmetics
