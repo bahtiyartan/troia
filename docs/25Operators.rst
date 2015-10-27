@@ -157,7 +157,7 @@ In TROIA, simple typed variables casted automatically, so there is not an extra 
 If system fails to convert types assings default value of destination symbol.
 
 Type casting is not supported for complex types such as TABLE, VECTOR or class instance. 
-Actually, assigning this complex types is not mostly used method because TROIA has special commands for data transfer between complex types, especially for tables.
+Actually, assigning this complex types is not a usual method, because TROIA has special commands for data transfer between complex types, especially for tables.
 
 ::
 
@@ -184,17 +184,18 @@ Actually, assigning this complex types is not mostly used method because TROIA h
 
 Here is as simple table that shows casting operation between source and destination simple types.  In this table x-axis shows destination variable type and y-axis shows source variable type.
 
-+----------+----------+----------+-------------+----------+----------+----------+
-|          | DESTINATION VALUE                                                  |
-+----------+----------+----------+-------------+----------+----------+----------+
-|          |  STRING  | INTEGER  | LONG        | DECIMAL  | DATE     | DATETIME |
-+----------+----------+----------+-------------+----------+----------+----------+
-| STRING   |          |          |             |          |          |          |
-|          |          |          |             |          |          |          |
-+----------+----------+----------+-------------+----------+----------+----------+
-| INTEGER  |          |          |             |          |          |          |
-|          |          |          |             |          |          |          |
-+----------+----------+----------+-------------+----------+----------+----------+
++----------+----------+-----------+-----------+------------+----------+----------+
+|          | DESTINATION VALUE                                                 |
++----------+----------+-----------+-----------+------------+----------+----------+
+|          |  STRING  | INTEGER   | LONG      | DECIMAL    | DATE     | DATETIME |
++----------+----------+-----------+-----------+------------+----------+----------+
+| STRING   |          |parse,if   |parse,if   |parse,use . |          |          |
+|          |          |fails-> 0  |fails-> 0  |as sep. if  |          |          |
+|          |          |           |           |fails-> 0.0 |          |          |
++----------+----------+-----------+-----------+------------+----------+----------+
+| INTEGER  |          |           |           |            |          |          |
+|          |          |           |           |            |          |          |
++----------+----------+-----------+-----------+------------+----------+----------+
                        
 
 
