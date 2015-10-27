@@ -193,12 +193,17 @@ Here is as simple table that shows casting operation between source and destinat
 |  STRING  |          |fails-> 0  |fails-> 0  |as sep. if     |fails set  |fails set  |
 |          |          |           |           |fails-> 0.0    |NULLDATE(?)|NULLDATE(?)|
 +----------+----------+-----------+-----------+---------------+-----------+-----------+
-|          | convert  |           |no extra   |assign int val,|           |           |
-| INTEGER  | to string|           |operation, |use .0 as      |           |           |
-|          |          |           |just assign|fractional part|           |           |
+|          | convert  |           |no extra   |assign int val,|add value  |add value  |
+| INTEGER  | to string|           |operation, |use .0 as      |as ms. to  |as ms. to  |
+|          |          |           |just assign|fractional part|01.01.1970 |01.01.1970 |
+|          |          |           |           |               |           |00:00:00   |
 +----------+----------+-----------+-----------+---------------+-----------+-----------+
 |          | convert  |           |           |               |           |           |
 | LONG     | to string|           |           |               |           |           |
+|          |          |           |           |               |           |           |
++----------+----------+-----------+-----------+---------------+-----------+-----------+
+|          | convert  |           |           |               |           |           |
+| DECIMAL  | to string|           |           |               |           |           |
 |          |          |           |           |               |           |           |
 +----------+----------+-----------+-----------+---------------+-----------+-----------+
                        
