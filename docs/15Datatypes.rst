@@ -11,19 +11,21 @@ Built-in data types are listed below:
 	INTEGER        (Ex: 5, default value is: 0)
 	LONG           (Ex: 12312312, default value:0)
 	DECIMAL        (Ex: 1.32 , all floating point numbers, default value:0.0)
-	BOOLEAN        (0 or 1, commonly INTEGER type is used instead of BOOLEAN type, default value:0)
+	BOOLEAN        (0 or 1, default value:0)
 	
 	DATETIME       (Ex: 29.10.1923 16:30:30, default value:definition time) 
 	DATE           (Ex: 23.04.1920, default value:definition date) 
 	TIME           (Ex: 21:30)
 	TIMES          (Ex: 21:30:13)
 	
-	STRING         (Single quote (') is used to limit hardcode strings, default value is empty string)
+	STRING         (Ex: 'Hello World', default value is empty string)
 	STRINGBUILDER  (default value is empty string)
 	
 	TABLE
 	VECTOR
 
+BOOLEAN data type is supported on 5.01 and following releases. INTEGER type is used instead of BOOLEAN type as 1 or 0.
+	
 TROIA does not support low level types like byte, char, short, float etc.
 	
 	
@@ -37,7 +39,9 @@ To get higher performance on string concatenation, you must use APPENDSTRING com
 
 Although there is not any other distinctive feature between STRINGBUILDER and STRING, it is not recommended to use STRINGBUILDER type instead of STRING on regular string opreations except string concateantion.
 
-Both STRING and STRINGBUILDER types don't have hard-coded maximum length.
+Both STRING and STRINGBUILDER types don't have hard-coded maximum length. 
+
+Single quote (') is used to limit hardcode strings.
 
 
 Table
