@@ -184,41 +184,41 @@ Actually, assigning this complex types is not a usual method, because TROIA has 
 
 Here is as simple table that shows casting operation between source and destination simple types.  In this table x-axis shows destination variable type and y-axis shows source variable type.This conversion table is valid for both of MOVE and assingment operetor.
 
-+---+----------+-----------+-----------+-----------+---------------+-----------+-----------+
-|              | DESTINATION VARIABLE TYPE                                                 |
-+              +-----------+-----------+-----------+---------------+-----------+-----------+
-|              |  STRING   | INTEGER   | LONG      | DECIMAL       | DATE      | DATETIME  |
-+---+----------+-----------+-----------+-----------+---------------+-----------+-----------+
-|   |          |           |parse,if   |parse,if   |parse,use .    |parse, if  |parse, if  |
-| S |  STRING  |           |fails-> 0  |fails-> 0  |as sep. if     |fails set  |fails set  |
-| O |          |           |           |           |fails-> 0.0    |NULLDATE(1)|NULLDATE(2)|
-+ U +----------+-----------+-----------+-----------+---------------+-----------+-----------+
-| R |          | convert   |           |no extra   |assign int val,|add value  |add value  |
-| C | INTEGER  | to string |           |operation, |use .0 as      |as ms. to  |as ms. to  |
-| E |          |           |           |just assign|fractional part|01.01.1970 |01.01.1970 |
-|   |          |           |           |           |               |           |00:00:00   |
-+ V +----------+-----------+-----------+-----------+---------------+-----------+-----------+
-| A |          | convert   |assign, if |           |assign long val|add value  |add value  |
-| R | LONG     | to string |exceeds    |           |use .0 as      |as ms. to  |as ms. to  |
-| I |          |           |set->0 (??)|           |fractional part|01.01.1970 |01.01.1970 |
-| A |          |           |           |           |               |           |00:00:00   |
-+ B +----------+-----------+-----------+-----------+---------------+-----------+-----------+
-| L |          | convert   |assign only|assign only|               |add whole  |add whole  |
-| E | DECIMAL  | to string |whole part |whole part |               |part as    |part as ms.|
-|   |          |           |           |           |               |ms. to     |01.01.1970 |
-| T |          |           |           |           |               |01.01.1970 |00:00:00   |
-+ Y +----------+-----------+-----------+-----------+---------------+-----------+-----------+
-| P |          |convert to |assign long|assign long|               |           |uses       |
-| E | DATE     |string with|value from |value from |  not allowed  |           |00:00:00 as|
-|   |          |dd.MM.YYYY |01.01.1970 |01.01.1970 |  assigns 0    |           |hour part  |
-|   |          |pattern    |00:00:00   |00:00:00   |               |           |           |
-+   +----------+-----------+-----------+-----------+---------------+-----------+-----------+
-|   |          |convert to |assign long|assign long|               |assign only|           |
-|   | DATETIME |string with|value from |value from |  not allowed  |date part  |           |
-|   |          |dd.MM.YYYY |01.01.1970 |01.01.1970 |  assigns 0    |           |           |
-|   |          | HH:mm:ss  |00:00:00   |00:00:00   |               |           |           |
-+---+----------+-----------+-----------+-----------+---------------+-----------+-----------+
-                       
++---+--------+-----------+-----------+-----------+---------------+-----------+-----------+
+|            | DESTINATION VARIABLE TYPE                                                 |
++            +-----------+-----------+-----------+---------------+-----------+-----------+
+|            |  STRING   | INTEGER   | LONG      | DECIMAL       | DATE      | DATETIME  |
++---+--------+-----------+-----------+-----------+---------------+-----------+-----------+
+|   |        |           |parse,if   |parse,if   |parse,use .    |parse, if  |parse, if  |
+| S |STRING  |           |fails-> 0  |fails-> 0  |as sep. if     |fails set  |fails set  |
+| O |        |           |           |           |fails-> 0.0    |NULLDATE(1)|NULLDATE(2)|
++ U +--------+-----------+-----------+-----------+---------------+-----------+-----------+
+| R |        | convert   |           |no extra   |assign int val,|add value  |add value  |
+| C |INTEGER | to string |           |operation, |use .0 as      |as ms. to  |as ms. to  |
+| E |        |           |           |just assign|fractional part|01.01.1970 |01.01.1970 |
+|   |        |           |           |           |               |           |00:00:00   |
++ V +--------+-----------+-----------+-----------+---------------+-----------+-----------+
+| A |        | convert   |assign, if |           |assign long val|add value  |add value  |
+| R |LONG    | to string |exceeds    |           |use .0 as      |as ms. to  |as ms. to  |
+| I |        |           |set->0 (??)|           |fractional part|01.01.1970 |01.01.1970 |
+| A |        |           |           |           |               |           |00:00:00   |
++ B +--------+-----------+-----------+-----------+---------------+-----------+-----------+
+| L |        | convert   |assign only|assign only|               |add whole  |add whole  |
+| E |DECIMAL | to string |whole part |whole part |               |part as    |part as ms.|
+|   |        |           |           |           |               |ms. to     |01.01.1970 |
+| T |        |           |           |           |               |01.01.1970 |00:00:00   |
++ Y +--------+-----------+-----------+-----------+---------------+-----------+-----------+
+| P |        |convert to |assign long|assign long|               |           |uses       |
+| E |DATE    |string with|value from |value from |  not allowed  |           |00:00:00 as|
+|   |        |dd.MM.YYYY |01.01.1970 |01.01.1970 |  assigns 0    |           |hour part  |
+|   |        |pattern    |00:00:00   |00:00:00   |               |           |           |
++   +--------+-----------+-----------+-----------+---------------+-----------+-----------+
+|   |        |convert to |assign long|assign long|               |assign only|           |
+|   |DATETIME|string with|value from |value from |  not allowed  |date part  |           |
+|   |        |dd.MM.YYYY |01.01.1970 |01.01.1970 |  assigns 0    |           |           |
+|   |        | HH:mm:ss  |00:00:00   |00:00:00   |               |           |           |
++---+--------+-----------+-----------+-----------+---------------+-----------+-----------+
+                      
 (?)  NULLDATE:
 (??) Limits of Integer :
 
