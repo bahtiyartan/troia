@@ -225,4 +225,20 @@ Here is as simple table that shows casting operation between source and destinat
 Example: Integer Arithmetics
 ---------------------------
 
-integer arigtmetics example...
+Here is a simple arithmetics example. Please think on this example and try to find why DECIMALVAR1 and DECIMALVAR2 values are different even if divide operation is same.
+
+::
+
+	OBJECT: 
+		INTEGER INTEGERVAR1,
+		DECIMAL DECIMALVAR1,
+		DECIMAL DECIMALVAR2;
+
+	INTEGERVAR1 = (1 + 2) * 3;
+	INTEGERVAR1 = INTEGERVAR1 ^ 2 + 4;
+	INTEGERVAR1 = INTEGERVAR1 % 60;
+
+	DECIMALVAR1 = INTEGERVAR1 / 6.0;
+	DECIMALVAR2 = INTEGERVAR1 / 6;
+	
+
