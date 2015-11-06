@@ -184,8 +184,8 @@ Actually, assigning this complex types is not a usual method, because TROIA has 
 
 Here is as simple table that shows casting operation between source and destination simple types.  In this table x-axis shows destination variable type and y-axis shows source variable type.This conversion table is valid for both of MOVE and assingment operetor.
 
-+---+----------+----------+-----------+-----------+---------------+-----------+-----------+
-|              | DESTINATION VARIABLE TYPE                                                |
++---+----------+-----------+-----------+-----------+---------------+-----------+-----------+
+|              | DESTINATION VARIABLE TYPE                                                 |
 +              +-----------+-----------+-----------+---------------+-----------+-----------+
 |              |  STRING   | INTEGER   | LONG      | DECIMAL       | DATE      | DATETIME  |
 +---+----------+-----------+-----------+-----------+---------------+-----------+-----------+
