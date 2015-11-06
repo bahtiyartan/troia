@@ -11,7 +11,7 @@ Transactions and Scope
 scope...
 
 Defining Transactions
-====================
+---------------------
 
 defining...
 
