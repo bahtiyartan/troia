@@ -24,7 +24,7 @@ Built-in data types are listed below:
 	TABLE
 	VECTOR
 
-BOOLEAN data type is supported on 5.01 and following releases. INTEGER type is used instead of BOOLEAN type as 1 or 0.
+BOOLEAN data type is supported on 5.01 and following releases, so usually INTEGER type is used instead of BOOLEAN type as 1 or 0.
 	
 TROIA does not support low level types like byte, char, short, float etc.
 	

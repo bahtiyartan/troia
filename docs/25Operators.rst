@@ -219,7 +219,8 @@ Here is as simple table that shows casting operation between source and destinat
 |   |          | HH:mm:ss  |00:00:00   |00:00:00   |               |           |           |
 +---+----------+-----------+-----------+-----------+---------------+-----------+-----------+
                        
-(?) NULLDATE:
+(?)  NULLDATE:
+(??) Limits of Integer :
 
 Example: Integer Arithmetics
 ---------------------------
