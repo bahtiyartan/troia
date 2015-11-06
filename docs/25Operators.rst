@@ -234,7 +234,8 @@ Here is a simple arithmetics example. Please think on this example and try to fi
 		DECIMAL DECIMALVAR1,
 		DECIMAL DECIMALVAR2;
 
-	INTEGERVAR1 = (1 + 2) * 3;
+	INTEGERVAR1 = 3;
+	INTEGERVAR1 = INTEGERVAR1 * (1 + 2);
 	INTEGERVAR1 = INTEGERVAR1 ^ 2 + 4;
 	INTEGERVAR1 = INTEGERVAR1 % 60;
 
