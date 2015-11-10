@@ -190,7 +190,7 @@ Some examples of system variables are listed below, for more please view TROIA H
 	SYS_USER              : Username of current user.
 	SYS_VERSION           : TROIA platform server version.
 	SYS_AFFECTEDROWCOUNT  : Number of affected rows after db update/insert/delete.
-	SYS_CURRENTDIALOG     : Name of current dailog.
+	SYS_CURRENTDIALOG     : Name of current dialog.
 	CONFIRM               : Selected value after a confirm or option message.
 	SQL                   : Latest SQL Query that is sent to database.
 	
@@ -239,9 +239,9 @@ The first way of defining same variable more than once is writing different defi
 	RESULT = MYVAR;
 	
 	/*  RESULT's value: Hello World
-		Second OBJECT command ingored the MYVAR definition. */
+		Second OBJECT command ignored the MYVAR definition. */
 		
-Second method is running same definiton command multiple times. In a loop or an event which is triggered multiple times. In this case, the definiton command which defines the variable initializes it (sets its default value, to see the default values please see data types section).
+Second method is running same definition command multiple times. In a loop or an event which is triggered multiple times. In this case, the definition command which defines the variable initializes it (sets its default value, to see the default values please see data types section).
 
 
 ::
@@ -274,6 +274,6 @@ Naming & Conventions
 
 + Defining a variable which has same name with a TROIA command, function, system variable or data type is considered as TROIA coding error.
 
-+ As a TROIA programming convention TROIA codes are written in uppercase, so using uppercase for variable names is recommended.
++ As a TROIA programming convention TROIA codes are written in upper-case, so using upper-case for variable names is recommended.
 
-+ Defining all variables as global is not a good programming convention, variables must be defined narrowest scope that is possible, to save memory, eleminate possible bugs and readibility.
++ Defining all variables as global is not a good programming convention, variables must be defined narrowest scope that is possible, to save memory, eliminate possible bugs and readability.
