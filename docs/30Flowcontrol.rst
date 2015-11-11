@@ -49,9 +49,9 @@ ELSE IF is not supported in TROIA, to run multiple conditions you must use neste
 		RESULT = 'A equals to one';
 	ELSE
 		IF A < 1 THEN
-				RESULT = 'A is less than one';
+			RESULT = 'A is less than one';
 		ELSE
-				RESULT = 'A is more than one';
+			RESULT = 'A is more than one';
 		ENDIF;
 	ENDIF;
 
