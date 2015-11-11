@@ -22,11 +22,11 @@ Here is an example:
 
 ::
 
-	IF A > 0 && A < THIS.GETMAXVALUE(P1) THEN
-		RESULT = 'A is between zero and max value';
+	IF A > 1 && A < THIS.GETMAXVALUE(P1) THEN
+		RESULT = 'A is between one and max value';
 	ENDIF;
 	
-In TROIA all logical expression is executed even if first condition is enough to calculate logical expression's result. Lets say A variable is -1 before the IF statement A > 0 condition returns false. If one of && (and) operator's operands is false, result is always false. Most used programming languages do not execute A < THIS.GETMAXVALUE() conditon, but in TROIA it is executed. Behaviour is same for || (or) operator when its first operand is true.
+In TROIA all logical expression is executed even if first condition is enough to calculate logical expression's result. Lets say A variable is 0 before the IF statement A > 1 condition returns false. If one of && (and) operator's operands is false, result is always false. Most used programming languages do not execute A < THIS.GETMAXVALUE() conditon, but in TROIA it is executed. Behaviour is same for || (or) operator when its first operand is true.
 	
 
 
