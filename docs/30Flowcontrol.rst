@@ -22,7 +22,6 @@ Here is an example:
 
 ::
 
-
 	IF A > 1 && A < THIS.GETMAXVALUE(P1) THEN
 		RESULT = 'A is between one and max value';
 	ENDIF;
@@ -30,11 +29,32 @@ Here is an example:
 In TROIA all logical expression is executed even if first condition is enough to calculate logical expression's result, unlike most programming languages. Lets say A is 0 before the IF statement, so A > 1 condition returns false. If one of && (and) operator's operands is false, result is always false. TROIA Interpreter executes A < THIS.GETMAXVALUE() conditon, although condition result is obvious. Behaviour is same for || (or) operator when its first operand is true.
 	
 
-
-
 IF-ELSE Statement
 ====================
-not implemented...
+ELSE keyword is used to define another block that will be executed when 'if condition' is false.
+
+::
+
+	IF A > 1 && A < THIS.GETMAXVALUE(P1) THEN
+		RESULT = 'A is between one and max value';
+	ELSE
+		RESULT = 'A is less than one';
+	ENDIF;
+
+ELSE IF is not supported in TROIA, to run multiple conditions you must use nested if blocks. Here is a valid ELSE IF example:
+
+::
+
+	IF A == 1 THEN
+		RESULT = 'A equals 1';
+	ELSE
+		IF A < 1 THEN
+				RESULT = 'A is less than one';
+		ELSE
+				RESULT = 'A is more than one';
+		ENDIF;
+	ENDIF;
+
 
 SWITCH Statement
 --------------------
