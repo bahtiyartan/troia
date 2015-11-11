@@ -35,10 +35,10 @@ ELSE keyword is used to define another block that will be executed when 'if cond
 
 ::
 
-	IF A > 1 && A < THIS.GETMAXVALUE(P1) THEN
-		RESULT = 'A is between one and max value';
+	IF A == 1 THEN
+		RESULT = 'A equals to one';
 	ELSE
-		RESULT = 'A is less than one';
+		RESULT = 'A is less or more than one';
 	ENDIF;
 
 ELSE IF is not supported in TROIA, to run multiple conditions you must use nested if blocks. Here is a valid ELSE IF example:
@@ -46,7 +46,7 @@ ELSE IF is not supported in TROIA, to run multiple conditions you must use neste
 ::
 
 	IF A == 1 THEN
-		RESULT = 'A equals 1';
+		RESULT = 'A equals to one';
 	ELSE
 		IF A < 1 THEN
 				RESULT = 'A is less than one';
