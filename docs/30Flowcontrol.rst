@@ -58,7 +58,40 @@ ELSE IF is not supported in TROIA, to run multiple conditions you must use neste
 
 SWITCH Statement
 --------------------
-not implemented...
+
+::
+
+	SWITCH item
+		CASE value:
+			case block 1
+		CASE value:
+			case block 2
+		.
+		.
+		CASE value:
+			case block n
+		DEFAULT:
+			default block
+	ENDSWITCH;
+
+::
+
+	OBJECT: 
+	 STRING VAR,
+	 STRING RESULT;
+
+	VAR = '8';
+
+	SWITCH VAR 
+	CASE 5:
+		RESULT = 'It is five';
+	CASE 6:
+		RESULT = 'It is six';
+	CASE '7','8':
+		RESULT = 'It is seven or eight';
+	DEFAULT:
+		RESULT = 'I do not know what it is.';
+	ENDSWITCH;
 
 WHILE Loop
 --------------------
