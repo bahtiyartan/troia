@@ -77,8 +77,8 @@ SWITCH Statement
 ::
 
 	OBJECT: 
-	 STRING VAR,
-	 STRING RESULT;
+		STRING VAR,
+		STRING RESULT;
 
 	VAR = '8';
 
@@ -95,7 +95,36 @@ SWITCH Statement
 
 WHILE Loop
 --------------------
-not implemented...
+
+::
+
+	WHILE condition
+	BEGIN
+		block
+	ENDWHILE;
+
+
+::
+
+	OBJECT: 
+		INTEGER VAR,
+		STRING RESULT;
+
+	VAR = 1;
+	RESULT = '';
+
+	WHILE VAR < 10 
+	BEGIN
+
+		IF VAR % 2 == 0 THEN
+			RESULT = RESULT + VAR +':even, ';
+		ELSE
+			RESULT = RESULT + VAR +':odd, ';
+		ENDIF;
+
+		VAR = VAR + 1;
+	ENDWHILE;
+
 
 LOOP Command
 --------------------
