@@ -97,6 +97,10 @@ WHILE Loop
 --------------------
 not implemented...
 
+LOOP Command
+--------------------
+not implemented...
+
 BREAK & CONTINUE Statements
 ----------------------------
 not implemented...
