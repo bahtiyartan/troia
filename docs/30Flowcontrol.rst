@@ -59,10 +59,12 @@ ELSE IF is not supported in TROIA, to run multiple conditions you must use neste
 SWITCH Statement
 --------------------
 
+SWITCH statement is another way of defining conditional blocks. Here is the syntax of SWITCH statement in TROIA:
+
 ::
 
 	SWITCH item
-		CASE value:
+		CASE value[,value]:
 			case block 1
 		CASE value:
 			case block 2
@@ -73,6 +75,9 @@ SWITCH Statement
 		DEFAULT:
 			default block
 	ENDSWITCH;
+	
+
+SWITCH Statement allows using only variables as switch item (you can not use an expression) and compares item's text value with string values of cases defined with CASE keyword. If you want to execute same block for more than one CASE values you can list values in a single case using comma (,) as separator. In TROIA, BREAK keyword is not supported and required in SWITCH statements. Here is a simple example of SWITCH statement:
 
 ::
 
@@ -92,6 +97,8 @@ SWITCH Statement
 	DEFAULT:
 		RESULT = 'I do not know what it is.';
 	ENDSWITCH;
+	
+
 
 WHILE Loop
 --------------------
