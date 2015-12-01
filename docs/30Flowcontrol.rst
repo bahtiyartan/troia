@@ -77,7 +77,9 @@ SWITCH statement is another way of defining conditional blocks. Here is the synt
 	ENDSWITCH;
 	
 
-SWITCH Statement allows using only variables as switch item (you can not use an expression) and compares item's text value with string values of cases defined with CASE keyword. If you want to execute same block for more than one CASE values you can list values in a single case using comma (,) as separator. In TROIA, BREAK keyword is not supported and required in SWITCH statements. Here is a simple example of SWITCH statement:
+SWITCH Statement allows using only variables as switch item so you can not use an expression. SWITCH command compares item's text value with string values of cases defined with CASE keyword, so programmers must consider string values of cases and given item.
+
+If you want to execute same block for more than one CASE values you can list values in a single case using comma (,) as separator. In TROIA, BREAK keyword is not supported and required in SWITCH statements. Here is a simple example of SWITCH statement:
 
 ::
 
