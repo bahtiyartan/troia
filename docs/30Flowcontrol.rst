@@ -159,7 +159,45 @@ We will discuss LOOP command and other table options detailly in next sections. 
 
 BREAK & CONTINUE Statements
 ----------------------------
-not implemented...
+
+In some cases within loop/while block, there is need to skip the remaining part of loop/while block and continue with the next iteration of the loop. To cancel remaining part of loop and jump to the begining of loop/while block, CONTINUE statement is used.
+
+Similarly, BREAK statement is used to cancel whole loop. 
+
+Here is an example that combines BREAK and CONTINUE statements to find list and total of odd numbers between 0 and 10. In this example, condition of WHILE loop is always TRUE, so at first glance this loop is an infinite loop. But in first IF block, code limits re-execution count of loop block with BREAK command. In second IF block, contition checks whether value is even and if value is even CONTINUE skips remaining parts of block and jumps begining of while block.
+
+::
+
+	OBJECT: 
+		INTEGER INDEXNUM,
+		INTEGER ODDNUMBERSTOTAL,
+		STRING ODDNUMBERS;
+
+	ODDNUMBERSTOTAL = 0;
+	INDEXNUM = 0;
+	ODDNUMBERS = '';
+
+	WHILE 1 == 1 
+	BEGIN
+
+		INDEXNUM = INDEXNUM + 1;
+
+		IF INDEXNUM == 10 THEN
+		   BREAK;
+		ENDIF;
+
+		IF INDEXNUM % 2 == 0 THEN
+			CONTINUE;
+		ENDIF;
+		
+		ODDNUMBERSTOTAL = ODDNUMBERSTOTAL + INDEXNUM;
+		ODDNUMBERS = ODDNUMBERS + INDEXNUM + ',';
+		
+	ENDWHILE;
+
+	STRINGVAR3 = 'Odd Numbers: ' + ODDNUMBERS + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'Total: ' + ODDNUMBERSTOTAL;
+
 
 Sample 1: Factorial
 ----------------------------
