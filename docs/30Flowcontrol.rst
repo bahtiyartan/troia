@@ -147,7 +147,7 @@ As mentioned before, TABLE is the most important data type of the language and p
 
 The LOOP command has many options such as condition or performance issues, but "for now" simply it can thought of as a kind of "foreach row".
 
-We will discuss LOOP command and other table options detailly in next sections. For now we must know only its basic usage. As it is obvious in its syntax you must specify the name of table variable to loop on.
+We will discuss LOOP command and other table options detailly in next sections. For now we must know only its basic usage. As it is obvious in syntax below, you must specify the name of table variable to loop on.
 
 ::
 
