@@ -105,6 +105,8 @@ If you want to execute same block for more than one CASE values you can list val
 WHILE Loop
 --------------------
 
+While loop is a flow-control statement that allows executing a block of code repeatedly based on a condition. Like most of programming languages, TROIA also supports while loops. Here is the syntax of while loop in TROIA.
+
 ::
 
 	WHILE condition
@@ -113,6 +115,8 @@ WHILE Loop
 	ENDWHILE;
 
 
+Here is a simple example of WHILE command that tries to find if numbers are even or odd. 	
+	
 ::
 
 	OBJECT: 
@@ -126,18 +130,32 @@ WHILE Loop
 	BEGIN
 
 		IF VAR % 2 == 0 THEN
-			RESULT = RESULT + VAR +':even, ';
+			RESULT = RESULT + VAR + ':even, ';
 		ELSE
-			RESULT = RESULT + VAR +':odd, ';
+			RESULT = RESULT + VAR + ':odd, ';
 		ENDIF;
 
 		VAR = VAR + 1;
 	ENDWHILE;
 
+In most programming languages there are alternative looping statements like for, foreach etc, even if programmers are able to implement same behaviour using different looping statements. TROIA does not support FOR and FOREACH statements.
 
 LOOP Command
 --------------------
-not implemented...
+
+As mentioned before, TABLE is the most important data type of the language and programming approach is mostly depends on tables. So TROIA supports many options, commands, functions etc. to manipulate tables. One of this table specific commands is "LOOP" which is an alternative looping command for only tables.
+
+The LOOP command has many options such as condition or performance issues, but "for now" simply it can thought of as a kind of "foreach row".
+
+We will discuss LOOP command and other table options detailly in next sections. For now we must know only its basic usage. As it is obvious in its syntax you must specify the name of table variable to loop on.
+
+::
+
+	LOOP AT table
+	BEGIN
+		block
+	ENDLOOP;
+
 
 BREAK & CONTINUE Statements
 ----------------------------
