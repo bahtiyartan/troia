@@ -226,7 +226,7 @@ Calculating factorial of a given number with a simple while loop. This example c
 	ENDWHILE;
 	
 
-Another option is writing a recursive method (simply, a function that calls itself). *For now, you can ignore the question "How can i define a method?", this will be discussed in next sections. Just focus on function call, recursivity and loop relation and discuss why variables that is defined in a recursive function, must be local (MINUS1)*
+Another option is writing a recursive method (simply, a function that calls itself). *For now, you can ignore the question "How can i define a method?", this will be discussed in next sections. Just focus on function call, recursivity and loop relation and discuss the scope of variables that is defined in a recursive function (MINUS1)*
 
 ::
 
