@@ -164,7 +164,7 @@ In some cases within loop/while block, there is need to skip the remaining part 
 
 Similarly, BREAK statement is used to cancel whole loop. 
 
-Here is an example that combines BREAK and CONTINUE statements to find list and total of odd numbers between 0 and 10. In this example, condition of WHILE loop is always TRUE, so at first glance this loop is an infinite loop. But in first IF block, code limits re-execution count of loop block with BREAK command. In second IF block, contition checks whether value is even and if value is even CONTINUE skips remaining parts of block and jumps begining of while block.
+Here is a simple example that combines BREAK and CONTINUE statements to find list and total of odd numbers between 0 and 10. In this example, condition of WHILE loop is always TRUE, so at first glance this loop is an infinite loop. But in first IF block, code limits re-execution count of loop block with BREAK command. In second IF block, contition checks whether value is even and if value is even CONTINUE skips remaining parts of block and jumps begining of while block.
 
 ::
 
@@ -194,9 +194,6 @@ Here is an example that combines BREAK and CONTINUE statements to find list and 
 		ODDNUMBERS = ODDNUMBERS + INDEXNUM + ',';
 		
 	ENDWHILE;
-
-	STRINGVAR3 = 'Odd Numbers: ' + ODDNUMBERS + TOCHAR(10);
-	STRINGVAR3 = STRINGVAR3 + 'Total: ' + ODDNUMBERSTOTAL;
 
 
 Sample 1: Factorial
