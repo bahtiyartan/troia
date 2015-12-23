@@ -182,10 +182,12 @@ Here is a simple example that combines BREAK and CONTINUE statements to find lis
 
 		INDEXNUM = INDEXNUM + 1;
 
+		/* if block 1 */
 		IF INDEXNUM == 10 THEN
 		   BREAK;
 		ENDIF;
 
+		/* if block 2 */
 		IF INDEXNUM % 2 == 0 THEN
 			CONTINUE;
 		ENDIF;
@@ -194,12 +196,62 @@ Here is a simple example that combines BREAK and CONTINUE statements to find lis
 		ODDNUMBERS = ODDNUMBERS + INDEXNUM + ',';
 		
 	ENDWHILE;
+	
+Please run the example above and try to find values of ODDNUMBERS and ODDNUMBERSTOTAL variables. And discuss the new behaviour of code, when you swap the orders of "if block 1" and "if block 2".
 
 
 Sample 1: Factorial
 ----------------------------
 
-not implemented...
+Calculating factorial of a given number with a simple while loop. This example can be tested in test transaction, such as "DEVT11 - Runcode Test Transaction"
+
+::
+
+	LOCAL:
+		INTEGER NUMBER;
+
+	LOCAL:
+		INTEGER FACTORIAL,
+		INTEGER INDEXNUM;
+
+	NUMBER = 4;
+
+	INDEXNUM = 1;
+	FACTORIAL = 1;
+
+	WHILE INDEXNUM <= NUMBER
+	BEGIN
+		FACTORIAL = FACTORIAL * INDEXNUM;
+		INDEXNUM = INDEXNUM + 1;
+	ENDWHILE;
+	
+
+Another option is writing a recursive method (simply, a function that calls itself). *For now, you can ignore the question "How can i define a method?", this will be discussed in next sections. Just focus on function call, recursivity and loop relation and discuss why variables that is defined in a recursive function, must be local (MINUS1)*
+
+::
+
+	/* this is method's code */
+	PARAMETERS:
+		INTEGER PNUM;
+	
+	LOCAL:
+		INTEGER MINUS1;
+	   
+	IF PNUM <= 1 THEN
+		RETURN 1;
+	ELSE
+		MINUS1 = PNUM - 1;
+		RETURN PNUM * THIS.FACTORIAL(MINUS1);
+	ENDIF;
+	
+	
+	
+	/* this is the code that calls method */
+	OBJECT:
+		INTEGER FACTORIAL;
+	
+	FACTORIAL = THIS.FACTORIAL(3);
+	
 
 Sample 2: Fibonacci Numbers
 ----------------------------
