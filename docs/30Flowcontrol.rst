@@ -157,6 +157,12 @@ The LOOP command has many options such as condition or performance issues, but "
 We will discuss LOOP command and other table options detailly in next sections. For now we must know only its basic usage. As it is obvious in syntax below, you must specify the name of table variable to loop on and the code block that will be executed for each row.
 
 
+Other Looping Options
+--------------------------------
+
+not implemented...
+
+
 BREAK & CONTINUE Statements
 ----------------------------
 
@@ -287,12 +293,6 @@ Another option is writing a recursive method (simply, a function that calls itse
 	FACTORIAL = THIS.FACTORIAL(3);
 	
 
-
-
-Other Looping Options
---------------------------------
-
-not implemented...
 
 
 
