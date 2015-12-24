@@ -199,8 +199,41 @@ Here is a simple example that combines BREAK and CONTINUE statements to find lis
 	
 Please run the example above and try to find values of ODDNUMBERS and ODDNUMBERSTOTAL variables. And discuss the new behaviour of code, when you swap the orders of "if block 1" and "if block 2".
 
+Sample 1: Fibonacci Numbers
+----------------------------
 
-Sample 1: Factorial
+::
+
+	OBJECT: 
+		INTEGER NUMBER1,
+		INTEGER NUMBER2,
+		INTEGER NUMBER3,
+		STRING LISTOFNUMBERS;
+
+	OBJECT: 
+		INTEGER MAXNUM;
+
+	MAXNUM = 100;
+	NUMBER1 = 1;
+	NUMBER2 = 1;
+	NUMBER3 = 0;
+	LISTOFNUMBERS = '';
+
+	WHILE 1 == 1 
+	BEGIN
+		NUMBER3 = NUMBER1 + NUMBER2;
+
+		IF NUMBER3 > MAXNUM THEN
+			BREAK;
+		ENDIF;
+
+		NUMBER1 = NUMBER2;
+		NUMBER2 = NUMBER3;
+		LISTOFNUMBERS = LISTOFNUMBERS + NUMBER3 + ';';
+	ENDWHILE;
+
+	
+Sample 2: Factorial
 ----------------------------
 
 Calculating factorial of a given number with a simple while loop. This example can be tested in test transaction, such as "DEVT11 - Runcode Test Transaction"
@@ -253,10 +286,7 @@ Another option is writing a recursive method (simply, a function that calls itse
 	FACTORIAL = THIS.FACTORIAL(3);
 	
 
-Sample 2: Fibonacci Numbers
-----------------------------
 
-not implemented...
 
 Other Looping Options
 --------------------------------
