@@ -202,6 +202,8 @@ Please run the example above and try to find values of ODDNUMBERS and ODDNUMBERS
 Sample 1: Fibonacci Numbers
 ----------------------------
 
+Fibonacci Numbers is a number sequence that every element is the sum of previous two items. In this example we will try to calculate fibonacci sequence whose maximum item is less than 100.
+
 ::
 
 	OBJECT: 
@@ -216,7 +218,6 @@ Sample 1: Fibonacci Numbers
 	MAXNUM = 100;
 	NUMBER1 = 1;
 	NUMBER2 = 1;
-	NUMBER3 = 0;
 	LISTOFNUMBERS = '';
 
 	WHILE 1 == 1 
