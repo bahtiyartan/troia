@@ -46,7 +46,7 @@ setget commands.
 
 
 TIMER & SETTIMER Command
---------------------------
+-------------------------
 
 set timer.
 
