@@ -160,7 +160,7 @@ We will discuss LOOP command and other table options detailly in next sections. 
 Other Looping Options
 --------------------------------
 
-not implemented...
+Another looping option in TROIA is PARSE command which allows you loop on strings which is splitted by a given separator(delimiter). This command also will be discussed in next sections.
 
 
 BREAK & CONTINUE Statements
