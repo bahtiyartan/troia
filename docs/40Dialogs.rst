@@ -12,11 +12,6 @@ how to define a dialog.
 
 how a dialog is loaded.
 
-	
-Basic TROIA Components
-----------------------
-
-basic components.
 
 Dialog Events & Functions
 -------------------------
@@ -26,14 +21,22 @@ dialog events and functions.
 
 Right Click Menu & Hotkeys
 --------------------------
-
 right click menu and hotkeys.
+	
+	
+Switching Between Dialogs
+-------------------------
+swiching.
+	
+Basic TROIA Controls
+----------------------
 
+basic controls.
 
-Events of Basic Components
---------------------------
+Control Events
+==============
+control events.
 
-events of basic components.
 
 SET-GET Basics
 --------------------------
