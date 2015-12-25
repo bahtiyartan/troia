@@ -19,11 +19,11 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    20Variablesscope
    25Operators
    30Flowcontrol
-   35Dialogs
-   40Transactions
+   35StringManipulations
+   40Dialogs
+   45Transactions
    
    stringmanipulation
-   exceptionhandling
    
    dialogs
    classes
