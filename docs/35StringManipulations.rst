@@ -53,8 +53,8 @@ stringbuilder type.
 appendstring command.
 
 
-Example: List Numeric Tokens of a String
-========================================
+Sample 1: List Numeric Tokens of a String
+-----------------------------------------
 
 ::
 
