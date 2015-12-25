@@ -23,7 +23,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    40Dialogs
    45Transactions
    
-   stringmanipulation
+   exception handling
    
    dialogs
    classes
