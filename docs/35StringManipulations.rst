@@ -55,19 +55,13 @@ hashing.
 GETDIGEST()
 
 
-
-Looping on Strings: PARSE Command
----------------------------------
-
-looping on strings.
-
-
 String Concatenation
 --------------------
 
 As default + operator is used to concatenate strings in TROIA, but it is not recommended to use + operator to build large strings because of performance issues.
 
 ::
+
 	OBJECT:
 		STRING FINALSTRING;
 		
@@ -76,6 +70,7 @@ As default + operator is used to concatenate strings in TROIA, but it is not rec
 Actually, the time spend on string concatenation is not about the operator, its about STRING type. To solve performance issues on string concatenation programmers must use STRINGBUILDER data type which is mentioed in previous sections. Defining a STRINGBUILDER is not different defining a regular STRING variable. To append/concat a given string to a STRINGBUILDER, APPENDSTRING command is used. Here is STRINGBUILDER & APPENDSTRING equvalent of previous example.
 
 ::
+
 	OBJECT:
 		STRINGBUILDER SBFINALSTRING;
 		
@@ -84,6 +79,10 @@ Actually, the time spend on string concatenation is not about the operator, its 
 	
 To benchmark using STRING/+ and STRINGBUILDER/APPENDSTRING you can write a while loop that makes one thousand concat operation.
 
+Looping on Strings: PARSE Command
+---------------------------------
+
+looping on strings.
 
 Sample 1: Basic String Functions
 --------------------------------
