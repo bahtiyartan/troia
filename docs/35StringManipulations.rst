@@ -16,6 +16,11 @@ There is not hard-coded maximum length (character-limit) of string typed variabl
 String variables are able to store all kind of characters and digits. 
 
 
+Special Characters & Escaping
+=====================================
+escape characters, TOCHAR() function
+
+
 Basic String Functions/Commands
 -------------------------------
 
@@ -48,11 +53,6 @@ to manipualte strings
 
 
 For more string manipulation functions or more information about these functions (like parameter order and return types etc), please see String Manipulation section of TROIA Help.
-
-Special Characters & Escaping
-=====================================
-escape characters, TOCHAR() function
-
 
 BASE64 Encoding/Decoding
 ========================
