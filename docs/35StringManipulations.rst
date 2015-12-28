@@ -1,28 +1,44 @@
 
 
-=======================
-String Manipulation
-=======================
+=============================
+Strings / String Manipulation
+=============================
 
 	
 Basic String Functions/Commands
 -------------------------------
 
-basic string functions.
+to get information about strings
 
-TRIM()
-REPLACE()
-STRSTR()
-STRLIKE()
-STRNCOPY()
-STRPOS()
-ISNUMERIC()
-TOCHAR()
++-------------+------------------------------------------------------+
+| STRLEN      | Returns the length of given string                   |
++-------------+------------------------------------------------------+
+| STRPOS()    | Returns index of given string inside another         |
++-------------+------------------------------------------------------+
+| ISNUMERIC() | Check string whether all characters are numeric      |
++-------------+------------------------------------------------------+
+| STRLIKE()   | Compares string with given pattern like SQL LIKE op. |
++-------------+------------------------------------------------------+
 
-Switch Uppercase/Lowercase
-==========================
-LOWERCASE().
-UPPERCASE().
+
+to manipualte strings
+
++-------------+------------------------------------------------------+
+| TRIM()      | Removes whitespaces from the begining and the end.   |
++-------------+------------------------------------------------------+
+| REPLACE()   | Replaces a given string with another                 |
++-------------+------------------------------------------------------+
+| STRSTR()    | Returns substring of string with index and length    |
++-------------+------------------------------------------------------+
+| LOWERCASE() | Returns lowercase of given string with given language|
++-------------+------------------------------------------------------+
+| UPPERCASE() | Returns uppercase of given string with given language|
++-------------+------------------------------------------------------+
+| TOCHAR()    | Converts given integer to string using ASCII Table   |
++-------------+------------------------------------------------------+
+
+
+For more string manipulation functions or more information about these functions (like parameter order and return types etc), please see String Manipulation section of TROIA Help.
 
 BASE64 Encoding/Decoding
 ========================
@@ -44,7 +60,7 @@ looping on strings.
 
 
 String Concatenation
----------------------
+--------------------
 
 string concatenation.
 
