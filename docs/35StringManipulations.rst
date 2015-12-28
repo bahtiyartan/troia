@@ -4,6 +4,8 @@
 Strings / String Manipulation
 =============================
 
+*String is a kind of sequence of characters and digits and one of most common types of programming languages. This section aims to introduce some key features of string type and most used string manipulation functions.*
+
 	
 Basic String Functions/Commands
 -------------------------------
