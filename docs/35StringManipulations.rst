@@ -73,7 +73,7 @@ As default + operator is used to concatenate strings in TROIA, but it is not rec
 		
 	FINALSTRING = 'Hello ' + ' World.';
 	
-Actually, the time spend on string concatenation is not about the operator, its about STRING type. To solve performance issues on string concatenation programmers must use STRINGBUILDER data type which is mentioed in previous sections. Defining a STRINGBUILDER is not different defining a regular STRING variable. To append/concat a given string to a stringbuilder APPENDSTRING command is used. Here is STRINGBUILDER & APPENDSTRING equvalent of previous example.
+Actually, the time spend on string concatenation is not about the operator, its about STRING type. To solve performance issues on string concatenation programmers must use STRINGBUILDER data type which is mentioed in previous sections. Defining a STRINGBUILDER is not different defining a regular STRING variable. To append/concat a given string to a STRINGBUILDER, APPENDSTRING command is used. Here is STRINGBUILDER & APPENDSTRING equvalent of previous example.
 
 ::
 	OBJECT:
@@ -81,10 +81,14 @@ Actually, the time spend on string concatenation is not about the operator, its 
 		
 	APPENDSTRING 'Hello' TO FINALSTRING;
 	APPENDSTRING ' World' TO FINALSTRING;
+	
+To benchmark using STRING/+ and STRINGBUILDER/APPENDSTRING you can write a while loop that makes one thousand concat operation.
 
 
 Sample 1: Basic String Functions
 --------------------------------
+
+Here is a simple string functions example, please try to find return values after each function call.
 
 ::
 
