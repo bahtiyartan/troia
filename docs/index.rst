@@ -11,7 +11,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
  
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    05Platformbasics
    10Languagebasics
