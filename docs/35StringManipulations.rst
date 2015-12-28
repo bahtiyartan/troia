@@ -34,11 +34,14 @@ to manipualte strings
 +-------------+------------------------------------------------------+
 | UPPERCASE() | Returns uppercase of given string with given language|
 +-------------+------------------------------------------------------+
-| TOCHAR()    | Converts given integer to string using ASCII Table   |
-+-------------+------------------------------------------------------+
 
 
 For more string manipulation functions or more information about these functions (like parameter order and return types etc), please see String Manipulation section of TROIA Help.
+
+Special Characters / Escape Charaters
+=====================================
+escape characters, TOCHAR() function
+
 
 BASE64 Encoding/Decoding
 ========================
