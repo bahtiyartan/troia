@@ -23,10 +23,10 @@ Here is an example:
 ::
 
 	IF A > 1 && A < THIS.GETMAXVALUE(P1) THEN
-		RESULT = 'A is between one and max value';
+		RESULT = 'A is between one and maximum value';
 	ENDIF;
 	
-In TROIA all logical expression is executed even if first condition is enough to calculate logical expression's result, unlike most programming languages. Lets say A is 0 before the IF statement, so A > 1 condition returns false. If one of && (and) operator's operands is false, result is always false. TROIA Interpreter executes A < THIS.GETMAXVALUE() conditon, although condition result is obvious. Behaviour is same for || (or) operator when its first operand is true.
+In TROIA all logical expression is executed even if first condition is enough to calculate logical expression's result, unlike most programming languages. Lets say A is 0 before the IF statement, so A > 1 condition returns false. If one of && (and) operator's operands is false, result is always false. TROIA Interpreter executes A < THIS.GETMAXVALUE() condition, although condition result is obvious. Behaviour is same for || (or) operator when its first operand is true.
 	
 
 IF-ELSE Statement
@@ -138,7 +138,7 @@ Here is a simple example of WHILE command that tries to find if numbers are even
 		VAR = VAR + 1;
 	ENDWHILE;
 
-In most programming languages there are alternative looping statements like for, foreach etc, even if programmers are able to implement same behaviour using different looping statements. TROIA does not support FOR and FOREACH statements.
+In most programming languages there are alternative looping statements like for, foreach, even if programmers are able to implement same behaviour using different looping statements. TROIA does not support FOR and FOREACH statements.
 
 LOOP Command
 --------------------
@@ -154,7 +154,7 @@ The LOOP command has many options such as condition or performance issues, but "
 		block
 	ENDLOOP;
 
-We will discuss LOOP command and other table options detailly in next sections. For now we must know only its basic usage. As it is obvious in syntax below, you must specify the name of table variable to loop on and the code block that will be executed for each row.
+We will discuss LOOP command and other table options in next sections. For now we must know only its basic usage. As it is obvious in syntax below, you must specify the name of table variable to loop on and the code block that will be executed for each row.
 
 
 Other Looping Options
@@ -166,11 +166,11 @@ Another looping option in TROIA is PARSE command which allows you loop on string
 BREAK & CONTINUE Statements
 ----------------------------
 
-In some cases within loop/while block, there is need to skip the remaining part of loop/while block and continue with the next iteration of the loop. To cancel remaining part of loop and jump to the begining of loop/while block, CONTINUE statement is used.
+In some cases within loop/while block, there is need to skip the remaining part of loop/while block and continue with the next iteration of the loop. To cancel remaining part of loop and jump to the beginning of loop/while block, CONTINUE statement is used.
 
 Similarly, BREAK statement is used to cancel whole loop. 
 
-Here is a simple example that combines BREAK and CONTINUE statements to find list and total of odd numbers between 0 and 10. In this example, condition of WHILE loop is always TRUE, so at first glance this loop is an infinite loop. But in first IF block, code limits re-execution count of loop block with BREAK command. In second IF block, contition checks whether value is even and if value is even CONTINUE skips remaining parts of block and jumps begining of while block.
+Here is a simple example that combines BREAK and CONTINUE statements to find list and total of odd numbers between 0 and 10. In this example, condition of WHILE loop is always TRUE, so at first glance this loop is an infinite loop. But in first IF block, code limits re-execution count of loop block with BREAK command. In second IF block, condition checks whether value is even and if value is even CONTINUE skips remaining parts of block and jumps beginning of while block.
 
 ::
 
@@ -292,7 +292,3 @@ Another option is writing a recursive method (simply, a function that calls itse
 	
 	FACTORIAL = THIS.FACTORIAL(3);
 	
-
-
-
-

@@ -7,7 +7,7 @@ Operators and Expressions
 Operators
 --------------------
 
-Operators are the commands which tells the TROIA interpreter to do some mathematical,relationala and logical operations using their operands.
+Operators are the commands which tells the TROIA interpreter to do some mathematical,relational and logical operations using their operands.
 
 Arithmetic Operators
 ====================
@@ -123,7 +123,7 @@ THIS Keyword
 One of the most used elements of expressions is function call. In TROIA language, specifying instance name of class/dialog is a must.
 THIS keyword is used for indicating same instance. In other words, if you want to call another method of the class/dialog in its method you must use THIS keyword.
 
-A function calls which does not include instance name is considered as a system function. System functions are predefined functions to ease some mostly used operations like math operations, string operations etc. 
+A function calls which does not include instance name is considered as a system function. System functions are predefined functions to ease some mostly used operations like mathematical operations, string operations etc. 
 ** Most used system functions will be discussed in related sections, for all system functions please see TROIA Help. **
 
 ::
@@ -153,8 +153,8 @@ In system function calls, sending less or more parameters is not recommended, if
 Type Conversion and Casting
 ---------------------------
 
-In TROIA, simple typed variables casted automatically, so there is not an extra operator or method for type casting. For example, you can directly assing an double to string, or a string to a double symbol.
-If system fails to convert types assings default value of destination symbol.
+In TROIA, simple typed variables are casted automatically, so there is not an extra operator or method for type casting. For example, you can directly assign an double to string, or a string to a double symbol.
+If system fails to convert types assigns default value of destination symbol.
 
 Type casting is not supported for complex types such as TABLE, VECTOR or class instance. 
 Actually, assigning this complex types is not a usual method, because TROIA has special commands for data transfer between complex types, especially for tables.
@@ -182,7 +182,7 @@ Actually, assigning this complex types is not a usual method, because TROIA has 
 		SOURCESTR = DESTDATETIME; /* string is now '25.11.1984 00:00:00'  */
 		
 
-Here is as simple table that shows casting operation between source and destination simple types.  In this table x-axis shows destination variable type and y-axis shows source variable type.This conversion table is valid for both of MOVE and assingment operetor.
+Here is as simple table that shows casting operation between source and destination simple types.  In this table x-axis shows destination variable type and y-axis shows source variable type.This conversion table is valid for both of MOVE and assignment operator.
 
 +---+--------+-----------+-----------+-----------+---------------+-----------+-----------+
 |            | DESTINATION VARIABLE TYPE                                                 |
@@ -222,10 +222,10 @@ Here is as simple table that shows casting operation between source and destinat
 (?)  NULLDATE:
 (??) Limits of Integer :
 
-Example: Integer Arithmetics
+Example: Integer Arithmetic
 ---------------------------
 
-Here is a simple arithmetics example. Please think on this example and try to find why DECIMALVAR1 and DECIMALVAR2 values are different even if divide operation is same.
+Here is a simple arithmetic example. Please think on this example and try to find why DECIMALVAR1 and DECIMALVAR2 values are different even if divide operation is same.
 
 ::
 
