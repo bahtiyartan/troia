@@ -77,7 +77,7 @@ The time spent on string concatenation is not about the operator, its about STRI
 	APPENDSTRING 'Hello' TO FINALSTRING;
 	APPENDSTRING ' World' TO FINALSTRING;
 	
-To benchmark using STRING/+ and STRINGBUILDER/APPENDSTRING you can write a while loop that makes one thousand concat operation.
+To benchmark using STRING/+ and STRINGBUILDER/APPENDSTRING you can write a while loop that makes one thousand concat operation. STRINGBUILDER is designed for only hi-performance string building operations, so it is not recommended to use STRINGBUILDER object instead of STRING. 
 
 Looping on Strings: PARSE Command
 ---------------------------------
