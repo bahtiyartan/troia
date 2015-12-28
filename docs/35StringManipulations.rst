@@ -6,7 +6,7 @@ Strings / String Manipulation
 
 *String is a kind of sequence of characters/digits and it is one of most common types of programming languages. This section aims to introduce some key features of string type and most used string manipulation functions.*
 
-Some Facts about Strings
+Some Facts About Strings
 ------------------------
 
 In TROIA, single quote character (') is used to limit hardcode strings.
@@ -15,7 +15,7 @@ There is not hard-coded maximum length (character-limit) of string typed variabl
 
 String variables are able to store all kind of characters and digits. 
 
-	
+
 Basic String Functions/Commands
 -------------------------------
 
