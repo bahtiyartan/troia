@@ -38,7 +38,7 @@ to manipualte strings
 
 For more string manipulation functions or more information about these functions (like parameter order and return types etc), please see String Manipulation section of TROIA Help.
 
-Special Characters / Escape Charaters
+Special Characters & Escaping
 =====================================
 escape characters, TOCHAR() function
 
@@ -72,7 +72,31 @@ stringbuilder type.
 appendstring command.
 
 
-Sample 1: List Numeric Tokens of a String
+Sample 1: Basic String Functions
+--------------------------------
+
+::
+
+	OBJECT:
+		STRING STRMESSAGE,
+		INTEGER NINDEX;
+
+	STRMESSAGE = ' Hello TROIA ' + TOCHAR(10);
+
+	/* remove whitespaces */
+	STRMESSAGE = TRIM(STRMESSAGE);
+
+	/* replace word 'TROIA' with 'world' */
+	STRMESSAGE = REPLACE(STRMESSAGE, 'TROIA', 'World');
+
+	/* calculate index of 'world' */
+	NINDEX = STRPOS(STRMESSAGE, 'World');
+
+	/* get first 5 character*/
+	STRMESSAGE = STRSTR(STRMESSAGE, 0, 5);	
+
+
+Sample 2: List Numeric Tokens of a String
 -----------------------------------------
 
 ::

@@ -39,7 +39,7 @@ control events.
 
 
 SET-GET Basics
---------------------------
+---------------
 
 setget basics.
 
@@ -53,8 +53,8 @@ TIMER & SETTIMER Command
 
 set timer.
 
-Dialog Design Example (Using MESSAGE Command)
----------------------------------------------
+Dialog Design Example
+----------------------
 
 dialog design example.
 
