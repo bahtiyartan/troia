@@ -124,7 +124,7 @@ One of the most used elements of expressions is function call. In TROIA language
 THIS keyword is used for indicating same instance. In other words, if you want to call another method of the class/dialog in its method you must use THIS keyword.
 
 A function calls which does not include instance name is considered as a system function. System functions are predefined functions to ease some mostly used operations like mathematical operations, string operations etc. 
-**Most used system functions will be discussed in related sections, for all system functions please see TROIA Help.**
+*Most used system functions will be discussed in related sections, for all system functions please see TROIA Help.*
 
 ::
 	
