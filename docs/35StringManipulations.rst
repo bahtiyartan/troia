@@ -9,13 +9,13 @@ Strings / String Manipulation
 Some Facts About Strings
 ------------------------
 
-In TROIA, single quote character (') is used to limit hardcode strings.
-
-There is not hard-coded maximum length (character-limit) of string typed variables and hardcode strings, so if you have trouble about maximum character length, possibly its about your length of your database table, table column or editor length etc.
+In TROIA, STRING type is used for both string and char type compared to other programming languages such as java etc. There is not hard-coded maximum length (character-limit) of string typed variables and hardcode strings, so if you have trouble about maximum character length, possibly its about your length of your database table, table column or editor length etc.
 
 String variables are able to store all kind of characters and digits. 
 
-As mentioned previous sections, undefined variables are returns their name. Because of t so it seems they are STRING symbols but undefined variable's are not
+As mentioned previous sections, undefined variables are returns their name. It seems they are STRING variables but undefined variable's are not string, they are just undefined symbols that stores their name.
+
+Single quote character (') is used to limit hardcode strings in TROIA code.
 
 
 Special Characters & Escaping
@@ -23,11 +23,23 @@ Special Characters & Escaping
 
 To insert a meaningful character (such as ') to a hardcode string, escape character are used in different programming languages. Escape character changes the interpretation method of following characters. For example ' (single quote) character limits hardcode strings, when programmer wants to insert a single quote, he/she must use an escape character.
 
-**TROIA does not support escape characters for hardcode strings.**
+**TROIA does not support escape characters for hardcode strings.** Instead of escaping, TOCHAR() system function is used to insert special characters to a hardcode string. TOCHAR() function gets decimal ASCII corresponding of requested character and returns a single character as string. For example programmer must pass 39 to get a single quote character or 10 for a newline character.
 
+::
 
-escape characters, TOCHAR() function
-
+	OBJECT:
+		STRING STRVAR;
+		
+	STRVAR = 'This is first line and it contains ' + TOCHAR(39) + ' (single quote)';
+	STRVAR = STRVAR + TOCHAR(10) + 'This is second line.'
+	
+	/* 
+	value of STRVAR must like:
+	
+	This is first line and it contains ' (single quote)
+	This is second line.
+	
+	*/
 
 Basic String Functions/Commands
 -------------------------------
