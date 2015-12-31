@@ -56,11 +56,23 @@ to manipualte strings
 
 For more string manipulation functions or more information about these functions (like parameter order and return types etc), please see String Manipulation section of TROIA Help.
 
-BASE64 Encoding/Decoding
+Base64 Encoding/Decoding
 ========================
-base64.
-BASE64ENCODE()
-BASE64DECODE()
+
+Base64 is a kind binary-to-text encoding scheme that represent binary data in an ASCII string format. Resulting string contains only 64 kind of characters which contains only a-z,A-Z,0-9,+,/ characters so the resulting string can be stored on or transferred between 'ASCII only' environments. To encode strings to Base64 BASE64ENCODE() system function is used, to convert a base64 string to a troia string BASE64DECODE() system function is used. Both encoding and decoding requires an encoding like 'UTF-8' etc to convert string to binary or binary to string. 
+
+Here is an encoding and decoding example:
+
+::
+
+	OBJECT:
+		STRING STRVALUE,
+		STRING STRBASE64,
+		STRING STRDECODED;
+    
+    STRVALUE = 'Programming With TROIA';   
+    STRBASE64 = BASE64ENCODE(STRVALUE, 'UTF-8');
+    STRDECODED = BASE64DECODE(STRBASE64, 'UTF-8');
 
 Hashing Strings
 ===============
