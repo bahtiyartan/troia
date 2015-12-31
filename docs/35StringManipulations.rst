@@ -19,7 +19,13 @@ As mentioned previous sections, undefined variables are returns their name. Beca
 
 
 Special Characters & Escaping
-=====================================
+=============================
+
+To insert a meaningful character (such as ') to a hardcode string, escape character are used in different programming languages. Escape character changes the interpretation method of following characters. For example ' (single quote) character limits hardcode strings, when programmer wants to insert a single quote, he/she must use an escape character.
+
+**TROIA does not support escape characters for hardcode strings.**
+
+
 escape characters, TOCHAR() function
 
 
