@@ -59,7 +59,9 @@ For more string manipulation functions or more information about these functions
 Base64 Encoding/Decoding
 ========================
 
-Base64 is a kind binary-to-text encoding scheme that represent binary data in an ASCII string format. Resulting string contains only 64 kind of characters which contains only a-z,A-Z,0-9,+,/ characters so the resulting string can be stored on or transferred between 'ASCII only' environments. To encode strings to Base64 BASE64ENCODE() system function is used, to convert a base64 string to a troia string BASE64DECODE() system function is used. Both encoding and decoding requires an encoding like 'UTF-8' etc to convert string to binary or binary to string. 
+Base64 is a kind binary-to-text encoding scheme that represent binary data in an ASCII string format. Resulting string contains only 64 kind of characters which contains only a-z,A-Z,0-9,+,/ characters so the resulting string can be stored on or transferred between 'ASCII only' environments.
+
+To encode strings to Base64 BASE64ENCODE() system function is used, to convert a base64 string to a troia string BASE64DECODE() system function is used. Both encoding and decoding requires an encoding like 'UTF-8' etc to convert string to binary or binary to string. 
 
 Here is an encoding and decoding example:
 
