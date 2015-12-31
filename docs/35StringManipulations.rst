@@ -142,7 +142,10 @@ STRINGBUILDER is designed for only hi-performance string building operations, so
 Looping on Strings: PARSE Command
 ---------------------------------
 
-looping on strings.
+To split a string into lines (or with a specific delimiter character) and do something for each item, PARSE command is used. As it is obvious PARSE command is a kind of loop statement.
+
+. . .
+
 
 Sample 1: Basic String Functions
 --------------------------------
