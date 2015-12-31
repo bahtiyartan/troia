@@ -23,7 +23,7 @@ Escaping & Special Characters
 
 To insert a meaningful character (such as ') to a hardcode string, escape character are used in different programming languages. Escape character changes the interpretation method of following characters. For example ' (single quote) character limits hardcode strings, when programmer wants to insert a single quote, he/she must use an escape character.
 
-**TROIA does not support escape characters for hardcode strings.** Instead of escaping, TOCHAR() system function is used to insert special characters to a hardcode string. TOCHAR() function gets decimal ASCII corresponding of requested character and returns a single character as string. For example programmer must pass 39 to get a single quote character or 10 for a newline character.
+**TROIA does not support escape characters for hardcode strings.** Instead of escaping, TOCHAR() system function is used to insert special characters to a hardcode string. TOCHAR() function gets decimal ASCII correspondent of requested character and returns a single character as string. For example programmer must pass 39 to get a single quote character or 10 for a newline character.
 
 ::
 
