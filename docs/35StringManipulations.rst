@@ -15,6 +15,8 @@ There is not hard-coded maximum length (character-limit) of string typed variabl
 
 String variables are able to store all kind of characters and digits. 
 
+As mentioned previous sections, undefined variables are returns their name. Because of t so it seems they are STRING symbols but undefined variable's are not
+
 
 Special Characters & Escaping
 =====================================
