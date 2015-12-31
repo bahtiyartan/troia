@@ -71,10 +71,10 @@ Here is an encoding and decoding example:
 		STRING STRVALUE,
 		STRING STRBASE64,
 		STRING STRDECODED;
-    
-    STRVALUE = 'Programming With TROIA';   
-    STRBASE64 = BASE64ENCODE(STRVALUE, 'UTF-8');
-    STRDECODED = BASE64DECODE(STRBASE64, 'UTF-8');
+		
+	STRVALUE = 'Programming With TROIA';
+	STRBASE64 = BASE64ENCODE(STRVALUE, 'UTF-8');
+	STRDECODED = BASE64DECODE(STRBASE64, 'UTF-8');
 
 Hashing Strings
 ===============
