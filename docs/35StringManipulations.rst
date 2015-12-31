@@ -18,8 +18,8 @@ As mentioned previous sections, undefined variables are returns their name. It s
 Single quote character (') is used to limit hardcode strings in TROIA code.
 
 
-Special Characters & Escaping
-=============================
+Escaping & Special Characters
+-----------------------------
 
 To insert a meaningful character (such as ') to a hardcode string, escape character are used in different programming languages. Escape character changes the interpretation method of following characters. For example ' (single quote) character limits hardcode strings, when programmer wants to insert a single quote, he/she must use an escape character.
 
@@ -31,7 +31,7 @@ To insert a meaningful character (such as ') to a hardcode string, escape charac
 		STRING STRVAR;
 		
 	STRVAR = 'First line, it contains ' + TOCHAR(39) + ' (single quote).';
-	STRVAR = STRVAR + TOCHAR(10) + 'Second line.'
+	STRVAR = STRVAR + TOCHAR(10) + 'Second line.';
 	
 	/* 
 	value of STRVAR must like:
@@ -41,8 +41,8 @@ To insert a meaningful character (such as ') to a hardcode string, escape charac
 	
 	*/
 
-Basic String Functions/Commands
--------------------------------
+Basic String Functions
+----------------------
 
 Here is system functions that returns basic information about string variables:
 
