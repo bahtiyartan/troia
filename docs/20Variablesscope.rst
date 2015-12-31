@@ -270,7 +270,9 @@ Third method is running a data definition command for a variable that is already
 To Learn Data Type of a Variable
 ================================
 
-GETVARTYPE() system function(predefined function) returns type of given variable. For undefined variables GETVARTYPE returns 'UNKNOWN TYPE' even if undefined variables' behaviour like strings (variable name as value). Here is an example of GETVARTYPE() function.
+In some cases, programmers may need data type of a variable. In TROIA, GETVARTYPE() system function(predefined function) returns type of given variable as string.
+
+For undefined variables GETVARTYPE returns 'UNKNOWN TYPE' even if undefined variables are similar to strings. Here is an example of GETVARTYPE() function.
 
 ::
 
