@@ -208,7 +208,7 @@ Some Facts About Defining Variables
 Using Undefined Variables
 ===========================
 
-Using undefined variables do not cause compiling errors because of TROIA's structure (data transfer between dialogs). If a variable is used before it is defined, it returns its name as value like a string variable that has same value with its name.
+Using undefined variables do not cause compiling errors because of TROIA's structure (data transfer between dialogs). If a variable is used before it is defined, it returns its name as value like a string variable that has same value with its name. **Although undefined variables are similar to string variables, we must know that they are not STRING.**
 
 ::
 
@@ -266,6 +266,23 @@ Second method is running same definition command multiple times. In a loop or an
 *Looping and assignments will be discussed detailly in next sections, in this section please focus on defining same variable in multiple times.*
 
 Third method is running a data definition command for a variable that is already defined as control symbol. This case is ignored by the interpreter.
+
+To Learn Data Type of a Variable
+================================
+
+GETVARTYPE() system function(predefined function) returns type of given variable. For undefined variables GETVARTYPE returns 'UNKNOWN TYPE' even if undefined variables' behaviour like strings (variable name as value). Here is an example of GETVARTYPE() function.
+
+::
+
+	OBJECT:
+		STRING STRINGVAR,
+		INTEGER INTVAR,
+		STRING RESULT;
+		
+		RESULT = GETVARTYPE(STRINGVAR); /* RESULT : 'STRING' */
+		RESULT = GETVARTYPE(INTVAR);    /* RESULT : 'INTVAR' */
+		RESULT = GETVARTYPE(NOVAR);     /* RESUTL : 'UNKNOWN TYPE' */
+
 
 Naming & Conventions
 ======================
