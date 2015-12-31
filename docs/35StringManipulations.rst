@@ -61,7 +61,7 @@ Base64 Encoding/Decoding
 
 Base64 is a kind binary-to-text encoding scheme that represent binary data in an ASCII string format. Resulting string contains only 64 kind of characters which contains only a-z, A-Z, 0-9, +, / characters so the resulting string can be stored on or transferred between 'ASCII only' environments.
 
-To encode strings to Base64 BASE64ENCODE() system function is used, to convert a base64 string to a troia string BASE64DECODE() system function is used. Both encoding and decoding requires an encoding like 'UTF-8' etc to convert string to binary or binary to string. 
+To encode strings to Base64 BASE64ENCODE() system function is used, to convert a base64 string to a troia string BASE64DECODE() system function is used. Both encoding and decoding requires an encoding like 'UTF-8' etc to convert string to binary or binary to string. For more information about BASE64ENCODE() & BASE64DECODE() functions please see TROIA help documents.
 
 Here is an encoding and decoding example:
 
@@ -78,8 +78,21 @@ Here is an encoding and decoding example:
 
 Hashing Strings
 ===============
-hashing.
-GETDIGEST()
+
+Hashing is an operation that maps an arbitrary size data to fixed size. Resulting **hash value** can not be decoded to original data, because hash values of different input values can be identical. For example length of given string can be thought as a kind of hashing. Most used hashing algorithms are MD5,SHA1, MD2 etc.
+
+In TROIA, GETDIGEST() function is used to hash using multiple algorithms. For more information and supported algorithms please see TROIA Help.
+
+::
+
+	OBJECT: 
+		STRING STRVALUE,
+		STRING MD5HASH,
+		STRING SHA1HASH;
+
+	STRVALUE = 'Programming With TROIA';
+	MD5HASH = GETDIGEST(STRVALUE, 'MD5');
+	SHA1HASH = GETDIGEST(STRVALUE, 'SHA1');
 
 
 String Concatenation
