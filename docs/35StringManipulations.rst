@@ -44,7 +44,7 @@ To insert a meaningful character (such as ') to a hardcode string, escape charac
 Basic String Functions/Commands
 -------------------------------
 
-to get information about strings
+Here is system functions that returns basic information about string variables:
 
 +-------------+------------------------------------------------------+
 | STRLEN      | Returns the length of given string                   |
@@ -57,7 +57,7 @@ to get information about strings
 +-------------+------------------------------------------------------+
 
 
-to manipualte strings
+and most used system functions to modify strings:
 
 +-------------+------------------------------------------------------+
 | TRIM()      | Removes whitespaces from the begining and the end.   |
