@@ -30,13 +30,13 @@ To insert a meaningful character (such as ') to a hardcode string, escape charac
 	OBJECT:
 		STRING STRVAR;
 		
-	STRVAR = 'This is first line and it contains ' + TOCHAR(39) + ' (single quote)';
-	STRVAR = STRVAR + TOCHAR(10) + 'This is second line.'
+	STRVAR = 'First line, it contains ' + TOCHAR(39) + ' (single quote).';
+	STRVAR = STRVAR + TOCHAR(10) + 'Second line.'
 	
 	/* 
 	value of STRVAR must like:
 	
-	This is first line and it contains ' (single quote)
+	First line, it contains ' (single quote).
 	This is second line.
 	
 	*/
