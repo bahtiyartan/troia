@@ -283,7 +283,7 @@ For undefined variables GETVARTYPE returns 'UNKNOWN TYPE' even if undefined vari
 		
 		RESULT = GETVARTYPE(STRINGVAR); /* RESULT : 'STRING' */
 		RESULT = GETVARTYPE(INTVAR);    /* RESULT : 'INTVAR' */
-		RESULT = GETVARTYPE(NOVAR);     /* RESUTL : 'UNKNOWN TYPE' */
+		RESULT = GETVARTYPE(NOVAR);     /* RESULT : 'UNKNOWN TYPE' */
 
 
 Naming & Conventions
