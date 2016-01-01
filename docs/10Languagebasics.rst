@@ -42,7 +42,7 @@ Dialog is a **user interface form** designed to perform a task on, like a web fo
 Usually, dialog is a combination of simple or complex TROIA controls such as textfields, buttons, comboboxes, checkboxes, tables, charts etc.
 
 Dialogs have methods similar to classes, so TROIA programmers define and call methods on dialogs.
-Additionally they have predefined events. **Events are TROIA methods which are called by TROIA runtime when a specific action performed like "form load", "button clicked" etc.**
+Additionally they have predefined events. Events are TROIA methods which are called by TROIA runtime when a specific action performed like "form load", "button clicked" etc.
 
 .. figure:: images/languagebasics/dialog.png
    :width: 700 px
