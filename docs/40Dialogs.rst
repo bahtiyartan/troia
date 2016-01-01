@@ -14,7 +14,7 @@ how a dialog is loaded.
 
 
 Dialogs and Scope
-=================
+-----------------
 
 
 Basic Dialog Events
