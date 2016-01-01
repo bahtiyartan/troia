@@ -153,6 +153,8 @@ To split a string into tokens (with newline or with a specific delimiter charact
 
 Delimiter is an optinal parameter; if it is not specified newline (linefeed, \n) character is used and main string is splitted into lines.
 
+The sample below tries to calculate length of each line.
+
 ::
 
 	OBJECT:
@@ -173,7 +175,8 @@ Delimiter is an optinal parameter; if it is not specified newline (linefeed, \n)
 	BEGIN
 		NLINECOUNT = NLINECOUNT + 1;
 		
-		STRRESULT = STRRESULT + 'Line ' + NLINECOUNT + ': ' + STRLEN(STRTOKEN) + ' char(s).' + TOCHAR(10);
+		STRRESULT = STRRESULT + 'Line ' + NLINECOUNT + ': ' + STRLEN(STRTOKEN);
+		STRRESULT = STRRESULT + ' char(s).' + TOCHAR(10);
 		
 	ENDPARSE;
 
