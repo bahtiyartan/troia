@@ -31,6 +31,8 @@ basic class methods.
 Calling Class Methods
 ---------------------
 
+calling methods.
 
-Sample: Defining Class
-----------------------
+
+Sample 1: Math Operations
+-------------------------

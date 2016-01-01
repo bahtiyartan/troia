@@ -45,7 +45,7 @@ Functions & Right Click Menu
 right click menu and hotkeys.
 
 
-Dialog Design Example
-----------------------
+Sample 1: Counting Words
+------------------------
 
-dialog design example.
+sample.
