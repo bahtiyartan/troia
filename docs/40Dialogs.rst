@@ -1,8 +1,11 @@
 
 
-=======================
-Dialogs In Depth
-=======================
+=============
+Dialog Basics
+=============
+
+Introduction
+------------
 
 what is a dialog.
 
@@ -12,13 +15,11 @@ how to define a dialog.
 
 how a dialog is loaded.
 
-
-Dialogs and Scope
------------------
+dialogs and scope.
 
 
 Basic Dialog Events
--------------------
+--------------------
 
 dialog events and functions.
 
