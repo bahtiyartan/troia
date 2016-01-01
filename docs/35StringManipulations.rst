@@ -173,7 +173,7 @@ Delimiter is an optinal parameter; if it is not specified newline (linefeed, \n)
 	BEGIN
 		NLINECOUNT = NLINECOUNT + 1;
 		
-		STRRESULT = STRRESULT + 'Line ' + NLINECOUNT + ' has ' + STRLEN(STRTOKEN) + ' characters.' + TOCHAR(10);
+		STRRESULT = STRRESULT + 'Line ' + NLINECOUNT + ': ' + STRLEN(STRTOKEN) + ' characters.' + TOCHAR(10);
 		
 	ENDPARSE;
 
