@@ -142,9 +142,40 @@ STRINGBUILDER is designed for only hi-performance string building operations, so
 Looping on Strings: PARSE Command
 ---------------------------------
 
-To split a string into lines (or with a specific delimiter character) and do something for each item, PARSE command is used. As it is obvious PARSE command is a kind of loop statement.
+To split a string into tokens (with newline or with a specific delimiter character) and do something for each token, PARSE command is used. As it is obvious PARSE command is a kind of loop statement, so BREAK and CONTINUE statements also works in parse command. Here is the basic syntax:
 
-. . .
+::
+
+	PARSE {mainstring} INTO {token} [DELIMITER {delimiter}]
+	BEGIN
+		parse block
+	ENDPARSE;
+
+Delimiter is an optinal parameter; if it is not specified newline (linefeed, \n) character is used and main string is splitted into lines.
+
+::
+
+	OBJECT:
+		STRING STRMAINSTRING,
+		STRING STRTOKEN;
+	
+	OBJECT:
+		INTEGER NLINECOUNT
+		STRING STRRESULT;
+		
+	NLINECOUNT = 0;
+	STRRESULT = '';
+		
+	STRMAINSTRING = 'I do not trust words.';
+	STRMAINSTRING = STRMAINSTRING + TOCHAR(10) + 'I trust actions.'
+	
+	PARSE STRMAINSTRING INTO STRTOKEN
+	BEGIN
+		NLINECOUNT = NLINECOUNT + 1;
+		
+		STRRESULT = STRRESULT + 'Line ' + NLINECOUNT + ' has ' + STRLEN(STRTOKEN) + ' characters.' + TOCHAR(10);
+		
+	ENDPARSE;
 
 
 Sample 1: Basic String Functions
