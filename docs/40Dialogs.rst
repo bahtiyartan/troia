@@ -9,13 +9,18 @@ Introduction
 
 what is a dialog.
 
+dialogs and scope.
+
+Creating/Editing Dialogs
+========================
+define..
+
+How Dialogs Stored and Laoded?
+==============================
+
 how a dialog stored.
 
-how to define a dialog.
-
 how a dialog is loaded.
-
-dialogs and scope.
 
 
 Basic Dialog Events
@@ -39,31 +44,8 @@ Functions & Right Click Menu
 ----------------------------
 right click menu and hotkeys.
 
-Hotkeys
-=======
-hotkeys.
-
-SET-GET Basics
----------------
-
-setget basics.
-
-SET-GET Commands
-====================
-setget commands.
-
-
-TIMER & SETTIMER Command
--------------------------
-
-set timer.
 
 Dialog Design Example
 ----------------------
 
 dialog design example.
-
-Tab Dialogs
-------------
-
-tab dialogs.
