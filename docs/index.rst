@@ -22,6 +22,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    35StringManipulations
    40Dialogs
    45Transactions
+   50Class
    
    exception handling
    
