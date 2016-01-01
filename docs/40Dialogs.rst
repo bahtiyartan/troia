@@ -13,21 +13,16 @@ how to define a dialog.
 how a dialog is loaded.
 
 
-Dialog Events & Functions
--------------------------
+Dialogs and Scope
+=================
+
+
+Basic Dialog Events
+-------------------
 
 dialog events and functions.
 
 
-Right Click Menu & Hotkeys
---------------------------
-right click menu and hotkeys.
-	
-	
-Switching Between Dialogs
--------------------------
-swiching.
-	
 Basic TROIA Controls
 ----------------------
 
@@ -37,6 +32,19 @@ Control Events
 ==============
 control events.
 
+
+Switching Between Dialogs
+-------------------------
+swiching.
+
+
+Functions & Right Click Menu
+----------------------------
+right click menu and hotkeys.
+
+Hotkeys
+=======
+hotkeys.
 
 SET-GET Basics
 ---------------
