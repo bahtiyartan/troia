@@ -23,14 +23,10 @@ Basic Dialog Events
 dialog events and functions.
 
 
-Basic TROIA Controls
-----------------------
+Basic Controls and Control Events
+---------------------------------
 
 basic controls.
-
-Control Events
-==============
-control events.
 
 
 Switching Between Dialogs
