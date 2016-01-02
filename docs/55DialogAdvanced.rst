@@ -10,13 +10,17 @@ Timers on Dialog
 timers..
 
 Control and Control Events
-==========================
+--------------------------
 controls..
 
 Set/Get Concept
-===============
+---------------
 
-setget and commands.
+setget
+
+Set/Get Commands
+================
+setget commands
 
 
 Dialog Hotkeys
