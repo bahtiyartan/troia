@@ -20,7 +20,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    25Operators
    30Flowcontrol
    35StringManipulations
-   40Dialogs
+   40DialogBasics
    45Transactions
    50Class
    
