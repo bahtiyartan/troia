@@ -23,7 +23,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    40DialogBasics
    45Transactions
    50Class
-   55DialogsAdvanced
+   55DialogAdvanced
    
    exception handling
    
