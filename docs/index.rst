@@ -27,8 +27,6 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    
    exception handling
    
-   dialogs
-   classes
    reports and printing
    components
    
