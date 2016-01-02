@@ -15,7 +15,7 @@ Creating/Editing Dialogs
 ========================
 define..
 
-How Dialogs Stored and Laoded?
+How Dialogs Stored and Loaded?
 ==============================
 
 how a dialog stored.
@@ -37,12 +37,12 @@ basic controls.
 
 Switching Between Dialogs
 -------------------------
-swiching.
+switching.
 
 
 Functions & Right Click Menu
 ----------------------------
-right click menu and hotkeys.
+right click menu.
 
 
 Sample 1: Counting Words

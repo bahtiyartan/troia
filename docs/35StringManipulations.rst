@@ -9,21 +9,21 @@ Strings / String Manipulation
 Some Facts About Strings
 ------------------------
 
-In TROIA, STRING type is used for both string and char type compared to other programming languages such as java etc. There is not hard-coded maximum length (character-limit) of string typed variables and hardcode strings, so if you have trouble about maximum character length, possibly its about your length of your database table, table column or editor length etc.
+In TROIA, STRING type is used for both string and char type compared to other programming languages such as java etc. There is not hard-coded maximum length (character-limit) of string typed variables and hard code strings, so if you have trouble about maximum character length, possibly its about your length of your database table, table column or editor length etc.
 
 String variables are able to store all kind of characters and digits. 
 
 As mentioned previous sections, undefined variables are returns their name. It seems they are STRING variables but undefined variable's are not string, they are just undefined symbols that stores their name.
 
-Single quote character (') is used to limit hardcode strings in TROIA code.
+Single quote character (') is used to limit hard code strings in TROIA code.
 
 
 Escaping & Special Characters
 -----------------------------
 
-To insert a meaningful character (such as ') to a hardcode string, escape character are used in different programming languages. Escape character changes the interpretation method of following characters. For example ' (single quote) character limits hardcode strings, when programmer wants to insert a single quote, he/she must use an escape character.
+To insert a meaningful character (such as ') to a hard code string, escape character are used in different programming languages. Escape character changes the interpretation method of following characters. For example ' (single quote) character limits hard code strings, when programmer wants to insert a single quote, he/she must use an escape character.
 
-**TROIA does not support escape characters for hardcode strings.** Instead of escaping, TOCHAR() system function is used to insert special characters to a hardcode string. TOCHAR() function gets decimal ASCII correspondent of requested character and returns a single character as string. For example programmer must pass 39 to get a single quote character or 10 for a newline character.
+**TROIA does not support escape characters for hard code strings.** Instead of escaping, TOCHAR() system function is used to insert special characters to a hard code string. TOCHAR() function gets decimal ASCII correspondent of requested character and returns a single character as string. For example programmer must pass 39 to get a single quote character or 10 for a newline character.
 
 ::
 
@@ -60,7 +60,7 @@ Here is system functions that returns basic information about string variables:
 and most used system functions to modify strings:
 
 +-------------+------------------------------------------------------+
-| TRIM()      | Removes whitespaces from the begining and the end.   |
+| TRIM()      | Removes white spaces from the beginning and the end. |
 +-------------+------------------------------------------------------+
 | REPLACE()   | Replaces a given string with another                 |
 +-------------+------------------------------------------------------+
@@ -125,7 +125,7 @@ As default + operator is used to concatenate strings in TROIA, but it is not rec
 		
 	FINALSTRING = 'Hello ' + ' World.';
 	
-Performance problem of string concatenation is not about only '+' operator, its also about STRING type. To solve performance issues, programmers must use STRINGBUILDER data type which is mentioned in previous sections. Defining a STRINGBUILDER is not different from defining a STRING variable. To append/concat a given string to a STRINGBUILDER, APPENDSTRING command is used. Here is STRINGBUILDER & APPENDSTRING equvalent of previous example.
+Performance problem of string concatenation is not about only '+' operator, its also about STRING type. To solve performance issues, programmers must use STRINGBUILDER data type which is mentioned in previous sections. Defining a STRINGBUILDER is not different from defining a STRING variable. To append/concat a given string to a STRINGBUILDER, APPENDSTRING command is used. Here is STRINGBUILDER & APPENDSTRING equivalent of previous example.
 
 ::
 
@@ -151,7 +151,7 @@ To split a string into tokens (with newline or with a specific delimiter charact
 		parse block
 	ENDPARSE;
 
-Delimiter is an optinal parameter; if it is not specified newline (linefeed, \n) character is used and main string is splitted into lines.
+Delimiter is an optional parameter; if it is not specified newline (linefeed, \n) character is used and main string is splitted into lines.
 
 The sample below tries to calculate length of each line.
 
