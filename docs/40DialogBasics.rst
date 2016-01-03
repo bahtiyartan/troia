@@ -28,9 +28,9 @@ All development information (codes, design etc) about dialogs are stored in data
 |             |                                                       |
 +-------------+-------------------------------------------------------+
 
-With "convert" and "save" operations, binary information is built and stored on *.dlg files. *.dlg file contains all kind of information about dialog such as size, controls and control positions, functions, events, texts etc and they are only read on runtime (they are not used on development time).
+With "convert" and "save" operations, binary information is built and stored on dialog files with .dlg extension. .dlg file contains all kind of information about dialog such as name, size, controls and control positions, functions, events, texts. Dialog file is read on runtime only (they are not used on development time).
 
-.dlg files are stored in file path of user which logged on system. User file path is the folder that user loads binary files of all TROIA items and it is configured for each user on SYST03.
+Dialog files are stored in file path of user which logged on system. User file path is the folder that user loads binary files of all TROIA items and it is configured for each user on SYST03.
 
 how a dialog is loaded.
 
