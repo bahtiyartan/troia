@@ -84,6 +84,7 @@ Switching Between Dialogs
 Opening a dialog.
 
 CALL DIALOG {dialog};
+
 CALL DIALOG WITH LOCATION {x}, {y} SIZE {widht}, {height};
 
 Close a dialog.
