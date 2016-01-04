@@ -37,7 +37,9 @@ All development information (codes, design etc) about dialogs are stored in data
 How Dialogs are Loaded on Runtime?
 ----------------------------------
 
-With "Convert" operation, binary/compilation data is built. This data contains all kinds of dialog information such as name, size, controls, control positions, functions and events etc. "Save" operation writes binary data and dialog texts on given language to a ".dlg" in given language. As it is obvious dialog files are language dependent because they contains dialog and control texts for a languge.
+With "Convert" operation, binary/compilation data is built. This data contains all kinds of dialog information such as name, size, controls, control positions, functions and events etc. 
+
+"Save" operation writes binary data and dialog texts on given language to a ".dlg". It is obvious that dialog files are language dependent because they contains dialog and control texts for a languge.
 
 Dialog files are stored in a folder named **user file path**. User file path is the folder that user loads binary files of all TROIA items and it is configured for each user on SYST03. Here is the format and location of dialog file.
 
