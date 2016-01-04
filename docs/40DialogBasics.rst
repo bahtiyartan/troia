@@ -15,8 +15,8 @@ Creating/Editing Dialogs
 ========================
 define..
 
-How Dialogs Stored and Loaded?
-------------------------------
+How Dialogs are Stored?
+-----------------------
 
 All development information (codes, design etc) about dialogs are stored in database tables.
 
@@ -34,17 +34,20 @@ All development information (codes, design etc) about dialogs are stored in data
 | SYSCTLTEXTS     |                                                       |
 +-----------------+-------------------------------------------------------+
 
-With "convert" and "save" operations, binary information is built and stored on dialog files with .dlg extension. .dlg file contains all kind of information about dialog such as name, size, controls, control positions, functions, events and texts. Dialog files are language dependent and they are read only runtime (not in development time).
+How Dialogs are Loaded on Runtime?
+----------------------------------
 
-Dialog files are stored in file path of user which logged on system. User file path is the folder that user loads binary files of all TROIA items and it is configured for each user on SYST03. Here is the format and location of dialog file.
+With "Convert" operation, binary/compilation data is built. This data contains all kinds of dialog information such as name, size, controls, control positions, functions and events etc. "Save" operation writes binary data and dialog texts on given language to a ".dlg" in given language. As it is obvious dialog files are language dependent because they contains dialog and control texts for a languge.
+
+Dialog files are stored in a folder named **user file path**. User file path is the folder that user loads binary files of all TROIA items and it is configured for each user on SYST03. Here is the format and location of dialog file.
 
 ::
 	
-	{userfilepath}\jdlg\{module}\{languagecode}{dialog}.dlg
+	format : {userfilepath}\jdlg\{module}\{languagecode}{dialog}.dlg
 	
-	For SALT01D001 and English:
-	
-	{userfilepath}\jdlg\SAL\ET01D001.dlg
+	Example
+	SALT01D001 in English:	{userfilepath}\jdlg\SAL\ET01D001.dlg
+	SALT01D002 in Deutsch: {userfilepath}\jdlg\SAL\DT01D002.dlg
 
 
 how a dialog is loaded.
@@ -53,13 +56,13 @@ how a dialog is loaded.
 Basic Dialog Events
 --------------------
 
-+---------+---------------------------------------------------------------+
-| BEFORE  |                                                               |
-+---------+---------------------------------------------------------------+
-| AFTER   |                                                               |
-+---------+---------------------------------------------------------------+
-| ONSHOW  |                                                               |
-+---------+---------------------------------------------------------------+
++--------+---------------------------------------------------------------------------------+
+| BEFORE | First event on dialog open, fired after controls defined (dialog is not visible |
++--------+---------------------------------------------------------------------------------+
+| AFTER  | Fired after "BEFORE" event, dialog is still not visible.                        |
++--------+---------------------------------------------------------------------------------+
+| ONSHOW | Fired after "AFTER" event, when dialog is visible on user interface.            |
++--------+---------------------------------------------------------------------------------+
 
 
 Basic Controls and Control Events
