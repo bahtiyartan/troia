@@ -67,7 +67,17 @@ Basic Dialog Events
 Basic Controls and Control Events
 ---------------------------------
 
-basic controls.
+what is a troia control...
+
+Button Control
+==============
+
+button control and events.
+
+TextField Control
+=================
+
+textfield control and events.
 
 
 Switching Between Dialogs
