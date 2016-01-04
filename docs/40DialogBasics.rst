@@ -47,9 +47,9 @@ Dialog files are stored in a folder named **user file path**. User file path is 
 	
 	format : {userfilepath}\jdlg\{module}\{languagecode}{dialog}.dlg
 	
-	Example
-	SALT01D001 in English:	{userfilepath}\jdlg\SAL\ET01D001.dlg
-	SALT01D002 in Deutsch: {userfilepath}\jdlg\SAL\DT01D002.dlg
+	Example:
+	SALT01D001 in English>	{userfilepath}\jdlg\SAL\ET01D001.dlg
+	SALT01D002 in Deutsch> {userfilepath}\jdlg\SAL\DT01D002.dlg
 
 
 how a dialog is loaded.
