@@ -80,7 +80,13 @@ textfield control and events.
 
 Switching Between Dialogs
 -------------------------
-switching.
+
+Opening a dialog.
+
+CALL DIALOG {dialog};
+CALL DIALOG WITH LOCATION {x}, {y} SIZE {widht}, {height};
+
+Close a dialog.
 
 
 Functions & Right Click Menu
