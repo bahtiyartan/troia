@@ -41,7 +41,7 @@ With "Convert" operation, binary/compilation data is built. This data contains a
 
 "Save" operation writes binary data and dialog texts on given language to a ".dlg". It is obvious that dialog files are language dependent because they contains dialog and control texts for a languge.
 
-Dialog files are stored in a folder named **user file path**. User file path is the folder that user loads binary files of all TROIA items and it is configured for each user on SYST03. Here is the format and location of dialog file.
+Dialog files are stored in a folder named **user file path**. User file path is the folder that user loads all binary information(dialog, class, report) and it is configured for each user on SYST03. Here is the format and location of dialog file.
 
 ::
 	
