@@ -96,13 +96,25 @@ textfield control and events.
 Switching Between Dialogs
 -------------------------
 
-Opening a dialog.
+There are two main methods of opening dialogs. First one is defining a dialog as start dialog of a transaction (application). In this method system automatically calls start dialog when transaction opened. We will discuss how to define a transaction and a start dialog in next section.
 
-CALL DIALOG {dialog};
+Second method is calling a dialog via TROIA codes. To call a dialog using TROIA, "CALL DIALOG" command is used. For example, if we want to call a dialog when user clicks a button on our first dialog we must implement "click" event and write a CALL DIALOG command. After CALL DIALOG is executed system opens new dialog fires its events and switches to second dialog.
 
-CALL DIALOG WITH LOCATION {x}, {y} SIZE {widht}, {height};
+Its possible to call dialogs as popups. Here is the syntax alternatives for CALL DIALOG command:
 
-Close a dialog.
+::
+
+	CALL DIALOG {dialog};
+	CALL DIALOG WITH LOCATION {x}, {y} SIZE {widht}, {height};
+
+
+To close a dialog, you must use SHUTDOWN command. SHUTDOWN command closes the last opened dialog and switches to previous dialog. If the closed dialog is the last dialog of transaction system closes transaction automatically.
+
+::
+
+	SHUTDOWN;
+	
+In TROIA, transferring a value or variable to dialogs does not require an extra effort, in other words you can access the values of control symbols which are defined by previous dialog. This is totally about "scope". If you don't understand what the scope is or how system works please review related sections.
 
 
 Functions & Right Click Menu
