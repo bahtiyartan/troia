@@ -105,7 +105,7 @@ Its possible to call dialogs as popups. Here is the syntax alternatives for CALL
 ::
 
 	CALL DIALOG {dialog};
-	CALL DIALOG WITH LOCATION {x}, {y} SIZE {widht}, {height};
+	CALL DIALOG WITH LOCATION {x}, {y} SIZE {width}, {height};
 
 
 To close a dialog, you must use SHUTDOWN command. SHUTDOWN command closes the last opened dialog and switches to previous dialog. If the closed dialog is the last dialog of transaction system closes transaction automatically.
