@@ -96,8 +96,8 @@ In some cases, programmers may need calling dialog events manually. Calling a di
 Additionally, dialogs have ONTIMER, TRANSCALLED, BEFOREEXTENSION events which are called for some specific actions. This events will be discussed on related sections.
 
 
-Basic Controls and Control Events
----------------------------------
+Control and Control Event Basics
+--------------------------------
 
 what is a troia control...
 
@@ -125,7 +125,9 @@ Its possible to call dialogs as popups. Here is the syntax alternatives for CALL
 
 	CALL DIALOG {dialog};
 	CALL DIALOG WITH LOCATION {x}, {y} SIZE {width}, {height};
+	
 
+**CALL DIALOG command stops code execution on running method and opens new dialog,code execution is continued after dialog is closed** (like calling a function that has a user interface). 
 
 To close a dialog, you must use SHUTDOWN command. SHUTDOWN command closes the last opened dialog and switches to previous dialog. If the closed dialog is the last dialog of transaction system closes transaction automatically.
 
