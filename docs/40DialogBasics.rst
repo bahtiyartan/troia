@@ -21,7 +21,7 @@ TROIA IDE is used to create/edit TROIA dialogs. To open TROIA IDE, you must clic
 To create a new dialog, you must click *TROIA IDE-> New -> New Dialog* on menu and fill the new dialog form.
 
 .. figure:: images/dialogbasics/newdialog.png
-   :width: 306 px
+   :width: 360 px
    :target: images/dialogbasics/newdialog.png
    :align: center
    
@@ -85,6 +85,13 @@ Here is the most used events of dialogs:
 +--------+---------------------------------------------------------------------------------+
 | ONSHOW | Fired after "AFTER" event, when dialog is visible on user interface.            |
 +--------+---------------------------------------------------------------------------------+
+
+In some cases, programmers may need calling dialog events manually. Calling a dialog method is not different from calling a dialog method.
+
+::
+
+	THIS.AFTER();
+	THIS.ONSHOW();
 
 Additionally, dialogs have ONTIMER, TRANSCALLED, BEFOREEXTENSION events which are called for some specific actions. This events will be discussed on related sections.
 
