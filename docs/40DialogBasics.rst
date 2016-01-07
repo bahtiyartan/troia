@@ -11,11 +11,19 @@ what is a dialog.
 
 dialogs and scope.
 
-types of dialogs
+types of dialogs.
 
 Creating/Editing Dialogs
 ========================
-define..
+
+TROIA IDE is used to create/edit TROIA dialogs. To open TROIA IDE, you must click "TROIA IDE" item on top menu of java client. If there is not a TROIA IDE item on your menu please check your development rights which we discussed on previous sections.
+
+To create a new dialog, you must click TROIA IDE-> New -> New Dialog on menu and fill the new dialog form.
+
+.. figure:: images/dialogbasics/newdialog.png
+   :width: 460 px
+   :target: images/dialogbasics/newdialog.png
+   :align: center
 
 How Dialogs are Stored?
 -----------------------
