@@ -18,12 +18,16 @@ Creating/Editing Dialogs
 
 TROIA IDE is used to create/edit TROIA dialogs. To open TROIA IDE, you must click "TROIA IDE" item on top menu of java client. If there is not a TROIA IDE item on your menu please check your development rights which we discussed on previous sections.
 
-To create a new dialog, you must click TROIA IDE-> New -> New Dialog on menu and fill the new dialog form.
+To create a new dialog, you must click *TROIA IDE-> New -> New Dialog* on menu and fill the new dialog form.
 
 .. figure:: images/dialogbasics/newdialog.png
-   :width: 460 px
+   :width: 306 px
    :target: images/dialogbasics/newdialog.png
    :align: center
+   
+In new dialog form you, must select a hotline (change request) and enter a valid dialog name. A valid dialog name must be unique, so you can not create a new dialog which has same name with an existing dialog. Dialog names must be at least four characters length.
+
+The last field in new dialog form is "Base Dialog". It is possible to inherit dialogs, so if your dialog has a base dialog you must enter/select the name of base dialog. For now, we can leave "Base Dialog" field empty, we will discuss inheritance in next sections.
 
 How Dialogs are Stored?
 -----------------------
