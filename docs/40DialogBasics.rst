@@ -127,7 +127,7 @@ Its possible to call dialogs as popups. Here is the syntax alternatives for CALL
 	CALL DIALOG WITH LOCATION {x}, {y} SIZE {width}, {height};
 	
 
-**CALL DIALOG command stops code execution on running method and opens new dialog, remaining part of caller method executed after dialog close** (like calling a function that has a user interface). 
+**CALL DIALOG command stops code execution on running method and opens new dialog on client, remaining part of caller method executed after dialog close** (like calling a function that has a user interface).
 
 To close a dialog, you must use SHUTDOWN command. SHUTDOWN command closes the last opened dialog and switches to previous dialog. If the closed dialog is the last dialog of transaction system closes transaction automatically.
 
