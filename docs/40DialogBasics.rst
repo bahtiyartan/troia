@@ -11,7 +11,7 @@ Dialogs are user interface forms that user can perform a specific task on. A dia
 
 The main components of a dialog are controls on it. Controls are simple items that is used to create interaction between user and software, such as buttons, textfields, comboboxex, graphics, images etc. Programmers uses appropriate controls on their dialogs due to the process that they implement. Also, It is possible to define methods on dialogs and call these methods from others. Some of this methods has special names and called by TROIA interpreter. These kind of methods are called "dialog events". We will discuss dialog events, all types control and their events in next sections.
 
-Shortly, it
+Shortly, dialogs are user interface 
 
 dialogs and scope.
 
