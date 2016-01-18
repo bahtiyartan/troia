@@ -9,7 +9,9 @@ Introduction
 
 Dialogs are user interface forms that user can perform a specific task on. A dialog is consisted of it's basic dialog information, events/methods and the controls on it. "Basic information" is just its size, background color name and it is enough to define an empty dialog. 
 
-The main components of a dialog are controls on it. Controls are simple items that is used for user interaction, such as buttons, textfields, comboboxes, graphics, images etc. Also, It is possible to define methods on dialogs and call these methods from others to add behavior to dialogs. Some of this methods has special names and called by TROIA interpreter. These kind of methods are called "dialog events". We will discuss dialog events, all types control and their events in next sections. 
+The main components of a dialog are controls on it. Controls are simple items that is used for user interaction, such as buttons, textfields, comboboxes, graphics, images etc. 
+
+Also, It is possible to define methods on dialogs and call these methods from others to add behavior to dialogs. Some of this methods has special names and called by TROIA interpreter. These kind of methods are called "dialog events". We will discuss dialog events, all types control and their events in next sections. 
 
 Types of Dialogs
 ================
