@@ -9,11 +9,7 @@ Introduction
 
 Dialogs are user interface forms that user can perform a specific task on. A dialog is consisted of it's basic dialog information, events/methods and the controls on it. "Basic information" is just its size, background color name and it is enough to define an empty dialog. 
 
-The main components of a dialog are controls on it. Controls are simple items that is used to create interaction between user and software, such as buttons, textfields, comboboxex, graphics, images etc. Programmers uses appropriate controls on their dialogs due to the process that they implement. Also, It is possible to define methods on dialogs and call these methods from others. Some of this methods has special names and called by TROIA interpreter. These kind of methods are called "dialog events". We will discuss dialog events, all types control and their events in next sections.
-
-Shortly, dialogs are user interface forms that contains controls and 
-
-dialogs and scope.
+The main components of a dialog are controls on it. Controls are simple items that is used for user interaction, such as buttons, textfields, comboboxes, graphics, images etc. Also, It is possible to define methods on dialogs and call these methods from others to add behavior to dialogs. Some of this methods has special names and called by TROIA interpreter. These kind of methods are called "dialog events". We will discuss dialog events, all types control and their events in next sections. 
 
 types of dialogs.
 
@@ -143,6 +139,9 @@ To close a dialog, you must use SHUTDOWN command. SHUTDOWN command closes the la
 	
 In TROIA, transferring a value or variable to dialogs does not require an extra effort, in other words you can access the values of control symbols which are defined by previous dialog. This is totally about "scope". If you don't understand what the scope is or how system works please review related sections.
 
+
+Scope and Transferring Data Between Dialogs
+-------------------------------------------
 
 Functions & Right Click Menu
 ----------------------------
