@@ -7,7 +7,11 @@ Dialog Basics
 Introduction
 ------------
 
-what is a dialog.
+Dialogs are user interface forms that user can perform a specific task on. A dialog is consisted of it's basic dialog information, events/methods and the controls on it. "Basic information" is just its size, background color name and it is enough to define an empty dialog. 
+
+Programmers can define methods on dialogs and call these methods. Some of this methods has special names and called by TROIA interpreter. These kind of methods are called "dialog events".
+
+The main components of a dialog are controls on it. Controls are simple items that is used to create interaction between user and software, such as buttons, textfields, comboboxex, graphics, images etc. Programmers uses appropriate controls on their dialogs due to the process that they implement. We will discuss each control and its subtypes in next sections.
 
 dialogs and scope.
 
@@ -27,7 +31,9 @@ To create a new dialog, you must click **TROIA IDE-> New -> New Dialog** on menu
    
 In new dialog form you, must select a hotline (change request) and enter a valid dialog name. A valid dialog name must be unique and at least four characters length, so you can not create a new dialog whose name is shorter than four characters or same with an existing dialog.
 
-The last field in new dialog form is "Base Dialog". It is possible to inherit dialogs, so if your dialog has a base dialog you must enter/select the name of base dialog. For now, we can leave "Base Dialog" field empty, we will discuss inheritance in next sections.
+The last field in new dialog form is "Base Dialog". It is possible to inherit dialogs, so if your dialog has a base dialog you must enter/select the name of base dialog. For now, we can leave "Base Dialog" field empty, we will discuss inheritance in next sections. 
+
+After you click "OK" button on new dialog form, IDE creates a new dialog and opens design window. To save new dialog to db you must 
 
 How Dialogs are Stored?
 -----------------------
