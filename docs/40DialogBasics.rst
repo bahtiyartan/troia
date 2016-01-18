@@ -9,7 +9,7 @@ Introduction
 
 Dialogs are user interface forms that user can perform a specific task on. A dialog is consisted of it's basic dialog information, events/methods and the controls on it. "Basic information" is just its size, background color name and it is enough to define an empty dialog. 
 
-The main components of a dialog are controls on it. Controls are simple items that is used for user interaction, such as buttons, textfields, comboboxes, graphics, images etc. 
+The main components of a dialog are controls on it. Controls are simple items that is used for user interaction, such as buttons, textfields, comboboxes, graphics,tab panes, images etc. 
 
 .. figure:: images/dialogbasics/dialog1.png
    :width: 700 px
