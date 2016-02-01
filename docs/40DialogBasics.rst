@@ -107,21 +107,26 @@ Additionally, dialogs have ONTIMER, TRANSCALLED, BEFOREEXTENSION events which ar
 Control and Control Event Basics
 --------------------------------
 
-Controls are the ui items such as buttons, textfields, comboboxes etc. Programmers define appropriate controls on dialogs to create interaction with user. All controls have predefined events which is called by interpreter when user performs a specific action like clicking button or changing value of a textfield.
+Controls are the ui items such as buttons, textfields, comboboxes etc. Programmers define appropriate controls on dialogs to create interaction with user. All controls have predefined events which is called by interpreter when user performs a specific action like clicking button or changing value of a textfield. A dialog control is defined by two main features its type and subtype and both of type and subtype information is stored on SYSCONTROLS table. "Type" defines the main group of control (button or textfield). "Subtype" changes only one or two features control such as event count, appearance,  symbol type etc.
 
-To define a control on a dialog, programmer drags required control from "ToolBox Explorer" to dialog, and modifies control's properties such as backcolor, size etc on "Property Explorer." To add behaviour to defined control, programmer must implement one or more events of control. All these operations are the part of dialog development process and they are performed on IDE.
+To define a control on a dialog, programmer drags required control from "ToolBox Explorer" to dialog and modifies control features due to process thas imlemented.  Location, size, visibility, disable/enable, background color, foreground color are the main and common features of all type of controls. Additionally, each control type has its own features. It is possible to modify control features using "Property Explorer" and TROIA code due to workflow.  
 
 .. figure:: images/dialogbasics/newdialogcancelbutton.png
    :width: 700 px
-   :target: images/dialogbasics/dialog1.png
+   :target: images/dialogbasics/newdialogcancelbutton.png
    :align: center
+   
+To add behaviour to defined control, programmer must implement one or more events of control. Each control type has also its own events. ,They are listed in right click menu on dialog design screen and at the bottom of "Property Explorer" (when control selected).
 
-A dialog control is defined by two main features its type and subtype and both of type and subtype information is stored on SYSCONTROLS table. "Type" defines the main group of control (button or textfield). Subtype changes only one or two features control such as event count, appearance,  symbol type etc. Control types and features will be defined detailly in next sections.
+.. figure:: images/dialogbasics/newdialogevent.png
+   :width: 700 px
+   :target: images/dialogbasics/newdialogevent.png
+   :align: center
 
 Button Control
 ==============
 
-One of the most used controls is "Button".
+Button is the most u
 
 TextField Control
 =================
