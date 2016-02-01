@@ -125,8 +125,8 @@ To add behaviour to defined control, programmer must implement one or more event
    :align: center
 
 
-Another Control: TextField
-==========================
+Sample Control: TextField
+=========================
 
 textfield control and events.
 
