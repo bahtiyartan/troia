@@ -128,7 +128,50 @@ To add behaviour to defined control, programmer must implement one or more event
 Sample Control: TextField
 =========================
 
-textfield control and events.
+Subtypes of TextField
+
+
+Color
+Custom Editor
+Date
+Date Time
+Decimal
+Duration
+Editor
+Factor
+File Chooser
+HTML
+HTML Viewer
+Integer
+Link
+Long
+Money
+Password
+Percent
+Phone
+Rich Editor
+Quantity
+Text
+Time
+Times
+TroiaEditor
+IconChooser
+
+Here is the basic events of a textfield.
+
++-----------------+-------------------------------------------------------+
+| Event           | Description & Event Fire                              |
++-----------------+-------------------------------------------------------+
+| GainFocus       | When user focuses on a textfield.                     |
++-----------------+-------------------------------------------------------+
+| LoseFocus       | When user focuses on another control after textfield. |
++-----------------+-------------------------------------------------------+
+| TextChanged     | If user changes value of textfield, before LoseFocus. |
++-----------------+-------------------------------------------------------+
+
+Textfields also have additional events named ZoomBefore/ZoomAfter, Drag/Drop and RightClickMenu events. We will discuss this kind of event in next sections. 
+
+
 
 
 Switching Between Dialogs
