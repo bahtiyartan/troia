@@ -111,7 +111,10 @@ Controls are the ui items such as buttons, textfields, comboboxes etc. Programme
 
 To define a control on a dialog, programmer drags required control from "ToolBox Explorer" to dialog, and modifies control's properties such as backcolor, size etc on "Property Explorer." To add behaviour to defined control, programmer must implement one or more events of control. All these operations are the part of dialog development process and they are performed on IDE.
 
-.. object explorer and property explorer
+.. figure:: images/dialogbasics/newdialogcancelbutton.png
+   :width: 700 px
+   :target: images/dialogbasics/dialog1.png
+   :align: center
 
 A dialog control is defined by two main features its type and subtype and both of type and subtype information is stored on SYSCONTROLS table. "Type" defines the main group of control (button or textfield). Subtype changes only one or two features control such as event count, appearance,  symbol type etc.
 
