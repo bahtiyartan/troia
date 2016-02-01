@@ -105,8 +105,8 @@ In some cases, programmers may need calling dialog events manually. Calling a di
 Additionally, dialogs have ONTIMER, TRANSCALLED, BEFOREEXTENSION events which are called for some specific actions. This events will be discussed on related sections.
 
 
-Control and Control Event Basics
---------------------------------
+Basics of Controls
+-------------------
 
 Controls are the ui items such as buttons, textfields, comboboxes etc. Programmers define appropriate controls on dialogs to create interaction with user. All controls have predefined events which is called by interpreter when user performs a specific action like clicking button or changing value of a textfield. A dialog control is defined by two main features its type and subtype and both of type and subtype information is stored on SYSCONTROLS table. "Type" defines the main group of control (button or textfield). "Subtype" changes only one or two features control such as event count, appearance,  symbol type etc.
 
