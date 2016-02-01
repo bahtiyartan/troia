@@ -18,9 +18,6 @@ The main components of a dialog are controls on it. Controls are simple items th
 
 Also, It is possible to define methods on dialogs and call these methods from others to add behavior to dialogs. Some of this methods has special names and called by TROIA interpreter. These kind of methods are called "dialog events". We will discuss dialog events, all types control and their events in next sections. 
 
-Types of Dialogs
-================
-types..
 
 Creating/Editing Dialogs
 ========================
@@ -110,12 +107,18 @@ Additionally, dialogs have ONTIMER, TRANSCALLED, BEFOREEXTENSION events which ar
 Control and Control Event Basics
 --------------------------------
 
-what is a troia control...
+Controls are the ui items such as buttons, textfields, comboboxes etc. Programmers define appropriate controls on dialogs to create interaction with user. All controls have predefined events which is called by interpreter when user performs a specific action like clicking button or changing value of a textfield.
+
+To define a control on a dialog, programmer drags required control from "ToolBox Explorer" to dialog, and modifies control's properties such as backcolor, size etc on "Property Explorer." To add behaviour to defined control, programmer must implement one or more events of control. All these operations are the part of dialog development process and they are performed on IDE.
+
+.. object explorer and property explorer
+
+A dialog control is defined by two main features its type and subtype and both of type and subtype information is stored on SYSCONTROLS table. "Type" defines the main group of control (button or textfield). Subtype changes only one or two features control such as event count, appearance,  symbol type etc.
 
 Button Control
 ==============
 
-button control and events.
+One of the most used controls is "Button".
 
 TextField Control
 =================
