@@ -124,13 +124,9 @@ To add behaviour to defined control, programmer must implement one or more event
    :target: images/dialogbasics/newdialogevent.png
    :align: center
 
-Button Control
-==============
 
-Button is the most u
-
-TextField Control
-=================
+Another Control: TextField
+==========================
 
 textfield control and events.
 
