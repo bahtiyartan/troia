@@ -35,7 +35,8 @@ In new dialog form you, must select a hotline (change request) and enter a valid
 
 The last field in new dialog form is "Base Dialog". It is possible to inherit dialogs, so if your dialog has a base dialog you must enter/select the name of base dialog. For now, we can leave "Base Dialog" field empty, we will discuss inheritance in next sections. 
 
-After you click "OK" button on new dialog form, IDE creates a new dialog and opens design window. To save new dialog to db you must 
+After you click "OK" button on new dialog form, IDE creates a new dialog and opens design window.
+
 
 How Dialogs are Stored?
 -----------------------
@@ -109,7 +110,7 @@ Control and Control Event Basics
 
 Controls are the ui items such as buttons, textfields, comboboxes etc. Programmers define appropriate controls on dialogs to create interaction with user. All controls have predefined events which is called by interpreter when user performs a specific action like clicking button or changing value of a textfield. A dialog control is defined by two main features its type and subtype and both of type and subtype information is stored on SYSCONTROLS table. "Type" defines the main group of control (button or textfield). "Subtype" changes only one or two features control such as event count, appearance,  symbol type etc.
 
-To define a control on a dialog, programmer drags required control from "ToolBox Explorer" to dialog and modifies control features due to process thas imlemented.  Location, size, visibility, disable/enable, background color, foreground color are the main and common features of all type of controls. Additionally, each control type has its own features. It is possible to modify control features using "Property Explorer" and TROIA code due to workflow.  
+To define a control on a dialog, programmer drags required control from "Toolbox Explorer" to dialog and modifies control features due to process thas imlemented.  Location, size, visibility, disable/enable, background color, foreground color are the main and common features of all type of controls. Additionally, each control type has its own features. It is possible to modify control features using "Property Explorer" and TROIA code due to workflow.  
 
 .. figure:: images/dialogbasics/newdialogcancelbutton.png
    :width: 700 px
