@@ -128,7 +128,7 @@ To add behaviour to defined control, programmer must implement one or more event
 Sample Control: TextField
 =========================
 
-Subtypes of TextField
+When pr
 
 +-------------+-----------+------------------------------------------+
 | **Sub Type**|**V. Type**|                                          |
