@@ -128,52 +128,36 @@ To add behaviour to defined control, programmer must implement one or more event
 Sample Control: TextField
 =========================
 
-When pr
+TextField is the main type of all text input controls, each subtype defines its own control symbol in a predefined data type. Also each subtype has its own data input behaviour such as built-in key listener, data/input validator, zooming.
 
-+-------------+-----------+------------------------------------------+
-| **Sub Type**|**V. Type**|                                          |
-+-------------+-----------+------------------------------------------+
-| Text        | STRING    |                                          |
-+-------------+-----------+------------------------------------------+
-| Editor      | STRING    |                                          |
-+-------------+-----------+------------------------------------------+
-| File Chooser| STRING    |                                          |
-+-------------+-----------+------------------------------------------+
-| Troia Editor| STRING    |                                          |
-+-------------+-----------+------------------------------------------+
-| Password    | STRING    |                                          |
-+-------------+-----------+------------------------------------------+
-| Decimal     | DECIMAL   |                                          |
-+-------------+-----------+------------------------------------------+
-| Money       | DECIMAL   |                                          |
-+-------------+-----------+------------------------------------------+
-| Quantity    | DECIMAL   |                                          |
-+-------------+-----------+------------------------------------------+
-| Percent     | DECIMAL   |                                          |
-+-------------+-----------+------------------------------------------+
-| Factor      | DECIMAL   |                                          |
-+-------------+-----------+------------------------------------------+
-| Long        | LONG      |                                          |
-+-------------+-----------+------------------------------------------+
-| Integer     | INTEGER   |                                          |
-+-------------+-----------+------------------------------------------+
-| Date        | DATE      |                                          |
-+-------------+-----------+------------------------------------------+
-| Datetime    | DATETIME  |                                          |
-+-------------+-----------+------------------------------------------+
+Here is the most used subtypes of TextField and control symbol types.
+
++-------------+-----------+-----------------------------------------------------+
+| **Sub Type**|**V. Type**| **Key Features**                                    |
++-------------+-----------+-----------------------------------------------------+
+| Text        | STRING    | Default subtype, to get input for short strings.    |
++-------------+-----------+-----------------------------------------------------+
+| Editor      | STRING    | to get large texts                                  |
++-------------+-----------+-----------------------------------------------------+
+| File Chooser| STRING    | to get a file path, built-in file chooser           |
++-------------+-----------+-----------------------------------------------------+
+| Troia Editor| STRING    | to get/show TROIA code as string, built in formatter|
++-------------+-----------+-----------------------------------------------------+
+| Password    | STRING    | to get/show passwords                               |
++-------------+-----------+-----------------------------------------------------+
+| Decimal     | DECIMAL   | to get/show decimal values                          |
++-------------+-----------+-----------------------------------------------------+
+| Long        | LONG      | to get/show long values                             |
++-------------+-----------+-----------------------------------------------------+
+| Integer     | INTEGER   | to get/show integer values                          |
++-------------+-----------+-----------------------------------------------------+
+| Date        | DATE      | to get/show date , built-in date chooser            |
++-------------+-----------+-----------------------------------------------------+
+| Datetime    | DATETIME  | to get/show datetime , built-in datetimechooser     |
++-------------+-----------+-----------------------------------------------------+
 
 
-Color
-Custom Editor
-Icon Chooser
-Duration
-HTML
-HTML Viewer
-Link
-Phone
-Rich Editor
-Time
-Times
+Color, Money, Quantity, Percent, Factor, Custom Editor, Icon Chooser, Duration, HTML, HTML Viewer, Link, Phone, Rich Editor, Time,Times,
 
 
 Here is the basic events of a textfield.
