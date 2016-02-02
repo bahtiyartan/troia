@@ -130,32 +130,43 @@ Sample Control: TextField
 
 Subtypes of TextField
 
++-------------+---------+------------------------------------------+
+| Text        | STRING  |                                          |
++-------------+---------+------------------------------------------+
+| Editor      | STRING  |                                          |
++-------------+---------+------------------------------------------+
+| Decimal     | DECIMAL |                                          |
++-------------+---------+------------------------------------------+
+| Long        | LONG    |                                          |
++-------------+---------+------------------------------------------+
+| Integer     | INTEGER |                                          |
++-------------+---------+------------------------------------------+
+| Password    | STRING  |                                          |
++-------------+---------+------------------------------------------+
+| Date        | DATE    |                                          |
++-------------+---------+------------------------------------------+
+| Datetime    | DATETIME|                                          |
++-------------+---------+------------------------------------------+
+| File Chooser| STRING  |                                          |
++-------------+---------+------------------------------------------+
+| Troia Editor| STRING  |                                          |
++-------------+---------+------------------------------------------+
 
 Color
 Custom Editor
-Date
-Date Time
-Decimal
 Duration
-Editor
 Factor
-File Chooser
 HTML
 HTML Viewer
-Integer
 Link
-Long
 Money
-Password
 Percent
 Phone
 Rich Editor
 Quantity
-Text
 Time
 Times
-TroiaEditor
-IconChooser
+Icon Chooser
 
 Here is the basic events of a textfield.
 
