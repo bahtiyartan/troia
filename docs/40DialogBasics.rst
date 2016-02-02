@@ -132,29 +132,29 @@ TextField is the main type of all text input controls, each subtype defines its 
 
 Here is the most used subtypes of TextField and control symbol types.
 
-+-------------+-----------+-----------------------------------------------------+
-| **Sub Type**|**V. Type**| **Key Features**                                    |
-+-------------+-----------+-----------------------------------------------------+
-| Text        | STRING    | Default subtype, to get input for short strings.    |
-+-------------+-----------+-----------------------------------------------------+
-| Editor      | STRING    | to get large texts                                  |
-+-------------+-----------+-----------------------------------------------------+
-| File Chooser| STRING    | to get a file path, built-in file chooser           |
-+-------------+-----------+-----------------------------------------------------+
-| Troia Editor| STRING    | to get/show TROIA code as string, built in formatter|
-+-------------+-----------+-----------------------------------------------------+
-| Password    | STRING    | to get/show passwords                               |
-+-------------+-----------+-----------------------------------------------------+
-| Decimal     | DECIMAL   | to get/show decimal values                          |
-+-------------+-----------+-----------------------------------------------------+
-| Long        | LONG      | to get/show long values                             |
-+-------------+-----------+-----------------------------------------------------+
-| Integer     | INTEGER   | to get/show integer values                          |
-+-------------+-----------+-----------------------------------------------------+
-| Date        | DATE      | to get/show date , built-in date chooser            |
-+-------------+-----------+-----------------------------------------------------+
-| Datetime    | DATETIME  | to get/show datetime , built-in datetimechooser     |
-+-------------+-----------+-----------------------------------------------------+
++-------------+----------+------------------------------------------------------+
+| **Sub Type**|**Type**  | **Key Features**                                     |
++-------------+----------+------------------------------------------------------+
+| Text        | STRING   | Default subtype, to get input for short strings.     |
++-------------+----------+------------------------------------------------------+
+| Editor      | STRING   | to get large texts                                   |
++-------------+----------+------------------------------------------------------+
+| File Chooser| STRING   | to get a file path, built-in file chooser            |
++-------------+----------+------------------------------------------------------+
+| Troia Editor| STRING   | to get/show TROIA code as string, built in formatter |
++-------------+----------+------------------------------------------------------+
+| Password    | STRING   | to get/show passwords                                |
++-------------+----------+------------------------------------------------------+
+| Decimal     | DECIMAL  | to get/show decimal values                           |
++-------------+----------+------------------------------------------------------+
+| Long        | LONG     | to get/show long values                              |
++-------------+----------+------------------------------------------------------+
+| Integer     | INTEGER  | to get/show integer values                           |
++-------------+----------+------------------------------------------------------+
+| Date        | DATE     | to get/show date , built-in date chooser as zoom     |
++-------------+----------+------------------------------------------------------+
+| Datetime    | DATETIME | to get/show datetime , built-in datetime chooser zoom|
++-------------+----------+------------------------------------------------------+
 
 
 Color, Money, Quantity, Percent, Factor, Custom Editor, Icon Chooser, Duration, HTML, HTML Viewer, Link, Phone, Rich Editor, Time,Times,
