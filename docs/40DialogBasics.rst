@@ -157,7 +157,7 @@ Here is the most used subtypes of TextField and control symbol types.
 +-------------+----------+------------------------------------------------------+
 
 
-Color, Money, Quantity, Percent, Factor, Custom Editor, Icon Chooser, Duration, HTML, HTML Viewer, Link, Phone, Rich Editor, Time,Times,
+Color, Money, Quantity, Percent, Factor, Custom Editor, Icon Chooser, Duration, HTML, HTML Viewer, Link, Phone, Rich Editor, Time,Times are the other subtypes of TextField Control. Please test these subtypes on dialog and see their features and variables that is defined by control.
 
 
 Here is the basic events of a textfield.
