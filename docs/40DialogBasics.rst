@@ -110,14 +110,14 @@ Basics of Controls
 
 Controls are the ui items such as buttons, textfields, comboboxes etc. Programmers define appropriate controls on dialogs to create interaction with user. All controls have predefined events which is called by interpreter when user performs a specific action like clicking button or changing value of a textfield. A dialog control is defined by two main features its type and subtype and both of type and subtype information is stored on SYSCONTROLS table. "Type" defines the main group of control (button or textfield). "Subtype" changes only one or two features control such as event count, appearance,  symbol type etc.
 
-To define a control on a dialog, programmer drags required control from "Toolbox Explorer" to dialog and modifies control features due to process thas imlemented.  Location, size, visibility, disable/enable, background color, foreground color are the main and common features of all type of controls. Additionally, each control type has its own features. It is possible to modify control features using "Property Explorer" and TROIA code due to workflow.  Here is a new button control and its events and features:
+To define a control on a dialog, programmer drags required control from "Toolbox Explorer" to dialog and modifies control features due to process that is imlemented.  Location, size, visibility, disable/enable, background color, foreground color are the main and common features of all type of controls. Additionally, each control type has its own features. It is possible to modify control features using "Property Explorer" and TROIA code due to workflow.  Here is a new button control and its events and features:
 
 .. figure:: images/dialogbasics/newdialogcancelbutton.png
    :width: 700 px
    :target: images/dialogbasics/newdialogcancelbutton.png
    :align: center
    
-To add behaviour to defined control, programmer must implement one or more events of control. Each control type has also its own events. ,They are listed in right click menu on dialog design screen and at the bottom of "Property Explorer" (when control selected).
+To add behaviour to defined control, programmer must implement one or more events of control. Each control type has also its own events. They are listed in right click menu on dialog design screen and at the bottom of "Property Explorer" (when control selected).
 
 .. figure:: images/dialogbasics/newdialogevent.png
    :width: 700 px
@@ -206,9 +206,17 @@ In TROIA, transferring a value or variable to dialogs does not require an extra 
 Scope and Transferring Data Between Dialogs
 -------------------------------------------
 
+..scope..
+
 Functions & Right Click Menu
 ----------------------------
-right click menu.
+
+It is possible to define methods on dialogs and call this methods from control events. To define a dialog method, you must right click the dialog on "Object Explorer" and select "Add Method" on menu.
+
+.. figure:: images/dialogbasics/newdialogmethod.png
+   :width: 700 px
+   :target: images/dialogbasics/newdialogmethod.png
+   :align: center
 
 
 Sample 1: Counting Words
