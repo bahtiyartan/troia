@@ -226,7 +226,7 @@ Sample 1: Counting Words
 Please define a dialog that;
 
  - has two buttons and one textfield on it
- - has a right click menu item that prints the word count of a string symbol which is defined on previous dialog.
+ - has a right click menu item that prints the word count of a string symbol which is defined on previous dialog, to textfield on it.
  - one of its buttons closes the dialog
  - second button has same behavior with its right click menu.
 
