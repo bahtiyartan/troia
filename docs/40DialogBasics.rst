@@ -218,8 +218,20 @@ It is possible to define methods on dialogs and call this methods from control e
    :target: images/dialogbasics/newdialogmethod.png
    :align: center
 
+After insert required parameters for defining a new method, system automatically opens newly added method. To show a method as dialog right click menu item, you must select "Show on Menu" checkbox and set a caption (text on right click menu) on "Property Explorer". Right click menu items can be bounded to controls on dialog with "Bounded With" option. If you bind a right click menu item to a control, menu item is disable when control is disabled and invisible when control is invisible.
 
 Sample 1: Counting Words
 ------------------------
 
-sample.
+Please define a dialog that;
+
+ - has two buttons and one textfield on it
+ - has a right click menu item that prints the word count of a string symbol which is defined on previous dialog.
+ - one of its buttons closes the dialog
+ - second button has same behavior with its right click menu.
+
+and call your dialog from first dialog of DEVT11-Runcode Test Transaction
+ 
+ 
+
+
