@@ -220,6 +220,11 @@ It is possible to define methods on dialogs and call this methods from control e
 
 After insert required parameters for defining a new method, system automatically opens newly added method. To show a method as dialog right click menu item, you must select "Show on Menu" checkbox and set a caption (text on right click menu) on "Property Explorer". Right click menu items can be bounded to controls on dialog with "Bounded With" option. If you bind a right click menu item to a control, menu item is disable when control is disabled and invisible when control is invisible.
 
+Timers on Dialog
+----------------
+
+timers..
+
 Sample 1: Counting Words
 ------------------------
 
@@ -231,6 +236,12 @@ Please define a dialog that;
  - second button has same behavior with its right click menu.
 
 and call your dialog from first dialog of DEVT11-Runcode Test Transaction
+
+
+Sample 2: Defining a Clock With On Timer
+----------------------------------------
+
+.sample2
  
  
 

@@ -4,11 +4,6 @@
 Dialogs in Advance
 ==================
 
-Timers on Dialog
-----------------
-
-timers..
-
 Control and Control Events
 --------------------------
 controls..
