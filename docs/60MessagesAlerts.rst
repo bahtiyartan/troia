@@ -11,7 +11,22 @@ message command
 
 Message Types
 =============
-message types
+
++--------------+-------+-----------------------------------+
+| **Type**     |**Code | 
++--------------+-------+-----------------------------------+
+| INFORMATION  |   I   | Information icon on message popup |
++--------------+-------+-----------------------------------+
+| ERROR        |   E   | Error icon on message popup       |
++--------------+-------+-----------------------------------+
+| WARNING      |   W   | Warning icon on message popup     |
++--------------+-------+-----------------------------------+
+| CONFIRMATION |   Q   | Yes/No Questions                  |
++--------------+-------+-----------------------------------+
+| OPTION       |   O   | Custom options                    |
++--------------+-------+-----------------------------------+
+| PARAMETER    |   P   | User Keyboard Input               |
++--------------+-------+-----------------------------------+
 
 
 Message Texts & Translations
