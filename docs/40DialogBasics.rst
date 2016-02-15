@@ -261,7 +261,7 @@ Please define a dialog that
 	- has a datetime field which shows current date
 	- uptates the date value on each second
 	
-and call your dialog from first dialog of DEVT11-Runctode Test Transaction. And check the time value on it and try to find why it jumps/ticks for two seconds in some cases.
+and call your dialog from first dialog of DEVT11-Runctode Test Transaction. Check the time value on it and try to find why it jumps/ticks for two seconds in some cases.
  
  
 
