@@ -202,11 +202,7 @@ To close a dialog, you must use SHUTDOWN command. SHUTDOWN command closes the la
 	
 In TROIA, transferring a value or variable to dialogs does not require an extra effort, in other words you can access the values of control symbols which are defined by previous dialog. This is totally about "scope". If you don't understand what the scope is or how system works please review related sections.
 
-
-Scope and Transferring Data Between Dialogs
--------------------------------------------
-
-..scope..
+After a dialog is closes, global variables that are defined by closed dialog are not removed from the memory so they are still accessible. So programmers must consider symbol names and types on closed dialogs when defining new variables and controls. 
 
 Functions & Right Click Menu
 ----------------------------
@@ -223,12 +219,31 @@ After insert required parameters for defining a new method, system automatically
 Timers on Dialog
 ----------------
 
-timers..
+In some cases programmers need to run a piece of TROIA code repeatedly in predefined period such as refreshing a information board or do something in every two minutes. To handle this cases dilaog has a predefined event, ONTIMER which is fired automatically fired in given period. As default timer period is zero (0) and this means timer is disabled. To enable timers period informations must be set by TROIA code which is executed on BEFORE or AFTER event of dialog. To set timer period SETTIMER command is used.
+
+Consider a dialog that has an integer textfield on it and in every 2 seconds we must increase its value and stops when value is 10. Firstly must implement ONTIMER method as:
+
+::
+
+	INTEGERVAR1 = INTEGERVAR1 + 1;
+	STRINGVAR3 = STRINGVAR3 + TOCHAR(10) + 'OnTimer increased the value';
+	IF INTEGERVAR1 == 10 THEN
+		SETTIMER 0;
+	ENDIF;
+	
+And to set the period, we must add the code below to AFTER event of dialog:
+
+::
+
+	SETTIMER 2000;
+	/* 2000 : period is defined as milliseconds. */
+	
+
 
 Sample 1: Counting Words
 ------------------------
 
-Please define a dialog that;
+Please define a dialog that
 
  - has two buttons and one textfield on it
  - has a right click menu item that prints the word count of a string symbol which is defined on previous dialog, to textfield on it.
@@ -238,10 +253,15 @@ Please define a dialog that;
 and call your dialog from first dialog of DEVT11-Runcode Test Transaction
 
 
-Sample 2: Defining a Clock With On Timer
+Sample 2: Defining a Clock with Timer
 ----------------------------------------
 
-.sample2
+Please define a dialog that
+
+	- has a datetime field which shows current date
+	- uptates the date value on each second
+	
+and call your dialog from first dialog of DEVT11-Runctode Test Transaction. And check the time value on it and try to find why it jumps/ticks for two seconds in some cases.
  
  
 
