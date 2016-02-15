@@ -21,7 +21,7 @@ Message Types
 +-------------+--------+-----------------------------------+
 | WARNING     |   W    | Warning icon on message popup     |
 +-------------+--------+-----------------------------------+
-| CONFIRMATION|   Q    | Yes/No Questions                  |
+| CONFIRMATION|   C    | Yes/No Questions                  |
 +-------------+--------+-----------------------------------+
 | OPTION      |   O    | Custom options                    |
 +-------------+--------+-----------------------------------+
