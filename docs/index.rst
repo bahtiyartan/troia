@@ -26,16 +26,15 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    55DialogAdvanced
    60MessagesAlerts
    
+   databaseaccess
    exception handling
+   tables
    
    reports and printing
    components
    
    inheritanceandcross
-   
-   tables
-   databaseaccess
-   
+
    advancedcontrols
    datemanipulation
    filehandling
