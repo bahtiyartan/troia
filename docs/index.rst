@@ -24,6 +24,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    45Transactions
    50Class
    55DialogAdvanced
+   60MessagesAlerts
    
    exception handling
    
@@ -33,7 +34,6 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    inheritanceandcross
    
    tables
-   messagesandalerts
    databaseaccess
    
    advancedcontrols
