@@ -30,7 +30,7 @@ Tab Dialogs
 tab dialogs.
 
 
-Sample 2: Tab Dialogs
+Sample 1: Tab Dialogs
 ------------------------
 
 tab dialogs.
