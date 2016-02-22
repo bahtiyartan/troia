@@ -30,7 +30,7 @@ Class
 ====================
 
 TROIA is an object oriented language, so it allows programmers to define classes to perform a task or model a business entity.
-Like any other object oriented language, cleses have members and methods and they support inheritance and encapsulation.
+Like any other object oriented language, classes have members and methods and they support inheritance and encapsulation.
 
 Although TROIA classes able to model any kind of business entity and its behaviours, classes are usually used as a set of methods as a TROIA programming convension.
 TROIA Programmers usually use tables to store an entity's fields because of advantages of using tables.
