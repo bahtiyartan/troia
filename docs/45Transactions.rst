@@ -4,16 +4,15 @@
 Transactions in Depth
 =======================
 
+Defining Transactions
+---------------------
+
+defining...
 	
 Transactions and Scope
 --------------------
 
 scope...
-
-Defining Transactions
----------------------
-
-defining...
 
 
 Running & Calling Transactions
