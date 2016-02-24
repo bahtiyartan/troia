@@ -13,7 +13,7 @@ Like other programming languages, TROIA transactions have an entry point that is
 Defining Transactions
 ---------------------
 
-Before the definition, you must decide the id/name, the first dialog (entry point) and transaction caption. This three information is the primary information which defines a transaction.
+Before the definition, you must decide the id/name, the first dialog (entry point) and transaction caption. This three information is the primary data which defines a transaction.
 
 Definition operation is performed on "SYST00 - System Transactions & Gadgets" application. This application is also a TROIA transaction and stores provided information on SYSTRANS, SYSTRANSTXT database tables.
 
