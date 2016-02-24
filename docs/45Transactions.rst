@@ -15,7 +15,7 @@ Defining Transactions
 
 Before the definition, you must decide the id/name, the first dialog (entry point) and transaction caption. This three information is the primary data which defines a transaction.
 
-Definition operation is performed on "SYST00 - System Transactions & Gadgets" application. This application is also a TROIA transaction and stores provided information on SYSTRANS, SYSTRANSTXT database tables.
+Definition operation is performed on "SYST00 - System Transactions & Gadgets" application. This application is also a TROIA transaction. SYST00 stores transaction information on SYSTRANS, SYSTRANSTXT database tables.
 
 Another feature that you must provide while defining a transaction is the "module" of your transaction. A module is virtual group of one or more transactions such as "Sales Applications" or "Finance Applications" etc. Module is not a primary data and relatively negliable, it is just used for documentation. Status (active/passive) information of transaction is also another data  just for docuementation.
 
