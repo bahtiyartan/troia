@@ -23,9 +23,8 @@ While defining a transaction you can also provide icon, color for user interface
 	
 	
 Transactions and Scope
---------------------
-
-scope...
+---------------------
+scope.
 
 
 Running & Calling Transactions
@@ -33,11 +32,16 @@ Running & Calling Transactions
 
 Running Transactions
 ====================
-running
+running.
 
 
 Calling Transactions from Another Transaction
 =============================================
-calling
+calling.
+
+
+Scheduled Tasks and Batch Transactions
+======================================
+batch.
 	
 
