@@ -41,7 +41,11 @@ calling.
 
 
 Scheduled Tasks and Batch Transactions
-======================================
+--------------------------------------
 batch.
+
+Sample 1: Defining Transaction
+------------------------------
+defining transaction.
 	
 
