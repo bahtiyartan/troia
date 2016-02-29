@@ -38,8 +38,36 @@ Simply, there are two ways of starting a transaction. The first, most used and m
 
 Calling Transactions by TROIA Code
 ==================================
-calling.
 
+In some cases, programmers may need call a transaction to perform a task and optionally get some output parameters from called transaction. "CALL TRANSACTION" command is used to call a transaction programatically.
+
+Here is the simplest usages of CALL TRANSACTION command:
+
+::
+
+	CALL TRANSACTION {transaction_name} [({input_params})];
+	
+	/* 
+	   Example:
+	   CALL TRANSACTION DEVT11 (PARAM1, PARAM2);
+	*/
+	
+In this variation, TROIA runtime does not stop code execution on CALL TRANSACTION command. Just calls given transaction after server activity finished (when lastest event/method executed on user interaction.) In this case, getting output parameters from called transaction is not supported.
+
+
+It is possible to stop code execution and wait for output parameters. Here is the usage:
+
+::
+
+	CALL TRANSACTION {transaction_name} [({input_params})] WITH WAIT [({output_params})];
+	
+	/* 
+	   Example:
+	   CALL TRANSACTION (PARAM1, PARAM2) DEVT11 (OUTPUT1, OUTPUT2);
+	*/
+	
+In this case, TROIA runtime stops code execution and starts a new transaction that is interactive with user. When user closes the transaction, TROIA runtime continues code execution from the command after CALL TRANSACTION, so getting output parameters and use their values on next commands is possible. In WITH WAIT variation, users not allowed to switch caller tranasction on user interface without called transaction is closed.
+	
 
 Scheduled Tasks and Batch Transactions
 --------------------------------------
