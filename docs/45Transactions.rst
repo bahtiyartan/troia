@@ -45,7 +45,7 @@ Here is the simplest usages of CALL TRANSACTION command:
 
 ::
 
-	CALL TRANSACTION {transaction_name} [({input_params})];
+	CALL TRANSACTION {tran_name} [({input_params})];
 	
 	/* 
 	   Example:
@@ -59,7 +59,7 @@ It is possible to stop code execution and wait for output parameters. Here is th
 
 ::
 
-	CALL TRANSACTION {transaction_name} [({input_params})] WITH WAIT [({output_params})];
+	CALL TRANSACTION {tran_name} [({input_params})] WITH WAIT [({output_params})];
 	
 	/* 
 	   Example:
