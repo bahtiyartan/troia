@@ -66,7 +66,11 @@ It is possible to stop code execution and wait for output parameters. Here is th
 	   CALL TRANSACTION (PARAM1, PARAM2) DEVT11 (OUTPUT1, OUTPUT2);
 	*/
 	
-In this case, TROIA runtime stops code execution and starts a new transaction that is interactive with user. When user closes the transaction, TROIA runtime continues code execution from the command after CALL TRANSACTION, so getting output parameters and use their values on next commands is possible. In WITH WAIT variation, users not allowed to switch caller tranasction on user interface without called transaction is closed.
+In this case, TROIA runtime stops code execution and starts a new transaction that is interactive with user. When user closes the transaction, TROIA runtime continues code execution from the command after CALL TRANSACTION, so getting output parameters and use their values on next commands is possible. In WITH WAIT variation, users not allowed to switch caller transaction on user interface without called transaction is closed.
+
+
+Input Paramters and TRANSCALLED Event
+=====================================
 	
 
 Scheduled Tasks and Batch Transactions
