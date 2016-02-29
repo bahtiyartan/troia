@@ -23,7 +23,7 @@ While defining a transaction you can also provide icon, color for user interface
 	
 	
 Transactions and Scope
----------------------
+----------------------
 
 Transaction is the only structure that is able to execute TROIA codes. In other words, to run a TROIA code at least one transaction must be opened in server side. Also, transactions are able to store store variables defined in TROIA applications. A transaction is the largest scope of a TROIA variable. A variable which is defined as global, can be accessed by any dialog or class code which is running on transaction.
 
