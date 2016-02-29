@@ -69,8 +69,18 @@ It is possible to stop code execution and wait for output parameters. Here is th
 In this case, TROIA runtime stops code execution and starts a new transaction that is interactive with user. When user closes the transaction, TROIA runtime continues code execution from the command after CALL TRANSACTION, so getting output parameters and use their values on next commands is possible. In WITH WAIT variation, users not allowed to switch caller transaction on user interface without called transaction is closed.
 
 
-Input Paramters and TRANSCALLED Event
+Input Parameters and TRANSCALLED Event
 =====================================
+
+Input parameters are defined on called transaction's as global variables with same name, value and type. So passing parameters as constant values is not recommended. 
+
+::
+
+	/* this is a valid call */
+	CALL TRANSACTION DEVT11 ('paramvalue', 5);
+	
+	
+If CALL TRANSACTION command has input parameters, after "AFTER" event of first dialog TRANSCALLED is called. If there is not any input parameter TRANSCALLED event is not fired. Implementing TRANSCALLED event in start dialog is not a compulsory. If dialog does not contain TRANSCALLED event, event call is ignored even if caller command passes parameter.
 	
 
 Scheduled Tasks and Batch Transactions
