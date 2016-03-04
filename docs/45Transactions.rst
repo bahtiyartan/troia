@@ -100,7 +100,14 @@ If CALL TRANSACTION command has input parameters, after "AFTER" event of first d
 
 Scheduled Tasks and Batch Transactions
 --------------------------------------
-batch.
+
+As mentioned before, transactions are the only structure that is able to execute TROIA codes. So when programmers needs to run a program as a planned/scheduled task,also they have to open a transaction. In TROIA platform, this case is called as "batch transaction" or "batch client".
+
+Due to batch transaction concept, programmers are able to define a TROIA code block for a transction that will be configured as batch. This code is defined in "Batch Code" tab of "SYST00 - System Transactions & Gadgets" application. When a batch transaction is called, system starts transaction and opens it's first dialog as a regular transaction opening additionally runs transaction's "Batch Code".
+
+To run a batch transaction, there are two methods. First one is client based batch and this method allows users to see clien user interface. The other option is a console application which is defined as an Server Admin Utility variation. In both of two methods, scheduling is defined on operating system's scheduling tools like Window's task scheduler or linux's crontab (TROIA Platform does not have embedded scheduling tools).
+
+
 
 Sample 1: Defining Transaction
 ------------------------------
