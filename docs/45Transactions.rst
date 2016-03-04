@@ -104,6 +104,13 @@ batch.
 
 Sample 1: Defining Transaction
 ------------------------------
-defining transaction.
+
+Please define a transaction that
+
+	- has a custom start dialog that has a textfield and a button on it.
+	- calls DEVT11 transaction on button click event and returns STRINGVAR3 variable's value to textfield.
+
+and try to understand difference between calling transaction with simple method and with "WITH WAIT" variation. 
+	
 	
 
