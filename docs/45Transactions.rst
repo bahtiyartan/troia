@@ -107,7 +107,7 @@ Due to batch transaction concept, programmers are able to define a TROIA code bl
 
 To run a batch transaction, there are two methods. First one is client based batch and this method allows users to see clien user interface. The other option is a console application which is defined as an Server Admin Utility variation. In both of two methods, scheduling is defined on operating system's scheduling tools like Window's task scheduler or linux's crontab (TROIA Platform does not have embedded scheduling tools).
 
-
+For more configuration details about "batch transactions" please see help documents.
 
 Sample 1: Defining Transaction
 ------------------------------
