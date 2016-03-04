@@ -69,6 +69,21 @@ It is possible to stop code execution and wait for output parameters. Here is th
 In this case, TROIA runtime stops code execution and starts a new transaction that is interactive with user. When user closes the transaction, TROIA runtime continues code execution from the command after CALL TRANSACTION, so getting output parameters and use their values on next commands is possible. In WITH WAIT variation, users not allowed to switch caller transaction on user interface without called transaction is closed.
 
 
+Calling Transactions in Server
+==============================
+
+As default CALL TRANSACTION command, fires opening a new transaction process drived by client, so new transaction is opened on client side with its user interface appears in client application. In this case,users are also able to interact with called transaction.
+
+But in some cases, programmers may need result of a process process which is already implemented on a transaction without any user interaction. In this cases, it is possible to call a transaction in server. When a transaction is called in server, server opens a transaction and it's first dialog, runs events and closes transaction; in other words server simulates all client requests which is called when a regular transaction opening process.
+
+Calling a transaction with in server variation is very simple. Here is the syntax:
+
+::
+
+	CALL TRANSACTION {transaction} ({input_params}) INSERVER;
+	CALL TRANSACTION {transaction} INSERVER ({input_params});
+	CALL TRANSACTION {transaction} ({input_params}) INSERVER ({output_params});
+	
 Input Parameters and TRANSCALLED Event
 =====================================
 
