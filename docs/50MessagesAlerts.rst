@@ -55,12 +55,25 @@ Message Type effects message appearence on user interface and the way how user w
 
 Reading User Response & System Variables
 ========================================
-system variables
+CONFIRMATION, OPTION or PARAMETER message types, we need to read which option is selected or the text input by user. User response is set to CONFIRM and SYS_CONFIRMTEXT system variables, so programmers can read the value and do something due to user input. In confirmation messages, CONFIRM system variable is set to YES when user selects yes option, otherwise it is set to NO. 
+
+::
+
+	MESSAGE BAS C100 WITH;
+
+	IF CONFIRM == 'YES' THEN
+		STRINGVAR1 = 'User said: yes!';
+	ELSE
+		STRINGVAR1 = 'User said: no!';
+	ENDIF;
+
+In option messages, CONFIRM variable is set to an integer which shows the order of selected option and SYS_CONFIRMTEXT is set to text value of selected option.
+
+Another system variable which is set on MESSAGE command is SYSMESSAGE. SYSMESSAGE is set to message text for programmers who need message text. Remember message text is calculated using given module, messageid, login language and applied message parameters. 
 
 Code Breaking & Store
 ---------------------
 code breaking
-
 
 Other Alerting Options
 ----------------------
