@@ -75,6 +75,12 @@ Code Breaking & Store
 ---------------------
 code breaking
 
+Some Factss About MESSAGE
+-------------------------
+- batch clients
+
+- in sql transaction
+
 Other Alerting Options
 ----------------------
 alerting options.
