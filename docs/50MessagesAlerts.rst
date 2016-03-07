@@ -10,7 +10,7 @@ MESSAGE Command
 Programmers use popup messages to inform users or get some critical data such as confirmation, selecting an option etc.
 
 .. figure:: images/messages/confirmmessage.png
-   :width: 300 px
+   :width: 350 px
    :target: images/messages/confirmmessage.png
    :align: center
 
