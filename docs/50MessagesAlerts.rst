@@ -18,7 +18,7 @@ To show such messages in TROIA, "MESSAGE" command is used. MESSAGE command gets 
 
 ::
 	
-	MESSAGE {module} {messagetype}{messageid} WITH {inputparamsformessagetext}
+	MESSAGE {module} {messagetype}{messageid} WITH {inputparamsformessagetext};
 	
 	/* sample code */
 	MESSAGE BAS C100 WITH;
