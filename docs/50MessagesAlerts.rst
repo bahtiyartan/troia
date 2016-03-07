@@ -20,7 +20,9 @@ To show such messages in TROIA, "MESSAGE" command is used. MESSAGE command gets 
 	
 	MESSAGE {module} {messagetype}{messageid} WITH {inputparamsformessagetext};
 	
-	/* sample code, there is not any %s in message text, so there is not a paremeter after WITH keyword	*/
+	/* sample code, there is not any %s in message text, 
+	so there is not a paremeter after WITH keyword	*/
+	
 	MESSAGE BAS C100 WITH;
 	
 This syntax is simples and most used syntax of MESSSAGE command, for more details such as options and default option please see related help documents.
