@@ -25,7 +25,9 @@ To show such messages in TROIA, "MESSAGE" command is used. MESSAGE command gets 
 	
 This syntax is simples and most used syntax of MESSSAGE command, for more details such as options and default option please see related help documents.
 
-Message texts are defined in "SYST02 - System Messages" transaction using message definition parameters. This parameters are the module of messsage and an message id which is simple long number. MESSAGE command finds the appropriate message text and options using module, id and user's login language.
+Message texts are defined in "SYST02 - System Messages" transaction using message definition parameters. This parameters are the module of messsage and an message id which is simple long number. MESSAGE command finds the appropriate message text and options using module, id and user's login language. 
+
+In "SYST02 - System Messages" transaction, it is possible to define message texts and options in multiple languages. Message texts can contain '%s' string formatting character for the parameters which will be provided on runtime using WITH keyword on MESSAGE command. Also it is possible to define indexes for text parameters like '%s1', '%s2' for if the word order changes language by language.
 
 
 Message Types
@@ -48,12 +50,6 @@ Message Type effects message appearence on user interface and the way how user w
 +-------------+--------+-----------------------------------+
 | PARAMETER   |   P    | User Keyboard Input               |
 +-------------+--------+-----------------------------------+
-
-
-Message Texts & Translations
-============================
-message texts
-
 
 Reading User Response & System Variables
 ========================================
