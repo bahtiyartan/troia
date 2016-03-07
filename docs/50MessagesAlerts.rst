@@ -14,11 +14,14 @@ Programmers use popup messages to inform users or get some critical data such as
    :target: images/messages/confirmmessage.png
    :align: center
 
-To show such messages in TROIA, "MESSAGE" command is used. MESSAGE command gets some parameters that defines the message instead of message text's itself (because of multi language support). Here is the most used syntax of MESSAGE command:
+To show such messages in TROIA, "MESSAGE" command is used. MESSAGE command gets some parameters that defines the message instead of message text's itself (because of multi language support). Here is the most used syntax of MESSAGE command and sample code that shows messagebox above:
 
 ::
 	
 	MESSAGE {module} {messagetype}{messageid} WITH {inputparamsformessagetext}
+	
+	/* sample code */
+	MESSAGE BAS C100 WITH;
 	
 For more details such as options and default option please see related help documents.
 
@@ -28,7 +31,7 @@ Message texts are defined in "SYST02 - System Messages" transaction using messag
 Message Types
 =============
 
-Message Type effects message appearence on user interface and the way how user will intract with message such as selecting an option, making a text input or just clicking ok button on an information message. Here is the type
+Message Type effects message appearence on user interface and the way how user will intract with message such as selecting an option, making a text input or just clicking ok button on an information message. All message types are listed below:
 
 +-------------+--------+-----------------------------------+
 | **Type**    |**Code**|                                   |
