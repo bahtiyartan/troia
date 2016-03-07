@@ -14,7 +14,7 @@ Programmers use popup messages to inform users or get some critical data such as
    :target: images/messages/confirmmessage.png
    :align: center
 
-To show such messages in TROIA, "MESSAGE" command is used. MESSAGE command gets some parameters that defines the message instead of message text's itself (because of multi language support). Here is the most used syntax of MESSAGE command and sample code that shows messagebox above:
+To show such messages in TROIA, "MESSAGE" command is used. MESSAGE command gets some parameters that defines the message instead of message text's itself (because of multi language support). Here the basic syntax of MESSAGE command and sample code that shows messagebox above:
 
 ::
 	
@@ -23,7 +23,7 @@ To show such messages in TROIA, "MESSAGE" command is used. MESSAGE command gets 
 	/* sample code */
 	MESSAGE BAS C100 WITH;
 	
-For more details such as options and default option please see related help documents.
+This syntax is simples and most used syntax of MESSSAGE command, for more details such as options and default option please see related help documents.
 
 Message texts are defined in "SYST02 - System Messages" transaction using message definition parameters. This parameters are the module of messsage and an message id which is simple long number. MESSAGE command finds the appropriate message text and options using module, id and user's login language.
 
