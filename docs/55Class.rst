@@ -36,6 +36,7 @@ As a programming convention _VARIABLES method is used for defining members and o
 
 The only difference between regular methods and class initializers are about variable definitons made by OBJECT command. For details about OBJECT command and scope issue, please read the related sections of this book.
 
+
 Calling Class Methods
 ---------------------
 
