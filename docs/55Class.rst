@@ -61,7 +61,8 @@ It is also possible to define class methods as recursive and call other class me
 	
 	LOCAL:
 		INTEGER MAXNUM;
-		
+	
+	/* class have another method named MAX */
 	MAXNUM = THIS.MAX(PA, PB);
 	
 	RETURN 'Maximum number is ' + MAXNUM;
