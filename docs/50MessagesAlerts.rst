@@ -71,14 +71,14 @@ In option messages, CONFIRM variable is set to an integer which shows the order 
 
 Another system variable which is set on MESSAGE command is SYSMESSAGE. SYSMESSAGE is set to message text for programmers who need message text. Remember message text is calculated using given module, messageid, login language and applied message parameters. 
 
-Code Breaking & Messages on Batch/Server Transactions
------------------------------------------------------
+Message on Batch/Server Transactions
+------------------------------------
 As it is obvious, messages shown on client side and needs a client side interaction, so while interpreter running a message command, it returns client and waits for a client interaction. This case is called "code breaking" and simply considered as "using a client side resource while code execution in server side". 
 
 In batch transactions, there is no user that is able to interact or answer message dialog, therefore intepreter behavior is different on batch and inserver (INSERVER) transactions. In this kind of server only code executions, system automatically answer messages with default option, confirms (YES) all confirmation messages and ignores information/warning messages. Additionally inserts all messages to IASBATCHERR system table which is able to store message, session and server information.
 
 
-MESSAGE on Database Transactions
+Message on Database Transactions
 --------------------------------
 Messages on "database transactions" (between BEGINTRAN-COMMITTRAN) are answered automatically by server and sent to client side as information messages after "database transaction" closed. All messages emerged in "database transaction" are transferred to client as a bulk information message. Messages on sql transactions are stored in SYSBATCHMESSAGES system variable whose type is table. It will be discussed detailly in database access section.
 
