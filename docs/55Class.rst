@@ -45,7 +45,23 @@ Classes also have methods that can be called from outside of the class over an c
 		
 	RESULT = CLASSINSTANCE.SUM(5, 6);
 	
-It is also possible to define class methods as recursive.
+It is also possible to define class methods as recursive and call other class methods. To call call a class method inside class THIS keyword is used, because developer of class is not able to possible instances of class. Here is a simple example:
+
+
+::
+
+	/* this is a class method code, which returns a text */
+	PARAMETERS:
+		INTEGER PA,
+		INTEGER PB;
+	
+	LOCAL:
+		INTEGER MAXNUM;
+		
+	MAXNUM = THIS.MAX(PA, PB);
+	
+	RETURN 'Maximum number is ' + MAXNUM;
+	
 
 Sample 1: Math Operations
 -------------------------
