@@ -78,8 +78,8 @@ As it is obvious, messages shown on client side and needs a client side interact
 In batch transactions, there is no user that is able to interact or answer message dialog, therefore intepreter behavior is different on batch and inserver (INSERVER) transactions. In this kind of server only code executions, system automatically answer messages with default option, confirms (YES) all confirmation messages and ignores information/warning messages. Additionally inserts all messages to IASBATCHERR system table which is able to store message, session and server information.
 
 
-MESSAGE Command on Database Transactions
-----------------------------------------
+MESSAGE on Database Transactions
+--------------------------------
 Messages on "database transactions" (between BEGINTRAN-COMMITTRAN) are answered automatically by server and sent to client side as information messages after "database transaction" closed. All messages emerged in "database transaction" are transferred to client as a bulk information message. Messages on sql transactions are stored in SYSBATCHMESSAGES system variable whose type is table. It will be discussed detailly in database access section.
 
 
@@ -88,7 +88,7 @@ Other Alerting Options
 In TROIA, there are some other options to point out controls or create some popups to take users attention. Please see help documents of ATTENTION and ALERT commands which have different user interfaces and interaction methods.
 
 
-Sample 1: Reading Message Text and Answer
+Sample 1: Reading Message Text/Answer
 -----------------------------------------
 
 - Define an option message.
