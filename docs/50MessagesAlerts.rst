@@ -89,7 +89,7 @@ In TROIA, there are some other options to point out controls or create some popu
 
 
 Sample 1: Reading Message Text/Answer
------------------------------------------
+-------------------------------------
 
 - Define an option message.
 - Define a confirmation which contains format text (%s)
