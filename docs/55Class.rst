@@ -13,7 +13,7 @@ classes and scope.
 
 Creating/Editing Classes
 ========================
-define..
+define classs..
 
 How Classes Stored and Laoded?
 ==============================
@@ -22,6 +22,10 @@ how a dialog stored.
 
 how a dialog is loaded.
 
+
+Defining Class Instances
+------------------------
+define instance...
 
 Basic Class Methods
 --------------------
@@ -61,6 +65,11 @@ It is also possible to define class methods as recursive and call other class me
 	MAXNUM = THIS.MAX(PA, PB);
 	
 	RETURN 'Maximum number is ' + MAXNUM;
+	
+
+Class Inheritance
+-----------------
+..
 	
 
 Sample 1: Math Operations
