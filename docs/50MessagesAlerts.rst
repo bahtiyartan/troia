@@ -85,4 +85,13 @@ Messages on "database transactions" (between BEGINTRAN-COMMITTRAN) are answered 
 
 Other Alerting Options
 ----------------------
-alerting options.
+In TROIA, there are some other options to point out controls or create some popups to take users attention. Please see help documents of ATTENTION and ALERT commands which have different user interfaces and interaction methods.
+
+
+Sample 1: Reading Message Answer
+------------------------------------------------
+
+- Define an option message.
+- Define a confirmation which contains format text (%s)
+- Add a button which shows option message first and prints selected message to your second confirmation message text.
+- Print your confirmation message text and answer to a textfield.
