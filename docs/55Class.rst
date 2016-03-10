@@ -28,9 +28,9 @@ Basic Class Methods
 
 Classes has two predefined methods named _VARIABLES, _CONSTRUCTOR, this methods qare called when an variable definition command defines a new class instance. They are also called "class initializer" methods and mostly like constructors on other object oriented programming languages.
 
-As a programming convention _VARIABLES method is used for defining members and other required variables and _CONSTRUCTOR method is used to build internal structures of class instance. But there is not a technical constraint to use them different purposes.
+As a programming convention _VARIABLES method is used for defining members and other required variables and _CONSTRUCTOR method is used to build internal structures of class instance. But there is not a technical constraint to use them different purposes. Also it is possible to call function initializers manually but it is not a recommended.
 
-The only difference between regular methods and class initializers are about variable definitons made by OBJECT command. Details about OBJECT command and scope issues please return related sections.
+The only difference between regular methods and class initializers are about variable definitons made by OBJECT command. For details about OBJECT command and scope issue, please read the related sections of this book.
 
 Calling Class Methods
 ---------------------
