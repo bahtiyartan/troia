@@ -35,8 +35,17 @@ The only difference between regular methods and class initializers are about var
 Calling Class Methods
 ---------------------
 
-calling methods.
+Classes also have methods that can be called from outside of the class over an class instance. There is a not a special syntax for calling a TROIA Class method. Most important part while calling a class method is specifying class instance name, because each instance can have an internal state. Here is a simple example of calling a class method:
 
+::
+
+	OBJECT:
+		MATHTEST CLASSINSTANCE,
+		INTEGER RESULT;
+		
+	RESULT = CLASSINSTANCE.SUM(5, 6);
+	
+It is also possible to define class methods as recursive.
 
 Sample 1: Math Operations
 -------------------------
