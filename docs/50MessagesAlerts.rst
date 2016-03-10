@@ -88,8 +88,8 @@ Other Alerting Options
 In TROIA, there are some other options to point out controls or create some popups to take users attention. Please see help documents of ATTENTION and ALERT commands which have different user interfaces and interaction methods.
 
 
-Sample 1: Reading Message Answer
-------------------------------------------------
+Sample 1: Reading Message Text and Answer
+-----------------------------------------
 
 - Define an option message.
 - Define a confirmation which contains format text (%s)
