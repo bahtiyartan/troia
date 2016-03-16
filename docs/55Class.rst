@@ -59,7 +59,24 @@ OBJECT:
 	
 When you defining a class instance you must consider all variable defintion points which are discussed previous sections. Additionally, when a variable definition command executed to define a class instance, class initilalizer methods are fired. But this methods are fired only once, in other words even if same instance are defined more than once class initilizers are fired only once. This rule is same both for same or different command instances. To understand the behavior correctly please see the trace of code below:
 
- 
+
+::
+
+	OBJECT:
+		INTEGER NINDEX;
+
+	NINDEX = 0;
+
+	WHILE NINDEX < 2
+	BEGIN
+		OBJECT:
+			RDTA AREC;
+			
+		OBJECT:
+			RDTA AREC;
+			
+		NINDEX = NINDEX + 1;
+	ENDWHILE;
 
 
 Calling Class Methods
