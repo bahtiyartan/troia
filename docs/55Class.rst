@@ -23,7 +23,7 @@ To create a new class you must click **TROIA IDE->New->Class** on menu and fill 
    :target: images/classes/newclass.png
    :align: center
    
-As it is obvious that, your class must have a unique name. It is not a compulsory define a base class for your new class, so you can leave base class field if your new class has not a base. "Short description" is a simple documentation text about your class. "Module" and "Status" are just for documentation issues and have no critical effect on class usage. After you click "OK" button on new class form, IDE creates a new class and opens your new class on object explorer.
+As it is obvious that, your class must have a unique name. It is not a compulsory define a base class for your new class, so you can leave base class field if your new class has not a base. "Short description" is a simple documentation text about your class. "Module" and "Status" are just for documentation issues and have no critical effect on class usage. After you click "OK" button on new class form, IDE creates a new class which contains two emtpty basic methods and opens your new class on object explorer.
 
 To edit your existing classes you must click **TROIA IDE->Open Resource** on menu and find and open your classes. It is obvious that both for defining and editing classes requires an hotline which is a change request.
 
