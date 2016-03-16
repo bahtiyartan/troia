@@ -124,6 +124,11 @@ It is also possible to define class methods as recursive and call other class me
 	RETURN 'Maximum number is ' + MAXNUM;
 	
 
+Accessing Class Members
+-----------------------
+.
+	
+
 Class Inheritance
 -----------------
 
@@ -135,5 +140,15 @@ Inheritance, both for dialogs and classes will be discussed detailly in next sec
 Sample 1: Math Operations
 -------------------------
 
+Define a class that:
+
+- has a integer member 'factor' value whose default value is 1.
+- has a method SUM method, calculates sum of given two parameters and returns sum * factor.
+
+Create two instances of your class and set different 'factor' values for two instances and compare results.
+
 
 Sample 2: Defining Unexisting Class Instances
+---------------------------------------------
+
+Try to create an class instance using OBJECT command with an undefined class name and see the trace.
