@@ -73,3 +73,6 @@ PDF File Operations
 ===================
 
 .
+
+Sample 1: Transfering Selected Rows
+-----------------------------------
