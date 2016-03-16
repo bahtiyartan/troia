@@ -59,11 +59,10 @@ Deleting Files
 
 .
 
+Digesting Files
+===============
+.
 
-# Digesting Files
-# ================
-#
-# .
 
 File Compression
 ================
