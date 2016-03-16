@@ -18,6 +18,11 @@ Opening/Closing Files
 .
 
 
+Reading Files & Writing Files
+-----------------------------
+
+.
+
 Reading Files
 -------------
 
@@ -33,14 +38,27 @@ Writing Files
 Copying Files
 -------------
 
-..
-	
-
-Other File Operations
----------------------
-
 .
 	
+
+Other File & Director Operations
+--------------------------------
+
+Listing Files in a Directory
+============================
+.
+
+
+Deleting Files
+==============
+
+.
+
+
+# Digesting Files
+# ================
+#
+# .
 
 File Compression
 ================
