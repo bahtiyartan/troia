@@ -74,5 +74,5 @@ PDF File Operations
 
 .
 
-Sample 1: Transfering Selected Rows
------------------------------------
+Sample 1: Reading & Writing Files
+---------------------------------
