@@ -12,7 +12,7 @@ Introduction
 .
 
 Creating/Editing Classes
-------------------------
+========================
 
 Classes are defined and edit classes in TROIA IDE and "DEVT00 - Class-Browser" transaction. DEVT00 is an older option to manage TROIA classes but has some extra features such as creating SQL scripts for classes etc. We will focus on TROIA IDE to manage classes.
 
