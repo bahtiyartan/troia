@@ -126,7 +126,24 @@ It is also possible to define class methods as recursive and call other class me
 
 Accessing Class Members
 -----------------------
-.
+
+All class members are defined inside class, so each class instance has different memory spaces for each class fiels. So it is not possible to access a class field with its name, also you must specify the instance name. In most programming languages dot (.) operator, allows programmers to access fields of an class instance. In TROIA @ operator is used to access a field value.
+
+::
+
+	OBJECT:
+		STRINGUTIL STRUTIL;
+		
+	STRUTIL@DEFAULTSEPERATOR = '-';
+	
+All member fields are considered as public, so there is not a restriction to access fields by its access modifiers. @ operator is used for only one level, so the code below is not a valid usage:
+
+::
+
+	OBJECT:
+		STRINGUTIL STRUTIL;
+		
+	STRUTIL@MEMBERCLASS@ITSFIELD = '-';
 	
 
 Class Inheritance
