@@ -27,7 +27,6 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    60File
    65DialogAdvanced
    
-   
    databaseaccess
    exception handling
    tables
