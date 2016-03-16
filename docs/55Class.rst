@@ -4,7 +4,7 @@
 Classes
 =======
 
-Simply,a class is an extensible structure that has some features (members), behavior (methods) and an initial state. As an object oriented programming language, TROIA also supports classes. This section aims to introduce concept an its key features in TROIA.
+*In object oriented programming, a class is an extensible structure that has some features (members), behavior (methods) and an initial state. As an object oriented programming language, TROIA also supports classes. This section aims to introduce concept an its key features in TROIA.*
 
 Introduction
 ------------
