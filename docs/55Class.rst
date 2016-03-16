@@ -31,9 +31,9 @@ To edit your existing classes you must click **TROIA IDE->Open Resource** on men
 How Classes Stored and Laoded?
 ==============================
 
-how a dialog stored.
+There are two types of information that defines a class.First one is class's own data which stored on SYSCLSHEAD table, such as its name,base class, shorttext etc. Second information that defines a class is its methods which stored on SYSCLSFUNC database table. When programmers define classes on IDE or related transaction, SYSCLSHEAD and SYSCLSFUNC tables store all information about new class.
 
-how a dialog is loaded.
+When you convert a class, TROIA interpreter reads these two tables, compiles the code and saves binary class files with .cls extension to user's class path. Only these files are read when class instances created, in other words when a class defined system does not access database tables that stores class information and codes.
 
 
 Defining Class Instances
@@ -43,7 +43,7 @@ define instance...
 Basic Class Methods
 --------------------
 
-Classes has two predefined methods named _VARIABLES, _CONSTRUCTOR, this methods qare called when an variable definition command defines a new class instance. They are also called "class initializer" methods and mostly like constructors on other object oriented programming languages.
+Classes has two predefined methods named _VARIABLES, _CONSTRUCTOR, this methods are called when an variable definition command defines a new class instance. They are also called "class initializer" methods and mostly like constructors on other object oriented programming languages.
 
 As a programming convention _VARIABLES method is used for defining members and other required variables and _CONSTRUCTOR method is used to build internal structures of class instance. But there is not a technical constraint to use them different purposes. Also it is possible to call function initializers manually but it is not a recommended.
 
