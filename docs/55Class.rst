@@ -145,7 +145,12 @@ Define a class that:
 - has a integer member 'factor' value whose default value is 1.
 - has a method SUM method, calculates sum of given two parameters and returns sum * factor.
 
-Create two instances of your class and set different 'factor' values for two instances and compare results.
+After definition:
+
+- create twho different instances of your class
+- set different 'factor' values to each instance
+
+and compare the results.
 
 
 Sample 2: Defining Unexisting Class Instances
