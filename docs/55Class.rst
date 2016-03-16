@@ -134,3 +134,6 @@ Inheritance, both for dialogs and classes will be discussed detailly in next sec
 
 Sample 1: Math Operations
 -------------------------
+
+
+Sample 2: Defining Unexisting Class Instances
