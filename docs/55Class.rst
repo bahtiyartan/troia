@@ -35,11 +35,6 @@ There are two types of information that defines a class.First one is class's own
 
 When you convert a class, TROIA interpreter reads these two tables, compiles the code and saves binary class files with .cls extension to user's class path. Only these files are read when class instances created, in other words when a class defined system does not access database tables that stores class information and codes.
 
-
-Defining Class Instances
-------------------------
-define instance...
-
 Basic Class Methods
 --------------------
 
@@ -47,7 +42,24 @@ Classes has two predefined methods named _VARIABLES, _CONSTRUCTOR, this methods 
 
 As a programming convention _VARIABLES method is used for defining members and other required variables and _CONSTRUCTOR method is used to build internal structures of class instance. But there is not a technical constraint to use them different purposes. Also it is possible to call function initializers manually but it is not a recommended.
 
-The only difference between regular methods and class initializers are about variable definitons made by OBJECT command. For details about OBJECT command and scope issue, please read the related sections of this book.
+The only two main difference between regular methods and class initializers:
+
+- This methods are called automatically on class instance definiton.
+- OBJECT Command's behaviour is different compared to its behaviour on regular class methods. 
+
+For details about OBJECT command and scope issue, please read the related sections of this book.
+
+
+Defining Class Instances
+------------------------
+Defining a class instance is as simple as defining an integer variable. The only difference is using your new type instead of "INTEGER". Here is an instance definition of "MATHTEST" class and it is same for all data definition commands such as GLOBAL, OBJECT, LOCAL etc.
+
+OBJECT:
+	MATHTEST MATHREC;
+	
+When you defining a class instance you must consider all variable defintion points which are discussed previous sections. Additionally, when a variable definition command executed to define a class instance, class initilalizer methods are fired. But this methods are fired only once, in other words even if same instance are defined more than once class initilizers are fired only once. This rule is same both for same or different command instances. To understand the behavior correctly please see the trace of code below:
+
+ 
 
 
 Calling Class Methods
