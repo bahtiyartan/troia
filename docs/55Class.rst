@@ -4,15 +4,15 @@
 Classes
 =======
 
+Simply,a class is an extensible structure that has some features (members), behavior (methods) and an initial state. As an object oriented programming language, TROIA also supports classes. This section aims to introduce concept an its key features in TROIA.
+
 Introduction
 ------------
 
-what is a class.
-
-classes and scope.
+.
 
 Creating/Editing Classes
-========================
+------------------------
 
 Classes are defined and edit classes in TROIA IDE and "DEVT00 - Class-Browser" transaction. DEVT00 is an older option to manage TROIA classes but has some extra features such as creating SQL scripts for classes etc. We will focus on TROIA IDE to manage classes.
 
@@ -28,8 +28,8 @@ As it is obvious that, your class must have a unique name. It is not a compulsor
 To edit your existing classes you must click **TROIA IDE->Open Resource** on menu and find and open your classes. It is obvious that both for defining and editing classes requires an hotline which is a change request.
 
 
-How Classes Stored and Laoded?
-==============================
+How Classes Stored and Loaded?
+------------------------------
 
 There are two types of information that defines a class.First one is class's own data which stored on SYSCLSHEAD table, such as its name,base class, shorttext etc. Second information that defines a class is its methods which stored on SYSCLSFUNC database table. When programmers define classes on IDE or related transaction, SYSCLSHEAD and SYSCLSFUNC tables store all information about new class.
 
@@ -116,7 +116,9 @@ It is also possible to define class methods as recursive and call other class me
 Class Inheritance
 -----------------
 
-Even if there are some differences compared to regular object oriented programming languages, its possible to inherit TROIA classes and override methods of base class (also its possible for dialogs). Inheritance and cross will be discussed detailly in next sections.
+Even if there are some differences compared to regular object oriented programming languages, its possible to inherit TROIA classes and override methods of base class (also its possible for dialogs). Overriding class initilizer methods is not supported, if overriding method and base method is executed as if they are a single constructor.  
+
+Inheritance, both for dialogs and classes will be discussed detailly in next sections.
 	
 
 Sample 1: Math Operations
