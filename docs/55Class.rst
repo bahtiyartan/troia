@@ -9,7 +9,12 @@ Classes
 Introduction
 ------------
 
-.
+Briefly, TROIA classes are software structures that have behaviors as methods, features as members, and constructors to set initial states. With these features TROIA classes are very similar to most used object oriented language's classes (such as java, c# etc). When it comes to programming practices, TROIA classes have some different aspects from other object oriented languages.
+
+In object oriented languages, usually all structures (such as user interface forms, form elements) are also classes which are included in framework's itself and programmers able to extend this classes and/or implement new classes. In TROIA, dialogs, reports and other iu items are not considered as class. TROIA classes are same level structures with dialogs or reports. In other words, dialogs are not classes.
+
+Additionally, even if TROIA classes are able to store member fields to represent features, they are considered as "sets of methods" that adds some behavior. Because TROIA has an "alternative structure" to classes for storing object's features. It is obvious that this "alternative structure" is "table" which will be discussed next sections. But we must emphasize that there is not a technical constraint to use class members to represend real-life objects, its just about programming practices.
+
 
 Creating/Editing Classes
 ========================
