@@ -31,7 +31,13 @@ To edit your existing classes you must click **TROIA IDE->Open Resource** on men
 How Classes Stored and Loaded?
 ------------------------------
 
-There are two types of information that defines a class.First one is class's own data which stored on SYSCLSHEAD table, such as its name,base class, shorttext etc. Second information that defines a class is its methods which stored on SYSCLSFUNC database table. When programmers define classes on IDE or related transaction, SYSCLSHEAD and SYSCLSFUNC tables store all information about new class.
+There are two types of information that defines a class. Here is the tables that stores all development information classes.
+
++------------+---------------------------------------------------------------------+
+| SYSCLSHEAD | Stores basic information of class such as class name, base class    |
++------------+---------------------------------------------------------------------+
+| SYSCLSFUNC | Stores class methods information such as codes, return type         |
++------------+---------------------------------------------------------------------+
 
 When you convert a class, TROIA interpreter reads these two tables, compiles the code and saves binary class files with .cls extension to user's class path. Only these files are read when class instances created, in other words when a class defined system does not access database tables that stores class information and codes.
 
