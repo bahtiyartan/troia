@@ -33,7 +33,7 @@ As it is obvious that, your class must have a unique name. It is not a compulsor
 To edit your existing classes you must click **TROIA IDE->Open Resource** on menu and find and open your classes. It is obvious that both for defining and editing classes requires an hotline which is a change request.
 
 
-How Classes Stored and Loaded?
+How Classes Stored?
 ------------------------------
 
 There are two types of information that defines a class. Here is the tables that stores all development information classes.
