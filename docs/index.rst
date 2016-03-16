@@ -24,7 +24,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    45Transactions
    50MessagesAlerts
    55Class
-   60DialogAdvanced
+   65DialogAdvanced
    
    
    databaseaccess
