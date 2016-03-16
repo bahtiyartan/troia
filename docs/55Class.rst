@@ -54,8 +54,10 @@ Defining Class Instances
 ------------------------
 Defining a class instance is as simple as defining an integer variable. The only difference is using your new type instead of "INTEGER". Here is an instance definition of "MATHTEST" class and it is same for all data definition commands such as GLOBAL, OBJECT, LOCAL etc.
 
-OBJECT:
-	MATHTEST MATHREC;
+::
+
+	OBJECT:
+		MATHTEST MATHREC;
 	
 When you defining a class instance you must consider all variable defintion points which are discussed previous sections. Additionally, when a variable definition command executed to define a class instance, class initilalizer methods are fired. But this methods are fired only once, in other words even if same instance are defined more than once class initilizers are fired only once. This rule is same both for same or different command instances. To understand the behavior correctly please see the trace of code below:
 
