@@ -13,7 +13,17 @@ classes and scope.
 
 Creating/Editing Classes
 ========================
-define classs..
+
+Classes are defined and edit classes in TROIA IDE and "DEVT00 - Class-Browser" transaction. DEVT00 is an older option to manage TROIA classes but has some extra features such as creating SQL scripts for classes etc. We will focus on TROIA IDE to manage classes.
+
+To create a new class you must click **TROIA IDE->New->Class** on menu and fill the new class form.
+
+.. figure:: images/classes/newclass.png
+   :width: 360 px
+   :target: images/classes/newclass.png
+   :align: center
+
+
 
 How Classes Stored and Laoded?
 ==============================
@@ -71,7 +81,8 @@ It is also possible to define class methods as recursive and call other class me
 
 Class Inheritance
 -----------------
-..
+
+Even if there are some differences compared to regular object oriented programming languages, its possible to inherit TROIA classes and override methods of base class (also its possible for dialogs). Inheritance and cross will be discussed detailly in next sections.
 	
 
 Sample 1: Math Operations
