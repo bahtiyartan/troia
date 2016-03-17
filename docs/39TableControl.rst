@@ -29,14 +29,23 @@ Chart View and Chart Configurations
 -----------------------------------
 .
 
+Tree Tables
+===========
+tree table and related flags.
+
+
+
 Other Useful Features
 ---------------------
-
 
 Report Wizard & Templates
 =========================
 
 .
+
+Filtering Rows
+==============
+. FILTERED flag.
 
 Conditional Formatting
 ======================
