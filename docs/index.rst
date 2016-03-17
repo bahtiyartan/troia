@@ -26,8 +26,8 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    55Class
    60Table
    62TableControl
-   65DialogAdvanced
-   68DatabaseAccess
+   65DatabaseAccess
+   68DialogAdvanced
    70File
    
    exception handling
