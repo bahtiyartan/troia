@@ -17,18 +17,18 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    10Languagebasics
    15Datatypes
    20Variablesscope
-   25Operators
-   30Flowcontrol
-   35StringManipulations
-   40DialogBasics
-   45Transactions
-   50MessagesAlerts
-   55Class
-   60Table
-   62TableControl
-   65DatabaseAccess
-   68DialogAdvanced
-   70File
+   22Operators
+   25Flowcontrol
+   28StringManipulations
+   30DialogBasics
+   35Transactions
+   40MessagesAlerts
+   45Class
+   50Table
+   52TableControl
+   55DatabaseAccess
+   58DialogAdvanced
+   60File
    
    exception handling
    
