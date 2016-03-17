@@ -31,7 +31,6 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    
    databaseaccess
    exception handling
-   tables
    
    reports and printing
    components
