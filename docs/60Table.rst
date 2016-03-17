@@ -43,7 +43,6 @@ Data Transfer Between Tables
 
 Table Flags
 -----------
-
 .
 
 
@@ -67,8 +66,10 @@ build hashindex.
 Basic Table Operations
 ----------------------
 
-Listing Files in a Directory
-============================
+.
+
+Application Performance and Tables
+----------------------------------
 .
 
 Sample 1: ..

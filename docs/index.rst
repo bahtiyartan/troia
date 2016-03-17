@@ -39,7 +39,6 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
 
    advancedcontrols
    datemanipulation
-   filehandling
    imagehandling
    ftpinfrastructure
    portcommunication
