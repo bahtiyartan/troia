@@ -23,6 +23,10 @@ Dialog Hotkeys
 
 hotkeys.
 
+Drag and Drop
+-------------
+.
+
 
 Tab Dialogs
 -----------

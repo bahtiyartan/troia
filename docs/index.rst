@@ -13,39 +13,37 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
 .. toctree::
    :maxdepth: 2
 
-   05Platformbasics
-   10Languagebasics
-   15Datatypes
-   20Variablesscope
-   22Operators
-   25Flowcontrol
-   28StringManipulations
-   30DialogBasics
-   35Transactions
-   40MessagesAlerts
-   45Class
-   50Table
-   52TableControl
-   55DatabaseAccess
-   58DialogAdvanced
-   60File
+   03Platformbasics
+   06Languagebasics
+   09Datatypes
+   12Variablesscope
+   15Operators
+   18Flowcontrol
+   21StringManipulations
+   24DialogBasics
+   27Transactions
+   30MessagesAlerts
+   33Class
+   36Table
+   39TableControl
+   42DatabaseAccess
+   45DialogAdvanced
+   48File
    
    exception handling
+   datemanipulation
    
    reports and printing
    components
-   
    inheritanceandcross
-
+   
    advancedcontrols
-   datemanipulation
-   imagehandling
+   
    ftpinfrastructure
    portcommunication
    webservices and http
+   xmlandjsonparsing
+   
+   authorization
    mailing
    smsinfrastructure
-   
-   draganddrop
-   xmlandjsonparsing
-   authorization
