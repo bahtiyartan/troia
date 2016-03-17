@@ -33,11 +33,10 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    exception handling
    datemanipulation
    
-   reports and printing
-   components
-   inheritanceandcross
-   
    advancedcontrols
+   components
+   reports and printing
+   inheritanceandcross
    
    ftpinfrastructure
    portcommunication
