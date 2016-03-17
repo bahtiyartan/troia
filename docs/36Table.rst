@@ -18,9 +18,9 @@ Database Table/Data Type/Table Control
 ======================================
 TROIA Platform, uses database tables just for storing data, so when we discuss tables in this section we don't mean database tables. Defining database tables and using data manipulation commands will be discussed in next sections.
 
-In TROIA, there are two main table concepts, first one is tables as data type like strings, integers. Second one is "table controls" that is used on dialogs and has a user interface and some functions on its user interface such as conditional formatting etc. Table controls have also a table typed variable in server memory, in other words "table control" is user interface object and table is a kind of value (like textfield's background color & its value). So its possible to apply all features and operations discussed in this section, to value of a table control.
+In TROIA, there are two main table concepts, first one is tables as data type and second one is "table controls" that is used on dialogs and has a user interface and some functions on its user interface such as conditional formatting etc. Table controls have also a table typed variable in server memory, in other words "table control" is user interface object and table is a kind of value (like textfield's background color & its value). So its possible to apply all features and operations discussed in this section, to value of a table control.
 
-In this section we use the word table "table" to mean a variable whose type is table.
+In this section we use the word table "table" to mean a variable whose type is table. Features related with table controls will be discussed in next sections.
 
 
 Defining/Filling Tables
