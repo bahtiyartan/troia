@@ -42,10 +42,13 @@ Unlike primitive data types (int, double etc), table is a two dimensional data t
 
 	/* add a 100 char length string column named COL1 to TABLEVAR */
 	APPEND COLUMN COL1, STRING, 100 TO TABLEVAR;
+	APPEND COLUMN COL2, INTEGER, 10 TO TABLEVAR;
+	
+	/* now table is able to store data */
+		
+It is possible to add STRING, INTEGER,TEXT,DATE,DATETIME,DECIMAL,LONG, TIME and TIMES columns using APPEND COLUMN command and it is not allowed to add TABLE or VECTOR types as table column. Column names must be unique, so it is not allowed to add two columns that has same name. For more details about the command please see help documents. 
 
-
-
-Another option to define table is using a table control on a dialog. Every ui table has a global table variable with same name. This table variable is data model of ui table, and programmers access table data over this model. This is also same with a primitive data types and dialog controls. 
+Another option to define table is using a table control on a dialog. Every ui table has a global table variable with same name. This table variable is data model of ui table, and programmers access table data over this model. This is also same with a primitive data types and dialog controls. APPEND COLUMN also works for ui tables, but appending and showing new columns on user interface will be discussed in next section. 
 
 select command.
 
