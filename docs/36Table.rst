@@ -41,6 +41,11 @@ Unlike primitive data types (int, double etc), table is a two dimensional data t
 select command.
 
 
+Adding Rows To Tables
+---------------------
+. add rows to table.
+
+
 Accessing Table Data
 --------------------
 
