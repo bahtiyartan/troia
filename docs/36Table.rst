@@ -57,6 +57,10 @@ Using Row Index
 ===============
 
 
+Table Flags
+-----------
+.
+
 Data Transfer Between Tables
 ----------------------------
 
@@ -66,10 +70,6 @@ Data Transfer Between Tables
 
 .merge table
 
-
-Table Flags
------------
-.
 
 
 Sorting & Aggregate
