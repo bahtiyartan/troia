@@ -1,8 +1,8 @@
 
 
-=======================
-Transactions in Depth
-=======================
+=============
+Transactions
+=============
 
 A TROIA Transaction is simply an business level application that users can perform specific task/tasks on, like "Sales Document Management" or "Funds Management".
 
