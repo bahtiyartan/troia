@@ -33,10 +33,19 @@ Like other data types, data definition commands are used to define a table and i
 	OBJECT:
 		TABLE TABLEVAR,
 		INTEGER INTVAR;
-		
-Another option is using a table control on a dialog. Every ui table has a global table variable with same name. This table variable is data model of ui table, and programmers access table data over this model. This is also same with a primitive data types and dialog controls. 
 
-Unlike primitive data types (int, double etc), table is a two dimensional data type. Therefore, only variable definition is not so much useful for tables.In addition to defining table instance, also we must define its structure/columns to store data.
+Unlike primitive data types (int, double etc), table is a two dimensional data type. Therefore, only variable definition is not so much useful for tables.In addition to defining table instance, also we must define its structure/columns to store data. To add columns, there is a command which gets column name, column type and colcumn length and adds a column to table variable. This command is called "APPEND COLUMN", here is its syntax and sample usage:
+
+::
+
+	APPEND COLUMN {columnname}, {columntype}, {columnlength} TO {table};
+
+	/* add a 100 char length string column named COL1 to TABLEVAR */
+	APPEND COLUMN COL1, STRING, 100 TO TABLEVAR;
+
+
+
+Another option to define table is using a table control on a dialog. Every ui table has a global table variable with same name. This table variable is data model of ui table, and programmers access table data over this model. This is also same with a primitive data types and dialog controls. 
 
 select command.
 
