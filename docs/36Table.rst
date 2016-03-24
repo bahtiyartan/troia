@@ -26,7 +26,17 @@ In this section we use the word table "table" to mean a variable whose type is t
 Defining/Filling Tables
 -----------------------
 
-append command.
+Like other data types, data definition commands are used to define a table and it is not so much different defining an integer variable. Here is a single object command that defines an integer and a table.
+
+::
+
+	OBJECT:
+		TABLE TABLEVAR,
+		INTEGER INTVAR;
+		
+Another option is using a table control on a dialog. Every ui table has a global table variable with same name. This table variable is data model of ui table, and programmers access table data over this model. This is also same with a primitive data types and dialog controls. 
+
+Unlike primitive data types (int, double etc), table is a two dimensional data type. Therefore, only variable definition is not so much useful for tables.In addition to defining table instance, also we must define its structure/columns to store data.
 
 select command.
 
