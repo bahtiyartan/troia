@@ -142,7 +142,8 @@ To reduce development efford, table variable have an internal cursor that shows 
 	WHILE ROWINDEX < T1_ROWCOUNT 
 	BEGIN
 		T1_ACTIVEROW = ROWINDEX;
-		STRINGVAR3 = STRINGVAR3 + T1_USERNAME + ' created by ' + T1_USERNAME + ' at ' + T1_CREATEDAT + TOCHAR(10);
+		STRINGVAR3 = STRINGVAR3 + T1_USERNAME + ' created by ';
+		STRINGVAR3 = STRINGVAR3 + T1_USERNAME + ' at ' + T1_CREATEDAT + TOCHAR(10);
 		ROWINDEX = ROWINDEX + 1;
 	ENDWHILE;
 
