@@ -116,7 +116,8 @@ Like arrays on other programming languages, row index can be specified on cell v
 	WHILE ROWINDEX < T1_ROWCOUNT
 	BEGIN
 		RESULT = RESULT + T1[ROWINDEX]_USERNAME + ' created by ';
-		RESULT = RESULT + T1[ROWINDEX]_USERNAME + ' at ' + T1[ROWINDEX]_CREATEDAT + TOCHAR(10);
+		RESULT = RESULT + T1[ROWINDEX]_USERNAME + ' at ';
+		RESULT = RESULT + T1[ROWINDEX]_CREATEDAT + TOCHAR(10);
 		ROWINDEX = ROWINDEX + 1;
 	ENDWHILE;
 
@@ -143,7 +144,8 @@ To reduce development efford, table variable have an internal cursor that shows 
 	BEGIN
 		T1_ACTIVEROW = ROWINDEX;
 		RESULT = RESULT + T1_USERNAME + ' created by ';
-		RESULT = RESULT + T1_USERNAME + ' at ' + T1_CREATEDAT + TOCHAR(10);
+		RESULT = RESULT + T1_USERNAME + ' at ';
+		RESULT = RESULT + T1_CREATEDAT + TOCHAR(10);
 		ROWINDEX = ROWINDEX + 1;
 	ENDWHILE;
 
