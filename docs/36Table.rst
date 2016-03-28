@@ -157,6 +157,24 @@ Active row is the most used and important concept of working with tables. Most o
 Table Flags
 -----------
 .
+	
+Looping on Tables
+-----------------
+
+loop.
+
+build hashindex.
+
+Locating on Table
+-----------------
+.	
+
+Sorting & Aggregate
+-------------------
+
+sort.
+
+aggregate.
 
 Data Transfer Between Tables
 ----------------------------
@@ -166,27 +184,6 @@ Data Transfer Between Tables
 .copy table
 
 .merge table
-
-
-
-Sorting & Aggregate
--------------------
-
-sort.
-
-aggregate.
-	
-
-Locating on Table
------------------
-.
-	
-Looping on Tables
------------------
-
-loop.
-
-build hashindex.	
 	
 	
 Basic Table Operations
