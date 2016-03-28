@@ -48,16 +48,49 @@ Unlike primitive data types (int, double etc), table is a two dimensional data t
 		
 It is possible to add STRING, INTEGER,TEXT,DATE,DATETIME,DECIMAL,LONG, TIME and TIMES columns using APPEND COLUMN command and it is not allowed to add TABLE or VECTOR types as table column. Column names must be unique, so it is not allowed to add two columns that has same name. For more details about the command please see help documents. 
 
-Another option to define table is using a table control on a dialog. Every ui table has a global table variable with same name. This table variable is data model of ui table, and programmers access table data over this model. This is also same with a primitive data types and dialog controls. APPEND COLUMN also works for ui tables, but appending and showing new columns on user interface will be discussed in next section. 
+Another option to define table is using a table control on a dialog. Every ui table has a global table variable as its data model and programmers can access table data over this model. Model table has same name with table control and its not too much different from a textfield and its value (as a string variable). APPEND COLUMN also works for ui tables, but appending and showing new columns on user interface will be discussed in next section.
 
-select command.
+Additionally, SELECT command defines a table variable with its columns, so programmers do not need to define table and its columns before the command. SELECT command also adds rows depending to query result. SELECT command will be discussed in related sections, but for now we must know that, SELECT command changes the column model of an existing table variable or defines table with its column model. Here is a sample code:
+
+::
+
+	OBJECT:
+		TABLE T1;
+	
+	/* change column-model and data of an existing variable */
+	SELECT USERNAME, CREATEDBY, CREATEDAT FROM IASUSERS WHERE 1 = 2 INTO T1;
+	
+	/* define a table variable with its column-model */
+	SELECT USERNAME, CREATEDBY, CREATEDAT FROM IASUSERS WHERE 1 = 2 INTO T2;
 
 
 Adding Rows To Tables
 ---------------------
-. add rows to table.
 
+As its obvious, rows are the data of a table variable. In TROIA there are multiple ways of adding rows to a table. To add a new row to a table variable programmatically, APPEND ROW command is used.This command is able to add a new row to first row, end of the table or after a specific row. Here is the syntax and example, for more detail please see TROIA Help.
 
+::
+
+	APPEND ROW TO {table} [ATHEAD | ATBETWEEN];
+	
+	OBJECT:
+		TABLE T1;
+
+	SELECT USERNAME, CREATEDBY, CREATEDAT FROM IASUSERS WHERE 1 = 2 INTO T1;
+	APPEND ROW TO T1;
+	
+Also it is possible to fill table with data which is selected from database. Another feature of SELECT command is adding new rows to table. Here is an example:
+
+::
+
+	OBJECT:
+		TABLE T1;
+
+	SELECT USERNAME, CREATEDBY, CREATEDAT FROM IASUSERS INTO T1;
+
+	
+Also it is possible to add rows to tables from user interface by users. To add a new row to a ui table, INSERT key is used. It will be discussed detailly in next sections.
+		
 Accessing Table Data
 --------------------
 
