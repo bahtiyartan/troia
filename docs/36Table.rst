@@ -94,12 +94,60 @@ Also it is possible to add rows to tables from user interface by users. To add a
 Accessing Table Data
 --------------------
 
-
-ActiveRow
-=========
+To access data on a table cell, "_" operator is used. This operator needs at least two information table name & column name or an additional row number.
 
 Using Row Index
 ===============
+
+Like arrays on other programming languages, row index can be specified on cell value access. In TROIA row indexes starts from 1, here is the example:
+
+::
+
+	OBJECT:
+		TABLE T1,
+		INTEGER ROWINDEX,
+		STRING STRINGVAR3;
+		
+	ROWINDEX = 1;
+	STRINGVAR3 = '';
+
+	SELECT USERNAME, CREATEDBY, CREATEDAT FROM IASUSERS INTO T1;
+	
+	WHILE ROWINDEX < T1_ROWCOUNT
+	BEGIN
+		STRINGVAR3 = STRINGVAR3 + T1[ROWINDEX]_USERNAME + ' created by ' + T1[ROWINDEX]_USERNAME + ' at ' + T1[ROWINDEX]_CREATEDAT + TOCHAR(10);
+		ROWINDEX = ROWINDEX + 1;
+	ENDWHILE;
+
+Accessing table cells using row indexes is not mostly used method, because in this method programmer must provice row index at each cell access.
+
+ActiveRow
+=========
+To reduce development efford, table variable have an internal cursor that shows active row,so programmers need to point row number for each cell access on same row.Here is the TROIA code that prints same information, but using active row instead of row index:
+
+::
+
+	OBJECT: 
+		TABLE T1,
+		INTEGER ROWINDEX,
+		STRING STRINGVAR3;
+
+	ROWINDEX = 1;
+	STRINGVAR3 = '';
+	SELECT USERNAME, CREATEDBY, CREATEDAT 
+		FROM IASUSERS 
+		INTO T1;
+
+	WHILE ROWINDEX < T1_ROWCOUNT 
+	BEGIN
+		T1_ACTIVEROW = ROWINDEX;
+		STRINGVAR3 = STRINGVAR3 + T1_USERNAME + ' created by ' + T1_USERNAME + ' at ' + T1_CREATEDAT + TOCHAR(10);
+		ROWINDEX = ROWINDEX + 1;
+	ENDWHILE;
+
+Active row is the most used and important concept of working with tables. Most of table commands are based on active row, such as looping or locating. 
+
+"Active Row" is not same with "Selected Row", it always points a single row. This curser value is set by user interface or different TROIA commands. We will discuss commands and active row relations in related sections. 
 
 
 Table Flags
