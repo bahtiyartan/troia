@@ -178,23 +178,23 @@ Flags about Table Information
 
 Here are flags that returns data about table's itself (independent from active row). Some of this flags will be discussed (w.b.d.) detailly, in different sections.
 
-+--------------+---------+------+-------------------------------------------------+
-|Flag          | Type    |R-Only| Description                                     |
-+--------------+---------+------+-------------------------------------------------+
-|ACTIVEROW     | INTEGER | NO   | Returns active row index between 1-row count    |
-+--------------+---------+------+-------------------------------------------------+
-|ROWCOUNT      | INTEGER | YES  | Returns number of rows in table                 |
-+--------------+---------+------+-------------------------------------------------+
-|DBTABLENAME   | STRING  | YES  | Db table whose data is set to table, (w.b.d.)   |
-+--------------+---------+------+-------------------------------------------------+
-|HASSELECTEDROW| INTEGER | YES  | Returns whether given table has a selected row  |
-+--------------+---------+------+-------------------------------------------------+
-|ACTIVECOL     | INTEGER | YES  | Active column index of ui table.                |
-+--------------+---------+------+-------------------------------------------------+
-|ACTIVECOLNAME | STRING  | YES  | Active column name of ui table.                 |
-+--------------+---------+------+-------------------------------------------------+
-|ARROWSTATE    | INTEGER | YES  | For the ArrowClick Event of ui table.           |
-+--------------+---------+------+-------------------------------------------------+
++--------------+-------+------+-------------------------------------------------+
+|Flag          |Type   |R-Only| Description                                     |
++--------------+-------+------+-------------------------------------------------+
+|ACTIVEROW     |INTEGER| NO   | Returns active row index between 1-row count    |
++--------------+-------+------+-------------------------------------------------+
+|ROWCOUNT      |INTEGER| YES  | Returns number of rows in table                 |
++--------------+-------+------+-------------------------------------------------+
+|DBTABLENAME   |STRING | YES  | Db table whose data is set to table, (w.b.d.)   |
++--------------+-------+------+-------------------------------------------------+
+|HASSELECTEDROW|INTEGER| YES  | Returns whether given table has a selected row  |
++--------------+-------+------+-------------------------------------------------+
+|ACTIVECOL     |INTEGER| YES  | Active column index of ui table.                |
++--------------+-------+------+-------------------------------------------------+
+|ACTIVECOLNAME |STRING | YES  | Active column name of ui table.                 |
++--------------+-------+------+-------------------------------------------------+
+|ARROWSTATE    |INTEGER| YES  | For the ArrowClick Event of ui table.           |
++--------------+-------+------+-------------------------------------------------+
 
 
 Flags about UI Table Rows
