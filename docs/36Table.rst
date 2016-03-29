@@ -156,7 +156,69 @@ Active row is the most used and important concept of working with tables. Most o
 
 Table Flags
 -----------
-.
+
+There are some special fields that returns specific information about tables like row count, active row etc. Names of these fields are reserved and can not be used as column names. And can be accessed by _ operator like table columns.
+
+
+Flags about Table Information
+=============================
+
+Here are flags that returns data about table's itself (independent from active row). Some of this flags will be discussed (w.b.d.) detailly, in different sections.
+
++---------------+---------+-------------------------------------------------+
+| ** NAME **    | **Type**| **Description**                                 |
++---------------+---------+-------------------------------------------------+
+|ACTIVEROW      | INTEGER | Returns active row index between 1-row count    |
++---------------+---------+-------------------------------------------------+
+|ROWCOUNT       | INTEGER | Returns number of rows in table, read only.     |
++---------------+---------+-------------------------------------------------+
+|DBTABLENAME    | STRING  | Db table whose data is set to table, (w.b.d.)   |
++---------------+---------+-------------------------------------------------+
+|HASSELECTEDROW | INTEGER | Returns whether given table has a selected row  |
++---------------+---------+-------------------------------------------------+
+|ACTIVECOL      | INTEGER | Active column index of ui table.                |
++---------------+---------+-------------------------------------------------+
+|ACTIVECOLNAME  | STRING  | Active column name of ui table.                 |
++---------------+---------+-------------------------------------------------+
+|ARROWSTATE     | INTEGER | For the ArrowClick Event of ui table.           |
++---------------+---------+-------------------------------------------------+
+
+
+
+
+TROIA tables are also supports object/relational persistency, and programmers don't need to check or store whether row must be inserted to database or updated.
+
++---------------+---------+-------------------------------------------------+
+|CHANGED        | INTEGER |
++---------------+---------+---------------------------------------------+
+|CHECKED        | INTEGER |
++---------------+---------+---------------------------------------------+
+|DELETED        | INTEGER |
++---------------+---------+---------------------------------------------+
+|INSERTED       | INTEGER |
++---------------+---------+---------------------------------------------+
+|READ           | INTEGER |
++---------------+---------+---------------------------------------------+
+|UPDATED        | INTEGER |
++---------------+---------+---------------------------------------------+
+|SELECTED       | INTEGER |
++---------------+---------+---------------------------------------------+
+|HIDE           | INTEGER |
++---------------+---------+---------------------------------------------+
+|BKCOLOR        | INTEGER |
++---------------+---------+---------------------------------------------+
+|FYI            | STRING  |
++---------------+---------+---------------------------------------------+
+|ROWTOOLTIP     | STRING  |
++---------------+---------+---------------------------------------------+
+|FILTERED       | INTEGER |
++---------------+---------+---------------------------------------------+
+|SUMMARYROW     | INTEGER |
++---------------+---------+---------------------------------------------+
+|UITREELEVEL    | INTEGER |
++---------------+---------+---------------------------------------------+
+|UITREETYPE     | INTEGER |
++---------------+---------+---------------------------------------------+
 	
 Looping on Tables
 -----------------
