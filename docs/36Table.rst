@@ -166,7 +166,7 @@ Flags about Table Information
 Here are flags that returns data about table's itself (independent from active row). Some of this flags will be discussed (w.b.d.) detailly, in different sections.
 
 +--------------+---------+-------------------------------------------------+
-| ** NAME **   | **Type**| **Description**                                 |
+| **Flag**     | **Type**| **Description**                                 |
 +--------------+---------+-------------------------------------------------+
 |ACTIVEROW     | INTEGER | Returns active row index between 1-row count    |
 +--------------+---------+-------------------------------------------------+
