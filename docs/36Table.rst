@@ -176,7 +176,7 @@ There are some special fields that returns specific information about tables lik
 Flags about Table Information
 =============================
 
-Here are flags that returns data about table's itself (independent from active row). Some of this flags will be discussed (w.b.d.) detailly, in different sections.
+Here are flags that returns data about table's itself (independent from active row). Some of this flags will be discussed (w.b.d.) detailly, in related sections.
 
 +--------------+-------+------+-------------------------------------------------+
 |Flag          |Type   |R-Only| Description                                     |
@@ -185,48 +185,49 @@ Here are flags that returns data about table's itself (independent from active r
 +--------------+-------+------+-------------------------------------------------+
 |ROWCOUNT      |INTEGER| YES  | Returns number of rows in table                 |
 +--------------+-------+------+-------------------------------------------------+
-|DBTABLENAME   |STRING | YES  | Db table whose data is set to table, (w.b.d.)   |
+|DBTABLENAME   |STRING | YES  | Db table whose data is set to table (w.b.d.)    |
 +--------------+-------+------+-------------------------------------------------+
 |HASSELECTEDROW|INTEGER| YES  | Returns whether given table has a selected row  |
 +--------------+-------+------+-------------------------------------------------+
-|ACTIVECOL     |INTEGER| YES  | Active column index of ui table.                |
+|ACTIVECOL     |INTEGER| YES  | Active column index of ui table                 |
 +--------------+-------+------+-------------------------------------------------+
-|ACTIVECOLNAME |STRING | YES  | Active column name of ui table.                 |
+|ACTIVECOLNAME |STRING | YES  | Active column name of ui table (w.b.d.)         |
 +--------------+-------+------+-------------------------------------------------+
-|ARROWSTATE    |INTEGER| YES  | For the ArrowClick Event of ui table.           |
+|ARROWSTATE    |INTEGER| YES  | For the ArrowClick Event of ui table (w.b.d.)   |
 +--------------+-------+------+-------------------------------------------------+
 
 
 Flags about UI Table Rows
 =========================
 
+Additio
 
-+-----------+---------+------+-------------------------------------------------+
-|Flag       | Type    |R-Only| Description                                     |
-+-----------+---------+------+-------------------------------------------------+
-|SELECTED   | INTEGER |      |                                                 |
-+-----------+---------+------+-------------------------------------------------+
-|HIDE       | INTEGER |      |                                                 |
-+-----------+---------+------+-------------------------------------------------+
-|BKCOLOR    | INTEGER |      |                                                 |
-+-----------+---------+------+-------------------------------------------------+
-|FYI        | STRING  |      |                                                 |
-+-----------+---------+------+-------------------------------------------------+
-|ROWTOOLTIP | STRING  |      |                                                 |
-+-----------+---------+------+-------------------------------------------------+
-|FILTERED   | INTEGER |      |                                                 |
-+-----------+---------+------+-------------------------------------------------+
-|SUMMARYROW | INTEGER |      |                                                 |
-+-----------+---------+------+-------------------------------------------------+
++----------+-------+------+-------------------------------------------------+
+|Flag      |Type   |R-Only| Description                                     |
++----------+-------+------+-------------------------------------------------+
+|SELECTED  |INTEGER|      |                                                 |
++----------+-------+------+-------------------------------------------------+
+|HIDE      |INTEGER|      |                                                 |
++----------+-------+------+-------------------------------------------------+
+|BKCOLOR   |INTEGER|      |                                                 |
++----------+-------+------+-------------------------------------------------+
+|ROWTOOLTIP|STRING |      |                                                 |
++----------+-------+------+-------------------------------------------------+
+|FYI       |STRING |      |                                                 |
++----------+-------+------+-------------------------------------------------+
+|FILTERED  |INTEGER|      |                                                 |
++----------+-------+------+-------------------------------------------------+
+|SUMMARYROW|INTEGER|      |                                                 |
++----------+-------+------+-------------------------------------------------+
 
 Tree table flags..
 
 
-+-----------+---------+------+-------------------------------------------------+
-|UITREELEVEL| INTEGER |      |                                                 |
-+-----------+---------+------+-------------------------------------------------+
-|UITREETYPE | INTEGER |      |                                                 |
-+-----------+---------+------+-------------------------------------------------+
++-----------+-------+------+-------------------------------------------------+
+|UITREELEVEL|INTEGER|      |                                                 |
++-----------+-------+------+-------------------------------------------------+
+|UITREETYPE |INTEGER|      |                                                 |
++-----------+-------+------+-------------------------------------------------+
 	
 Persistency Flags
 -----------------
