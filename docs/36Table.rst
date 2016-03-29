@@ -151,7 +151,19 @@ To reduce development efford, table variable have an internal cursor that shows 
 
 Active row is the most used and important concept of working with tables. Most of table commands are based on active row, such as looping or locating. 
 
-"Active Row" is not same with "Selected Row", it always points a single row. This curser value is set by user interface or different TROIA commands. We will discuss commands and active row relations in related sections. 
+"Active Row" is not same with "Selected Row", it always points a single row. This curser value is set by user interface or different TROIA commands. We will discuss commands which effects active row in related sections. But in this section we must know that it is possible to set active row directly, by two main method.
+
+First one is directly setting the value with READ command's INDEX variation, here is the basic syntax of read command:
+
+::
+
+	/* to a given index */
+	READ {table} WITH INDEX {activerowindex};
+	
+	/* to an index related with current */
+	READ {table} WITH FIRST | LAST | NEXT | PREV;	
+	
+Another method is setting active row value with ACTIVEROW flag of table. 
 
 
 Table Flags
@@ -168,57 +180,66 @@ Here are flags that returns data about table's itself (independent from active r
 +--------------+---------+------+-------------------------------------------------+
 |Flag          | Type    |R-Only| Description                                     |
 +--------------+---------+------+-------------------------------------------------+
-|ACTIVEROW     | INTEGER |      | Returns active row index between 1-row count    |
+|ACTIVEROW     | INTEGER | NO   | Returns active row index between 1-row count    |
 +--------------+---------+------+-------------------------------------------------+
-|ROWCOUNT      | INTEGER | YES  | Returns number of rows in table, read only.     |
+|ROWCOUNT      | INTEGER | YES  | Returns number of rows in table                 |
 +--------------+---------+------+-------------------------------------------------+
-|DBTABLENAME   | STRING  |      | Db table whose data is set to table, (w.b.d.)   |
+|DBTABLENAME   | STRING  | YES  | Db table whose data is set to table, (w.b.d.)   |
 +--------------+---------+------+-------------------------------------------------+
 |HASSELECTEDROW| INTEGER | YES  | Returns whether given table has a selected row  |
 +--------------+---------+------+-------------------------------------------------+
-|ACTIVECOL     | INTEGER |      | Active column index of ui table.                |
+|ACTIVECOL     | INTEGER | YES  | Active column index of ui table.                |
 +--------------+---------+------+-------------------------------------------------+
-|ACTIVECOLNAME | STRING  |      | Active column name of ui table.                 |
+|ACTIVECOLNAME | STRING  | YES  | Active column name of ui table.                 |
 +--------------+---------+------+-------------------------------------------------+
-|ARROWSTATE    | INTEGER |      | For the ArrowClick Event of ui table.           |
+|ARROWSTATE    | INTEGER | YES  | For the ArrowClick Event of ui table.           |
 +--------------+---------+------+-------------------------------------------------+
 
 
+Persistency Flags
+=================
+
+TROIA tables are also supports object/relational persistency, and programmers don't need to check or store whether row must be inserted to database or updated. All these flags are row based and set automatically when a cell value changed or when data is read from database. Data type is INTEGER for all these flags(1 for true, 0 for false). If DELETED flag is 1, it is deleted row  and programmer must send a delete query to database. Here is the list of persistency flags which will be discussed on database section.
+
++----------+---------+------+-------------------------------------------------+
+|Flag      | Type    |R-Only| Description                                     |
++----------+---------+------+-------------------------------------------------+
+|CHANGED   | INTEGER | NO   |                                                 |
++----------+---------+------+-------------------------------------------------+
+|CHECKED   | INTEGER | NO   |                                                 |
++----------+---------+------+-------------------------------------------------+
+|DELETED   | INTEGER | NO   | Shows whether user deleted row.                 |
++----------+---------+------+-------------------------------------------------+
+|INSERTED  | INTEGER | NO   | Returns whether row is a new row.               |
++----------+---------+------+-------------------------------------------------+
+|READ      | INTEGER | NO   | Returns whether row read from database.         |
++----------+---------+------+-------------------------------------------------+
+|UPDATED   | INTEGER | NO   | Returns whether row is updated after db read.   |
++----------+---------+------+-------------------------------------------------+
 
 
-TROIA tables are also supports object/relational persistency, and programmers don't need to check or store whether row must be inserted to database or updated.
 
-+---------------+---------+-------------------------------------------------+
-|CHANGED        | INTEGER |
-+---------------+---------+---------------------------------------------+
-|CHECKED        | INTEGER |
-+---------------+---------+---------------------------------------------+
-|DELETED        | INTEGER |
-+---------------+---------+---------------------------------------------+
-|INSERTED       | INTEGER |
-+---------------+---------+---------------------------------------------+
-|READ           | INTEGER |
-+---------------+---------+---------------------------------------------+
-|UPDATED        | INTEGER |
-+---------------+---------+---------------------------------------------+
-|SELECTED       | INTEGER |
-+---------------+---------+---------------------------------------------+
-|HIDE           | INTEGER |
-+---------------+---------+---------------------------------------------+
-|BKCOLOR        | INTEGER |
-+---------------+---------+---------------------------------------------+
-|FYI            | STRING  |
-+---------------+---------+---------------------------------------------+
-|ROWTOOLTIP     | STRING  |
-+---------------+---------+---------------------------------------------+
-|FILTERED       | INTEGER |
-+---------------+---------+---------------------------------------------+
-|SUMMARYROW     | INTEGER |
-+---------------+---------+---------------------------------------------+
-|UITREELEVEL    | INTEGER |
-+---------------+---------+---------------------------------------------+
-|UITREETYPE     | INTEGER |
-+---------------+---------+---------------------------------------------+
++-----------+---------+------+-------------------------------------------------+
+|Flag       | Type    |R-Only| Description                                     |
++-----------+---------+------+-------------------------------------------------+
+|SELECTED   | INTEGER |      |
++-----------+---------+------+-------------------------------------------------+
+|HIDE       | INTEGER |
++-----------+---------+---------------------------------------------+
+|BKCOLOR    | INTEGER |
++-----------+---------+---------------------------------------------+
+|FYI        | STRING  |
++-----------+---------+---------------------------------------------+
+|ROWTOOLTIP | STRING  |
++-----------+---------+---------------------------------------------+
+|FILTERED   | INTEGER |
++-----------+---------+---------------------------------------------+
+|SUMMARYROW | INTEGER |
++-----------+---------+---------------------------------------------+
+|UITREELEVEL| INTEGER |
++-----------+---------+---------------------------------------------+
+|UITREETYPE | INTEGER |
++-----------+---------+---------------------------------------------+
 	
 Looping on Tables
 -----------------
