@@ -373,5 +373,6 @@ Application Performance and Tables
 ----------------------------------
 .
 
-Sample 1: ..
----------------------------------
+Sample 1: Compare Traces of LOOP WHERE & LOOP + IF
+--------------------------------------------------
+.
