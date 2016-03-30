@@ -272,7 +272,9 @@ As it is obvious LOOP command, increases active row and executes condition new a
 	ENDWHILE;
 	
 And another example that uses where condition:	
-	
+
+::
+
 	OBJECT: 
 		TABLE T1,
 		STRING RESULT;
