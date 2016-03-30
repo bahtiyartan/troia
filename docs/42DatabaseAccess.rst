@@ -12,6 +12,8 @@ selecting data from database.
 Persistency Flags in Detail
 ----------------------------
 
+TROIA tables are also supports object/relational persistency, so programmers don't need to check or store whether row must be inserted to database or updated. All these flags are row based and are set automatically when a cell value changed or when data is read from database by interpreter. All persistency flags are read-write, so its possible to set their values by code. All persistency flags are INTEGER (1 for true, 0 for false). For example: If DELETED flag is 1, it is deleted row  and programmer must send a delete query to database.
+
 DELETED Flag
 ============
 ..
