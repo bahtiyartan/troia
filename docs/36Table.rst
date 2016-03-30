@@ -291,7 +291,54 @@ And another example that uses where condition. In this example, it prints users 
 		RESULT = RESULT + T1_CREATEDAT + TOCHAR(10);
 	ENDWHILE;
 	
+Both with and without WHERE condition this method scans whole table. If where condition provided LOOP command executes condition expression for each row. 
 
+
+Looping Faster: CRITERIA COLUMNS Variation
+==========================================
+
+Another option without a where condition expression is using CRITERIA COLUMNS variation of LOOP Command. In this variation system does not execute condition expression on TROIA interpereter layer, but in java layer. This variation works faster than scanning whole table on TROIA layer.
+
+
+::
+	
+	LOOP AT {table} CRITERIA COLUMNS {commasepcolumnlist} VALUES {commasepvaluelist} [NOTCASESENSITIVE]
+	BEGIN
+		block
+	ENDLOOP
+	
+Here is an example, that shows looping with CRITERIA COLUMNS. This examle prints users that is created by BTAN and password validity is 2000:
+
+::
+
+	OBJECT: 
+		TABLE T1,
+		STRING STRCREATEDBY;
+
+	SELECT USERNAME, CREATEDBY, PWDVALIDITY 
+		FROM IASUSERS 
+		INTO T1;
+		
+	STRCREATEDBY = 'BTAN';
+	STRINGVAR3 = '';
+
+	LOOP AT T1 CRITERIA COLUMNS CREATEDBY,PWDVALIDITY VALUES STRCREATEDBY,2000 
+	BEGIN
+		STRINGVAR3  = STRINGVAR3 + T1_USERNAME + ':';
+		STRINGVAR3 = STRINGVAR3  + T1_PWDVALIDITY + TOCHAR(10);
+	ENDLOOP;
+	
+	
+Please change value of STRCREATEDBY and test with both case sensitive and insensitive options, with single and multiple parameters.
+
+
+Looping Faster: Loop on Hash Index
+==================================
+..
+
+
+	
+	
 build hashindex.
 
 Locating on Table
