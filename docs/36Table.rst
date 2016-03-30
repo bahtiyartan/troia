@@ -116,7 +116,7 @@ Like arrays on other programming languages, row index can be specified on cell v
 	WHILE ROWINDEX < T1_ROWCOUNT
 	BEGIN
 		RESULT = RESULT + T1[ROWINDEX]_USERNAME + ' created by ';
-		RESULT = RESULT + T1[ROWINDEX]_USERNAME + ' at ';
+		RESULT = RESULT + T1[ROWINDEX]_CREATEDBY + ' at ';
 		RESULT = RESULT + T1[ROWINDEX]_CREATEDAT + TOCHAR(10);
 		ROWINDEX = ROWINDEX + 1;
 	ENDWHILE;
@@ -145,7 +145,7 @@ To reduce development efford, table variable have an internal cursor that shows 
 	BEGIN
 		T1_ACTIVEROW = ROWINDEX;
 		RESULT = RESULT + T1_USERNAME + ' created by ';
-		RESULT = RESULT + T1_USERNAME + ' at ';
+		RESULT = RESULT + T1_CREATEDBY + ' at ';
 		RESULT = RESULT + T1_CREATEDAT + TOCHAR(10);
 		ROWINDEX = ROWINDEX + 1;
 	ENDWHILE;
@@ -242,7 +242,54 @@ TROIA tables also support object/relational persistency, so programmers don't ne
 Looping on Tables
 -----------------
 
-loop.
+In TROIA, to do something for each row of a table, there is no need to define an index and loop with a while statement and increase index at each iteration. Other option is LOOP command which is very similer to for-each statements on some other programming languages. Also it supports to add some conditions so programmers don't need to add an if statement to loop block. Here is the simplest syntax:
+
+::
+
+	LOOP AT table [WHERE {condition}]
+	BEGIN
+		block
+	ENDLOOP;
+	
+As it is obvious LOOP command, increases active row and executes condition new active row and if condition is returns true runs its inner block, so we must know that active row is not same at before the loop and after the loop. Here is the same example that uses LOOP command instead of WHILE.
+
+::
+
+	OBJECT: 
+		TABLE T1,
+		STRING RESULT;
+
+	RESULT = '';
+	SELECT USERNAME, CREATEDBY, CREATEDAT 
+		FROM IASUSERS 
+		INTO T1;
+
+	LOOP AT T1 
+	BEGIN
+		RESULT = RESULT + T1_USERNAME + ' created by ';
+		RESULT = RESULT + T1_CREATEDBY + ' at ';
+		RESULT = RESULT + T1_CREATEDAT + TOCHAR(10);
+	ENDWHILE;
+	
+And another example that uses where condition:	
+	
+	OBJECT: 
+		TABLE T1,
+		STRING RESULT;
+
+	RESULT = '';
+	SELECT USERNAME, CREATEDBY, CREATEDAT 
+		FROM IASUSERS 
+		INTO T1;
+	
+	/* and print if created by is 'admin' */
+	LOOP AT T1 WHERE T1_CREATEDBY == 'admin'
+	BEGIN
+		RESULT = RESULT + T1_USERNAME + ' created by ';
+		RESULT = RESULT + T1_CREATEDBY + ' at ';
+		RESULT = RESULT + T1_CREATEDAT + TOCHAR(10);
+	ENDWHILE;
+	
 
 build hashindex.
 
