@@ -56,3 +56,12 @@ Aggregate and Aggregate Commands
 ================================
 
 .
+
+
+Sample 1: Colouring Rows & Row ToolTip
+--------------------------------------
+
+
+Sample 2: Hiding Rows
+---------------------
+
