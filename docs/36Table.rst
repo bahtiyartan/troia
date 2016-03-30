@@ -200,25 +200,25 @@ Here are flags that returns data about table's itself (independent from active r
 Flags about UI Table Rows
 =========================
 
-Additio
+Additionally, table has row releated flags, each row is able to store different values for each flag. This flags also accessed by with and without row index. If row index is not specified system returns active row's flag value. Although this flags are related/meaningful for ui tables, they are also available for any table variable. But it is not recommended to use this flags for other purposes except their main purpose.
 
-+----------+-------+------+-------------------------------------------------+
-|Flag      |Type   |R-Only| Description                                     |
-+----------+-------+------+-------------------------------------------------+
-|SELECTED  |INTEGER|      |                                                 |
-+----------+-------+------+-------------------------------------------------+
-|HIDE      |INTEGER|      |                                                 |
-+----------+-------+------+-------------------------------------------------+
-|BKCOLOR   |INTEGER|      |                                                 |
-+----------+-------+------+-------------------------------------------------+
-|ROWTOOLTIP|STRING |      |                                                 |
-+----------+-------+------+-------------------------------------------------+
-|FYI       |STRING |      |                                                 |
-+----------+-------+------+-------------------------------------------------+
-|FILTERED  |INTEGER|      |                                                 |
-+----------+-------+------+-------------------------------------------------+
-|SUMMARYROW|INTEGER|      |                                                 |
-+----------+-------+------+-------------------------------------------------+
++----------+-------+--------------------------------------------------------------+
+|Flag      |Type   | Description                                                  |
++----------+-------+--------------------------------------------------------------+
+|SELECTED  |INTEGER| is set to 1 when user selects row on ui, otherwise 0         |
++----------+-------+--------------------------------------------------------------+
+|HIDE      |INTEGER| if it is set to 1, row is not visible on ui table            |
++----------+-------+--------------------------------------------------------------+
+|BKCOLOR   |INTEGER| to change row color on ui                                    |
++----------+-------+--------------------------------------------------------------+
+|ROWTOOLTIP|STRING | tooltip text which gets visible when user mouse stops on row |
++----------+-------+--------------------------------------------------------------+
+|FYI       |STRING | another alias for ROWTOOLTIP                                 |
++----------+-------+--------------------------------------------------------------+
+|FILTERED  |INTEGER| is set to 1 when row is invisible by a ui filter             |
++----------+-------+--------------------------------------------------------------+
+|SUMMARYROW|INTEGER| must be set to 1, for subtotal/summary rows to avoid miscalculations |
++----------+-------+--------------------------------------------------------------+
 
 Tree table flags..
 
