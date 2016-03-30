@@ -227,17 +227,17 @@ Persistency Flags
 
 TROIA tables also support object/relational persistency, so programmers don't need to store extra information to select appropriate data manimulation statement for storing data on database. Persistency state which indicates row's state compared to releated record on database, is stored on persistency flags. They are set automatically when a cell value changed or when data is read from database by interpreter. Here is a short and simple list of persistency flags, each flag and its state transitions will be discussed detailly on database section.
 
-+----------+-------------------------------------------------+
-|Flag      | Description                                     |
-+----------+-------------------------------------------------+
-|DELETED   | Shows whether user deleted row.                 |
-+----------+-------------------------------------------------+
-|INSERTED  | Returns whether row is a new row.               |
-+----------+-------------------------------------------------+
-|READ      | Returns whether row read from database.         |
-+----------+-------------------------------------------------+
-|UPDATED   | Returns whether row is updated after db read.   |
-+----------+-------------------------------------------------+
++----------+----------------------------------------------------+
+|Flag      | Description                                        |
++----------+----------------------------------------------------+
+|DELETED   | Returns whether row is deleted by user, programmer |
++----------+----------------------------------------------------+
+|INSERTED  | Returns whether row is a new row.                  |
++----------+----------------------------------------------------+
+|READ      | Returns whether row read from database.            |
++----------+----------------------------------------------------+
+|UPDATED   | Returns whether row is updated after db read.      |
++----------+----------------------------------------------------+
 	
 Looping on Tables
 -----------------
