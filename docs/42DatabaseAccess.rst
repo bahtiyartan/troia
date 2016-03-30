@@ -4,9 +4,42 @@
 Database Access
 ==================
 
-Data Manipulation Commands
---------------------------
-data manipulation commands.
+Selecting data from Database
+----------------------------
+selecting data from database.
+
+
+Persistency Flags in Detail
+----------------------------
+
+DELETED Flag
+============
+..
+
+INSERTED Flag
+=============
+..
+
+READ Flag
+=========
+..
+
+UPDATED Flag
+============
+..
+
+CHANGED Flag
+============
+..
+
+CHECKED Flag
+============
+..
+
+
+Updating Data on Database
+-------------------------
+..
 
 EXECUTESQL Command
 ---------------
