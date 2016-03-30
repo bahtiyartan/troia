@@ -232,23 +232,23 @@ Tree table flags..
 Persistency Flags
 -----------------
 
-TROIA tables are also supports object/relational persistency, and programmers don't need to check or store whether row must be inserted to database or updated. All these flags are row based and are set automatically when a cell value changed or when data is read from database by interpreter. Also its possible to set their values by code, because they are read-write flags (not read-only). Data type is INTEGER for all these flags(1 for true, 0 for false). If DELETED flag is 1, it is deleted row  and programmer must send a delete query to database. Here is the list of persistency flags which will be discussed on database section.
+TROIA tables are also supports object/relational persistency, and programmers don't need to check or store whether row must be inserted to database or updated. All these flags are row based and are set automatically when a cell value changed or when data is read from database by interpreter. All persistency flags are rea-write, so its possible to set their values by code. Data type is INTEGER for all these flags and value is 1 for true, (0 for false). For example: If DELETED flag is 1, it is deleted row  and programmer must send a delete query to database. Here is the list of persistency flags which will be discussed on database section.
 
-+----------+---------+------+-------------------------------------------------+
-|Flag      | Type    |R-Only| Description                                     |
-+----------+---------+------+-------------------------------------------------+
-|DELETED   | INTEGER | NO   | Shows whether user deleted row.                 |
-+----------+---------+------+-------------------------------------------------+
-|INSERTED  | INTEGER | NO   | Returns whether row is a new row.               |
-+----------+---------+------+-------------------------------------------------+
-|READ      | INTEGER | NO   | Returns whether row read from database.         |
-+----------+---------+------+-------------------------------------------------+
-|UPDATED   | INTEGER | NO   | Returns whether row is updated after db read.   |
-+----------+---------+------+-------------------------------------------------+
-|CHANGED   | INTEGER | NO   |                                                 |
-+----------+---------+------+-------------------------------------------------+
-|CHECKED   | INTEGER | NO   |                                                 |
-+----------+---------+------+-------------------------------------------------+
++----------+---------+-------------------------------------------------+
+|Flag      | Type    | Description                                     |
++----------+---------+-------------------------------------------------+
+|DELETED   | INTEGER | Shows whether user deleted row.                 |
++----------+---------+-------------------------------------------------+
+|INSERTED  | INTEGER | Returns whether row is a new row.               |
++----------+---------+-------------------------------------------------+
+|READ      | INTEGER | Returns whether row read from database.         |
++----------+---------+-------------------------------------------------+
+|UPDATED   | INTEGER | Returns whether row is updated after db read.   |
++----------+---------+-------------------------------------------------+
+|CHANGED   | INTEGER |                                                 |
++----------+---------+-------------------------------------------------+
+|CHECKED   | INTEGER |                                                 |
++----------+---------+-------------------------------------------------+
 	
 Looping on Tables
 -----------------
