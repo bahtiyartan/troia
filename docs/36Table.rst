@@ -297,15 +297,17 @@ Both with and without WHERE condition this method scans whole table. If where co
 Looping Faster: CRITERIA COLUMNS Variation
 ==========================================
 
-Another option without a where condition expression is using CRITERIA COLUMNS variation of LOOP Command. In this variation system does not execute condition expression on TROIA interpereter layer, but in java layer. This variation works faster than scanning whole table on TROIA layer.
+Another option without a where condition expression is using CRITERIA COLUMNS variation of LOOP Command. In this variation system does not execute condition expression on TROIA interpereter layer, but in java layer. This variation works faster than scanning whole table on TROIA layer
 
 
 ::
 	
-	LOOP AT {table} CRITERIA COLUMNS {commasepcolumnlist} VALUES {commasepvaluelist} [NOTCASESENSITIVE]
+	LOOP AT {table} CRITERIA COLUMNS {columns} VALUES {values} [NOTCASESENSITIVE]
 	BEGIN
 		block
 	ENDLOOP
+	
+	/* {columns} & {values} are comma separated list. */
 	
 Here is an example, that shows looping with CRITERIA COLUMNS. This examle prints users that is created by BTAN and password validity is 2000:
 
