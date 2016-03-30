@@ -271,7 +271,7 @@ As it is obvious LOOP command, increases active row and executes condition new a
 		RESULT = RESULT + T1_CREATEDAT + TOCHAR(10);
 	ENDWHILE;
 	
-And another example that uses where condition:	
+And another example that uses where condition. In this example, it prints users only created by 'admin'.
 
 ::
 
@@ -284,7 +284,6 @@ And another example that uses where condition:
 		FROM IASUSERS 
 		INTO T1;
 	
-	/* and print if created by is 'admin' */
 	LOOP AT T1 WHERE T1_CREATEDBY == 'admin'
 	BEGIN
 		RESULT = RESULT + T1_USERNAME + ' created by ';
