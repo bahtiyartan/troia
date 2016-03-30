@@ -269,9 +269,9 @@ As it is obvious LOOP command, increases active row and executes condition new a
 		RESULT = RESULT + T1_USERNAME + ' created by ';
 		RESULT = RESULT + T1_CREATEDBY + ' at ';
 		RESULT = RESULT + T1_CREATEDAT + TOCHAR(10);
-	ENDWHILE;
+	ENDLOOP;
 	
-And another example that uses where condition. In this example, it prints users only created by 'admin'.
+And another example that uses where condition. In this example, it prints users only created by 'BTAN'.
 
 ::
 
@@ -289,7 +289,7 @@ And another example that uses where condition. In this example, it prints users 
 		RESULT = RESULT + T1_USERNAME + ' created by ';
 		RESULT = RESULT + T1_CREATEDBY + ' at ';
 		RESULT = RESULT + T1_CREATEDAT + TOCHAR(10);
-	ENDWHILE;
+	ENDLOOP;
 	
 Both with and without WHERE condition this method scans whole table. If where condition provided LOOP command executes condition expression for each row. 
 
@@ -315,6 +315,7 @@ Here is an example, that shows looping with CRITERIA COLUMNS. This examle prints
 
 	OBJECT: 
 		TABLE T1,
+		STRING RESULT,
 		STRING STRCREATEDBY;
 
 	SELECT USERNAME, CREATEDBY, PWDVALIDITY 
@@ -322,12 +323,12 @@ Here is an example, that shows looping with CRITERIA COLUMNS. This examle prints
 		INTO T1;
 		
 	STRCREATEDBY = 'BTAN';
-	STRINGVAR3 = '';
+	RESULT = '';
 
 	LOOP AT T1 CRITERIA COLUMNS CREATEDBY,PWDVALIDITY VALUES STRCREATEDBY,2000 
 	BEGIN
-		STRINGVAR3  = STRINGVAR3 + T1_USERNAME + ':';
-		STRINGVAR3 = STRINGVAR3  + T1_PWDVALIDITY + TOCHAR(10);
+		RESULT  = RESULT + T1_USERNAME + ':';
+		RESULT = RESULT  + T1_PWDVALIDITY + TOCHAR(10);
 	ENDLOOP;
 	
 	
@@ -339,9 +340,34 @@ Looping Faster: Loop on Hash Index
 ..
 
 
-	
-	
-build hashindex.
+::
+
+	OBJECT: 
+		TABLE T1,
+		STRING RESULT,
+		STRING INDEXNAME;
+
+	SELECT USERNAME, CREATEDBY,PWDVALIDITY 
+		FROM IASUSERS 
+		INTO T1;
+
+	INDEXNAME = 'myindex';
+	RESULT = '';
+	BUILDHASHINDEX INDEXNAME COLUMNS PWDVALIDITY,CREATEDBY ON T1;
+
+	LOOP AT T1 CRITERIA INDEXED INDEX INDEXNAME VALUES 2000, 'BTAN' 
+	BEGIN
+		RESULT  = RESULT + T1_USERNAME + ':';
+		RESULT = RESULT  + T1_PWDVALIDITY + TOCHAR(10);
+	ENDLOOP;
+
+	RESULT = RESULT + '----------------' + TOCHAR(10);
+
+	LOOP AT T1 CRITERIA INDEXED INDEX INDEXNAME VALUES 60, 'kkizir' 
+	BEGIN
+		RESULT  = RESULT + T1_USERNAME + ':';
+		RESULT = RESULT  + T1_PWDVALIDITY + TOCHAR(10);
+	ENDLOOP;
 
 Locating on Table
 -----------------
