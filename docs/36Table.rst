@@ -225,9 +225,7 @@ There are some other ui table flags, they will be discussed in related sections.
 Persistency Flags
 =================
 
-TROIA tables also supports object/relational persistency, so programmers don't need to check or store whether row must be inserted to database or updated. Persistency state which indicates row's state compared to releated record on database, is stored on row based flags
-
- All these flags are row based and stores row's state compared to related record on database table. They are set automatically when a cell value changed or when data is read from database by interpreter. Here is a short and simple list of persistency flags, each flag will be discussed detailly on database section.
+TROIA tables also supports object/relational persistency, so programmers don't need to store extra information to select appropriate data manimulation statement for storing data on database. Persistency state which indicates row's state compared to releated record on database, is stored on persistency flags. They are set automatically when a cell value changed or when data is read from database by interpreter. Here is a short and simple list of persistency flags, each flag and its state transitions will be discussed detailly on database section.
 
 +----------+-------------------------------------------------+
 |Flag      | Description                                     |
