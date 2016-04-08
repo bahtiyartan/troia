@@ -346,7 +346,7 @@ To create virtual hashes on a table BUILDHASHINDEX command is used, here is the 
 
 	BUILDHASHINDEX {indexname} COLUMNS {columns} ON {table} [FORCE];
 	
-BUILDHASHINDEX command does not recreate index if there is already an index with given index name. If you want to overwrite an existing index you must use optional FORCE parameter. For more information about hash indexes plese see help documents. Here is a simplex example for looping over hash indexes.
+BUILDHASHINDEX command does not recreate index if there is already an index with given index name. If you want to overwrite an existing index you must use optional FORCE parameter. For more information about hash indexes please see help documents. Here is a simplex example for looping over hash indexes.
 
 ::
 
