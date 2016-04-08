@@ -337,7 +337,8 @@ Please change value of STRCREATEDBY and test with both case sensitive and insens
 
 Looping Faster: Loop on Hash Index
 ==================================
-..
+
+Also it is possible to create virtual indexes on a table variable to loop on different values of indexed columns. While creating an index, system finds/calculates indexes of rows for each value combination of indexed rows.
 
 
 ::
