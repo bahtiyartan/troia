@@ -338,8 +338,15 @@ Please change value of STRCREATEDBY and test with both case sensitive and insens
 Looping Faster: Loop on Hash Index
 ==================================
 
-Also it is possible to create virtual indexes on a table variable to loop on different values of indexed columns. While creating an index, system finds/calculates indexes of rows for each value combination of indexed rows.
+Also it is possible to create virtual indexes on a table variable to loop on different values of indexed columns. While creating an index, system finds/calculates indexes of rows for each value combination of indexed rows. So if you need multiple loops and different criteria values for same columns, calculating indexes for once may be useful for high performance looping.
 
+To create virtual hashes on a table BUILDHASHINDEX command is used, here is the syntax:
+
+::
+
+	BUILDHASHINDEX {indexname} COLUMNS {columns} ON {table} [FORCE];
+	
+BUILDHASHINDEX command does not recreate index if there is already an index with given index name. If you want to overwrite an existing index you must use optional FORCE parameter. For more information about hash indexes plese see help documents. Here is a simplex example for looping over hash indexes.
 
 ::
 
