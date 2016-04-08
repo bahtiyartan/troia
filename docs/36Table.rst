@@ -383,7 +383,71 @@ Which Looping Method is the Best?
 
 As mentioned in previous sections, tables are the main and most used data type of TROIA programming language. Tables store bulk data because of its nature, so considering performance issues while working with tables is a must. Looping is also very important process for high performance applications, so programmers must select correct looping option considering their data structure, search criterias. 
 
-As an important point, programmers must use LOOP command to loop on tables. In other words using WHILE command is NOT recommended. Also it is very important to select correct LOOP command option considering data structure of table, search criterias, expressions on criterias, number of loops etc.
+As an important point, programmers must use LOOP command to loop on tables. In other words using WHILE command is NOT recommended. Also it is very important to select correct LOOP command option considering data structure of table, search criterias, expressions on criterias, number of loops etc. 
+
+Each looping option has different pros & cons. The main rule that programmer must consider is "using java layer as much as possible instead of TROIA commands". For example, if it is possible using CRITERIA columns is faster than WHERE condition.
+
+The second rule is "calculating same expressions once". If expression result is not related cell of active row, calculating comparison values before the loop will be useful. Here is an example:
+
+::
+
+	OBJECT: 
+		TABLE T1,
+		STRING RESULT;
+
+	RESULT = '';
+	SELECT USERNAME, PWDVALIDITY 
+		FROM IASUSERS 
+		INTO T1;
+	
+	/* calculate value for each row */
+	LOOP AT T1 WHERE T1_PWDVALIDITY == THIS.CALCMAXVALIDITY() * 4 + 40
+	BEGIN
+		RESULT = RESULT + T1_USERNAME + ' validity equals to max validity ' + TOCHAR(10);
+	ENDLOOP;
+	
+Here is faster alternative which calculate value before looping:
+	
+::
+
+	OBJECT: 
+		TABLE T1,
+		STRING RESULT,
+		INTEGER MAXVALIDITY;
+
+	RESULT = '';
+	SELECT USERNAME, PWDVALIDITY 
+		FROM IASUSERS 
+		INTO T1;
+	
+	MAXVALIDITY = THIS.CALCMAXVALIDITY() * 4 + 40;
+
+	LOOP AT T1 WHERE T1_PWDVALIDITY == MAXVALIDITY
+	BEGIN
+		RESULT = RESULT + T1_USERNAME + ' validity equals to max validity ' + TOCHAR(10);
+	ENDLOOP;
+	
+
+Here is faster alternative which moves comparison expression to java layer with CRITERIA COLUMNS:
+
+::
+
+	OBJECT: 
+		TABLE T1,
+		STRING RESULT,
+		INTEGER MAXVALIDITY;
+
+	RESULT = '';
+	SELECT USERNAME, PWDVALIDITY 
+		FROM IASUSERS 
+		INTO T1;
+	
+	MAXVALIDITY = THIS.CALCMAXVALIDITY() * 4 + 40;
+
+	LOOP AT T1 CRITERIA COLUMNS PWDVALIDITY VALUES MAXVALIDITY
+	BEGIN
+		RESULT = RESULT + T1_USERNAME + ' validity equals to max validity ' + TOCHAR(10);
+	ENDLOOP;
 
 
 Locating on Table
