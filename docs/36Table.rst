@@ -383,7 +383,7 @@ Which Looping Method is the Best?
 
 As mentioned in previous sections, tables are the main and most used data type of TROIA programming language. Tables store bulk data because of its nature, so considering performance issues while working with tables is a must. Looping is also very important process for high performance applications, so programmers must select correct looping option considering their data structure, search criterias. 
 
-Using LOOP command is recommended to loop on tables instead of WHILE.
+As an important point, programmers must use LOOP command to loop on tables. In other words using WHILE command is NOT recommended. Also it is very important to select correct LOOP command option considering data structure of table, search criterias, expressions on criterias, number of loops etc.
 
 
 Locating on Table
@@ -418,4 +418,8 @@ Application Performance and Tables
 
 Sample 1: Compare Traces of LOOP WHERE & LOOP + IF
 --------------------------------------------------
+.
+
+Sample 2: Compare Execution Times of LOOP Options
+-------------------------------------------------
 .
