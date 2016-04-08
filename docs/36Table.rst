@@ -403,7 +403,7 @@ The second rule is "calculating same expressions once". If expression result is 
 	/* calculate value for each row */
 	LOOP AT T1 WHERE T1_PWDVALIDITY == THIS.CALCMAXVALIDITY() * 4 + 40
 	BEGIN
-		RESULT = RESULT + T1_USERNAME + ' validity equals to max validity ' + TOCHAR(10);
+		RESULT = RESULT + T1_USERNAME + '-> max validity ' + TOCHAR(10);
 	ENDLOOP;
 	
 Here is faster alternative which calculate value before looping:
@@ -424,7 +424,7 @@ Here is faster alternative which calculate value before looping:
 
 	LOOP AT T1 WHERE T1_PWDVALIDITY == MAXVALIDITY
 	BEGIN
-		RESULT = RESULT + T1_USERNAME + ' validity equals to max validity ' + TOCHAR(10);
+		RESULT = RESULT + T1_USERNAME + '-> max validity ' + TOCHAR(10);
 	ENDLOOP;
 	
 
@@ -446,7 +446,7 @@ Here is faster alternative which moves comparison expression to java layer with 
 
 	LOOP AT T1 CRITERIA COLUMNS PWDVALIDITY VALUES MAXVALIDITY
 	BEGIN
-		RESULT = RESULT + T1_USERNAME + ' validity equals to max validity ' + TOCHAR(10);
+		RESULT = RESULT + T1_USERNAME + '-> max validity ' + TOCHAR(10);
 	ENDLOOP;
 
 
