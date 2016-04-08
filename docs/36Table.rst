@@ -368,6 +368,12 @@ Looping Faster: Loop on Hash Index
 		RESULT  = RESULT + T1_USERNAME + ':';
 		RESULT = RESULT  + T1_PWDVALIDITY + TOCHAR(10);
 	ENDLOOP;
+	
+
+Which Looping Method is Best?
+-----------------------------
+.	
+
 
 Locating on Table
 -----------------
