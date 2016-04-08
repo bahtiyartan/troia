@@ -238,6 +238,9 @@ And to set the period, we must add the code below to AFTER event of dialog:
 	SETTIMER 2000;
 	/* 2000 : period is defined as milliseconds. */
 	
+	
+If running ONTIMER event takes longer time than time period, system does not create multiple ONTIMER events on event queue. New ONTIMER event is created after previous event finished. For example, if timer is set to 5 seconds and ONTIMER event takes 10 seconds. Client sends second ONTIMER event, 5 seconds after first event's response returned.
+	
 
 
 Sample 1: Counting Words

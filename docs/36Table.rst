@@ -378,9 +378,12 @@ BUILDHASHINDEX command does not recreate index if there is already an index with
 	ENDLOOP;
 	
 
-Which Looping Method is Best?
------------------------------
-.	
+Which Looping Method is the Best?
+---------------------------------
+
+As mentioned in previous sections, tables are the main and most used data type of TROIA programming language. Tables store bulk data because of its nature, so considering performance issues while working with tables is a must. Looping is also very important process for high performance applications, so programmers must select correct looping option considering their data structure, search criterias. 
+
+Using LOOP command is recommended to loop on tables instead of WHILE.
 
 
 Locating on Table
