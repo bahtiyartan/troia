@@ -448,8 +448,8 @@ Here is faster alternative which moves comparison expression to java layer with 
 	BEGIN
 		RESULT = RESULT + T1_USERNAME + '-> max validity ' + TOCHAR(10);
 	ENDLOOP;
-
-
+	
+	
 Locating on Table
 -----------------
 .	
