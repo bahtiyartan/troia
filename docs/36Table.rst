@@ -481,7 +481,7 @@ An example that prints two users which is created by 'BTAN', please change the v
 	STRINGVAR3 = STRINGVAR3 + TOCHAR(10) +T1_ACTIVEROW  + '-'+ T1_USERNAME;
 	STRINGVAR3 = STRINGVAR3 + ' ('+ SYS_STATUS + ')';
 	
-SEQUENTIAL Variation of LOCATERECORD command is very similar to CRITERIA COLUMNS variation of LOOP command and scans table on java layer. As an alternative to scanning table, command has an BINARYSEARCH variation which searches faster on as sorted table. BINARYSEARCH variation only works on sorted tables on given columns (ascending). Here is the syntax and a simple column example:
+SEQUENTIAL variation of LOCATERECORD command is very similar to CRITERIA COLUMNS variation of LOOP command and scans table on java layer. As an alternative to scanning table, command has an BINARYSEARCH variation which searches faster on as sorted table. BINARYSEARCH variation only works on sorted tables on given columns (ascending). Here is the syntax and a simple column example:
 
 ::
 
@@ -495,7 +495,7 @@ SEQUENTIAL Variation of LOCATERECORD command is very similar to CRITERIA COLUMNS
 
 	SELECT USERNAME, CREATEDBY,CHANGEDBY 
 		FROM IASUSERS
-		ORDER BY CREATEDBY 
+		ORDERBY CREATEDBY 
 		INTO T1;
 
 	LOCATERECORD BINARYSEARCH COLUMNS CREATEDBY VALUES 'BTAN' ON T1;
@@ -503,6 +503,34 @@ SEQUENTIAL Variation of LOCATERECORD command is very similar to CRITERIA COLUMNS
 	STRINGVAR3 = STRINGVAR3 + ' ('+ SYS_STATUS + ')';
 
 
+Also it is possible to locate table's active row over an hashindex. Here is the syntax and example:
+
+::
+	
+	LOCATERECORD INDEXED INDEX {indexname} VALUES {values} 
+	                                       ON {table} [NEXT] [LAST];
+
+::
+
+	OBJECT: 
+		TABLE T1;
+
+	SELECT USERNAME, CREATEDBY,CHANGEDBY 
+		FROM IASUSERS
+		INTO T1;
+		
+	BUILDHASHINDEX 'MyIndex' COLUMNS CREATEDBY ON T1;
+
+	LOCATERECORD INDEXED INDEX 'MyIndex' VALUES 'BTAN' ON T1;
+	STRINGVAR3 = T1_ACTIVEROW  + '-'+ T1_USERNAME;
+	STRINGVAR3 = STRINGVAR3 + ' ('+ SYS_STATUS + ')';
+	
+	LOCATERECORD INDEXED INDEX 'MyIndex' VALUES 'BTAN' ON T1 LAST;
+	STRINGVAR3 = STRINGVAR3 + TOCHAR(10) + T1_ACTIVEROW  + '-'+ T1_USERNAME;
+	STRINGVAR3 = STRINGVAR3 + ' ('+ SYS_STATUS + ')';
+
+	
+	
 Sorting & Aggregate
 -------------------
 
