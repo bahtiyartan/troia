@@ -458,7 +458,7 @@ In some cases, programmers loops on table to find a specific row and do somethin
 ::
 	
 	LOCATERECORD SEQUENTIAL COLUMNS {cols} VALUES {values} 
-	                                       ON {table} [NOTCASESENSITIVE] [NEXT] [LAST];
+	                                ON {table} [NOTCASESENSITIVE] [NEXT] [LAST];
 	
 An example that prints two users which is created by 'BTAN', please change the value and test/run with different parameters and variations.
 
