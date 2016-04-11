@@ -452,7 +452,34 @@ Here is faster alternative which moves comparison expression to java layer with 
 	
 Locating on Table
 -----------------
-.	
+
+In some cases, programmers loops on table to find a specific row and do something for this row only. In TROIA, programmers do not need to loop to find a row, thanks to LOCATERECORD command. This command finds the correct row due to given parameters and changes the active row cursor on table. Here is the basic and most used variation of LOCATERECORD command:
+
+::
+	
+	LOCATERECORD SEQUENTIAL COLUMNS {collist} VALUES {valuelist} ON {table} [NOTCASESENSITIVE] [NEXT];
+	
+If LOCATERECORD command can not find correct row with given parameters it does not changes the active row and sets SYS_STATUS to 1, so programmer use check whether there is a row with given parameters. Here is an example that prints two users which is created by 'BTAN', please change the value and test with different values.
+
+::
+
+	OBJECT:
+		TABLE T1;
+
+	SELECT USERNAME, CREATEDBY,CHANGEDBY 
+		FROM IASUSERS 
+		INTO T1;
+
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+	LOCATERECORD SEQUENTIAL COLUMNS CREATEDBY VALUES 'BTAN' ON T1;
+	STRINGVAR3 = T1_ACTIVEROW  + '-'+ T1_USERNAME;
+	STRINGVAR3 = STRINGVAR3 + ' ('+ SYS_STATUS + ')';
+
+	LOCATERECORD SEQUENTIAL COLUMNS CREATEDBY VALUES 'BTAN' ON T1 NEXT;
+	STRINGVAR3 = STRINGVAR3 + TOCHAR(10) +T1_ACTIVEROW  + '-'+ T1_USERNAME;
+	STRINGVAR3 = STRINGVAR3 + ' ('+ SYS_STATUS + ')';
+
 
 Sorting & Aggregate
 -------------------
