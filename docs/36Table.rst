@@ -457,7 +457,7 @@ In some cases, programmers loops on table to find a specific row and do somethin
 
 ::
 	
-	LOCATERECORD SEQUENTIAL COLUMNS {cols} VALUES {values} 
+	LOCATERECORD SEQUENTIAL COLUMNS {columns} VALUES {values} 
 	                                ON {table} [NOTCASESENSITIVE] [NEXT] [LAST];
 	
 An example that prints two users which is created by 'BTAN', please change the value and test/run with different parameters and variations.
@@ -482,6 +482,10 @@ An example that prints two users which is created by 'BTAN', please change the v
 	STRINGVAR3 = STRINGVAR3 + ' ('+ SYS_STATUS + ')';
 	
 SEQUENTIAL Variation of LOCATERECORD command is very similar to CRITERIA COLUMNS variation of LOOP command and scans table on java layer. As an alternative to scanning table, command has an BINARYSEARCH variation which searches faster on as sorted table. BINARYSEARCH variation only works on sorted tables on given columns (ascending). Here is the syntax and a simple column example:
+
+::
+
+	LOCATERECORD BINARYSEARCH COLUMNS {columns} VALUES {values} ON {table} [NOTCASESENSITIVE];
 
 ::
 
