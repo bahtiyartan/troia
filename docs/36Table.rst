@@ -457,7 +457,7 @@ In some cases, programmers loops on table to find a specific row and do somethin
 
 ::
 	
-	LOCATERECORD SEQUENTIAL COLUMNS {collist} VALUES {valuelist} ON {table} [NOTCASESENSITIVE] [NEXT];
+	LOCATERECORD SEQUENTIAL COLUMNS {cols} VALUES {values} ON {table} [NOTCASESENSITIVE] [NEXT];
 	
 If LOCATERECORD command can not find correct row with given parameters it does not changes the active row and sets SYS_STATUS to 1, so programmer use check whether there is a row with given parameters. Here is an example that prints two users which is created by 'BTAN', please change the value and test with different values.
 
