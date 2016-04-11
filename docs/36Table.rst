@@ -481,7 +481,21 @@ An example that prints two users which is created by 'BTAN', please change the v
 	STRINGVAR3 = STRINGVAR3 + TOCHAR(10) +T1_ACTIVEROW  + '-'+ T1_USERNAME;
 	STRINGVAR3 = STRINGVAR3 + ' ('+ SYS_STATUS + ')';
 	
-SEQUENTIAL Variation of LOCATERECORD command is very similar to CRITERIA COLUMNS variation of LOOP command and scans table on java layer. As an alternative to scanning table, command has an BINARYSEARCH variation which searches on as sorted table.
+SEQUENTIAL Variation of LOCATERECORD command is very similar to CRITERIA COLUMNS variation of LOOP command and scans table on java layer. As an alternative to scanning table, command has an BINARYSEARCH variation which searches faster on as sorted table. BINARYSEARCH variation is only works on table which is sorted (ascending) on given columns. Here is the syntaxt and a simple column example:
+
+::
+
+	OBJECT:
+		TABLE T1;
+
+	SELECT USERNAME, CREATEDBY,CHANGEDBY 
+		FROM IASUSERS
+		ORDER BY CREATEDBY 
+		INTO T1;
+
+	LOCATERECORD BINARYSEARCH COLUMNS CREATEDBY VALUES 'BTAN' ON T1;
+	STRINGVAR3 = T1_ACTIVEROW  + '-'+ T1_USERNAME;
+	STRINGVAR3 = STRINGVAR3 + ' ('+ SYS_STATUS + ')';
 
 
 Sorting & Aggregate
