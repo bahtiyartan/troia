@@ -453,14 +453,14 @@ Here is faster alternative which moves comparison expression to java layer with 
 Locating on Table
 -----------------
 
-In some cases, programmers loops on table to find a specific row and do something for this row only. In TROIA, programmers do not need to loop to find a row, thanks to LOCATERECORD command. This command finds the correct row due to given parameters and changes the active row cursor on table. Here is the basic and most used variation of LOCATERECORD command:
+In some cases, programmers loops on table to find a specific row and do something for this row only. In TROIA, programmers do not need to loop to find a row, thanks to LOCATERECORD command. This command finds the correct row due to given parameters and changes the active row cursor on table. If LOCATERECORD command can not find correct row with given parameters it does not changes the active row and sets SYS_STATUS to 1, so programmer use check whether there is a row with given parameters. Here is the basic and most used variation of LOCATERECORD command:
 
 ::
 	
 	LOCATERECORD SEQUENTIAL COLUMNS {cols} VALUES {values} 
-	                                       ON {table} [NOTCASESENSITIVE] [NEXT];
+	                                       ON {table} [NOTCASESENSITIVE] [NEXT] [LAST];
 	
-If LOCATERECORD command can not find correct row with given parameters it does not changes the active row and sets SYS_STATUS to 1, so programmer use check whether there is a row with given parameters. Here is an example that prints two users which is created by 'BTAN', please change the value and test with different values.
+An example that prints two users which is created by 'BTAN', please change the value and test/run with different parameters and variations.
 
 ::
 
@@ -480,6 +480,8 @@ If LOCATERECORD command can not find correct row with given parameters it does n
 	LOCATERECORD SEQUENTIAL COLUMNS CREATEDBY VALUES 'BTAN' ON T1 NEXT;
 	STRINGVAR3 = STRINGVAR3 + TOCHAR(10) +T1_ACTIVEROW  + '-'+ T1_USERNAME;
 	STRINGVAR3 = STRINGVAR3 + ' ('+ SYS_STATUS + ')';
+	
+SEQUENTIAL Variation of LOCATERECORD command is very similar to CRITERIA COLUMNS variation of LOOP command and scans table on java layer. As an alternative to scanning table, command has an BINARYSEARCH variation which searches on
 
 
 Sorting & Aggregate
@@ -513,5 +515,9 @@ Sample 1: Compare Traces of LOOP WHERE & LOOP + IF
 .
 
 Sample 2: Compare Execution Times of LOOP Options
+-------------------------------------------------
+.
+
+Sample 3: Locating on Tables using Hash Index
 -------------------------------------------------
 .
