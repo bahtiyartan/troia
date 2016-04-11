@@ -503,7 +503,7 @@ SEQUENTIAL variation of LOCATERECORD command is very similar to CRITERIA COLUMNS
 	STRINGVAR3 = STRINGVAR3 + ' ('+ SYS_STATUS + ')';
 
 
-Also it is possible to locate table's active row over an hashindex. With this option, programmers can create index once and locate rows with different row values using this index. This variations reducess to process time compared to scanning table on each locate. Here is the syntax and example:
+Also it is possible to locate table's active row over an hashindex. With this option, programmers can create index once and locate rows with different row values using this index. This variations reduces to process time compared to scanning table on each locate. Here is the syntax and example:
 
 ::
 	
