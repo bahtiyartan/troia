@@ -485,7 +485,8 @@ SEQUENTIAL Variation of LOCATERECORD command is very similar to CRITERIA COLUMNS
 
 ::
 
-	LOCATERECORD BINARYSEARCH COLUMNS {columns} VALUES {values} ON {table} [NOTCASESENSITIVE];
+	LOCATERECORD BINARYSEARCH COLUMNS {columns} VALUES {values} 
+									  ON {table} [NOTCASESENSITIVE];
 
 ::
 
