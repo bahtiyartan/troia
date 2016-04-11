@@ -530,7 +530,7 @@ Also it is possible to locate table's active row over an hashindex. With this op
 	STRINGVAR3 = STRINGVAR3 + ' ('+ SYS_STATUS + ')';
 
 	
-As it is obvious, LOCATERECORD variations are similar to LOOP command's variations. Each variation has different pros&cons. To create high performance applications, programmers must decide correct variation due to data structure, locate count etc. For more details about locating on tables please see help documents of LOCATERECORD command.
+As it is obvious, LOCATERECORD variations are similar to LOOP command's. Each variation has different pros and cons. To create high performance applications, programmers must decide correct variation due to data structure, locate count etc. For more details about locating on tables please see help documents of LOCATERECORD command.
 	
 Sorting & Aggregate
 -------------------
