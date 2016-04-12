@@ -586,6 +586,51 @@ This syntax allows programmers to sort dynamically, without runtime interpretati
 Sort in Hierarchical Order
 ==========================	
 
+In some cases, programmers may need to sort rows in a relational manner. If table has an id column and parent id column, TROIA has an advanced sorting option such tables. Here is a sample data mode that stores two countries and cities.
+
++------------+-----------------+
+|**COUNTRY** | **NAME**        |
++------------+-----------------+
+|GERMANY     | KARLSRUHE       |
++------------+-----------------+
+|GERMANY     | BERLIN          |
++------------+-----------------+
+|TURKEY      | IZMIR           |
++------------+-----------------+
+|TURKEY      | ISTANBUL        |
++------------+-----------------+
+|            | TURKEY          |
++------------+-----------------+
+|            | GERMANY         |
++------------+-----------------+
+
+And you need data model after hierarchical sort:
+
++------------+-----------------+
+|**COUNTRY** | **NAME**        |
++------------+-----------------+
+|            | GERMANY         |
++------------+-----------------+
+|GERMANY     | KARLSRUHE       |
++------------+-----------------+
+|GERMANY     | BERLIN          |
++------------+-----------------+
+|            | TURKEY          |
++------------+-----------------+
+|TURKEY      | IZMIR           |
++------------+-----------------+
+|TURKEY      | ISTANBUL        |
++------------+-----------------+
+
+To sort tables in hierarchical manner to get tree like table, SORT HIERARCHICAL variation is used. Here is the syntax:
+
+::
+
+SORT {tablename} HIERARCHICAL IDCOLUMN {idcolumn} PARENTIDCOLUMN {parentidcolumn}
+                                       [ROOTINDICATOR {indicatorvalue}] [MARKLEAFSASNODE];
+  
+Values on id columns must be unique. And both for id and parentid columns must be single row, if data has multiple colums for id and parentid they must be consolidated before SORT HIERARCHICAL command. Here is sample TROIA code that creates and sorts sample data model:
+
 ::
 
 	SELECT USERNAME AS COUNTRY, CREATEDBY AS NAME
@@ -595,7 +640,7 @@ Sort in Hierarchical Order
 
 	APPEND ROW TO TMPTABLE;
 	TMPTABLE_COUNTRY = 'TURKEY';
-	TMPTABLE_NAME = 'ZONGULDAK';
+	TMPTABLE_NAME = 'IZMIR';
 
 	APPEND ROW TO TMPTABLE;
 	TMPTABLE_NAME = 'TURKEY';
@@ -620,6 +665,8 @@ Sort in Hierarchical Order
 
 	/* this command will be discussed later */
 	SET TMPTABLE TO TABLE TMPTABLE;
+	
+Hierarchical sorting is much more useful fo tree tables which is a tree representation of table control. Tree tables will be discussed detailly in next sections, but for now we must know about hierarchical sorting option, because it is an advanced sorting option for all kind of tables.
 
 Data Transfer Between Tables
 ----------------------------
