@@ -584,7 +584,7 @@ This syntax allows programmers to sort dynamically, without runtime interpretati
 
 
 Sort in Hierarchical Order
---------------------------	
+==========================	
 	
 
 aggregate.
