@@ -582,7 +582,9 @@ This syntax allows programmers to sort dynamically, without runtime interpretati
 	/* this command will be discussed later */
 	SET TMPTABLE TO TABLE TMPTABLE;
 
-	
+
+Sort in Hierarchical Order
+--------------------------	
 	
 
 aggregate.
@@ -616,4 +618,8 @@ Sample 2: Compare Execution Times of LOOP Options
 
 Sample 3: Locating on Tables using Hash Index
 -------------------------------------------------
+.
+
+Sample 4: Sort Users Like a Tree
+--------------------------------
 .
