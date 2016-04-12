@@ -535,7 +535,55 @@ As it is obvious, LOCATERECORD variations are similar to LOOP command's. Each va
 Sorting & Aggregate
 -------------------
 
-sort.
+To sort table variables due to given columns, SORT command is used. Its possible to sort rows descending and ascending order due to one or more columns. Basic syntax is below:
+
+::
+
+	SORT {tablename} [CASESENSITIVE] ON [DESC] {column1}, [DESC] {column2};
+
+Here is a simple example that sorts users due to who defined them and definition time.
+
+::
+
+	OBJECT:
+		TABLE TMPTABLE;
+
+	SELECT USERNAME, CREATEDBY, CREATEDAT
+	FROM IASUSERS
+	INTO TMPTABLE;
+
+	SORT TMPTABLE ON CREATEDBY, DESC CREATEDAT;
+
+	/* this command will be discussed later */
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+Also its possible to provide sort colums dynamically, with the syntax below:
+
+::
+
+	SORT {tablename} [CASESENSITIVE] ON @{columnsastext};
+
+This syntax allows programmers to sort dynamically, without runtime interpretation **(runtime interpretation will be discussed later)**. Here is the same example that uses dynamic syntax:
+
+::
+
+	OBJECT:
+		TABLE TMPTABLE,
+		STRING STRINGVAR3;
+
+	SELECT USERNAME, CREATEDBY, CREATEDAT
+	FROM IASUSERS
+	INTO TMPTABLE;
+
+	STRINGVAR3 = 'CREATEDBY, DESC CREATEDAT';
+
+	SORT TMPTABLE ON @STRINGVAR3;
+
+	/* this command will be discussed later */
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+	
+	
 
 aggregate.
 
