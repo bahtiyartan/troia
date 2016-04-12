@@ -626,8 +626,8 @@ To sort tables in hierarchical manner to get tree like table, SORT HIERARCHICAL 
 
 ::
 
-	SORT {tablename} HIERARCHICAL IDCOLUMN {idcolumn} PARENTIDCOLUMN {parentidcolumn}
-                                           [ROOTINDICATOR {indicatorvalue}] [MARKLEAFSASNODE];
+	SORT {table} HIERARCHICAL IDCOLUMN {idcolumn} PARENTIDCOLUMN {parentidcolumn}
+                                       [ROOTINDICATOR {indicatorvalue}] [MARKLEAFSASNODE];
   
 Values on id columns must be unique. And both for id and parentid columns must be single row, if data has multiple colums for id and parentid they must be consolidated before SORT HIERARCHICAL command. Here is sample TROIA code that creates and sorts sample data model:
 
