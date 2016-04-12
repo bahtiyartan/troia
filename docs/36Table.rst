@@ -535,7 +535,7 @@ As it is obvious, LOCATERECORD variations are similar to LOOP command's. Each va
 Sorting & Aggregate
 -------------------
 
-To sort table variables due to given columns, SORT command is used. Its possible to sort rows descending and ascending order due to one or more columns. Basic syntax is below:
+To sort table variables due to given columns, SORT command is used. Its possible to sort rows descending and ascending order due to one or more columns. Default sorting is ascending and not case sensitive. Basic syntax is below:
 
 ::
 
@@ -563,7 +563,7 @@ Also its possible to provide sort colums dynamically, with the syntax below:
 
 	SORT {tablename} [CASESENSITIVE] ON @{columnsastext};
 
-This syntax allows programmers to sort dynamically, without runtime interpretation **(runtime interpretation will be discussed later)**. Here is the same example that uses dynamic syntax:
+This syntax allows programmers to sort dynamically, without runtime interpretation *(runtime interpretation will be discussed later)*. Here is the same example that uses dynamic syntax:
 
 ::
 
