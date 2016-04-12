@@ -660,7 +660,9 @@ Values on id columns must be unique. And both for id and parentid columns must b
 	TMPTABLE_COUNTRY = 'TURKEY';
 	TMPTABLE_NAME = 'IZMIR';
 
+	/* to sort same level items */
 	SORT TMPTABLE ON NAME;
+	
 	SORT TMPTABLE HIERARCHICAL IDCOLUMN 'NAME' PARENTIDCOLUMN 'COUNTRY';
 
 	/* this command will be discussed later */
