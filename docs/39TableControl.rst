@@ -42,7 +42,9 @@ Sorting UI Tables
 
 As mentioned before all table controls has a table variable as its model on server side. So there is no difference between sorting a ui table and a table variable. All SORT command variations are supported for table variables that is created as a ui table model. 
 
-Additionally users are able to sort table data over right click menu of table column header. In right click menu there are three options for "ascending sorting", "descending sorting" and "clear sorting info". Although sorting over right click menu is an user level operation and its not directly related with development process, programmers is able to add some behaviour when user sorts table over column right click menu thanks to **ColumSort** event. This event is fired after sorting operation, so programmers must consider that table's data is sorted on event code. Also some system variables are set befere the event, to help programmers read some useful information about the sorting operation. Here is the list of system variables which set before ColumnSort event:
+Additionally users are able to sort table data over right click menu of table column header. In right click menu there are three options for "ascending sorting", "descending sorting" and "clear sorting info". 
+
+Although sorting over right click menu is an user level operation and its not directly related with development process, programmers is able to add some behaviour when user sorts table over column right click menu thanks to **ColumSort** event. This event is fired after sorting operation, so programmers must consider that table's data is sorted on event code. Also some system variables are set befere the event, to help programmers read some useful information about the sorting operation. Here is the list of system variables which set before ColumnSort event:
 
 +------------------+----------------------------------------------------------------+
 | SYS_SORTEDTABLE  | Name of sorted last sorted table.                              |
@@ -56,9 +58,9 @@ Additionally users are able to sort table data over right click menu of table co
 
 ::
 
-	STRINGVAR3 = 'SYS_SORTEDTABLE: ' + SYS_SORTEDTABLE + TOCHAR(10);
-	STRINGVAR3 = STRINGVAR3 +'SYS_SORTED: ' + SYS_SORTED + TOCHAR(10);
-	STRINGVAR3 = STRINGVAR3 + 'SYS_SORTEDCOLUMN: ' + SYS_SORTEDCOLUMN + TOCHAR(10);
+	STRINGVAR3 = 'SORTEDTABLE: ' + SYS_SORTEDTABLE + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'SORTED: ' + SYS_SORTED + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'SORTEDCOLUMN: ' + SYS_SORTEDCOLUMN + TOCHAR(10);
 
 	STRINGVAR3 = STRINGVAR3 + 'ROWS' + TOCHAR(10) + '---------' + TOCHAR(10);
 	LOOP AT TMPTABLE
@@ -67,7 +69,9 @@ Additionally users are able to sort table data over right click menu of table co
 	ENDLOOP;
 
 
-
+Menu item that clears sorting information also fires **ColumnSort** event and clears system variables, but does not relocate rows to their previous position before the table sort.
+	
+	
 Tree Tables
 -----------
 tree table and related flags.
