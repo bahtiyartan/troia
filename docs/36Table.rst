@@ -687,11 +687,66 @@ Data Transfer Between Tables
 
 Useful Table Commands & Functions
 ---------------------------------
-.
 
-CLEARTABLE
-DESTROYTABLE
+Removing Rows
+=============
+
+To remove rows from a table variable, CLEAR command is used. Clear command has different variations to clear all rows or active row. CLEAR command has different variations but mostly used for table. Here is the syntax which is related with removing rows:
+
+::
+
+	CLEAR ROW | ALL {table};
+	
+ROW variation of CLEAR command removes the active row without changing the active row cursor, so after the command active row is the new row on same index. If removed row is the last row of a multi row table, new active row is the new last row. Here is the sample code that prints row number and active row before and after the CLEAR ROW, please test different variatins and compare the results. It there is no more rows after clear row active row is set to 0 which is an invalid active row index.
+
+::
+
+	OBJECT:
+		TABLE T1,
+		STRING STRINGVAR3;
+
+	SELECT USERNAME, PASSW
+		FROM IASUSERS WHERE USERNAME LIKE 'L%'
+		INTO T1;
+
+	STRINGVAR3 = 'Before: ' + T1_ROWCOUNT + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'ActiveRow: ' + T1_ACTIVEROW + TOCHAR(10);
+	CLEAR ROW T1;
+	STRINGVAR3 = STRINGVAR3 + 'After: ' + T1_ROWCOUNT + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'ActiveRow: ' + T1_ACTIVEROW + TOCHAR(10);
+
+
+With ALL variation, it is possible to remove all rows from table. After clearing all rows active row is set to 0.
+
+::
+
+	OBJECT:
+		TABLE T1,
+		STRING STRINGVAR3;
+
+	SELECT USERNAME, PASSW
+		FROM IASUSERS
+		INTO T1;
+
+	STRINGVAR3 = 'Before: ' + T1_ROWCOUNT + TOCHAR(10);
+	CLEAR ALL T1;
+	STRINGVAR3 = STRINGVAR3 + 'After: ' + T1_ROWCOUNT + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'ActiveRow: ' + T1_ACTIVEROW + TOCHAR(10);
+	
+Removing Columns
+================
+
+CLEAR command does not change column structure of table. 
+
 REMOVECOLUMN
+
+To remove all rows and columns DESTROYTABLE command is used.
+
+::
+
+	DESTROYTABLE {table};
+	
+CLEARTABLE
 MODIFY
 CONSTRUCT
 
@@ -701,7 +756,6 @@ Some Useful Functions
 
 SELECTEDROWCOUNT()
 GETCOLUMNCOUNT()
-HASHASHINDEX()
 	
 	
 Aggregate Commands to Calculate Subtotals
