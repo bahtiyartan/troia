@@ -683,17 +683,31 @@ Data Transfer Between Tables
 .copy table
 
 .merge table
+
+
+Useful Table Commands & Functions
+---------------------------------
+.
+
+CLEARTABLE
+DESTROYTABLE
+REMOVECOLUMN
+MODIFY
+CONSTRUCT
+
+
+Some Useful Functions
+=====================
+
+SELECTEDROWCOUNT()
+GETCOLUMNCOUNT()
+HASHASHINDEX()
 	
 	
 Aggregate Commands to Calculate Subtotals
 -----------------------------------------
 
 .aggregate
-	
-Basic Table Operations
-----------------------
-
-.
 
 Application Performance and Tables
 ----------------------------------

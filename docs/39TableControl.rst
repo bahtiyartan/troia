@@ -104,6 +104,8 @@ Filtering Rows
 ==============
 . FILTERED flag.
 
+
+
 Conditional Formatting
 ======================
 .
