@@ -723,7 +723,18 @@ With ALL variation, it is possible to remove all rows from table. After clearing
 	STRINGVAR3 = STRINGVAR3 + 'ActiveRow: ' + T1_ACTIVEROW + TOCHAR(10);
 	
 	
-..cleartable..command..
+::
+
+	SELECT USERNAME, CREATEDBY
+		FROM IASUSERS
+		WHERE CREATEDBY LIKE 'B%'
+		ORDERBY CREATEDBY
+		INTO TMPTABLE;
+
+	CLEARTABLE TMPTABLE WHERE TMPTABLE_CREATEDBY == 'BTAN';
+	CLEARTABLE TMPTABLE CRITERIA COLUMNS CREATEDBY VALUES 'BTAN';
+
+	SET TMPTABLE TO TABLE TMPTABLE;
 	
 Removing Columns
 ================
@@ -743,6 +754,24 @@ To remove all rows and columns DESTROYTABLE command is used.
 CLEARTABLE
 MODIFY
 CONSTRUCT
+
+
+Reading Table Structure
+=======================
+
+::
+
+	OBJECT:
+		TABLE T1;
+
+	SELECT USERNAME, PASSW
+		FROM IASUSERS
+		INTO T1;
+
+	DESTROYTABLE TMPTABLE;
+	COPY STRUCTURE T1 INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
 
 
 Some Useful Functions
