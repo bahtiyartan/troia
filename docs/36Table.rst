@@ -674,17 +674,6 @@ Hierarchical sorting is much more useful fo tree tables which is a tree represen
 
 For any kind of sorting operation, there is no way to relocate all rows to their positions before sort operation. Because TROIA interpreter does not track variable's value history for any type of variable.
 
-
-Data Transfer Between Tables
-----------------------------
-
-.move corresponding
-
-.copy table
-
-.merge table
-
-
 Useful Table Commands & Functions
 ---------------------------------
 
@@ -733,6 +722,9 @@ With ALL variation, it is possible to remove all rows from table. After clearing
 	STRINGVAR3 = STRINGVAR3 + 'After: ' + T1_ROWCOUNT + TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + 'ActiveRow: ' + T1_ACTIVEROW + TOCHAR(10);
 	
+	
+..cleartable..command..
+	
 Removing Columns
 ================
 
@@ -759,6 +751,15 @@ Some Useful Functions
 SELECTEDROWCOUNT()
 GETCOLUMNCOUNT()
 	
+
+Data Transfer Between Tables
+----------------------------
+
+.move corresponding
+
+.copy table
+
+.merge table
 	
 Aggregate Commands to Calculate Subtotals
 -----------------------------------------
