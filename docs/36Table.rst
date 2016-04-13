@@ -736,15 +736,17 @@ With ALL variation, it is possible to remove all rows from table. After clearing
 Removing Columns
 ================
 
-CLEAR command does not change column structure of table. 
-
-REMOVECOLUMN
-
-To remove all rows and columns DESTROYTABLE command is used.
+In some cases programmers may need remove all columns and data and reconstruct table using APPEND commands (Removing a column also means removing corresponding cell of each row, so removing all columns also removes whole data). To remove all columns DESTROYTABLE command is used and after the DESTROYTABLE command table goes to same state with a table that is newly created by OBJECT command (or other variable definition commands), here is the syntax of DESTROYTABLE Command:
 
 ::
 
 	DESTROYTABLE {table};
+	
+
+
+REMOVECOLUMN
+
+To remove all rows and columns DESTROYTABLE command is used.
 	
 CLEARTABLE
 MODIFY
