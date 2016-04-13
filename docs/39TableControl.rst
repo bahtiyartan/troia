@@ -11,6 +11,11 @@ Introduction
 
 .
 
+Features of Table Control
+-------------------------
+.
+
+
 Column Information & Labels
 ---------------------------
 
@@ -28,13 +33,15 @@ Table Events
 |ColumnDoubleClick | |
 |Copy              | |
 |Paste             | |
-|ColumnSort        | |
 |Drag              | |
 |Drop              | |
 |RightClickMenu    | |
 |ExpandBefore      | |
 |ArrowClick        | |
 |ButtonCellClick   | |
+
+
+Other events of table control; ColumnSort will be discussed in related sections.
 
 
 Sorting UI Tables
@@ -44,7 +51,7 @@ As mentioned before all table controls has a table variable as its model on serv
 
 Additionally users are able to sort table data over right click menu of table column header. In right click menu there are three options for "ascending sorting", "descending sorting" and "clear sorting info". 
 
-Although sorting over right click menu is an user level operation and its not directly related with development process, programmers is able to add some behaviour when user sorts table over column right click menu thanks to **ColumSort** event. This event is fired after sorting operation, so programmers must consider that table's data is sorted on event code. Also some system variables are set befere the event, to help programmers read some useful information about the sorting operation. Here is the list of system variables which set before ColumnSort event:
+Although sorting over right click menu is an user level operation and its not directly related with development process, programmers is able to add some behaviour when user sorts table over column right click menu thanks to **ColumnSort** event. This event is fired after sorting operation, so programmers must consider that table's data is sorted on event code. Also some system variables are set befere the event, to help programmers read some useful information about the sorting operation. Here is the list of system variables which set before ColumnSort event:
 
 +------------------+----------------------------------------------------------------+
 | SYS_SORTEDTABLE  | Name of sorted last sorted table.                              |
