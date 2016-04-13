@@ -173,8 +173,8 @@ Table Flags
 There are some special fields that returns specific information about tables like row count, active row etc. Names of these fields are reserved and can not be used as column names. And can be accessed by _ operator like table columns.
 
 
-Flags about Table Information
-=============================
+Flags about Table
+=================
 
 Here are flags that returns data about table's itself (independent from active row). Some of this flags will be discussed (w.b.d.) detailly, in related sections.
 
