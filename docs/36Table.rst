@@ -722,6 +722,13 @@ With ALL variation, it is possible to remove all rows from table. After clearing
 	STRINGVAR3 = STRINGVAR3 + 'After: ' + T1_ROWCOUNT + TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + 'ActiveRow: ' + T1_ACTIVEROW + TOCHAR(10);
 	
+
+Another command; CLEARTABLE allows programmers to find rows with given parameters and remove without looping. Command supports WHERE condition and CRITERIA COLUMNS variations like LOOP command. Hash index variation is not supported CLEARTABLE command, because removing rows destroys hash information. Here is the syntax and example of two variations.
+
+::
+
+	CLEARTABLE {table} WHERE {condition};
+	CLEARTABLE {table} CRITERIA COLUMNS {columns} VALUES {values};
 	
 ::
 
@@ -732,6 +739,7 @@ With ALL variation, it is possible to remove all rows from table. After clearing
 		INTO TMPTABLE;
 
 	CLEARTABLE TMPTABLE WHERE TMPTABLE_CREATEDBY == 'BTAN';
+	/* or */
 	CLEARTABLE TMPTABLE CRITERIA COLUMNS CREATEDBY VALUES 'BTAN';
 
 	SET TMPTABLE TO TABLE TMPTABLE;
