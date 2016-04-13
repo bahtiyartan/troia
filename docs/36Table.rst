@@ -671,6 +671,7 @@ Values on id columns must be unique. And both for id and parentid columns must b
 Hierarchical sorting is much more useful fo tree tables which is a tree representation of table control. Tree tables will be discussed detailly in next sections, but for now we must know about hierarchical sorting option, because it is an advanced sorting option for all kind of tables.
 
 
+
 For any kind of sorting operation, there is no way to relocate all rows to their positions before sort operation. Because TROIA interpreter does not track variable's value history for any type of variable.
 
 

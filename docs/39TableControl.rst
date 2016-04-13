@@ -11,11 +11,30 @@ Introduction
 
 .
 
+Column Information & Labels
+---------------------------
+
 
 Table Events
 -----------------------
 
-.
+|RowInsert         | |
+|RowDelete         | |
+|RowUndelete       | |
+|CellChangeBefore  | |
+|CellChangeAfter   | |
+|ZoomAfter         | |
+|ZoomBefore        | |
+|ColumnDoubleClick | |
+|Copy              | |
+|Paste             | |
+|ColumnSort        | |
+|Drag              | |
+|Drop              | |
+|RightClickMenu    | |
+|ExpandBefore      | |
+|ArrowClick        | |
+|ButtonCellClick   | |
 
 Sorting UI Tables
 =================
@@ -25,8 +44,9 @@ As mentioned before all table controls has a table variable as its model on serv
 Additionally users are able to sort table data over right click menu of table column header. In right click menu there are three options for ascending sorting, descending sorting and clearing sorting information. This sorting option is a user level sorting and its not directly related with development process.
 ..
 
-Column Information & Labels
----------------------------
+Tree Tables
+-----------
+tree table and related flags.
 
 
 Pivot View and Pivot Configurations
@@ -36,12 +56,6 @@ Pivot View and Pivot Configurations
 Chart View and Chart Configurations
 -----------------------------------
 .
-
-Tree Tables
-===========
-tree table and related flags.
-
-
 
 Other Useful Features
 ---------------------
