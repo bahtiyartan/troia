@@ -532,8 +532,8 @@ Also it is possible to locate table's active row over an hashindex. With this op
 	
 As it is obvious, LOCATERECORD variations are similar to LOOP command's. Each variation has different pros and cons. To create high performance applications, programmers must decide correct variation due to data structure, locate count etc. For more details about locating on tables please see help documents of LOCATERECORD command.
 	
-Sorting & Aggregate
--------------------
+Sorting Table Data
+------------------
 
 It is possible to select sorted row data from database but in some cases programmers may need sorting tables on application layer. To sort table variables due to given columns, SORT command is used. Its possible to sort rows descending and ascending order due to one or more columns. Default sorting is ascending and not case sensitive. Basic syntax is below:
 
@@ -669,7 +669,6 @@ Values on id columns must be unique. And both for id and parentid columns must b
 	SET TMPTABLE TO TABLE TMPTABLE;
 	
 Hierarchical sorting is much more useful fo tree tables which is a tree representation of table control. Tree tables will be discussed detailly in next sections, but for now we must know about hierarchical sorting option, because it is an advanced sorting option for all kind of tables.
-
 
 
 Data Transfer Between Tables

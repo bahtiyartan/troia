@@ -17,6 +17,14 @@ Table Events
 
 .
 
+Sorting UI Tables
+=================
+
+As mentioned before all table controls has a table variable as its model on server side. So there is no difference between sorting a ui table and a table variable. All SORT command variations are supported for table variables that is created as a ui table model. 
+
+Additionally users are able to sort table data over right click menu of table column header. In right click menu there are three options for ascending sorting, descending sorting and clearing sorting information. This sorting option is a user level sorting and its not directly related with development process.
+..
+
 Column Information & Labels
 ---------------------------
 
