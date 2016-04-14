@@ -678,7 +678,7 @@ Useful Table Commands & Functions
 ---------------------------------
 
 Removing Rows
--------------
+=============
 
 To remove rows from a table variable, CLEAR command is used. Clear command has different variations to clear all rows or active row. CLEAR command has different variations but mostly used for table. Here is the syntax which is related with removing rows:
 
