@@ -848,7 +848,7 @@ And an example that transfers a source table to destination table. Please run sa
 	STRINGVAR3 = STRINGVAR3 + 'HIDE:' + TMPTABLE_HIDE+ TOCHAR(10);
 	
 
-WITHFLAGS variation also transfers CHECKED,DELETED,INSERTED,CHANGE,READ,UPDATED,ROWTOOLTIP (FYI), SUMMARYROW flags for each row, other flags such as HIDE, SELECTED are not transferred even on WITHFLAGS variation. Here is the sample code:
+WITHFLAGS variation also transfers CHECKED, DELETED, INSERTED, CHANGE, READ, UPDATED, ROWTOOLTIP (FYI), SUMMARYROW flags for each row, other flags such as HIDE, SELECTED are not transferred even on WITHFLAGS variation. Here is the sample code:
 	
 ::
 
