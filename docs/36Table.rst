@@ -379,7 +379,7 @@ BUILDHASHINDEX command does not recreate index if there is already an index with
 	
 
 Which Looping Method is the Best?
----------------------------------
+=================================
 
 As mentioned in previous sections, tables are the main and most used data type of TROIA programming language. Tables store bulk data because of its nature, so considering performance issues while working with tables is a must. Looping is also very important process for high performance applications, so programmers must select correct looping option considering their data structure, search criterias. 
 
@@ -875,6 +875,9 @@ Transferring flag values
 	STRINGVAR3 = 'UPDATED:' + TMPTABLE_UPDATED + TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + 'READ:' + TMPTABLE_READ+ TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + 'DELETED:' + TMPTABLE_DELETED+ TOCHAR(10);
+	
+	
+	Checked,Deleted,Inserted,Change,Read,Updated,RowToolTip,Summary
 
 	.merge table
 
