@@ -754,12 +754,28 @@ In some cases programmers may need remove all columns and data and reconstruct t
 	DESTROYTABLE {table};
 	
 
+To remove a single column from a table variable, REMOVECOLUMN is used. Here is the syntax of the command:
 
-REMOVECOLUMN
+::
 
-To remove all rows and columns DESTROYTABLE command is used.
+	REMOVE COLUMN {columnname} [PERMANENT] FROM {table};
 	
-CLEARTABLE
+{columnname} parameter is not a variable, in other words is considered as name of the column. If you want to remove a column whose name is in a variable use @ prefix, before the variable name. As default REMOVECOLUMN command does not remove column, just sets removed flag to true. If removed flag of a column is set to true, system ignores cells on this column while preparing database queries.This behaviour is useful to work on extra columns which is appended after database selects and does not exists in database. To remove a column permanently, you must use PERMANENT variation. This variation removes column and related cells on all rows in an unreturnable manner.
+
+:: 
+
+	OBJECT:
+		TABLE TMPTABLE;
+		
+	SELECT CLIENT, USERNAME, CREATEDBY, CREATEDAT
+		FROM IASUSERS
+		WHERE USERNAME LIKE 'B%'
+		INTO TMPTABLE;
+	
+	REMOVE COLUMN CREATEDBY FROM TMPTABLE;
+	REMOVE COLUMN CREATEDAT PERMANENT FROM TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+	
 MODIFY
 CONSTRUCT
 
@@ -854,7 +870,7 @@ Copying Tables
 	STRINGVAR3 = STRINGVAR3 + 'DELETED:' + TMPTABLE_DELETED+ TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + 'HIDE:' + TMPTABLE_HIDE+ TOCHAR(10);
 
-Copying Row/Cell Data Between Rows 
+Copying Cell/Row Data Between Rows 
 ==================================
 
 ::
