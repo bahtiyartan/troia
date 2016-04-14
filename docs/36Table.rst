@@ -219,6 +219,9 @@ Additionally, table has row releated flags, each row is able to store different 
 +----------+-------+----------------------------------------------------------------------+
 |SUMMARYROW|INTEGER| must be set to 1, for subtotal/summary rows to avoid miscalculations |
 +----------+-------+----------------------------------------------------------------------+
+|CHECKED   |INTEGER| only set and read by TROIA applications                              |
++----------+-------+----------------------------------------------------------------------+
+
 
 There are some other ui table flags, they will be discussed in related sections.
 	
@@ -811,6 +814,14 @@ Data Transfer Between Tables
 Copying Tables
 ==============
 
+To copy whole structure and data of a table COPY TABLE command is used. COPY TABLE command does not transfer row flags, as default. To transfer table flags there is a WITHFLAGS variation. Here is the syntax:
+
+::
+
+	COPY TABLE {sourcetable} INTO {destinationtable} [WITHFLAGS];
+	
+And an example that transfers a source table to destination table. Please run sample code on "DEVT11 - Runcode Test Transaction" and test different data variations and row flags transfer.
+
 ::
 
 	OBJECT:
@@ -828,10 +839,6 @@ Copying Tables
 	SOURCE_READ = 1;
 	SOURCE_DELETED = 1;
 	SOURCE_HIDE = 1;
-	SELECT CLIENT,USERNAME,CREATEDBY, PWDVALIDITY
-		FROM IASUSERS
-		WHERE 1=2
-		INTO TMPTABLE;
 
 	COPY TABLE SOURCE INTO TMPTABLE;
 
@@ -841,6 +848,8 @@ Copying Tables
 	STRINGVAR3 = STRINGVAR3 + 'HIDE:' + TMPTABLE_HIDE+ TOCHAR(10);
 	
 
+WITHFLAGS variation also transfers CHECKED,DELETED,INSERTED,CHANGE,READ,UPDATED,ROWTOOLTIP (FYI), SUMMARYROW flags for each row, other flags such as HIDE, SELECTED are not transferred even on WITHFLAGS variation. Here is the sample code:
+	
 ::
 
 	OBJECT:
@@ -956,7 +965,6 @@ Transferring flag values
 	STRINGVAR3 = STRINGVAR3 + 'DELETED:' + TMPTABLE_DELETED+ TOCHAR(10);
 	
 	
-	Checked,Deleted,Inserted,Change,Read,Updated,RowToolTip,Summary
 
 	.merge table
 
