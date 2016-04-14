@@ -678,7 +678,7 @@ Useful Table Commands & Functions
 ---------------------------------
 
 Removing Rows
-=============
+-------------
 
 To remove rows from a table variable, CLEAR command is used. Clear command has different variations to clear all rows or active row. CLEAR command has different variations but mostly used for table. Here is the syntax which is related with removing rows:
 
@@ -792,11 +792,95 @@ GETCOLUMNCOUNT()
 Data Transfer Between Tables
 ----------------------------
 
-.move corresponding
+::
 
-.copy table
+	OBJECT:
+		TABLE SOURCE,
+		TABLE TMPTABLE;
 
-.merge table
+	/* source table with 4 columns */
+	SELECT CLIENT,USERNAME,CREATEDBY, CREATEDAT
+		FROM IASUSERS
+		WHERE USERNAME LIKE 'BTAN%'
+		INTO SOURCE;
+
+	/* destination table with 4 columns, 3 corresponding*/
+	SELECT CLIENT,USERNAME,CREATEDBY, PWDVALIDITY
+		FROM IASUSERS
+		WHERE 1=2
+		INTO TMPTABLE;
+
+	APPEND ROW TO TMPTABLE;
+
+	/* move each column */
+	TMPTABLE_CLIENT = SOURCE_CLIENT;
+	TMPTABLE_USERNAME = SOURCE_USERNAME;
+	TMPTABLE_CREATEDBY = SOURCE_CREATEDBY;
+
+Transfer Corresponding Cell Values
+==================================
+
+::
+
+	OBJECT:
+		TABLE SOURCE,
+		TABLE TMPTABLE;
+
+	/* source table with 3 columns */
+	SELECT CLIENT,USERNAME,CREATEDBY, CREATEDAT
+		FROM IASUSERS
+		WHERE USERNAME LIKE 'BTAN%'
+		INTO SOURCE;
+
+	/* destination table with 5 columns*/
+	SELECT CLIENT,USERNAME,CREATEDBY, PWDVALIDITY
+		FROM IASUSERS
+		WHERE 1=2
+		INTO TMPTABLE;
+
+	APPEND ROW TO TMPTABLE;
+	/* move all corresponding columns */
+	MOVE-CORRESPONDING SOURCE TO TMPTABLE;
+	
+	
+Transferring flag values
+
+::
+
+	OBJECT:
+		TABLE SOURCE,
+		TABLE TMPTABLE
+		STRING STRINGVAR3;
+
+	/* prepare source table & flags */
+	SELECT CLIENT,USERNAME,CREATEDBY, CREATEDAT
+		FROM IASUSERS
+		WHERE USERNAME LIKE 'BTAN%'
+		INTO SOURCE;
+
+	SOURCE_UPDATED = 1;
+	SOURCE_READ = 1;
+	SOURCE_DELETED = 1;
+
+	SELECT CLIENT,USERNAME,CREATEDBY, PWDVALIDITY
+		FROM IASUSERS
+		WHERE 1=2
+		INTO TMPTABLE;
+
+	APPEND ROW TO TMPTABLE;
+
+	/* move all corresponding columns */
+	MOVE-CORRESPONDING SOURCE TO TMPTABLE WITHFLAGS;
+
+	STRINGVAR3 = 'UPDATED:' + TMPTABLE_UPDATED + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'READ:' + TMPTABLE_READ+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'DELETED:' + TMPTABLE_DELETED+ TOCHAR(10);
+
+	.merge table
+
+Copying Tables
+==============
+.
 	
 Aggregate Commands to Calculate Subtotals
 -----------------------------------------
