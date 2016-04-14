@@ -674,8 +674,8 @@ Hierarchical sorting is much more useful fo tree tables which is a tree represen
 
 For any kind of sorting operation, there is no way to relocate all rows to their positions before sort operation. Because TROIA interpreter does not track variable's value history for any type of variable.
 
-Useful Table Commands & Functions
----------------------------------
+Working on Tables
+-----------------
 
 Removing Rows
 =============
