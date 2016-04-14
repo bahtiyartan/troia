@@ -972,18 +972,14 @@ Application Performance and Tables
 ----------------------------------
 .
 
-Sample 1: Compare Traces of LOOP WHERE & LOOP + IF
---------------------------------------------------
+Sample 1: Compare LOOP Options
+---------------------------------------------
 .
 
-Sample 2: Compare Execution Times of LOOP Options
+Sample 2: Locating on Tables using Hash Index
 -------------------------------------------------
 .
 
-Sample 3: Locating on Tables using Hash Index
--------------------------------------------------
-.
-
-Sample 4: Sort Users Like a Tree
+Sample 3: Sort Users Like a Tree
 --------------------------------
 .
