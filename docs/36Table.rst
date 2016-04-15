@@ -1044,6 +1044,8 @@ Usually, MOVE-CORRESPONDING command is used in a LOOP statement and for each row
 						
 	MERGETABLE {source} INTO {destination} [WITHFLAGS] 
 	                    CRITERIA INDEXED {index} VALUES {vals};
+						
+MERGETABLE has also optional WITHFLAGS variation whose behaviour is same with COPY TABLE's WITHFLAGS variation. Here is an example that uses all three variation. Please modify and run source code to transfer row flag values.
 	
 ::	
 
