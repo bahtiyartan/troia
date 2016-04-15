@@ -779,12 +779,14 @@ To remove a single column from a table variable, REMOVECOLUMN is used. Here is t
 	REMOVE COLUMN CREATEDAT PERMANENT FROM TMPTABLE;
 	SET TMPTABLE TO TABLE TMPTABLE;
 	
-MODIFY
+In this example, CREATEAT at column is removed permanently so you will not see this column on the screen, but CREATEDBY button is still visible because its just signed as removed to avoid adding this column to db queries (will be discussed in next sections).
 CONSTRUCT
 
 
 Reading Table Structure
 =======================
+
+In some cases, programmers may need metadata about table & it's columns. COPY STRUCTURE command is used to read structure of a table variable. Here is the sample code that prints table structure which is defined by SELECT command:
 
 ::
 
@@ -798,6 +800,8 @@ Reading Table Structure
 	DESTROYTABLE TMPTABLE;
 	COPY STRUCTURE T1 INTO TMPTABLE;
 	SET TMPTABLE TO TABLE TMPTABLE;
+	
+COPY STRUCTURE command, adds five column to destiation table named COLNAME (column name), COLTYPE (column type), COLLEN (column length), COLPRE (column presicion), COLNOT. COLNOT is a deprecated/unused field.
 
 
 
