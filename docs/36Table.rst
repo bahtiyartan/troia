@@ -62,6 +62,8 @@ Additionally, SELECT command defines a table variable with its columns, so progr
 	
 	/* define a table variable with its column-model */
 	SELECT USERNAME, CREATEDBY, CREATEDAT FROM IASUSERS WHERE 1 = 2 INTO T2;
+	
+As another option, there is a CONSTRUCT command that defines table and creates it's column information. This command is rarely used to define tables, for more information please see it's help document.
 
 
 Adding Rows To Tables
@@ -780,7 +782,7 @@ To remove a single column from a table variable, REMOVECOLUMN is used. Here is t
 	SET TMPTABLE TO TABLE TMPTABLE;
 	
 In this example, CREATEAT at column is removed permanently so you will not see this column on the screen, but CREATEDBY button is still visible because its just signed as removed to avoid adding this column to db queries (will be discussed in next sections).
-CONSTRUCT
+
 
 
 Reading Table Structure
