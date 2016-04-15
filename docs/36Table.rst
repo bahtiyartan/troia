@@ -337,7 +337,32 @@ Here is an example, that shows looping with CRITERIA COLUMNS. This examle prints
 	ENDLOOP;
 	
 	
-Please change value of STRCREATEDBY and test with both case sensitive and insensitive options, with single and multiple parameters.
+Please change value of STRCREATEDBY and test with both case sensitive and insensitive options, with single and multiple parameters. Also it is possible to use table flags which are related with rows, as condition. Here is a simple example than uses INSERTED flag as CRITERIA COLUMNS condition:
+
+::
+
+	OBJECT: 
+		TABLE T1,
+		STRING RESULT,
+		STRING STRCREATEDBY;
+
+	SELECT USERNAME, CREATEDBY, PWDVALIDITY 
+		FROM IASUSERS 
+		INTO T1;
+		
+	STRCREATEDBY = 'BTAN';
+	RESULT = '';
+	
+	APPEND ROW TO T1;
+	T1_USERNAME = 'NewUser';
+	T1_CREATEDBY = 'BTAN';
+	T1_CREATEDBY = 30;
+
+	LOOP AT T1 CRITERIA COLUMNS CREATEDBY,INSERTED VALUES STRCREATEDBY,1 
+	BEGIN
+		RESULT  = RESULT + T1_USERNAME + ':';
+		RESULT = RESULT  + T1_PWDVALIDITY + TOCHAR(10);
+	ENDLOOP;
 
 
 Looping Faster: Loop on Hash Index
@@ -733,7 +758,7 @@ Another command; CLEARTABLE allows programmers to find rows with given parameter
 ::
 
 	CLEARTABLE {table} WHERE {condition};
-	CLEARTABLE {table} CRITERIA COLUMNS {columns} VALUES {values};
+	CLEARTABLE {table} CRITERIA COLUMNS {columns} VALUES {values} [NOTCASESENSITIVE];
 	
 ::
 
@@ -748,6 +773,8 @@ Another command; CLEARTABLE allows programmers to find rows with given parameter
 	CLEARTABLE TMPTABLE CRITERIA COLUMNS CREATEDBY VALUES 'BTAN';
 
 	SET TMPTABLE TO TABLE TMPTABLE;
+	
+CLEARTABLE command is also supports using row based flags on CRITERIA COLUMNS condition like LOOP Command.
 	
 Removing Columns
 ================
@@ -970,9 +997,40 @@ Transferring flag values
 	STRINGVAR3 = STRINGVAR3 + 'READ:' + TMPTABLE_READ+ TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + 'DELETED:' + TMPTABLE_DELETED+ TOCHAR(10);
 	
-	
 
-	.merge table
+	..merge..
+	
+::	
+
+	SELECT 1 AS ORD, USERNAME, 'sourcevalue' AS PASSW, CREATEDBY
+		FROM IASUSERS
+		WHERE CREATEDBY = 'BTAN'
+		ORDERBY USERNAME
+		INTO SOURCETABLE;
+
+	SELECT 1 AS ORD, USERNAME, 'destvalue' AS PASSW,  CREATEDBY
+		FROM IASUSERS
+		WHERE 1 = 2
+		INTO TMPTABLE;
+
+	LOOP AT SOURCETABLE
+	BEGIN
+
+		IF SOURCETABLE_ACTIVEROW % 2  == 0 THEN
+		SOURCETABLE_INSERTED = 1;
+		ENDIF;
+
+		SOURCETABLE_ORD = SOURCETABLE_ACTIVEROW;
+	ENDLOOP;
+
+	BUILDHASHINDEX 'MyIndex' COLUMNS PASSW, INSERTED ON SOURCETABLE FORCE;
+	MERGETABLE SOURCETABLE INTO TMPTABLE WITHFLAGS WHERE SOURCETABLE_INSERTED == 1;
+	APPEND ROW TO TMPTABLE; /* as separator */
+	MERGETABLE SOURCETABLE INTO TMPTABLE CRITERIA COLUMNS PASSW, INSERTED VALUES 'sourcevalue', 1;
+	APPEND ROW TO TMPTABLE; /* as separator */
+	MERGETABLE SOURCETABLE INTO TMPTABLE CRITERIA INDEXED INDEX 'MyIndex' VALUES 'sourcevalue', 0;
+
+	SET TMPTABLE TO TABLE TMPTABLE;
 
 
 
