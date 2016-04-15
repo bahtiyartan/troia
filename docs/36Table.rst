@@ -940,6 +940,9 @@ WITHFLAGS variation also transfers CHECKED, DELETED, INSERTED, CHANGE, READ, UPD
 Copying Cell/Row Data Between Rows 
 ==================================
 
+Copying a row to another table is a little bit complicated than copying whole table. Because table structures must be identical to copy a row directly, otherwise only corresponding cells can be transferred. For example, if source table has two columns COL1, COL2 and destination table has only one column COL1, only COL1 can be transferred to destination table. Actually, copying a row with assingment or MOVE command is possible like below:
+
+
 ::
 
 	OBJECT:
@@ -964,8 +967,13 @@ Copying Cell/Row Data Between Rows
 	TMPTABLE_CLIENT = SOURCE_CLIENT;
 	TMPTABLE_USERNAME = SOURCE_USERNAME;
 	TMPTABLE_CREATEDBY = SOURCE_CREATEDBY;
+	
+But if there are too many corresponding columns between source and destination table, it becomes very hard to assing each column manually. TROIA has command named MOVE-CORRESPONDING to transfer all corresponding column values between active rows of source and destination table. Here is the syntax of MOVE-CORRESPONDING command and a sample that transfers a single row:
 
-
+::
+	
+	MOVE-CORRESPONDING {sourcetable} TO {destinationtable} [WITHFLAGS];
+	
 ::
 
 	OBJECT:
@@ -989,7 +997,7 @@ Copying Cell/Row Data Between Rows
 	MOVE-CORRESPONDING SOURCE TO TMPTABLE;
 	
 	
-Transferring flag values
+Additionally all row based flags exist both on source and destination rows so when transferring a row to destionation table, also flag values must be considered. As default, MOVE-CORRESPONDIG command does not transfer flag values, if you need to transfer also row flags you must use WITHFLAGS variation like COPY TABLE command. Please run sample code below, with different flag values, and with/withoud WITHFLAGS keyword:
 
 ::
 
@@ -1022,6 +1030,8 @@ Transferring flag values
 	STRINGVAR3 = STRINGVAR3 + 'READ:' + TMPTABLE_READ+ TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + 'DELETED:' + TMPTABLE_DELETED+ TOCHAR(10);
 	
+
+MOVE-CORRESPONDING command directly transfers all corresponding column values even default columns such as CREATEDBY, CREATEDAT, CHANGEDBY, CHANGEDAT. But if source table is a check table on database configuration (ODBA). Default columns are not transferred. Default columns and ODBA will be discussed detailly in next sections.
 
 	..merge..
 	
