@@ -1085,18 +1085,18 @@ Aggregate Commands to Calculate Subtotals
 
 .aggregate
 
-Application Performance and Tables
-----------------------------------
-.
 
 Sample 1: Compare LOOP Options
----------------------------------------------
+------------------------------
 .
 
 Sample 2: Locating on Tables using Hash Index
--------------------------------------------------
+---------------------------------------------
 .
 
 Sample 3: Sort Users Like a Tree
 --------------------------------
 .
+
+Sample 4: Copying Rows
+----------------------
