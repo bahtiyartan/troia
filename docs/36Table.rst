@@ -1033,7 +1033,12 @@ Additionally all row based flags exist both on source and destination rows so wh
 
 MOVE-CORRESPONDING command directly transfers all corresponding column values even default columns such as CREATEDBY, CREATEDAT, CHANGEDBY, CHANGEDAT. But if source table is a check table on database configuration (ODBA). Default columns are not transferred. Default columns and ODBA will be discussed detailly in next sections.
 
-	..merge..
+Usually, MOVE-CORRESPONDING command is used in a LOOP statement and for each row in source table, a new row inserted to destination table or rows transferred to source table due to a conditional statement. To ease such cases MERGETABLE command is used, which transfers rows of source table due to given condition. MERGETABLE command is a similar command to CLEARTABLE command with an additional hash index variation like LOOP staments. Here is the syntaxes of three variation of MERGETABLE command:
+
+::
+	MERGETABLE {source} INTO {destination} [WITHFLAGS] WHERE {condition};
+	MERGETABLE {source} INTO {destination} [WITHFLAGS] CRITERIA COLUMNS {cols} VALUES {vals} [NOTCASESENSITIVE];
+	MERGETABLE {source} INTO {destination} [WITHFLAGS] CRITERIA INDEXED {index} VALUES {vals};
 	
 ::	
 
