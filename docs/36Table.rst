@@ -1038,8 +1038,12 @@ Usually, MOVE-CORRESPONDING command is used in a LOOP statement and for each row
 ::
 
 	MERGETABLE {source} INTO {destination} [WITHFLAGS] WHERE {condition};
-	MERGETABLE {source} INTO {destination} [WITHFLAGS] CRITERIA COLUMNS {cols} VALUES {vals} [NOTCASESENSITIVE];
-	MERGETABLE {source} INTO {destination} [WITHFLAGS] CRITERIA INDEXED {index} VALUES {vals};
+	
+	MERGETABLE {source} INTO {destination} [WITHFLAGS] 
+	                    CRITERIA COLUMNS {cols} VALUES {vals} [NOTCASESENSITIVE];
+						
+	MERGETABLE {source} INTO {destination} [WITHFLAGS] 
+	                    CRITERIA INDEXED {index} VALUES {vals};
 	
 ::	
 
