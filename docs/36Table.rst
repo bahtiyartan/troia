@@ -758,7 +758,8 @@ Another command; CLEARTABLE allows programmers to find rows with given parameter
 ::
 
 	CLEARTABLE {table} WHERE {condition};
-	CLEARTABLE {table} CRITERIA COLUMNS {columns} VALUES {values} [NOTCASESENSITIVE];
+	CLEARTABLE {table} CRITERIA COLUMNS {columns} 
+	                                    VALUES {values} [NOTCASESENSITIVE];
 	
 ::
 
