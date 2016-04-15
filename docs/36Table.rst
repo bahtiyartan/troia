@@ -837,8 +837,32 @@ COPY STRUCTURE command, adds five column to destiation table named COLNAME (colu
 Some Useful Functions
 =====================
 
-SELECTEDROWCOUNT()
-GETCOLUMNCOUNT()
+As mentioned before SELECTED flag shows whether user selected a row on user interface. To get selected row cound, programmers must loop on table and count selected rows. To get rid of this kind of useless loops, there is an SELECTEDROWCOUNT() system function that returns selected row count of table. Another useful function is GETCOLUMNCOUNT() for reading  column count of given table. Here is an example for two functions:
+
+::
+
+	OBJECT: 
+		TABLE TMPTABLE,
+		STRING STRINGVAR3;
+
+	SELECT USERNAME, PASSW, CREATEDBY 
+		FROM IASUSERS 
+		WHERE USERNAME LIKE 'B%' 
+		INTO TMPTABLE;
+
+
+	LOOP AT TMPTABLE 
+	BEGIN
+
+		IF TMPTABLE_ACTIVEROW % 2 == 0 THEN
+			TMPTABLE_SELECTED = 1;
+		ENDIF;
+
+	ENDLOOP;
+
+	STRINGVAR3 = 'Selected Row Count:' + SELECTEDROWCOUNT(TMPTABLE) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'Column Count:' + GETCOLUMNCOUNT(TMPTABLE);
+
 	
 
 Data Transfer Between Tables
