@@ -1080,8 +1080,8 @@ MERGETABLE has also optional WITHFLAGS variation whose behaviour is same with CO
 
 	SET TMPTABLE TO TABLE TMPTABLE;
 
-Aggregate Commands to Calculate Subtotals
------------------------------------------
+Aggregate Commands/Calculating Subtotals
+----------------------------------------
 
 .aggregate
 
