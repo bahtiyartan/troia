@@ -1082,7 +1082,18 @@ MERGETABLE has also optional WITHFLAGS variation whose behaviour is same with CO
 
 Sample 1: Compare LOOP Options
 ------------------------------
-.
+
+Define a table and fill table with users whose PWDVALIDITY is more than 0. Write three LOOP statements :
+
+	- with WHERE condition. (PWDVALIDITY == 100) and print usernames to textfield.
+	- with CRITERIA COLUMNS variation and print usernames to textfield.
+	- with hash index variation and print usernames to textfield.
+	
+and 
+
+	- compare traces of three variations.
+	- compare execution times of three variations.
+
 
 Sample 2: Locating on Tables using Hash Index
 ---------------------------------------------
