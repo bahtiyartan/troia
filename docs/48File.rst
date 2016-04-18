@@ -77,14 +77,43 @@ Also its possible to read some useful information about server side to use on fi
 	File Sep: \
 	User Home: TRACES
 
-	
-
 
 Opening/Closing Files
 ---------------------
 
-.
+To open files, OPEN FILE command is used. Command takes file path and file open mode. File open mode shows the aim of opening file, such as creating new file, appending or reading. Default open mode is FORAPPEND. Here is the syntax to open files:
 
+::
+
+	OPEN FILE {file_path} [FORNEW|FORREAD|FORAPPEND] [FILEID { fileid }];
+	
+CLOSE FILE command closes the file. As default it takes no argument because it closes file which already opened. Here is the syntax:
+
+::
+
+	CLOSE FILE [FILEID { fileid }];
+
+All basic file operations are performed on server side. But it is allowed to access client side files. System copies client side file to server and sends to client after the operation. If file transfer is not necessary system does not copy opened file. Here is the matrice that shows the operation due to file open modes:
+
++------------+------------------+------------------+------------------+
+|            |   FORREAD        | FORAPPEND        | FORNEW           |
++------------+------------------+------------------+------------------+
+|            | Copy file from   | Copy file from   |                  |
+| OPEN FILE  | client to server | client to server | Just open file   |
+|            | and open         | and open         |                  |
++------------+-------------------------------------+------------------+
+|            |                  | Close file. Copy | Close file. Copy |
+| CLOSE FILE | Just close file  | file from server | file from server |
+|            |                  | to client        | to client.       |
++------------+-------------------------------------+------------------+
+
+
+Working With Multiple Files
+===========================
+
+FILEID is optional argument for both OPEN FILE and CLOSE FILE commands. It defines a unique name for opened file. As default, system allow does not allow opening multiple files concurrently. If you programmers want to open another file before closing first one, he/she must be provide FILEID for each command. FILEID is a unique id and shows which file will be affected from the operation. If FILEID is not provided, system uses a defult file id.
+
+..sample
 
 Reading Files & Writing Files
 -----------------------------
@@ -102,10 +131,7 @@ Writing Files
 
 .
 
-Working With Multiple Files
-===========================
 
-.
 
 
 Copying Files
