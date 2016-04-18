@@ -101,11 +101,11 @@ All basic file operations are performed on server side. But it is allowed to acc
 |            | Copy file from   | Copy file from   |                  |
 | OPEN FILE  | client to server | client to server | Just open file   |
 |            | and open         | and open         |                  |
-+------------+-------------------------------------+------------------+
++------------+------------------+------------------+------------------+
 |            |                  | Close file. Copy | Close file. Copy |
 | CLOSE FILE | Just close file  | file from server | file from server |
 |            |                  | to client        | to client.       |
-+------------+-------------------------------------+------------------+
++------------+------------------+------------------+------------------+
 
 
 Working With Multiple Files
