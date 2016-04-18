@@ -1118,3 +1118,5 @@ Modify code that you write for sample 2.
 
 Sample 4: Copying Rows
 ----------------------
+
+Create a new table variable and copy users who created at least one users to new table variable. Use the code that you write in previous example.
