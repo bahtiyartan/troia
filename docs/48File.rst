@@ -58,6 +58,26 @@ And here is the result of sample code, please run the code on your own client an
 	File Enc: Cp1254
 	SetGet Folder: C:\603server\RESOURCES\SETGET\LOCAL\IAS604502\btan\
 	
+	
+Also its possible to read some useful information about server side to use on file operations. Server side information is provided by SYSGETSERVERINFO() method. Here is the sample code and its result for SYSGETSERVERINFO() method:
+
+::
+
+	OBJECT:
+		STRING S1,
+		STRING STRINGVAR3;
+
+	S1 = 'File Sep: ' + SYSGETSERVERINFO('file.separator');
+	S1 = S1 + TOCHAR(10) + 'Trace Folder: ' + SYSGETSERVERINFO('TraceFolder');
+
+	STRINGVAR3 = S1;
+
+::
+
+	File Sep: \
+	User Home: TRACES
+
+	
 
 
 Opening/Closing Files
