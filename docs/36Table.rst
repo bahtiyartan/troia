@@ -1098,11 +1098,23 @@ and
 Sample 2: Locating on Tables using Hash Index
 ---------------------------------------------
 
-Define a table and fill table with all users in IASUSERS table. Print users whose creator user is missing on same user list. Please use only one SELECT statement.
+Define a table and fill table with all users in IASUSERS table. 
+
+	- Print users whose creator user is missing on same user list.
+	
+*Please use only one SELECT statement.*
+
 
 Sample 3: Sort Users Like a Tree
 --------------------------------
-.
+
+Modify code that you write for sample 2.
+
+	- Set CREATEDBY to empty string of users whose creator is missing.
+	- Create a tree hierarchy on user table using CREATEDBY column.
+	- add a child row to your username.
+	- print all persistency flags of all rows and compare flags of updated rows and new row.
+
 
 Sample 4: Copying Rows
 ----------------------
