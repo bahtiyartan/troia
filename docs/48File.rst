@@ -9,9 +9,9 @@ File Operations
 Introduction
 ------------
 
-As mentioned before TROIA platform has an multitier architecture. As a result of this architecture, some file operations are available in server, client or both client and server. Even if some file operations are available on client side, (as all TROIA commands) file commands run on server side and returns result to client. 
+As mentioned before, TROIA platform has an multitier architecture. As a result of this architecture, some file operations are available in server, client or both client and server. Even if some file operations are available on client side, (as all TROIA commands) file commands run on server side and returns result to client. 
 
-In all file operations, client side path must be start with * character.
+Client side paths has * character as a prefix to separate them from a server side path. So programmers must send file pahts starting with * (star) character, to point a client side path.
 
 
 
