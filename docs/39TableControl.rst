@@ -78,6 +78,11 @@ Although sorting over right click menu is an user level operation and its not di
 
 Menu item that clears sorting information also fires **ColumnSort** event and clears system variables, but does not relocate rows to their previous position before the table sort.
 	
+
+Aggregate Commands/Calculating Subtotals
+----------------------------------------
+
+Calculating summary data's such as subtotals, maximum, minimum or average is very common operation in business layer applications. Aggregate commands eases calculating such summary information based on colum values.
 	
 Tree Tables
 -----------
