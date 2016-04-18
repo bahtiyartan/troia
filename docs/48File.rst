@@ -26,7 +26,9 @@ Client side paths has * character as a prefix to separate them from a server sid
 	STRPATH = 'C:\TMP\sourcefile.txt';
 	STRPATH = '\Files\sourcefile.txt';
 	
-Using relative paths on client side is not recommended, but it is more useful for server side to implement portable applications. Relative paths starts from the folder that application runs on. GETUSERINFO() system function returns some useful information for file operations on client side such as file separator, temp folder etc. Here is some useful information, returned by GETUSERINFO method. For more information about the method plese see TROIA Help:
+Using relative paths starts from user.dir on client side, but it is not recommended to use relative paths on client side.Relative paths is more useful for server side to implement portable applications, it starts from the folder that application runs on.
+
+GETUSERINFO() system function returns some useful information for file operations on client side such as file separator, temp folder etc. Here is some useful information, returned by GETUSERINFO method. For more information about the method plese see TROIA Help:
 
 ::
 
@@ -40,6 +42,7 @@ Using relative paths on client side is not recommended, but it is more useful fo
 	S1 = S1 + TOCHAR(10) + 'User Dir: ' + GETUSERINFO('user.dir');
 	S1 = S1 + TOCHAR(10) + 'Java Home: ' + GETUSERINFO('java.home');
 	S1 = S1 + TOCHAR(10) + 'File Enc: ' + GETUSERINFO('file.encoding');
+	S1 = S1 + TOCHAR(10) + 'SetGet Folder: ' + GETUSERINFO('user.setgetfolder');
 
 	STRINGVAR3 = S1;
 	
@@ -53,7 +56,7 @@ And here is the result of sample code, please run the code on your own client an
 	User Dir: C:\603server\toWeb
 	Java Home: C:\Program Files\Java\jre7
 	File Enc: Cp1254
-
+	SetGet Folder: C:\603server\RESOURCES\SETGET\LOCAL\IAS604502\btan\
 	
 
 
