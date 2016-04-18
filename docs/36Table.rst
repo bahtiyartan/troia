@@ -1097,7 +1097,8 @@ and
 
 Sample 2: Locating on Tables using Hash Index
 ---------------------------------------------
-.
+
+Define a table and fill table with all users in IASUSERS table. Print users whose creator user is missing on same user list. Please use only one SELECT statement.
 
 Sample 3: Sort Users Like a Tree
 --------------------------------
