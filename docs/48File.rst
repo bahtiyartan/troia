@@ -108,6 +108,59 @@ All basic file operations are performed on server side. But it is allowed to acc
 +------------+------------------+------------------+------------------+
 
 
+::
+
+	OBJECT: 
+		STRING STRPATH,
+		STRING STRINGVAR3;
+
+	STRPATH = '*C:\TMP\UnknownFile.txt';
+	STRINGVAR3 = 'Open File: ';
+	OPEN FILE STRPATH FORREAD;
+
+	IF SYS_STATUS == 0 THEN
+		STRINGVAR3 = STRINGVAR3 + 'successful' + TOCHAR(10);
+	ELSE
+		STRINGVAR3 = STRINGVAR3 + 'failed!' + TOCHAR(10);
+	ENDIF;
+
+	STRINGVAR3 =  STRINGVAR3 + 'Close File: ';
+	CLOSE FILE;
+
+	IF SYS_STATUS == 0 THEN
+		STRINGVAR3 = STRINGVAR3 + 'successful' + TOCHAR(10);
+	ELSE
+		STRINGVAR3 = STRINGVAR3 + 'failed!' + TOCHAR(10);
+	ENDIF;
+	
+	
+	
+::
+
+	OBJECT: 
+		STRING STRPATH,
+		STRING STRINGVAR3;
+
+	STRPATH = '*C:\TMP\NewFile.txt';
+	STRINGVAR3 = 'Open File: ';
+	OPEN FILE STRPATH FORNEW;
+
+	IF SYS_STATUS == 0 THEN
+		STRINGVAR3 = STRINGVAR3 + 'successful' + TOCHAR(10);
+	ELSE
+		STRINGVAR3 = STRINGVAR3 + 'failed!' + TOCHAR(10);
+	ENDIF;
+
+	STRINGVAR3 =  STRINGVAR3 + 'Close File: ';
+	CLOSE FILE;
+
+	IF SYS_STATUS == 0 THEN
+		STRINGVAR3 = STRINGVAR3 + 'successful' + TOCHAR(10);
+	ELSE
+		STRINGVAR3 = STRINGVAR3 + 'failed!' + TOCHAR(10);
+	ENDIF;
+
+
 Working With Multiple Files
 ===========================
 
