@@ -390,8 +390,8 @@ Copying Files
 	COPYFILE STRSOURCEPATH INTO STRDESTPATH;
 	
 
-Other File & Director Operations
---------------------------------
+Other File & Directory Operations
+---------------------------------
 
 Listing Files in a Directory
 ============================
@@ -431,7 +431,7 @@ File Compression
 .
 
 PDF File Operations
-===================
+-------------------
 
 .
 
