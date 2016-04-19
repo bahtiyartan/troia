@@ -430,7 +430,25 @@ Deleting Files
 
 Digesting Files
 ===============
-.
+
+::
+
+	DIGESTFILE {path} INTO {targetsymbol} [USING {hashingalgorithm}];
+
+::
+
+	OBJECT: 
+		STRING STRPATH;
+
+	STRPATH = '*C:\TMP\SourceFile3.txt';
+	COPYFILE STRPATH INTO 'SourceFileOnServer.txt';
+	DIGESTFILE 'SourceFileOnServer.txt' INTO STRINGVAR3 USING 'SHA1';
+	DELETEFILE 'SourceFileOnServer.txt';
+
+	DESTROYTABLE TMPTABLE;
+	FILELIST '.' TO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+	SORT TMPTABLE ON NAME;
 
 
 File Compression
