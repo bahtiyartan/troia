@@ -497,15 +497,6 @@ File Compression
 	DELETEFILE 'Demo.zip';
 
 
-PDF File Operations
--------------------
-
-.
-
-Working With Images
--------------------
-.
-
 Sample 1: Writing Files
 ---------------------------------
 
