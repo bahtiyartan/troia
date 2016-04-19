@@ -168,7 +168,6 @@ Working With Multiple Files
 
 FILEID is optional argument for both OPEN FILE and CLOSE FILE commands. It defines a unique name for opened file. As default, system allow does not allow opening multiple files concurrently. Here is an invalid file operation, please try to find why this sample is an invalid logically.
 
-Here 
 ::
 
 	/* !!! Warning: This is an invalid code */
@@ -192,7 +191,10 @@ Here
 	
 If you programmers want to open another file before closing first one, they must be provide FILEID for each command. FILEID is a unique id and shows which file will be affected from the operation. If FILEID is not provided, system uses a defult file id. Correct code to open multiple files concurrently is below, in this example system is able to know which file will be closed on each close attempt.
 
-OBJECT: 
+
+::
+
+	OBJECT: 
 		STRING STRPATH1,
 		STRING STRPATH2;
 
@@ -210,7 +212,7 @@ OBJECT:
 	
 	CLOSE FILE FILEID F1;
 	
-As it is obvious, each file access requires a FILEID parameter, to determine which file will be modified or read, so all file manipulation commands get FILEID parameter.
+As it is obvious that each file access requires a FILEID parameter, to determine which file will be modified or read, so all file manipulation commands get FILEID parameter.
 
 Reading Files & Writing Files
 -----------------------------
