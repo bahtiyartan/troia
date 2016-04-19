@@ -4,7 +4,7 @@
 File Operations
 ===============
 
-*File operations, is one of the basic functionalities of programming languages. In TROIA programming language, all file operations are simplified and has extended features to help programmers. This sections aims to introduce basic file operations and other extended features to work on different file formats.*
+*File operations, is one of the basic functionalities of programming languages. In TROIA programming language, file operations are simplified and has extended features to help programmers. This sections aims to introduce basics of file operations and extended features to work on different file formats*
 
 Introduction
 ------------
