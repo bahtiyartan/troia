@@ -395,13 +395,30 @@ Other File & Director Operations
 
 Listing Files in a Directory
 ============================
-.
+
+::
+
+	OBJECT: 
+		STRING STRPATH;
+
+	STRPATH = '*C:\TMP\';
+
+	DESTROYTABLE TMPTABLE;
+	FILELIST STRPATH TO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
 
 
 Deleting Files
 ==============
 
-.
+::
+
+	OBJECT: 
+		STRING STRPATH;
+
+	STRPATH = '*C:\TMP\SourceFile3_Copy.txt';
+	DELETEFILE STRPATH;
+
 
 Digesting Files
 ===============
@@ -409,7 +426,7 @@ Digesting Files
 
 
 File Compression
-================
+----------------
 
 .
 
