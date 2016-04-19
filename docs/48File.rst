@@ -93,7 +93,7 @@ CLOSE FILE command closes the file. As default it takes no argument because it c
 
 	CLOSE FILE [FILEID { fileid }];
 
-All basic file operations are performed on server side. But it is allowed to access client side files. System copies client side file to server and sends to client after the operation. If file transfer is not necessary system does not copy opened file. Here is the matrice that shows the operation due to file open modes:
+All basic file operations are performed on server side. But it is allowed to access client side files. System copies client side file to server and sends to client after the operation. If file transfer is not necessary due to open mode system does not copy opened file. On database transactions it is not recommended to access files on client side. Due to EnableDBTransactionUnityCheck configuration system may show an warning messages when accessing file in client side inside a database transaction. For more detail please see related sections. Here is the matrix that shows the operation due to file open modes:
 
 +------------+------------------+------------------+------------------+
 |            |   FORREAD        | FORAPPEND        | FORNEW           |
@@ -106,7 +106,6 @@ All basic file operations are performed on server side. But it is allowed to acc
 | CLOSE FILE | Just close file  | file from server | file from server |
 |            |                  | to client        | to client.       |
 +------------+------------------+------------------+------------------+
-
 
 Both CLOSE FILE and OPEN FILE commands set SYS_STATUS to 1, if operation fails. Also SYS_STATUSERROR is set to error message. Here is an example that tries to read an unexisting file. Reading an unexisting file is an error, but appending to an unexisting file is not error. Here is two examples that shows successful and unsuccessful attempts of opening/closing files:
 
@@ -161,6 +160,8 @@ Both CLOSE FILE and OPEN FILE commands set SYS_STATUS to 1, if operation fails. 
 	ELSE
 		STRINGVAR3 = STRINGVAR3 + 'failed!' + TOCHAR(10);
 	ENDIF;
+	
+All open files must be closed by programmer, in other words; open files after file operations end are considered TROIA programming errors.
 
 
 Working With Multiple Files
@@ -214,23 +215,30 @@ If you programmers want to open another file before closing first one, they must
 	
 As it is obvious that each file access requires a FILEID parameter, to determine which file will be modified or read, so all file manipulation commands get FILEID parameter.
 
-Reading Files & Writing Files
+
+Writing Files & Reading Files
 -----------------------------
 
-.
+Writing and reading are the most used and important file manipulation operations. Like other programming languages, before reading or writing files, file must be opened. 
+
+Writing Files
+=============
+
+::
+
+OBJECT: STRING SOURCE;
+
+SOURCE = '*C:\TMP\SOURCEFILE2.TXT';
+OPEN FILE SOURCE;
+PUT 'TEXT ';
+CLOSE FILE;
+
+
 
 Reading Files
 =============
 
 .
-
-
-Writing Files
-=============
-
-.
-
-
 
 
 Copying Files
