@@ -527,3 +527,13 @@ Modify the code that you write for previous example and write a TROIA code that
 				 another [7]
 	
 Please be sure that your code opens two files concurrently.
+
+Sample 3: Prepare Zip Content
+-----------------------------
+
+	- Prepare two files that contains digest data (SHA1) of two files.
+	- Create a zip file that contains 4 files.
+	- Copy zip file to client's temporary folder.
+	- Delete all temporary files in server.
+	
+	
