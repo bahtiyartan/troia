@@ -29,6 +29,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    42DatabaseAccess
    45DialogAdvanced
    48File
+   52FTP
    
    exception handling
    datemanipulation
