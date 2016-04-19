@@ -230,6 +230,7 @@ To write files PUT command is used. PUT supports encoding with CODEPAGE paramete
 
 	
 Here is a sample code which uses different variations of PUT command. Please check file content and compare with the code and its trace.
+
 ::
 
 	OBJECT: 
@@ -303,9 +304,9 @@ Modify the code that you write for previous example and write a TROIA code that
 	- opens a file
 	- read blocks until the end of file.
 	- write each word and its length to another file.
-		format : word->4
-		         another->7
-				 and->3
-				 another->7
+		format : word [4]
+		         another [7]
+				 and [3]
+				 another [7]
 	
 Please be sure that your code opens two files concurrently.
