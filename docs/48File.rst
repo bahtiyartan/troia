@@ -422,8 +422,12 @@ Working With Images
 -------------------
 .
 
-Sample 1: Reading & Writing Files
+Sample 1: Writing Files
 ---------------------------------
+
+Write a piece of TROIA code that:
+
+	- Writes the list of files in a given folder to a file.
 
 Sample 2: Working With Multiple Files
 -------------------------------------
