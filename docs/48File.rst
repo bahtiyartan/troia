@@ -481,8 +481,20 @@ File Compression
 	
 ::
 
-	
+	OBJECT: 
+		STRING STRPATH,
+		STRING STRPATH2;
 
+	STRPATH = '*C:\TMP\UnzippedSourceFile4.txt';
+	STRPATH2 = '*C:\TMP\UnzippedSourceFile5.txt';
+	COPYFILE '*C:\TMP\Demo.zip' INTO 'Demo.zip';
+
+	UNZIPFILE 'Demo.zip' INTO '.\';
+
+	COPYFILE  'ServerSourceFile4.txt' INTO STRPATH;
+	COPYFILE  'ServerSourceFile5.txt' INTO STRPATH2;
+
+	DELETEFILE 'Demo.zip';
 
 
 PDF File Operations
