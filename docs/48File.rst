@@ -249,6 +249,27 @@ Here is a sample code which uses different variations of PUT command. Please che
 	PUT STRVALUE, 'fifth line' CODEPAGE 'ISO8859_9';
 	CLOSE FILE;
 
+PUT command also has FILEID option to write files which have an id.
+	
+::
+
+	OBJECT: 
+		STRING STRPATH,
+		STRING STRPATH2;
+
+	STRPATH = '*C:\TMP\SourceFile4.txt';
+	STRPATH2 = '*C:\TMP\SourceFile5.txt';
+
+	OPEN FILE STRPATH FORNEW FILEID 'F1';
+	OPEN FILE STRPATH2 FORNEW FILEID 'F2';
+
+	PUT 'This is first file' FILEID 'F1';
+	PUT 'This is first second' FILEID 'F2';
+
+	CLOSE FILE FILEID 'F1';
+	CLOSE FILE FILEID 'F2';
+
+
 Reading Files
 =============
 
