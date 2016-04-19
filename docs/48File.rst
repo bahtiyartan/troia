@@ -454,7 +454,36 @@ Digesting Files
 File Compression
 ----------------
 
-.
+::
+
+	ZIPFILE {filepath} INTO {targetzipfile};
+
+::
+
+	OBJECT: 
+		STRING STRPATH,
+		STRING STRPATH2;
+
+	STRPATH = '*C:\TMP\SourceFile4.txt';
+	STRPATH2 = '*C:\TMP\SourceFile5.txt';
+
+	COPYFILE STRPATH INTO 'ServerSourceFile4.txt';
+	COPYFILE STRPATH2 INTO 'ServerSourceFile5.txt';
+
+	ZIPFILE 'ServerSourceFile4.txt|ServerSourceFile5.txt' INTO 'Demo.zip';
+
+	COPYFILE 'Demo.zip' INTO '*C:\TMP\Demo.zip';
+	DELETEFILE 'Demo.zip';
+	
+::
+
+	UNZIPFILE {zipfilepath} INTO {targetdirectory};
+	
+::
+
+	
+
+
 
 PDF File Operations
 -------------------
