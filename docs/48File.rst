@@ -108,6 +108,8 @@ All basic file operations are performed on server side. But it is allowed to acc
 +------------+------------------+------------------+------------------+
 
 
+Both CLOSE FILE and OPEN FILE commands set SYS_STATUS to 1, if operation fails. Also SYS_STATUSERROR is set to error message. Here is an example that tries to read an unexisting file. Reading an unexisting file is an error, but appending to an unexisting file is not error. Here is two examples that shows successful and unsuccessful attempts of opening/closing files:
+
 ::
 
 	OBJECT: 
@@ -164,9 +166,51 @@ All basic file operations are performed on server side. But it is allowed to acc
 Working With Multiple Files
 ===========================
 
-FILEID is optional argument for both OPEN FILE and CLOSE FILE commands. It defines a unique name for opened file. As default, system allow does not allow opening multiple files concurrently. If you programmers want to open another file before closing first one, he/she must be provide FILEID for each command. FILEID is a unique id and shows which file will be affected from the operation. If FILEID is not provided, system uses a defult file id.
+FILEID is optional argument for both OPEN FILE and CLOSE FILE commands. It defines a unique name for opened file. As default, system allow does not allow opening multiple files concurrently. Here is an invalid file operation, please try to find why this sample is an invalid logically.
 
-..sample
+Here 
+::
+
+	/* !!! Warning: This is an invalid code */
+	OBJECT: 
+		STRING STRPATH1,
+		STRING STRPATH2;
+
+	STRPATH1 = '*C:\TMP\NewFile1.txt';
+	STRPATH2 = '*C:\TMP\NewFile2.txt';
+	
+	OPEN FILE STRPATH1 FORNEW;
+	OPEN FILE STRPATH1 FORNEW;
+	
+	/* do something on files, part 1 */
+
+	CLOSE FILE;
+	
+	/* do somehing on files, part 2 */
+	
+	CLOSE FILE;
+	
+If you programmers want to open another file before closing first one, they must be provide FILEID for each command. FILEID is a unique id and shows which file will be affected from the operation. If FILEID is not provided, system uses a defult file id. Correct code to open multiple files concurrently is below, in this example system is able to know which file will be closed on each close attempt.
+
+OBJECT: 
+		STRING STRPATH1,
+		STRING STRPATH2;
+
+	STRPATH1 = '*C:\TMP\NewFile1.txt';
+	STRPATH2 = '*C:\TMP\NewFile2.txt';
+	
+	OPEN FILE STRPATH1 FORNEW FILEID F1;
+	OPEN FILE STRPATH1 FORNEW FILEID F2;
+	
+	/* do something on files, part 1 */
+
+	CLOSE FILE FILEID F2;
+	
+	/* do somehing on files, part 2 */
+	
+	CLOSE FILE FILEID F1;
+	
+As it is obvious, each file access requires a FILEID parameter, to determine which file will be modified or read, so all file manipulation commands get FILEID parameter.
 
 Reading Files & Writing Files
 -----------------------------
@@ -227,3 +271,18 @@ Working With Images
 
 Sample 1: Reading & Writing Files
 ---------------------------------
+
+Sample 2: Working With Multiple Files
+-------------------------------------
+
+Modify the code that you write for previous example and write a TROIA code that
+
+	- opens a file
+	- read blocks until the end of file.
+	- write each word and its length to another file.
+		format : word->4
+		         another->7
+				 and->3
+				 another->7
+	
+Please be sure that your code opens two files concurrently.
