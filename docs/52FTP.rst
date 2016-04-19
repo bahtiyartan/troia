@@ -33,26 +33,28 @@ Possible Problems about Installation
 
 Most possible problem about installation is missing required jar files. If jars are missing please TRACE your process and look for java.lang.NoClassDefFoundError on your trace file. SYS_STATUSERROR system symbol is another option to read java.lang.NoClassDefFoundError message. If you get this message please add required jars to Application Server’s class path and restart your application server.
 
-How It Works
-------------
 
 Connection Management
-=====================
+---------------------
 
-To download or upload a file from a file server firstly, a FTP/FTPS/SFTP session must be created. This session is created by MAKEFTPCONNECTION, and closed by CLOSEFTPCONNECTION commands. All file transfer operations and other ftp commands must be executed between these two commands.
+To download or upload a file from a file server firstly, a FTP/FTPS/SFTP session must be created. This session is created by MAKEFTPCONNECTION and closed by CLOSEFTPCONNECTION commands. All file transfer operations and other ftp commands must be executed between these two commands.
+
+..
+
 Every MAKEFTPCONNECTION creates a session between Application Server and file server. System allows creating multiple sessions to different file servers, but there is no need to create multiple sessions to same file server. Distinctive parameter between different servers is HOST parameter of connection, so system does not allow multiple connections to same host. Scope of connection management is ExecutionContext, so every Transaction or TROIA Component has its own connection pool.
-Multiple file transfers are allowed on a single connection.
-TROIA programmer is responsible close all connections after operation finished. Additionally system tries to kill remaining open connections before transaction close operation.
+
+
+Multiple file transfers are allowed on a single connection. TROIA programmer is responsible close all connections after operation finished. Additionally system tries to kill remaining open connections before transaction close operation.
 
 Working on a Directory
-======================
+----------------------
 
 After connection established to file server, a working directory is assigned to a client. So all commands executed in this path. Also, relative file paths are computed from this working directory.
 
 To read, currently which directory are you working on please use, FTPRUNCOMMAND’s CURRENTDIRECTORY variation? Changing working directory is possible with FTPRUNCOMMAND’s CHANGEDIRECTORY variation. To get detailed information about this commands please read FTP Commands section.
 
 Uploading & Download
-====================
+--------------------
 
 Uploading and downloading which are basic functionalities of FTP Infrastructure must be executed in session.  
 All upload and download paths are computed relatively from working directory.
@@ -60,12 +62,12 @@ User permissions are an important issue, if uploading and downloading files fail
 FTPUPLOAD, FTPDOWNLOAD commands are used to upload and download file. To get detailed information about this commands please read FTP Commands section.
 
 Creating and Deleting Folders & Files
-=====================================
+-------------------------------------
 
 Infrastructure allows TROIA programmer to create and delete folders on working directory.  These operations are executed on a ftp connection which is established by MAKEFTPCONNECTION command.
 To create and delete folders and delete files use FTPRUNCOMMAND command. To get detailed information about this command please read FTP Commands section.
 
 Listing Files
-=============
+-------------
 
 FTP Infrastructure supports listing files. Operation is fired by FTPRUNCOMMAND command’s LISTFILE variation and executed as working directory. Result of this command must be assigned to a table symbol, similar to FILELIST command. To get detailed information about this command please read FTP Commands section.
