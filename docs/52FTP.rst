@@ -40,7 +40,7 @@ Here is the syntax of the command:
 ::
 
 	MAKEFTPCONNECTION HOST {host} [PORT {port}] [USERNAME {username}] 
-	                                            [PASSW {password}][PROTOCOL {FTP|FTPS|SFTP}];
+	                              [PASSW {password}][PROTOCOL {FTP|FTPS|SFTP}];
 
 Every MAKEFTPCONNECTION creates a session between application server and file server. System allows creating multiple sessions to different file servers, but there is no need to create multiple sessions to same file server. Distinctive parameter between different servers is HOST parameter of connection, so system does not allow multiple connections to same host. Scope of connection management is execution context, so every transaction or TROIA component has its own connection pool.
 
@@ -51,6 +51,7 @@ TROIA programmer is responsible close all connections after operation finished. 
 	CLOSEFTPCONNECTION {host}
 
 Additionally system tries to kill remaining open connections before transaction close operation, but it is not recommended to leave ftp connections open after all ftp operations finished.
+
 
 Working on a Directory
 ----------------------
