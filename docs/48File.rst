@@ -107,7 +107,7 @@ All basic file operations are performed on server side. But it is allowed to acc
 |            |                  | to client        | to client.       |
 +------------+------------------+------------------+------------------+
 
-Both CLOSE FILE and OPEN FILE commands set SYS_STATUS to 1, if operation fails. Also SYS_STATUSERROR is set to error message. Here is an example that tries to read an unexisting file. Reading an unexisting file is an error, but appending to an unexisting file is not error. Here is two examples that shows successful and unsuccessful attempts of opening/closing files:
+Both CLOSE FILE and OPEN FILE commands set SYS_STATUS to 1, if operation fails. Also SYS_STATUSERROR is set to error message. Here is an example that tries to read an unexisting file. Reading an unexisting file is an error, but appending to an unexisting file is not error. All file operations automatically creates required folders, so using unexisting folders is not an error (provided that user have required permissions). Here is two examples that shows successful and unsuccessful attempts of opening/closing files:
 
 ::
 
@@ -133,8 +133,6 @@ Both CLOSE FILE and OPEN FILE commands set SYS_STATUS to 1, if operation fails. 
 	ELSE
 		STRINGVAR3 = STRINGVAR3 + 'failed!' + TOCHAR(10);
 	ENDIF;
-	
-	
 	
 ::
 
@@ -213,7 +211,7 @@ If you programmers want to open another file before closing first one, they must
 	
 	CLOSE FILE FILEID F1;
 	
-As it is obvious that each file access requires a FILEID parameter, to determine which file will be modified or read, so all file manipulation commands get FILEID parameter.
+As it is obvious that each file access requires a FILEID parameter, to determine which file will be modified or read, so all file manipulation commands get FILEID parameter. Please focus on FILEID syntax in file related commands.
 
 
 Writing Files & Reading Files
@@ -224,16 +222,31 @@ Writing and reading are the most used and important file manipulation operations
 Writing Files
 =============
 
+To write files PUT command is used. PUT supports encoding with CODEPAGE parameter, this encoding (utf-8, utf-16 etc) is used while converting given text to bytes. If encoding is not provided system uses ISO8859_9 as default encoding. Each PUT command adds a new line (\\n) and carriage return (\\r) character to the end of given parameters. To disable these two endline characters NODENDOFLINE optional parameter is used. 
+
 ::
 
-OBJECT: STRING SOURCE;
+	PUT {valuelist} [CODEPAGE {encoding}] [NOENDOFLINE] [FILEID {fileid}];
 
-SOURCE = '*C:\TMP\SOURCEFILE2.TXT';
-OPEN FILE SOURCE;
-PUT 'TEXT ';
-CLOSE FILE;
+	
+Here is a sample code which uses different variations of PUT command. Please check file content and compare with the code and its trace.
+::
 
+	OBJECT: 
+		STRING STRPATH;
 
+	OBJECT: 
+		STRING STRVALUE;
+
+	STRVALUE = 'This is ';
+	STRPATH = '*C:\TMP\SourceFile3.txt';
+	OPEN FILE STRPATH FORNEW;
+	PUT 'This is first line';
+	PUT STRVALUE, 'second line';
+	PUT STRVALUE NOENDOFLINE;
+	PUT 'third line';
+	PUT STRVALUE, 'fifth line' CODEPAGE 'ISO8859_9';
+	CLOSE FILE;
 
 Reading Files
 =============
