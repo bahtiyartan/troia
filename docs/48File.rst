@@ -398,6 +398,10 @@ Listing Files in a Directory
 
 ::
 
+	FILELIST {directorypath} TO {targettable};
+
+::
+
 	OBJECT: 
 		STRING STRPATH;
 
@@ -410,6 +414,10 @@ Listing Files in a Directory
 
 Deleting Files
 ==============
+
+::
+
+	DELTEFILE {filepath};
 
 ::
 
