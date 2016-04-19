@@ -264,7 +264,7 @@ PUT command also has FILEID option to write files which have an id.
 	OPEN FILE STRPATH2 FORNEW FILEID 'F2';
 
 	PUT 'This is first file' FILEID 'F1';
-	PUT 'This is first second' FILEID 'F2';
+	PUT 'This is second file' FILEID 'F2';
 
 	CLOSE FILE FILEID 'F1';
 	CLOSE FILE FILEID 'F2';
@@ -273,13 +273,121 @@ PUT command also has FILEID option to write files which have an id.
 Reading Files
 =============
 
-.
+::
+
+	GET {variablelist} [CODEPAGE {encoding}] [FILEID {fileid}];
+
+::
+
+	OBJECT: 
+		STRING STRPATH,
+		STRING STRINGVAR1,
+		STRING STRINGVAR3;
+
+	STRINGVAR3 = '';
+	STRPATH = '*C:\TMP\SourceFile3.txt';
+	OPEN FILE STRPATH FORREAD;
+
+	WHILE 1 
+	BEGIN
+		GET STRINGVAR1;
+
+		IF STRINGVAR1 == '' THEN
+			BREAK;
+		ENDIF;
+
+		STRINGVAR3 = STRINGVAR3 + STRINGVAR1 +  '/';
+	ENDWHILE;
+
+	CLOSE FILE;
+	
+::
+
+	OBJECT: 
+		STRING STRPATH,
+		STRING STRPATH2;
+
+	STRINGVAR3 = '';
+	STRPATH = '*C:\TMP\SourceFile4.txt';
+	STRPATH2 = '*C:\TMP\SourceFile5.txt';
+
+	OPEN FILE STRPATH FORREAD FILEID 'F1';
+	OPEN FILE STRPATH2 FORREAD FILEID 'F2';
+
+	WHILE 1 
+	BEGIN
+		GET STRINGVAR1 FILEID 'F1';
+
+		IF STRINGVAR1 == '' THEN
+			BREAK;
+		ENDIF;
+
+		STRINGVAR3 = STRINGVAR3 + STRINGVAR1 +  '/';
+	ENDWHILE;
+
+	STRINGVAR3 = STRINGVAR3 + TOCHAR(10);
+
+	WHILE 1 
+	BEGIN
+		GET STRINGVAR1 FILEID 'F2';
+
+		IF STRINGVAR1 == '' THEN
+			BREAK;
+		ENDIF;
+
+		STRINGVAR3 = STRINGVAR3 + STRINGVAR1 +  '/';
+	ENDWHILE;
+
+	CLOSE FILE FILEID 'F1';
+	CLOSE FILE FILEID 'F2';
+	
+	
+..getblock
+
+::
+
+	GETBLOCK {variable}, {delimiter} [CODEPAGE {encoding}] [FILEID {fileid}];
+	
+::
+
+	OBJECT: 
+		STRING STRPATH;
+
+	STRPATH = '*C:\TMP\SourceFile3.txt';
+
+	OPEN FILE STRPATH FORREAD;
+	GETBLOCK STRINGVAR3,' is ';
+	STRINGVAR3 = STRINGVAR3 + TOCHAR(10);
+	CLOSE FILE;
+
+::
+
+	OBJECT: 
+		STRING STRPATH;
+
+	STRPATH = '*C:\TMP\SourceFile3.txt';
+
+	OPEN FILE STRPATH FORREAD;
+	GETBLOCK STRINGVAR3,'';
+	STRINGVAR3 = STRINGVAR3 + TOCHAR(10);
+	CLOSE FILE;
+
+
 
 
 Copying Files
 -------------
 
-.
+::
+
+	OBJECT: 
+		STRING STRSOURCEPATH,
+		STRING STRDESTPATH;
+
+	STRSOURCEPATH = '*C:\TMP\SourceFile3.txt';
+	STRDESTPATH = '*C:\TMP\SourceFile3_Copy.txt';
+
+	COPYFILE STRSOURCEPATH INTO STRDESTPATH;
 	
 
 Other File & Director Operations
