@@ -224,7 +224,7 @@ Here is an example that lists and prints file on initial directory.
 	CLOSEFTPCONNECTION FTPHOST;
 
 
-Creating and Deleting Folders & Files
+Creating/Deleting Folders and Files
 -------------------------------------
 
 Infrastructure allows TROIA programmer to create and delete folders on working directory.  These operations are executed on a ftp connection which is established by MAKEFTPCONNECTION command.
