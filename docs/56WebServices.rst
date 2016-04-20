@@ -166,6 +166,22 @@ If communication is an encrypted connection, parameters must be encrypted by cli
 
 Parameters value can be compressed due to requirements of client application. For more information about compression issue please review “Compression” section. If parameters string compressed in an encrypted connection, client application must perform compression after encryption.
 
+Return Value of callService() Method
+====================================
+
+callService() method returns CaniasResponse which is a complex data type containing response, extra variables and some extra data about web service execution. All members of CaniasResponse complex type are listed below:
+
+- **Response (StringResponse) :** This field stores the returning value of TROIA Class method which is registered as WebService.
+	StringResponse complex type has two members. Value is requested string value. Compressed is a flag which shows whether value is compressed or not. If Compressed flag is set to false, Value filed stores return XML directly. Otherwise to get pure text, Value field must be decompressed. For more information about compression issue please review “Compression” section.
+	
+	If communication is an encrypted connection, StringResponse must be dencrypted by client application. For more information about encryption please review “Encryption” section.
+
+- **SYSStatus (Integer) :** After execution of TROIA Class method which is registered as web service, ApplicationServer returns latest value of SYSStatus symbol, so client application can use this value due to its requirements.
+	If web service cannot access application server or there is not a web service with given name SYSStatus value is set to 1 and StringResponse is set to empty string.
+			
+- **SYSStatusError (String) :** This field stores value SYSStatusError system symbol.
+
+- **RequestId (Integer) :** Web Service directly returns same value of callService() method’s RequestId parameter.
 
 
 
