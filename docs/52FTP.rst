@@ -13,8 +13,8 @@ FTP Operations are supported on builds after after 5.01.04 041203 in Secure File
 
 All FTP operations are performed on application server,so transferring files from/to client is not supported.
 
-Establishing Connection to FTP Server
--------------------------------------
+Connection to FTP Server
+------------------------
 
 All file server operations must be executed inside and file server connection which is established using MAKEFTPCONNECTION command. MAKEFTPCONNECTION command takes host, port, username and password to connect file server. Port parameter is optional and default ports are 21 for FTP, 990 for FTPS, 22 for SFTP. Also programmers must provide the connection protocol to MAKEFTPCONNECTON command. This option is not a symbol and must be selected on development phase. Protocol parameter is optional and default option is FTP.
 
