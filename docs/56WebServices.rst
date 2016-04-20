@@ -22,14 +22,12 @@ Installation
 
 ..Testing Web Service Installation
 
-Defining TROIA Methods as Web Service
--------------------------------------
+Service Definition & Permissions
+--------------------------------
 
 ..defining
 
-Web Service User Rights
-=======================
-.
+..user rights
 
 Log-in/Log-out over Web Service
 -------------------------------
