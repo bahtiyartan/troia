@@ -4,36 +4,19 @@
 Working with FTP Servers
 ========================
 
+*TROIA Platform supports file transfer operations between application server and file server. This section aims to introduce ftp operations and related commands.*
 
 Introduction
 ------------
 
-Supported Protocols
-===================
+FTP Operations are supported on builds after after 5.01.04 041203 in Secure File Transfer Protocol (also known as SFTP or SSH File Transfer Protocol), FTP (also known as File Transfer Protocol), FTPS (File Transfer Protocol SSL) protocols.
 
-Secure File Transfer Protocol (also known as SFTP or SSH File Transfer Protocol), FTP (also known as File Transfer Protocol), FTPS (File Transfer Protocol SSL) are supported protocols.
+All FTP operations are performed on application server,so transferring files from/to client is not supported.
 
+Establishing Connection to FTP Server
+-------------------------------------
 
-Installing FTP Functionality
-============================
-
-
-Minimum interpreter release that supports FTP functionality is 5.01.04 041203, to use FTP functionality. If you have an older release, please update your interpreter to given or newer versions.
-
-To enable FTP functionality following .jar files must be added to application servers’ class path:
-	ftp4j-1.7.2.jar	: (to enable FTP/FTPS protocols, newer releases must be approved by R&D department)
-	jsch-0.1.49.jar	: (to enable SFTP protocol, newer releases must be approved by R&D department)
-
-If this jar files are not included by Application Server’s class path, application server does not support any FTP functionality, but other functionalities are not affected.  Due to requirements  it is possible to add one of this two jars to enable only required protocols such as FTP/FTPS or SFTP.
-There is no need to add this jar files to client classpath, because all FTP processes are executed on server side.
-
-Most possible problem about installation is missing required jar files. If jars are missing please TRACE your process and look for java.lang.NoClassDefFoundError on your trace file. SYS_STATUSERROR system symbol is another option to read java.lang.NoClassDefFoundError message. If you get this message please add required jars to Application Server’s class path and restart your application server.
-
-
-Connection Management
----------------------
-
-All FTP/FTPS/SFTP operations must be executed after connection established. MAKEFTPCONNECTION command is used to create connection. MAKEFTPCONNECTION command takes host, port, username and password to connect file server. Port parameter is optional and default ports are 21 for FTP, 990 for FTPS, 22 for SFTP. Also programmers must provide the connection protocol to MAKEFTPCONNECTON command. This option is not a symbol and must be selected on development phase. Protocol parameter is optional and default option is FTP.
+All file server operations must be executed inside and file server connection which is established using MAKEFTPCONNECTION command. MAKEFTPCONNECTION command takes host, port, username and password to connect file server. Port parameter is optional and default ports are 21 for FTP, 990 for FTPS, 22 for SFTP. Also programmers must provide the connection protocol to MAKEFTPCONNECTON command. This option is not a symbol and must be selected on development phase. Protocol parameter is optional and default option is FTP.
 
 Here is the syntax of the command:
 
