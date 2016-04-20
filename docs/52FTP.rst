@@ -16,7 +16,9 @@ All FTP operations are performed on application server,so transferring files fro
 Connection to FTP Server
 ------------------------
 
-All file server operations must be executed inside and file server connection which is established using MAKEFTPCONNECTION command. MAKEFTPCONNECTION command takes host, port, username and password to connect file server. Port parameter is optional and default ports are 21 for FTP, 990 for FTPS, 22 for SFTP. Also programmers must provide the connection protocol to MAKEFTPCONNECTON command. This option is not a symbol and must be selected on development phase. Protocol parameter is optional and default option is FTP.
+All file server operations must be executed inside and file server connection which is established using MAKEFTPCONNECTION command. MAKEFTPCONNECTION command takes host, port, username and password to connect file server. Port parameter is optional and default ports are 21 for FTP, 990 for FTPS, 22 for SFTP. 
+
+Additionally, programmers must provide the connection protocol to MAKEFTPCONNECTON command. This option is not a symbol and must be selected on development phase. Protocol parameter is optional and default option is FTP.
 
 Here is the syntax of the command:
 
@@ -31,7 +33,7 @@ TROIA programmer is responsible close all connections after operation finished. 
 
 ::
 	
-	CLOSEFTPCONNECTION {host}
+	CLOSEFTPCONNECTION {host};
 
 Additionally system tries to kill remaining open connections before transaction close operation, but it is not recommended to leave ftp connections open after all ftp operations finished. Here is a sample code that connects an ftp server and closes connection. Please test the code with valid/invalid host and login cridentials.
 
