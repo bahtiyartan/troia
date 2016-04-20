@@ -50,7 +50,29 @@ TROIA programmer is responsible close all connections after operation finished. 
 	
 	CLOSEFTPCONNECTION {host}
 
-Additionally system tries to kill remaining open connections before transaction close operation, but it is not recommended to leave ftp connections open after all ftp operations finished.
+Additionally system tries to kill remaining open connections before transaction close operation, but it is not recommended to leave ftp connections open after all ftp operations finished. Here is a sample code that connects an ftp server and closes connection. Please test the code with valid/invalid host and login cridentials.
+
+::
+
+	OBJECT: 
+		STRING FTPHOST,
+		STRING FTPPASS,
+		STRING FTPUSER;
+
+	FTPHOST = ‘anyftp.com.tr’;
+	FTPUSER = ‘user;
+	FTPPASS = ‘password’;
+
+	MAKEFTPCONNECTION HOST FTPHOST USERNAME FTPUSER PASSW FTPPASS PROTOCOL FTP;
+
+	IF SYS_STATUS == 0 THEN
+		/* connection is successful */
+	ELSE
+		/* connection failed */
+	ENDIF;
+
+	CLOSEFTPCONNECTION FTPHOST;
+
 
 
 Possible Errors on FTP Connections
@@ -75,7 +97,7 @@ Working on a Directory
 
 After connection established to file server, a working directory is assigned to a client and all commands executed in this path. Also, relative file paths are computed from this working directory.
 
-To read, currently which directory are you working on FTPRUNCOMMAND’s CURRENTDIRECTORY variation is used. Changing working directory is possible with FTPRUNCOMMAND’s CHANGEDIRECTORY variation. This command also allows some other operations on FTP Server. Here is the syntax of two variations.
+To read, currently which directory are you working on FTPRUNCOMMAND’s CURRENTDIRECTORY variation is used. Changing working directory is possible with FTPRUNCOMMAND’s CHANGEDIRECTORY variation. This command also allows some other operations on FTP server for more information please see the command help. Here is the syntax of two variations.
 
 ::
 
@@ -85,7 +107,7 @@ To read, currently which directory are you working on FTPRUNCOMMAND’s CURRENTD
 Uploading & Download
 --------------------
 
-As main functionalities of ftp operations uploading and downloading files must be executed in a FTP connection which is established by MAKEFTPCONNECTION command. Also user information and permissions is about the connection.
+As main functionalities of ftp operations uploading and downloading files must be executed in a FTP connection which is established by MAKEFTPCONNECTION command. Also user information and permissions is about the connection. Both uploading and dowloading commands gets host which shows ftp connection to perform operation on.
 
 All upload and download paths are computed relatively from working directory. So programmers must be sure they are in correct working directory before upload and download files.
 
@@ -99,7 +121,7 @@ To download files FTPDOWNLOAD command is used. Here is the syntax of the command
 
 ::
 	
-	FTPDOWNLOAD {ftpserverpath} TO {localpath} FROM {host};
+	FTPDOWNLOAD {pathonftpserver} TO {localpath} FROM {host};
 	
 
 If downlaoding operation fails, system sets SYS_STATUS and SYS_STATUSERROR system variables, also exceptions are inserted to trace. Possible uploading problems are below:
@@ -111,7 +133,29 @@ If downlaoding operation fails, system sets SYS_STATUS and SYS_STATUSERROR syste
  - **there is not a ftp connection to host … :** invalid connection id, invalid host. Check your connection is open.
  
  - **permission failure:** check ftp user rights, whether user have required privileges to download file. 
+ 
+::
 
+	OBJECT: 
+		STRING FTPHOST,
+		STRING FTPPASS,
+		STRING FTPUSER,
+		STRING LOCALPATH,
+		STRING FTPSERVERPATH;
+
+	FTPHOST = ‘anyftp.com.tr’;
+	FTPUSER = ‘user;
+	FTPPASS = ‘password’;
+	FTPSERVERPATH = ‘file.xml’;
+	LOCALPATH = ‘TempFiles\file.xml’;
+
+	MAKEFTPCONNECTION HOST FTPHOST USERNAME FTPUSER PASSW FTPPASS PROTOCOL FTP;
+
+	IF SYS_STATUS == 0 THEN
+	FTPDOWNLOAD FTPSERVERPATH TO LOCALPATH FROM FTPHOST;
+	ENDIF;
+
+	CLOSEFTPCONNECTION FTPHOST;
 
 Uploading Files
 ===============
@@ -129,15 +173,83 @@ If uploading operation fails, system sets SYS_STATUS and SYS_STATUSERROR system 
  - **there is not a ftp connection to host … :** invalid connection id, invalid host. Check your connection is open.
  
  - **permission failure:** check ftp user rights, whether user have required privileges to upload file. 
+ 
+::
+
+	OBJECT: 
+		STRING FTPHOST,
+		STRING FTPPASS,
+		STRING FTPUSER,
+		STRING LOCALPATH,
+		STRING FTPSERVERPATH;
+
+	FTPHOST = ‘anyftp.com.tr’;
+	FTPUSER = ‘user;
+	FTPPASS = ‘password’;
+	FTPSERVERPATH = ‘file.xml’;
+
+	MAKEFTPCONNECTION HOST FTPHOST USERNAME FTPUSER PASSW FTPPASS PROTOCOL FTP;
+
+	IF SYS_STATUS == 0 THEN
+		FTPUPLOAD LOCALPATH TO FTPHOST;
+	ENDIF;
+
+	CLOSEFTPCONNECTION FTPHOST;
+
+
+Listing Files
+-------------
+
+FTP Infrastructure supports listing files. Operation is fired by FTPRUNCOMMAND command’s LISTFILE variation and executed as working directory. Result of this command must be assigned to a table symbol, similar to FILELIST command. This command also allows some other operations on FTP server for more information please see the command help. Here is the syntax to list files:
+
+::
+
+	FTPRUNCOMMAND FILELIST TO {targettable} ON {host};
+	
+	
+Here is an example that lists and prints file on initial directory.
+
+::
+	
+	OBJECT: 
+		STRING FTPHOST,
+		STRING FTPPASS,
+		STRING FTPUSER,
+		TABLE FILESTABLE,
+		STRING STRINGVAR3;
+
+	FTPHOST = ‘anyftp.com.tr’;
+	FTPUSER = ‘user;
+	FTPPASS = ‘password’;
+	DIRNAME = ‘myfolder’;
+
+	MAKEFTPCONNECTION HOST FTPHOST USERNAME FTPUSER PASSW FTPPASS PROTOCOL FTP;
+
+	IF SYS_STATUS == 0 THEN
+
+		FTPRUNCOMMAND FILELIST TO FILESTABLE ON FTPHOST;
+
+		LOOP AT FILESTABLE
+		BEGIN
+			STRINGVAR3 = STRINGVAR3 + FILESTABLE_NAME + TOCHAR(10);
+		ENDLOOP;
+
+	ENDIF;
+
+	CLOSEFTPCONNECTION FTPHOST;
 
 
 Creating and Deleting Folders & Files
 -------------------------------------
 
 Infrastructure allows TROIA programmer to create and delete folders on working directory.  These operations are executed on a ftp connection which is established by MAKEFTPCONNECTION command.
-To create and delete folders and delete files use FTPRUNCOMMAND command. To get detailed information about this command please read FTP Commands section.
+To create and delete folders and delete files use FTPRUNCOMMAND command. This command also allows some other operations on FTP server for more information please see the command help. Here is the syntax for directory and file operations:
 
-Listing Files
--------------
+::
 
-FTP Infrastructure supports listing files. Operation is fired by FTPRUNCOMMAND command’s LISTFILE variation and executed as working directory. Result of this command must be assigned to a table symbol, similar to FILELIST command. To get detailed information about this command please read FTP Commands section.
+	FTPRUNCOMMAND DELETEDIRECTORY| {pathonftpserver}} ON {host}; 
+	FTPRUNCOMMAND CREATEDIRECTORY {pathonftpserver}} ON {host}; 
+	FTPRUNCOMMAND DELETEFILE {pathonftpserver}} ON {host}; 
+
+
+
