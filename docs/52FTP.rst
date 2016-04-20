@@ -75,8 +75,8 @@ Both MAKEFTPCONNECTION and CLOSEFTPCONNECTION commands set SYS_STATUS and SYS_ST
 
 
 
-Working on a Directory
-----------------------
+Working Directory
+-----------------
 
 After connection established to file server, a working directory is assigned to a client and all commands executed in this path. Also, relative file paths are computed from this working directory.
 
