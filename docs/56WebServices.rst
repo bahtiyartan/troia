@@ -4,7 +4,7 @@
 Web Services
 ============
 
-*TROIA Platform supports file transfer operations between application server and file server. This section aims to introduce ftp operations and related commands.*
+*TROIA Platform supports defining web services/methods which allows 3rd party applications to access business applications/database over TROIA codes. This section aims to introduce TROIA Web Service infrastructure for 3rd party application developers.*
 
 Introduction
 ------------
@@ -34,12 +34,42 @@ Web Service User Rights
 Log-in/Log-out over Web Service
 -------------------------------
 
-..loginlogut
+login() method
+==============
+
+login () method creates a connector session on CANIAS Application Server if login credentials is correct.
+
+Client, Language, DBServer, DBName, ApplicationServer, Username are default login parameters. Password parameter can be passed as MD5 hash or pure password string, authentication sub system detects password format automatically.
+
+In addition to these parameters login method gets a boolean Encrypted flag. Encrypted flag enables encrypted connection between client application and CANIAS Web Service.
+
+Client application must be indicate whether compression will be enabled or not at callService() requests during the session. If client application sends true as compression parameter, server activates automatic compression subsystem.
+
+LCheck parameter is used internally; client application must pass an empty string as LCheck parameter.
+
+VKey parameter is used internally; client application must pass an empty string as VKey parameter.
+
+
+login() method returns LoginResponse complex type which has members below:
+
+ -**Success (Boolean) :** If login is successful, this field is set to true, otherwise false.
+ -**SessionId (String) :** This member returns user’s session id, otherwise. If login fails it is an empty string.
+ -**SecurityKey (String) :** Application Server returns a random security key for each successful login. Client application must pass this security key parameter while calling callService () method, to indicate it’s an authenticated application.
+ -**ContactNum (String) :** This member returns users ContactNum which is stored in CONTACTNUM column of IASUSERS table.
+ -**ErrorMessage (String) :** If login fails, this field returns login error message in given language; else this field is an empty string.
+ -**EncryptionKey (String):** If client application connects an encrypted connection, application server returns an EncryptionKey which will be used at service interactions. Client application must convert EncryptionKey to byte array using UTF8 encoding before using this key as encryption key.
+
+
+
+
 
 Listing Available Services
 --------------------------
 
-..listservices
+**listServices()** method of TROIA web service gets SessionId as string parameter and returns all available services as string array. **Web Services which user has not permission to call are not included in returning array.**
+ 
+If returning array does not include name of web service that you want to call, you must check whether your method is registered as web service and user who is connected as web service  client has permission to run registered service.
+
 
 Calling Services
 ----------------
@@ -66,6 +96,7 @@ Compression
 -----------
 
 If compression enabled and length of service’s string response is greater than minimum compress size(4000 characters), application server converts string data to byte array with UTF-8 encoding, compress byte array and creates Base64 String. If server makes compression over pure response string, Compress field of CaniasResponse is set to true. Thus, if Compress flag is set to true, client application must convert Base64 String to byte array, decompress and convert decompressed byte array to string with UTF-8 encoding. Application Server’s web service infrastructure uses Zip Stream (DEFAULT_STRATEGY) while compressing byte arrays.
+
 System does not apply compression to encrypted data.
 
 .. figure:: images/webservices/compression.png
