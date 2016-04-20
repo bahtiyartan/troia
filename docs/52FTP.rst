@@ -64,7 +64,7 @@ Both MAKEFTPCONNECTION and CLOSEFTPCONNECTION commands set SYS_STATUS and SYS_ST
  
  - **ftp connection is already exists to … :** System does not allow to create multiple connections to same file server. Please be sure that you closed your ftp connection. Additionally, multiple file transfe operations allowed on a single connections, so there is no need to create connection again.
  
- - **… Login or password incorrect! or … Auth Fail :** Invalid connection credentials
+ - **login or password incorrect! or … Auth Fail :** Invalid connection credentials
  
  - **request timeout while connecting host … :** To establish connection between application server and ftp server, max waiting period is 5 seconds. If ftp server does not send response of connection within 5 seconds, system sets this error to SYS_STATUSERROR 
 
@@ -73,9 +73,13 @@ Both MAKEFTPCONNECTION and CLOSEFTPCONNECTION commands set SYS_STATUS and SYS_ST
 Working on a Directory
 ----------------------
 
-After connection established to file server, a working directory is assigned to a client. So all commands executed in this path. Also, relative file paths are computed from this working directory.
+After connection established to file server, a working directory is assigned to a client and all commands executed in this path. Also, relative file paths are computed from this working directory.
 
-To read, currently which directory are you working on please use, FTPRUNCOMMAND’s CURRENTDIRECTORY variation? Changing working directory is possible with FTPRUNCOMMAND’s CHANGEDIRECTORY variation. To get detailed information about this commands please read FTP Commands section.
+To read, currently which directory are you working on FTPRUNCOMMAND’s CURRENTDIRECTORY variation is used. Changing working directory is possible with FTPRUNCOMMAND’s CHANGEDIRECTORY variation. This command also allows some other operations on FTP Server. Here is the syntax:
+
+::
+
+	FTPRUNCOMMAND {DELETEDIRECTORY|DELETEFILE|CHANGEDIRECTORY|CREATEDIRECTORY|CURRENTDIRECTORY} {pathonftpserver}} ON {host}; 
 
 Uploading & Download
 --------------------
