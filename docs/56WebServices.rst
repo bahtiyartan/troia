@@ -52,12 +52,12 @@ VKey parameter is used internally; client application must pass an empty string 
 
 login() method returns LoginResponse complex type which has members below:
 
- -**Success (Boolean) :** If login is successful, this field is set to true, otherwise false.
- -**SessionId (String) :** This member returns user’s session id, otherwise. If login fails it is an empty string.
- -**SecurityKey (String) :** Application Server returns a random security key for each successful login. Client application must pass this security key parameter while calling callService () method, to indicate it’s an authenticated application.
- -**ContactNum (String) :** This member returns users ContactNum which is stored in CONTACTNUM column of IASUSERS table.
- -**ErrorMessage (String) :** If login fails, this field returns login error message in given language; else this field is an empty string.
- -**EncryptionKey (String):** If client application connects an encrypted connection, application server returns an EncryptionKey which will be used at service interactions. Client application must convert EncryptionKey to byte array using UTF8 encoding before using this key as encryption key.
+ - **Success (Boolean) :** If login is successful, this field is set to true, otherwise false.
+ - **SessionId (String) :** This member returns user’s session id, otherwise. If login fails it is an empty string.
+ - **SecurityKey (String) :** Application Server returns a random security key for each successful login. Client application must pass this security key parameter while calling callService () method, to indicate it’s an authenticated application.
+ - **ContactNum (String) :** This member returns users ContactNum which is stored in CONTACTNUM column of IASUSERS table.
+ - **ErrorMessage (String) :** If login fails, this field returns login error message in given language; else this field is an empty string.
+ - **EncryptionKey (String):** If client application connects an encrypted connection, application server returns an EncryptionKey which will be used at service interactions. Client application must convert EncryptionKey to byte array using UTF8 encoding before using this key as encryption key.
 
 
 
