@@ -183,6 +183,28 @@ callService() method returns CaniasResponse which is a complex data type contain
 
 - **RequestId (Integer) :** Web Service directly returns same value of callService() method’s RequestId parameter.
 
+- **ExtraVariables (StringResponse) :** ExtraVariables member stores extra variables that are requested by client application. 
+	StringResponse complex type has two members. Value is requested string value. Compressed is a flag which shows whether value is compressed or not. If Compressed flag is set to false, Value filed stores return XML directly. Otherwise to get pure text, Value field must be decompressed. For more information about compression issue please review “Compression” section.
+	
+	Resulting value contains symbol name, symbol type and value as XML format. Format of extra variable xml is below:
+	
+	::
+	
+		<EXTRAVARIABLES>
+			< VARIABLE >
+				<NAME> … </ NAME >
+				<TYPE>…</ TYPE >
+				<VALUE>…</ VALUE >
+			</ VARIABLE >
+			< VARIABLE >
+				< NAME > … </ NAME >
+				< TYPE >…</ TYPE >
+				< VALUE >…</ VALUE >
+			</VARIABLE>
+			…
+		</ EXTRAVARIABLES >
+
+
 
 
 Encryption
