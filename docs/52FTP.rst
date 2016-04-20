@@ -60,7 +60,7 @@ Additionally system tries to kill remaining open connections before transaction 
 		STRING FTPUSER;
 
 	FTPHOST = ‘anyftp.com.tr’;
-	FTPUSER = ‘user;
+	FTPUSER = ‘user';
 	FTPPASS = ‘password’;
 
 	MAKEFTPCONNECTION HOST FTPHOST USERNAME FTPUSER PASSW FTPPASS PROTOCOL FTP;
@@ -144,7 +144,7 @@ If downlaoding operation fails, system sets SYS_STATUS and SYS_STATUSERROR syste
 		STRING FTPSERVERPATH;
 
 	FTPHOST = ‘anyftp.com.tr’;
-	FTPUSER = ‘user;
+	FTPUSER = ‘user';
 	FTPPASS = ‘password’;
 	FTPSERVERPATH = ‘file.xml’;
 	LOCALPATH = ‘TempFiles\file.xml’;
@@ -184,7 +184,7 @@ If uploading operation fails, system sets SYS_STATUS and SYS_STATUSERROR system 
 		STRING FTPSERVERPATH;
 
 	FTPHOST = ‘anyftp.com.tr’;
-	FTPUSER = ‘user;
+	FTPUSER = ‘user';
 	FTPPASS = ‘password’;
 	FTPSERVERPATH = ‘file.xml’;
 
@@ -219,7 +219,7 @@ Here is an example that lists and prints file on initial directory.
 		STRING STRINGVAR3;
 
 	FTPHOST = ‘anyftp.com.tr’;
-	FTPUSER = ‘user;
+	FTPUSER = ‘user';
 	FTPPASS = ‘password’;
 	DIRNAME = ‘myfolder’;
 
@@ -263,7 +263,7 @@ To create and delete folders and delete files use FTPRUNCOMMAND command. This co
 		TABLE FILESTABLE;
 
 	FTPHOST = ‘anyftp.com.tr’;
-	FTPUSER = ‘user;
+	FTPUSER = ‘user';
 	FTPPASS = ‘password’;
 	DIRNAME = ‘myfolder’;
 	
