@@ -75,19 +75,61 @@ Working on a Directory
 
 After connection established to file server, a working directory is assigned to a client and all commands executed in this path. Also, relative file paths are computed from this working directory.
 
-To read, currently which directory are you working on FTPRUNCOMMAND’s CURRENTDIRECTORY variation is used. Changing working directory is possible with FTPRUNCOMMAND’s CHANGEDIRECTORY variation. This command also allows some other operations on FTP Server. Here is the syntax:
+To read, currently which directory are you working on FTPRUNCOMMAND’s CURRENTDIRECTORY variation is used. Changing working directory is possible with FTPRUNCOMMAND’s CHANGEDIRECTORY variation. This command also allows some other operations on FTP Server. Here is the syntax of two variations.
 
 ::
 
-	FTPRUNCOMMAND {DELETEDIRECTORY|DELETEFILE|CHANGEDIRECTORY|CREATEDIRECTORY|CURRENTDIRECTORY} {pathonftpserver}} ON {host}; 
+	FTPRUNCOMMAND CURRENTDIRECTORY TO {targetvariable} ON {host};
+	FTPRUNCOMMAND CHANGEDIRECTORY {pathonftpserver}} ON {host};
 
 Uploading & Download
 --------------------
 
-Uploading and downloading which are basic functionalities of FTP Infrastructure must be executed in session.  
-All upload and download paths are computed relatively from working directory.
-User permissions are an important issue, if uploading and downloading files fails firstly check user permissions. User information is about your connection which is established by MAKEFTPCONNECTION command. It is possible to execute multiple upload and download operations on a connection.
-FTPUPLOAD, FTPDOWNLOAD commands are used to upload and download file. To get detailed information about this commands please read FTP Commands section.
+As main functionalities of ftp operations uploading and downloading files must be executed in a FTP connection which is established by MAKEFTPCONNECTION command. Also user information and permissions is about the connection.
+
+All upload and download paths are computed relatively from working directory. So programmers must be sure they are in correct working directory before upload and download files.
+
+Path which file downloaded to/uploaded from must be a valid path on application server. Paths starting with * (client side paths) are not valid for FTP operations. If files are located on client or must be downloaded to client, programmers must transfer file using related file commands.
+
+
+Downloading Files
+=================
+
+To download files FTPDOWNLOAD command is used. Here is the syntax of the command:
+
+::
+	
+	FTPDOWNLOAD {ftpserverpath} TO {localpath} FROM {host};
+	
+
+If downlaoding operation fails, system sets SYS_STATUS and SYS_STATUSERROR system variables, also exceptions are inserted to trace. Possible uploading problems are below:
+
+ - **invalid local path … :** local path is empty string or client side path (starts with *)
+ 
+ - **invalid ftp server path:** remote file path is empty string
+ 
+ - **there is not a ftp connection to host … :** invalid connection id, invalid host. Check your connection is open.
+ 
+ - **permission failure:** check ftp user rights, whether user have required privileges to download file. 
+
+
+Uploading Files
+===============
+
+To upload files FTPUPLOAD command is used. Here is the synta of the command:	
+
+::
+
+	FTPUPLOAD {localpath} TO {host};
+	
+If uploading operation fails, system sets SYS_STATUS and SYS_STATUSERROR system variables, also exceptions are inserted to trace. Possible uploading problems are below:
+
+ - **invalid local path … :** local path is empty string or client side path (starts with *)
+ 
+ - **there is not a ftp connection to host … :** invalid connection id, invalid host. Check your connection is open.
+ 
+ - **permission failure:** check ftp user rights, whether user have required privileges to upload file. 
+
 
 Creating and Deleting Folders & Files
 -------------------------------------
