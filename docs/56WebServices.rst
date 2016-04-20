@@ -91,7 +91,70 @@ callService() method is used for running a TROIA Class Method which is registere
 - **SecurityKey (String) :** SecurityKey which is supplied by a successful login response must be passed to callService() method. ApplicationServer compares session’s security key and request’s security key to state whether caller application is an authenticated application or not.
 - **ServiceId (String) :** ServiceId, key value while accessing all service information like service class, method name and web service rights. 
 	If given ServiceId is not registered, service call fails and return value shows service call’s failure message. Understanding whether a service call failed is possible using callService() method’s complex return value. For more information please review structure of CaniasResponse complex type.
-- **Parameters (String) :** Client applications can pass parameter to CANIAS Web Services as XML formatted String. Parameters format will be discussed detailly.
+- **Parameters (String) :** Client applications can pass parameter to CANIAS Web Services as XML formatted String.
+	callService() method gets parameters to pass TROIA method which is defined as web service. Default XML Format is like below:
+
+	::
+
+		<PARAMETERS>
+			<PARAM>firstparam</PARAM>
+			<PARAM>secondparam</PARAM>
+			…
+		</PARAMETERS>
+
+	<PARAM> element can define parameter encoding as plain or base64 like <PARAM encoding=”base64”> to indicate value of parameter is encoded as base64 string. If parameter encoded as base64 string, system converts base64 string to UTF-8 string before using parameter value. If param element contains special chars CDATA block can be used to force parsers ignore. Default value of encoding is plain. Example:
+
+	::
+
+		<PARAMETERS>
+			<PARAM encoding=”base64”>cGFyYW0x</PARAM>
+			<PARAM>secondparam</PARAM>
+			<PARAM><![CDATA[third param value contains > char]]> </PARAM>
+			…
+		</PARAMETERS>
+
+	Client applications are able to pass table and vectors as parameter to web service. In this case type of parameter must be indicated using type attribute in <PARAM> element. If parameter is a primitive type such as string, integer, long or decimal there is no need to add type attribute. If table or vector parameter is passed to a web service system automatically parses xml and creates a table or vector symbol. (Vectors are able to contain primitive variables such as string, integer, long, date etc.) Example:
+
+	::
+
+		<PARAMETERS>
+			<PARAM>firstparam</PARAM>
+			<PARAM>1</PARAM>
+			<PARAM>1.5</PARAM>
+			<PARAM TYPE=”TABLE”>
+				<TABLE_VARIABLE_NAME>
+					<ROW>
+						<COL1>row1 col1 value</COL1>
+						<COL2>row1 col1 value</COL2>
+					</ROW> 
+					<ROW>
+						<COL1>row2 col1 value</COL1>
+						<COL2>row2 col2 value</COL2>
+					</ROW>
+				</TABLE_VARIABLE_NAME>
+			</PARAM>
+			<PARAM TYPE=”VECTOR”>
+				<VECTOR_VARIABLE_NAME>
+					<ITEM>
+						<NAME>TROIASYMBOL1</NAME>
+						<TYPE>STRING</ TYPE >
+						<VALUE>value1</VALUE>
+					</ ITEM >
+					<ITEM>
+						<NAME>TROIASYMBOL2</NAME>
+						<TYPE>LONG</ TYPE >
+						<VALUE>3</VALUE>
+					</ ITEM > 
+				</ VECTOR _VARIABLE_NAME>
+			</PARAM>
+			<PARAM>another parameter</PARAM>
+			…
+		</PARAMETERS>
+
+	If communication is an encrypted connection, parameters must be encrypted by client application. For more information about web service please review “Encryption” section. 
+
+	Parameters value can be compressed due to requirements of client application. For more information about compression issue please review “Compression” section. If parameters string compressed in an encrypted connection, client application must perform compression after encryption.
+
 - **Compressed (Boolean) :** Indicates whether parameters are compressed or not. If parameters are compressed true value must be passed, otherwise false value must be passed.
 - **Permanent (Boolean) :** For each service call, application server opens a transaction automatically and executes all TROIA codes in this transaction. After procedure finished transaction is closed. If client application sends true as permanency option, application server does not close transaction, and next service codes are executed at same scope.
 - **ExtraVariables (String) :** CANIAS Web Service is able to return value of TROIA variables in addition to default return value. So if client application sends variable names as ExtraVariables parameter, application server returns value of any variable from any scope. If client application needs value of more than one TROIA variable, variable names must be passed as comma separated string.
@@ -103,68 +166,7 @@ callService() method is used for running a TROIA Class Method which is registere
 Format of Method Parameters
 ===========================
 
-callService() method gets parameters to pass TROIA method which is defined as web service. Default XML Format is like below:
 
-::
-
-	<PARAMETERS>
-		<PARAM>firstparam</PARAM>
-		<PARAM>secondparam</PARAM>
-		…
-	</PARAMETERS>
-
-<PARAM> element can define parameter encoding as plain or base64 like <PARAM encoding=”base64”> to indicate value of parameter is encoded as base64 string. If parameter encoded as base64 string, system converts base64 string to UTF-8 string before using parameter value. If param element contains special chars CDATA block can be used to force parsers ignore. Default value of encoding is plain. Example:
-
-::
-
-	<PARAMETERS>
-		<PARAM encoding=”base64”>cGFyYW0x</PARAM>
-		<PARAM>secondparam</PARAM>
-		<PARAM><![CDATA[third param value contains > char]]> </PARAM>
-		…
-	</PARAMETERS>
-
-Client applications are able to pass table and vectors as parameter to web service. In this case type of parameter must be indicated using type attribute in <PARAM> element. If parameter is a primitive type such as string, integer, long or decimal there is no need to add type attribute. If table or vector parameter is passed to a web service system automatically parses xml and creates a table or vector symbol. (Vectors are able to contain primitive variables such as string, integer, long, date etc.) Example:
-
-::
-
-	<PARAMETERS>
-		<PARAM>firstparam</PARAM>
-		<PARAM>1</PARAM>
-		<PARAM>1.5</PARAM>
-		<PARAM TYPE=”TABLE”>
-			<TABLE_VARIABLE_NAME>
-				<ROW>
-					<COL1>row1 col1 value</COL1>
-					<COL2>row1 col1 value</COL2>
-				</ROW> 
-				<ROW>
-					<COL1>row2 col1 value</COL1>
-					<COL2>row2 col2 value</COL2>
-				</ROW>
-			</TABLE_VARIABLE_NAME>
-		</PARAM>
-		<PARAM TYPE=”VECTOR”>
-			<VECTOR_VARIABLE_NAME>
-				<ITEM>
-					<NAME>TROIASYMBOL1</NAME>
-					<TYPE>STRING</ TYPE >
-					<VALUE>value1</VALUE>
-				</ ITEM >
-				<ITEM>
-					<NAME>TROIASYMBOL2</NAME>
-					<TYPE>LONG</ TYPE >
-					<VALUE>3</VALUE>
-				</ ITEM > 
-			</ VECTOR _VARIABLE_NAME>
-		</PARAM>
-		<PARAM>another parameter</PARAM>
-		…
-	</PARAMETERS>
-
-If communication is an encrypted connection, parameters must be encrypted by client application. For more information about web service please review “Encryption” section. 
-
-Parameters value can be compressed due to requirements of client application. For more information about compression issue please review “Compression” section. If parameters string compressed in an encrypted connection, client application must perform compression after encryption.
 
 Return Value of callService() Method
 ====================================
