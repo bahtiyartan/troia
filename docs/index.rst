@@ -30,6 +30,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    45DialogAdvanced
    48File
    52FTP
+   56WebServices
    
    exception handling
    datemanipulation
@@ -41,7 +42,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    
    ftpinfrastructure
    portcommunication
-   webservices and http
+   http operation
    xmlandjsonparsing
    
    authorization
