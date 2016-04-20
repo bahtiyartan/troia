@@ -137,13 +137,13 @@ callService() method is used for running a TROIA Class Method which is registere
 						<NAME>TROIASYMBOL1</NAME>
 						<TYPE>STRING</TYPE>
 						<VALUE>value1</VALUE>
-					</ ITEM>
+					</ITEM>
 					<ITEM>
 						<NAME>TROIASYMBOL2</NAME>
 						<TYPE>LONG</TYPE>
 						<VALUE>3</VALUE>
-					</ ITEM> 
-				</ VECTOR_VARIABLE_NAME>
+					</ITEM> 
+				</VECTOR_VARIABLE_NAME>
 			</PARAM>
 			<PARAM>another parameter</PARAM>
 			…
@@ -187,17 +187,17 @@ callService() method returns CaniasResponse which is a complex data type contain
 	
 		<EXTRAVARIABLES>
 			<VARIABLE>
-				<NAME> … </ NAME>
-				<TYPE>…</ TYPE>
-				<VALUE>…</ VALUE>
-			</ VARIABLE>
+				<NAME> … </NAME>
+				<TYPE>…</TYPE>
+				<VALUE>…</VALUE>
+			</VARIABLE>
 			<VARIABLE>
-				<NAME> … </ NAME>
-				<TYPE>…</ TYPE>
-				<VALUE>…</ VALUE>
+				<NAME> … </NAME>
+				<TYPE>…</TYPE>
+				<VALUE>…</VALUE>
 			</VARIABLE>
 			…
-		</ EXTRAVARIABLES>
+		</EXTRAVARIABLES>
 
 - **Messages (StringResponse) :** All TROIA messages created while TROIA code is running are stored by application server and returned at Messages field of CaniasResponse. 
 	
@@ -220,7 +220,7 @@ callService() method returns CaniasResponse which is a complex data type contain
 				<TYPE>…</TYPE>
 				<NUMBER>…</NUMBER>
 			</MESSAGE>
-		</ TROIAMESSAGES>
+		</TROIAMESSAGES>
 
 - **Compress (Boolean) :** If length of return value of TROIA class method’s is greater than 4000 characters. Application server compresses its value and sets this fields value is true. Otherwise it is set to false. 
 	
