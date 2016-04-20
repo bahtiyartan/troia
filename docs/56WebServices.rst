@@ -34,7 +34,7 @@ Web Service User Rights
 Log-in/Log-out over Web Service
 -------------------------------
 
-login() method
+login() Method
 ==============
 
 login () method creates a connector session on CANIAS Application Server if login credentials is correct.
@@ -58,6 +58,14 @@ login() method returns LoginResponse complex type which has members below:
  - **ContactNum (String) :** This member returns users ContactNum which is stored in CONTACTNUM column of IASUSERS table.
  - **ErrorMessage (String) :** If login fails, this field returns login error message in given language; else this field is an empty string.
  - **EncryptionKey (String):** If client application connects an encrypted connection, application server returns an EncryptionKey which will be used at service interactions. Client application must convert EncryptionKey to byte array using UTF8 encoding before using this key as encryption key.
+ 
+ 
+
+logout() Method
+===============
+
+logout() gets SessionId parameter as string and removes connector session which has given session id. Method returns true if log out operation is successful. 
+
 
 
 
