@@ -82,7 +82,19 @@ If returning array does not include name of web service that you want to call, y
 Calling Services
 ----------------
 
-..calling services
+callService() method is used for running a TROIA Class Method which is registered as a TROIA Web Service. Method has six input parameter. Detailed information about these input parameters are below:
+
+- **SessionId (String) :** Session Id must be stored by web service client and sent at all service calls. Session Id data is used for accessing correct connector session in application server.
+- **SecurityKey (String) :** SecurityKey which is supplied by a successful login response must be passed to callService() method. ApplicationServer compares session’s security key and request’s security key to state whether caller application is an authenticated application or not.
+- **ServiceId (String) :** ServiceId, key value while accessing all service information like service class, method name and web service rights. If given ServiceId is not registered, service call fails and return value shows service call’s failure message. Understanding whether a service call failed is possible using callService() method’s complex return value. For more information please review structure of CaniasResponse complex type.
+- **Parameters (String) :** Client applications can pass parameter to CANIAS Web Services as XML formatted String. Parameters format will be discussed detailly.
+- **Compressed (Boolean) :** Indicates whether parameters are compressed or not. If parameters are compressed true value must be passed, otherwise false value must be passed.
+- **Permanent (Boolean) :** For each service call, application server opens a transaction automatically and executes all TROIA codes in this transaction. After procedure finished transaction is closed. If client application sends true as permanency option, application server does not close transaction, and next service codes are executed at same scope.
+- **ExtraVariables (String) :** CANIAS Web Service is able to return value of TROIA variables in addition to default return value. So if client application sends variable names as ExtraVariables parameter, application server returns value of any variable from any scope. If client application needs value of more than one TROIA variable, variable names must be passed as comma separated string.
+	Returning complex types like table and class instance is not supported.
+	
+- **RequestId (Integer) :** Request Id is simple id number of each service call. ApplicationServer returns response of a request with same id number, so client applications can find request and response pairs. Due to client application architecture, this number can be useless. If client application does not use a request and response id information send 0 (zero) or any other number to callService() method.
+
 
 
 Encryption
