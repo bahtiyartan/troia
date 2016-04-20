@@ -82,6 +82,9 @@ If returning array does not include name of web service that you want to call, y
 Calling Services
 ----------------
 
+callService() method
+====================
+
 callService() method is used for running a TROIA Class Method which is registered as a TROIA Web Service. Method has six input parameter. Detailed information about these input parameters are below:
 
 - **SessionId (String) :** Session Id must be stored by web service client and sent at all service calls. Session Id data is used for accessing correct connector session in application server.
@@ -95,6 +98,74 @@ callService() method is used for running a TROIA Class Method which is registere
 	Returning complex types like table and class instance is not supported.
 	
 - **RequestId (Integer) :** Request Id is simple id number of each service call. ApplicationServer returns response of a request with same id number, so client applications can find request and response pairs. Due to client application architecture, this number can be useless. If client application does not use a request and response id information send 0 (zero) or any other number to callService() method.
+
+
+Format of Method Parameters
+===========================
+
+callService() method gets parameters to pass TROIA method which is defined as web service. Default XML Format is like below:
+
+::
+
+	<PARAMETERS>
+		<PARAM>firstparam</PARAM>
+		<PARAM>secondparam</PARAM>
+		…
+	</PARAMETERS>
+
+<PARAM> element can define parameter encoding as plain or base64 like <PARAM encoding=”base64”> to indicate value of parameter is encoded as base64 string. If parameter encoded as base64 string, system converts base64 string to UTF-8 string before using parameter value. If param element contains special chars CDATA block can be used to force parsers ignore. Default value of encoding is plain. Example:
+
+::
+
+	<PARAMETERS>
+		<PARAM encoding=”base64”>cGFyYW0x</PARAM>
+		<PARAM>secondparam</PARAM>
+		<PARAM><![CDATA[third param value contains > char]]> </PARAM>
+		…
+	</PARAMETERS>
+
+Client applications are able to pass table and vectors as parameter to web service. In this case type of parameter must be indicated using type attribute in <PARAM> element. If parameter is a primitive type such as string, integer, long or decimal there is no need to add type attribute. If table or vector parameter is passed to a web service system automatically parses xml and creates a table or vector symbol. (Vectors are able to contain primitive variables such as string, integer, long, date etc.) Example:
+
+::
+
+	<PARAMETERS>
+		<PARAM>firstparam</PARAM>
+		<PARAM>1</PARAM>
+		<PARAM>1.5</PARAM>
+		<PARAM TYPE=”TABLE”>
+			<TABLE_VARIABLE_NAME>
+				<ROW>
+					<COL1>row1 col1 value</COL1>
+					<COL2>row1 col1 value</COL2>
+				</ROW> 
+				<ROW>
+					<COL1>row2 col1 value</COL1>
+					<COL2>row2 col2 value</COL2>
+				</ROW>
+			</TABLE_VARIABLE_NAME>
+		</PARAM>
+		<PARAM TYPE=”VECTOR”>
+			<VECTOR_VARIABLE_NAME>
+				<ITEM>
+					<NAME>TROIASYMBOL1</NAME>
+					<TYPE>STRING</ TYPE >
+					<VALUE>value1</VALUE>
+				</ ITEM >
+				<ITEM>
+					<NAME>TROIASYMBOL2</NAME>
+					<TYPE>LONG</ TYPE >
+					<VALUE>3</VALUE>
+				</ ITEM > 
+			</ VECTOR _VARIABLE_NAME>
+		</PARAM>
+		<PARAM>another parameter</PARAM>
+		…
+	</PARAMETERS>
+
+If communication is an encrypted connection, parameters must be encrypted by client application. For more information about web service please review “Encryption” section. 
+
+Parameters value can be compressed due to requirements of client application. For more information about compression issue please review “Compression” section. If parameters string compressed in an encrypted connection, client application must perform compression after encryption.
+
 
 
 
