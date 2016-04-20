@@ -251,6 +251,8 @@ To create and delete folders and delete files use FTPRUNCOMMAND command. This co
 	FTPRUNCOMMAND DELETEFILE {pathonftpserver} ON {host};
 	FTPRUNCOMMAND CREATEDIRECTORY {pathonftpserver} ON {host}; 
 	
+Here is an example, that creates a folder on ftp server, changes directory, uploads a local file, finally deletes file and directory.
+	
 ::
 
 	OBJECT: 
