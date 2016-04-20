@@ -163,11 +163,6 @@ callService() method is used for running a TROIA Class Method which is registere
 - **RequestId (Integer) :** Request Id is simple id number of each service call. ApplicationServer returns response of a request with same id number, so client applications can find request and response pairs. Due to client application architecture, this number can be useless. If client application does not use a request and response id information send 0 (zero) or any other number to callService() method.
 
 
-Format of Method Parameters
-===========================
-
-
-
 Return Value of callService() Method
 ====================================
 
