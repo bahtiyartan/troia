@@ -204,6 +204,33 @@ callService() method returns CaniasResponse which is a complex data type contain
 			…
 		</ EXTRAVARIABLES >
 
+- **Messages (StringResponse) :** All TROIA messages created while TROIA code is running are stored by application server and returned at Messages field of CaniasResponse. 
+	
+	StringResponse complex type has two members. Value is requested string value. Compressed is a flag which shows whether value is compressed or not. If Compressed flag is set to false, Value filed stores return XML directly. Otherwise to get pure text, Value field must be decompressed. For more information about compression issue please review “Compression” section. 
+	
+	Messages string contains message text, module, message type and message number as XML format. Format of Messages extra variable xml is below:
+	
+	::
+	
+		<TROIAMESSAGES>
+			<MESSAGE>
+				<TEXT>…</TEXT>
+				<MODULE> … </MODULE>
+				< TYPE >…</TYPE>
+				<NUMBER>…</NUMBER>
+			</MESSAGE>
+			<MESSAGE>
+				<TEXT>…</TEXT>
+				<MODULE> … </MODULE>
+				< TYPE >…</TYPE>
+				<NUMBER>…</NUMBER>
+			</MESSAGE>
+		</ TROIAMESSAGES>
+
+- **Compress (Boolean) :** If length of return value of TROIA class method’s is greater than 4000 characters. Application server compresses its value and sets this fields value is true. Otherwise it is set to false. 
+	
+	If data sent from web service is compressed, client application must decompress StringResponse field’s value. For more information about compression issue please review “Compression” section.
+
 
 
 
