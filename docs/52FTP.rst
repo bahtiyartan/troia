@@ -89,8 +89,8 @@ To read, currently which directory are you working on FTPRUNCOMMAND’s CURRENTD
 	FTPRUNCOMMAND CURRENTDIRECTORY TO {targetvariable} ON {host};
 	FTPRUNCOMMAND CHANGEDIRECTORY {pathonftpserver} ON {host};
 
-Uploading & Download
---------------------
+Transferring Files
+------------------
 
 As main functionalities of ftp operations uploading and downloading files must be executed in a FTP connection which is established by MAKEFTPCONNECTION command. Also user information and permissions is about the connection. Both uploading and dowloading commands gets host which shows ftp connection to perform operation on.
 
