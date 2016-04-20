@@ -105,7 +105,7 @@ callService() method is used for running a TROIA Class Method which is registere
 	::
 
 		<PARAMETERS>
-			<PARAM encoding=”base64”>cGFyYW0x</PARAM>
+			<PARAM encoding="base64">cGFyYW0x</PARAM>
 			<PARAM>secondparam</PARAM>
 			<PARAM><![CDATA[third param value contains > char]]> </PARAM>
 			…
@@ -119,7 +119,7 @@ callService() method is used for running a TROIA Class Method which is registere
 			<PARAM>firstparam</PARAM>
 			<PARAM>1</PARAM>
 			<PARAM>1.5</PARAM>
-			<PARAM TYPE=”TABLE”>
+			<PARAM TYPE="TABLE">
 				<TABLE_VARIABLE_NAME>
 					<ROW>
 						<COL1>row1 col1 value</COL1>
@@ -131,19 +131,19 @@ callService() method is used for running a TROIA Class Method which is registere
 					</ROW>
 				</TABLE_VARIABLE_NAME>
 			</PARAM>
-			<PARAM TYPE=”VECTOR”>
+			<PARAM TYPE="VECTOR">
 				<VECTOR_VARIABLE_NAME>
 					<ITEM>
 						<NAME>TROIASYMBOL1</NAME>
-						<TYPE>STRING</ TYPE >
+						<TYPE>STRING</TYPE>
 						<VALUE>value1</VALUE>
-					</ ITEM >
+					</ ITEM>
 					<ITEM>
 						<NAME>TROIASYMBOL2</NAME>
-						<TYPE>LONG</ TYPE >
+						<TYPE>LONG</TYPE>
 						<VALUE>3</VALUE>
-					</ ITEM > 
-				</ VECTOR _VARIABLE_NAME>
+					</ ITEM> 
+				</ VECTOR_VARIABLE_NAME>
 			</PARAM>
 			<PARAM>another parameter</PARAM>
 			…
@@ -186,18 +186,18 @@ callService() method returns CaniasResponse which is a complex data type contain
 	::
 	
 		<EXTRAVARIABLES>
-			< VARIABLE >
-				<NAME> … </ NAME >
-				<TYPE>…</ TYPE >
-				<VALUE>…</ VALUE >
-			</ VARIABLE >
-			< VARIABLE >
-				< NAME > … </ NAME >
-				< TYPE >…</ TYPE >
-				< VALUE >…</ VALUE >
+			<VARIABLE>
+				<NAME> … </ NAME>
+				<TYPE>…</ TYPE>
+				<VALUE>…</ VALUE>
+			</ VARIABLE>
+			<VARIABLE>
+				<NAME> … </ NAME>
+				<TYPE>…</ TYPE>
+				<VALUE>…</ VALUE>
 			</VARIABLE>
 			…
-		</ EXTRAVARIABLES >
+		</ EXTRAVARIABLES>
 
 - **Messages (StringResponse) :** All TROIA messages created while TROIA code is running are stored by application server and returned at Messages field of CaniasResponse. 
 	
@@ -211,13 +211,13 @@ callService() method returns CaniasResponse which is a complex data type contain
 			<MESSAGE>
 				<TEXT>…</TEXT>
 				<MODULE> … </MODULE>
-				< TYPE >…</TYPE>
+				<TYPE>…</TYPE>
 				<NUMBER>…</NUMBER>
 			</MESSAGE>
 			<MESSAGE>
 				<TEXT>…</TEXT>
 				<MODULE> … </MODULE>
-				< TYPE >…</TYPE>
+				<TYPE>…</TYPE>
 				<NUMBER>…</NUMBER>
 			</MESSAGE>
 		</ TROIAMESSAGES>
