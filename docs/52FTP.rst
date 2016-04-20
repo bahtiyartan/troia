@@ -53,6 +53,23 @@ TROIA programmer is responsible close all connections after operation finished. 
 Additionally system tries to kill remaining open connections before transaction close operation, but it is not recommended to leave ftp connections open after all ftp operations finished.
 
 
+Possible Errors on FTP Connections
+==================================
+
+Both MAKEFTPCONNECTION and CLOSEFTPCONNECTION commands set SYS_STATUS and SYS_STATUSERROR, if connect/disconnect process fails. Also all exceptional cases are inserted to trace files.  Here are some possible exceptions and solutions.
+
+ - **java.lang.NoClassDefFoundError:** missing required libraries, please read installation/deployment section.
+ 
+ - **com.ias.server.ftp.iasFileServerException: java.net.UnknownHostException:** Application server cannot access given host, check your connection.
+ 
+ - **ftp connection is already exists to … :** System does not allow to create multiple connections to same file server. Please be sure that you closed your ftp connection. Additionally, multiple file transfe operations allowed on a single connections, so there is no need to create connection again.
+ 
+ - **… Login or password incorrect! or … Auth Fail :** Invalid connection credentials
+ 
+ - **request timeout while connecting host … :** To establish connection between application server and ftp server, max waiting period is 5 seconds. If ftp server does not send response of connection within 5 seconds, system sets this error to SYS_STATUSERROR 
+
+
+
 Working on a Directory
 ----------------------
 
