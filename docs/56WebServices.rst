@@ -22,8 +22,8 @@ Installation
 
 ..Testing Web Service Installation
 
-Defining Methods as Web Service
--------------------------------
+Defining TROIA Methods as Web Service
+-------------------------------------
 
 ..defining
 
