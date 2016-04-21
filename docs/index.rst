@@ -29,9 +29,11 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    42DatabaseAccess
    45DialogAdvanced
    48File
+   50Components
    52FTP
    56WebServices
    60HTTPOperations
+   64Port
    
    exception handling
    datemanipulation
@@ -40,8 +42,6 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    components
    reports and printing
    inheritanceandcross
-  
-   portcommunication
    xmlandjsonparsing
    
    authorization
