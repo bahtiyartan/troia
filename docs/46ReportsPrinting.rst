@@ -1,10 +1,10 @@
 
 
 ==================
-Parsing XML & JSON
+Reports & Printing
 ==================
 
-*This sections aims to show xml & json parsing options*
+*This sections aims to introduce reports and printing options*
 
 
 
