@@ -34,6 +34,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    56WebServices
    60HTTPOperations
    64Port
+   68XMLjson
    
    exception handling
    datemanipulation
