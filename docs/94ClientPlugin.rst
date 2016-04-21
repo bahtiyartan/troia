@@ -39,8 +39,8 @@ There are two types of Canias Plugin. First one is executable plugin. Executable
 Second type of plugins is non-executable plugin. This plugins are not runnable applications. They are installed to plugin service as library file. Plugin service fires (calls) their methods when a related action occurs. In this type of plugins there is no need an extra running application. For example: logging applications, etc.
 
 
-How to Develop a Canias Plugin
-------------------------------
+How to Develop a Plugin
+-----------------------
 
 To connect a standalone application to Canias or develop a Canias Plugin caniasplugin.jar must be used as library. This api contains all required infrastructure communicate with Canias Clients. Using this api it is possible to send actions to Canias clients or listen actions from Canias Client. Two sample plugins(executable, non-executable) are supplied with this document.
  
