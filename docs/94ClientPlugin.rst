@@ -10,24 +10,24 @@ Client Plugin Development
 Introduction
 ------------
 
-Canias Plugins are third party applications or libraries that are able to communicate with Canias Client over Canias Plugin Service. It is possible to develop a wide range of plugins from simple logging applications to enterprise level business intelligence tools.
+Plugins are third party applications or libraries that are able to communicate with Canias Client over plugin service. It is possible to develop a wide range of plugins from simple logging applications to enterprise level business intelligence tools.
 
 
 Enabling Plugin
 ===============
 
-To enable plugin check Canias Menu -> Settings -> Plugin -> Enable Plugins checkbox.
+To enable plugin check Menu -> Settings -> Plugin -> Enable Plugins checkbox.
 
 Installation Details
 ====================
 
-If plugin service is enabled, Canias client deploys and starts Plugin Service automatically. Plugin Service is installed to {userhomefolder}\RESOURCES\PluginService\ folder. PluginService is also updated by Canias Client. Plugin Infrastructure is supported on 5.02.01 100801 and following versions.
+If plugin service is enabled, client deploys and starts Plugin Service automatically. Plugin Service is installed to {userhomefolder}\RESOURCES\PluginService\ folder. PluginService is also updated by Canias Client. Plugin Infrastructure is supported on 5.02.01 100801 and following versions.
 
 
 Components of Plugin Infrastructure
 ===================================
 
-**Plugin Service:** A standalone service that creates a communication infrastructure between Canias Clients and plugins. This service is installed and run automatically if there is an open Canias client that allows plugin service (Canias-> Preferences->Plugin->Enable Plugins) 
+**Plugin Service:** A standalone service that creates a communication infrastructure between client and plugins. This service is installed and run automatically if there is an open Canias client that allows plugin service (Canias-> Settings -> Plugin->Enable Plugins) 
 
 **caniasplugin.jar:** The library for developing all types of Canias Plugins. This jar is supplied by IAS.
 
