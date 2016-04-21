@@ -205,7 +205,7 @@ Here is a simple example that combines BREAK and CONTINUE statements to find lis
 	
 Please run the example above and try to find values of ODDNUMBERS and ODDNUMBERSTOTAL variables. And discuss the new behaviour of code, when you swap the orders of "if block 1" and "if block 2".
 
-Sample 1: Fibonacci Numbers
+Exercise 1: Fibonacci Numbers
 ----------------------------
 
 Fibonacci Numbers is a number sequence that each element is the sum of previous two items. In this example we will try to calculate fibonacci sequence whose maximum item is less than 100.
@@ -240,7 +240,7 @@ Fibonacci Numbers is a number sequence that each element is the sum of previous 
 	ENDWHILE;
 
 	
-Sample 2: Factorial
+Exercise 2: Factorial
 ----------------------------
 
 Calculating factorial of a given number with a simple while loop. This example can be tested in test transaction, such as "DEVT11 - Runcode Test Transaction"
