@@ -30,6 +30,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    42TableControl
    46DatabaseAccess
    49DialogAdvanced
+   50Controls
    52ReportsPrinting
    55InheritanceCross
    58File
@@ -39,8 +40,8 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    74HTTPOperations
    78Port
    82XMLjson
+   86Mailing
+   90SMS
+   94ClientPlugin
    
-   advancedcontrols
    authorization
-   mailing
-   smsinfrastructure
