@@ -1,10 +1,10 @@
 
 
-===============
-HTTP Operations
-===============
+======================================
+HTTP Operations & Calling Web Services
+======================================
 
-*File operations, is one of the basic functionalities of programming languages. In TROIA programming language, file operations are simplified and has extended features to help programmers. This sections aims to introduce basics of file operations and extended features.*
+*HTTP (Hypertext Transfer Protocol) is a widely used application protocol for distributed, collaborative information systems. Also web services is another widely used solution to collaborate heterogeneous systems over web. This sections aims to introduce HTTP operations and calling web services in TROIA*
 
 
 	
