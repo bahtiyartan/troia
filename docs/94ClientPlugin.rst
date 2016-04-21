@@ -24,10 +24,10 @@ Installation Details
 If plugin service is enabled, Canias client deploys and starts Plugin Service automatically. Plugin Service is installed to {userhomefolder}\RESOURCES\PluginService\ folder. PluginService is also updated by Canias Client. Plugin Infrastructure is supported on 5.02.01 100801 and following versions.
 
 
-Components of Canias Plugin
-===========================
+Components of Plugin Infrastructure
+===================================
 
-**Canias Plugin Service:** A standalone service that creates a communication infrastructure between Canias Clients and plugins. This service is installed and run automatically if there is an open Canias client that allows plugin service (Canias-> Preferences->Plugin->Enable Plugins) 
+**Plugin Service:** A standalone service that creates a communication infrastructure between Canias Clients and plugins. This service is installed and run automatically if there is an open Canias client that allows plugin service (Canias-> Preferences->Plugin->Enable Plugins) 
 
 **caniasplugin.jar:** The library for developing all types of Canias Plugins. This jar is supplied by IAS.
 
