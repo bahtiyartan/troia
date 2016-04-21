@@ -70,28 +70,28 @@ TROIA Commands for Plugin
 PLUGINACTION Command
 ====================
 
-PLUGINACTION ACTIONCLASS {actionclass} ACTIONTYPE {actiontype} [ACTIONVALUE {value}] [TARGET {pluginid}]
-This command sends action to plugins from TROIA layer.
+For sending an action to plugins from TROIA Layer, PLUGINACTION command is used, here is the syntax:
 
-- **ACTIONCLASS :** Action class shows plugin functionality. Plugin Service sends this action to related plugins using action class parameter.  In other words it is used for selecting which plugin must consume this action. 
+::
 
-- **ACTIONTYPE :**  To indicate which action will be performed on selected plugin. 
+	PLUGINACTION ACTIONCLASS {actionclass} ACTIONTYPE {actiontype} [ACTIONVALUE {value}] [TARGET {pluginid}]
 
-- **ACTIONVALUE :**  Optional action parameters. This value is passed to plugin as string. (pure string, xml, json, etc.) 
+Action class shows plugin functionality. Plugin Service sends this action to related plugins using action class parameter.  In other words it is used for selecting which plugin must consume this action. Second parameter, action type is used to determine which action will be performed on selected plugin. Action value is optional and it's value is passed to plugin as string. (pure string, xml, json, etc.)
 
-- **TARGET :** To indicate target plugin for action. To get pluginId of a executable/non-executable plugin, PLUGINVALIDATE command is used.
+Its also possible to send an action to a target plugin directly without plugin selection process. Target parameter is used to indicate target plugin for action. To get pluginId of a executable/non-executable plugin, PLUGINVALIDATE command is used.
 
 PLUGINVALIDATE Command
 ======================
 
-PLUGINVALIDATE [ACTIONCLASS {actionclass}] [VALIDATIONSTRING {valstring}] TO PLUGINCAPTION {targetcaption} PLUGINID {targetid}; 
+::
+
+	PLUGINVALIDATE [ACTIONCLASS {actionclass}] [VALIDATIONSTRING {valstring}] TO PLUGINCAPTION {plugincaption} PLUGINID {pluginid}; 
 
 For given action class, sends validation string to executable/non-executable plugins to check valid plugins for given parameters. If there is only one plugin, its caption and id are set to target parameters. If there are multiple plugins, a pop up appears to help user to select appropriate plugin for given action.
 
-- **ACTIONCLASS :** To get related plugins for given action class. It is optional, if it is not given in validate command validation string is sent to all executable/non-executable plugins.
-- **VALIDATIONSTRING :** Business layer validation string. This parameters is send to related plugins to check business layer data, to check whether plugin is valid for given action type. 
-- **PLUGINCAPTION :** Target symbol name for selected plugin caption.
-- **PLUGINID :** Target plugin id for selected plugin id. This value can be used as target PLUGINACTION command
+Action class is used to get related plugins for given action class. It is optional, if it is not given in validate command validation string is sent to all executable/non-executable plugins. Validate string is a business layer validation string. This parameters is send to related plugins to check business layer data, to check whether plugin is valid for given action type. 
+
+Plugin caption is a target string symbol to get name for selected plugin caption and  pluginid is a target string symbol to get selected plugin id. This value can be used as target PLUGINACTION command
 
 Plugin Class
 =============
