@@ -9,11 +9,26 @@ Web Services
 Introduction
 ------------
 
-..introduction
-
+ web service 1.0
+ 
+ web service 2.0
 
 WSDL Overview
 =============
+
++----------------+-----------------+------+
+| **Method**     | **Return Type** |      |
++----------------+-----------------+------+
+| login()        | LoginResponse   |      |
++----------------+-----------------+------+
+| logout()       | boolean         |      |
++----------------+-----------------+------+
+| callService()  | CaniasResponse  |      |
++----------------+-----------------+------+
+| listServices() | String array    |      |
++----------------+-----------------+------+
+
+
 
 Installation
 ------------
