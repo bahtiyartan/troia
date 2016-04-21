@@ -99,27 +99,35 @@ Plugin Class
 To access a plugin easily, with TROIA code you can use PLUGINACCESS class. Basic methods of this class are below:
 
 **VOID DOACTIONWP(STRING PACTIONCLASS, STRING PACTIONTYPE, STRING PACTIONVALUE)**
+
 This method sends given action parameters to PluginService. If class has a target plugin information this action is sent to target plugin automatically. This method uses PLUGINACTION command.
 
 **VOID SETDEFAULTACTIONCLASS(STRING PACTIONCLASS)**
+
 Sets default action class, and uses this action class for all actions.
 
 **VOID DOACTION(STRING PACTIONTYPE, STRING PACTIONVALUE)**
+
 This method sends given action parameters to PluginService. Uses default action class which is set by SETDEFAULTACTIONCLASS() method. If class has a target plugin information this action is sent to target plugin automatically. This method uses PLUGINACTION command.
 
 **STRING SELECTTARGET(STRING PACTIONCLASS, STRING PVALSTRING)**
+
 Checks appropriate plugins using given parameters. If there are multiple applications which is valid for given parameters, shows selection dialog on client side. If there is only one plugin it sets target plugin information for this PLUGINACCESS instance. Returns target plugin’s id.
 
 **VOID CLEARTARGET()**
+
 Clears target plugin id and caption.
 
 **STRING GETTARGET()**
+
 Returns target plugin id. If there is not a target plugin returns empty string. To select a target you must call SELECTTARGET() method.
 
 **STRING GETTARGETCAPTION()**
+
 Returns target plugin caption.
 
 **VOID CLEARTARGET()**
+
 Clear target plugin id and caption for this instance.
 
 
