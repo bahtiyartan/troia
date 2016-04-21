@@ -42,13 +42,13 @@ Second type of plugins is non-executable plugin. This plugins are not runnable a
 How to Develop a Canias Plugin
 ------------------------------
 
-To connect a standalone application to Canias or develop a Canias Plugin caniasplugin.jar must be used as library. This api contains all required infrastructure communicate with Canias Clients. Using this api it is possible to send actions to Canias clients or listen actions from Canias Client.
-Two sample plugins(executable, non-executable) are supplied with this document.
+To connect a standalone application to Canias or develop a Canias Plugin caniasplugin.jar must be used as library. This api contains all required infrastructure communicate with Canias Clients. Using this api it is possible to send actions to Canias clients or listen actions from Canias Client. Two sample plugins(executable, non-executable) are supplied with this document.
  
 Key Classes
 ===========
 
-To develop a Canias Plugin, you must only inherit iasAbstractPlugin class which is supplied in caniasplugin.jar.
+To develop a Canias Plugin, programmers must only inherit iasAbstractPlugin class which is supplied in caniasplugin.jar.
+
 iasAbstractPlugin has abstract methods that must be overridden by your plugin. When and PLUGINACTION command run on an TROIA application, doAction(iasPluginAction p) method is fired. To send events to Canias Client from a plugin use postEvent(iasPluginEvent e, String target) method.
 
 iasPluginAction class contains all required information such as action class, action type, action value, session id, transaction id, username and transaction. Event source is also contained by iasPluginAction. Using event source value, it is possible to send events to Canias Client which sends previous action.
@@ -98,7 +98,7 @@ Plugin caption is a target string symbol to get name for selected plugin caption
 Plugin Class
 =============
 
-To access a plugin easily, with TROIA code you can use PLUGINACCESS class. Basic methods of this class are below:
+To access a plugin easily, PLUGINACCESS which is a wrapper class is included in standard code database. Basic methods of this class are below:
 
 **VOID DOACTIONWP(STRING PACTIONCLASS, STRING PACTIONTYPE, STRING PACTIONVALUE)**
 
