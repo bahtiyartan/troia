@@ -86,7 +86,7 @@ PLUGINVALIDATE Command
 
 ::
 
-	PLUGINVALIDATE [ACTIONCLASS {actionclass}] [VALIDATIONSTRING {valstring}] 
+	PLUGINVALIDATE [ACTIONCLASS {actionclass}] [VALIDATIONSTRING {valstr}] 
 	                   TO PLUGINCAPTION {plugincaption} PLUGINID {pluginid}; 
 
 For given action class, sends validation string to executable/non-executable plugins to check valid plugins for given parameters. If there is only one plugin, its caption and id are set to target parameters. If there are multiple plugins, a pop up appears to help user to select appropriate plugin for given action.
