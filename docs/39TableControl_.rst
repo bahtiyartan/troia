@@ -122,10 +122,10 @@ Aggregate and Aggregate Commands
 .
 
 
-Sample 1: Colouring Rows & Row ToolTip
+Exercise 1: Colouring Rows & Row ToolTip
 --------------------------------------
 
 
-Sample 2: Hiding Rows
+Exercise 2: Hiding Rows
 ---------------------
 

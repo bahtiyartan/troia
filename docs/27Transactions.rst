@@ -109,7 +109,7 @@ To run a batch transaction, there are two methods. First one is client based bat
 
 For more configuration details about "batch transactions" please see help documents.
 
-Sample 1: Defining Transaction
+Exercise 1: Defining Transaction
 ------------------------------
 
 Please define a transaction that

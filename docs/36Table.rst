@@ -1080,7 +1080,7 @@ MERGETABLE has also optional WITHFLAGS variation whose behaviour is same with CO
 
 	SET TMPTABLE TO TABLE TMPTABLE;
 
-Sample 1: Compare LOOP Options
+Exercise 1: Compare LOOP Options
 ------------------------------
 
 Define a table and fill table with users whose PWDVALIDITY is more than 0. Write three LOOP statements :
@@ -1095,7 +1095,7 @@ and
 	- compare execution times of three variations.
 
 
-Sample 2: Locating on Tables using Hash Index
+Exercise 2: Locating on Tables using Hash Index
 ---------------------------------------------
 
 Define a table and fill table with all users in IASUSERS table. 
@@ -1103,10 +1103,10 @@ Define a table and fill table with all users in IASUSERS table.
 	- Print users whose creator user is missing on same user list. Please use only one SELECT statement.
 
 
-Sample 3: Sort Users Like a Tree
+Exercise 3: Sort Users Like a Tree
 --------------------------------
 
-Modify code that you write for sample 2.
+Modify code that you write for Exercise 2.
 
 	- Set CREATEDBY to empty string of users whose creator is missing.
 	- Create a tree hierarchy on user table using CREATEDBY column.
@@ -1114,7 +1114,7 @@ Modify code that you write for sample 2.
 	- print all persistency flags of all rows and compare flags of updated rows and new row.
 
 
-Sample 4: Copying Rows
+Exercise 4: Copying Rows
 ----------------------
 
 Create a new table variable and copy users who created at least one users to new table variable. Use the code that you write in previous example.

@@ -34,7 +34,7 @@ Tab Dialogs
 tab dialogs.
 
 
-Sample 1: Tab Dialogs
+Exercise 1: Tab Dialogs
 ------------------------
 
 tab dialogs.

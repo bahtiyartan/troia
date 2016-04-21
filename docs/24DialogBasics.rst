@@ -243,7 +243,7 @@ If running ONTIMER event takes longer time than time period, system does not cre
 	
 
 
-Sample 1: Counting Words
+Exercise 1: Counting Words
 ------------------------
 
 Please define a dialog that
@@ -256,7 +256,7 @@ Please define a dialog that
 and call your dialog from first dialog of DEVT11-Runcode Test Transaction
 
 
-Sample 2: Defining a Clock with Timer
+Exercise 2: Defining a Clock with Timer
 ----------------------------------------
 
 Please define a dialog that

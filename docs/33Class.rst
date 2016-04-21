@@ -147,7 +147,7 @@ Even if there are some differences compared to regular object oriented programmi
 Inheritance, both for dialogs and classes will be discussed detailly in next sections.
 	
 
-Sample 1: Scope of Class Member (Math Operation)
+Exercise 1: Scope of Class Member (Math Operation)
 --------------------------------------------------
 
 Define a class that:
@@ -163,7 +163,7 @@ After definition:
 and compare the results.
 
 
-Sample 2: Defining Unexisting Class Instances
+Exercise 2: Defining Unexisting Class Instances
 ---------------------------------------------
 
 Try to create an class instance using OBJECT command with an undefined class name and see the trace.
