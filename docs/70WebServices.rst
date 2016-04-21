@@ -122,7 +122,7 @@ callService() method is used for running a TROIA Class Method which is registere
 		<PARAMETERS>
 			<PARAM encoding="base64">cGFyYW0x</PARAM>
 			<PARAM>secondparam</PARAM>
-			<PARAM><![CDATA[third param value contains > char]]> </PARAM>
+			<PARAM><![CDATA[third param contains > char]]></PARAM>
 			…
 		</PARAMETERS>
 
