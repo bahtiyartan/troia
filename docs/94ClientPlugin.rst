@@ -64,8 +64,8 @@ To deploy second type of Canias Plugin (non-executable) plugin jar must be copie
 Executable plugins are standalone applications, so there is no need to any special deployment action.
 
 
-TROIA Commands for Plugin
--------------------------
+Sending Message to a Plugin
+---------------------------
 
 PLUGINACTION Command
 ====================
