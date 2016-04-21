@@ -31,6 +31,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    48File
    52FTP
    56WebServices
+   60HTTPOperations
    
    exception handling
    datemanipulation
@@ -39,10 +40,8 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    components
    reports and printing
    inheritanceandcross
-   
-   ftpinfrastructure
+  
    portcommunication
-   http operation
    xmlandjsonparsing
    
    authorization
