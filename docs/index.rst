@@ -25,20 +25,20 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    27Transactions
    30MessagesAlerts
    32DateManipulation
-   33Class
-   36Table
-   39TableControl
-   42DatabaseAccess
-   45DialogAdvanced
-   46ReportsPrinting
-   47InheritanceCross
-   48File
-   50Components
-   52FTP
-   56WebServices
-   60HTTPOperations
-   64Port
-   68XMLjson
+   35Class
+   38Table
+   42TableControl
+   46DatabaseAccess
+   49DialogAdvanced
+   52ReportsPrinting
+   55InheritanceCross
+   58File
+   62Components
+   66FTP
+   70WebServices
+   74HTTPOperations
+   78Port
+   82XMLjson
    
    advancedcontrols
    authorization
