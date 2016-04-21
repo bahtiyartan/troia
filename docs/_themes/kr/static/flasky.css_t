@@ -6,24 +6,12 @@
  * :license: Flask Design License, see LICENSE for details.
  */
 
-{% set page_width = '940px' %}
-{% set sidebar_width = '260px' %}
+{% set page_width = '950px' %}
+{% set sidebar_width = '280px' %}
 
 @import url("basic.css");
 
 /* -- page layout ----------------------------------------------------------- */
-
-.rst-versions {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 500px;
-    color: #fcfcfc;
-    background: #1f1d1d;
-    border-top: solid 10px #343131;
-    font-family: "Lato", "proxima-nova", "Helvetica Neue", Arial, sans-serif;
-    z-index: 400
-}
 
 body {
     font-family: 'goudy old style', 'minion pro', 'bell mt', Georgia, 'Hiragino Mincho Pro';
