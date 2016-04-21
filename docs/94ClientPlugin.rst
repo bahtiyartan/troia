@@ -75,7 +75,7 @@ For sending an action to plugins from TROIA Layer, PLUGINACTION command is used,
 ::
 
 	PLUGINACTION ACTIONCLASS {actionclass} ACTIONTYPE {actiontype}
-	                                       [ACTIONVALUE {value}] [TARGET {pluginid}]
+	                                [ACTIONVALUE {value}] [TARGET {pluginid}]
 
 Action class shows plugin functionality. Plugin Service sends this action to related plugins using action class parameter.  In other words it is used for selecting which plugin must consume this action. Second parameter, action type is used to determine which action will be performed on selected plugin. Action value is optional and it's value is passed to plugin as string. (pure string, xml, json, etc.)
 
@@ -87,7 +87,7 @@ PLUGINVALIDATE Command
 ::
 
 	PLUGINVALIDATE [ACTIONCLASS {actionclass}] [VALIDATIONSTRING {valstring}] 
-	                            TO PLUGINCAPTION {plugincaption} PLUGINID {pluginid}; 
+	                      TO PLUGINCAPTION {plugincaption} PLUGINID {pluginid}; 
 
 For given action class, sends validation string to executable/non-executable plugins to check valid plugins for given parameters. If there is only one plugin, its caption and id are set to target parameters. If there are multiple plugins, a pop up appears to help user to select appropriate plugin for given action.
 
