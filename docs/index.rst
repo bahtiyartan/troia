@@ -20,6 +20,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    15Operators
    18Flowcontrol
    21StringManipulations
+   23ExceptionHandling
    24DialogBasics
    27Transactions
    30MessagesAlerts
@@ -28,6 +29,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    39TableControl
    42DatabaseAccess
    45DialogAdvanced
+   47InheritanceCross
    48File
    50Components
    52FTP
@@ -40,9 +42,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    datemanipulation
    
    advancedcontrols
-   components
    reports and printing
-   inheritanceandcross
    xmlandjsonparsing
    
    authorization

@@ -497,17 +497,17 @@ File Compression
 	DELETEFILE 'Demo.zip';
 
 
-Sample 1: Writing Files
+Exercise 1: Writing Files
 ---------------------------------
 
 Write a piece of TROIA code that:
 
 	- Writes the list of files in a given folder to a file.
 
-Sample 2: Working With Multiple Files
+Exercise 2: Working With Multiple Files
 -------------------------------------
 
-Modify the code that you write for previous example and write a TROIA code that
+Modify the code that you write for previous exercise and write a TROIA code that
 
 	- opens a file
 	- read blocks until the end of file.
@@ -519,7 +519,7 @@ Modify the code that you write for previous example and write a TROIA code that
 	
 Please be sure that your code opens two files concurrently.
 
-Sample 3: Prepare Zip Content
+Exercise 3: Prepare Zip Content
 -----------------------------
 
 	- Prepare two files that contains digest data (SHA1) of two files.

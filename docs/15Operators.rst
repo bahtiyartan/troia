@@ -224,7 +224,7 @@ Here is as simple table that shows casting operation between source and destinat
 
 (??) Limits of Integer : .
 
-Sample 1: Integer Arithmetic
+Exercise 1: Integer Arithmetic
 ---------------------------
 
 Here is a simple arithmetic example. Please think on this example and try to find why DECIMALVAR1 and DECIMALVAR2 values are different even if divide operation is same.

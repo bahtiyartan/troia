@@ -181,7 +181,7 @@ The sample below tries to calculate length of each line.
 	ENDPARSE;
 
 
-Sample 1: Basic String Functions
+Exercise 1: Basic String Functions
 --------------------------------
 
 Here is a simple string functions example, please try to find return values after each function call.
@@ -207,7 +207,7 @@ Here is a simple string functions example, please try to find return values afte
 	STRMESSAGE = STRSTR(STRMESSAGE, 0, 5);	
 
 
-Sample 2: List Numeric Tokens of a String
+Exercise 2: List Numeric Tokens of a String
 -----------------------------------------
 
 ::
