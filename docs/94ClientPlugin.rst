@@ -4,7 +4,7 @@
 Client Plugin Development
 =========================
 
-*TROIA Platform offers an api to integrating 3rd party applications with TROIA client. This sections aims to introduce client plugin api to developers who wants to develop applications integrated with client application of TROIA Platform.*
+*TROIA Platform offers an api to integrating third party applications with TROIA client. This sections aims to introduce client plugin api to developers who wants to develop applications integrated with client application of TROIA Platform.*
 
 
 Introduction
