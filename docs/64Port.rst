@@ -1,8 +1,8 @@
 
 
-======================================
-HTTP Operations & Calling Web Services
-======================================
+=================================
+Port Communication (Serial & TCP)
+=================================
 
 *TROIA Platform supports port communications over serial ports. Also its possible to communicate over TCP protocol over TCP Ports. This sections aims to introduce communicating over serial ports and TCP protocol*
 

@@ -1,18 +1,35 @@
 
 
-======================================
-HTTP Operations & Calling Web Services
-======================================
+=======================
+Custom TROIA Components
+=======================
 
-*HTTP (Hypertext Transfer Protocol) is a widely used application protocol for distributed, collaborative information systems. Also web services is another widely used solution to collaborate heterogeneous systems over the web. This sections aims to introduce HTTP operations and calling web services in TROIA*
-
-
-Sending data over HTTP Post Method
-----------------------------------
+*Its possible to define custom business layer components and use them in different dialogs or other components. This sections aims to show how "custom components" are defined and used.*
 
 
-Calling Web Services
---------------------
+Introduction
+------------
+
+How Components Stored?
+======================
+
+Components & Scope
+------------------
+
+Defining Components
+-------------------
+
+Component Actions
+=================
+
+Using Components
+----------------
+
+Nested Components
+=================
+
+Calling Component Functions
+===========================
 
 
 
