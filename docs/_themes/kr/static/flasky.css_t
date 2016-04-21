@@ -7,7 +7,7 @@
  */
 
 {% set page_width = '940px' %}
-{% set sidebar_width = '280px' %}
+{% set sidebar_width = '250px' %}
 
 @import url("basic.css");
 
@@ -436,6 +436,14 @@ a:hover tt {
         display: none;
     }
 
+}
+
+.rst-badge {
+	background: #FF0000;
+}
+
+.rst-versions {
+	background: #FF0000;
 }
 
 /* misc. */
