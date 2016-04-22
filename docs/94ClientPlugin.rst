@@ -67,217 +67,7 @@ Executable plugins are standalone applications, so there is no need to any speci
 Sources of a Simple Generic Plugin
 ----------------------------------
 
-These example contains source codes of a simple plugin that prints each action to a textfield. Its just have three simple classes. Here is the first class of the application:
-
-.. code-block:: java
-
-    package com.ias.client.plugin.test;
-
-	import java.awt.Dimension;
-
-	import javax.swing.JFrame;
-
-	public class SampleApp {
-
-		public static void main(String[] args) {
-			SamplePluginFrame tool = new SamplePluginFrame();
-			tool.setSize(new Dimension(600, 750));
-			tool.setLocationRelativeTo(null);
-			tool.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			tool.setVisible(true);
-		}
-	}
-	
-And second class which consists user interface of sample plugin:
-
-.. code-block:: java
-
-	package com.ias.client.plugin.test;
-
-	import java.awt.BorderLayout;
-	import java.awt.GridLayout;
-	import java.awt.event.ActionEvent;
-	import java.awt.event.ActionListener;
-
-	import javax.swing.BorderFactory;
-	import javax.swing.JButton;
-	import javax.swing.JFrame;
-	import javax.swing.JLabel;
-	import javax.swing.JPanel;
-	import javax.swing.JScrollPane;
-	import javax.swing.JTextArea;
-	import javax.swing.JTextField;
-
-	import com.ias.client.plugin.iasPluginEvent;
-	import com.ias.client.plugin.iasPluginException;
-	import com.ias.client.plugin.iasPluginPrededefinedActionTypes;
-
-	@SuppressWarnings("serial")
-	public class SamplePluginFrame extends JFrame implements ActionListener {
-
-		private SamplePlugin m_iPlugin;
-
-		private String m_strSessionId;
-
-		JTextArea jIncomingActions = new JTextArea();
-
-		JButton btnConnect = new JButton("Connect");
-		JButton btnDisconnect = new JButton("Disconnect");
-
-		JTextField jTargetClient = new JTextField();
-		JTextField jActionType = new JTextField();
-		JTextField jActionValue = new JTextField();
-		JTextField jTransactionId = new JTextField();
-		JButton jPostAction = new JButton("Post Action");
-
-		public SamplePluginFrame() {
-			super();
-
-			m_strSessionId = "Session-" + ((int) (Math.random() * 1000));
-
-			this.setTitle("Sample Plugin Test (" + m_strSessionId + ")");
-
-			btnConnect.setActionCommand("connect");
-			btnConnect.addActionListener(this);
-
-			btnDisconnect.setActionCommand("disconnect");
-			btnDisconnect.addActionListener(this);
-			btnDisconnect.setEnabled(false);
-
-			JPanel jIncomingActionsPanel = new JPanel(new BorderLayout());
-
-			JScrollPane iPane = new JScrollPane(jIncomingActions);
-
-			jIncomingActionsPanel.add(iPane);
-			jIncomingActionsPanel.add(new JLabel("Incoming Actions"), BorderLayout.NORTH);
-
-			JPanel jMainPanel = new JPanel(new BorderLayout());
-			jMainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-			jMainPanel.add(jIncomingActionsPanel);
-
-			JPanel iHeaderPanel = new JPanel(new GridLayout(1, 3));
-			iHeaderPanel.add(btnConnect);
-			iHeaderPanel.add(btnDisconnect);
-			iHeaderPanel.setBorder(BorderFactory.createEmptyBorder(0, 0, 10, 0));
-
-			jMainPanel.add(iHeaderPanel, BorderLayout.NORTH);
-
-			//
-			JPanel iSouthPanel = new JPanel(new BorderLayout());
-
-			JLabel iFormHeader = new JLabel("Outgoing Action");
-
-			iFormHeader.setBorder(BorderFactory.createEmptyBorder(10, 0, 10, 0));
-			iSouthPanel.add(iFormHeader, BorderLayout.NORTH);
-
-			JPanel iOutgoingActionForm = new JPanel(new GridLayout(5, 2, 0, 3));
-			iOutgoingActionForm.add(new JLabel("TargetClient"));
-			iOutgoingActionForm.add(jTargetClient);
-
-			iOutgoingActionForm.add(new JLabel("ActionType"));
-			iOutgoingActionForm.add(jActionType);
-
-			iOutgoingActionForm.add(new JLabel("ActionValue"));
-			iOutgoingActionForm.add(jActionValue);
-
-			iOutgoingActionForm.add(new JLabel("TransactionId"));
-			iOutgoingActionForm.add(jTransactionId);
-
-			iOutgoingActionForm.add(new JLabel(""));
-			iOutgoingActionForm.add(jPostAction);
-			
-			jPostAction.setActionCommand("postaction");
-			jPostAction.addActionListener(this);
-
-			iSouthPanel.add(iOutgoingActionForm, BorderLayout.CENTER);
-
-			jMainPanel.add(iSouthPanel, BorderLayout.SOUTH);
-			
-			jActionType.setText(iasPluginPrededefinedActionTypes.CANIASLINK);
-			jActionValue.setText("canias://IASSALHEAD?parameters=CLIENT=00$COMPANY=02$DOCTYPE=D5$DOCNUM=00000000&mode=1&section=MAINDLG");
-
-			this.setContentPane(jMainPanel);
-
-			enableDisablecomponents(false);
-		}
-
-		private void enableDisablecomponents(boolean isConnected) {
-			btnConnect.setEnabled(!isConnected);
-			btnDisconnect.setEnabled(isConnected);
-
-			jTargetClient.setEnabled(isConnected);
-			jActionType.setEnabled(isConnected);
-			jActionValue.setEnabled(isConnected);
-			jTransactionId.setEnabled(isConnected);
-			jPostAction.setEnabled(isConnected);
-		}
-
-		@Override
-		public void actionPerformed(ActionEvent arg0) {
-
-			if (arg0.getActionCommand().equalsIgnoreCase("connect")) {
-
-				if (m_iPlugin == null || !m_iPlugin.isConnected()) {
-
-					try {
-
-						/*************************
-						 * START: Critical point
-						 * 
-						 * Create an instance and call establishConnection()
-						 ************************/
-
-						m_iPlugin = new SamplePlugin(this, m_strSessionId);
-						m_iPlugin.connect();
-
-						/*************************
-						 * END: Critical point.
-						 *************************/
-
-						enableDisablecomponents(true);
-
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-
-				}
-			} else if (arg0.getActionCommand().equalsIgnoreCase("disconnect")) {
-
-				try {
-					m_iPlugin.disconnect();
-					m_iPlugin = null;
-
-					enableDisablecomponents(false);
-
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-			} else if (arg0.getActionCommand().equalsIgnoreCase("postaction")) {
-
-				String strActionType = jActionType.getText();
-				String strActionValue = jActionValue.getText();
-				String strTargetClient = jTargetClient.getText();
-				
-				iasPluginEvent iEvent = new iasPluginEvent(strActionType, strActionValue);
-				
-				try {
-					m_iPlugin.postEvent(iEvent, strTargetClient);
-				} catch (iasPluginException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-
-		public void handleAction(String p_strAction, String p_strSource) {
-			jIncomingActions.setText(jIncomingActions.getText() + p_strAction + "\n");
-			
-			jTargetClient.setText(p_strSource);
-		}
-
-	}
-
-And third and most important class that inherits **iasAbstracPlugin** class which is provided in **caniasplugin.jar** library:
+These example contains source codes of a simple plugin (has only three class) that prints each action to a textfield. Here is the first and most important class that inherits **iasAbstracPlugin** class which is provided in **caniasplugin.jar** library:
 
 .. code-block:: java
 
@@ -389,6 +179,234 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		public String getAppInstanceKey() {
 			return m_strUniqueInstanceKey;
 		}
+	}
+
+And second class just for starting point of the application
+
+.. code-block:: java
+
+    package com.ias.client.plugin.test;
+
+	import java.awt.Dimension;
+
+	import javax.swing.JFrame;
+
+	public class SampleApp {
+
+		public static void main(String[] args) {
+			SamplePluginFrame tool = new SamplePluginFrame();
+			tool.setSize(new Dimension(600, 750));
+			tool.setLocationRelativeTo(null);
+			tool.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			tool.setVisible(true);
+		}
+	}
+	
+And third class which consists user interface of plugin:
+
+.. code-block:: java
+
+	package com.ias.client.plugin.test;
+
+	import java.awt.BorderLayout;
+	import java.awt.GridLayout;
+	import java.awt.event.ActionEvent;
+	import java.awt.event.ActionListener;
+
+	import javax.swing.BorderFactory;
+	import javax.swing.JButton;
+	import javax.swing.JFrame;
+	import javax.swing.JLabel;
+	import javax.swing.JPanel;
+	import javax.swing.JScrollPane;
+	import javax.swing.JTextArea;
+	import javax.swing.JTextField;
+
+	import com.ias.client.plugin.iasPluginEvent;
+	import com.ias.client.plugin.iasPluginException;
+	import com.ias.client.plugin.iasPluginPrededefinedActionTypes;
+
+	@SuppressWarnings("serial")
+	public class SamplePluginFrame extends JFrame
+		  implements ActionListener {
+
+		private SamplePlugin Plugin;
+		private String SessionId;
+
+		JTextArea jIncomingActions = new JTextArea();
+
+		JButton jConnect = new JButton("Connect");
+		JButton jDisconnect = new JButton("Disconnect");
+
+		JTextField jTargetClient = new JTextField();
+		JTextField jActionType = new JTextField();
+		JTextField jActionValue = new JTextField();
+		JTextField jTransactionId = new JTextField();
+		JButton jPostAction = new JButton("Post Action");
+
+		public SamplePluginFrame() {
+			super();
+
+			SessionId = "Session-"
+				  + ((int) (Math.random() * 1000));
+
+			this.setTitle(
+				  "Sample Plugin Test (" + SessionId + ")");
+
+			jConnect.setActionCommand("connect");
+			jConnect.addActionListener(this);
+
+			jDisconnect.setActionCommand("disconnect");
+			jDisconnect.addActionListener(this);
+			jDisconnect.setEnabled(false);
+
+			JPanel jIncomingActionsPanel = new JPanel(
+				  new BorderLayout());
+
+			JScrollPane iPane = new JScrollPane(jIncomingActions);
+
+			jIncomingActionsPanel.add(iPane);
+			JLabel jIncActions = new JLabel("Incoming Actions");
+			jIncomingActionsPanel.add(jIncActions,
+				  BorderLayout.NORTH);
+
+			JPanel jMainPanel = new JPanel(new BorderLayout());
+			jMainPanel.setBorder(BorderFactory
+				  .createEmptyBorder(10, 10, 10, 10));
+			jMainPanel.add(jIncomingActionsPanel);
+
+			JPanel iHeaderPanel = new JPanel(
+				  new GridLayout(1, 3));
+			iHeaderPanel.add(jConnect);
+			iHeaderPanel.add(jDisconnect);
+			iHeaderPanel.setBorder(
+				  BorderFactory.createEmptyBorder(0, 0, 10, 0));
+
+			jMainPanel.add(iHeaderPanel, BorderLayout.NORTH);
+
+			//
+			JPanel iSouthPanel = new JPanel(new BorderLayout());
+
+			JLabel iFormHeader = new JLabel("Outgoing Action");
+
+			iFormHeader.setBorder(
+				  BorderFactory.createEmptyBorder(10, 0, 10, 0));
+			iSouthPanel.add(iFormHeader, BorderLayout.NORTH);
+
+			JPanel iOutgoingActionForm = new JPanel(
+				  new GridLayout(5, 2, 0, 3));
+			iOutgoingActionForm.add(new JLabel("TargetClient"));
+			iOutgoingActionForm.add(jTargetClient);
+
+			iOutgoingActionForm.add(new JLabel("ActionType"));
+			iOutgoingActionForm.add(jActionType);
+
+			iOutgoingActionForm.add(new JLabel("ActionValue"));
+			iOutgoingActionForm.add(jActionValue);
+
+			iOutgoingActionForm.add(new JLabel("TransactionId"));
+			iOutgoingActionForm.add(jTransactionId);
+
+			iOutgoingActionForm.add(new JLabel(""));
+			iOutgoingActionForm.add(jPostAction);
+
+			jPostAction.setActionCommand("postaction");
+			jPostAction.addActionListener(this);
+
+			iSouthPanel.add(iOutgoingActionForm,
+				  BorderLayout.CENTER);
+
+			jMainPanel.add(iSouthPanel, BorderLayout.SOUTH);
+
+			jActionType.setText(
+				  iasPluginPrededefinedActionTypes.CANIASLINK);
+
+			this.setContentPane(jMainPanel);
+
+			enableDisablecomponents(false);
+		}
+
+		private void enableDisablecomponents(
+			  boolean isConnected) {
+			jConnect.setEnabled(!isConnected);
+			jDisconnect.setEnabled(isConnected);
+
+			jTargetClient.setEnabled(isConnected);
+			jActionType.setEnabled(isConnected);
+			jActionValue.setEnabled(isConnected);
+			jTransactionId.setEnabled(isConnected);
+			jPostAction.setEnabled(isConnected);
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+
+			if (arg0.getActionCommand()
+				  .equalsIgnoreCase("connect")) {
+
+				if (Plugin == null || !Plugin.isConnected()) {
+
+					try {
+
+						/*************************
+						 * START: Critical point
+						 * 
+						 * Create an instance and call
+						 * establishConnection()
+						 ************************/
+
+						Plugin = new SamplePlugin(this, SessionId);
+						Plugin.connect();
+
+						/*************************
+						 * END: Critical point.
+						 *************************/
+
+						enableDisablecomponents(true);
+
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+
+				}
+			} else if (arg0.getActionCommand()
+				  .equalsIgnoreCase("disconnect")) {
+
+				try {
+					Plugin.disconnect();
+					Plugin = null;
+
+					enableDisablecomponents(false);
+
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+			} else if (arg0.getActionCommand()
+				  .equalsIgnoreCase("postaction")) {
+
+				String type = jActionType.getText();
+				String value = jActionValue.getText();
+				String targetClient = jTargetClient.getText();
+
+				iasPluginEvent e = new iasPluginEvent(type, value);
+
+				try {
+					Plugin.postEvent(e, targetClient);
+				} catch (iasPluginException ex) {
+					ex.printStackTrace();
+				}
+			}
+		}
+
+		public void handleAction(String p_strAction,
+			  String p_strSource) {
+			jIncomingActions.setText(jIncomingActions.getText()
+				  + p_strAction + "\n");
+
+			jTargetClient.setText(p_strSource);
+		}
+
 	}
 
 
