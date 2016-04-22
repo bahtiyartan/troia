@@ -100,37 +100,60 @@ Plugin Class
 
 To access a plugin easily, PLUGINACCESS which is a wrapper class is included in standard code database. Basic methods of this class are below:
 
-**VOID DOACTIONWP(STRING PACTIONCLASS, STRING PACTIONTYPE, STRING PACTIONVALUE)**
+**VOID DOACTIONWP(STRING PACTIONCLASS, STRING PACTIONTYPE, STRING PACTIONVALUE) :**This method sends given action parameters to PluginService. If class has a target plugin information this action is sent to target plugin automatically. This method uses PLUGINACTION command.
 
-This method sends given action parameters to PluginService. If class has a target plugin information this action is sent to target plugin automatically. This method uses PLUGINACTION command.
+**VOID SETDEFAULTACTIONCLASS(STRING PACTIONCLASS) :**Sets default action class, and uses this action class for all actions.
 
-**VOID SETDEFAULTACTIONCLASS(STRING PACTIONCLASS)**
+**VOID DOACTION(STRING PACTIONTYPE, STRING PACTIONVALUE) :**This method sends given action parameters to PluginService. Uses default action class which is set by SETDEFAULTACTIONCLASS() method. If class has a target plugin information this action is sent to target plugin automatically. This method uses PLUGINACTION command.
 
-Sets default action class, and uses this action class for all actions.
+**STRING SELECTTARGET(STRING PACTIONCLASS, STRING PVALSTRING) :**Checks appropriate plugins using given parameters. If there are multiple applications which is valid for given parameters, shows selection dialog on client side. If there is only one plugin it sets target plugin information for this PLUGINACCESS instance. Returns target plugin’s id.
 
-**VOID DOACTION(STRING PACTIONTYPE, STRING PACTIONVALUE)**
+**VOID CLEARTARGET() :**Clears target plugin id and caption.
 
-This method sends given action parameters to PluginService. Uses default action class which is set by SETDEFAULTACTIONCLASS() method. If class has a target plugin information this action is sent to target plugin automatically. This method uses PLUGINACTION command.
+**STRING GETTARGET() :**Returns target plugin id. If there is not a target plugin returns empty string. To select a target you must call SELECTTARGET() method.
 
-**STRING SELECTTARGET(STRING PACTIONCLASS, STRING PVALSTRING)**
+**STRING GETTARGETCAPTION() :**Returns target plugin caption.
 
-Checks appropriate plugins using given parameters. If there are multiple applications which is valid for given parameters, shows selection dialog on client side. If there is only one plugin it sets target plugin information for this PLUGINACCESS instance. Returns target plugin’s id.
+**VOID CLEARTARGET() :** Clear target plugin id and caption for this instance.
 
-**VOID CLEARTARGET()**
+Here is an example which sends a single message to a plugin:
 
-Clears target plugin id and caption.
+::
 
-**STRING GETTARGET()**
+	OBJECT: 
+		 PLUGINACCESS PACCESS1;
 
-Returns target plugin id. If there is not a target plugin returns empty string. To select a target you must call SELECTTARGET() method.
+	PACCESS1.DOACTIONWP('BITOOL','OPENANALYSIS','params');
 
-**STRING GETTARGETCAPTION()**
 
-Returns target plugin caption.
+Another example that sends multiple actions to a selected plugin:
 
-**VOID CLEARTARGET()**
+::
 
-Clear target plugin id and caption for this instance.
+	OBJECT: 
+		PLUGINACCESS PACCESS1;
+
+	PACCESS1.SETDEFAULTACTIONCLASS('BITOOL');
+
+	PACCESS1.DOACTION('OPENANALYSIS1','params');
+	PACCESS1.DOACTION('OPENANALYSIS2','params');
+	PACCESS1.DOACTION('OPENANALYSIS3','params');
+	
+
+Another example that shows selecting a target plugin to send next messages directly :
+
+::
+
+	OBJECT: 
+		PLUGINACCESS PACCESS1;
+
+	PACCESS1.SELECTPLUGIN('BITOOL');
+	
+	PACCESS1.SETDEFAULTACTIONCLASS('BITOOL');
+	PACCESS1.DOACTION('OPENANALYSIS1','params');
+	PACCESS1.DOACTION('OPENANALYSIS2','params');
+
+
 
 
 
