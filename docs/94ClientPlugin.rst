@@ -311,52 +311,46 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		 * called when a PLUGINACTION command runs on application
 		 * server.
 		 * 
-		 * this demo plugin converts iasPluginAction to a string.
+		 * this demo plugin converts iasPluginAction to a string
 		 */
 		@Override
-		public boolean doAction(iasPluginAction p_iAction) {
+		public boolean doAction(iasPluginAction pAction) {
 			StringBuilder sb = new StringBuilder();
 
-			sb.append("ActionClass: ");
-			sb.append(p_iAction.getActionClass());
+			sb.append("Class:").append(pAction.getActionClass());
 
-			sb.append("\nActionType: ");
-			sb.append(p_iAction.getActionType());
+			sb.append("\nType: ").append(pAction.getActionType());
 
-			sb.append("\nActionValue: ");
-			sb.append(p_iAction.getActionValue());
+			sb.append("\nValue: ")
+				  .append(pAction.getActionValue());
 
-			sb.append("\nSource: ");
-			sb.append(p_iAction.getSource());
+			sb.append("\nSource: ").append(pAction.getSource());
 
-			sb.append("\nSessionId: ");
-			sb.append(p_iAction.getSessionId());
+			sb.append("\nSessionId: ")
+				  .append(pAction.getSessionId());
 
-			sb.append("\nTransactionId: ");
-			sb.append(p_iAction.getTransactionId());
+			sb.append("\nTransactionId: ")
+				  .append(pAction.getTransactionId());
 
-			sb.append("\nUsername: ");
-			sb.append(p_iAction.getUsername());
+			sb.append("\nUsername: ")
+				  .append(pAction.getUsername());
 
-			sb.append("\nTransaction: ");
-			sb.append(p_iAction.getTransaction());
+			sb.append("\nTransaction: ")
+				  .append(pAction.getTransaction());
 
 			sb.append("\n");
 
 			Frame.handleAction(sb.toString(),
-				  p_iAction.getSource());
+				  pAction.getSource());
 
 			return true;
 		}
 
 		/**
 		 * called when PLUGINVALIDATE command runs on appliaction
-		 * server
-		 * 
-		 * PLUGINVALIDATE command sends all validation parameters
-		 * 
-		 * to all plugins which contains data (language,database etc.)
-		 * about session.
+		 * server. PLUGINVALIDATE command sends all validation
+		 * parameters to all plugins which contains data
+		 * (language,database etc) about session.
 		 * 
 		 * After this parameters is checked by plugin, if given params
 		 * is valid for plugin must send true.
@@ -374,16 +368,13 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		}
 
 		/**
-		 * plugin service sends only related actions to this plugin.
+		 * plugin service sends only related actions to this plugin
 		 */
 		@Override
 		public String[] getRelatedIncomingActionClasses() {
 			return new String[] { "BITOOL" };
 		}
 
-		/**
-		 * 
-		 */
 		@Override
 		public String getAppName() {
 			return "BITOOL - Business Analytics";
@@ -399,6 +390,7 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 			return m_strUniqueInstanceKey;
 		}
 	}
+
 
 
 
