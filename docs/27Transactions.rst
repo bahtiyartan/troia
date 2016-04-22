@@ -84,7 +84,7 @@ Calling a transaction with in server variation is very simple. Here is the synta
 	CALL TRANSACTION {transaction} INSERVER ({input_params});
 	CALL TRANSACTION {transaction} ({input_params}) INSERVER ({output_params});
 	
-Input Parameters and TRANSCALLED Event
+Input Parameters & TRANSCALLED Event
 --------------------------------------
 
 Input parameters are defined on called transaction's as global variables with same name, value and type. So passing parameters as constant values is not recommended. 

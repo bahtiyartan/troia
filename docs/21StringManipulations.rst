@@ -207,8 +207,8 @@ Here is a simple string functions example, please try to find return values afte
 	STRMESSAGE = STRSTR(STRMESSAGE, 0, 5);	
 
 
-Exercise 2: List Numeric Tokens of a String
------------------------------------------
+Exercise 2: List Numeric Tokens
+-------------------------------
 
 ::
 

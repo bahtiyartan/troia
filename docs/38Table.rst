@@ -937,8 +937,8 @@ WITHFLAGS variation also transfers CHECKED, DELETED, INSERTED, CHANGE, READ, UPD
 	STRINGVAR3 = STRINGVAR3 + 'DELETED:' + TMPTABLE_DELETED+ TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + 'HIDE:' + TMPTABLE_HIDE+ TOCHAR(10);
 
-Copying Cell/Row Data Between Rows 
-==================================
+Copying Cell/Row Data 
+=====================
 
 Copying a row to another table is a little bit complicated than copying whole table. Because table structures must be identical to copy a row directly, otherwise only corresponding cells can be transferred. For example, if source table has two columns COL1, COL2 and destination table has only one column COL1, only COL1 can be transferred to destination table. Actually, copying a row with assingment or MOVE command is possible like below:
 
@@ -1081,7 +1081,7 @@ MERGETABLE has also optional WITHFLAGS variation whose behaviour is same with CO
 	SET TMPTABLE TO TABLE TMPTABLE;
 
 Exercise 1: Compare LOOP Options
-------------------------------
+--------------------------------
 
 Define a table and fill table with users whose PWDVALIDITY is more than 0. Write three LOOP statements :
 
@@ -1095,8 +1095,8 @@ and
 	- compare execution times of three variations.
 
 
-Exercise 2: Locating on Tables using Hash Index
----------------------------------------------
+Exercise 2: Locating Using Hash Index
+-------------------------------------
 
 Define a table and fill table with all users in IASUSERS table. 
 
@@ -1104,7 +1104,7 @@ Define a table and fill table with all users in IASUSERS table.
 
 
 Exercise 3: Sort Users Like a Tree
---------------------------------
+----------------------------------
 
 Modify code that you write for Exercise 2.
 
