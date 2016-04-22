@@ -299,8 +299,8 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		public SamplePluginFrame Frame;
 		private String m_strUniqueInstanceKey;
 
-		protected SamplePlugin(SamplePluginFrame pFrame, String pUIK)
-				throws RemoteException {
+		protected SamplePlugin(SamplePluginFrame pFrame,
+			  String pUIK) throws RemoteException {
 			super();
 
 			Frame = pFrame;
@@ -308,8 +308,8 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		}
 
 		/**
-		 * This method is called when an PLUGINACTION command runs on canias
-		 * application server.
+		 * This method is called when an PLUGINACTION command runs on application
+		 * server.
 		 * 
 		 * this demo plugin converts iasPluginAction to a string.
 		 */
@@ -343,32 +343,34 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 
 			sb.append("\n");
 
-			Frame.handleAction(sb.toString(), p_iAction.getSource());
+			Frame.handleAction(sb.toString(),
+				  p_iAction.getSource());
 
 			return true;
 		}
 
 		/**
-		 * This method is called when PLUGINVALIDATE command runs on canias
-		 * appliaction server.
+		 * This method is called when PLUGINVALIDATE command runs on appliaction
+		 * server.
 		 * 
 		 * PLUGINVALIDATE command sends all validation parameters to all plugins
-		 * which contains data (language,database etc.) about canias session.
+		 * which contains data (language,database etc.) about session.
 		 * 
 		 * After this parameters is checked by plugin, if given params is valid for
 		 * plugin plugin must send true.
 		 * 
-		 * If multiple plugins are available, a pop up message appears on canias
-		 * client to allow user select target plugin for given action.
+		 * If multiple plugins are available, a pop up message appears on client to
+		 * allow user select target plugin for given action.
 		 */
 		@Override
-		protected boolean validatePlugin(iasPluginValidationParameters params) {
+		protected boolean validatePlugin(
+			  iasPluginValidationParameters params) {
 			// return true/false after validation paramters checked
 			return true;
 		}
 
 		/**
-		 * Canias plugin service sends only related actions to this plugin.
+		 * plugin service sends only related actions to this plugin.
 		 */
 		@Override
 		public String[] getRelatedIncomingActionClasses() {
