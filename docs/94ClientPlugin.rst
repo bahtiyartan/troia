@@ -291,8 +291,8 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 
 	@SuppressWarnings("serial")
 	/**
-	 * This smaple plugin passes all action parameters to Frame to print on a text
-	 * field
+	 * plugin passes all action parameters to frame to print on
+	 * a text field
 	 */
 	public class SamplePlugin extends iasAbstractPlugin {
 
@@ -308,7 +308,7 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		}
 
 		/**
-		 * This method is called when an PLUGINACTION command runs on application
+		 * called when a PLUGINACTION command runs on application
 		 * server.
 		 * 
 		 * this demo plugin converts iasPluginAction to a string.
@@ -350,27 +350,32 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		}
 
 		/**
-		 * This method is called when PLUGINVALIDATE command runs on appliaction
-		 * server.
+		 * called when PLUGINVALIDATE command runs on appliaction
+		 * server
 		 * 
-		 * PLUGINVALIDATE command sends all validation parameters to all plugins
-		 * which contains data (language,database etc.) about session.
+		 * PLUGINVALIDATE command sends all validation parameters
 		 * 
-		 * After this parameters is checked by plugin, if given params is valid for
-		 * plugin plugin must send true.
+		 * to all plugins which contains data (language,database
+		 * etc.) about session.
 		 * 
-		 * If multiple plugins are available, a pop up message appears on client to
-		 * allow user select target plugin for given action.
+		 * After this parameters is checked by plugin, if given
+		 * params is valid for plugin must send true.
+		 * 
+		 * If multiple plugins are available, a pop up message
+		 * appears on client to allow user select target plugin
+		 * for given action.
 		 */
 		@Override
 		protected boolean validatePlugin(
 			  iasPluginValidationParameters params) {
-			// return true/false after validation paramters checked
+			// return true/false after validation paramters
+			// checked
 			return true;
 		}
 
 		/**
-		 * plugin service sends only related actions to this plugin.
+		 * plugin service sends only related actions to this
+		 * plugin.
 		 */
 		@Override
 		public String[] getRelatedIncomingActionClasses() {
