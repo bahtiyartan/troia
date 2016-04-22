@@ -308,7 +308,8 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		}
 
 		/**
-		 * called when a PLUGINACTION command runs on application server.
+		 * called when a PLUGINACTION command runs on application
+		 * server.
 		 * 
 		 * this demo plugin converts iasPluginAction to a string.
 		 */
@@ -349,18 +350,20 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		}
 
 		/**
-		 * called when PLUGINVALIDATE command runs on appliaction server
+		 * called when PLUGINVALIDATE command runs on appliaction
+		 * server
 		 * 
 		 * PLUGINVALIDATE command sends all validation parameters
 		 * 
 		 * to all plugins which contains data (language,database etc.)
 		 * about session.
 		 * 
-		 * After this parameters is checked by plugin, if given params is
-		 * valid for plugin must send true.
+		 * After this parameters is checked by plugin, if given params
+		 * is valid for plugin must send true.
 		 * 
-		 * If multiple plugins are available, a pop up message appears on
-		 * client to allow user select target plugin for given action.
+		 * If multiple plugins are available, a pop up message appears
+		 * on client to allow user select target plugin for given
+		 * action.
 		 */
 		@Override
 		protected boolean validatePlugin(
