@@ -291,15 +291,16 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 
 	@SuppressWarnings("serial")
 	/**
-	 * This smaple plugin passes all action parameters
-	 * to Frame to print on a text field
+	 * This smaple plugin passes all action parameters to Frame to print on a text
+	 * field
 	 */
 	public class SamplePlugin extends iasAbstractPlugin {
 
 		public SamplePluginFrame Frame;
 		private String m_strUniqueInstanceKey;
 
-		protected SamplePlugin(SamplePluginFrame pFrame, String pUIK) throws RemoteException {
+		protected SamplePlugin(SamplePluginFrame pFrame, String pUIK)
+				throws RemoteException {
 			super();
 
 			Frame = pFrame;
@@ -307,8 +308,8 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		}
 
 		/**
-		 * This method is called when an 
-		 * PLUGINACTION command runs on canias application server.
+		 * This method is called when an PLUGINACTION command runs on canias
+		 * application server.
 		 * 
 		 * this demo plugin converts iasPluginAction to a string.
 		 */
@@ -318,28 +319,28 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 
 			sb.append("ActionClass: ");
 			sb.append(p_iAction.getActionClass());
-			
+
 			sb.append("\nActionType: ");
 			sb.append(p_iAction.getActionType());
-			
+
 			sb.append("\nActionValue: ");
 			sb.append(p_iAction.getActionValue());
-			
+
 			sb.append("\nSource: ");
 			sb.append(p_iAction.getSource());
-			
+
 			sb.append("\nSessionId: ");
 			sb.append(p_iAction.getSessionId());
-			
+
 			sb.append("\nTransactionId: ");
 			sb.append(p_iAction.getTransactionId());
-			
+
 			sb.append("\nUsername: ");
 			sb.append(p_iAction.getUsername());
-			
+
 			sb.append("\nTransaction: ");
-			sb.append(p_iAction.getTransaction())
-			
+			sb.append(p_iAction.getTransaction());
+
 			sb.append("\n");
 
 			Frame.handleAction(sb.toString(), p_iAction.getSource());
@@ -348,23 +349,21 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		}
 
 		/**
-		 * This method is called when PLUGINVALIDATE command 
-		 * runs on canias appliaction server.
+		 * This method is called when PLUGINVALIDATE command runs on canias
+		 * appliaction server.
 		 * 
-		 * PLUGINVALIDATE command sends all validation parameters
-		 * to all plugins which contains data (language,database etc.)
-		 * about canias session.
+		 * PLUGINVALIDATE command sends all validation parameters to all plugins
+		 * which contains data (language,database etc.) about canias session.
 		 * 
-		 *  After this parameters is checked by plugin, if given params
-		 *  is valid for plugin plugin must send true.
-		 *  
-		 *  If multiple plugins are available, a pop up message appears
-		 *  on canias client to allow user select target plugin for
-		 *  given action.
+		 * After this parameters is checked by plugin, if given params is valid for
+		 * plugin plugin must send true.
+		 * 
+		 * If multiple plugins are available, a pop up message appears on canias
+		 * client to allow user select target plugin for given action.
 		 */
 		@Override
 		protected boolean validatePlugin(iasPluginValidationParameters params) {
-			//return true/false after validation paramters checked
+			// return true/false after validation paramters checked
 			return true;
 		}
 
@@ -394,6 +393,7 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 			return m_strUniqueInstanceKey;
 		}
 	}
+
 
 
 
