@@ -354,7 +354,7 @@ And third class which consists user interface of plugin:
 						 ************************/
 
 						Plugin = new SamplePlugin(this,
-									SessionId);
+								   SessionId);
 						Plugin.connect();
 
 						/*************************
