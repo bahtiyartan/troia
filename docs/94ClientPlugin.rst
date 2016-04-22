@@ -291,18 +291,19 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 
 	@SuppressWarnings("serial")
 	/**
-	 * This smaple plugin passes all action parameters to Frame to print on a text field
+	 * This smaple plugin passes all action parameters
+	 * to Frame to print on a text field
 	 */
 	public class SamplePlugin extends iasAbstractPlugin {
 
 		public SamplePluginFrame Frame;
 		private String m_strUniqueInstanceKey;
 
-		protected SamplePlugin(SamplePluginFrame pFrame, String p_strUniqueInstanceKey) throws RemoteException {
+		protected SamplePlugin(SamplePluginFrame pFrame, String pUIK) throws RemoteException {
 			super();
 
 			Frame = pFrame;
-			m_strUniqueInstanceKey = p_strUniqueInstanceKey;
+			m_strUniqueInstanceKey = pUIK;
 		}
 
 		/**
@@ -315,14 +316,31 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		public boolean doAction(iasPluginAction p_iAction) {
 			StringBuilder sb = new StringBuilder();
 
-			sb.append("ActionClass: ").append(p_iAction.getActionClass()).append("\n");
-			sb.append("ActionType: ").append(p_iAction.getActionType()).append("\n");
-			sb.append("ActionValue: ").append(p_iAction.getActionValue()).append("\n");
-			sb.append("Source: ").append(p_iAction.getSource()).append("\n");
-			sb.append("SessionId: ").append(p_iAction.getSessionId()).append("\n");
-			sb.append("TransactionId: ").append(p_iAction.getTransactionId()).append("\n");
-			sb.append("Username: ").append(p_iAction.getUsername()).append("\n");
-			sb.append("Transaction: ").append(p_iAction.getTransaction()).append("\n");
+			sb.append("ActionClass: ");
+			sb.append(p_iAction.getActionClass());
+			
+			sb.append("\nActionType: ");
+			sb.append(p_iAction.getActionType());
+			
+			sb.append("\nActionValue: ");
+			sb.append(p_iAction.getActionValue());
+			
+			sb.append("\nSource: ");
+			sb.append(p_iAction.getSource());
+			
+			sb.append("\nSessionId: ");
+			sb.append(p_iAction.getSessionId());
+			
+			sb.append("\nTransactionId: ");
+			sb.append(p_iAction.getTransactionId());
+			
+			sb.append("\nUsername: ");
+			sb.append(p_iAction.getUsername());
+			
+			sb.append("\nTransaction: ");
+			sb.append(p_iAction.getTransaction())
+			
+			sb.append("\n");
 
 			Frame.handleAction(sb.toString(), p_iAction.getSource());
 
@@ -330,19 +348,23 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		}
 
 		/**
-		 * This method is called when PLUGINVALIDATE command runs on canias appliaction server.
-		 * PLUGINVALIDATE command sends all validation parameters to all plugins which contains data (language,database etc.)
+		 * This method is called when PLUGINVALIDATE command 
+		 * runs on canias appliaction server.
+		 * 
+		 * PLUGINVALIDATE command sends all validation parameters
+		 * to all plugins which contains data (language,database etc.)
 		 * about canias session.
 		 * 
-		 *  After this parameters is checked by plugin, if given params is valid for plugin 
-		 *  plugin must send true.
+		 *  After this parameters is checked by plugin, if given params
+		 *  is valid for plugin plugin must send true.
 		 *  
-		 *  If multiple plugins are available, a pop up message appears on canias client to allow user select target plugin for
+		 *  If multiple plugins are available, a pop up message appears
+		 *  on canias client to allow user select target plugin for
 		 *  given action.
 		 */
 		@Override
 		protected boolean validatePlugin(iasPluginValidationParameters params) {
-			System.out.println("return true/false after validation paramters checked");
+			//return true/false after validation paramters checked
 			return true;
 		}
 
