@@ -80,11 +80,11 @@ These example contains source codes of a simple plugin that prints each action t
 	public class SampleApp {
 
 		public static void main(String[] args) {
-			SamplePluginFrame iTool = new SamplePluginFrame();
-			iTool.setSize(new Dimension(600, 750));
-			iTool.setLocationRelativeTo(null);
-			iTool.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			iTool.setVisible(true);
+			SamplePluginFrame tool = new SamplePluginFrame();
+			tool.setSize(new Dimension(600, 750));
+			tool.setLocationRelativeTo(null);
+			tool.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			tool.setVisible(true);
 		}
 	}
 	
