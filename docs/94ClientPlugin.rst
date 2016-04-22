@@ -291,8 +291,8 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 
 	@SuppressWarnings("serial")
 	/**
-	 * plugin passes all action parameters to frame to print on
-	 * a text field
+	 * plugin passes all action parameters to frame to print on a text
+	 * field
 	 */
 	public class SamplePlugin extends iasAbstractPlugin {
 
@@ -308,8 +308,7 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		}
 
 		/**
-		 * called when a PLUGINACTION command runs on application
-		 * server.
+		 * called when a PLUGINACTION command runs on application server.
 		 * 
 		 * this demo plugin converts iasPluginAction to a string.
 		 */
@@ -350,20 +349,18 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		}
 
 		/**
-		 * called when PLUGINVALIDATE command runs on appliaction
-		 * server
+		 * called when PLUGINVALIDATE command runs on appliaction server
 		 * 
 		 * PLUGINVALIDATE command sends all validation parameters
 		 * 
-		 * to all plugins which contains data (language,database
-		 * etc.) about session.
+		 * to all plugins which contains data (language,database etc.)
+		 * about session.
 		 * 
-		 * After this parameters is checked by plugin, if given
-		 * params is valid for plugin must send true.
+		 * After this parameters is checked by plugin, if given params is
+		 * valid for plugin must send true.
 		 * 
-		 * If multiple plugins are available, a pop up message
-		 * appears on client to allow user select target plugin
-		 * for given action.
+		 * If multiple plugins are available, a pop up message appears on
+		 * client to allow user select target plugin for given action.
 		 */
 		@Override
 		protected boolean validatePlugin(
@@ -374,12 +371,11 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		}
 
 		/**
-		 * plugin service sends only related actions to this
-		 * plugin.
+		 * plugin service sends only related actions to this plugin.
 		 */
 		@Override
 		public String[] getRelatedIncomingActionClasses() {
-			return new String[] { "INFOSUITE" };
+			return new String[] { "BITOOL" };
 		}
 
 		/**
@@ -387,7 +383,7 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 		 */
 		@Override
 		public String getAppName() {
-			return "InfoSuite - Business Analytics";
+			return "BITOOL - Business Analytics";
 		}
 
 		@Override
@@ -400,6 +396,7 @@ And third and most important class that inherits **iasAbstracPlugin** class whic
 			return m_strUniqueInstanceKey;
 		}
 	}
+
 
 
 
