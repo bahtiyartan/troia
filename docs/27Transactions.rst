@@ -59,7 +59,7 @@ It is possible to stop code execution and wait for output parameters. Here is th
 
 ::
 
-	CALL TRANSACTION {tran_name} [({input_params})] WITH WAIT [({output_params})];
+	CALL TRANSACTION {tranname} [({input_params})] WITH WAIT [({output_params})];
 	
 	/* 
 	   Example:
