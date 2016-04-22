@@ -284,9 +284,7 @@ And third class which consists user interface of plugin:
 
 			jMainPanel.add(iHeaderPanel, BorderLayout.NORTH);
 
-			//
 			JPanel iSouthPanel = new JPanel(new BorderLayout());
-
 			JLabel iFormHeader = new JLabel("Outgoing Action");
 
 			iFormHeader.setBorder(
@@ -355,7 +353,8 @@ And third class which consists user interface of plugin:
 						 * establishConnection()
 						 ************************/
 
-						Plugin = new SamplePlugin(this, SessionId);
+						Plugin = new SamplePlugin(this,
+									SessionId);
 						Plugin.connect();
 
 						/*************************
@@ -389,7 +388,7 @@ And third class which consists user interface of plugin:
 				String value = jActionValue.getText();
 				String targetClient = jTargetClient.getText();
 
-				iasPluginEvent e = new iasPluginEvent(type, value);
+				iasPluginEvent e = new iasPluginEvent(type,value);
 
 				try {
 					Plugin.postEvent(e, targetClient);
