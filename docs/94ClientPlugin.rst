@@ -181,7 +181,7 @@ These example contains source codes of a simple plugin (has only three class) th
 		}
 	}
 
-Second class is a simple user interface that contains a textfield to print received action and push actions to client application. Third class is only an entry point (main method) for the sample plugin. You can download full and up to date source code of demo application from http://www.github.com/bahtiyartan/sample-client-plugin-for-troia.
+Second class is a simple user interface that contains a textfield to print received action and push actions to client application. Third class is only an entry point (main method) for the sample plugin. You can download full and up to date source code of demo application from http://www.github.com/bahtiyartan/demo-client-plugin-for-troia.
 
 Sending Message to a Plugin
 ---------------------------
