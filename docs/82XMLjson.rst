@@ -218,8 +218,8 @@ Validating XML Documents
 
 ::
 
-	VALIDATEXML {validatorpath} {xmlfilepath} WITH {validationtype} [TO {details}];
-	VALIDATEXML TEXT {validatortext} {xmlastext} WITH {validationtype} [TO {details}]; 
+	VALIDATEXML {validatorpath} {xmlpath} WITH {valtype} [TO {details}];
+	VALIDATEXML TEXT {validatortext} {xmlastext} WITH {valtype} [TO {details}]; 
 	
 	
 .. code-block:: xml
