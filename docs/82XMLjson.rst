@@ -10,6 +10,80 @@ Parsing XML & JSON
 Conversion Between XML & JSON
 -----------------------------
 
+Convert XML to JSON
+===================
+
+::
+
+	CONVERTXMLJSON( {input}, 'JSON');
+	
+::
+	
+	OBJECT:
+		STRING STRJSON,
+		STRING STRINGVAR3;
+
+	STRJSON = CONVERTXMLJSON(STRINGVAR3, 'JSON');
+	STRINGVAR3 = STRJSON;
+
+Convert JSON to XML
+===================
+
+::
+
+	CONVERTXMLJSON( {input}, 'XML'[, 'NOTYPEHINT' | 'JSONPREFIX'] );
+
+::
+
+	{"menu": {
+	  "id": "file",
+	  "value": "File",
+	  "popup": {
+		"menuitem": [
+		  {"value": "New", "onclick": "CreateNewDoc()"},
+		  {"value": "Open", "onclick": "OpenDoc()"},
+		  {"value": "Close", "onclick": "CloseDoc()"}
+		]
+	  }
+	}}
+	
+::
+
+	OBJECT:
+		STRING STRXML,
+		STRING STRINGVAR3;
+
+	STRXML = CONVERTXMLJSON(STRINGVAR3,'XML','NOTYPEHINT');
+	STRINGVAR3 = STRXML;
+	
+::
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<o>
+	   <menu>
+		  <id>file</id>
+		  <popup>
+			 <menuitem>
+				<e>
+				   <onclick>CreateNewDoc()</onclick>
+				   <value>New</value>
+				</e>
+				<e>
+				   <onclick>OpenDoc()</onclick>
+				   <value>Open</value>
+				</e>
+				<e>
+				   <onclick>CloseDoc()</onclick>
+				   <value>Close</value>
+				</e>
+			 </menuitem>
+		  </popup>
+		  <value>File</value>
+	   </menu>
+	</o>
+
+
+
 Reading XML Structure
 ---------------------
 
