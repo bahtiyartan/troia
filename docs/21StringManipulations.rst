@@ -175,7 +175,7 @@ The sample below tries to calculate length of each line.
 	BEGIN
 		NLINECOUNT = NLINECOUNT + 1;
 		
-		STRRESULT = STRRESULT + 'Line ' + NLINECOUNT + ': ' + STRLEN(STRTOKEN);
+		STRRESULT = STRRESULT + 'Line ' + NLINECOUNT + ':' + STRLEN(STRTOKEN);
 		STRRESULT = STRRESULT + ' char(s).' + TOCHAR(10);
 		
 	ENDPARSE;
