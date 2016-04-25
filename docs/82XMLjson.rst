@@ -33,7 +33,7 @@ Convert JSON to XML
 
 	CONVERTXMLJSON( {input}, 'XML'[, 'NOTYPEHINT' | 'JSONPREFIX'] );
 
-::
+.. code-block:: json
 
 	{"menu": {
 	  "id": "file",
@@ -56,7 +56,7 @@ Convert JSON to XML
 	STRXML = CONVERTXMLJSON(STRINGVAR3,'XML','NOTYPEHINT');
 	STRINGVAR3 = STRXML;
 	
-::
+.. code-block:: xml
 
 	<?xml version="1.0" encoding="UTF-8"?>
 	<o>
