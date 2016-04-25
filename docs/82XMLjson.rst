@@ -17,7 +17,7 @@ Convert XML to JSON
 
 	CONVERTXMLJSON( {input}, 'JSON');
 	
-::
+.. code-block:: xml
 
 	<menu id="file" value="File">
 		<popup>
@@ -166,11 +166,6 @@ Reading XML Structure
 	SET TMPTABLE TO TABLE TMPTABLE;
 
 
-
-Validating XML Documents
-------------------------
-
-
 Some Useful XML Functions
 -------------------------
 
@@ -218,6 +213,10 @@ CLEARDOCUMENT() Function
 
 	STRINGVAR3L = CLEARDOCUMENT(STRXML,'TEAM');
 
+Validating XML Documents
+------------------------
+
+	
 Parsing XML Documents
 ---------------------
 
