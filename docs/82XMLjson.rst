@@ -18,6 +18,16 @@ Convert XML to JSON
 	CONVERTXMLJSON( {input}, 'JSON');
 	
 ::
+
+	<menu id="file" value="File">
+		<popup>
+			<menuitem value="New" onclick="CreateNewDoc()" />
+			<menuitem value="Open" onclick="OpenDoc()" />
+			<menuitem value="Close" onclick="CloseDoc()" />
+	  </popup>
+	</menu>
+	
+::
 	
 	OBJECT:
 		STRING STRJSON,
@@ -25,6 +35,27 @@ Convert XML to JSON
 
 	STRJSON = CONVERTXMLJSON(STRINGVAR3, 'JSON');
 	STRINGVAR3 = STRJSON;
+	
+.. code-block:: json
+
+	{
+	  "@id": "file",
+	  "@value": "File",
+	  "popup":   [
+			{
+			"@value": "New",
+			"@onclick": "CreateNewDoc()"
+		},
+			{
+			"@value": "Open",
+			"@onclick": "OpenDoc()"
+		},
+			{
+			"@value": "Close",
+			"@onclick": "CloseDoc()"
+		}
+	  ]
+	}
 
 Convert JSON to XML
 ===================
