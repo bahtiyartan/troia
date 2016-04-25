@@ -221,6 +221,61 @@ Validating XML Documents
 	VALIDATEXML {validatorpath} {xmlfilepath} WITH {validationtype} [TO {details}];
 	VALIDATEXML TEXT {validatortext} {xmlastext} WITH {validationtype} [TO {details}]; 
 	
+	
+.. code-block:: xml
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<schema xmlns="http://purl.oclc.org/dsdl/schematron"
+		xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		queryBinding="xslt2">
+
+	<ns uri="http://www.topologi.com/example" prefix="ex"/>
+		<pattern name="Check structure">
+			<rule context="ex:Person">
+				<assert test="@Title">Person element must have title</assert>
+				<assert test="count(ex:Name) = 1 and count(ex:Gender) = 1">
+					Person should have Name / Gender.
+				</assert>
+				<assert test="ex:*[1] = ex:Name">
+					Name must appear before element Gender.
+				</assert>
+			</rule>
+		</pattern>
+		<pattern name="Check co-occurrence constraints">
+			<rule context="ex:Person">
+				<assert test="(@Title = 'Mr' and ex:Gender = 'Male') or @Title != 'Mr'">
+					If the Title is "Mr" then the gender must be "Male".
+				</assert>
+			</rule>
+		</pattern>
+	</schema>
+
+.. code-block:: xml
+
+	<ex:Person Title="Mr" xmlns:ex="http://www.topologi.com/example">
+		<ex:Name>Eddie</ex:Name>
+		<ex:Gender>Male</ex:Gender>
+	</ex:Person>
+
+	
+	
+::
+
+	OBJECT: 
+		STRING STRXMLPATH,
+		STRING STRSCHPATH
+		STRING STRINGVAR3;
+
+	STRXMLPATH = 'xml.xml';
+	STRSCHPATH = 'validator.sch';
+
+	COPYFILE '*C:\TMP\xml.xml' INTO STRXMLPATH;
+	COPYFILE '*C:\TMP\validator.sch' INTO STRSCHPATH;
+
+	VALIDATEXML STRSCHPATH STRXMLPATH WITH SCHEMATRON TO STRINGVAR3;
+	STRINGVAR1 = SYS_STATUS + ' ' + SYS_STATUSERROR;
+	
 Parsing XML Documents
 ---------------------
 
