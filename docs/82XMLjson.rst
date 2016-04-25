@@ -225,15 +225,14 @@ Validating XML Documents
 .. code-block:: xml
 
 	<?xml version="1.0" encoding="UTF-8"?>
-	<schema xmlns="http://purl.oclc.org/dsdl/schematron"
-		xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-		xmlns:xs="http://www.w3.org/2001/XMLSchema"
-		queryBinding="xslt2">
+	<schema xmlns="http://purl.oclc.org/dsdl/schematron">
 
 	<ns uri="http://www.topologi.com/example" prefix="ex"/>
 		<pattern name="Check structure">
 			<rule context="ex:Person">
-				<assert test="@Title">Person must have title</assert>
+				<assert test="@Title">
+					Person must have title
+				</assert>
 				<assert test="count(ex:Name)=1 and count(ex:Gender)=1">
 					Person should have Name / Gender.
 				</assert>
