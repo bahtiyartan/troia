@@ -245,7 +245,7 @@ Validating XML Documents
 			<rule context="ex:Person">
 				<assert test="(@Title = 'Mr' and ex:Gender = 'Male') 
 				   or @Title != 'Mr'">
-					If the Title is "Mr" then the gender must be "Male".
+					If the Title is "Mr", gender must be "Male".
 				</assert>
 			</rule>
 		</pattern>
