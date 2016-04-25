@@ -13,6 +13,10 @@ Conversion Between XML & JSON
 Reading XML Structure
 ---------------------
 
+::
+
+	READXMLSTRUCTURE {xmlcontent} TO {targettable};
+
 +-------------+---------------------------------+
 | ID          |                                 |
 +-------------+---------------------------------+
@@ -39,12 +43,12 @@ Reading XML Structure
 			<CreatedBy>btan</CreatedBy>
 		</ListInfo>
 		
-		<Customer CustName="XYZ Financial Solutions">
+		<Customer Name="XYZ Financial Solutions">
 			<City>Tokyo</City>
 			<ProductGroup>Payment Systems</ProductGroup>
 		</Customer>
 
-		<Customer CustName="ABC Technology">
+		<Customer Name="ABC Technology">
 			<City>Madrid</City>
 			<ProductGroup>Mobile Applications</ProductGroup>
 		</Customer>
@@ -60,6 +64,7 @@ Reading XML Structure
 
 Validating XML Documents
 ------------------------
+
 
 Some Useful XML Functions
 -------------------------
@@ -110,6 +115,7 @@ CLEARDOCUMENT() Function
 
 Parsing XML Documents
 ---------------------
+
 
 XML Parsing Examples
 --------------------
