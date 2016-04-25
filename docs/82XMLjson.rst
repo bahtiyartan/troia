@@ -34,11 +34,14 @@ Reading XML Structure
 
 	<?xml version="1.0" ?>
 	<CustomerList>
-		<Sector HeadOrganization="World Techlogy Association">Technology</Sector>
-
-		<Customer CustName="XYZ Industries">
+		<ListInfo>
+			<CreatedAt>10.10.2015</CreatedAt>
+			<CreatedBy>btan</CreatedBy>
+		</ListInfo>
+		
+		<Customer CustName="XYZ Financial Solutions">
 			<City>Tokyo</City>
-			<ProductGroup>Integrated Circuits</ProductGroup>
+			<ProductGroup>Payment Systems</ProductGroup>
 		</Customer>
 
 		<Customer CustName="ABC Technology">
@@ -46,10 +49,6 @@ Reading XML Structure
 			<ProductGroup>Mobile Applications</ProductGroup>
 		</Customer>
 
-		<Customer CustName="IAS Software">
-			<City>Istanbul</City>
-			<ProductGroup>ERP</ProductGroup>
-		</Customer>
 	</CustomerList>
 	
 ::
