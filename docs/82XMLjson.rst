@@ -216,6 +216,10 @@ CLEARDOCUMENT() Function
 Validating XML Documents
 ------------------------
 
+::
+
+	VALIDATEXML {validatorpath} {xmlfilepath} WITH {validationtype} [TO {details}];
+	VALIDATEXML TEXT {validatortext} {xmlastext} WITH {validationtype} [TO {details}]; 
 	
 Parsing XML Documents
 ---------------------
