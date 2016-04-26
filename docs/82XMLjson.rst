@@ -859,7 +859,7 @@ Exercise 1: Parse using READXMLSTRUCTURE
 
 Calculate sum of GrandTotal values of all orders listed in xml below, using READXMLSTRUCTURE command.
 
-::
+.. code-block:: xml
 
 	<?xml version="1.0" ?>
 	<CustomerList Sector="Technology">
@@ -906,11 +906,34 @@ Calculate sum of GrandTotal values of all orders listed in xml below, using READ
 Exercise 2: Parsing Simple XML Documents
 ----------------------------------------
 
-Exercise 3: Parsing Complex XML Documents
------------------------------------------
+Calculate grand total value (sum of price*quantity for each product) for the products listed in XML document below:
 
-Exercise 4: Validation
-----------------------
+::
+
+	<CustomerList>
+        <Product>
+            <Name>Product 1</Name>
+            <Price>6.30</Price>
+            <Quantity>5</Quantity>
+        </Product>
+        <Product>
+            <Name>Product 2</Name>
+            <Price>6.30</Price>
+            <Quantity>3</Quantity>
+        </Product>
+        <Product>
+            <Name>Product 3</Name>
+            <Price>6.30</Price>
+            <Quantity>2</Quantity>
+        </Product>
+	</CustomerList>
+
+
+#Exercise 3: Parsing Complex XML Documents
+#-----------------------------------------
+
+# Exercise 4: Validation
+# ----------------------
 
 
 
