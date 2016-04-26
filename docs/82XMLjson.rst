@@ -906,7 +906,7 @@ Calculate sum of GrandTotal values of all orders listed in xml below, using READ
 Exercise 2: Parsing Simple XML Documents
 ----------------------------------------
 
-Calculate grand total value (sum of price*quantity for each product) for the products listed in XML document below:
+Calculate grand total value (sum of Price*Quantity for each product) for the products listed in XML document below:
 
 .. code-block:: xml
 
