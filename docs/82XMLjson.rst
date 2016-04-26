@@ -311,8 +311,7 @@ Example 2: Using Multiple Auto Parser Commands
 	STRINGVAR3 = '<PCARD_CARD_GET_DETAILResponse xmlns="http://tempuri.org/">
       <PCARD_CARD_GET_DETAILResult>
         <ConditionNo>100</ConditionNo>
-        <ConditionMesaj>Kullan&#305;c&#305; ad&#305; veya
-        &#351;ifre hatal&#305;</ConditionMesaj>
+        <ConditionMesaj>Invalid username or password</ConditionMesaj>
         <Basarili>false</Basarili>
         <cardInfo />
         <cardCredit>
