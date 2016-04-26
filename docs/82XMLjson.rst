@@ -291,10 +291,6 @@ Parsing XML Documents
 	
 ::
 
-	PARSEXML {docpath} USING {mapname};
-	
-::
-
 	MAP ELEMENT {elementname} AS [XMLTABLE | XMLROOTTABLE] {tablename} IN {mapname};
 	
 	MAP ATTRIBUTE {attributename} OF {elementname} AS XMLCOLUMN {columnname} IN {mapname};
@@ -305,6 +301,17 @@ Parsing XML Documents
 	
 	MAP RELATION {elementname} TO {elementname} LINK {primarykey} 
 				WITH {foreignkey} GENERATE YES | NO IN {mapname};
+
+				
+::
+
+	PARSEXML {docpath} USING {mapname};
+	
+::
+
+	CONVERTXMLTABLE {xmltable} INTO {table} FROM {mapname};
+	
+
 
 Example 1: Using Auto Parser
 ----------------------------
