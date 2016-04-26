@@ -285,6 +285,254 @@ Parsing XML Documents
 XML Parsing Examples
 --------------------
 
+Example 1: Using Auto Parser
+============================
+
+::
+
+	STRINGVAR3 = '<?xml version="1.0" ?>
+	<CustomerList>
+		<Customer>IAS Software</Customer>
+		<Customer>XYZ Technology</Customer>
+		<Customer>ABC Design</Customer>
+	</CustomerList>';
+
+	OBJECT: 
+	 TABLE CUSTOMERS;
+
+	PARSEXML TEXT STRINGVAR3 INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+Example 2: Using Multiple Auto Parser Commands
+==============================================
+
+::
+
+	STRINGVAR3 = '<PCARD_CARD_GET_DETAILResponse xmlns="http://tempuri.org/">
+      <PCARD_CARD_GET_DETAILResult>
+        <ConditionNo>100</ConditionNo>
+        <ConditionMesaj>Kullan&#305;c&#305; ad&#305; veya
+        &#351;ifre hatal&#305;</ConditionMesaj>
+        <Basarili>false</Basarili>
+        <cardInfo />
+        <cardCredit>
+          <lmt xsi:nil="true" />
+          <dfl_amt xsi:nil="true" />
+          <bln xsi:nil="true" />
+          <dsc xsi:nil="true" />
+        </cardCredit>
+      </PCARD_CARD_GET_DETAILResult>
+    </PCARD_CARD_GET_DETAILResponse>';
+
+	PARSEXML TEXT STRINGVAR3 INTO TMPTABLE;
+	PARSEXML TEXT TMPTABLE_XMLData INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+
+Example 3: Level 2 - Using PCData
+=================================
+
+.. code-block:: xml
+
+	<?xml version="1.0" ?>
+	<CustomerList>
+		<Customer>IAS Software</Customer>
+		<Customer>XYZ Technology</Customer>
+		<Customer>ABC Design</Customer>
+	</CustomerList>
+
+::
+
+	OBJECT: 
+		TABLE CUSTOMERS;
+
+	CLEAR XMLMAP SALESMAP;
+	CREATEXMLMAP SALESMAP;
+
+	MAP ELEMENT CustomerList AS XMLROOTTABLE CustomerList IN SALESMAP;
+
+	MAP ELEMENT Customer AS XMLTABLE Customer IN SALESMAP;
+	MAP PCDATA OF Customer AS XMLCOLUMN Customer IN SALESMAP;
+
+	MAP RELATION Customer TO CustomerList LINK 'asdf' WITH DUMMY  GENERATE NO IN SALESMAP;
+
+	PARSEXML 'C:\TMP\tempxml2.xml' USING SALESMAP;
+	CONVERTXMLTABLE Customer INTO TABLE CUSTOMERS FROM SALESMAP;
+
+	COPY TABLE CUSTOMERS INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+
+Example 4: Reading Childs
+=========================
+
+.. code-block:: xml
+
+	<?xml version="1.0" ?>
+	<CustomerList>
+		<Sector>Technology</Sector>
+		<Customer>
+			<CustName>XYZ Industries</CustName>
+			<City>Tokyo</City>
+		</Customer>
+		<Customer>
+			<CustName>ABC Technology</CustName>
+			<City>Madrid</City>
+		</Customer>
+		<Customer>
+			<CustName>IAS Software</CustName>
+			<City>Istanbul</City>
+		</Customer>
+	</CustomerList>
+
+::
+
+	OBJECT: 
+		TABLE CUSTOMERS;
+
+	CLEAR XMLMAP SALESMAP;
+	CREATEXMLMAP SALESMAP;
+
+	MAP ELEMENT CustomerList AS XMLROOTTABLE CustomerList IN SALESMAP;
+	MAP CHILD Sector OF CustomerList AS XMLCOLUMN Sector IN SALESMAP;
+
+	MAP ELEMENT Customer AS XMLTABLE CUSTOMER IN SALESMAP;
+	MAP CHILD CustName OF Customer AS XMLCOLUMN CustName IN SALESMAP;
+	MAP CHILD City OF Customer AS XMLCOLUMN City IN SALESMAP;
+
+	MAP RELATION Customer TO CustomerList LINK Sector WITH Sector GENERATE YES IN SALESMAP;
+
+	PARSEXML 'C:\TMP\tempxml2.xml' USING SALESMAP;
+	CONVERTXMLTABLE CUSTOMER INTO TABLE CUSTOMERS FROM SALESMAP;
+
+	STRINGVAR1 = CUSTOMERS_ROWCOUNT;
+
+	COPY TABLE CUSTOMERS INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+
+Example 5: Reading Childs With Extra Relation
+=============================================
+
+.. code-block:: xml
+	
+	<PCARD_CARD_GET_DETAILResponse xmlns="http://tempuri.org/">
+		  <PCARD_CARD_GET_DETAILResult>
+			<ConditionNo>100</ConditionNo>
+			<ConditionMesaj>Invalid username or password</ConditionMesaj>
+			<Basarili>false</Basarili>
+			<cardInfo />
+			<cardCredit>
+			  <lmt/>
+			  <dfl_amt/>
+			  <bln/>
+			  <dsc/>
+			</cardCredit>
+		  </PCARD_CARD_GET_DETAILResult>
+	</PCARD_CARD_GET_DETAILResponse>
+	
+::
+
+	OBJECT: 
+		TABLE DETAILRESULT;
+
+	CLEAR XMLMAP SALESMAP;
+	CREATEXMLMAP SALESMAP;
+
+	MAP ELEMENT PCARD_CARD_GET_DETAILResponse AS XMLROOTTABLE PCARD_CARD_GET_DETAILResponse IN SALESMAP;
+
+	MAP ELEMENT PCARD_CARD_GET_DETAILResult AS XMLTABLE PCARD_CARD_GET_DETAILResult IN SALESMAP;
+	MAP CHILD ConditionNo OF PCARD_CARD_GET_DETAILResult AS XMLCOLUMN ConditionNo IN SALESMAP;
+	MAP CHILD ConditionMesaj OF PCARD_CARD_GET_DETAILResult AS XMLCOLUMN ConditionMesaj IN SALESMAP;
+	MAP CHILD Basarili OF PCARD_CARD_GET_DETAILResult AS XMLCOLUMN Basarili IN SALESMAP;
+	MAP CHILD ConditionNo OF PCARD_CARD_GET_DETAILResult AS XMLCOLUMN ConditionNo IN SALESMAP;
+
+	MAP RELATION PCARD_CARD_GET_DETAILResult TO PCARD_CARD_GET_DETAILResponse LINK DUMMY WITH DUMMY  GENERATE NO IN SALESMAP;
+
+	PARSEXML 'C:\TMP\tempxml2.xml' USING SALESMAP;
+	CONVERTXMLTABLE PCARD_CARD_GET_DETAILResult INTO TABLE DETAILRESULT FROM SALESMAP;
+
+	COPY TABLE DETAILRESULT INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+
+Example 6: Reading Attributes
+=============================
+
+.. code-block:: xml
+
+	<?xml version="1.0" ?>
+	<CustomerList Sector="Technology">
+		<Customer>
+			<CustName>XYZ Industries</CustName>
+			<City>Tokyo</City>
+		</Customer>
+		<Customer>
+			<CustName>ABC Technology</CustName>
+			<City>Madrid</City>
+		</Customer>
+		<Customer>
+			<CustName>IAS Software</CustName>
+			<City>Istanbul</City>
+		</Customer>
+	</CustomerList>
+
+::
+
+	OBJECT: 
+		TABLE CUSTOMERS;
+
+	CLEAR XMLMAP SALESMAP;
+	CREATEXMLMAP SALESMAP;
+
+	MAP ELEMENT CustomerList AS XMLROOTTABLE CustomerList IN SALESMAP;
+
+	/* map attribute for root element*/
+	MAP ATTRIBUTE Sector OF CustomerList AS XMLCOLUMN Sector IN SALESMAP;
+
+	MAP ELEMENT Customer AS XMLTABLE CUSTOMER IN SALESMAP;
+	MAP CHILD CustName OF Customer AS XMLCOLUMN CustName IN SALESMAP;
+	MAP CHILD City OF Customer AS XMLCOLUMN City IN SALESMAP;
+
+	MAP RELATION Customer TO CustomerList LINK Sector WITH Sector GENERATE YES IN SALESMAP;
+
+	PARSEXML 'C:\TMP\tempxml2.xml' USING SALESMAP;
+	CONVERTXMLTABLE CUSTOMER INTO TABLE CUSTOMERS FROM SALESMAP;
+
+	STRINGVAR1 = CUSTOMERS_ROWCOUNT;
+
+	COPY TABLE CUSTOMERS INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+
+Example 7:
+==========
+
+
+Example 8:
+==========
+
+
+Example 9:
+==========
+
+
+Example 10:
+===========
+
+
+Example 11:
+===========
+
+
+Example 12:
+===========
+
+
+
+
+
+
 Exercise 1: Parse using READXMLSTRUCTURE
 ----------------------------------------
 
