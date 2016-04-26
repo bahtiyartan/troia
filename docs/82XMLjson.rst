@@ -281,7 +281,30 @@ Validating XML Documents
 Parsing XML Documents
 ---------------------
 
-..xmlparsing
+::
+
+	CREATEXMLMAP {mapname};
+	
+::
+
+	CLEAR XMLMAP {mapname};
+	
+::
+
+	PARSEXML {docpath} USING {mapname};
+	
+::
+
+	MAP ELEMENT {elementname} AS [XMLTABLE | XMLROOTTABLE] {tablename} IN {mapname};
+	
+	MAP ATTRIBUTE {attributename} OF {elementname} AS XMLCOLUMN {columnname} IN {mapname};
+	
+	MAP CHILD {elementname} OF {elementname} AS XMLCOLUMN {columnname} IN {mapname};
+	
+	MAP PCDATA OF {elementname} AS XMLCOLUMN {columnname} IN {mapname};
+	
+	MAP RELATION {elementname} TO {elementname} LINK {primarykey} 
+				WITH {foreignkey} GENERATE YES | NO IN {mapname};
 
 Example 1: Using Auto Parser
 ----------------------------
