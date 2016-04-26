@@ -505,16 +505,254 @@ Example 6: Reading Attributes
 	SET TMPTABLE TO TABLE TMPTABLE;
 
 
-Example 7:
-==========
+Example 7: Reading Attributes On Childs
+=======================================
 
 
-Example 8:
-==========
+.. code-block:: xml
+
+	<?xml version="1.0" ?>
+	<CustomerList Sector="Technology">
+		<Customer CustomerId="C1">
+			<CustName>XYZ Industries</CustName>
+			<City>Tokyo</City>
+		</Customer>
+		<Customer CustomerId="C2">
+			<CustName>ABC Technology</CustName>
+			<City>Madrid</City>
+		</Customer>
+		<Customer  CustomerId="C3">
+			<CustName>IAS Software</CustName>
+			<City>Istanbul</City>
+		</Customer>
+	</CustomerList>
 
 
-Example 9:
-==========
+::
+
+	OBJECT: 
+		TABLE CUSTOMERS;
+
+	CLEAR XMLMAP SALESMAP;
+	CREATEXMLMAP SALESMAP;
+
+	MAP ELEMENT CustomerList AS XMLROOTTABLE CustomerList IN SALESMAP;
+	MAP ATTRIBUTE Sector OF CustomerList AS XMLCOLUMN Sector IN SALESMAP;
+
+	MAP ELEMENT Customer AS XMLTABLE CUSTOMER IN SALESMAP;
+	/* attribute for child */
+	MAP ATTRIBUTE CustomerId OF Customer AS XMLCOLUMN CustomerId IN SALESMAP;
+	MAP CHILD CustName OF Customer AS XMLCOLUMN CustName IN SALESMAP;
+	MAP CHILD City OF Customer AS XMLCOLUMN City IN SALESMAP;
+
+	MAP RELATION Customer TO CustomerList LINK Sector WITH Sector GENERATE YES IN SALESMAP;
+
+	PARSEXML 'C:\TMP\tempxml2.xml' USING SALESMAP;
+	CONVERTXMLTABLE CUSTOMER INTO TABLE CUSTOMERS FROM SALESMAP;
+
+	STRINGVAR1 = CUSTOMERS_ROWCOUNT;
+
+	COPY TABLE CUSTOMERS INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+	
+
+
+Example 8: Creating Multiple Tables and Relations Childs-Attributes
+===================================================================
+
+.. code-block:: xml
+
+	<?xml version="1.0" ?>
+	<CustomerList Sector="Technology">
+		
+		<Customer CustomerId="C1">
+			<CustName>XYZ Industries</CustName>
+			<City>Tokyo</City>
+			<Order OrderId="O1">
+				<Year>2013</Year>
+				<GrandTotal>100.013</GrandTotal>
+			</Order>
+		</Customer>
+		
+		<Customer CustomerId="C2">
+			<CustName>ABC Technology</CustName>
+			<City>Madrid</City>
+
+			<Order OrderId="O2">
+				<Year>2011</Year>
+				<GrandTotal>100.011</GrandTotal>
+			</Order>
+			<Order OrderId="O3">
+				<Year>2012</Year>
+				<GrandTotal>100.012</GrandTotal>
+			</Order>
+
+		</Customer>
+		
+		<Customer  CustomerId="C3">
+			<CustName>IAS Software</CustName>
+			<City>Istanbul</City>
+
+			<Order OrderId="O5">
+				<Year>2010</Year>
+				<GrandTotal>100.010</GrandTotal>
+			</Order>
+			<Order OrderId="O5">
+				<Year>2014</Year>
+				<GrandTotal>100.014</GrandTotal>
+			</Order>
+
+		</Customer>
+	</CustomerList>
+	
+::
+
+	OBJECT: 
+		TABLE CUSTOMERS,
+		TABLE ORDERS;
+
+	CLEAR XMLMAP SALESMAP;
+	CREATEXMLMAP SALESMAP;
+
+	MAP ELEMENT CustomerList AS XMLROOTTABLE CustomerList IN SALESMAP;
+	MAP ATTRIBUTE Sector OF CustomerList AS XMLCOLUMN Sector IN SALESMAP;
+
+	MAP ELEMENT Customer AS XMLTABLE CUSTOMER IN SALESMAP;
+	MAP ATTRIBUTE CustomerId OF Customer AS XMLCOLUMN CustomerId IN SALESMAP;
+	MAP CHILD CustName OF Customer AS XMLCOLUMN CustName IN SALESMAP;
+	MAP CHILD City OF Customer AS XMLCOLUMN City IN SALESMAP;
+	MAP RELATION Customer TO CustomerList LINK Sector WITH Sector GENERATE YES IN SALESMAP;
+
+	MAP ELEMENT Order AS XMLTABLE ORDER IN SALESMAP;
+	MAP ATTRIBUTE OrderId OF Order AS XMLCOLUMN OrderId IN SALESMAP;
+	MAP CHILD Year OF Order AS XMLCOLUMN Year IN SALESMAP;
+	MAP CHILD GrandTotal OF Order AS XMLCOLUMN GrandTotal IN SALESMAP;
+	MAP RELATION Order TO Customer LINK CustomerId WITH CustomerId GENERATE NO IN SALESMAP;
+
+	PARSEXML 'C:\TMP\tempxml2.xml' USING SALESMAP;
+	CONVERTXMLTABLE CUSTOMER INTO TABLE CUSTOMERS FROM SALESMAP;
+	CONVERTXMLTABLE ORDER INTO TABLE ORDERS FROM SALESMAP;
+
+	STRINGVAR1 = CUSTOMERS_ROWCOUNT;
+
+	COPY TABLE CUSTOMERS INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+	COPY TABLE ORDERS INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+
+Example 9: Multiple Relations - Extra OrdersColumnWithoutOrdersId
+=================================================================
+
+.. code-block:: xml
+
+	<?xml version="1.0" ?>
+	<CustomerList Sector="Technology">
+		
+		<Customer CustomerId="C1">
+			<CustName>XYZ Industries</CustName>
+			<City>Tokyo</City>
+			<Orders>
+				<Order OrderId="O1">
+					<Year>2013</Year>
+					<GrandTotal>100.013</GrandTotal>
+				</Order>
+			</Orders>
+		</Customer>
+		
+		<Customer CustomerId="C2">
+			<CustName>ABC Technology</CustName>
+			<City>Madrid</City>
+			<Orders>
+				<Order OrderId="O2">
+					<Year>2011</Year>
+					<GrandTotal>100.011</GrandTotal>
+				</Order>
+				<Order OrderId="O3">
+					<Year>2012</Year>
+					<GrandTotal>100.012</GrandTotal>
+				</Order>
+			</Orders>
+		</Customer>
+		
+		<Customer  CustomerId="C3">
+			<CustName>IAS Software</CustName>
+			<City>Istanbul</City>
+			<Orders>
+				<Order OrderId="O4">
+					<Year>2010</Year>
+					<GrandTotal>100.010</GrandTotal>
+				</Order>
+				<Order OrderId="O5">
+					<Year>2014</Year>
+					<GrandTotal>100.014</GrandTotal>
+				</Order>
+				<Order OrderId="O6">
+					<Year>2015</Year>
+					<GrandTotal>100.015</GrandTotal>
+				</Order>
+			</Orders>
+		</Customer>
+	</CustomerList>
+	
+::
+	
+	OBJECT: 
+		TABLE CUSTOMERS,
+		TABLE ALLORDERS,
+		TABLE CUSTOMERORDERS;
+
+	CLEAR XMLMAP SALESMAP;
+	CREATEXMLMAP SALESMAP;
+
+	MAP ELEMENT CustomerList AS XMLROOTTABLE CustomerList IN SALESMAP;
+	MAP ATTRIBUTE Sector OF CustomerList AS XMLCOLUMN Sector IN SALESMAP;
+
+	MAP ELEMENT Customer AS XMLTABLE CUSTOMER IN SALESMAP;
+	MAP ATTRIBUTE CustomerId OF Customer AS XMLCOLUMN CustomerId IN SALESMAP;
+	MAP CHILD CustName OF Customer AS XMLCOLUMN CustName IN SALESMAP;
+	MAP CHILD City OF Customer AS XMLCOLUMN City IN SALESMAP;
+
+	MAP RELATION Customer TO CustomerList LINK Sector WITH Sector GENERATE YES IN SALESMAP;
+
+	MAP ELEMENT Orders AS XMLTABLE CUSTOMERORDER IN SALESMAP;
+	MAP RELATION Orders TO Customer LINK CustomerId WITH CustomerId GENERATE YES IN SALESMAP;
+
+	MAP ELEMENT Order AS XMLTABLE ORDER IN SALESMAP;
+	MAP ATTRIBUTE OrderId OF Order AS XMLCOLUMN OrderId IN SALESMAP;
+	MAP CHILD Year OF Order AS XMLCOLUMN Year IN SALESMAP;
+	MAP CHILD GrandTotal OF Order AS XMLCOLUMN GrandTotal IN SALESMAP;
+	MAP RELATION Order TO Orders LINK CustomerFK WITH CustomerFK GENERATE YES IN SALESMAP;
+
+	PARSEXML 'C:\TMP\tempxml2.xml' USING SALESMAP;
+	CONVERTXMLTABLE CUSTOMER INTO TABLE CUSTOMERS FROM SALESMAP;
+	CONVERTXMLTABLE CUSTOMERORDER INTO TABLE CUSTOMERORDERS FROM SALESMAP;
+	CONVERTXMLTABLE ORDER INTO TABLE ALLORDERS FROM SALESMAP;
+
+	STRINGVAR1 = CUSTOMERS_ROWCOUNT;
+
+	COPY TABLE CUSTOMERS INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+	COPY TABLE ALLORDERS INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+	/*
+	LOOP AT ALLORDERS
+	BEGIN
+		LOCATERECORD BINARYSEARCH COLUMNS CustomerFK VALUES ALLORDERS_CustomerFK ON CUSTOMERORDERS;
+		STRINGVAR2 = STRINGVAR2 + ' ' + CUSTOMERORDERS_CustomerId;
+		ALLORDERS_CustomerFK = CUSTOMERORDERS_CustomerId;
+	ENDLOOP;
+	*/
+
+	COPY TABLE ALLORDERS INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+	RETURN;
+	COPY TABLE CUSTOMERORDERS INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
 
 
 Example 10:
