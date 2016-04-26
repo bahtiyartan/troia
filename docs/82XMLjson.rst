@@ -293,7 +293,8 @@ Parsing XML Documents
 
 	MAP ELEMENT {elementname} AS [XMLTABLE | XMLROOTTABLE] {tablename} IN {mapname};
 	
-	MAP ATTRIBUTE {attributename} OF {elementname} AS XMLCOLUMN {columnname} IN {mapname};
+	MAP ATTRIBUTE {attributename} OF {elementname} 
+				AS XMLCOLUMN {columnname} IN {mapname};
 	
 	MAP CHILD {elementname} OF {elementname} AS XMLCOLUMN {columnname} IN {mapname};
 	
