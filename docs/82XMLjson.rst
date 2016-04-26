@@ -287,18 +287,32 @@ Example 1: Using Auto Parser
 ----------------------------
 
 .. code-block:: xml
+	
+	OBJECT:
+		STRING STRINGVAR3;
 
 	STRINGVAR3 = '<?xml version="1.0" ?>
 	<CustomerList>
-		<Customer>IAS Software</Customer>
-		<Customer>XYZ Technology</Customer>
-		<Customer>ABC Design</Customer>
+			<Customer>
+				<Name>IAS Software</Name>
+				<Country>Turkey</Country>
+			</Customer>
+			<Customer>
+				<Name>XYZ Technology</Name>
+				<Country>Turkey</Country>
+			</Customer>
+			<Customer>
+				<Name>ABC Design</Name>
+				<Country>Turkey</Country>
+			</Customer>
 	</CustomerList>';
 
 	OBJECT: 
-	 TABLE CUSTOMERS;
+		TABLE CUSTOMERS;
 
-	PARSEXML TEXT STRINGVAR3 INTO TMPTABLE;
+	PARSEXML TEXT STRINGVAR3 INTO CUSTOMERS;
+
+	COPY TABLE CUSTOMERS INTO TMPTABLE;
 	SET TMPTABLE TO TABLE TMPTABLE;
 
 Example 2: Multiple Auto Parsers
@@ -306,24 +320,28 @@ Example 2: Multiple Auto Parsers
 
 .. code-block:: xml
 
+	OBJECT:
+		STRING STRINGVAR3;
+
 	STRINGVAR3 = '<PCARD_CARD_GET_DETAILResponse xmlns="http://tempuri.org/">
-      <PCARD_CARD_GET_DETAILResult>
-        <ConditionNo>100</ConditionNo>
-        <ConditionMesaj>Invalid username or password</ConditionMesaj>
-        <Basarili>false</Basarili>
-        <cardInfo />
-        <cardCredit>
-          <lmt xsi:nil="true" />
-          <dfl_amt xsi:nil="true" />
-          <bln xsi:nil="true" />
-          <dsc xsi:nil="true" />
-        </cardCredit>
-      </PCARD_CARD_GET_DETAILResult>
-    </PCARD_CARD_GET_DETAILResponse>';
+		<PCARD_CARD_GET_DETAILResult>
+			<ConditionNo>100</ConditionNo>
+			<ConditionMesaj>Invalid username or password</ConditionMesaj>
+			<Basarili>false</Basarili>
+			<cardInfo />
+			<cardCredit>
+				<lmt xsi:nil="true" />
+				<dfl_amt xsi:nil="true" />
+				<bln xsi:nil="true" />
+				<dsc xsi:nil="true" />
+			</cardCredit>
+		</PCARD_CARD_GET_DETAILResult>
+	</PCARD_CARD_GET_DETAILResponse>';
 
 	PARSEXML TEXT STRINGVAR3 INTO TMPTABLE;
 	PARSEXML TEXT TMPTABLE_XMLData INTO TMPTABLE;
 	SET TMPTABLE TO TABLE TMPTABLE;
+
 
 
 Example 3: Using PCData
@@ -343,20 +361,20 @@ Example 3: Using PCData
 	OBJECT: 
 		TABLE CUSTOMERS;
 
-	CLEAR XMLMAP SALESMAP;
-	CREATEXMLMAP SALESMAP;
-
-	MAP ELEMENT CustomerList AS XMLROOTTABLE CustomerList IN SALESMAP;
-
-	MAP ELEMENT Customer AS XMLTABLE Customer IN SALESMAP;
-	MAP PCDATA OF Customer AS XMLCOLUMN Customer IN SALESMAP;
-
+	CLEAR XMLMAP DEMOMAP;
+	CREATEXMLMAP DEMOMAP;
+	
+	MAP ELEMENT CustomerList AS XMLROOTTABLE CustomerList IN DEMOMAP;
+	MAP ELEMENT Customer AS XMLTABLE Customer IN DEMOMAP;
+	MAP PCDATA OF Customer AS XMLCOLUMN Customer IN DEMOMAP;
 	MAP RELATION Customer TO CustomerList LINK 'asdf' 
-	                              WITH DUMMY  GENERATE NO IN SALESMAP;
-
-	PARSEXML 'C:\TMP\tempxml2.xml' USING SALESMAP;
-	CONVERTXMLTABLE Customer INTO TABLE CUSTOMERS FROM SALESMAP;
-
+								WITH DUMMY  GENERATE NO IN DEMOMAP;
+	
+	COPYFILE '*C:\TMP\XML\ex3.xml' INTO '.\XMLParsing\ex3.xml';
+	PARSEXML '.\XMLParsing\ex3.xml' USING DEMOMAP;
+	
+	CONVERTXMLTABLE Customer INTO TABLE CUSTOMERS FROM DEMOMAP;
+	
 	COPY TABLE CUSTOMERS INTO TMPTABLE;
 	SET TMPTABLE TO TABLE TMPTABLE;
 
