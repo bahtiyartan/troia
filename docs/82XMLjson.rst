@@ -4,7 +4,7 @@
 Parsing XML & JSON
 ==================
 
-*This sections aims to show xml & json parsing options*
+*Both XML and JSON are common formats to transfer data between systems in a human readable format. This sections aims to introduce all options to handle/parse xml & json formats.*
 
 
 Conversion Between XML & JSON
@@ -368,7 +368,7 @@ Example 3: Using PCData
 	MAP ELEMENT Customer AS XMLTABLE Customer IN DEMOMAP;
 	MAP PCDATA OF Customer AS XMLCOLUMN Customer IN DEMOMAP;
 	MAP RELATION Customer TO CustomerList LINK 'asdf' 
-								WITH DUMMY  GENERATE NO IN DEMOMAP;
+						WITH DUMMY  GENERATE NO IN DEMOMAP;
 	
 	COPYFILE '*C:\TMP\XML\ex3.xml' INTO '.\XMLParsing\ex3.xml';
 	PARSEXML '.\XMLParsing\ex3.xml' USING DEMOMAP;
@@ -815,43 +815,6 @@ Example 10: Relation with Non-Generated Column
 	
 ::
 
-	OBJECT:
-		TABLE ORDERLINES,
-		TABLE ORDERS;
-
-	CLEAR XMLMAP SALESMAP;
-	CREATEXMLMAP SALESMAP;
-
-	MAP ELEMENT string AS XMLROOTTABLE string IN SALESMAP;
-	MAP ATTRIBUTE xmlns OF string AS XMLCOLUMN xmlns IN SALESMAP;
-
-	MAP ELEMENT Orders AS XMLTABLE ALLORDERS IN SALESMAP;
-	MAP RELATION Orders TO string LINK xmlns WITH xmlns GENERATE NO IN SALESMAP;
-
-	MAP ELEMENT Order AS XMLTABLE CUSTOMERORDER IN SALESMAP;
-	MAP ATTRIBUTE id OF Order AS XMLCOLUMN orderid IN SALESMAP;
-	MAP CHILD Order_org OF Order AS XMLCOLUMN Order_org IN SALESMAP;
-	MAP RELATION Order TO Orders LINK CustomerId WITH DUMMY GENERATE NO IN SALESMAP;
-
-	MAP ELEMENT Orderline AS XMLTABLE ORDERLINE IN SALESMAP;
-	MAP ATTRIBUTE id OF Orderline AS XMLCOLUMN orderlineid IN SALESMAP;
-	MAP CHILD OrderLine_org OF Orderline AS XMLCOLUMN OrderLine_org IN SALESMAP;
-	MAP RELATION Orderline TO Order LINK orderid 
-						WITH orderid GENERATE YES IN SALESMAP;
-
-	PARSEXML 'C:\TMP\document.xml' USING SALESMAP;
-	CONVERTXMLTABLE CUSTOMERORDER INTO TABLE ORDERS FROM SALESMAP;
-	CONVERTXMLTABLE ORDERLINE INTO TABLE ORDERLINES FROM SALESMAP;
-	CONVERTXMLTABLE ALLORDERS INTO TABLE ALLORDER FROM SALESMAP;
-
-	COPY TABLE ORDERLINES INTO TMPTABLE;
-	SET TMPTABLE TO TABLE TMPTABLE;
-
-	COPY TABLE ORDERS INTO TMPTABLE;
-	SET TMPTABLE TO TABLE TMPTABLE;
-	
-::
-
 	OBJECT: 
 		TABLE ORDERLINES,
 		TABLE ORDERS;
@@ -893,6 +856,52 @@ Example 10: Relation with Non-Generated Column
 
 Exercise 1: Parse using READXMLSTRUCTURE
 ----------------------------------------
+
+Calculate sum of GrandTotal values of all orders listed in xml below, using READXMLSTRUCTURE command.
+
+::
+
+	<?xml version="1.0" ?>
+	<CustomerList Sector="Technology">
+		
+		<Customer CustomerId="C1">
+			<CustName>XYZ Industries</CustName>
+			<City>Tokyo</City>
+			<Order OrderId="O1">
+				<Year>2013</Year>
+				<GrandTotal>100.013</GrandTotal>
+			</Order>
+		</Customer>
+		
+		<Customer CustomerId="C2">
+			<CustName>ABC Technology</CustName>
+			<City>Madrid</City>
+
+			<Order OrderId="O2">
+				<Year>2011</Year>
+				<GrandTotal>100.011</GrandTotal>
+			</Order>
+			<Order OrderId="O3">
+				<Year>2012</Year>
+				<GrandTotal>100.012</GrandTotal>
+			</Order>
+
+		</Customer>
+		
+		<Customer  CustomerId="C3">
+			<CustName>IAS Software</CustName>
+			<City>Istanbul</City>
+
+			<Order OrderId="O5">
+				<Year>2010</Year>
+				<GrandTotal>100.010</GrandTotal>
+			</Order>
+			<Order OrderId="O6">
+				<Year>2014</Year>
+				<GrandTotal>100.014</GrandTotal>
+			</Order>
+		</Customer>
+	</CustomerList>
 
 Exercise 2: Parsing Simple XML Documents
 ----------------------------------------
