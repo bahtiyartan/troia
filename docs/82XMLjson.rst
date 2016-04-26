@@ -929,11 +929,11 @@ Calculate grand total value (sum of Price*Quantity for each product) for the pro
 	</ProductList>
 
 
-#Exercise 3: Parsing Complex XML Documents
-#-----------------------------------------
+Exercise 3: Parsing Complex XML Documents
+-----------------------------------------
 
-# Exercise 4: Validation
-# ----------------------
+Exercise 4: Validation
+----------------------
 
 
 
