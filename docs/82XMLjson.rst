@@ -754,22 +754,6 @@ Example 9: Multiple Relations - Extra OrdersColumnWithoutOrdersId
 	SET TMPTABLE TO TABLE TMPTABLE;
 
 
-Example 10:
-===========
-
-
-Example 11:
-===========
-
-
-Example 12:
-===========
-
-
-
-
-
-
 Exercise 1: Parse using READXMLSTRUCTURE
 ----------------------------------------
 
