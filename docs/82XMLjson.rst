@@ -326,8 +326,8 @@ Example 2: Multiple Auto Parsers
 	STRINGVAR3 = '<PCARD_CARD_GET_DETAILResponse xmlns="http://tempuri.org/">
 		<PCARD_CARD_GET_DETAILResult>
 			<ConditionNo>100</ConditionNo>
-			<ConditionMesaj>Invalid username or password</ConditionMesaj>
-			<Basarili>false</Basarili>
+			<ConditionMessage>Invalid username or password</ConditionMessage>
+			<Success>false</Success>
 			<cardInfo />
 			<cardCredit>
 				<lmt xsi:nil="true" />
@@ -401,31 +401,31 @@ Example 4: Reading Childs
 		</Customer>
 	</CustomerList>
 
+
 ::
-
+	
 	OBJECT: 
-		TABLE CUSTOMERS;
+		TABLE CUSTOMERS,
+		INTEGER ROWCOUNT;
 
-	CLEAR XMLMAP SALESMAP;
-	CREATEXMLMAP SALESMAP;
-
-	MAP ELEMENT CustomerList AS XMLROOTTABLE CustomerList IN SALESMAP;
-	MAP CHILD Sector OF CustomerList AS XMLCOLUMN Sector IN SALESMAP;
-
-	MAP ELEMENT Customer AS XMLTABLE CUSTOMER IN SALESMAP;
-	MAP CHILD CustName OF Customer AS XMLCOLUMN CustName IN SALESMAP;
-	MAP CHILD City OF Customer AS XMLCOLUMN City IN SALESMAP;
-
+	CLEAR XMLMAP DEMOMAP;
+	CREATEXMLMAP DEMOMAP;
+	MAP ELEMENT CustomerList AS XMLROOTTABLE CustomerList IN DEMOMAP;
+	MAP CHILD Sector OF CustomerList AS XMLCOLUMN Sector IN DEMOMAP;
+	MAP ELEMENT Customer AS XMLTABLE CUSTOMER IN DEMOMAP;
+	MAP CHILD CustName OF Customer AS XMLCOLUMN CustName IN DEMOMAP;
+	MAP CHILD City OF Customer AS XMLCOLUMN City IN DEMOMAP;
 	MAP RELATION Customer TO CustomerList LINK Sector 
-						WITH Sector GENERATE YES IN SALESMAP;
+						WITH Sector GENERATE YES IN DEMOMAP;
 
-	PARSEXML 'C:\TMP\tempxml2.xml' USING SALESMAP;
-	CONVERTXMLTABLE CUSTOMER INTO TABLE CUSTOMERS FROM SALESMAP;
+	COPYFILE '*C:\TMP\XML\ex4.xml' INTO '.\XMLParsing\ex4.xml';
+	PARSEXML '.\XMLParsing\ex4.xml' USING DEMOMAP;
+	CONVERTXMLTABLE CUSTOMER INTO TABLE CUSTOMERS FROM DEMOMAP;
 
-	STRINGVAR1 = CUSTOMERS_ROWCOUNT;
-
+	ROWCOUNT = CUSTOMERS_ROWCOUNT;
 	COPY TABLE CUSTOMERS INTO TMPTABLE;
 	SET TMPTABLE TO TABLE TMPTABLE;
+
 
 
 Example 5: Childs with Extra Relation
@@ -436,8 +436,8 @@ Example 5: Childs with Extra Relation
 	<PCARD_CARD_GET_DETAILResponse xmlns="http://tempuri.org/">
 		  <PCARD_CARD_GET_DETAILResult>
 			<ConditionNo>100</ConditionNo>
-			<ConditionMesaj>Invalid username or password</ConditionMesaj>
-			<Basarili>false</Basarili>
+			<ConditionMessage>Invalid username or password</ConditionMessage>
+			<Success>false</Success>
 			<cardInfo />
 			<cardCredit>
 			  <lmt/>
@@ -448,38 +448,35 @@ Example 5: Childs with Extra Relation
 		  </PCARD_CARD_GET_DETAILResult>
 	</PCARD_CARD_GET_DETAILResponse>
 	
+
 ::
 
 	OBJECT: 
 		TABLE DETAILRESULT;
 
-	CLEAR XMLMAP SALESMAP;
-	CREATEXMLMAP SALESMAP;
-
+	CLEAR XMLMAP DEMOMAP;
+	CREATEXMLMAP DEMOMAP;
+	
 	MAP ELEMENT PCARD_CARD_GET_DETAILResponse 
-			AS XMLROOTTABLE PCARD_CARD_GET_DETAILResponse IN SALESMAP;
-
+			AS XMLROOTTABLE PCARD_CARD_GET_DETAILResponse IN DEMOMAP;
 	MAP ELEMENT PCARD_CARD_GET_DETAILResult 
-				AS XMLTABLE PCARD_CARD_GET_DETAILResult IN SALESMAP;
-	
+				AS XMLTABLE PCARD_CARD_GET_DETAILResult IN DEMOMAP;
 	MAP CHILD ConditionNo OF PCARD_CARD_GET_DETAILResult 
-						AS XMLCOLUMN ConditionNo IN SALESMAP;
-	
-	MAP CHILD ConditionMesaj OF PCARD_CARD_GET_DETAILResult 
-						AS XMLCOLUMN ConditionMesaj IN SALESMAP;
-	
-	MAP CHILD Basarili OF PCARD_CARD_GET_DETAILResult 
-						AS XMLCOLUMN Basarili IN SALESMAP;
-	
+					AS XMLCOLUMN ConditionNo IN DEMOMAP;
+	MAP CHILD ConditionMessage OF PCARD_CARD_GET_DETAILResult 
+					AS XMLCOLUMN ConditionMesaj IN DEMOMAP;
+	MAP CHILD Success OF PCARD_CARD_GET_DETAILResult 
+					AS XMLCOLUMN Success IN DEMOMAP;
 	MAP CHILD ConditionNo OF PCARD_CARD_GET_DETAILResult 
-						AS XMLCOLUMN ConditionNo IN SALESMAP;
-
+					AS XMLCOLUMN ConditionNo IN DEMOMAP;
+	
 	MAP RELATION PCARD_CARD_GET_DETAILResult TO PCARD_CARD_GET_DETAILResponse LINK
-					DUMMY WITH DUMMY  GENERATE NO IN SALESMAP;
-
-	PARSEXML 'C:\TMP\tempxml2.xml' USING SALESMAP;
+					DUMMY WITH DUMMY  GENERATE NO IN DEMOMAP;
+	
+	COPYFILE '*C:\TMP\XML\ex5.xml' INTO '.\XMLParsing\ex5.xml';
+	PARSEXML '.\XMLParsing\ex5.xml' USING DEMOMAP;
 	CONVERTXMLTABLE PCARD_CARD_GET_DETAILResult 
-						INTO TABLE DETAILRESULT FROM SALESMAP;
+						INTO TABLE DETAILRESULT FROM DEMOMAP;
 
 	COPY TABLE DETAILRESULT INTO TMPTABLE;
 	SET TMPTABLE TO TABLE TMPTABLE;
