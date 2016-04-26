@@ -912,19 +912,19 @@ Calculate grand total value (sum of Price*Quantity for each product) for the pro
 
 	<ProductList>
 		<Product>
-            <Name>Product 1</Name>
-            <Price>6.30</Price>
-            <Quantity>5</Quantity>
+			<Name>Product 1</Name>
+			<Price>6.30</Price>
+			<Quantity>5</Quantity>
         </Product>
-        <Product>
-            <Name>Product 2</Name>
-            <Price>2.50</Price>
-            <Quantity>3</Quantity>
-        </Product>
-        <Product>
-            <Name>Product 3</Name>
-            <Price>1.20</Price>
-            <Quantity>2</Quantity>
+		<Product>
+			<Name>Product 2</Name>
+			<Price>2.50</Price>
+			<Quantity>3</Quantity>
+		</Product>
+		<Product>
+			<Name>Product 3</Name>
+			<Price>1.20</Price>
+			<Quantity>2</Quantity>
 		</Product>
 	</ProductList>
 
