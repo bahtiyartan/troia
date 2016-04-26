@@ -228,27 +228,29 @@ Validating XML Documents
 	<schema xmlns="http://purl.oclc.org/dsdl/schematron">
 
 	<ns uri="http://www.topologi.com/example" prefix="ex"/>
-		<pattern name="Check structure">
-			<rule context="ex:Person">
-				<assert test="@Title">
-					Person must have title
-				</assert>
-				<assert test="count(ex:Name)=1 and count(ex:Gender)=1">
-					Person should have Name / Gender.
-				</assert>
-				<assert test="ex:*[1] = ex:Name">
-					Name must appear before element Gender.
-				</assert>
-			</rule>
-		</pattern>
-		<pattern name="Check co-occurrence constraints">
-			<rule context="ex:Person">
-				<assert test="(@Title = 'Mr' and ex:Gender = 'Male') 
-				   or @Title != 'Mr'">
-					If the Title is "Mr", gender must be "Male".
-				</assert>
-			</rule>
-		</pattern>
+		
+	<pattern name="Check structure">
+		<rule context="ex:Person">
+			<assert test="@Title">
+				Person must have title
+			</assert>
+			<assert test="count(ex:Name)=1 and count(ex:Gender)=1">
+				Person should have Name / Gender
+			</assert>
+			<assert test="ex:*[1] = ex:Name">
+				Name must appear before element Gender
+			</assert>
+		</rule>
+	</pattern>
+	
+	<pattern name="Check co-occurrence constraints">
+		<rule context="ex:Person">
+			<assert test="(@Title = 'Mr' and ex:Gender = 'Male') 
+			   or @Title != 'Mr'">
+				If the Title is "Mr", gender must be "Male"
+			</assert>
+		</rule>
+	</pattern>
 	</schema>
 
 .. code-block:: xml
