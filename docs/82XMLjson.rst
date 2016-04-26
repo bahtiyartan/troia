@@ -410,7 +410,7 @@ Example 4: Reading Childs
 	SET TMPTABLE TO TABLE TMPTABLE;
 
 
-Example 5: Childs With Extra Relation
+Example 5: Childs with Extra Relation
 =====================================
 
 .. code-block:: xml
