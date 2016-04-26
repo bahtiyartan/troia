@@ -571,8 +571,8 @@ Example 7: Attributes On Childs
 	
 
 
-Example 8: Multiple Tables and Relations Childs-Attributes
-----------------------------------------------------------
+Example 8: Multiple Tables & Relations Childs-Attributes
+--------------------------------------------------------
 
 .. code-block:: xml
 
