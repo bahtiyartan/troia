@@ -818,7 +818,7 @@ Example 10: Relation with Non-Generated Column
 	MAP ATTRIBUTE id OF Orderline AS XMLCOLUMN orderlineid IN SALESMAP;
 	MAP CHILD OrderLine_org OF Orderline AS XMLCOLUMN OrderLine_org IN SALESMAP;
 	MAP RELATION Orderline TO Order LINK orderid 
-								WITH orderid GENERATE YES IN SALESMAP;
+						WITH orderid GENERATE YES IN SALESMAP;
 
 	PARSEXML 'C:\TMP\document.xml' USING SALESMAP;
 	CONVERTXMLTABLE CUSTOMERORDER INTO TABLE ORDERS FROM SALESMAP;
