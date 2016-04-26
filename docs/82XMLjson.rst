@@ -241,8 +241,7 @@ Validating XML Documents
 				Name must appear before element Gender
 			</assert>
 		</rule>
-	</pattern>
-	
+	</pattern>	
 	<pattern name="Check co-occurrence constraints">
 		<rule context="ex:Person">
 			<assert test="(@Title = 'Mr' and ex:Gender = 'Male') 
@@ -251,6 +250,7 @@ Validating XML Documents
 			</assert>
 		</rule>
 	</pattern>
+	
 	</schema>
 
 .. code-block:: xml
