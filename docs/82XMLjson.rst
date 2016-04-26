@@ -915,7 +915,7 @@ Calculate grand total value (sum of Price*Quantity for each product) for the pro
 			<Name>Product 1</Name>
 			<Price>6.30</Price>
 			<Quantity>5</Quantity>
-        </Product>
+		</Product>
 		<Product>
 			<Name>Product 2</Name>
 			<Price>2.50</Price>
