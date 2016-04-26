@@ -303,8 +303,8 @@ Example 1: Using Auto Parser
 	PARSEXML TEXT STRINGVAR3 INTO TMPTABLE;
 	SET TMPTABLE TO TABLE TMPTABLE;
 
-Example 2: Using Multiple Auto Parser Commands
-==============================================
+Example 2: Multiple Auto Parsers
+================================
 
 .. code-block:: xml
 
