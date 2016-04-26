@@ -24,7 +24,7 @@ Convert XML to JSON
 			<menuitem value="New" onclick="CreateNewDoc()" />
 			<menuitem value="Open" onclick="OpenDoc()" />
 			<menuitem value="Close" onclick="CloseDoc()" />
-	  </popup>
+		</popup>
 	</menu>
 	
 ::
