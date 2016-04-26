@@ -6,7 +6,7 @@
  * :license: Flask Design License, see LICENSE for details.
  */
 
-{% set page_width = '1010px' %}
+{% set page_width = '1020px' %}
 {% set sidebar_width = '270px' %}
 
 @import url("basic.css");
