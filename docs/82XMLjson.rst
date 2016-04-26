@@ -328,8 +328,8 @@ Example 2: Multiple Auto Parsers
 	SET TMPTABLE TO TABLE TMPTABLE;
 
 
-Example 3: Level 2 - Using PCData
-=================================
+Example 3: Using PCData
+=======================
 
 .. code-block:: xml
 
@@ -410,8 +410,8 @@ Example 4: Reading Childs
 	SET TMPTABLE TO TABLE TMPTABLE;
 
 
-Example 5: Reading Childs With Extra Relation
-=============================================
+Example 5: Childs With Extra Relation
+=====================================
 
 .. code-block:: xml
 	
@@ -504,8 +504,8 @@ Example 6: Reading Attributes
 	SET TMPTABLE TO TABLE TMPTABLE;
 
 
-Example 7: Reading Attributes On Childs
-=======================================
+Example 7: Attributes On Childs
+===============================
 
 
 .. code-block:: xml
