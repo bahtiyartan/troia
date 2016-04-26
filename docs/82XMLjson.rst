@@ -288,7 +288,7 @@ XML Parsing Examples
 Example 1: Using Auto Parser
 ============================
 
-::
+.. code-block:: xml
 
 	STRINGVAR3 = '<?xml version="1.0" ?>
 	<CustomerList>
@@ -306,7 +306,7 @@ Example 1: Using Auto Parser
 Example 2: Using Multiple Auto Parser Commands
 ==============================================
 
-::
+.. code-block:: xml
 
 	STRINGVAR3 = '<PCARD_CARD_GET_DETAILResponse xmlns="http://tempuri.org/">
       <PCARD_CARD_GET_DETAILResult>
