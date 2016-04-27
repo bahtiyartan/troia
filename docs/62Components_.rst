@@ -4,7 +4,7 @@
 Custom TROIA Components
 =======================
 
-*Its possible to define custom business layer components and use them in different dialogs or other components. This sections aims to show how "custom components" are defined and used.*
+*Its possible to define custom business layer components and use instances of these components in different dialogs or other components. This sections aims to show how "custom components" are defined and used.*
 
 
 Introduction
@@ -21,6 +21,9 @@ Defining Components
 
 Component Actions
 =================
+
+FIRECOMPONENTACTION Command
+===========================
 
 Using Components
 ----------------
