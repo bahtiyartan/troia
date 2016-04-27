@@ -80,6 +80,10 @@ Calling Web Services
 
 ::
 
+	 CALLWEBSERVICE {wsdlurl} , {operation} TO {sym} WITH {params};
+
+::
+
 	OBJECT: 
 		STRING STRWSDL,
 		STRING RESULT,
@@ -116,7 +120,37 @@ Calling Web Services
 
 	PARSEXML TEXT RESULT INTO TMPTABLE;
 	SET TMPTABLE TO TABLE TMPTABLE;
+	
+::
 
+	OBJECT: 
+		STRING STRWSDL,
+		STRING RESULT,
+		TABLE TMPTABLE,
+		STRING STRINGVAR3;
+
+	STRWSDL = 'http://www.w3schools.com/xml/tempconvert.asmx?WSDL';
+	CALLWEBSERVICE STRWSDL, 'CelsiusToFahrenheit' TO RESULT WITH '10';
+	STRINGVAR3 = RESULT;
+	
+::
+
+	OBJECT: 
+		STRING STRINGVAR3,
+		STRING STRURL,
+		STRING FILEPATH,
+		STRING STRCTYPE,
+		TABLE TMPTABLE;
+
+	FILEPATH = '*C:\TMP\response.html';
+	STRURL = 'http://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit';
+	STRCTYPE = 'application/x-www-form-urlencoded';
+
+	SENDHTTPPOST 'celsius=10' TO STRURL CONTENTTYPE STRCTYPE;
+	STRINGVAR3 = SYS_HTTPPOSTRESPONSE;
+
+	PARSEXML TEXT STRINGVAR3 INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
 
 
 
