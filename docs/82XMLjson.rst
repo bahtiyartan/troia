@@ -281,6 +281,8 @@ Validating XML Documents
 Parsing XML Documents
 ---------------------
 
+Defining XML Maps
+=================
 ::
 
 	CREATEXMLMAP {mapname};
@@ -303,7 +305,10 @@ Parsing XML Documents
 	MAP RELATION {elementname} TO {elementname} LINK {primarykey} 
 				WITH {foreignkey} GENERATE YES | NO IN {mapname};
 
-				
+	
+Parsing XML with XML Maps
+=========================
+	
 ::
 
 	PARSEXML {docpath} USING {mapname};
@@ -311,6 +316,15 @@ Parsing XML Documents
 ::
 
 	CONVERTXMLTABLE {xmltable} INTO {table} FROM {mapname};
+
+
+Parsing without XML Map
+=======================
+
+::
+
+	PARSEXML TEXT {xmlastext} INTO {tablename};
+	PARSEXML {filepath} INTO {tablename};
 	
 
 
