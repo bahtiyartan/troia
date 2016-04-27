@@ -12,7 +12,7 @@ Sending data over HTTP Post Method
 
 ::
 
-	SENDHTTPPOST {poststring} TO {url} [CODEPAGE {codepage}] [CONTENTTYPE {contenttype}]
+	SENDHTTPPOST {poststr} TO {url} [CODEPAGE {codepage}] [CONTENTTYPE {contenttype}]
 				[COOKIE {cookie}] [REFERER {referer}] 
 				[HEADERS {headers}] [REQUESTMETHOD {requestmethod}]; 
 
