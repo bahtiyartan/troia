@@ -10,6 +10,18 @@ HTTP Operations & Calling Web Services
 Sending data over HTTP Post Method
 ----------------------------------
 
+::
+
+	SENDHTTPPOST {poststring} TO {url} [CODEPAGE {codepage}] [CONTENTTYPE {contenttype}]
+			[COOKIE {cookie}] [REFERER {referer}] [HEADERS {headers}] [REQUESTMETHOD {requestmethod}]; 
+
+
+SYS_SENDHTTPPOSTRESPONSE
+SYS_HTTPPOSTCOOKIES
+
+
+
+
 
 Calling Web Services
 --------------------

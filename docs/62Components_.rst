@@ -22,8 +22,13 @@ Defining Components
 Component Actions
 =================
 
-FIRECOMPONENTACTION Command
-===========================
+FIRECOMPONENTEVENT Command
+==========================
+
+::
+
+	FIRECOMPONENTEVENT {eventname};
+	
 
 Using Components
 ----------------
