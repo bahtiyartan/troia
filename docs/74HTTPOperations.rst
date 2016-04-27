@@ -16,10 +16,30 @@ Sending data over HTTP Post Method
 			[COOKIE {cookie}] [REFERER {referer}] [HEADERS {headers}] [REQUESTMETHOD {requestmethod}]; 
 
 
+Reading HTTP Response
+=====================
+
 SYS_SENDHTTPPOSTRESPONSE
 SYS_HTTPPOSTCOOKIES
 
+::
 
+	OBJECT: 
+		STRING STRINGVAR3,
+		STRING STRINGVAR2,
+		STRING STRURL,
+		STRING FILEPATH;
+
+	FILEPATH = '*C:\TMP\response.html';
+	STRURL = 'http://troia.readthedocs.org/en/latest/search.html';
+
+	SENDHTTPPOST '' TO STRURL;
+	STRINGVAR2 = SYS_HTTPPOSTCOOKIES;
+	STRINGVAR3 = SYS_HTTPPOSTRESPONSE;
+
+	OPEN FILE FILEPATH FORNEW;
+	PUT STRINGVAR3, CODEPAGE 'UTF-8';
+	CLOSE FILE;
 
 
 
