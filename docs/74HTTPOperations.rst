@@ -13,7 +13,8 @@ Sending data over HTTP Post Method
 ::
 
 	SENDHTTPPOST {poststring} TO {url} [CODEPAGE {codepage}] [CONTENTTYPE {contenttype}]
-			[COOKIE {cookie}] [REFERER {referer}] [HEADERS {headers}] [REQUESTMETHOD {requestmethod}]; 
+				[COOKIE {cookie}] [REFERER {referer}] 
+				[HEADERS {headers}] [REQUESTMETHOD {requestmethod}]; 
 
 
 Reading HTTP Response
