@@ -12,15 +12,18 @@ Sending data over HTTP Post Method
 
 ::
 
-	SENDHTTPPOST {poststr} TO {url} [CODEPAGE {codepage}] [CONTENTTYPE {contenttype}]
+	SENDHTTPPOST {poststr} TO {url} [CODEPAGE {encoding}] [CONTENTTYPE {contenttype}]
 				[COOKIE {cookie}] [REFERER {referer}] 
 				[HEADERS {headers}] [REQUESTMETHOD {requestmethod}]; 
+				
+poststring, url, encoding, contenttype, cookie,headers,requestmethod
 
 
 Reading HTTP Response
 =====================
 
 SYS_SENDHTTPPOSTRESPONSE
+
 SYS_HTTPPOSTCOOKIES
 
 ::
@@ -64,7 +67,7 @@ SYS_HTTPPOSTCOOKIES
 
 	STRINGVAR3 = SYS_HTTPPOSTRESPONSE;
 
-	FILEPATH = '*C:\TMP\response2.html';
+	FILEPATH = '*C:\TMP\response.html';
 	OPEN FILE FILEPATH FORNEW;
 	PUT STRINGVAR3, CODEPAGE 'UTF-8';
 	CLOSE FILE;
