@@ -24,17 +24,8 @@ LOADNATIVE Command
 ..
 
 
-Invoking Other Programs
------------------------
-
-
-RUNPROGRAM Command
-==================
-
-..
-
-RUNFILE Command
-===============
+Opening Files with Default App
+==============================
 
 ::
 
@@ -71,3 +62,12 @@ Server path..
 
 	RUNFILE STRPATH;
 	DELETEFILE STRPATH;
+	
+Invoking Other Programs
+-----------------------
+
+
+RUNPROGRAM Command
+==================
+
+..
