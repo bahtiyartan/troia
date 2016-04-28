@@ -38,11 +38,11 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    66FTP
    70WebServices
    74HTTPOperations
-   76ProgramsLibraries
    78Port
    82XMLjson
    86Mailing
    90SMS
+   92ProgramsLibraries
    94ClientPlugin
    
    #Security
