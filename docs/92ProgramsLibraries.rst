@@ -25,7 +25,7 @@ LOADNATIVE Command
 
 
 Opening Files with Default App
-==============================
+------------------------------
 
 ::
 
@@ -62,10 +62,14 @@ Server path..
 
 	RUNFILE STRPATH;
 	DELETEFILE STRPATH;
+
 	
 Invoking Other Programs
 -----------------------
 
+::
+
+	RUNPROGRAM {executable} [params] [WITH WAIT [INTO {targetsymbol}]];
 
 RUNPROGRAM Command
 ==================
