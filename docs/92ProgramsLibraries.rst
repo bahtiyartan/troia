@@ -12,16 +12,35 @@ Introduction to Shared Libraries
 
 ..
 
-
 Using Shared Libraries in TROIA
 -------------------------------
 
-..
+iasNativeCall.dll / iasNativeCall.so
 
 LOADNATIVE Command
 ==================
 
-..
+::
+
+	LOADNATIVE {libname} , {signature} TO {targetsymbol} WITH {parameters};
+
+::
+
+	OBJECT: 
+		STRING STRINGVAR1,
+		STRING STRINGVAR2;
+
+	STRINGVAR1 = 'int abs(int)';
+	LOADNATIVE '!msvcrt.dll',STRINGVAR1 TO STRINGVAR2 WITH '-4';
+	
+::
+
+	OBJECT: 
+		STRING STRINGVAR1,
+		STRING STRINGVAR2;
+
+	STRINGVAR1 = 'int abs(int)';
+	LOADNATIVE 'msvcrt.dll',STRINGVAR1 TO STRINGVAR2 WITH '-4';
 
 
 Opening Files with Default App
