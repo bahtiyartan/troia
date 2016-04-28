@@ -110,7 +110,7 @@ RUNPROGRAM Command
 		STRING STRINGVAR3,
 		STRING COMMAND;
 
-	COMMAND = '*java -jar C:\Users\btan.IASRDDC\Desktop\OutPrinter.jar p1 p2 p3 p4';
+	COMMAND = '*java -jar C:\TMP\OutPrinter.jar p1 p2 p3 p4';
 	RUNPROGRAM COMMAND WITH WAIT INTO STRINGVAR3;
 	
 
