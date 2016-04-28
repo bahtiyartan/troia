@@ -129,10 +129,6 @@ RUNPROGRAM Command
 	}
 
 	
-[//]: # Exercise 1: Checking domain availability 
-[//]: #----------------------------------------
-[//]: #..
-
-[//]: #Exercise 2:
-[//]: #------------------------------------
-[//]: #..
+Exercise 1: Checking domain availability 
+----------------------------------------
+..
