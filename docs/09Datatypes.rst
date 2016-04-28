@@ -4,6 +4,7 @@
 Built-in Data Types and Structures
 ==================================
 
+*Like other programming languages, TROIA has built-in data types and all these types have some specific features. This section aims to introduce all primitive and complex data types. Details about complex data types will be discussed in related sections.*
 
 
 Built-in Data Types
