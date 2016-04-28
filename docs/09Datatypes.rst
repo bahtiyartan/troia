@@ -1,8 +1,14 @@
 
 
-=======================
+==================================
 Built-in Data Types and Structures
-=======================
+==================================
+
+*Like any other programming languages, TROIA has built-in data types. This section aims to introduce you all primitive and complex data types.*
+
+
+Built-in Data Types
+-------------------
 
 Built-in data types are listed below:
 
@@ -30,7 +36,7 @@ TROIA does not support low level types like byte, char, short, float etc.
 	
 	
 StringBuilder & String
---------------------
+----------------------
 
 STRINGBUILDER is a string like symbol type which is designed for only string building operation.
 
