@@ -36,4 +36,38 @@ RUNPROGRAM Command
 RUNFILE Command
 ===============
 
-..
+::
+
+	RUNFILE {filepathonclient};
+	
+Client path..
+
+::
+
+	OBJECT:
+		STRING STRPATH;
+	   
+	STRPATH = '*C:\TMP\runfile.htm';
+		
+	OPEN FILE STRPATH FORNEW;
+	PUT '<b>RUNFILE Command</b>';
+	CLOSE FILE;
+
+	RUNFILE STRPATH;
+
+	
+Server path..
+
+::
+
+	OBJECT:
+		STRING STRPATH;
+	   
+	STRPATH = '.\runfile.htm';
+		
+	OPEN FILE STRPATH FORNEW;
+	PUT '<b>RUNFILE Command</b>';
+	CLOSE FILE;
+
+	RUNFILE STRPATH;
+	DELETEFILE STRPATH;
