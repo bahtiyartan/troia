@@ -54,6 +54,36 @@ Opening/Closing TCP Ports
 ::
 
 	OPENPORT TCP {portname} PORT {portnumber} [IPADDRESS {ipaddress}];
+	
+
+::
+
+	CLOSEPORT {portname};
+	
+
+open a tcp port to 192.168.5.114
+	
+::
+	
+	OBJECT:
+	STRING PORTNAME;
+
+	PORTNAME = '*PORTNAME';
+	OPENPORT TCP PORTNAME PORT 4848 IPADDRESS '192.168.5.114';
+	CLOSEPORT PORTNAME;
+
+
+open a tcp port on localhost
+
+::
+	OBJECT:
+	STRING PORTNAME;
+
+	PORTNAME = '*PORTNAME';
+	OPENPORT TCP PORTNAME PORT 4848;
+	
+	CLOSEPORT PORTNAME;
+
 
 Reading Data From Port
 ----------------------
@@ -62,6 +92,9 @@ Reading Data From Port
 
 	READFROMPORT {portname} INTO {variable};
 	
+
+read from a serial port.	
+
 ::
 
 	OBJECT: 
@@ -88,6 +121,20 @@ Reading Data From Port
 
 	CLOSEPORT PORTNAME;	
 
+	
+read data from a tcp port
+
+::
+
+	OBJECT:
+		STRING STRINGVAR3,
+		STRING PORTNAME;
+
+	PORTNAME = '*PORTNAME';
+	OPENPORT TCP PORTNAME PORT 4848 IPADDRESS '192.168.5.114';
+	READFROMPORT PORTNAME TO STRINGVAR3;
+	CLOSEPORT PORTNAME;	
+	
 Writing Data To Port
 --------------------
 
@@ -96,6 +143,17 @@ Writing Data To Port
 	SENDTOPORT {portname} {content} [{timetowait}];
 	
 
+write data to a tcp port
+
+::
+
+	OBJECT:
+		STRING PORTNAME;
+
+	PORTNAME = '*PORTNAME';
+	OPENPORT TCP PORTNAME PORT 4848;
+	SENDTOPORT PORTNAME 'Hello World!';
+	CLOSEPORT PORTNAME;
 
 
 
