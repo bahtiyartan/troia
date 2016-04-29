@@ -19,13 +19,13 @@ Opening/Closing Serial Ports
 
 	OPENPORT {port} {portname} [ PARAMETERS [BAUDRATE {baudrate}] 
 					[DATABITS {databits}] 
-                    [STOPBITS {stopbits}] 
+					[STOPBITS {stopbits}] 
 					[PARITY NONE|ODD|EVEN|MARK|SPACE] 
-                    [FLOWCONTROL NONE|RTSCTSIN|RTSCTSOUT|XONXOFFIN|XONXOFFOUT] 
-                    [RTS {rts}] 
-                    [DTR {dtr}] 
-                    [ENCODING {encoding}] 
-                    [DEBUG TRUE|FALSE] ];
+					[FLOWCONTROL NONE|RTSCTSIN|RTSCTSOUT|XONXOFFIN|XONXOFFOUT] 
+					[RTS {rts}] 
+					[DTR {dtr}] 
+					[ENCODING {encoding}] 
+					[DEBUG TRUE|FALSE] ];
 					
 ::
 
