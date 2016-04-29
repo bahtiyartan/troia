@@ -39,7 +39,7 @@ After you click "OK" button on new dialog form, IDE creates a new dialog and ope
 
 
 How Dialogs are Stored?
------------------------
+=======================
 
 All development information (codes, design etc) about dialogs are stored in database tables.
 
@@ -58,7 +58,7 @@ All development information (codes, design etc) about dialogs are stored in data
 +-----------------+-------------------------------------------------------+
 
 Binary Format of Dialogs
--------------------------
+========================
 
 With "Convert" operation, binary/compilation data is built. This data contains all kinds of dialog information such as name, size, controls, control positions, functions and events etc. 
 
