@@ -34,7 +34,7 @@ To edit your existing classes you must click **TROIA IDE->Open Resource** on men
 
 
 How Classes Stored?
-------------------------------
+===================
 
 There are two types of information that defines a class. Here is the tables that stores all development information classes.
 
