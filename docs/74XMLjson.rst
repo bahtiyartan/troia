@@ -327,9 +327,11 @@ Parsing without XML Map
 	PARSEXML {filepath} INTO {tablename};
 	
 
+XML Parsing Examples
+--------------------
 
 Example 1: Using Auto Parser
-----------------------------
+============================
 
 .. code-block:: xml
 	
@@ -361,7 +363,7 @@ Example 1: Using Auto Parser
 	SET TMPTABLE TO TABLE TMPTABLE;
 
 Example 2: Multiple Auto Parsers
---------------------------------
+================================
 
 .. code-block:: xml
 
@@ -390,7 +392,7 @@ Example 2: Multiple Auto Parsers
 
 
 Example 3: Using PCData
------------------------
+=======================
 
 .. code-block:: xml
 
@@ -425,7 +427,7 @@ Example 3: Using PCData
 
 
 Example 4: Reading Childs
--------------------------
+=========================
 
 .. code-block:: xml
 
@@ -474,7 +476,7 @@ Example 4: Reading Childs
 
 
 Example 5: Childs with Extra Relation
--------------------------------------
+=====================================
 
 .. code-block:: xml
 	
@@ -528,7 +530,7 @@ Example 5: Childs with Extra Relation
 
 
 Example 6: Reading Attributes
------------------------------
+=============================
 
 .. code-block:: xml
 
@@ -579,7 +581,7 @@ Example 6: Reading Attributes
 
 
 Example 7: Attributes On Childs
--------------------------------
+===============================
 
 
 .. code-block:: xml
@@ -635,7 +637,7 @@ Example 7: Attributes On Childs
 
 
 Example 8: Multiple Tables & Relations Childs-Attributes
---------------------------------------------------------
+========================================================
 
 .. code-block:: xml
 
@@ -722,7 +724,7 @@ Example 8: Multiple Tables & Relations Childs-Attributes
 
 
 Example 9: Multiple Relations/Extra Orders Column Without OrdersId
-------------------------------------------------------------------
+==================================================================
 
 .. code-block:: xml
 
@@ -839,7 +841,7 @@ Example 9: Multiple Relations/Extra Orders Column Without OrdersId
 	
 	
 Example 10: Relation with Non-Generated Column
-----------------------------------------------
+==============================================
 
 .. code-block:: xml
 
