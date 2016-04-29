@@ -4,7 +4,7 @@
 Port Communication (Serial & TCP)
 =================================
 
-*TROIA Platform supports port communications over serial ports. Also its possible to communicate over TCP Ports using TCP Protocol. This sections aims to introduce communicating over serial and TCP ports*
+*TROIA Platform supports sending/recieving data over serial ports. Also its possible to communicate over TCP Ports using TCP Protocol. This sections aims to introduce communicating over serial and TCP ports*
 
 
 Introduction
