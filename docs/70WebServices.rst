@@ -31,7 +31,7 @@ WSDL Overview
 
 
 Installation
-------------
+============
 
 ..installation
 
