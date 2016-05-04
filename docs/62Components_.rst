@@ -17,10 +17,19 @@ Components & Scope
 ------------------
 
 Defining Components
--------------------
+-------------------	
+
+Using Components
+----------------
+
+Calling Component Functions
+===========================
+
+Nested Components
+=================
 
 Component Actions
-=================
+-----------------
 
 FIRECOMPONENTEVENT Command
 ==========================
@@ -28,16 +37,6 @@ FIRECOMPONENTEVENT Command
 ::
 
 	FIRECOMPONENTEVENT {eventname};
-	
-
-Using Components
-----------------
-
-Nested Components
-=================
-
-Calling Component Functions
-===========================
 
 
 

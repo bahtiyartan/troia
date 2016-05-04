@@ -44,9 +44,9 @@ Additionally system tries to kill remaining open connections before transaction 
 		STRING FTPPASS,
 		STRING FTPUSER;
 
-	FTPHOST = ‘anyftp.com.tr’;
-	FTPUSER = ‘user';
-	FTPPASS = ‘password’;
+	FTPHOST = 'anyftp.com.tr';
+	FTPUSER = 'user';
+	FTPPASS = 'password';
 
 	MAKEFTPCONNECTION HOST FTPHOST USERNAME FTPUSER PASSW FTPPASS PROTOCOL FTP;
 
@@ -82,7 +82,7 @@ Working Directory
 
 After connection established to file server, a working directory is assigned to a client and all commands executed in this path. Also, relative file paths are computed from this working directory.
 
-To read, currently which directory are you working on FTPRUNCOMMAND’s CURRENTDIRECTORY variation is used. Changing working directory is possible with FTPRUNCOMMAND’s CHANGEDIRECTORY variation. This command also allows some other operations on FTP server for more information please see the command help. Here is the syntax of two variations.
+To read, currently which directory are you working on FTPRUNCOMMAND's CURRENTDIRECTORY variation is used. Changing working directory is possible with FTPRUNCOMMAND's CHANGEDIRECTORY variation. This command also allows some other operations on FTP server for more information please see the command help. Here is the syntax of two variations.
 
 ::
 
@@ -128,11 +128,11 @@ If downlaoding operation fails, system sets SYS_STATUS and SYS_STATUSERROR syste
 		STRING LOCALPATH,
 		STRING FTPSERVERPATH;
 
-	FTPHOST = ‘anyftp.com.tr’;
-	FTPUSER = ‘user';
-	FTPPASS = ‘password’;
-	FTPSERVERPATH = ‘file.xml’;
-	LOCALPATH = ‘TempFiles\file.xml’;
+	FTPHOST = 'anyftp.com.tr';
+	FTPUSER = 'user';
+	FTPPASS = 'password';
+	FTPSERVERPATH = 'file.xml';
+	LOCALPATH = 'TempFiles\file.xml';
 
 	MAKEFTPCONNECTION HOST FTPHOST USERNAME FTPUSER PASSW FTPPASS PROTOCOL FTP;
 
@@ -168,10 +168,10 @@ If uploading operation fails, system sets SYS_STATUS and SYS_STATUSERROR system 
 		STRING LOCALPATH,
 		STRING FTPSERVERPATH;
 
-	FTPHOST = ‘anyftp.com.tr’;
-	FTPUSER = ‘user';
-	FTPPASS = ‘password’;
-	FTPSERVERPATH = ‘file.xml’;
+	FTPHOST = 'anyftp.com.tr';
+	FTPUSER = 'user';
+	FTPPASS = 'password';
+	FTPSERVERPATH = 'file.xml';
 
 	MAKEFTPCONNECTION HOST FTPHOST USERNAME FTPUSER PASSW FTPPASS PROTOCOL FTP;
 
@@ -185,7 +185,7 @@ If uploading operation fails, system sets SYS_STATUS and SYS_STATUSERROR system 
 Listing Files
 -------------
 
-FTP Infrastructure supports listing files. Operation is fired by FTPRUNCOMMAND command’s LISTFILE variation and executed as working directory. Result of this command must be assigned to a table symbol, similar to FILELIST command. This command also allows some other operations on FTP server for more information please see the command help. Here is the syntax to list files:
+FTP Infrastructure supports listing files. Operation is fired by FTPRUNCOMMAND command's LISTFILE variation and executed as working directory. Result of this command must be assigned to a table symbol, similar to FILELIST command. This command also allows some other operations on FTP server for more information please see the command help. Here is the syntax to list files:
 
 ::
 
@@ -203,10 +203,10 @@ Here is an example that lists and prints file on initial directory.
 		TABLE FILESTABLE,
 		STRING STRINGVAR3;
 
-	FTPHOST = ‘anyftp.com.tr’;
-	FTPUSER = ‘user';
-	FTPPASS = ‘password’;
-	DIRNAME = ‘myfolder’;
+	FTPHOST = 'anyftp.com.tr';
+	FTPUSER = 'user';
+	FTPPASS = 'password';
+	DIRNAME = 'myfolder';
 
 	MAKEFTPCONNECTION HOST FTPHOST USERNAME FTPUSER PASSW FTPPASS PROTOCOL FTP;
 
@@ -249,10 +249,10 @@ Here is an example, that creates a folder on ftp server, changes directory, uplo
 		STRING DIRNAME,
 		TABLE FILESTABLE;
 
-	FTPHOST = ‘anyftp.com.tr’;
-	FTPUSER = ‘user';
-	FTPPASS = ‘password’;
-	DIRNAME = ‘myfolder’;
+	FTPHOST = 'anyftp.com.tr';
+	FTPUSER = 'user';
+	FTPPASS = 'password';
+	DIRNAME = 'myfolder';
 	
 	LOCALPATH = 'file.xml';
 
