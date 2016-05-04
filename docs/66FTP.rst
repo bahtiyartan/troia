@@ -206,7 +206,6 @@ Here is an example that lists and prints file on initial directory.
 	FTPHOST = 'anyftp.com.tr';
 	FTPUSER = 'user';
 	FTPPASS = 'password';
-	DIRNAME = 'myfolder';
 
 	MAKEFTPCONNECTION HOST FTPHOST USERNAME FTPUSER PASSW FTPPASS PROTOCOL FTP;
 
