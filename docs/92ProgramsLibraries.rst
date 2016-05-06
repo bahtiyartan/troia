@@ -131,4 +131,33 @@ RUNPROGRAM Command
 	
 Exercise 1: Checking domain availability 
 ----------------------------------------
-..
+
+::
+
+	OBJECT: 
+	 STRING STRINGVAR3,
+	 STRING COMMAND,
+	 STRING TMPRESULT;
+
+	STRINGVAR1 = 'g';
+	INTEGERVAR1 = 0;
+	STRINGVAR3 = '';
+
+	WHILE INTEGERVAR1  < 20 
+	BEGIN
+		INTEGERVAR1 = INTEGERVAR1 + 1;
+		STRINGVAR1 = STRINGVAR1 + 'g';
+		STRINGVAR2 = 'www.'+STRINGVAR1+'le.com';
+		COMMAND = '*C:\TMP\whois.exe ' + STRINGVAR2;
+		SYNCHRONIZE;
+		RUNPROGRAM COMMAND WITH WAIT INTO TMPRESULT;
+
+		IF STRPOS(TMPRESULT, 'No whois information found') > 0 THEN
+			STRINGVAR3 = STRINGVAR3 + STRINGVAR2 + ' : available.';
+		ELSE
+			STRINGVAR3 = STRINGVAR3 + STRINGVAR2 + ' : not available.';
+		ENDIF;
+
+		STRINGVAR3 = STRINGVAR3 + TOCHAR(10);
+	ENDWHILE;
+
