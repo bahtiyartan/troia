@@ -33,7 +33,7 @@ WSDL Overview
 Installation & Version Update
 =============================
 
-Web service work on web server, so to deploy TROIA Web Services firstly you must have web server which supports serving java web solutions like Apache Tomcat. After installing web server, you must copy TROIA Web Service folder to root directory of your Tomcat installation. 
+To deploy TROIA Web Services firstly you must have web server which supports serving java web solutions. Apache Tomcat is one of the most used web servers to deploy TROIA Web Services. After installing web server, you must copy TROIA Web Service folder to root directory of your Tomcat installation. This folder is supplied with TROIA Platform.
 
 Additionally you must copy canias1.jar which is a jar file containing client application and required classes for web service installation. This jar file must have same version/build number with application server. After the installation you must see the WSDL document on the link below:
 
