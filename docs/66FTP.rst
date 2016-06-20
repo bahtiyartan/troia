@@ -96,7 +96,7 @@ As main functionalities of ftp operations uploading and downloading files must b
 
 All upload and download paths are computed relatively from working directory. So programmers must be sure they are in correct working directory before upload and download files.
 
-Path which file downloaded to/uploaded from must be a valid path on application server. Paths starting with * (client side paths) are not valid for FTP operations. If files are located on client or must be downloaded to client, programmers must transfer file using related file commands.
+Path which file downloaded to/uploaded from must be a valid path on application server. Paths starting with * (client side paths) are not valid for FTP operations. If files are located on client or must be downloaded to client, programmers must transfer file to the server using related file commands.
 
 
 Downloading Files
