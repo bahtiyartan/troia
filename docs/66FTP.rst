@@ -73,7 +73,7 @@ Both MAKEFTPCONNECTION and CLOSEFTPCONNECTION commands set SYS_STATUS and SYS_ST
  
  - **login or password incorrect! or … Auth Fail :** Invalid connection credentials
  
- - **request timeout while connecting host … :** To establish connection between application server and ftp server, max waiting period is 5 seconds. If ftp server does not send response of connection within 5 seconds, system sets this error to SYS_STATUSERROR 
+ - **request timeout while connecting host … :** To establish connection between application server and ftp server, max waiting period is 10 seconds. If ftp server does not send response of connection within 10 seconds, system sets this error to SYS_STATUSERROR 
 
 
 
