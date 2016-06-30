@@ -9,12 +9,17 @@ Web Services
 Introduction
 ------------
 
- web service 1.0
- 
- web service 2.0
+TROIA web service infrastructure allows programmers define web services/methods using TROIA language to serve 3rd party applications. Simply, a troia web service is defining a class method as web service and web service infrastructure serves this service using a standard wsdl interface.
+
+Before the details of wsdl and web servie infrastructure, you must know that TROIA platform has two versions of web services. Both this two web services are supported on all versions after 5.01.01. First version is called "TROIA Web Service 1.0" and it is deprecated by second version which is called "TROIA Web Services 2.0".
+
+Although "TROIA Web Service 2.0" is similar to first version, it has too many extended features such as compression, encryption, message transfer etc. In this section we will discuss only "TROIA Web Service 2.0", because first version is only supported for backward compatibility and all new client projects which needs web services must use "TRIOA Web Service 2.0" version.
+
 
 WSDL Overview
 =============
+
+Web services are defined by a WSDL(stands for "Web Services Description Language") document in a machine readible format. This document defines all methods, data structures which required for calling web service. In TROIA web service infrastructure WSDL document content is not directly depends on web method's interface, so it has same interface even defined class methods has different interfaces. Here is the interface which is defined by WSDL document:
 
 +----------------+----------------+------------------------------------------------+
 | **Method**     | **Return Type**|                                                |
