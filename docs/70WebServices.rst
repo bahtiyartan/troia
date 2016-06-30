@@ -46,7 +46,7 @@ Additionally you must copy canias1.jar which is a jar file containing client app
 
 	http://{yourtomcaturl}/CaniasWebService/services/CaniasWebService?WSDL
 
-..Testing Web Service Installation
+If you upgrade/update your platform release you must also keep your canias1.jar which is used by tomcat to serve TROIA web services.  
 
 Service Definition & Permissions
 --------------------------------
