@@ -51,7 +51,10 @@ If you upgrade/update your platform release you must also keep your canias1.jar 
 Service Definition & Permissions
 --------------------------------
 
-..defining
+To define a web service, firstly you must have a class with a method which will be called as web service. This class can be defined by using "TROIA IDE".
+
+WSRT01 - Web Services Definitions
+WSRT02 - Web Services User Rights
 
 ..user rights
 
