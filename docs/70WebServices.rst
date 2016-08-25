@@ -148,7 +148,7 @@ callService() method is used for running a TROIA Class Method which is registere
 			<PARAM>firstparam</PARAM>
 			<PARAM>1</PARAM>
 			<PARAM>1.5</PARAM>
-			<PARAM TYPE="TABLE">
+			<PARAM type="TABLE">
 				<TABLE_VARIABLE_NAME>
 					<ROW>
 						<COL1>row1 col1 value</COL1>
@@ -160,7 +160,7 @@ callService() method is used for running a TROIA Class Method which is registere
 					</ROW>
 				</TABLE_VARIABLE_NAME>
 			</PARAM>
-			<PARAM TYPE="VECTOR">
+			<PARAM type="VECTOR">
 				<VECTOR_VARIABLE_NAME>
 					<ITEM>
 						<NAME>TROIASYMBOL1</NAME>
