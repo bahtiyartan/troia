@@ -4,7 +4,7 @@
 TROIA Platform Basics
 =======================
 
-#troia platform basics
+*TROIA Platform is the software framework which TROIA Programming Language works on. This section aims to to introduce main components and architectural overview of TROIA Platform.*
 
 	
 Purpose
