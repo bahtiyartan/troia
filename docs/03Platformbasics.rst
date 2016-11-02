@@ -45,11 +45,27 @@ Licence Server
 
 #licence server
 
+Load Balancer
+=============
+
+#load balancer
+
 RMI Registry
 ============
 
 #rmi registry
 
+
+Other Components
+================
+
+#other compoenents
+
+
+TROIA Platform & TROIA Programming Language
+-------------------------------------------
+
+#programming language
 
 
 
