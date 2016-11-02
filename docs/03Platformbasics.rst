@@ -16,7 +16,7 @@ Platform Overview
 --------------------
 
 .. figure:: images/platformbasics/platformoverview.png
-   :width: 360 px
+   :width: 700 px
    :target: images/platformbasics/platformoverview.png
    :align: center
 
