@@ -15,6 +15,11 @@ purpose...
 Platform Overview
 --------------------
 
+.. figure:: images/platformbasics/platformoverview.png
+   :width: 360 px
+   :target: images/platformbasics/platformoverview.png
+   :align: center
+
 Language Elements
 --------------------
 
