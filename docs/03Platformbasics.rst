@@ -4,13 +4,13 @@
 TROIA Platform Basics
 =======================
 
-troia language basics...
+#troia platform basics
 
 	
 Purpose
 --------------------
 
-purpose...
+#troia platform purpose
 
 Platform Overview
 --------------------
@@ -23,28 +23,28 @@ Platform Overview
 Language Elements
 --------------------
 
-language elements...
+#language elements
 
 Dialog
 ====================
 
-dialogs...
+#dialogs
 
 Class
 ====================
 
-class...
+#classes
 
 
 Report
 ====================
 
-report...
+#reports
 
 Transaction (Application)
 =========================
 
-transaction...
+#transactions
 
 
 
@@ -52,38 +52,38 @@ transaction...
 TROIA Interpreter
 --------------------
 
-interpreter...
+#interpreter
 
 Convert/Save
 ====================
 
-convert/save...
+#convert/save
 
 
 Trace
 =========================
 
-trace...
+#trace
 
 
 Development Tools
 --------------------
 
-development tools...
+#development tools
 
 TROIA IDE
 ====================
 
-ide...
+#ide
 
 
 SYS & DEV Transactions
 =========================
 
-sys and dev transactions...
+#sys and dev transactions
 
 
 Hotline
 ------------------------
 
-hotline....  
+#hotline
