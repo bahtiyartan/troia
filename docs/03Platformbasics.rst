@@ -25,5 +25,35 @@ Platform Overview
    :target: images/platformbasics/platformoverview.png
    :align: center
 
+   
+Basic Components
+----------------
+
+Application Server
+==================
+
+#application server
+
+
+Client(s)
+=========
+
+#client
+
+Licence Server
+==============
+
+#licence server
+
+RMI Registry
+============
+
+#rmi registry
+
+
+
+
+
+
 
 
