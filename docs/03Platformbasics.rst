@@ -12,6 +12,11 @@ Purpose
 
 #troia platform purpose
 
+History
+--------------------
+
+#history of troia platform
+
 Platform Overview
 --------------------
 
@@ -20,70 +25,5 @@ Platform Overview
    :target: images/platformbasics/platformoverview.png
    :align: center
 
-Language Elements
---------------------
-
-#language elements
-
-Dialog
-====================
-
-#dialogs
-
-Class
-====================
-
-#classes
 
 
-Report
-====================
-
-#reports
-
-Transaction (Application)
-=========================
-
-#transactions
-
-
-
-
-TROIA Interpreter
---------------------
-
-#interpreter
-
-Convert/Save
-====================
-
-#convert/save
-
-
-Trace
-=========================
-
-#trace
-
-
-Development Tools
---------------------
-
-#development tools
-
-TROIA IDE
-====================
-
-#ide
-
-
-SYS & DEV Transactions
-=========================
-
-#sys and dev transactions
-
-
-Hotline
-------------------------
-
-#hotline
