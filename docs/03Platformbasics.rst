@@ -62,7 +62,7 @@ Other Components
 #other compoenents
 
 
-TROIA Programming Language
+Platform & Programming Language
 -------------------------------------------
 
 #programming language
