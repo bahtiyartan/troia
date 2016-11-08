@@ -93,6 +93,7 @@ To remove a cross you can define a cross from item's itself (A -> A). But defini
 	B -> C
 	C -> A
 	
+	
 
 	
 
@@ -110,6 +111,34 @@ How to Define Crosses
 
 Ezample 1: Understanding Cross Order
 ------------------------------------
+
+Assume a U1 user whose user profile is P1.
+
+Given system crosses:
+
+::
+
+	A -> B
+	C -> D
+	E -> F
+	G -> H
+
+User crosses:
+
+::
+	
+	P1 : A->X
+	P1 : C->C
+	U1 : A->Y
+	U1 : F->Z
+	
+What is the final cross table for the user?
+	
+	
+	
+	
+
+
 
 
 
