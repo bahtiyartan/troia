@@ -45,6 +45,7 @@ A cross simply a record which indicates that class/dialog loaders will use anoth
 Crosses are mostly used with an inherited class that changes structure/behavior of a base class or adds new functionalities to a base class. For example assume we have CAT class which have a MOVE method and this method increases the x position five by five. Here is the pseudocode of the structure and method of CAT class.
 
 ::
+	
 	/* this code is not compilable, just for assumption */
 	class CAT:
 		MEMBER:
