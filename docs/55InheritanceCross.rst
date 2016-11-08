@@ -106,7 +106,7 @@ How to Define Crosses
 Example 1: Understanding Cross Order
 ------------------------------------
 
-Assume a U1 user whose user profile is P1. Cross definitions are like below:
+Assume a U1 user whose user profile is P1 and P1's base profile is P0. Cross definitions are like below:
 
 ::
 
@@ -114,10 +114,12 @@ Assume a U1 user whose user profile is P1. Cross definitions are like below:
 	SYSTEM : C -> D
 	SYSTEM : E -> F
 	SYSTEM : G -> H
-	P1 : A->X
-	P1 : C->C
-	U1 : A->Y
-	U1 : F->Z
+	P0 : K -> L
+	P0 : A -> N
+	P1 : A -> X
+	P1 : C -> C
+	U1 : A -> Y
+	U1 : F -> Z
 	
 What is the final cross table for the user?
 	
