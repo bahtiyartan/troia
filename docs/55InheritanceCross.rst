@@ -67,6 +67,10 @@ and assume that in somewhere of the standart application, an instance of CAT cla
 	
 And assume again CATs on your company are lazy and moves one by one. To solve this case you must find all CAT definitions and change them to your child LAZYCAT class or do something like a factory pattern to decide which cat type will be created. With cross concept you don't need to find and change all definitions. If you define a cross from CAT to your LAZYCAT class, system laods LAZYCAT instead of CAT class in all applications. Although cross is mostly used from a base dialog/ to a child dialog/class, it is possible to define a cross between independent classes (please think on possible problems about different interfaces of independent classes).
 
+
+Cross Types & Loading Order
+---------------------------
+
 It is possible to define crosses in two level: "**system level cross**" and "**user level cross**". A system level cross is system wide,in other words if you define a system level cross, cross is valid for all users that connects to same database. User level crosses are defined for a user or a profile, so this kind of crosses are valid for a user or users defined in a profile.
 
 #loading order
