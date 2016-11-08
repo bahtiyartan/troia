@@ -109,7 +109,7 @@ How to Define Crosses
 
 
 
-Ezample 1: Understanding Cross Order
+Example 1: Understanding Cross Order
 ------------------------------------
 
 Assume a U1 user whose user profile is P1.
