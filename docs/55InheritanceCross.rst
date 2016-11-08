@@ -98,7 +98,7 @@ How to Define Crosses
 
 For classes, system crosses are defined in "DEVT08 - Class Dynamic Link" transaction. To define a system cross for a class required data is only names of crossing and crossed class. System cross cross definitions for classes are stored in SYSCLSREF system table. To define cross for dialogs, reports and components "DEVT09 - Dialog Dynamic Link" transaction is used and this transaction uses SYSDLGREF system table to store cross definitions.
 
-For users and user profiles; crosses are defined in "SYS03 - User Login Info" transaction. Class crosses are defined in "Class Reference" tab of SYST03 transaction. For dialog, reports and components "Dialog Reference" tab is used. As it is obvious; all user crosses are related with user definition and when user is deleted, all cross definitions are deleted.
+For users and user profiles; crosses are defined in "Class Reference" and "Dialog Reference" tabs of "SYS03 - User Login Info" transaction. User cross definitions are stored in IASUSERCLSREF and IASUSERDLGREF tables. As it is obvious; all user crosses are related with user definition and when user is deleted, all cross definitions are deleted.
 
 Example 1: Understanding Cross Order
 ------------------------------------
