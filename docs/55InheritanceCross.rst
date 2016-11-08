@@ -95,13 +95,10 @@ To remove a cross you can define a cross from item's itself (A -> A). But defini
 
 How to Define Crosses
 ---------------------
-#define system level cross
-#related database table
 
-#define user level cross
-#related database table
+For classes, system crosses are defined in "DEVT08 - Class Dynamic Link" transaction. To define a system cross for a class required data is only names of crossing and crossed class. System cross cross definitions for classes are stored in SYSCLSREF system table. To define cross for dialogs, reports and components "DEVT09 - Dialog Dynamic Link" transaction is used and this transaction uses SYSDLGREF system table to store cross definitions.
 
-
+For users and user profiles; crosses are defined in "SYS03 - User Login Info" transaction. Class crosses are defined in "Class Reference" tab of SYST03 transaction. For dialog, reports and components "Dialog Reference" tab is used. As it is obvious; all user crosses are related with user definition and when user is deleted, all cross definitions are deleted.
 
 Example 1: Understanding Cross Order
 ------------------------------------
