@@ -41,10 +41,18 @@ What is "Cross"?
 ---------------
 #what is cross
 
+#levels of cross
+
 
 How to Define Crosses
 ---------------------
-#how to define crosses
+#define system level cross
+#related database table
+
+#define user level cross
+#related database table
+
+
 
 
 
