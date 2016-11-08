@@ -4,7 +4,7 @@
 Inheritance & Cross
 ===================
 
-*This sections aims to introduce inheritance & cross concepts.*
+*Inheritance is one of the key concepts of object oriented programming. This sections aims to introduce inheritance and relelated concepts.*
 
 
 What is "Inheritance"?
@@ -27,7 +27,7 @@ Inheritance on Dialogs/Components
 #inheritance on dialogs/componentss
 
 
-Using SUPER() method
+Using SUPER() Method
 --------------------
 #using super method
 
