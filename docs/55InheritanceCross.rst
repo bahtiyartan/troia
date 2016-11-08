@@ -41,7 +41,12 @@ What is "Cross"?
 ---------------
 #what is cross
 
-#levels of cross
+It is possible to define crosses in two level: "**system level cross**" and "**user level cross**". "system level cross" is valid for all users, so if you define a system level cross, cross is valid for all users that connects to same database. User level crosses are defined for a user or a profile, so this kind of crosses are valid for a user or users defined in a profile.
+
+#loading order
+
+Cross information is loaded while user logging in, so crosses that defined/deleted while user online are ignored until user login again.
+
 
 
 How to Define Crosses
