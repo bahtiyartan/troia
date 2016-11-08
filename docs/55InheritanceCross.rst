@@ -109,6 +109,7 @@ Example 1: Understanding Cross Order
 Assume a U1 user whose user profile is P1. Cross definitions are like below:
 
 ::
+
 	SYSTEM : A -> B
 	SYSTEM : C -> D
 	SYSTEM : E -> F
