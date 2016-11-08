@@ -46,7 +46,6 @@ Crosses are mostly used with an inherited class that changes structure/behavior 
 
 ::
 	
-	/* this code is not compilable, just for assumption */
 	class CAT:
 		MEMBER:
 			INTEGER X;
@@ -54,6 +53,9 @@ Crosses are mostly used with an inherited class that changes structure/behavior 
 		function MOVE
 			X = X + 5;
 			RETURN;
+	
+	/* this code is not compilable, 
+	   it is just for assumption */
 			
 and assume that in somewhere of the standart application, an instance of CAT class is defined and its move method is called like below:
 ::
