@@ -63,7 +63,7 @@ and in somewhere of the standart application, an instance of CAT class is define
 	OBJECT:
 		CAT RECCAT;
 	
-		RECCAT.MOVE();
+	RECCAT.MOVE();
 	
 And assume again CATs on your company are lazy and move one by one. To solve this case you must find all CAT definitions and change them to your child LAZYCAT class or do something like a factory pattern to decide which cat type will be created. With cross concept you don't need to find and change all definitions. If you define a cross from CAT to your LAZYCAT class, system laods LAZYCAT instead of CAT class in all applications. Although cross is mostly used from a base item to a child item, it is possible to define a cross between independent classes (but please think on possible problems about crossing independent items).
 
