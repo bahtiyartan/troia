@@ -15,7 +15,7 @@ Simply, inheritance is an object oriented programming mechanism that allows prog
 Inheritance on TROIA
 --------------------
 
-TROIA is also an object oriented programming language and supports inheritance for all TROIA item types (class, dialog, report, component). 
+TROIA is also an object oriented programming language and supports inheritance for all TROIA item types (class, dialog, report, component).
 
 As it is same in other programming languages, only inheriting an item does not mean changing its structure or behaviour, it only means creating heritage from base class. In practical if you only inherit an item, you can use base item with child's name. To change behaviour/structure, you must override one at least one method of base item or add a new method to child item. If you add a method which has same name with one of the base methods this means you **"override"** this method and change its behaviour. In TROIA jargon, overriding is called *inheriting a method* (In this book we will use "override method" term instead of "inherit method").
 
@@ -34,9 +34,18 @@ In class inheritance it is possible to add new methods to base class or override
 When you override a base class method, system creates a same named method on child class and this method is executed instead of base method and this allows changing base method's behavior. Using same method, overriding _VARIABLES and _CONSTRUCTOR methods is also possible. With overriding this methods, it is possible to add member variables and this means changing the structure of base class on its child (remember the key roles of this methods.)
    
    
-Inheriting Dialogs/Reports/Components
-=====================================
-#inheritance on dialogs/componentss
+Inheriting Dialogs/Components
+=============================
+
+Inheriting dialog and component is also supported. To inherit a dialog, component you must set its base item in new item form (please see new dialog, component form on related sections). Overriding dialog methods is similar with overriding base class methods which is mentioned previous sections. It is also possible to override controls and control events on dialogs/components. Additionally, adding new controls and control events to child dialog/component is possible. Here is an image below that shows creating a new dialog that inherits DEVT11D001 as base dialog (it is also same for component inheritance).
+
+.. figure:: images/inheritance/dialoginheritance1.png
+   :width: 420 px
+   :target: images/inheritance/dialoginheritance1.png
+   :align: center
+
+
+Overriding a dialog control creates a new control on child dialog and this control overwrites same named control on parent dialog. Therefore programmers can change all features of a control.
 
 
 In IDE Object Explorer, there are some small icons (colorful dots) for each method to ease identifying. Here are the meanings of this icons:
