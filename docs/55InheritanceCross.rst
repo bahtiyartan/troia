@@ -58,12 +58,14 @@ In dialog design panel it is not possible to change any control's positon or oth
    :target: images/inheritance/dialoginheritance3.png
    :align: center
 
-It is also possible to override a dialog and control events to change base item's behavior. To override a control/dialog event you must click "blue arrow" on control's or dialog's right click menu. This operation creates an event code on child class and overwrites base event, similar to overriding dialog and class methods.
+It is also possible to override a dialog and control events to change base item's behavior. To override a control/dialog event you must click "blue arrow" on control's or dialog's right click menu. This operation creates an event code on child class with same id and overwrites base event, similar to overriding dialog and class methods.
 
 .. figure:: images/inheritance/dialoginheritance4.png
    :width: 550 px
    :target: images/inheritance/dialoginheritance4.png
    :align: center
+   
+To override control events, you don't need to override control's itself. Control's data and events has different identification and both are overridable items.
 
 In IDE Object Explorer, there are some small icons (colorful dots) for each method to ease identifying. Here are the meanings of this icons:
 
