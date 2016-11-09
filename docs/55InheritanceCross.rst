@@ -54,10 +54,16 @@ After creating an inherited dialog, IDE shows base dialog name in property explo
 In dialog design panel it is not possible to change any control's positon or other properties, because this controls are base dialog's controls. To change a control feature you must firsly override control using "inherit" button which is located on control's right click menu. Overriding a dialog control creates a new control on child dialog and this new control overwrites same named control on parent dialog.
 
 .. figure:: images/inheritance/dialoginheritance3.png
-   :width: 600 px
+   :width: 550 px
    :target: images/inheritance/dialoginheritance3.png
    :align: center
 
+It is also possible to override a dialog and control events to change base item's behavior. To override a control/dialog event you must click "blue arrow" on control's or dialog's right click menu. This operation creates an event code on child class and overwrites base event, similar to overriding dialog and class methods.
+
+.. figure:: images/inheritance/dialoginheritance4.png
+   :width: 550 px
+   :target: images/inheritance/dialoginheritance4.png
+   :align: center
 
 In IDE Object Explorer, there are some small icons (colorful dots) for each method to ease identifying. Here are the meanings of this icons:
 
