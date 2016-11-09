@@ -67,10 +67,11 @@ It is also possible to override a dialog and control events to change base item'
    
 To override control events, you don't need to override control's itself. Control's data and events has different identification and both are overridable items.
 
-In IDE Object Explorer, there are some small icons (colorful dots) for each method to ease identifying. Here are the meanings of this icons:
+In IDE Object Explorer and control/dialog right click menu, there are some small icons (colorful dots) for each method. This icons have special meanings and eases understanding whether method is an overriding method or not. Here are meanings of icons:
 
-
-
+.. figure:: images/inheritance/inheritanceicon0.png 
+.. figure:: images/inheritance/inheritanceicon1.png
+.. figure:: images/inheritance/inheritanceicon2.png
 
 
 Using SUPER() Method
