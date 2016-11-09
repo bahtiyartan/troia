@@ -22,7 +22,7 @@ Inheriting Classes
 In class inheritance it is possible to add new methods to base class or override (called as inherit method in TROIA) methods of base class. To override a class you must indicate base class name in new class form on IDE (see classes section). When you inherit a class, method's of base class are shown on object explorer in base class tree element.
 
 .. figure:: images/inheritance/classinheritance0.png
-   :width: 316 px
+   :width: 317 px
    :target: images/inheritance/classinheritance0.png
    :align: center
 
