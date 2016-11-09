@@ -59,8 +59,6 @@ In dialog design panel it is not possible to change any control's positon or oth
    :align: center
 
 
-
-
 In IDE Object Explorer, there are some small icons (colorful dots) for each method to ease identifying. Here are the meanings of this icons:
 
 
