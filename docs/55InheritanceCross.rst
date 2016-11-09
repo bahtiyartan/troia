@@ -10,7 +10,7 @@ Inheritance & Cross
 What is "Inheritance"?
 --------------------
 
-Simply, inheritance is an object oriented programming mechanism that allows programmers to reuse class codes. In this method, programmers creates parent, child relationship between two class.A child class gets its features/behavior from its parent through a heritage and modifies parent's behaviors/features or adds new features/behaviours.
+Simply, inheritance is an object oriented programming mechanism that allows programmers to reuse class codes. In this method, programmers creates parent, child relationship between two class. A child class gets its features/behavior from its parent through a heritage and modifies parent's behaviors/features or adds new features/behaviours.
 
 Inheritance on TROIA
 --------------------
@@ -58,7 +58,7 @@ Using SUPER Object
 What is "Cross"?
 ---------------
 
-A cross simply a record which indicates that class/dialog loaders will use another class/dialog **instead of** crossed dialog/class. For example if you define a cross from class A to class B, system loads class B instead of A. Cross is a database record and it is read and applied on runtime, in other words it is not a part of development process. With crosses; there is no need to chage/modify standart application, so customer customizations need less efford and time.
+Simply, a cross is a definition that forces class/dialog loaders to use another class/dialog **instead of** defined item. For example if you define a cross from class A to class B, system loads class B instead of A anywhere class A is defined. Cross is a database record and it is read and applied on runtime, in other words it is not a part of compiling process. With crosses; there is no need to chage/modify standart application, so customer customizations need less efford and time.
 
 Crosses are mostly used with an inherited class that changes structure/behavior of a base class or adds new functionalities to a base class. Assume that we have CAT class which have a MOVE method. This method increases the x position five by five. Here is the pseudocode of the structure and method of CAT class.
 
