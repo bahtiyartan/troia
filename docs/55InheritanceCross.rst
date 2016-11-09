@@ -9,8 +9,8 @@ Inheritance & Cross
 
 What is "Inheritance"?
 --------------------
-#what is inheritance
 
+Simply, inheritance is an object oriented programming mechanism that allows programmers to reuse class codes. In this method, programmers creates parent, child relationship between two class.A child class gets its features/behavior from its parent through a heritage and modifies parent's behaviors/features or adds new features/behaviours.
 
 Inheritance on TROIA
 --------------------
