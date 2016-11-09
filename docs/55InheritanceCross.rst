@@ -13,13 +13,15 @@ What is "Inheritance"?
 
 
 Inheritance on TROIA
---------------------
+====================
 #inheritance on troia
 
 
 Inheriting Classes
 ======================
 In class inheritance it is possible to add new methods to base class or override (called as inherit method in TROIA) methods of base class. To override a class you must indicate base class name in new class form on IDE (see classes section). When you inherit a class, method's of base class are shown on object explorer in base class tree element.
+
+Actually, inheriting a class does not mean changing its structure or behaviour. To change it, you must override one at least one method of base class or add a new method on child class. If you add a method which has same name with one of the base methods this means you **"override"** this method and change its behaviour. In TROIA, jargon overriding is called *inheriting a method* (In this book we will use "override" term.). Image below shows the view of an inherited class on Object Expolorer and how to override one of base methods.
 
 .. figure:: images/inheritance/classinheritance0.png
    :width: 317 px
