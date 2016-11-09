@@ -43,6 +43,13 @@ Inheriting dialog and component is also supported. To inherit a dialog, componen
    :width: 420 px
    :target: images/inheritance/dialoginheritance1.png
    :align: center
+   
+After creating an inherited dialog, IDE shows base dialog name in property explorer(1), base dialog controls/methods on object explorer(2) and base dialog controls on dialog design panel (3). Please see the image below:
+
+.. figure:: images/inheritance/dialoginheritance2.png
+   :width: 700 px
+   :target: images/inheritance/dialoginheritance2.png
+   :align: center
 
 
 Overriding a dialog control creates a new control on child dialog and this control overwrites same named control on parent dialog. Therefore programmers can change all features of a control.
