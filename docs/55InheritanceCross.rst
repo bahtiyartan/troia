@@ -13,24 +13,29 @@ What is "Inheritance"?
 
 
 Inheritance on TROIA
-====================
-#inheritance on troia
+--------------------
+
+TROIA is also an object oriented programming language and supports inheritance for all TROIA item types (class, dialog, report, component). 
+
+As it is same in other programming languages, only inheriting an item does not mean changing its structure or behaviour, it only means creating heritage from base class. In practical if you only inherit an item, you can use base item with child's name. To change behaviour/structure, you must override one at least one method of base item or add a new method to child item. If you add a method which has same name with one of the base methods this means you **"override"** this method and change its behaviour. In TROIA jargon, overriding is called *inheriting a method* (In this book we will use "override method" term instead of "inherit method).
+
+When it comes to technical background, for a good understanding of inheritance with all aspects, you need to know that compiler has the most important role in inheritance process, because all inheriting operations are performed on compile time. While conpiling a child class, compiler resolves parent/child information at first and after the compilation it creates child item's binary file. This binary file contains child item's own controls/methods, additionally it has a kind of link with base's binary data.
 
 
 Inheriting Classes
 ======================
 In class inheritance it is possible to add new methods to base class or override (called as inherit method in TROIA) methods of base class. To override a class you must indicate base class name in new class form on IDE (see classes section). When you inherit a class, method's of base class are shown on object explorer in base class tree element.
 
-Actually, inheriting a class does not mean changing its structure or behaviour. To change it, you must override one at least one method of base class or add a new method on child class. If you add a method which has same name with one of the base methods this means you **"override"** this method and change its behaviour. In TROIA jargon, overriding is called *inheriting a method* (In this book we will use "override" term.). Image below shows the view of an inherited class on Object Expolorer and how to override one of base methods.
+. Image below shows the view of an inherited class on Object Expolorer and how to override one of base methods.
 
 .. figure:: images/inheritance/classinheritance0.png
    :width: 317 px
    :target: images/inheritance/classinheritance0.png
    :align: center
+
+When you override a base class method, system creates a same named method on child class and this method is executed instead of base method and this allows changing base method's behavior. Using same method, overriding _VARIABLES and _CONSTRUCTOR methods is also possible. With overriding this methods, it is possible to add member variables and this means changing the structure of base class on its child (remember the key roles of this methods.)
    
    
-
-
 Inheriting Dialogs/Reports/Components
 =====================================
 #inheritance on dialogs/componentss
