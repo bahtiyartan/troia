@@ -186,7 +186,6 @@ Interpreter firstly calls M1 method of class A and it calls method of class B. A
 	 [(A) INSTANCE.M1.0 10]     : RETURN R  : R[11] ▏
 	 [DEVT11D001.RUNBUTTON.2 6] : RESULT = INSTANCE.M1(10); [11]
 		
-
 What is "Cross"?
 ---------------
 
