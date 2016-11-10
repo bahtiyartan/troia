@@ -70,8 +70,8 @@ To override control events, you don't need to override control's itself. Control
 In IDE Object Explorer and control/dialog right click menu, there are some small icons (colorful dots) for each method. This icons have special meanings and eases understanding whether method is an overriding method or not. Here are meanings of icons:
 
 .. figure:: images/inheritance/inheritanceicon0.png a
-.. figure:: images/inheritance/inheritanceicon1.png b
 .. figure:: images/inheritance/inheritanceicon2.png c
+.. figure:: images/inheritance/inheritanceicon1.png b
 
 
 Using SUPER() Method
