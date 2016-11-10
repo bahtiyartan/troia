@@ -78,7 +78,7 @@ In IDE Object Explorer and control/dialog right click menu, there are some small
 +-----------------------------------------------------+----------------------------------------------------------+
 |                                                     | Used for only control or dialog/component/report events. |
 | .. figure:: images/inheritance/inheritanceicon1.png | Event is implemented in base class but not overridden by |
-|													  | child item.                                              |
+|                                                     | child item.                                              |
 +-----------------------------------------------------+----------------------------------------------------------+
 
 
