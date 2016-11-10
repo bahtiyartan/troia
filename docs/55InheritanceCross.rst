@@ -271,6 +271,7 @@ Create a child cheetah class that inherits cat class
 	
 Write TROIA code that creates a cat and cheetah call their move method and compare their X position.
 
+
 Example 2: Understanding Cross Order
 ------------------------------------
 
