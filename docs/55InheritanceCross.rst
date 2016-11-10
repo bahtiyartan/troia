@@ -118,7 +118,7 @@ On compile time, TROIA compiler adds M1 method of base class to child M1 and com
 As it is obvious on this example, **programmers who use SUPER() keyword must consider overridden method content due to risk of canceling overriding content.** Also it is not possible to getting return value of base function using SUPER() keyword, because it is not a function call its just a keyword.
 
 
-Although it is usually used at the begining on overriding methods, it is also possible to use this method anywhere on overriding method. SUPER() keyword can be used in class,dialog, component and report events and codes.Additionally, in _CONSTRUCTOR and _VARIABLES class there is no need to write SUPER() keyword because, TROIA compiler adds base class method content to overriding class as default. For other methods programmers must add SUPER() keyword to overriding method.
+Although SUPER() is usually used at the begining on overriding methods, it is also possible to use this method anywhere on overriding method. SUPER() keyword can be used in class,dialog, component and report events and codes.Additionally, in _CONSTRUCTOR and _VARIABLES class there is no need to write SUPER() keyword because, TROIA compiler adds base class method content to overriding class as default. For other methods programmers must add SUPER() keyword to overriding method.
 
 
 Using SUPER Object
