@@ -71,15 +71,15 @@ To override control events, you don't need to override control's itself. Control
 
 In IDE Object Explorer and control/dialog right click menu, there are some small icons (colorful dots) for each method. This icons have special meanings and eases understanding whether method is an overriding method or not. Here are meanings of icons:
 
-+-----------------------------------------------------+----------------------------------------------------------+
-| .. figure:: images/inheritance/inheritanceicon0.png | Method/event does not override any parent method/event.  |
-+-----------------------------------------------------+----------------------------------------------------------+
-| .. figure:: images/inheritance/inheritanceicon2.png | Method/event overrides a parent method/event.            |
-+-----------------------------------------------------+----------------------------------------------------------+
-|                                                     | Used for only control or dialog/component/report events. |
-| .. figure:: images/inheritance/inheritanceicon1.png | Event is implemented in base class but not overridden by |
-|                                                     | child item.                                              |
-+-----------------------------------------------------+----------------------------------------------------------+
++--------------------------------------------+----------------------------------------------------------+
+| .. figure:: images/inheritance/inicon0.png | Method/event does not override any parent method/event.  |
++--------------------------------------------+----------------------------------------------------------+
+| .. figure:: images/inheritance/inicon1.png | Method/event overrides a parent method/event.            |
++--------------------------------------------+----------------------------------------------------------+
+|                                            | Used for only control or dialog/component/report events. |
+| .. figure:: images/inheritance/inicon2.png | Event is implemented in base class but not overridden by |
+|                                            | child item.                                              |
++--------------------------------------------+----------------------------------------------------------+
 
 
 Using SUPER() Keyword
