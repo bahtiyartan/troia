@@ -70,9 +70,7 @@ To override control events, you don't need to override control's itself. Control
 In IDE Object Explorer and control/dialog right click menu, there are some small icons (colorful dots) for each method. This icons have special meanings and eases understanding whether method is an overriding method or not. Here are meanings of icons:
 
 +-----------------------------------------------------+----------------------------------------------------------+
-|                                                     | Method is the own class of class/dialog/component/report.|
-| .. figure:: images/inheritance/inheritanceicon0.png | Base dialogs overriden methods show this icon because    |
-|                                                     | they are base's own methods.                             |
+| .. figure:: images/inheritance/inheritanceicon0.png | Method/event does not override any parent method/event.  |
 +-----------------------------------------------------+----------------------------------------------------------+
 | .. figure:: images/inheritance/inheritanceicon2.png | Method/event overrides a parent method/event.            |
 +-----------------------------------------------------+----------------------------------------------------------+
