@@ -250,7 +250,28 @@ For classes, system crosses are defined in "DEVT08 - Class Dynamic Link" transac
 
 For users and user profiles; crosses are defined in "Class Reference" and "Dialog Reference" tabs of "SYS03 - User Login Info" transaction. User cross definitions are stored in IASUSERCLSREF and IASUSERDLGREF tables. As it is obvious; all user crosses are related with user definition and when user is deleted, all cross definitions are deleted.
 
-Example 1: Understanding Cross Order
+
+Example 1: Inheriting Class and Overriding Methods
+--------------------------------------------------
+
+Create an animal class as a base class with following features:
+
+	- Animal must have an X position
+	- Animal must have MOVE method that changes its X position step by step.
+	- Animal must have GETSTEPSIZE method that returns its step size when it moves (default value is 0)
+	- Animal must have GETPOSITION method that returns X position.
+	
+Create a child cat class that inherits ANIMAL with the following features:
+
+	- A cat can move 0.5 meters in one step
+	
+Create a child cheetah class that inherits cat class
+
+	- A cheetah can move 3 times faster than a cat
+	
+Write TROIA code that creates a cat and cheetah call their move method and compare their X position.
+
+Example 2: Understanding Cross Order
 ------------------------------------
 
 Assume a U1 user whose user profile is P1 and P1's base profile is P0. Cross definitions are like below:
