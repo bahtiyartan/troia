@@ -169,16 +169,16 @@ Interpreter firstly calls M1 method of class A and it calls method of class B. A
                                  CLASS[A] INSTANCE; 
 	(A) INSTANCE.M1.0
 	[(A) INSTANCE.M1.0 2]      : PARAMETERS 
-                                 PARAM[10] <= 10[10]
+	                             PARAM[10] <= 10[10]
 	[(A) INSTANCE.M1.0 5]      : LOCAL: 
-                                 INTEGER R;
+	                             INTEGER R;
 	[(A) INSTANCE.M1.0 7]      : DUMP 'A.M1'
-                                 OBJECT DUMP { Name:A.M1, Type: STRING, Value: A.M1 }
+	                             OBJECT DUMP { Name:A.M1, Type: STRING, Value: A.M1 }
 	(A.B) INSTANCE.M1.0
 	[(A.B) INSTANCE.M1.0 2]    : PARAMETERS 
                                  PARAM[10] <= PARAM[10]
 	[(A.B) INSTANCE.M1.0 3]    : DUMP 'B.M1'
-                                 OBJECT DUMP { Name:B.M1, Type: STRING, Value: B.M1 }
+	                             OBJECT DUMP { Name:B.M1, Type: STRING, Value: B.M1 }
 	[(A.B) INSTANCE.M1.0 4]    : RETURN PARAM  : PARAM[10]
 	
 	[(A) INSTANCE.M1.0 8]      : R = SUPER.M1(PARAM); [10]
