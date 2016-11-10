@@ -69,13 +69,17 @@ To override control events, you don't need to override control's itself. Control
 
 In IDE Object Explorer and control/dialog right click menu, there are some small icons (colorful dots) for each method. This icons have special meanings and eases understanding whether method is an overriding method or not. Here are meanings of icons:
 
-+-----------------------------------------------------+-----------------------------------+
-| .. figure:: images/inheritance/inheritanceicon0.png | a                                 |
-+-----------------------------------------------------+-----------------------------------+
-| .. figure:: images/inheritance/inheritanceicon2.png | a                                 |
-+-----------------------------------------------------+-----------------------------------+
-| .. figure:: images/inheritance/inheritanceicon1.png | a                                 |
-+-----------------------------------------------------+-----------------------------------+
++-----------------------------------------------------+----------------------------------------------------------+
+|                                                     | Method is the own class of class/dialog/component/report.|
+| .. figure:: images/inheritance/inheritanceicon0.png | Base dialogs overriden methods show this icon because    |
+|                                                     | they are base's own methods.                             |
++-----------------------------------------------------+----------------------------------------------------------+
+| .. figure:: images/inheritance/inheritanceicon2.png | Method/event overrides a parent method/event.            |
++-----------------------------------------------------+----------------------------------------------------------+
+|                                                     | Used for only control or dialog/component/report events. |
+| .. figure:: images/inheritance/inheritanceicon1.png | Event is implemented in base class but not overridden by |
+|													  | child item.                                              |
++-----------------------------------------------------+----------------------------------------------------------+
 
 
 Using SUPER() Method
