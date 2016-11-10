@@ -164,27 +164,27 @@ Interpreter firstly calls M1 method of class A and it calls method of class B. A
 
 ::
 
-	 [DEVT11D001.RUNBUTTON.2 4] : OBJECT: 
-	                              INTEGER RESULT, 
-	                              CLASS[A] INSTANCE; 
-	 (A) INSTANCE.M1.0 ▎
-	 [(A) INSTANCE.M1.0 2]      : PARAMETERS 
-	                              PARAM[10] <= 10[10]
-	 [(A) INSTANCE.M1.0 5]      : LOCAL: 
-	                              INTEGER R; 
-	 [(A) INSTANCE.M1.0 7]      : DUMP 'A.M1' 
-                                      OBJECT DUMP { Name:A.M1, Type: STRING, Value: A.M1 }
-	 (A.B) INSTANCE.M1.0 ▎
-	 [(A.B) INSTANCE.M1.0 2]    : PARAMETERS 
-                                      PARAM[10] <= PARAM[10]
-	 [(A.B) INSTANCE.M1.0 3]    : DUMP 'B.M1' 
-                                      OBJECT DUMP { Name:B.M1, Type: STRING, Value: B.M1 }
-	 [(A.B) INSTANCE.M1.0 4]    : RETURN PARAM  : PARAM[10] ▏
-	 
-	 [(A) INSTANCE.M1.0 8]      : R = SUPER.M1(PARAM); [10]
-	 [(A) INSTANCE.M1.0 9]      : R = R + 1; [11]
-	 [(A) INSTANCE.M1.0 10]     : RETURN R  : R[11] ▏
-	 [DEVT11D001.RUNBUTTON.2 6] : RESULT = INSTANCE.M1(10); [11]
+	[DEVT11D001.RUNBUTTON.2 4] : OBJECT: 
+								INTEGER RESULT, 
+								CLASS[A] INSTANCE; 
+	(A) INSTANCE.M1.0 ▎
+	[(A) INSTANCE.M1.0 2]      : PARAMETERS 
+								PARAM[10] <= 10[10]
+	[(A) INSTANCE.M1.0 5]      : LOCAL: 
+								INTEGER R; 
+	[(A) INSTANCE.M1.0 7]      : DUMP 'A.M1' 
+										OBJECT DUMP { Name:A.M1, Type: STRING, Value: A.M1 }
+	(A.B) INSTANCE.M1.0 ▎
+	[(A.B) INSTANCE.M1.0 2]    : PARAMETERS 
+										PARAM[10] <= PARAM[10]
+	[(A.B) INSTANCE.M1.0 3]    : DUMP 'B.M1' 
+										OBJECT DUMP { Name:B.M1, Type: STRING, Value: B.M1 }
+	[(A.B) INSTANCE.M1.0 4]    : RETURN PARAM  : PARAM[10] ▏
+	
+	[(A) INSTANCE.M1.0 8]      : R = SUPER.M1(PARAM); [10]
+	[(A) INSTANCE.M1.0 9]      : R = R + 1; [11]
+	[(A) INSTANCE.M1.0 10]     : RETURN R  : R[11] ▏
+	[DEVT11D001.RUNBUTTON.2 6] : RESULT = INSTANCE.M1(10); [11]
 		
 What is "Cross"?
 ---------------
