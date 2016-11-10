@@ -165,8 +165,8 @@ Interpreter firstly calls M1 method of class A and it calls method of class B. A
 ::
 
 	[DEVT11D001.RUNBUTTON.2 4] : OBJECT: 
-                                 INTEGER RESULT, 
-                                 CLASS[A] INSTANCE; 
+	                             INTEGER RESULT, 
+	                             CLASS[A] INSTANCE; 
 	(A) INSTANCE.M1.0
 	[(A) INSTANCE.M1.0 2]      : PARAMETERS 
 	                             PARAM[10] <= 10[10]
