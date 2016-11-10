@@ -254,22 +254,23 @@ For users and user profiles; crosses are defined in "Class Reference" and "Dialo
 Example 1: Inheriting Class and Overriding Methods
 --------------------------------------------------
 
-Create an animal class as a base class with following features:
+Create an animal class as a base class. An animal;
 
-	- Animal must have an X position
-	- Animal must have MOVE method that changes its X position step by step.
-	- Animal must have GETSTEPSIZE method that returns its step size when it moves (default value is 0)
-	- Animal must have GETPOSITION method that returns X position.
+	- has a location (x,y)
+	- can walk, walking increases x position by step size
+	- has a step size (default is 0)
 	
-Create a child cat class that inherits ANIMAL with the following features:
+Create a child cat class that inherits animal. A cat;
 
-	- A cat can move 0.5 meters in one step
+	- can walk 1 meter in one step
+	- can jump 1 meters
 	
-Create a child cheetah class that inherits cat class
+Create a child cheetah class that inherits cat class. A cheetah;
 
-	- A cheetah can move 3 times faster than a cat
+	- can walk 5 times higher than a cat
+	- can jump 3 times higher than a cat
 	
-Write TROIA code that creates a cat and cheetah call their move method and compare their X position.
+Write TROIA code that creates a cat and a cheetah call their MOVE and JUMP methods and compare their x and y position.
 
 
 Example 2: Understanding Cross Order
