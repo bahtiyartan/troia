@@ -118,13 +118,74 @@ On compile time, TROIA compiler adds M1 method of base class to child M1 and com
 As it is obvious on this example, **programmers who use SUPER() keyword must consider overridden method content due to risk of canceling overriding content.** Also it is not possible to getting return value of base function using SUPER() keyword, because it is not a function call its just a keyword.
 
 
-Although SUPER() is usually used at the begining on overriding methods, it is also possible to use this method anywhere on overriding method. SUPER() keyword can be used in class,dialog, component and report events and codes.Additionally, in _CONSTRUCTOR and _VARIABLES class there is no need to write SUPER() keyword because, TROIA compiler adds base class method content to overriding class as default. For other methods programmers must add SUPER() keyword to overriding method.
+Although SUPER() is usually used at the begining on overriding methods, it is also possible to use this method anywhere on overriding method. SUPER() keyword can be used in class,dialog, component and report events and codes (support on classes starts with 5.01.07 032901 and 5.02.03 032901) . Additionally, in _CONSTRUCTOR and _VARIABLES class there is no need to write SUPER() keyword because, TROIA compiler adds base class method content to overriding class as default. For other methods programmers must add SUPER() keyword to overriding method.
 
 
 Using SUPER Object
 ------------------
-#using super object
 
+SUPER object is relatively a new feature of TROIA programming language and it is supported after 5.01.07 032901 and 5.02.03 032901. SUPER object is supported only classes. In other words it is not supported on dialogs,reports and components.
+
+SUPER object allows programmers to call base class methods as a regular method and get returning values, also programmers can ignore RETURN command which is used on called base class. Usage of SUPER object is similar to base class identifiers on other programming language (base, super). For better understanding assume class A inherits class B and overrides M1 method.
+
+::
+
+	/* class B M1 method */
+	PARAMETERS:
+		INTEGER PARAM;
+	DUMP 'B.M1';
+	RETURN PARAM;
+	
+::
+
+	/* class A M1 method */
+	PARAMETERS:
+		INTEGER PARAM;
+		
+	LOCAL:
+		INTEGER R;
+		
+	DUMP 'A.M1';	
+	R = SUPER.M1(PARAM);
+	R = R + 1;
+	RETURN R;
+	
+With this configuration if you define an A instance and call it's M1 method with the code below:
+
+::
+
+	OBJECT:
+		INTEGER RESULT,
+		A INSTANCE;
+	
+	RESULT = INSTANCE.M1(10);
+		
+Interpreter firstly calls M1 method of class A and it calls method of class B. After B.M1 returns, system executes remaining part of A.M1 as a regular fuction call. In this example interpreter assigns 11 value to RESULT variable. Please review trace below for better understanding of SUPER keyword:
+
+::
+
+	 [DEVT11D001.RUNBUTTON.2 4] : OBJECT: 
+	                              INTEGER RESULT, 
+	                              CLASS[A] INSTANCE; 
+	 (A) INSTANCE.M1.0 ▎
+	 [(A) INSTANCE.M1.0 2] : PARAMETERS 
+	                         PARAM[10] <= 10[10]
+	 [(A) INSTANCE.M1.0 5] : LOCAL: 
+	                         INTEGER R; 
+	 [(A) INSTANCE.M1.0 7] : DUMP 'A.M1' 
+		                     OBJECT DUMP { Name:A.M1, Type: STRING, Value: A.M1 }
+	 (A.B) INSTANCE.M1.0 ▎
+	 [(A.B) INSTANCE.M1.0 2] : PARAMETERS 
+		                       PARAM[10] <= PARAM[10]
+	 [(A.B) INSTANCE.M1.0 3] : DUMP 'B.M1' 
+		                       OBJECT DUMP { Name:B.M1, Type: STRING, Value: B.M1 }
+	 [(A.B) INSTANCE.M1.0 4] : RETURN PARAM  : PARAM[10] ▏
+	 
+	 [(A) INSTANCE.M1.0 8] : R = SUPER.M1(PARAM); [10]
+	 [(A) INSTANCE.M1.0 9] : R = R + 1; [11]
+	 [(A) INSTANCE.M1.0 10] : RETURN R  : R[11] ▏
+	 [DEVT11D001.RUNBUTTON.2 6] : RESULT = INSTANCE.M1(10); [11]
+		
 
 What is "Cross"?
 ---------------
