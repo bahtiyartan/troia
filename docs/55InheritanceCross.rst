@@ -15,11 +15,13 @@ Simply, inheritance is an object oriented programming mechanism that allows prog
 Inheritance on TROIA
 --------------------
 
-TROIA is also an object oriented programming language and supports inheritance for all TROIA item types (class, dialog, report, component).
+TROIA is an object oriented programming language and supports inheritance for all TROIA item types (class, dialog, report, component).
 
 As it is same in other programming languages, only inheriting an item does not mean changing its structure or behaviour, it only means creating heritage from base class. In practical if you only inherit an item, you can use base item with child's name. To change behaviour/structure, you must override one at least one method of base item or add a new method to child item. If you add a method which has same name with one of the base methods this means you **"override"** this method and change its behaviour. In TROIA jargon, overriding is called *inheriting a method* (In this book we will use "override method" term instead of "inherit method").
 
-When it comes to technical background, for a good understanding of inheritance with all aspects, you need to know that compiler has the most important role in inheritance process, because all inheriting operations are performed on compile time. While conpiling a child class, compiler resolves parent/child information at first and after the compilation it creates child item's binary file. This binary file contains child item's own controls/methods, additionally it has a kind of link with base's binary data.
+In TROIA an item can inherit only one base item. In other words, a sub class can only have a single base class. But it is allowed to inherit a child class. For example class A" can inherit class B which is child of class C.
+
+When it comes to technical background, for a good understanding of inheritance with all aspects, you need to know that compiler has the most important role in inheritance process, because all inheriting operations are performed on compile time. While compiling a child class, compiler resolves parent/child information at first and after the compilation it creates child item's binary file. This binary file contains child item's own controls/methods, additionally it has a kind of link with base's binary data.
 
 
 Inheriting Classes
@@ -80,9 +82,43 @@ In IDE Object Explorer and control/dialog right click menu, there are some small
 +-----------------------------------------------------+----------------------------------------------------------+
 
 
-Using SUPER() Method
---------------------
-#using super method
+Using SUPER() Keyword
+---------------------
+
+SUPER() keyword adds overridden method's code to overriding method on compile time. With this method overriding method can inherit overridden behaviour and perform additional behaviours. In other words SUPER() is not a function call, it is a compile level identifier. Therefore if base method has a RETURN command, overriding methods content is ignored by TROIA interpreter. Assume that class A inherits class B and overrides its M1 method:
+
+::
+
+	/* class B, method M1 */
+	OBJECT:
+		TABLE T1;
+	SELECT * FROM IASUSER
+		INTO T1;
+	RETURN;
+	
+	
+	/* class A method */
+	SUPER();
+	CLEAR ALL T1;
+	
+	
+On compile time, TROIA compiler adds M1 method of base class to child M1 and compiles the resulting code as M1 method of child class. Here is the compiled M1 for class A:
+
+::
+
+	/* class A method
+		on compile time */
+	OBJECT:
+		TABLE T1;
+	SELECT * FROM IASUSER
+		INTO T1;
+	RETURN;
+	CLEAR ALL T1;
+
+As it is obvious on this example, **programmers who use SUPER() keyword must consider overridden method content due to risk of canceling overriding content.** Also it is not possible to getting return value of base function using SUPER() keyword, because it is not a function call its just a keyword.
+
+
+Although it is usually used at the begining on overriding methods, it is also possible to use this method anywhere on overriding method. SUPER() keyword can be used in class,dialog, component and report events and codes.Additionally, in _CONSTRUCTOR and _VARIABLES class there is no need to write SUPER() keyword because, TROIA compiler adds base class method content to overriding class as default. For other methods programmers must add SUPER() keyword to overriding method.
 
 
 Using SUPER Object
