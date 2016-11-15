@@ -267,7 +267,7 @@ Create a child cat class that inherits animal. A cat;
 	
 Create a child cheetah class that inherits cat class. A cheetah;
 
-	- can walk 5 times higher than a cat
+	- can walk 5 times faster than a cat
 	- can jump 3 times higher than a cat
 	
 Write TROIA code that creates a cat and a cheetah call their MOVE and JUMP methods and compare their x and y position.
