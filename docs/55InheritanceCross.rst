@@ -273,6 +273,22 @@ Create a child cheetah class that inherits cat class. A cheetah;
 Write TROIA code that creates a cat and a cheetah call their MOVE and JUMP methods and compare their x and y position.
 
 
+::
+
+	OBJECT:
+    RDCAT CAT1,
+    RDCHEETAH CHEETAH1;
+    
+	CAT1.WALK();
+	CAT1.JUMP();
+
+	CHEETAH1.WALK();
+	CHEETAH1.JUMP();
+
+	STRINGVAR2 = CAT1@XPOSITION + '-' + CAT1@YPOSITION;
+	STRINGVAR3 = CHEETAH1@XPOSITION + '-' + CHEETAH1@YPOSITION;
+
+
 
 Example 2: Understanding Cross Order
 ------------------------------------
