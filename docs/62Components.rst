@@ -43,6 +43,11 @@ After you click "OK" button, IDE creates a new component and opens design window
 Using Components
 ----------------
 
+.. figure:: images/components/democomponent2.png
+   :width: 700 px
+   :target: images/components/democomponent2.png
+   :align: center
+
 Components & Scope
 ------------------
 
