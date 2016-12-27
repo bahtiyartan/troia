@@ -77,6 +77,16 @@ Components & Scope
 Calling Component Methods
 =========================
 
+.. figure:: images/components/democomponent4.png
+   :width: 700 px
+   :target: images/components/democomponent4.png
+   :align: center
+   
+.. figure:: images/components/democomponent5.png
+   :width: 700 px
+   :target: images/components/democomponent5.png
+   :align: center
+
 Nested Components
 =================
 
