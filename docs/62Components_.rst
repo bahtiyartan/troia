@@ -17,17 +17,21 @@ For instance, for a fligh reservation application you may need two date chooser 
 How Components Stored?
 ======================
 
-Components & Scope
-------------------
+As it is obvious, components have controls, control events and methods. Therefore a component is similar to dialog from the aspect of items that they have. Similar to dialogs component data is stored on development tables which are already used for storing dialogs. This tables are SYSDIALOGS, SYSDLGTEXTS, SYSDLGCODES, SYSDLGFUNCTEX, SYSCONTROLS, SYSCTLTEXTS. For more  information about the roles of this table, please see "Dailog Basics/How Dialogs are Stored?" section.
 
 Defining Components
--------------------	
+-------------------
+
+Similar to other troia development items, components are defined using TROIA IDE, too.
 
 Using Components
 ----------------
 
-Calling Component Functions
-===========================
+Components & Scope
+------------------
+
+Calling Component Methods
+=========================
 
 Nested Components
 =================
