@@ -28,6 +28,12 @@ Similar to other troia development items, components are defined using TROIA IDE
    :width: 360 px
    :target: images/components/newcomponent.png
    :align: center
+   
+In this form you, must select a hotline (change request) and enter a valid component name. A valid component name is unique and at least four characters length similar to dialogs. 
+
+Inheriting and defining cross references are also supported for components and works in same way with dialogs. Please see the related section to get more informatin about inheriting. 
+
+After you click "OK" button, IDE creates a new component and opens design window.
 
 Using Components
 ----------------
