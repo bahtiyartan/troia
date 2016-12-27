@@ -33,7 +33,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    52ReportsPrinting
    55InheritanceCross
    58File
-   62Components
+   62Component
    66FTP
    70WebServices
    74XMLjson
