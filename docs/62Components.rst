@@ -57,6 +57,11 @@ After saving and calling the dialog, the final view is below. This dialog has tw
    :width: 700 px
    :target: images/components/democomponent3.png
    :align: center
+   
+Nested Components
+=================
+
+It is also possible to use components inside other components. This process is totally same with using a component on dialog.
 
 Component Events
 ----------------
@@ -89,8 +94,7 @@ Calling Component Methods
    :target: images/components/democomponent5.png
    :align: center
 
-Nested Components
------------------
+
 
 
 Component Actions
