@@ -22,7 +22,12 @@ As it is obvious, components have controls, control events and methods. Therefor
 Defining Components
 -------------------
 
-Similar to other troia development items, components are defined using TROIA IDE, too.
+Similar to other troia development items, components are defined using TROIA IDE, too. To create a new component, you must click **TROIA IDE-> New -> New Component** on menu and fill the new component form which is very similar to new dialog form.
+
+.. figure:: images/components/newcomponent.png
+   :width: 360 px
+   :target: images/components/newcomponent.png
+   :align: center
 
 Using Components
 ----------------
