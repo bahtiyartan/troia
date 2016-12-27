@@ -43,6 +43,8 @@ After you click "OK" button, IDE creates a new component and opens design window
 Using Components
 ----------------
 
+To use a component on a dialog, you must just drag a "TROIA Component" (1) from toolbox and drop it on dialog (2). And write the component name to "Component" feature of your dragged control (3).
+
 .. figure:: images/components/democomponent2.png
    :width: 700 px
    :target: images/components/democomponent2.png
