@@ -33,7 +33,12 @@ In this form you, must select a hotline (change request) and enter a valid compo
 
 Inheriting and defining cross references are also supported for components and works in same way with dialogs. Please see the related section to get more informatin about inheriting. 
 
-After you click "OK" button, IDE creates a new component and opens design window.
+After you click "OK" button, IDE creates a new component and opens design window. In this design window you can create your component due to your requirements. Here is my sample component that has two date fields on it.
+
+.. figure:: images/components/democomponent1.png
+   :width: 700 px
+   :target: images/components/democomponent1.png
+   :align: center
 
 Using Components
 ----------------
