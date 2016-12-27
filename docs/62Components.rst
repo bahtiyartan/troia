@@ -50,7 +50,7 @@ To use a component on a dialog, you must just drag a "TROIA Component" (1) from 
    :target: images/components/democomponent2.png
    :align: center
   
-After saving and calling the dialog, here is the final view:
+After saving and calling the dialog, the final view is below. This dialog has two component instances named C1 and C2.
 
 .. figure:: images/components/democomponent2.png
    :width: 700 px
