@@ -79,9 +79,12 @@ For example if you write the code below to initialize method. Components shows c
 Components & Scope
 ------------------
 
+Calling Dialogs from Components
+===============================
+..
+
 Accessing Variables Which Defined in Component
 ==============================================
-
 ..
 
 Calling Component Methods
