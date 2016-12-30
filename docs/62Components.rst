@@ -80,7 +80,6 @@ Components & Scope
 ------------------
 
 
-
 Calling Component Methods
 -------------------------
 
