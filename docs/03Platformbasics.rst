@@ -14,15 +14,6 @@ History
 
 #history of troia platform
 
-Platform Overview
---------------------
-
-.. figure:: images/platformbasics/platformoverview.png
-   :width: 700 px
-   :target: images/platformbasics/platformoverview.png
-   :align: center
-
-   
 Basic Components
 ----------------
 
@@ -42,7 +33,7 @@ Licence Server
 
 Licence Server, a server side service that handles licencing issues considering user count and modules (TROIA Application groups). In general, Licence Server serves application server, although some other server side components needs licence server.
 
-If your Licence Server is down or not accessible, application servers do not allow users to log in. After its launch, an application server tries to access Licence Server at first login attempt. To serve properly licence server and the application servers that it serves for must have same version and build number.
+If your Licence Server is down or not accessible, application servers do not allow users to log in. After its launch, an application server tries to access Licence Server at first login attempt. To serve properly, licence server and the application servers that it serves for must have same version.
 
 Load Balancer
 =============
@@ -59,6 +50,14 @@ Other Components
 ================
 
 #other compoenents
+
+Platform Overview
+--------------------
+
+.. figure:: images/platformbasics/platformoverview.png
+   :width: 700 px
+   :target: images/platformbasics/platformoverview.png
+   :align: center
 
 
 Platform & Programming Language
