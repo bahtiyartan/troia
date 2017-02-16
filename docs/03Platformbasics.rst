@@ -47,7 +47,7 @@ Other Components
 
 Although most important tools and components are listed above, TROIA Platform has other components for load balancing, administration, single sign on, monitoring, SMS handling etc. Some of this components are listed below:
 
-**Load Balancer** is a server side service that redirects users to best available servers considering server resources and the rules that are defined its configuration.
+**Load Balancer** is a server side service that redirects clients to best available server considering server resources and the rules that are defined its configuration.
 
 **SSO Gateway** is a server side service that provides single sign on options for TROIA Platform users.
 
