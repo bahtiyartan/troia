@@ -50,7 +50,7 @@ Load Balancer
 Other Components
 ================
 
-Although most important tools and components are listed above, TROIA Platform has other components for administration, single sign on, monitoring, SMS handling etc.
+Although most important tools and components are listed above, TROIA Platform has other components for administration, single sign on, monitoring, SMS handling etc. Some of this components are listed below:
 
 **SSO Gateway** is a server side service that provides single sign on options for TROIA Platform users.
 
@@ -60,9 +60,6 @@ Although most important tools and components are listed above, TROIA Platform ha
 
 **System Reporter** is a tool that reports status of your server side components in a configurable period.
 
-#other components
-
-#other compoenents
 
 Platform Overview
 --------------------
