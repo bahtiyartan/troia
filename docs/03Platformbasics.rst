@@ -20,7 +20,9 @@ Basic Components
 Application Server
 ==================
 
-#application server
+#application server...
+#application server...
+#application server and troia language...
 
 
 Client(s)
