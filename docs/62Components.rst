@@ -81,7 +81,9 @@ Components & Scope
 
 Calling Dialogs from Components
 ===============================
-..
+
+Dialogs which is called from dialogs are a part of the component, so the variables defined by dialog must be accessed on component context. ...
+
 
 Accessing Variables Which Defined in Component
 ==============================================
