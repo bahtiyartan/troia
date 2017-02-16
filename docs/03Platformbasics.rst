@@ -42,21 +42,18 @@ RMI Registry
 
 #rmi registry
 
-Load Balancer
-=============
-
-#load balancer
-
 Other Components
 ================
 
-Although most important tools and components are listed above, TROIA Platform has other components for administration, single sign on, monitoring, SMS handling etc. Some of this components are listed below:
+Although most important tools and components are listed above, TROIA Platform has other components for load balancing, administration, single sign on, monitoring, SMS handling etc. Some of this components are listed below:
+
+**Load Balancer**
 
 **SSO Gateway** is a server side service that provides single sign on options for TROIA Platform users.
 
 **SMS Gateway** is a server side service for handling SMS handling.
 
-**Workbench** is an administration tool for server side components such as application server,licence server,load balancer, sms gateway etc. Adminisrators can view and manage users sessions and applications, application caching, configuration.
+**Workbench** is an administration tool to manage and monitor server side components such as application server,licence server,load balancer. Using this tool system administrators can view and manage application server cache, users sessions and their running applications etc.
 
 **System Reporter** is a tool that reports status of your server side components in a configurable period.
 
