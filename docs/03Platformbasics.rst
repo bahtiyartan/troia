@@ -57,7 +57,6 @@ Although most important tools and components are listed above, TROIA Platform ha
 
 **System Reporter** is a tool that reports status of your server side components in a configurable period.
 
-
 Platform Overview
 --------------------
 
