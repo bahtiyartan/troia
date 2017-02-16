@@ -37,19 +37,30 @@ After its launch, an application server tries to access Licence Server at first 
 
 To serve properly, licence server and the application servers that it serves for must have same version.
 
-Load Balancer
-=============
-
-#load balancer
-
 RMI Registry
 ============
 
 #rmi registry
 
+Load Balancer
+=============
+
+#load balancer
 
 Other Components
 ================
+
+Although most important tools and components are listed above, TROIA Platform has other components for administration, single sign on, monitoring, SMS handling etc.
+
+**SSO Gateway** is a server side service that provides single sign on options for TROIA Platform users.
+
+**SMS Gateway** is a server side service for handling SMS handling.
+
+**Workbench** is an administration tool for server side components such as application server,licence server,load balancer, sms gateway etc. Adminisrators can view and manage users sessions and applications, application caching, configuration.
+
+**System Reporter** is a tool that reports status of your server side components in a configurable period.
+
+#other components
 
 #other compoenents
 
