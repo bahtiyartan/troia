@@ -47,11 +47,11 @@ Other Components
 
 Although most important tools and components are listed above, TROIA Platform has other components for load balancing, administration, single sign on, monitoring, SMS handling etc. Some of this components are listed below:
 
-**Load Balancer**
+**Load Balancer** is a server side service that redirects users to best available servers considering server resources and the rules that are defined its configuration.
 
 **SSO Gateway** is a server side service that provides single sign on options for TROIA Platform users.
 
-**SMS Gateway** is a server side service for handling SMS handling.
+**SMS Gateway** is another server side service for handling SMS handling.
 
 **Workbench** is an administration tool to manage and monitor server side components such as application server,licence server,load balancer. Using this tool system administrators can view and manage application server cache, users sessions and their running applications etc.
 
