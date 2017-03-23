@@ -78,7 +78,7 @@ You can read your version number from the about dialog (Menu->About). Sample ver
 	
 TROIA Platform version numbers are consisted from two main parts "major version number" and "build number". As it is obvious version numbers are ordered, so 3.08.05 0121101 is an older version than 5.02.04 012102
 
-602, 603 and 604 are names **caniasERP** versions and all are designed to run on a major TROIA Platform version. (602 works on 3.08.xx xxxxxx, 603 works on 5.01.xx xxxxxx and 604 works on 5.02.xx xxxxxx). In other words; 602,603,604 are not valid version names for TROIA Platform.
+602, 603 and 604 are names **CANIAS ERP** versions and all are designed to run on a major TROIA Platform version. (602 works on 3.08.xx xxxxxx, 603 works on 5.01.xx xxxxxx and 604 works on 5.02.xx xxxxxx). In other words; 602,603,604 are not valid version names for TROIA Platform.
 
 
 Platform & Programming Language
