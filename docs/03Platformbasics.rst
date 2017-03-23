@@ -81,6 +81,12 @@ TROIA Platform version numbers are consisted from two main parts "major version 
 602, 603 and 604 are names **CANIAS ERP** versions and all are designed to run on a major TROIA Platform version. (602 works on 3.08.xx xxxxxx, 603 works on 5.01.xx xxxxxx and 604 works on 5.02.xx xxxxxx). In other words; 602,603,604 are not valid version names for TROIA Platform.
 
 
+How to Follow Changes & Improvements?
+-------------------------------------
+
+Each version of TROIA Platform fixes some bugs or reveals some new features in different layers. In some cases, version upgrade requires some manual operations by administrators or developers. So you need to follow changes between version upgrades. All changes are listed in ReleaseNotes.txt document which is supplied/distributed with each version. Also it is possible to read release notes document from "SYST17 - Release Notes" TROIA application and "Relese Notes Analyser" tool on Workbench.
+
+
 Platform & Programming Language
 ===============================
 
