@@ -68,13 +68,17 @@ Component Events
 
 Components have a predefined event named INITIALIZE which is called when a component instance is created. With this method TROIA programmers are able to set initial state of a component. To implement INITIALIZE method you must right click to component on design view (1) or double click the evet on events explorer which is under the properties explorer (2).
 
-For example if you write the code below to initialize method. Components shows current date as DATEFROM and 1 tomorrow as DATETO.
+For example if you write the code below to initialize method. Components shows current date as DATEFROM and tomorrow as DATETO.
 
 ::
 
 	DATEFROM = CURRENTTIMEMILLIS();
 	DATETO = ADDDAYS(DATEFROM, 1);
 
+.. figure:: images/components/democomponent6.png
+   :width: 700 px
+   :target: images/components/democomponent6.png
+   :align: center
    
 Components & Scope
 ------------------
