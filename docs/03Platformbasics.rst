@@ -52,7 +52,7 @@ Although most important tools and components are listed above, TROIA Platform ha
 **System Reporter** is a tool that reports status of your server side components in a configurable period.
 
 Platform Architecture Overview
-------------------------------
+==============================
 
 .. figure:: images/platformbasics/platformoverview.png
    :width: 700 px
@@ -61,7 +61,7 @@ Platform Architecture Overview
 
 
 Platform & Programming Language
--------------------------------
+===============================
 
 #programming language
 
