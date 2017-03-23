@@ -44,7 +44,7 @@ To serve properly, licence server and the application servers that it serves for
 RMI Registry
 ============
 
-RMI Registry is a server side service that provides a communication infrastructure between all components of TROIA Platform. RMI Registry uses RMI Infrastructure of java which provides cummunicatation method for different java applications. Any two components of the platform uses RMI Registry (server to server, client to server, server to licence server etc), so running a single RMI registry is a must.
+RMI Registry is a server side service that provides a communication infrastructure between all components of TROIA Platform. RMI Registry uses RMI Infrastructure of java which provides cummunicatation method for different java applications. Any two components of the platform uses RMI Registry (server to server, client to server, server to licence server etc), so running a single RMI registry is a must to run other platform components properly.
 
 Other Components
 ================
