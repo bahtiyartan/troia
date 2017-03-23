@@ -6,26 +6,14 @@ Platform Basics
 
 *TROIA Platform is the software framework which TROIA Programming Language works on. This section introduces main components and architecture of TROIA Platform for better understanding of next sections.*
 
-
-#troia platform purpose
-
-'''History
---------------------
-
-#history of troia platform
-
-Basic Components
-----------------
-
-TROIA Platform has three-tier 
-
 Application Server
 ==================
 
-#application server...
-#application server...
-#application server and troia language...
+Application server is the most important component of TROIA platform. As it is obvious, it is a server side service that serves for all kind of TROIA clients. Basically application server is responsible for user session management, handling troia application lifecycle, database transaction management etc. 
 
+The most important responsibility of application server is running TROIA programming language and handling troia application lifecycle. Application server is the only platform component that is able to run TROIA codes.
+
+A single application server is able to serve multiple clients. User count that an application server is able to serve properly depends on the workload of application server. It is possible to run multiple servers simultaneously.
 
 Client(s)
 =========
@@ -61,8 +49,8 @@ Although most important tools and components are listed above, TROIA Platform ha
 
 **System Reporter** is a tool that reports status of your server side components in a configurable period.
 
-Platform Overview
---------------------
+Platform Architecture Overview
+------------------------------
 
 .. figure:: images/platformbasics/platformoverview.png
    :width: 700 px
