@@ -58,6 +58,25 @@ Platform Architecture Overview
    :width: 700 px
    :target: images/platformbasics/platformoverview.png
    :align: center
+   
+
+About Deployment
+================
+
+How to Read Version Number?
+---------------------------
+
+As an TROIA application developer or system administrator, it is important to know your version number. Because some new features revealed or bugs are fixed with new releases. And you must know whether your version supports the features that you need or all your components have same version to be sure that your installation is valid or not.
+
+You can read your version number from the about dialog (Menu->About). Sample version numbers are listed below:
+
+::
+
+	3.08.05 021101
+	5.01.02 012102
+	5.02.04 041201
+	
+TROIA Platform version numbers are consisted from two main parts "major version number" and "build number". As it is obvious version numbers are ordered and 3.08.05 0121101 is an older version thant 5.02.04 012102
 
 
 Platform & Programming Language
