@@ -11,14 +11,14 @@ Application Server
 
 Application server is the most important component of TROIA platform. As it is obvious, it is a server side service that serves for all kind of TROIA clients. Basically application server is responsible for user session management, handling troia application lifecycle, database transaction management etc. 
 
-The most important responsibility of application server is running TROIA programming language and handling troia application lifecycle. Application server is the only platform component that is able to run TROIA codes.
+The most important responsibility of application server is running TROIA programming language and handling troia application lifecycle. **Application server is the only platform component that is able to run TROIA codes.** Therefore it is not possible to run a troia code without an application server.
 
 A single application server is able to serve multiple clients. User count that an application server is able to serve properly depends on the workload of application server. It is possible to run multiple servers simultaneously.
 
 Client(s)
 =========
 
-#client
+It is not possible to log in an application server and run a troia application directly on application server.To do this operations you need a TROIA client. Most used TROIA client is a java application that is able to connect application server and draw troia applications on user interface.
 
 Licence Server
 ==============
