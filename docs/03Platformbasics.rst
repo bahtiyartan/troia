@@ -18,7 +18,9 @@ A single application server is able to serve multiple clients. User count that a
 Client(s)
 =========
 
-It is not possible to log in an application server and run a troia application directly on application server.To do this operations you need a TROIA client. Most used TROIA client is a java application that is able to connect application server and draw troia applications on user interface.
+It is not possible to log in an application server and run a troia application directly on application server. To do this operations you need a TROIA client. Most used TROIA client is desktop client (also called java client or swing client) that is able to connect application server and draw troia applications on user interface. The main functionality of this client is getting user actions passing them to application server and drawing resulting screen to user interface.
+
+Additionally there are different kind of clients such as web client and web services. All these clients are not able to run TROIA codes, their basic responsibility is transferring user interactions to server and handling application server response.
 
 Licence Server
 ==============
