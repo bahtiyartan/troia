@@ -88,7 +88,7 @@ As a result of component's have a different scope, it is not possible to access 
 Calling Dialogs from Components
 ===============================
 
-Dialogs which is called from dialogs are a part of the component, so the variables defined by dialog must be accessed on component context. ...
+Dialogs which is called from dialogs are a part of the component, so all variables defined on dialog (by code or control symbols) are located in component's scope.
 
 Calling Component Methods
 -------------------------
