@@ -117,12 +117,23 @@ This code runs on C1's context and changes only FROM and TO dates of C1 instance
 Component Actions
 -----------------
 
-FIRECOMPONENTEVENT Command
-==========================
+In some cases, behaviour of a component can be change due to dialog that it is used on. For example, if user enters a date which is later than TO date to FROM field our component must warn the user. But warning message can be change due to dialog or component instance. In this cases, components can contain some abstract methods that must be filled for each component instance. To define such an action, action names must be defined in ACTION field on IDE Properties Explorer. For multiple actions, use semicolumn as seperator. 
+
+Basically, component actions are similar to any control event like buttons' Click or textfields' LoseFocus
+
+This actions are implemented for each instance of component and part of dialogs that component is used, by right clicking on the component instance on IDE. To fire an action FIRECOMPONENTEVENT is used. Here is the basic syntax:
 
 ::
 
 	FIRECOMPONENTEVENT {eventname};
+	
+For example, we can check whether FROM date is earlier than TO date in our component. Assume that we have a CHECKVALIDITY() method on component and it is called from TextChanged events of DATETO and DATEFROM textfields. Here is the code of CHECKVALIDITY() method of our component. 
+
+::
+
+	IF DATEFROM > DATETO THEN
+		FIRECOMPONENTEVENT 'INVALIDDATE';
+	ENDIF;
 
 
 
