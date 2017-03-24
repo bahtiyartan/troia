@@ -88,10 +88,12 @@ As a result of component's have a different scope, it is not possible to access 
 Calling Dialogs from Components
 ===============================
 
-Dialogs which is called from dialogs are a part of the component, so all variables defined on dialog (by code or control symbols) are located in component's scope.
+Also it is possible to call a dialog from component. Dialogs which is called from dialogs are a part of the component, so all variables defined on dialog (by code or control symbols) are located in component's scope.
 
 Calling Component Methods
 -------------------------
+
+Components is able to have some public methods that can be called from outside the component. To define such a method, you must select "Add Method" from right click menu on IDE and fill method content.
 
 .. figure:: images/components/democomponent4.png
    :width: 300 px
@@ -102,8 +104,14 @@ Calling Component Methods
    :width: 300 px
    :target: images/components/democomponent5.png
    :align: center
+   
+Calling a component's method is not different from calling a class method. You must call the method for the component's instance name. Here is sample dialog code that calls SETVALUS() method of C1 which is an instance of DEMOCOMPONENT.
 
+::
 
+	C1.SETVALUES('01.01.2016 10:10:10', '01.02.2017 10:10:10');
+	
+This code runs on C1's context and changes only FROM and TO dates of C1 instance. Other instances of DEMOCOMPONENT are not affected from this call.
 
 
 Component Actions
