@@ -81,17 +81,14 @@ Components & Scope
 
 Developers are not able to know in which dialogs component will be used while developing a component. What if varaible names conflicts with existing variables on dialogs? or if a dialog changes one of component's variable? Actually this questions are not valid for components because components have their own scope, so even a variable defined in compoent has same name with a dialog component they are not same variables. Therefore conflictions are not possible. For example, SYS_STATUS in component scope is not same with SYS_STATUS in global scope, they are totally different variables.
 
-As a result of this approach, it is not possible to access (read or set) variables defined in component from dialog codes. To do this you must call component's public methods, if component have such methods. Defining getter/setter methods is the responsibility of programmer who developes component. Calling component methods will be discussed in next sections.
+Accessing Variables Which Defined in Component
+==============================================
+As a result of component's have a different scope, it is not possible to access (read or set) variables defined in component from dialog codes. To do this you must call component's public methods, if component have such methods. Defining getter/setter methods is the responsibility of programmer who developes component. Calling component methods will be discussed in next sections.
 
 Calling Dialogs from Components
 ===============================
 
 Dialogs which is called from dialogs are a part of the component, so the variables defined by dialog must be accessed on component context. ...
-
-
-Accessing Variables Which Defined in Component
-==============================================
-..
 
 Calling Component Methods
 -------------------------
