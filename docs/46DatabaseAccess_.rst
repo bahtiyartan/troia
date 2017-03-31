@@ -4,6 +4,8 @@
 Database Access
 ==================
 
+As a business level programming language, TROIA works with databases and has too many operations on databases, such as connecting different databases or executing sql queries. This section aims to introduce database operations and persistency flags of tables.
+
 Selecting data from Database
 ----------------------------
 selecting data from database.
