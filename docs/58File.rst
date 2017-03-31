@@ -178,7 +178,7 @@ FILEID is optional argument for both OPEN FILE and CLOSE FILE commands. It defin
 	STRPATH2 = '*C:\TMP\NewFile2.txt';
 	
 	OPEN FILE STRPATH1 FORNEW;
-	OPEN FILE STRPATH1 FORNEW;
+	OPEN FILE STRPATH2 FORNEW;
 	
 	/* do something on files, part 1 */
 
@@ -201,7 +201,7 @@ If you programmers want to open another file before closing first one, they must
 	STRPATH2 = '*C:\TMP\NewFile2.txt';
 	
 	OPEN FILE STRPATH1 FORNEW FILEID F1;
-	OPEN FILE STRPATH1 FORNEW FILEID F2;
+	OPEN FILE STRPATH2 FORNEW FILEID F2;
 	
 	/* do something on files, part 1 */
 
