@@ -66,7 +66,7 @@ login() Method
 
 login () method creates a connector session on CANIAS Application Server if login credentials is correct.
 
-Client, Language, DBServer, DBName, ApplicationServer, Username are default login parameters. Password parameter can be passed as MD5 hash or pure password string, authentication sub system detects password format automatically.
+Client, Language, DBServer, DBName, ApplicationServer, Username are default login parameters. Password parameter must be MD5 hash of password string.
 
 In addition to these parameters login method gets a boolean Encrypted flag. Encrypted flag enables encrypted connection between client application and CANIAS Web Service.
 
