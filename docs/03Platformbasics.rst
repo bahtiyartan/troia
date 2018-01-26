@@ -18,23 +18,23 @@ A single application server is able to serve multiple clients. User count that a
 Client(s)
 =========
 
-It is not possible to log in an application server and run a troia application directly on application server. To do this operations you need a TROIA client. Most used TROIA client is desktop client (also called java client or swing client) that is able to connect application server and draw troia applications on user interface. The main functionality of this client is getting user actions passing them to application server and drawing resulting screen to user interface.
+It is not possible to log in an application server and run a troia application directly on application server. To do this operations you need a TROIA client. Most used TROIA client is desktop client (also called java client or swing client) that is able to connect application server and draw troia applications on user interface. The main functionality of this client is getting user actions passing them to application server and drawing resulting screen to user interface. Additonally, development environment of TROIA Language is a part of java client, in other words to develop a TROIA Application you have to connect application server via a desktop client.
 
-Additionally there are different kind of clients such as web client and web services. All these clients are not able to run TROIA codes, their basic responsibility is transferring user interactions to server and handling application server response.
+Additionally there are different kind of clients such as android client, web client and web services. Clients are not able to run TROIA codes, their basic responsibility is transferring user interactions to server and handling application server response.
 
-Licence Server
+License Server
 ==============
 
-Licence Server, a server side service that handles licencing issues considering user count and modules (TROIA Application groups). In general, Licence Server serves for application servers, although some other server side components needs licence server.
+License Server, a server side service that handles licencing issues considering user count and modules (TROIA Application groups). In general, License Server serves for application servers, although some other server side components needs license server.
 
-After its launch, an application server tries to access Licence Server at first login attempt. If your Licence Server is down or not accessible, application servers do not allow users to log in. If licence server gets down while application servers have already logged users, this users can work properly. But it is not possible to log in new users until your application server access licence server.
+After its launch, an application server tries to access License Server at first login attempt. If your License Server is down or not accessible, application servers do not allow users to log in. If license server gets down while application servers have already logged users, this users can work properly. But it is not possible to log in new users until your application server access license server.
 
-To serve properly, licence server and the application servers that it serves for must have same version.
+To serve properly, license server and the application servers that it serves for must have same version.
 
 RMI Registry
 ============
 
-RMI Registry is a server side service that provides a communication infrastructure between all components of TROIA Platform. RMI Registry uses RMI Infrastructure of java which provides cummunicatation method for different java applications. Any two components of the platform uses RMI Registry (server to server, client to server, server to licence server etc), so running a single RMI registry is a must to run other platform components properly.
+RMI Registry is a server side service that provides a communication infrastructure between all components of TROIA Platform. RMI Registry uses RMI Infrastructure of java which provides cummunicatation method for different java applications. Any two components of the platform uses RMI Registry (server to server, client to server, server to license server etc), so running a single RMI registry is a must to run other platform components properly.
 
 Other Components
 ================
@@ -47,7 +47,7 @@ Although most important tools and components are listed above, TROIA Platform ha
 
 **SMS Gateway** is another server side service for handling SMS handling.
 
-**Workbench** is an administration tool to manage and monitor server side components such as application server,licence server,load balancer. Using this tool system administrators can view and manage application server cache, users sessions and their running applications etc.
+**Workbench** is an administration tool(a kind of client) to manage and monitor server side components such as application server,license server,load balancer. Using this tool system administrators can view and manage application server cache, users sessions and their running applications etc.
 
 **System Reporter** is a tool that reports status of your server side components in a configurable period.
 
