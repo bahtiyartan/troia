@@ -54,11 +54,20 @@ Although most important tools and components are listed above, TROIA Platform ha
 Platform Architecture Overview
 ==============================
 
+Basically, TROIA Platform allows programmer to develop applications that access data, manipulate it and save. To understand platform architecture its very important to understand the roles of application server and client(s). The graphic below, shows the main structures and layers of TROIA platform from user interface to data. Also, it's possible to understand functionality share of application server and client. 
+
 .. figure:: images/platformbasics/platformoverview.png
    :width: 700 px
    :target: images/platformbasics/platformoverview.png
    :align: center
    
+Understand the roles of each component and their subsystems using this graphic and try to create some statements and discuss them for better understanding. Here are some sample statements to discuss:
+
+::
+
+	- TROIA Codes are executed only in application server.
+	- IDE is a part of desktop client, so TROIA applications is only developed desktop devices but they works on any kind of client.
+	- Desktop client,web client and android client shares same troia application model layer.
 
 About Deployment
 ================
