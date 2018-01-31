@@ -69,8 +69,8 @@ Understand the roles of each component and their subsystems using this graphic a
 
 	- TROIA Codes are executed only in application server.
 	- IDE is a part of desktop client, 
-		so TROIA applications are only developed desktop devices but they works on any kind of client.
-	- Desktop client,web client and android client shares same troia application model layer.
+		so TROIA applications are only developed desktop devices.
+	- Desktop, web and android client shares same troia application model layer.
 
 About Deployment
 ================
