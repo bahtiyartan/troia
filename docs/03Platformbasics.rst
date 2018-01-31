@@ -58,7 +58,7 @@ Basically, TROIA Platform allows programmer to develop applications that access 
 
 
 .. figure:: images/platformbasics/platformoverview.png
-   :width: 700 px
+   :width: 600 px
    :target: images/platformbasics/platformoverview.png
    :align: center
 
