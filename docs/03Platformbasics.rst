@@ -54,7 +54,7 @@ Although most important tools and components are listed above, TROIA Platform ha
 Platform Architecture Overview
 ==============================
 
-Basically, TROIA Platform allows programmer to develop applications that access data, manipulate it and save. To understand platform architecture its very important to understand the roles of application server and client(s). The graphic below, shows the main structures and layers of TROIA platform from user interface to data. Also, it's possible to understand functionality share of application server and client. 
+Basically, TROIA Platform allows programmer to develop applications that access data, manipulate it and save. To understand platform architecture its very important to understand the roles of application server and client(s). The graphic below, shows the main structures and layers of TROIA Platform from user interface to data. Also, it's possible to understand responsibility/functionality share of application server and client. 
 
 
 .. figure:: images/platformbasics/platformoverview.png
