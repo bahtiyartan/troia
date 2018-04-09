@@ -46,11 +46,15 @@ LOADNATIVE Command
 Opening Files with Default App
 ------------------------------
 
+Users selects different default applications for specific file extensions, so it is not possible to indicate a correct application while writing TROIA code that opens a file in client side. For example; to show a .htm file, running chrome/internet expolorer is not a correct approach for a cross-platform application. The default browser (or another kind of application) depends on operating system of the client and user's choice.
+
+To reduce creating a cross-platform solution, TROIA has a RUNFILE command that fires default application for given file extension. Using this command TROIA programmers totally ignore which application or program is default for given file, all operations are performed in interpreter layer.
+
 ::
 
 	RUNFILE {filepathonclient};
 	
-Client path..
+RUNFILE command works only for client side paths, in other words it is not possible to fire default application in application server. Here is an example that creates a .htm file and runs it with default browser.
 
 ::
 
@@ -66,7 +70,7 @@ Client path..
 	RUNFILE STRPATH;
 
 	
-Server path..
+Same example, for a server side path.
 
 ::
 
