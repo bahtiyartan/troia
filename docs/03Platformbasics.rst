@@ -51,11 +51,19 @@ Although most important tools and components are listed above, TROIA Platform ha
 
 **System Reporter** is a tool that reports status of your server side components in a configurable period.
 
-Platform Architecture Overview
+Components and Network Architecture of Platform
+===============================================
+
+.. figure:: images/platformbasics/troia-platform-network-architecture.png
+   :width: 600 px
+   :target: images/platformbasics/troia-platform-network-architecture.png
+   :align: center
+
+
+Software Architecture Overview
 ==============================
 
 Basically, TROIA Platform allows programmer to develop applications that access data, manipulate it and save. To understand platform architecture its very important to understand the roles of application server and client(s). The graphic below, shows the main structures and layers of TROIA Platform from user interface to data. Also, it's possible to understand responsibility/functionality share of application server and client. 
-
 
 .. figure:: images/platformbasics/platformoverview.png
    :width: 600 px
