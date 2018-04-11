@@ -6,8 +6,11 @@ Platform Basics
 
 *TROIA Platform is the software framework which TROIA Programming Language works on. This section introduces main components and architecture of TROIA Platform for better understanding of next sections.*
 
+Components and Network Architecture Overview
+============================================
+
 Application Server
-==================
+------------------
 
 Application server is the most important component of TROIA platform. As it is obvious, it is a server side service that serves for all kind of TROIA clients. Basically application server is responsible for user session management, handling troia application lifecycle, database transaction management etc. 
 
@@ -16,14 +19,14 @@ The most important responsibility of application server is running TROIA program
 A single application server is able to serve multiple clients. User count that an application server is able to serve properly depends on the workload of application server. It is possible to run multiple servers simultaneously.
 
 Client(s)
-=========
+---------
 
 It is not possible to log in an application server and run a troia application directly on application server. To do this operations you need a TROIA client. Most used TROIA client is desktop client (also called java client or swing client) that is able to connect application server and draw troia applications on user interface. The main functionality of this client is getting user actions passing them to application server and drawing resulting screen to user interface. Additonally, development environment of TROIA Language is a part of java client, in other words to develop a TROIA Application you have to connect application server via a desktop client.
 
 There are different kind of clients such as android client, web client and web services. Clients are not able to run TROIA codes, their basic responsibility is transferring user interactions to server and handling application server response.
 
 License Server
-==============
+--------------
 
 License Server, a server side service that handles licencing issues considering user count and modules (TROIA Application groups). In general, License Server serves for application servers, although some other server side components needs license server.
 
@@ -32,12 +35,12 @@ After its launch, an application server tries to access License Server at first 
 To serve properly, license server and the application servers that it serves for must have same version.
 
 RMI Registry
-============
+------------
 
 RMI Registry is a server side service that provides a communication infrastructure between all components of TROIA Platform. RMI Registry uses RMI Infrastructure of java which provides cummunicatation method for different java applications. Any two components of the platform uses RMI Registry (server to server, client to server, server to license server etc), so running a single RMI registry is a must to run other platform components properly.
 
 Other Components
-================
+----------------
 
 Although most important tools and components are listed above, TROIA Platform has other components for load balancing, administration, single sign on, monitoring, SMS handling etc. Some of this components are listed below:
 
@@ -51,8 +54,8 @@ Although most important tools and components are listed above, TROIA Platform ha
 
 **System Reporter** is a tool that reports status of your server side components in a configurable period.
 
-Components and Network Architecture of Platform
-===============================================
+Network Architecture Overview
+-----------------------------
 
 .. figure:: images/platformbasics/troia-platform-network-architecture.png
    :width: 600 px
