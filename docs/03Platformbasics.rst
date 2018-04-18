@@ -12,18 +12,18 @@ Components and Network Architecture Overview
 Application Server
 ------------------
 
-Application server is the most important component of TROIA platform. As it is obvious, it is a server side service that serves for all kind of TROIA clients. Basically application server is responsible for user session management, handling troia application lifecycle, database transaction management etc. 
+Application server is one of the most important components of TROIA platform. As it is obvious, it is a server side service that serves for all kind of TROIA clients. Basically application server is responsible for user session management, handling troia application lifecycle, database transaction management etc. 
 
 The most important responsibility of application server is running TROIA programming language and handling troia application lifecycle. **Application server is the only platform component that is able to run TROIA codes.** Therefore it is not possible to run a troia code without an application server.
 
-A single application server is able to serve multiple clients. User count that an application server is able to serve properly depends on the workload of application server. It is possible to run multiple servers simultaneously.
+A single application server is able to serve multiple clients. User count that an application server is able to serve properly depends on the workload of application server. It is possible to run multiple servers simultaneously to server for numerous concurrent users. 
 
 Client(s)
 ---------
 
 It is not possible to log in an application server and run a troia application directly on application server. To do this operations you need a TROIA client. Most used TROIA client is desktop client (also called java client or swing client) that is able to connect application server and draw troia applications on user interface. The main functionality of this client is getting user actions passing them to application server and drawing resulting screen to user interface. Additonally, development environment of TROIA Language is a part of java client, in other words to develop a TROIA Application you have to connect application server via a desktop client.
 
-There are different kind of clients such as android client, web client and web services. Clients are not able to run TROIA codes, their basic responsibility is transferring user interactions to server and handling application server response.
+There are different kind of clients such as desktop client, android client, web client and web services. Clients are not able to run TROIA codes, their basic responsibility is transferring user interactions to server and handling application server response in ui or presentation layer.
 
 License Server
 --------------
@@ -57,10 +57,19 @@ Although most important tools and components are listed above, TROIA Platform ha
 Network Architecture Overview
 -----------------------------
 
+Here is an overview of all TROIA Plaform's main components and network structure from database to user interface. This overview clearly shows which components of TROIA Platform are server or client. Additionally, it is possible to see, directions of communication lines. Understanding this structure is too important to overcome some advanced questions about platform by yourself.
+
 .. figure:: images/platformbasics/troia-platform-network-architecture.png
    :width: 600 px
    :target: images/platformbasics/troia-platform-network-architecture.png
    :align: center
+   
+Please discuss question below considering the network structure:
+
+::
+
+	Is it possible to push an information to client side 
+	    when an instant message recieved from another user?
 
 
 Software Architecture Overview
