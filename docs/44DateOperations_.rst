@@ -6,13 +6,13 @@ Working With Date/Datetime
 
 *This sections aims to introduce data manipulation tools*
 
-Related Data Data Types
------------------------
+Date Data Types
+---------------
 
 ...
 
 Type Conversion & Casting on Date Types
----------------------------------------
+=======================================
 
 ...
 
