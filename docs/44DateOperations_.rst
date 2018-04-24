@@ -4,7 +4,7 @@
 Working With Date/Datetime
 ==========================
 
-*This sections aims to introduce data manipulation tools*
+*This section aims to introduce date/datetime/time types, related configurations,structures and concepts to ease date handling*
 
 Date Data Types
 ---------------
@@ -64,6 +64,13 @@ Timezone
 ========
 
 ...
+
+Work Calendar
+========
+
+...
+
+
 
 
 
