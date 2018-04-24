@@ -27,6 +27,11 @@ Basic Date Formatting
 
 ...
 
+Date Formatting & Parsing Dates
+===============================
+
+...
+
 
 Date Formatting Configurations
 ==============================
@@ -37,6 +42,7 @@ System Variables about Date Formatting
 ======================================
 
 ...
+
 
 
 Min Date & Max Date Concepts
