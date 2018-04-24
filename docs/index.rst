@@ -23,10 +23,10 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    24DialogBasics
    27Transactions
    30MessagesAlerts
-   32DateManipulation
    35Class
    38Table
    42TableControl
+   44DateOperations
    46DatabaseAccess
    49DialogAdvanced
    50Controls
