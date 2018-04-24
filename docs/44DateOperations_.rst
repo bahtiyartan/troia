@@ -4,7 +4,7 @@
 Working With Date/Datetime
 ==========================
 
-*This section aims to introduce date/datetime/time types, related configurations,structures and concepts to ease date handling*
+*This section aims to introduce date/datetime/time types, related configurations,structures and concepts to ease date handling/manipulation*
 
 Date Data Types
 ---------------
