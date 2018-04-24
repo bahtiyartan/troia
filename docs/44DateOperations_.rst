@@ -50,6 +50,21 @@ Min Date & Max Date Concepts
 
 ...
 
+Some Facts About Date/Datetime and Related Data Types
+-----------------------------------------------------
+
+...
+
+Database & Date Format
+======================
+
+...
+
+Timezone
+========
+
+...
+
 
 
 
