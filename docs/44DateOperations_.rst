@@ -23,20 +23,18 @@ DATETOMILLISECONDS()
 ISDATE()
 CHECKDATE()
 
-Null Date Concept
-==================
-
-...
-
-NULLDATE()
-
 Getting Current Date
 ====================
 
 CURRENTTIMEMILLIS() 
 SYS_CURRENTDATE
 
+What is NULLDATE?
+-----------------
 
+...
+
+NULLDATE()
 
 Min Date & Max Date Concepts
 ----------------------------
