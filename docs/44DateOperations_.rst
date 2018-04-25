@@ -11,15 +11,41 @@ Date Data Types
 
 ...
 
+
 Type Conversion & Casting on Date Types
 =======================================
 
 ...
 
-Basic Date Functions
---------------------
+MILLISECONDSTODATE()
+DATETOMILLISECONDS()
+
+ISDATE()
+CHECKDATE()
+
+Null Date Concept
+==================
 
 ...
+
+NULLDATE()
+
+Getting Current Date
+====================
+
+CURRENTTIMEMILLIS() 
+SYS_CURRENTDATE
+
+
+
+Min Date & Max Date Concepts
+----------------------------
+
+SYS_MAXDATE
+SYS_MINDATE
+
+ISMAXDATE()
+ISMINDATE()
 
 
 Basic Date Formatting
@@ -27,8 +53,8 @@ Basic Date Formatting
 
 ...
 
-Date Formatting & Parsing Dates
-===============================
+Date Formatting & Parsing Dates with TROIA
+==========================================
 
 ...
 
@@ -41,14 +67,33 @@ Date Formatting Configurations
 System Variables about Date Formatting
 ======================================
 
-...
+SYS_DATETIMEFORMAT
+SYS_DATETIMESFORMAT
+SYS_DATEFORMAT
+SYS_TIMEFORMAT
+SYS_TIMESFORMAT
+
+
+Basic Date Functions
+--------------------
+
+GETDATE()
+GETDATEFROMWEEK()
+GETDAY()
+GETDAYOFWEEK()
+GETDBDATESTR()
+GETHOUR()
+GETMINUTE()
+GETMINUTEDIFF()
+GETMONTH()
+GETTIME()
+GETWEEK()
+GETYEAR()
+FIRSTDATEINMONTH()
+LASTDATEINMONTH()
 
 
 
-Min Date & Max Date Concepts
-----------------------------
-
-...
 
 Some Facts About Date/Datetime and Related Data Types
 -----------------------------------------------------
