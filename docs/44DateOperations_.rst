@@ -54,7 +54,8 @@ Basic Date Formatting
 Date Formatting & Parsing Dates with TROIA
 ==========================================
 
-...
+FORMATDATE()
+PARSEDATE()
 
 
 Date Formatting Configurations
