@@ -410,6 +410,29 @@ Listing Files in a Directory
 	DESTROYTABLE TMPTABLE;
 	FILELIST STRPATH TO TMPTABLE;
 	SET TMPTABLE TO TABLE TMPTABLE;
+	
+Checking File Existence
+============================
+
+To check whether a file exists or not, you must use FILEEXISTS command. This is the faster way of checking file existence. This command is supported on the versions after 5.02.05 062001.  
+
+::
+
+	FILEEXISTS {filepath};
+
+::
+
+	OBJECT: 
+		STRING STRINGVAR1;
+
+	STRPATH = '*C:\TMP\myfile.txt';
+
+	FILEEXISTS STRINGVAR1;
+	IF SYS_STATUS THEN
+		STRINGVAR3 = 'File does not exist.';
+	ELSE
+		STRINGVAR3 = 'File exists.';
+	ENDIF;
 
 
 Deleting Files
