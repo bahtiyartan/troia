@@ -24,9 +24,14 @@ As it is obvious, main difference between DATE and DATETIME type is time part wh
 
 Due to your application's requirements you must use the most primitive data type. It is not recommended that storing a date information in a DATETIME symbol and 00:00:00 as its time part.
 
+Getting Current Date
+====================
+
+CURRENTTIMEMILLIS() 
+SYS_CURRENTDATE
 
 Type Conversion & Casting on Date Types
-=======================================
+---------------------------------------
 
 We know that TROIA handles type casting operations in background. This rule is also valid for date related data types, so it is possible to assign date,datetime, time, times variable any other typed variable except decimal, or assing any variable to any date data type. 
 
@@ -51,21 +56,35 @@ Here is a simple code block that contains four casting operation:
 	
 In this example, first one is assigning a string to a datetime variable. This operation contains a kind of parsing operation we will discuss parsing and formatting dates in following sections detailly. Second one is assingning datetime to date, in this operation only date part is transferred to target variable. The third one is date to datetime, in this case system uses 00:00:00 for the time part of target symbol. The last one is from datetime to time, In this case only time part of source variable transferred to target symbol.
 
-There are too many possibilities casting date related symbols, please write your own codes to understand the main approach. It is also usefull to review "Operators and Expressions" section for more information about type casting.
+There are too many possibilities casting date related symbols, please write your own codes to understand the main approach. It is also usefull to review "Operators and Expressions" section for more information about type casting. We will focus on relation between long and date related data types.
 
 In background, all date related types are stored as long. 
 
-MILLISECONDSTODATE()
-DATETOMILLISECONDS()
+::
+
+	OBJECT: 
+	 STRING STRINGVAR3,
+	 DATETIME DATETIMEVAR1,
+	 DATETIME DATETIMEVAR2,
+	 DATETIME DATETIMEVAR3,
+	 LONG LONGVAR1,
+	 LONG LONGVAR2;
+
+	DATETIMEVAR1 = '25.11.1984 13:00:00';
+
+	LONGVAR1 = DATETOMILLISECONDS(DATETIMEVAR1);
+	LONGVAR2 = DATETIMEVAR1;
+
+	DATETIMEVAR2 = MILLISECONDSTODATE(LONGVAR1);
+	DATETIMEVAR3 = MILLISECONDSTODATE(LONGVAR1);
+
+	STRINGVAR3 = LONGVAR1 + TOCHAR(10) + LONGVAR2;
+
 
 ISDATE()
 CHECKDATE()
 
-Getting Current Date
-====================
 
-CURRENTTIMEMILLIS() 
-SYS_CURRENTDATE
 
 What is NULLDATE?
 -----------------
