@@ -233,6 +233,8 @@ To get a single part of a date like year, day or month you must use the function
 Calculating Dates
 =================
 
+Last day of a month is not a conststant, it depends on to the month and date due to whether year is a leap year. For such a kind of calculations TROIA has functions below to ease development efford.
+
 +-------------------+--------------------------------------------+
 |GETDATEFROMWEEK()  | Gets week and year parameter and returns   |
 |                   | the first day of the given week as date    |
@@ -258,6 +260,9 @@ Here is a simple example that returns the fists day of this week:
 	THISWEEK = GETWEEK(SYS_CURRENTDATE);
 	
 	STRINGVAR3 = GETDATEFROMWEEK(THISWEEK,THISYEAR);
+	
+	
+Also is possible to add or substract days, minutes etc to a date and calculate another date. For this kind operatons TROIA has functions like ADDDAYS(), ADDYEARS(), ADDHOURS(), ADDMINUTES(),SUBDAYS(),SUBMONTHS() etc. All this calculations takes timezone, leap year issues and predefined configuration into the account and reduces development efford for TROIA programmers. For more details and functions please see TROIA Help documents.
 
 	
 Calculating Date Difference
