@@ -368,6 +368,7 @@ System calculates default formats for all date related data types using the date
 Date Formatting & Parsing Dates with TROIA
 ==========================================
 
+It is possible to parse and format dates using default formats or hard codded different formats thanks to FORMATDATE() and PARSEDATE() functions.
 
 
 FORMATDATE()
