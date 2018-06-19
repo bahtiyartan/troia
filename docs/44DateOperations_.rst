@@ -37,11 +37,15 @@ Here is a simple casting operation.
 	OBJECT: 
 	 STRING STRINGVAR3,
 	 DATETIME DATETIMEVAR1,
-	 DATE DATEVAR1;
+	 DATE DATEVAR1,
+	 DATETIME DATETIMEVAR2;
 
 	STRINGVAR3 = '25.11.1984 13:00:00';
 	DATETIMEVAR1 = STRINGVAR3;
 	DATEVAR1 = DATETIMEVAR1;
+	DATETIMEVAR2 = DATEVAR1;
+	
+In this example, there are three casting operations. First one is assigning a string to a datetime variable. This operation contains a kind of parsing operation we will discuss parsing and formatting dates in following sections detailly. Second one is assingning datetime to date, in this operation only date part is transferred to target variable. The third one is date to datetime, in this case system uses 00:00:00 for the time part of target symbol.
 
 In background, all date related types are stored as long. 
 
