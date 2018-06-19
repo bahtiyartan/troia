@@ -413,11 +413,6 @@ PARSEDATE() function gets a string variable and format, returns and datetime var
 This system functions are supported after 5.02.05 and following versions, so it is not possible to use this variables on 3.08.x and 5.01.x versions.
 
 
-Some Facts About Date/Datetime and Related Data Types
------------------------------------------------------
-
-...
-
 Database & Date Format
 ----------------------
 
