@@ -346,10 +346,26 @@ As default, if a date/datetime variable is assigned to a string variable system 
 **This is totally same with decimals, all programmers uses . as decimal separator inside TROIA code. It is hardcoded and independent from language or any localization configuration**
 	
 	
-Date Formatting Configurations & Related System Variables
-=========================================================
+Formatting Configurations & Related System Variables
+====================================================
 
-In troia, there is no need to format date/datetime values for textfield values or table cells. This fields are formatted automatically if they has not a special format given on IDE. 
+In troia, there is no need to format date/datetime values for textfield values or table cells. This fields are formatted automatically if they has not a hardcoded special format given on IDE. For controls and table fields to use default formats you must use format texts below:
+
++-------------------+--------------------------------------------------+
+|datetime           | use default datetime format                      |
++-------------------+--------------------------------------------------+
+|datetimes          | use default datetime format that contains second |
++-------------------+--------------------------------------------------+
+|date               | use default date format                          |
++-------------------+--------------------------------------------------+
+|time               | use default time format                          |
++-------------------+--------------------------------------------------+
+|times              | use default time format that contains second     |
++-------------------+--------------------------------------------------+
+
+So it is possible to show a DATETIME textfield with default date format using this format parameters. Additionally it is possible to configure textfields and table columns independent from user date format configuration using a date format supported by java like "yy.MM.dd".
+
+ 
 System calculates default formats for all date related data types using the date formatting configuration on "SYST03 - System Users" transactoin. All this formats can be accessed from TROIA using system variables listed below:
 
 +-------------------+----------------------------------------------+
