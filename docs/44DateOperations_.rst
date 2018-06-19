@@ -83,7 +83,9 @@ Some Useful Functions and Variables
 Getting Current Date
 ====================
 
-One of the most used operations about dates is getting current date. In TROIA there are two different options first one is SYS_CURRENTDATE system variable. SYS_CURRENTDATE is a datetime system variable and returns current time in each value read. Here is a sample code about using SYS_CURRENTDATE.
+A date related variable's initial value is the time that it is initialized/created, therefore it is possible to read the current date just creating a date or datetime variable. But getting current date with this approach creates a vulnerability about date related bugs, so it is not reccommended to use this option.
+
+The safest and most correct way of getting current date is reading SYS_CURRENTDATE system variable's value. SYS_CURRENTDATE is a datetime system variable and returns current time in each value read. Here is a sample code about using SYS_CURRENTDATE:
 
 ::
 
@@ -119,6 +121,7 @@ Another option is using CURRENTTIMEMILLIS() system function that returns current
 
 	STRINGVAR3 = DATETIMEVAR1 + TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + 'It takes: '+ LONGVAR1 + ' ms.'+TOCHAR(10);
+	
 	
 	
 Checking and Validating Date Related Types
