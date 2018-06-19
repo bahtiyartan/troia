@@ -175,7 +175,28 @@ Basic Date Functions
 ====================
 
 +-------------------+--------------------------------------------+
-|GETDATE()          |                                            |
+|                   | To get date part of a give variable. It is |
+|GETDATE()          | possible to get same result just coreect   |
+|                   | assignment operations.                     |
++-------------------+--------------------------------------------+
+
+::
+
+	OBJECT: 
+	 STRING SRINGVAR1,
+	 DATE DATEVAR1,
+	 LONG LONGVAR1,
+	 DATETIME DATETIMEVAR1;
+
+	STRINGVAR1 = DATETIMEVAR1;
+	LONGVAR1 = DATETIMEVAR1;
+	STRINGVAR3 = '';
+
+	STRINGVAR3 = STRINGVAR3 + GETDATE(STRINGVAR1) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + GETDATE(DATETIMEVAR1)+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + GETDATE(LONGVAR1)+ TOCHAR(10);
+
+
 +-------------------+--------------------------------------------+
 |GETDATEFROMWEEK()  |                                            |
 +-------------------+--------------------------------------------+
