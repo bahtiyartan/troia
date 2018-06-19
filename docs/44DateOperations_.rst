@@ -454,18 +454,3 @@ Work Calendar
 -------------
 
 In TROIA, it is also possible to define some business layer calendars and make some date calculations like adding days hours considering constraings of this calendars. This kind of date calculations are called "Work Calendar", we will discuss Work Calendars in following sections.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
