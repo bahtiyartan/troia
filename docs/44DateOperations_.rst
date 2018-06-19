@@ -127,7 +127,7 @@ Another option is using CURRENTTIMEMILLIS() system function that returns current
 Checking and Validating Date Related Types
 ==========================================
 
-In some cases, programmers needs to know whether a variable is a date or datetime symbol. ISDATE() system function checks given variable and returns a boolean result. The example below shows that this function returns true (1) for only DATE and DATETIME data types, otherwise it returns false (0) even variable contains a string that can be convertable to date:
+In some cases, programmers need to know whether a variable is a date or datetime symbol. ISDATE() system function checks given variable and returns a boolean result. The example below shows that this function returns true (1) for only DATE and DATETIME data types, otherwise it returns false (0) even variable contains a string that can be convertable to date:
 
 ::
 
@@ -148,7 +148,27 @@ In some cases, programmers needs to know whether a variable is a date or datetim
 	STRINGVAR3 = STRINGVAR3 + 'TIMESVAR1 :' + ISDATE(TIMESVAR1)+ TOCHAR(10);
 
 
-CHECKDATE()
+To validate a string value whether it is a valid date/datetime TROIA has CHECKDATE() system function that gets a string parameter and returns boolean (integer). Similarly, CHECKTIME() is used for checking time/times validity. Here is a sample code that shows the behaviour of CHECKDATE() and CHECKTIME() functions.
+
+::
+
+	OBJECT: 
+	 STRING SRINGVAR1,
+	 DATE DATEVAR1,
+	 DATETIME DATETIMEVAR1,
+	 TIME TIMEVAR1,
+	 TIMES TIMESVAR1;
+
+	STRINGVAR1 = DATETIMEVAR1;
+	STRINGVAR3 = '';
+
+	STRINGVAR3 = STRINGVAR3 + 'SRINGVAR1 :' + CHECKDATE(STRINGVAR1) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + '19.06.2018 :' + CHECKDATE('19.06.2018')+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + '35.06.2018 :' + CHECKDATE('35.06.2018')+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'DATETIMEVAR1 :' + CHECKDATE(DATETIMEVAR1)+ TOCHAR(10);
+
+	STRINGVAR3 = STRINGVAR3 + 'TIMEVAR1 :' + CHECKTIME(TIMEVAR1)+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'TIMESVAR1 :' + CHECKTIME(TIMESVAR1)+ TOCHAR(10);
 
 
 Basic Date Functions
