@@ -286,9 +286,25 @@ To calculate difference between two dates in days or minutes, you must only subs
 What is NULLDATE?
 -----------------
 
-...
+In TROIA dialogs, DATETIME and DATE textfields can be be leaved as empty. In this case the value of this date/datetime symbols is set to a special value. This special value is called as NULLDATE and this value converted to string as "  .  .       :  :  " or "  .  .    " for date symbols. This approach is also same for table columns for date/datetime columns. To check whether given text is NULLDATE or not TROIA has a NULLDATE() function that returns a boolean (integer) result. Here is a simple example:
 
-NULLDATE()
+::
+
+	OBJECT:
+	 STRING STRINGVAR1,
+	 STRING STRINGVAR2,
+	 STRING STRINGVAR3,
+	 DATETIME DATETIMEVAR1;
+
+	DATETIMEVAR1 = '';
+	STRINGVAR1 = DATETIMEVAR1;
+	STRINGVAR2 = SYS_CURRENTDATE;
+
+	STRINGVAR3 ='';
+	STRINGVAR3 = STRINGVAR3 + NULLDATE(STRINGVAR1) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + NULLDATE(STRINGVAR2) + TOCHAR(10);
+
+
 
 Min Date & Max Date Concepts
 ----------------------------
@@ -322,11 +338,17 @@ Date Formatting Configurations
 System Variables about Date Formatting
 ======================================
 
-SYS_DATETIMEFORMAT
-SYS_DATETIMESFORMAT
-SYS_DATEFORMAT
-SYS_TIMEFORMAT
-SYS_TIMESFORMAT
++-------------------+--------------------------------------------+
+|SYS_DATETIMEFORMAT |                                            |
++-------------------+--------------------------------------------+
+|SYS_DATETIMESFORMAT|                                            |
++-------------------+--------------------------------------------+
+|SYS_DATEFORMAT     |                                            |
++-------------------+--------------------------------------------+
+|SYS_TIMEFORMAT     |                                            |
++-------------------+--------------------------------------------+
+|SYS_TIMESFORMAT    |                                            |
++-------------------+--------------------------------------------+
 
 
 
