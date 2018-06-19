@@ -174,11 +174,15 @@ To validate a string value whether it is a valid date/datetime TROIA has CHECKDA
 Basic Date Functions
 ====================
 
-+-------------------+--------------------------------------------+
-|                   | To get date part of a give variable. It is |
-|GETDATE()          | possible to get same result just coreect   |
-|                   | assignment operations.                     |
-+-------------------+--------------------------------------------+
++-------------------+----------------------------------------------+
+|                   | To get date part of a give variable. It is   |
+|GETDATE()          | possible to get same result with just        |
+|                   | correct assignment steps.                    |
++-------------------+----------------------------------------------+
+|                   | To get time part of given variable. It is    |
+|GETTIME()          | possible to get same result with just        |
+|                   | correct assigntment steps with correct types |
++-------------------+----------------------------------------------+
 
 ::
 
@@ -195,37 +199,70 @@ Basic Date Functions
 	STRINGVAR3 = STRINGVAR3 + GETDATE(STRINGVAR1) + TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + GETDATE(DATETIMEVAR1)+ TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + GETDATE(LONGVAR1)+ TOCHAR(10);
+	
+::
+
+	OBJECT: 
+	 STRING SRINGVAR1,
+	 DATE DATEVAR1,
+	 LONG LONGVAR1,
+	 DATETIME DATETIMEVAR1;
+
+	STRINGVAR1 = DATETIMEVAR1;
+	LONGVAR1 = DATETIMEVAR1;
+	STRINGVAR3 = '';
+
+	STRINGVAR3 = STRINGVAR3 + GETTIME(STRINGVAR1) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + GETTIME(DATETIMEVAR1)+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + GETTIME(LONGVAR1)+ TOCHAR(10);
 
 
 +-------------------+--------------------------------------------+
 |GETDATEFROMWEEK()  |                                            |
 +-------------------+--------------------------------------------+
-|GETDAY()           |                                            |
+|GETDAY()           | Returns the day value of given date.       |
 +-------------------+--------------------------------------------+
-|GETDAYOFWEEK()     |                                            |
+|                   | Returns day of week. In other words is     |
+|GETDAYOFWEEK()     | given day monday, tuesday or ...           |
+|                   | 1:monday, 2: tuesday 3:wednesday  ...      |
 +-------------------+--------------------------------------------+
-|GETHOUR()          |                                            |
+|GETHOUR()          | Returns the hour part                      |
 +-------------------+--------------------------------------------+
-|GETMINUTE()        |                                            |
+|GETMINUTE()        | Returns the minute part                    |
 +-------------------+--------------------------------------------+
-|GETMINUTEDIFF()    |                                            |
+|GETMONTH()         | Returns the month part                     |
 +-------------------+--------------------------------------------+
-|GETMONTH()         |                                            |
-+-------------------+--------------------------------------------+
-|GETTIME()          |                                            |
-+-------------------+--------------------------------------------+
-|GETWEEK()          |                                            |
-+-------------------+--------------------------------------------+
-|GETYEAR()          |                                            |
+|GETYEAR()          | Returns the year part                      |
 +-------------------+--------------------------------------------+
 |FIRSTDATEINMONTH() |                                            |
 +-------------------+--------------------------------------------+
 |LASTDATEINMONTH()  |                                            |
 +-------------------+--------------------------------------------+
+|GETMINUTEDIFF()    |                                            |
++-------------------+--------------------------------------------+
+|GETWEEK()          |                                            |
++-------------------+--------------------------------------------+
+
 
 +-------------------+--------------------------------------------+
 |GETDBDATESTR()     |                                            |
 +-------------------+--------------------------------------------+
+
+::
+
+	OBJECT: 
+	 STRING SRINGVAR1,
+	 DATE DATEVAR1,
+	 LONG LONGVAR1,
+	 DATETIME DATETIMEVAR1;
+
+	STRINGVAR1 = DATETIMEVAR1;
+	LONGVAR1 = DATETIMEVAR1;
+	STRINGVAR3 = '';
+
+	STRINGVAR3 = STRINGVAR3 + GETDAYOFWEEK(STRINGVAR1) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + GETDAYOFWEEK(DATETIMEVAR1)+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + GETDAYOFWEEK(LONGVAR1)+ TOCHAR(10);
 
 
 What is NULLDATE?
