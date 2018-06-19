@@ -366,7 +366,7 @@ In troia, there is no need to format date/datetime values for textfield values o
 So it is possible to show a DATETIME textfield with default date format using this format parameters. Additionally it is possible to configure textfields and table columns independent from user date format configuration using a date format supported by java like "yy.MM.dd".
 
  
-System calculates default formats for all date related data types using the date formatting configuration on "SYST03 - System Users" transactoin. All this formats can be accessed from TROIA using system variables listed below:
+System calculates default formats for all date related data types using the date formatting configuration on "SYST03 - System Users" transactoin and uses for default formatted textfields and table cells. Also, all this formats can be accessed from TROIA using system variables listed below to format custom texts that uses default date formats.
 
 +-------------------+----------------------------------------------+
 |SYS_DATETIMEFORMAT | Default datetime format                      |
@@ -431,6 +431,8 @@ This system functions are supported after 5.02.05 and following versions, so it 
 
 Database & Date Format
 ----------------------
+
+Date formats can be configured for each user, but on database layer only one date/datetime format is used. This format is configured on Database section of "SYST06 - System Parameters" transaction.
 
 +-------------------+--------------------------------------------+
 |GETDBDATESTR()     |                                            |
