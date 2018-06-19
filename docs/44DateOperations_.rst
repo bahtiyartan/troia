@@ -324,8 +324,10 @@ In some cases, TROIA programmers need some special dates values like upper and l
 In 3.08.x versions as default, this max date and min date values are 01.01.1975 00:00:00 and 01.01.2030 00:00:00 and they are hardcoded. After 5.01 versions it is possible to set this maximum and minimum years in ServerSettings.ias file of your server with **MinDateYear** and **MaxDateYear** parameters. So it is not recommended that using this hardcode dates inside TROIA code. **Although this parameters are configurable, it is not reccomended to change this values without a planned migration over database tables.**
 
 
-Basic Date Formatting
----------------------
+Basic Date Formatting/Parsing
+-------------------------------
+
+Date formatting means converting a date/datetime variable to a string using a format like DD.MM.YYYY or YYYY.MM.DD etc. And parsing is extracting date value from a string. Due to date format resulting value can be different for both formatting and parsing operations.
 
 As default, if a date/datetime variable is assigned to a string variable system uses 'DD.MM.YYYY'/'DD.MM.YYYY HH:MM:SS' format. Same format is valid for parsing dates without providing a date format. So all hardcode dates must be given using this format. Please see the code below and discuss the behavior:
 
@@ -340,10 +342,33 @@ As default, if a date/datetime variable is assigned to a string variable system 
 	DATETIMEVAR2 = '2018.12.30 21:41:42';
 
 	STRINGVAR3 = DATETIMEVAR1;
+	
+**This is totally same with decimals, all programmers uses . as decimal separator inside TROIA code. It is hardcoded and independent from language or any localization configuration**
+	
+	
+Date Formatting Configurations & Related System Variables
+=========================================================
+
+In troia, there is no need to format date/datetime values for textfield values or table cells. This fields are formatted automatically if they has not a special format given on IDE. 
+System calculates default formats for all date related data types using the date formatting configuration on "SYST03 - System Users" transactoin. All this formats can be accessed from TROIA using system variables listed below:
+
++-------------------+----------------------------------------------+
+|SYS_DATETIMEFORMAT | Default datetime format                      |
++-------------------+----------------------------------------------+
+|SYS_DATETIMESFORMAT| Default datetime format that contains second |
++-------------------+----------------------------------------------+
+|SYS_DATEFORMAT     | Default date format                          |
++-------------------+----------------------------------------------+
+|SYS_TIMEFORMAT     | Default time format                          |
++-------------------+----------------------------------------------+
+|SYS_TIMESFORMAT    | Default time format that contains second     |
++-------------------+----------------------------------------------+
 
 
 Date Formatting & Parsing Dates with TROIA
 ==========================================
+
+
 
 FORMATDATE()
 PARSEDATE()
@@ -351,8 +376,7 @@ PARSEDATE()
 ...
 
 
-Date Formatting Configurations
-==============================
+
 
 ...
 
