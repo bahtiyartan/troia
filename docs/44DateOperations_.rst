@@ -321,13 +321,26 @@ In some cases, TROIA programmers need some special dates values like upper and l
 	STRINGVAR3 = STRINGVAR3 + SYS_MAXDATE + ' : ' + ISMAXDATE( SYS_MAXDATE)+ TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + SYS_CURRENTDATE + ' : ' + ISMAXDATE( SYS_CURRENTDATE)+ TOCHAR(10);
 
-In 3.08.x versions as default, this max date and min date values are 01.01.1975 00:00:00 and 01.01.2030 00:00:00 and they are hardcoded. After 5.01 versions it is possible to set this maximum and minimum years in ServerSettings.ias file of your server with **MinDateYear** and **MaxDateYear** parameters. **Although this parameters are configurable, it is not reccomended to change this values without a planned migration over database tables.**
+In 3.08.x versions as default, this max date and min date values are 01.01.1975 00:00:00 and 01.01.2030 00:00:00 and they are hardcoded. After 5.01 versions it is possible to set this maximum and minimum years in ServerSettings.ias file of your server with **MinDateYear** and **MaxDateYear** parameters. So it is not recommended that using this hardcode dates inside TROIA code. **Although this parameters are configurable, it is not reccomended to change this values without a planned migration over database tables.**
 
 
 Basic Date Formatting
 ---------------------
 
-...
+As default, if a date/datetime variable is assigned to a string variable system uses 'DD.MM.YYYY'/'DD.MM.YYYY HH:MM:SS' format. Same format is valid for parsing dates without providing a date format. So all hardcode dates must be given using this format. Please see the code below and discuss the behavior:
+
+::
+
+	OBJECT: 
+	 STRING STRINGVAR3,
+	 DATETIME DATETIMEVAR1,
+	 DATETIME DATETIMEVAR2;
+
+	DATETIMEVAR1 = '30.12.2018 21:41:42';
+	DATETIMEVAR2 = '2018.12.30 21:41:42';
+
+	STRINGVAR3 = DATETIMEVAR1;
+
 
 Date Formatting & Parsing Dates with TROIA
 ==========================================
