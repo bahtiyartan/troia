@@ -381,33 +381,34 @@ System calculates default formats for all date related data types using the date
 Date Formatting & Parsing Dates with TROIA
 ==========================================
 
-It is possible to parse and format dates using default formats or hard codded different formats thanks to FORMATDATE() and PARSEDATE() functions.
+It is possible to parse and format date related types using default formats or different hard codded formats thanks to FORMATDATE() and PARSEDATE() functions. 
+
+FORMATDATE() function gets a date and format, returns a string due to given format. Here is an examples:
+
+::
+
+	OBJECT: 
+	 STRING STRINGVAR3;
+
+	STRINGVAR3 = '';
+	STRINGVAR3 = STRINGVAR3 + FORMATDATE(SYS_CURRENTDATE, 'yyyy.MM.dd') + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + FORMATDATE(SYS_CURRENTDATE, SYS_DATETIMEFORMAT) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + FORMATDATE(SYS_CURRENTDATE, SYS_TIMESFORMAT)+ TOCHAR(10);
 
 
-FORMATDATE()
-PARSEDATE()
+PARSEDATE() function gets a string variable and format, returns and datetime variable. Here is an example:
 
-...
+::
+
+	OBJECT: 
+	 STRING STRINGVAR3;
+
+	STRINGVAR3 = '';
+	STRINGVAR3 = STRINGVAR3 + PARSEDATE('2018.06.19', 'yyyy.MM.dd') + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + PARSEDATE('19.06.2018 17:25', SYS_DATETIMEFORMAT) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + PARSEDATE('17:25:54', SYS_TIMESFORMAT)+ TOCHAR(10);
 
 
-
-
-...
-
-System Variables about Date Formatting
-======================================
-
-+-------------------+--------------------------------------------+
-|SYS_DATETIMEFORMAT |                                            |
-+-------------------+--------------------------------------------+
-|SYS_DATETIMESFORMAT|                                            |
-+-------------------+--------------------------------------------+
-|SYS_DATEFORMAT     |                                            |
-+-------------------+--------------------------------------------+
-|SYS_TIMEFORMAT     |                                            |
-+-------------------+--------------------------------------------+
-|SYS_TIMESFORMAT    |                                            |
-+-------------------+--------------------------------------------+
 
 
 
