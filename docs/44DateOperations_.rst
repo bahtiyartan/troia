@@ -270,16 +270,18 @@ Calculating Date Difference
 
 To calculate difference between two dates in days or minutes, you must only substract a date from another. This operation returns difference in milliseconds and you can calculate this difference in days or even years. Also TROIA has GETMINUTEDIFF() function that  returns the difference in minutes. Here is an example that shows two different approach about calculating date difference.
 
-OBJECT: 
- DATETIME DATETIMEVAR1,
- DATETIME DATETIMEVAR2;
+::
 
-STRINGVAR3 = '';
-DATETIMEVAR1 = '25.11.1984 03:00:00';
-DATETIMEVAR2 = '25.11.1984 04:00:00';
+	OBJECT: 
+	 DATETIME DATETIMEVAR1,
+	 DATETIME DATETIMEVAR2;
 
-LONGVAR1 = (DATETIMEVAR2 - DATETIMEVAR1) / (1000*60);
-LONGVAR2 = GETMINUTEDIFF(DATETIMEVAR1, DATETIMEVAR2);
+	STRINGVAR3 = '';
+	DATETIMEVAR1 = '25.11.1984 03:00:00';
+	DATETIMEVAR2 = '25.11.1984 04:00:00';
+
+	LONGVAR1 = (DATETIMEVAR2 - DATETIMEVAR1) / (1000*60);
+	LONGVAR2 = GETMINUTEDIFF(DATETIMEVAR1, DATETIMEVAR2);
 
 What is NULLDATE?
 -----------------
