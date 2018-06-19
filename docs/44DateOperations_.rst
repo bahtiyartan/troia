@@ -188,37 +188,19 @@ Basic Date Functions
 
 	OBJECT: 
 	 STRING SRINGVAR1,
-	 DATE DATEVAR1,
-	 LONG LONGVAR1,
 	 DATETIME DATETIMEVAR1;
 
 	STRINGVAR1 = DATETIMEVAR1;
-	LONGVAR1 = DATETIMEVAR1;
 	STRINGVAR3 = '';
 
 	STRINGVAR3 = STRINGVAR3 + GETDATE(STRINGVAR1) + TOCHAR(10);
-	STRINGVAR3 = STRINGVAR3 + GETDATE(DATETIMEVAR1)+ TOCHAR(10);
-	STRINGVAR3 = STRINGVAR3 + GETDATE(LONGVAR1)+ TOCHAR(10);
-	
-::
-
-	OBJECT: 
-	 STRING SRINGVAR1,
-	 DATE DATEVAR1,
-	 LONG LONGVAR1,
-	 DATETIME DATETIMEVAR1;
-
-	STRINGVAR1 = DATETIMEVAR1;
-	LONGVAR1 = DATETIMEVAR1;
-	STRINGVAR3 = '';
-
 	STRINGVAR3 = STRINGVAR3 + GETTIME(STRINGVAR1) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + GETDATE(DATETIMEVAR1)+ TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + GETTIME(DATETIMEVAR1)+ TOCHAR(10);
-	STRINGVAR3 = STRINGVAR3 + GETTIME(LONGVAR1)+ TOCHAR(10);
 
+	
+To get a single part of a date like year, day or month you must use the functions below:
 
-+-------------------+--------------------------------------------+
-|GETDATEFROMWEEK()  |                                            |
 +-------------------+--------------------------------------------+
 |GETDAY()           | Returns the day value of given date.       |
 +-------------------+--------------------------------------------+
@@ -234,14 +216,39 @@ Basic Date Functions
 +-------------------+--------------------------------------------+
 |GETYEAR()          | Returns the year part                      |
 +-------------------+--------------------------------------------+
-|FIRSTDATEINMONTH() |                                            |
+|GETWEEK()          | Returns week number of given date          |
 +-------------------+--------------------------------------------+
-|LASTDATEINMONTH()  |                                            |
+
+
+
++-------------------+--------------------------------------------+
+|GETDATEFROMWEEK()  | Gets week and year parameter and returns   |
+|                   | the first day of the given week as date    |
++-------------------+--------------------------------------------+
+|FIRSTDATEINMONTH() | Gets month and year parameter and returns  |
+|                   | the first day of the given month as date   |
++-------------------+--------------------------------------------+
+|LASTDATEINMONTH()  | Gets month and year parameter and returns  |
+|                   | the last day of the given month as date    |
 +-------------------+--------------------------------------------+
 |GETMINUTEDIFF()    |                                            |
 +-------------------+--------------------------------------------+
-|GETWEEK()          |                                            |
-+-------------------+--------------------------------------------+
+
+Here is a simple example that returns the fists day of this week:
+
+::
+
+	OBJECT: 
+	 INTEGER THISYEAR,
+	 INTEGER THISWEEK;
+
+	STRINGVAR3 = '';
+
+	THISYEAR = GETYEAR(SYS_CURRENTDATE);
+	THISWEEK = GETWEEK(SYS_CURRENTDATE);
+	
+	STRINGVAR3 = GETDATEFROMWEEK(THISWEEK,THISYEAR);
+
 
 
 +-------------------+--------------------------------------------+
@@ -263,6 +270,26 @@ Basic Date Functions
 	STRINGVAR3 = STRINGVAR3 + GETDAYOFWEEK(STRINGVAR1) + TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + GETDAYOFWEEK(DATETIMEVAR1)+ TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + GETDAYOFWEEK(LONGVAR1)+ TOCHAR(10);
+	
+::
+
+	OBJECT: 
+	 STRING SRINGVAR1,
+	 DATE DATEVAR1,
+	 LONG LONGVAR1,
+	 DATETIME DATETIMEVAR1;
+
+	STRINGVAR1 = DATETIMEVAR1;
+	LONGVAR1 = DATETIMEVAR1;
+	STRINGVAR3 = '';
+
+	STRINGVAR3 = STRINGVAR3 + GETWEEK(STRINGVAR1) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + GETWEEK(DATETIMEVAR1)+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + GETWEEK(LONGVAR1)+ TOCHAR(10);
+	
+	
+
+
 
 
 What is NULLDATE?
