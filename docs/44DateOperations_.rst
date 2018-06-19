@@ -28,6 +28,21 @@ Due to your application's requirements you must use the most primitive data type
 Type Conversion & Casting on Date Types
 =======================================
 
+We know that TROIA handles type casting operations in background. This rule is also valid for date related data types, so it is possible to assign date,datetime, time, times variable any other typed variable except decimal, or assing any variable to any date data type. 
+
+Here is a simple casting operation.
+
+::
+
+	OBJECT: 
+	 STRING STRINGVAR3,
+	 DATETIME DATETIMEVAR1,
+	 DATE DATEVAR1;
+
+	STRINGVAR3 = '25.11.1984 13:00:00';
+	DATETIMEVAR1 = STRINGVAR3;
+	DATEVAR1 = DATETIMEVAR1;
+
 In background, all date related types are stored as long. 
 
 MILLISECONDSTODATE()
