@@ -174,15 +174,7 @@ To validate a string value whether it is a valid date/datetime TROIA has CHECKDA
 Basic Date Functions
 ====================
 
-+-------------------+----------------------------------------------+
-|                   | To get date part of a give variable. It is   |
-|GETDATE()          | possible to get same result with just        |
-|                   | correct assignment steps.                    |
-+-------------------+----------------------------------------------+
-|                   | To get time part of given variable. It is    |
-|GETTIME()          | possible to get same result with just        |
-|                   | correct assigntment steps with correct types |
-+-------------------+----------------------------------------------+
+It is possible to get date or time part of given date variable using GETDATE() and GETTIME() functions. It is also possible to get same parts assigning a DATETIME variable to a DATE, TIME or TIMES variable. TROIA automatically extracts correct part, please see the casting section for more information. The example below shows GETDATE() and GETTIME() function's behavior.
 
 ::
 
