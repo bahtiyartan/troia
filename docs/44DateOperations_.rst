@@ -127,7 +127,7 @@ Another option is using CURRENTTIMEMILLIS() system function that returns current
 Checking and Validating Date Related Types
 ==========================================
 
-ISDATE()
+In some cases, programmers needs to know whether a variable is a date or datetime symbol. ISDATE() system function checks given variable and returns a boolean result. The example below shows that this function returns true (1) for only DATE and DATETIME data types:
 
 ::
 
