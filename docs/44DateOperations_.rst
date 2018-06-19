@@ -51,6 +51,8 @@ Here is a simple code block that contains four casting operation:
 	
 In this example, first one is assigning a string to a datetime variable. This operation contains a kind of parsing operation we will discuss parsing and formatting dates in following sections detailly. Second one is assingning datetime to date, in this operation only date part is transferred to target variable. The third one is date to datetime, in this case system uses 00:00:00 for the time part of target symbol. The last one is from datetime to time, In this case only time part of source variable transferred to target symbol.
 
+There are too many possibilities casting date related symbols, please write your own codes to understand the main approach. It is also usefull to review "Operators and Expressions" section for more information about type casting.
+
 In background, all date related types are stored as long. 
 
 MILLISECONDSTODATE()
