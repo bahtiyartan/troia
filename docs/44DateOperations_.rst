@@ -191,7 +191,7 @@ It is possible to get date or time part of given date variable using GETDATE() a
 	STRINGVAR3 = STRINGVAR3 + GETTIME(DATETIMEVAR1)+ TOCHAR(10);
 
 	
-To get a single part of a date like year, day or month you must use the functions below:
+To get a single part of a date like year, day or month you must use the functions in the like the example below:
 
 +-------------------+--------------------------------------------+
 |GETDAY()           | Returns the day value of given date.       |
@@ -210,6 +210,24 @@ To get a single part of a date like year, day or month you must use the function
 +-------------------+--------------------------------------------+
 |GETWEEK()          | Returns week number of given date          |
 +-------------------+--------------------------------------------+
+
+
+::
+
+	OBJECT: 
+	 STRING SRINGVAR1,
+	 DATE DATEVAR1,
+	 DATETIME DATETIMEVAR1;
+
+	STRINGVAR1 = DATETIMEVAR1;
+	STRINGVAR3 = '';
+
+	STRINGVAR3 = STRINGVAR3 + GETDAYOFWEEK(STRINGVAR1) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + GETDAYOFWEEK(DATETIMEVAR1)+ TOCHAR(10);
+	
+	STRINGVAR3 = STRINGVAR3 + GETWEEK(STRINGVAR1) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + GETWEEK(DATETIMEVAR1)+ TOCHAR(10);
+
 
 
 Calculating Dates
@@ -254,37 +272,7 @@ Calculating Date Difference
 |GETDBDATESTR()     |                                            |
 +-------------------+--------------------------------------------+
 
-::
 
-	OBJECT: 
-	 STRING SRINGVAR1,
-	 DATE DATEVAR1,
-	 LONG LONGVAR1,
-	 DATETIME DATETIMEVAR1;
-
-	STRINGVAR1 = DATETIMEVAR1;
-	LONGVAR1 = DATETIMEVAR1;
-	STRINGVAR3 = '';
-
-	STRINGVAR3 = STRINGVAR3 + GETDAYOFWEEK(STRINGVAR1) + TOCHAR(10);
-	STRINGVAR3 = STRINGVAR3 + GETDAYOFWEEK(DATETIMEVAR1)+ TOCHAR(10);
-	STRINGVAR3 = STRINGVAR3 + GETDAYOFWEEK(LONGVAR1)+ TOCHAR(10);
-	
-::
-
-	OBJECT: 
-	 STRING SRINGVAR1,
-	 DATE DATEVAR1,
-	 LONG LONGVAR1,
-	 DATETIME DATETIMEVAR1;
-
-	STRINGVAR1 = DATETIMEVAR1;
-	LONGVAR1 = DATETIMEVAR1;
-	STRINGVAR3 = '';
-
-	STRINGVAR3 = STRINGVAR3 + GETWEEK(STRINGVAR1) + TOCHAR(10);
-	STRINGVAR3 = STRINGVAR3 + GETWEEK(DATETIMEVAR1)+ TOCHAR(10);
-	STRINGVAR3 = STRINGVAR3 + GETWEEK(LONGVAR1)+ TOCHAR(10);
 	
 	
 
