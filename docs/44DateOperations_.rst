@@ -436,10 +436,12 @@ Date formats can be configured for each user, but on database layer only one dat
 
 To format a date/datetime variable using db date format you must use GETDBDATESTR() function. GETDBDATESTR() function is mostly used for preparing database queries that contains hardcode date/datetime values. Please run the code below and compare the result with your database date format configuration.
 
-OBJECT: 
- STRING STRINGVAR3;
+::
 
-STRINGVAR3 = GETDBDATESTR(SYS_CURRENTDATE);
+	OBJECT: 
+	 STRING STRINGVAR3;
+
+	STRINGVAR3 = GETDBDATESTR(SYS_CURRENTDATE);
 
 
 
