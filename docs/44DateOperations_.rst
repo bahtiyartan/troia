@@ -59,7 +59,7 @@ In this example, first one is assigning a string to a datetime variable. This op
 There are too many possibilities casting date related symbols, please write your own codes to understand the main approach. It is also usefull to review "Operators and Expressions" section for more information. We will focus on relation between long and date related data types.
 
 
-In background, all date related types are stored as long, so it is also possible to make type conversion/castion operations between date related types and long/integer variables. Long value of a date symbol is millisecond value starts from 01.01.1970 00:00:00 (actually it is a little bit more complicated because of timezone issues). Although it is possible to assing a date related variable to a long or long variable to a date related variable is possible, TROIA has MILLISECONDSTODATE() and DATETOMILLISECONDS() system functions to handle same operations. Here is an example about long and datetime data type, please discuss the results:
+In background, all date related types are stored as long, so it is also possible to make type conversion/castion operations between date related types and long/integer variables. Long value of a date symbol is millisecond value starts from 01.01.1970 00:00:00 (actually it is a little bit more complicated because of timezone issues). Although it is possible to assing a date related variable to a long or long variable to a date related variable is possible, TROIA has MILLISECONDSTODATE() and DATETOMILLISECONDS() system functions to handle same operations. Here is an example about long and datetime data type, please discuss the results for better understanding:
 
 ::
 
