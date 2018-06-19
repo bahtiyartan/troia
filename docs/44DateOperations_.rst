@@ -105,7 +105,7 @@ Some Useful Functions and Variables
 Getting Current Date
 ====================
 
-One of the most used operations about dates are getting current date. In TROIA there are two different options first one is SYS_CURRENTDATE system variable. SYS_CURRENTDATE is a datetime system variable and returns current time in each value read. Here is a sample code about using SYS_CURRENTDATE.
+One of the most used operations about dates is getting current date. In TROIA there are two different options first one is SYS_CURRENTDATE system variable. SYS_CURRENTDATE is a datetime system variable and returns current time in each value read. Here is a sample code about using SYS_CURRENTDATE.
 
 ::
 
@@ -124,8 +124,23 @@ One of the most used operations about dates are getting current date. In TROIA t
 		INTEGERVAR1 = INTEGERVAR1 + 1;
 	ENDWHILE;
 
-CURRENTTIMEMILLIS() 
-SYS_CURRENTDATE
+Another option is using CURRENTTIMEMILLIS() system function that returns current time as long value. Although it is mostly used to measure the time between two operations, it can be also used for getting current date. The example below combines two differant usages of CURRENTTIMEMILLIS() function.
+
+::
+
+	OBJECT: 
+	 LONG LONGVAR1,
+	 DATETIME DATETIMEVAR1,
+	 STRING STRINGVAR3;
+
+	DATETIMEVAR1 = CURRENTTIMEMILLIS();
+
+	LONGVAR1 = CURRENTTIMEMILLIS();
+	DELAY 1000;
+	LONGVAR1 = CURRENTTIMEMILLIS() - LONGVAR1;
+
+	STRINGVAR3 = DATETIMEVAR1 + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'It takes: '+ LONGVAR1 + ' ms.'+TOCHAR(10);
 
 
 What is NULLDATE?
