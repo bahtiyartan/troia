@@ -309,11 +309,19 @@ In TROIA dialogs, DATETIME and DATE textfields can be be leaved as empty. In thi
 Min Date & Max Date Concepts
 ----------------------------
 
-SYS_MAXDATE
-SYS_MINDATE
+In some cases, TROIA programmers need some special dates values like upper and lower limits of TROIA dates. Assume that you have an expiration date for a document and in some documents you must use a maximum date value for the documents that never expire. For this cases system returns minimum and maximum dates with SYS_MINDATE and SYS_MAXDATE system variables which are datetime. Also it is possible to check whether a datetime/date symbol is max date/min date or not using ISMAXDATE() and ISMINDATE() functions.
 
-ISMAXDATE()
-ISMINDATE()
+::
+
+	OBJECT:
+	 STRING STRINGVAR3;
+
+	STRINGVAR3 = SYS_MINDATE + ' : ' + ISMINDATE(SYS_MINDATE) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + SYS_CURRENTDATE + ' : ' + ISMINDATE( SYS_CURRENTDATE)+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + SYS_MAXDATE + ' : ' + ISMAXDATE( SYS_MAXDATE)+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + SYS_CURRENTDATE + ' : ' + ISMAXDATE( SYS_CURRENTDATE)+ TOCHAR(10);
+
+In 3.08.x versions as default, this max date and min date values are 01.01.1975 00:00:00 and 01.01.2030 00:00:00 and they are hardcoded. After 5.01 versions it is possible to set this maximum and minimum years in ServerSettings.ias file of your server with MinDateYear and MaxDateYear parameters. Although this parameters are configurable, it is not reccomended to change this values without a planned migration over database tables.
 
 
 Basic Date Formatting
