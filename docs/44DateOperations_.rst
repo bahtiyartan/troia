@@ -56,9 +56,10 @@ Here is a simple code block that contains four casting operation:
 	
 In this example, first one is assigning a string to a datetime variable. This operation contains a kind of parsing operation we will discuss parsing and formatting dates in following sections detailly. Second one is assingning datetime to date, in this operation only date part is transferred to target variable. The third one is date to datetime, in this case system uses 00:00:00 for the time part of target symbol. The last one is from datetime to time, In this case only time part of source variable transferred to target symbol.
 
-There are too many possibilities casting date related symbols, please write your own codes to understand the main approach. It is also usefull to review "Operators and Expressions" section for more information about type casting. We will focus on relation between long and date related data types.
+There are too many possibilities casting date related symbols, please write your own codes to understand the main approach. It is also usefull to review "Operators and Expressions" section for more information. We will focus on relation between long and date related data types.
 
-In background, all date related types are stored as long. 
+
+In background, all date related types are stored as long, so it is also possible to make type conversion/castion operations between date related types and long/integer variables. Long value of a date symbol is millisecond value starts from 01.01.1970 00:00:00 (actually it is a little bit more complicated because of timezone issues). Although it is possible to assing a date related variable to a long or long variable to a date related variable is possible, TROIA has MILLISECONDSTODATE() and DATETOMILLISECONDS() system functions to handle same operations. Here is an example about long and datetime data type, please discuss the results:
 
 ::
 
