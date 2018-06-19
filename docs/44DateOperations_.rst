@@ -364,6 +364,19 @@ System calculates default formats for all date related data types using the date
 |SYS_TIMESFORMAT    | Default time format that contains second     |
 +-------------------+----------------------------------------------+
 
+::
+
+	OBJECT: 
+	 STRING STRINGVAR3;
+
+	STRINGVAR3 = '';
+	STRINGVAR3 = STRINGVAR3 + SYS_DATETIMEFORMAT + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + SYS_DATETIMESFORMAT + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + SYS_DATEFORMAT + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + SYS_TIMEFORMAT + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + SYS_TIMESFORMAT + TOCHAR(10);
+
+
 
 Date Formatting & Parsing Dates with TROIA
 ==========================================
