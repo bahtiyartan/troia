@@ -24,11 +24,6 @@ As it is obvious, main difference between DATE and DATETIME type is time part wh
 
 Due to your application's requirements you must use the most primitive data type. It is not recommended that storing a date information in a DATETIME symbol and 00:00:00 as its time part.
 
-Getting Current Date
-====================
-
-CURRENTTIMEMILLIS() 
-SYS_CURRENTDATE
 
 Type Conversion & Casting on Date Types
 ---------------------------------------
@@ -83,8 +78,54 @@ In background, all date related types are stored as long, so it is also possible
 
 
 ISDATE()
+
+::
+
+	OBJECT: 
+	 STRING SRINGVAR1,
+	 DATE DATEVAR1,
+	 DATETIME DATETIMEVAR1,
+	 TIME TIMEVAR1,
+	 TIMES TIMESVAR1;
+
+	STRINGVAR3 = '';
+	STRINGVAR3 = STRINGVAR3 + 'SRINGVAR1 :' + ISDATE(SRINGVAR1) + TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'DATEVAR1 :' + ISDATE(DATEVAR1)+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'DATETIMEVAR1 :' + ISDATE(DATETIMEVAR1)+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'TIMEVAR1 :' + ISDATE(TIMEVAR1)+ TOCHAR(10);
+	STRINGVAR3 = STRINGVAR3 + 'TIMESVAR1 :' + ISDATE(TIMESVAR1)+ TOCHAR(10);
+
+
 CHECKDATE()
 
+Some Useful Functions and Variables
+-----------------------------------
+
+
+Getting Current Date
+====================
+
+One of the most used operations about dates are getting current date. In TROIA there are two different options first one is SYS_CURRENTDATE system variable. SYS_CURRENTDATE is a datetime system variable and returns current time in each value read. Here is a sample code about using SYS_CURRENTDATE.
+
+::
+
+	OBJECT: 
+	 INTEGER INTEGERVAR1,
+	 STRING STRINGVAR3;
+
+	STRINGVAR3 = '';
+	INTEGERVAR1 = 0;
+	STRINGVAR3 = 'Data Type:' + GETVARTYPE(SYS_CURRENTDATE) + TOCHAR(10);
+
+	WHILE INTEGERVAR1 < 3 
+	BEGIN
+		DELAY 1000;
+		STRINGVAR3 = STRINGVAR3 + SYS_CURRENTDATE + TOCHAR(10);
+		INTEGERVAR1 = INTEGERVAR1 + 1;
+	ENDWHILE;
+
+CURRENTTIMEMILLIS() 
+SYS_CURRENTDATE
 
 
 What is NULLDATE?
