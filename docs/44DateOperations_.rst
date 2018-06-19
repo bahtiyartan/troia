@@ -174,7 +174,10 @@ To validate a string value whether it is a valid date/datetime TROIA has CHECKDA
 Basic Date Functions
 ====================
 
-GETDATE()
++---------|--------------------------------------------+
+|GETDATE()|                                            |
++---------+--------------------------------------------+
+
 GETDATEFROMWEEK()
 GETDAY()
 GETDAYOFWEEK()
