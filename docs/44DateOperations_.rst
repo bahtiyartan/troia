@@ -375,8 +375,9 @@ System calculates default formats for all date related data types using the date
 	STRINGVAR3 = STRINGVAR3 + SYS_DATEFORMAT + TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + SYS_TIMEFORMAT + TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + SYS_TIMESFORMAT + TOCHAR(10);
-
-
+	
+	
+This system variables are supported after 5.02.05 and following versions, so it is not possible to use this variables on 3.08.x and 5.01.x versions.
 
 Date Formatting & Parsing Dates with TROIA
 ==========================================
@@ -409,7 +410,7 @@ PARSEDATE() function gets a string variable and format, returns and datetime var
 	STRINGVAR3 = STRINGVAR3 + PARSEDATE('17:25:54', SYS_TIMESFORMAT)+ TOCHAR(10);
 
 
-
+This system functions are supported after 5.02.05 and following versions, so it is not possible to use this variables on 3.08.x and 5.01.x versions.
 
 
 Some Facts About Date/Datetime and Related Data Types
