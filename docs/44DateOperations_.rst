@@ -432,7 +432,7 @@ This system functions are supported after 5.02.05 and following versions, so it 
 Database & Date Format
 ----------------------
 
-Date formats can be configured for each user, but on database layer only one date/datetime format is used. This format is configured on Database section of "SYST06 - System Parameters" transaction.
+Date formats can be configured for each user, but on database layer only one date/datetime format is used. This format is configured on Database section of "SYST06 - System Parameters" transaction. System automatically formats date related variables and table cells for database interactions without any TROIA level efford.
 
 +-------------------+--------------------------------------------+
 |GETDBDATESTR()     |                                            |
