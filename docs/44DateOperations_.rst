@@ -171,8 +171,8 @@ To validate a string value whether it is a valid date/datetime TROIA has CHECKDA
 	STRINGVAR3 = STRINGVAR3 + 'TIMESVAR1 :' + CHECKTIME(TIMESVAR1)+ TOCHAR(10);
 
 
-Basic Date Functions
-====================
+Extracting Data From Date/Datetime Variables
+============================================
 
 It is possible to get date or time part of given date variable using GETDATE() and GETTIME() functions. It is also possible to get same parts assigning a DATETIME variable to a DATE, TIME or TIMES variable. TROIA automatically extracts correct part, please see the casting section for more information. The example below shows GETDATE() and GETTIME() function's behavior.
 
@@ -212,6 +212,8 @@ To get a single part of a date like year, day or month you must use the function
 +-------------------+--------------------------------------------+
 
 
+Calculating Dates
+=================
 
 +-------------------+--------------------------------------------+
 |GETDATEFROMWEEK()  | Gets week and year parameter and returns   |
@@ -222,8 +224,6 @@ To get a single part of a date like year, day or month you must use the function
 +-------------------+--------------------------------------------+
 |LASTDATEINMONTH()  | Gets month and year parameter and returns  |
 |                   | the last day of the given month as date    |
-+-------------------+--------------------------------------------+
-|GETMINUTEDIFF()    |                                            |
 +-------------------+--------------------------------------------+
 
 Here is a simple example that returns the fists day of this week:
@@ -241,6 +241,13 @@ Here is a simple example that returns the fists day of this week:
 	
 	STRINGVAR3 = GETDATEFROMWEEK(THISWEEK,THISYEAR);
 
+	
+Calculating Date Difference
+===========================
+
++-------------------+--------------------------------------------+
+|GETMINUTEDIFF()    |                                            |
++-------------------+--------------------------------------------+
 
 
 +-------------------+--------------------------------------------+
