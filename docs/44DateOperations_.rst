@@ -127,7 +127,7 @@ Another option is using CURRENTTIMEMILLIS() system function that returns current
 Checking and Validating Date Related Types
 ==========================================
 
-In some cases, programmers needs to know whether a variable is a date or datetime symbol. ISDATE() system function checks given variable and returns a boolean result. The example below shows that this function returns true (1) for only DATE and DATETIME data types:
+In some cases, programmers needs to know whether a variable is a date or datetime symbol. ISDATE() system function checks given variable and returns a boolean result. The example below shows that this function returns true (1) for only DATE and DATETIME data types, otherwise it returns false (0) even variable contains a string that can be convertable to date:
 
 ::
 
@@ -138,7 +138,9 @@ In some cases, programmers needs to know whether a variable is a date or datetim
 	 TIME TIMEVAR1,
 	 TIMES TIMESVAR1;
 
+	STRINGVAR1 = DATETIMEVAR1;
 	STRINGVAR3 = '';
+
 	STRINGVAR3 = STRINGVAR3 + 'SRINGVAR1 :' + ISDATE(SRINGVAR1) + TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + 'DATEVAR1 :' + ISDATE(DATEVAR1)+ TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + 'DATETIMEVAR1 :' + ISDATE(DATETIMEVAR1)+ TOCHAR(10);
