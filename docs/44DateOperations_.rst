@@ -30,7 +30,7 @@ Type Conversion & Casting on Date Types
 
 We know that TROIA handles type casting operations in background. This rule is also valid for date related data types, so it is possible to assign date,datetime, time, times variable any other typed variable except decimal, or assing any variable to any date data type. 
 
-Here is a simple casting operation.
+Here is a simple code block that contains four casting operation:
 
 ::
 
@@ -38,14 +38,18 @@ Here is a simple casting operation.
 	 STRING STRINGVAR3,
 	 DATETIME DATETIMEVAR1,
 	 DATE DATEVAR1,
-	 DATETIME DATETIMEVAR2;
+	 DATETIME DATETIMEVAR2,
+	 TIME TIMEVAR1;
 
 	STRINGVAR3 = '25.11.1984 13:00:00';
 	DATETIMEVAR1 = STRINGVAR3;
+
 	DATEVAR1 = DATETIMEVAR1;
 	DATETIMEVAR2 = DATEVAR1;
+
+	TIMEVAR1 = DATETIMEVAR1;
 	
-In this example, there are three casting operations. First one is assigning a string to a datetime variable. This operation contains a kind of parsing operation we will discuss parsing and formatting dates in following sections detailly. Second one is assingning datetime to date, in this operation only date part is transferred to target variable. The third one is date to datetime, in this case system uses 00:00:00 for the time part of target symbol.
+In this example, first one is assigning a string to a datetime variable. This operation contains a kind of parsing operation we will discuss parsing and formatting dates in following sections detailly. Second one is assingning datetime to date, in this operation only date part is transferred to target variable. The third one is date to datetime, in this case system uses 00:00:00 for the time part of target symbol. The last one is from datetime to time, In this case only time part of source variable transferred to target symbol.
 
 In background, all date related types are stored as long. 
 
