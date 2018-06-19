@@ -434,9 +434,13 @@ Database & Date Format
 
 Date formats can be configured for each user, but on database layer only one date/datetime format is used. This format is configured on Database section of "SYST06 - System Parameters" transaction. System automatically formats date related variables and table cells for database interactions without any TROIA level efford.
 
-+-------------------+--------------------------------------------+
-|GETDBDATESTR()     |                                            |
-+-------------------+--------------------------------------------+
+To format a date/datetime variable using db date format you must use GETDBDATESTR() function. GETDBDATESTR() function is mostly used for preparing database queries that contains hardcode date/datetime values. Please run the code below and compare the result with your database date format configuration.
+
+OBJECT: 
+ STRING STRINGVAR3;
+
+STRINGVAR3 = GETDBDATESTR(SYS_CURRENTDATE);
+
 
 
 Timezone
