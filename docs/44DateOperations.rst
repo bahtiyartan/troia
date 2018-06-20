@@ -457,7 +457,9 @@ Timezone
 
 TROIA Platform, is able to show/present datetime data in a specific timezone due to user configuration without any programming efford. This configuration is based on users, so each users uses its own timezone on presentation layer like datetime textfields, table cells or reports. User based timezone configuration is handled by "SYST03 - System Users" transaction. Users that has not a specific timezone configuration users system's default configuration which is set on System Dates section of "SYST06 - System Parameters" transaction.
 
-Although dates are presented on users' timezone on ui layer, system stores dates in a standart timezone, this configuration is called as "Database Timezone" and it is configured on Database section of "SYST06 - System Parameters" transaction. **Although database transaction configurable, it is not recommeded to change this configuration without a planned data migration, because it stores the timezone of all dates.**
+Although dates are presented on users' timezone on ui layer, system stores dates in a standart timezone, this configuration is called as "Database Timezone" and it is configured on Database section of "SYST06 - System Parameters" transaction. **Although database transaction configurable, it is not recommeded to change this configuration without a planned data migration, because it stores the timezone of all dates**
+
+Timezone information is a sensitive information because of data integrity, so if system senses some conflictions about user, system or client devices's timezone creates some warning messages. This messages can be disabled using IgnoreTimezoneWarnings parameter on server settings file, its default value is "false", so timezone warnings are on, if you set it to "true" this will turn warnings off.
 
 
 Work Calendar
