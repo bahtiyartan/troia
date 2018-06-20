@@ -4,12 +4,12 @@
 Working With Date/Datetime
 ==========================
 
-*This section aims to introduce date/datetime/time types, related configurations,structures and concepts to ease date handling/manipulation*
+*This section aims to introduce date/datetime/time types, related configurations, structures and concepts to ease date handling/manipulation*
 
 Date Data Types
 ---------------
 
-In contrary to some other programming languages, TROIA has more than one data type to store and manipulate date, datetime,time variables. We know about data types from previous sessions, but to refresh our knowledge about this types here is the list of related data types:
+In contrary to some other programming languages, TROIA has more than one data type to store and manipulate date, datetime, time variables. We know about data types from previous sessions, but to refresh our knowledge about this types here is the list of related data types:
 
 ::
 
@@ -19,7 +19,7 @@ In contrary to some other programming languages, TROIA has more than one data ty
 	TIME           (Ex: 21:30)
 	TIMES          (Ex: 21:30:13)
 	
-As it is obvious, main difference between DATE and DATETIME type is time part which consisted by hour,minute and second. TIME and TIMES data types are used for storing only time information. Their main difference is second part. TIMES data type is relatively a new data type that is supported after 5.01.01 releases(not supported on 3.08.x releases.)
+As it is obvious, main difference between DATE and DATETIME type is time part which consisted by hour, minute and second. TIME and TIMES data types are used for storing only time information. Their main difference is second part. TIMES data type is relatively a new data type that is supported after 5.01.01 releases(not supported on 3.08.x releases.)
 
 
 Due to your application's requirements you must use the most primitive data type. It is not recommended that storing a date information in a DATETIME symbol and 00:00:00 as its time part.
@@ -28,7 +28,7 @@ Due to your application's requirements you must use the most primitive data type
 Type Conversion & Casting on Date Types
 ---------------------------------------
 
-We know that TROIA handles type casting operations in background. This rule is also valid for date related data types, so it is possible to assign date,datetime, time, times variable any other typed variable except decimal, or assing any variable to any date data type. 
+We know that TROIA handles type casting operations in background. This rule is also valid for date related data types, so it is possible to assign date,datetime, time, times variable any other typed variable except decimal, or assign any variable to any date data type. 
 
 Here is a simple code block that contains four casting operation:
 
@@ -49,12 +49,12 @@ Here is a simple code block that contains four casting operation:
 
 	TIMEVAR1 = DATETIMEVAR1;
 	
-In this example, first one is assigning a string to a datetime variable. This operation contains a kind of parsing operation we will discuss parsing and formatting dates in following sections detailly. Second one is assingning datetime to date, in this operation only date part is transferred to target variable. The third one is date to datetime, in this case system uses 00:00:00 for the time part of target symbol. The last one is from datetime to time, In this case only time part of source variable transferred to target symbol.
+In this example, first one is assigning a string to a datetime variable. This operation contains a kind of parsing operation we will discuss parsing and formatting dates in following sections in detail. Second one is assigning datetime to date, in this operation only date part is transferred to target variable. The third one is date to datetime, in this case system uses 00:00:00 for the time part of target symbol. The last one is from datetime to time, In this case only time part of source variable transferred to target symbol.
 
-There are too many possibilities casting date related symbols, please write your own codes to understand the main approach. It is also usefull to review "Operators and Expressions" section for more information. We will focus on relation between long and date related data types.
+There are too many possibilities casting date related symbols, please write your own codes to understand the main approach. It is also useful to review "Operators and Expressions" section for more information. We will focus on relation between long and date related data types.
 
 
-In background, all date related types are stored as long, so it is also possible to make type conversion/castion operations between date related types and long/integer variables. Long value of a date symbol is millisecond value starts from 01.01.1970 00:00:00 (actually it is a little bit more complicated because of timezone issues). Although it is possible to assing a date related variable to a long or long variable to a date related variable is possible, TROIA has MILLISECONDSTODATE() and DATETOMILLISECONDS() system functions to handle same operations. Here is an example about long and datetime data type, please discuss the results for better understanding:
+In background, all date related types are stored as long, so it is also possible to make type conversion/casting operations between date related types and long/integer variables. Long value of a date symbol is millisecond value starts from 01.01.1970 00:00:00 (actually it is a little bit more complicated because of timezone issues). Although it is possible to assign a date related variable to a long or long variable to a date related variable is possible, TROIA has MILLISECONDSTODATE() and DATETOMILLISECONDS() system functions to handle same operations. Here is an example about long and datetime data type, please discuss the results for better understanding:
 
 ::
 
@@ -83,7 +83,7 @@ Some Useful Functions and Variables
 Getting Current Date
 ====================
 
-A date related variable's initial value is the time that it is initialized/created, therefore it is possible to read the current date just creating a date or datetime variable. But getting current date with this approach creates a vulnerability about date related bugs, so it is not reccommended to use this option.
+A date related variable's initial value is the time that it is initialized/created, therefore it is possible to read the current date just creating a date or datetime variable. But getting current date with this approach creates a vulnerability about date related bugs, so it is not recommended to use this option.
 
 The safest and most correct way of getting current date is reading SYS_CURRENTDATE system variable's value. SYS_CURRENTDATE is a datetime system variable and returns current time in each value read. Here is a sample code about using SYS_CURRENTDATE:
 
@@ -104,7 +104,7 @@ The safest and most correct way of getting current date is reading SYS_CURRENTDA
 		INTEGERVAR1 = INTEGERVAR1 + 1;
 	ENDWHILE;
 
-Another option is using CURRENTTIMEMILLIS() system function that returns current time as long value. Although it is mostly used to measure the time between two operations, it can be also used for getting current date. The example below combines two differant usages of CURRENTTIMEMILLIS() function.
+Another option is using CURRENTTIMEMILLIS() system function that returns current time as long value. Although it is mostly used to measure the time between two operations, it can be also used for getting current date. The example below combines two different usages of CURRENTTIMEMILLIS() function.
 
 ::
 
@@ -127,7 +127,7 @@ Another option is using CURRENTTIMEMILLIS() system function that returns current
 Checking and Validating Date Related Types
 ==========================================
 
-In some cases, programmers need to know whether a variable is a date or datetime symbol. ISDATE() system function checks given variable and returns a boolean result. The example below shows that this function returns true (1) for only DATE and DATETIME data types, otherwise it returns false (0) even variable contains a string that can be convertable to date:
+In some cases, programmers need to know whether a variable is a date or datetime symbol. ISDATE() system function checks given variable and returns a boolean result. The example below shows that this function returns true (1) for only DATE and DATETIME data types, otherwise it returns false (0) even variable contains a string that can be convertible to date:
 
 ::
 
@@ -148,7 +148,7 @@ In some cases, programmers need to know whether a variable is a date or datetime
 	STRINGVAR3 = STRINGVAR3 + 'TIMESVAR1 :' + ISDATE(TIMESVAR1)+ TOCHAR(10);
 
 
-To validate a string value whether it is a valid date/datetime TROIA has CHECKDATE() system function that gets a string parameter and returns boolean (integer). Similarly, CHECKTIME() is used for checking time/times validity. Here is a sample code that shows the behaviour of CHECKDATE() and CHECKTIME() functions.
+To validate a string value whether it is a valid date/datetime TROIA has CHECKDATE() system function that gets a string parameter and returns boolean (integer). Similarly, CHECKTIME() is used for checking time/times validity. Here is a sample code that shows the behavior of CHECKDATE() and CHECKTIME() functions.
 
 ::
 
@@ -196,9 +196,9 @@ To get a single part of a date like year, day or month you must use the function
 +-------------------+--------------------------------------------+
 |GETDAY()           | Returns the day value of given date.       |
 +-------------------+--------------------------------------------+
-|                   | Returns day of week. In other words is     |
+|                   | Returns day of week. is                    |
 |GETDAYOFWEEK()     | given day monday, tuesday or ...           |
-|                   | 1:monday, 2: tuesday 3:wednesday  ...      |
+|                   | 1: monday, 2: tuesday 3:wednesday  ...     |
 +-------------------+--------------------------------------------+
 |GETHOUR()          | Returns the hour part                      |
 +-------------------+--------------------------------------------+
@@ -233,7 +233,7 @@ To get a single part of a date like year, day or month you must use the function
 Calculating Dates
 =================
 
-Last day of a month is not a conststant, it depends on to the month and date due to whether year is a leap year. For such a kind of calculations TROIA has functions below to ease development efford.
+Last day of a month is not a constant, it depends on to the month and date due to whether year is a leap year. For such a kind of calculations TROIA has functions below to ease development effort.
 
 +-------------------+--------------------------------------------+
 |GETDATEFROMWEEK()  | Gets week and year parameter and returns   |
@@ -262,13 +262,13 @@ Here is a simple example that returns the fists day of this week:
 	STRINGVAR3 = GETDATEFROMWEEK(THISWEEK,THISYEAR);
 	
 	
-Also is possible to add or substract days, minutes etc to a date and calculate another date. For this kind operatons TROIA has functions like ADDDAYS(), ADDYEARS(), ADDHOURS(), ADDMINUTES(),SUBDAYS(),SUBMONTHS() etc. All this calculations takes timezone, leap year issues and predefined configuration into the account and reduces development efford for TROIA programmers. For more details and functions please see TROIA Help documents.
+Also is possible to add or subtract days, minutes etc. to a date and calculate another date. For this kind operations TROIA has functions like ADDDAYS(), ADDYEARS(), ADDHOURS(), ADDMINUTES(),SUBDAYS(),SUBMONTHS() etc. All this calculations takes timezone, leap year issues and predefined configuration into the account and reduces development effort for TROIA programmers. For more details and functions please see TROIA Help documents.
 
 	
 Calculating Date Difference
 ===========================
 
-To calculate difference between two dates in days or minutes, you must only substract a date from another. This operation returns difference in milliseconds and you can calculate this difference in days or even years. Also TROIA has GETMINUTEDIFF() function that  returns the difference in minutes. Here is an example that shows two different approach about calculating date difference.
+To calculate difference between two dates in days or minutes, you must only subtract a date from another. This operation returns difference in milliseconds and you can calculate this difference in days or even years. Also TROIA has GETMINUTEDIFF() function that  returns the difference in minutes. Here is an example that shows two different approach about calculating date difference.
 
 ::
 
@@ -286,7 +286,7 @@ To calculate difference between two dates in days or minutes, you must only subs
 What is NULLDATE?
 -----------------
 
-In TROIA dialogs, DATETIME and DATE textfields can be be leaved as empty. In this case the value of this date/datetime symbols is set to a special value. This special value is called as NULLDATE and this value converted to string as "  .  .       :  :  " or "  .  .    " for date symbols. This approach is also same for table columns for date/datetime columns. To check whether given text is NULLDATE or not TROIA has a NULLDATE() function that returns a boolean (integer) result. Here is a simple example:
+In TROIA dialogs, DATETIME and DATE text fields can be leaved as empty. In this case the value of this date/datetime symbols is set to a special value. This special value is called as NULLDATE and this value converted to string as "  .  .       :  :  " or "  .  .    " for date symbols. This approach is also same for table columns for date/datetime columns. To check whether given text is NULLDATE or not TROIA has a NULLDATE() function that returns a boolean (integer) result. Here is a simple example:
 
 ::
 
@@ -321,7 +321,7 @@ In some cases, TROIA programmers need some special dates values like upper and l
 	STRINGVAR3 = STRINGVAR3 + ISMAXDATE(SYS_MAXDATE)+ TOCHAR(10);
 	STRINGVAR3 = STRINGVAR3 + ISMAXDATE(SYS_CURRENTDATE)+ TOCHAR(10);
 
-In 3.08.x versions as default, this max date and min date values are 01.01.1975 00:00:00 and 01.01.2030 00:00:00 and they are hardcoded. After 5.01 versions it is possible to set this maximum and minimum years in ServerSettings.ias file of your server with **MinDateYear** and **MaxDateYear** parameters. So it is not recommended that using this hardcode dates inside TROIA code. **Although this parameters are configurable, it is not reccomended to change this values without a planned migration over database tables.**
+In 3.08.x versions as default, this max date and min date values are 01.01.1975 00:00:00 and 01.01.2030 00:00:00 and they are hardcoded. After 5.01 versions it is possible to set this maximum and minimum years in ServerSettings.ias file of your server with **MinDateYear** and **MaxDateYear** parameters. So it is not recommended that using this hardcode dates inside TROIA code. **Although this parameters are configurable, it is not recommended to change this values without a planned migration over database tables.**
 
 
 Basic Date Formatting/Parsing
@@ -349,7 +349,7 @@ As default, if a date/datetime variable is assigned to a string variable system 
 Formatting Configurations & Related System Variables
 ====================================================
 
-In troia, there is no need to format date/datetime values for textfield values or table cells. This fields are formatted automatically if they has not a hardcoded special format given on IDE. For controls and table fields to use default formats you must use format texts below:
+In troia, there is no need to format date/datetime values for text field values or table cells. This fields are formatted automatically if they has not a hardcoded special format given on IDE. For controls and table fields to use default formats you must use format texts below:
 
 +-------------------+--------------------------------------------------+
 |datetime           | use default datetime format                      |
@@ -363,10 +363,10 @@ In troia, there is no need to format date/datetime values for textfield values o
 |times              | use default time format that contains second     |
 +-------------------+--------------------------------------------------+
 
-So it is possible to show a DATETIME textfield with default date format using this format parameters. Additionally it is possible to configure textfields and table columns independent from user date format configuration using a date format supported by java like "yy.MM.dd".
+So it is possible to show a DATETIME text field with default date format using this format parameters. Additionally it is possible to configure textfields and table columns independent from user date format configuration using a date format supported by java like "yy.MM.dd".
 
  
-System calculates default formats for all date related data types using the date formatting configuration on "SYST03 - System Users" transactoin and uses for default formatted textfields and table cells. Also, all this formats can be accessed from TROIA using system variables listed below to format custom texts that uses default date formats.
+System calculates default formats for all date related data types using the date formatting configuration on "SYST03 - System Users" transaction and uses for default formatted text fields and table cells. Also, all this formats can be accessed from TROIA using system variables listed below to format custom texts that uses default date formats.
 
 +-------------------+----------------------------------------------+
 |SYS_DATETIMEFORMAT | Default datetime format                      |
@@ -439,9 +439,9 @@ This system functions are supported after 5.02.05 and following versions, so it 
 Database & Date Format
 ----------------------
 
-Date formats can be configured for each user, but on database layer only one date/datetime format is used. This format is configured on Database section of "SYST06 - System Parameters" transaction. System automatically formats date related variables and table cells for database interactions without any TROIA level efford.
+Date formats can be configured for each user, but on database layer only one date/datetime format is used. This format is configured on Database section of "SYST06 - System Parameters" transaction. System automatically formats date related variables and table cells for database interactions without any TROIA level effort.
 
-To format a date/datetime variable using db date format you must use GETDBDATESTR() function. GETDBDATESTR() function is mostly used for preparing database queries that contains hardcode date/datetime values. Please run the code below and compare the result with your database date format configuration.
+To format a date/datetime variable using database date format you must use GETDBDATESTR() function. GETDBDATESTR() function is mostly used for preparing database queries that contains hardcode date/datetime values. Please run the code below and compare the result with your database date format configuration.
 
 ::
 
@@ -455,9 +455,9 @@ To format a date/datetime variable using db date format you must use GETDBDATEST
 Timezone
 --------
 
-TROIA Platform, is able to show/present datetime data in a specific timezone due to user configuration without any programming efford. This configuration is based on users, so each users uses its own timezone on presentation layer like datetime textfields, table cells or reports. User based timezone configuration is handled by "SYST03 - System Users" transaction. Users that has not a specific timezone configuration users system's default configuration which is set on System Dates section of "SYST06 - System Parameters" transaction.
+TROIA Platform, is able to show/present datetime data in a specific timezone due to user configuration without any programming effort. This configuration is based on users, so each users uses its own timezone on presentation layer like datetime text fields, table cells or reports. User based timezone configuration is handled by "SYST03 - System Users" transaction. Users that has not a specific timezone configuration users system's default configuration which is set on System Dates section of "SYST06 - System Parameters" transaction.
 
-Although dates are presented on users' timezone on ui layer, system stores dates in a standart timezone, this configuration is called as "Database Timezone" and it is configured on Database section of "SYST06 - System Parameters" transaction. **Although database transaction configurable, it is not recommeded to change this configuration without a planned data migration, because it stores the timezone of all dates**
+Although dates are presented on users' timezone on user interface layer, system stores dates in a standard timezone, this configuration is called as "Database Timezone" and it is configured on Database section of "SYST06 - System Parameters" transaction. **Although database transaction configurable, it is not recommended to change this configuration without a planned data migration, because it stores the timezone of all dates**
 
 Timezone information is a sensitive information because of data integrity, so if system senses some conflictions about user, system or client devices's timezone creates some warning messages. This messages can be disabled using IgnoreTimezoneWarnings parameter on server settings file, its default value is "false", so timezone warnings are on, if you set it to "true" this will turn warnings off.
 
@@ -465,4 +465,4 @@ Timezone information is a sensitive information because of data integrity, so if
 Work Calendar
 -------------
 
-In TROIA, it is also possible to define some business layer calendars and make some date calculations like adding days hours considering constraings of this calendars. This kind of date calculations are called "Work Calendar", we will discuss Work Calendars in following sections.
+In TROIA, it is also possible to define some business layer calendars and make some date calculations like adding days hours considering constraints of this calendars. This kind of date calculations are called "Work Calendar", we will discuss Work Calendars in following sections.
