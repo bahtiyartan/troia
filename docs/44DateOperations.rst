@@ -28,7 +28,7 @@ Due to your application's requirements you must use the most primitive data type
 Type Conversion & Casting on Date Types
 ---------------------------------------
 
-We know that TROIA handles type casting operations in background. This rule is also valid for date related data types, so it is possible to assign date,datetime, time, times variable any other typed variable except decimal, or assign any variable to any date data type. 
+We know that TROIA handles type casting operations in background. This rule is also valid for date related data types, so it is possible to assign date, datetime, time, times variable any other typed variable except decimal, or assign any variable to any date data type. 
 
 Here is a simple code block that contains four casting operation:
 
@@ -197,8 +197,8 @@ To get a single part of a date like year, day or month you must use the function
 |GETDAY()           | Returns the day value of given date.       |
 +-------------------+--------------------------------------------+
 |                   | Returns day of week. is                    |
-|GETDAYOFWEEK()     | given day monday, tuesday or ...           |
-|                   | 1: monday, 2: tuesday 3:wednesday  ...     |
+|GETDAYOFWEEK()     | given day monday(1), tuesday (2),          |
+|                   | wednesday (3) ...                          |
 +-------------------+--------------------------------------------+
 |GETHOUR()          | Returns the hour part                      |
 +-------------------+--------------------------------------------+
@@ -363,7 +363,7 @@ In troia, there is no need to format date/datetime values for text field values 
 |times              | use default time format that contains second     |
 +-------------------+--------------------------------------------------+
 
-So it is possible to show a DATETIME text field with default date format using this format parameters. Additionally it is possible to configure textfields and table columns independent from user date format configuration using a date format supported by java like "yy.MM.dd".
+So it is possible to show a DATETIME text field with default date format using this format parameters. Additionally it is possible to configure text fields and table columns independent from user date format configuration using a date format supported by java like "yy.MM.dd".
 
  
 System calculates default formats for all date related data types using the date formatting configuration on "SYST03 - System Users" transaction and uses for default formatted text fields and table cells. Also, all this formats can be accessed from TROIA using system variables listed below to format custom texts that uses default date formats.
