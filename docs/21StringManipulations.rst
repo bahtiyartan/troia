@@ -162,14 +162,14 @@ The sample below tries to calculate length of each line.
 		STRING STRTOKEN;
 	
 	OBJECT:
-		INTEGER NLINECOUNT
+		INTEGER NLINECOUNT,
 		STRING STRRESULT;
 		
 	NLINECOUNT = 0;
 	STRRESULT = '';
 		
 	STRMAINSTRING = 'I do not trust words.';
-	STRMAINSTRING = STRMAINSTRING + TOCHAR(10) + 'I trust actions.'
+	STRMAINSTRING = STRMAINSTRING + TOCHAR(10) + 'I trust actions.';
 	
 	PARSE STRMAINSTRING INTO STRTOKEN
 	BEGIN
