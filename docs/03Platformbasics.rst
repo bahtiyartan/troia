@@ -65,7 +65,7 @@ Here is an overview of all TROIA Plaform's main components and network structure
    :align: center
 
    
-Please discuss question below considering the network structure::
+Please discuss question below considering the network structure:
 
 ::
 
