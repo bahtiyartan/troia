@@ -109,6 +109,35 @@ To run a batch transaction, there are two methods. First one is client based bat
 
 For more configuration details about "batch transactions" please see help documents.
 
+
+Reading Transaction Info
+--------------------------------------
+
+In some cases, as a programmer you may need some information about the transaction that your code runs in. Here are some usefuls system variables and functions that provides information about the transaction:
+
++-------------------------------+--------------------------------------------------------------------+
+| SYS_TRANSACTION               | to get transaction name                                            |
++-------------------------------+--------------------------------------------------------------------+
+| SYS_TRANSACTIONID             | to get the transaction id                                          |
++-------------------------------+--------------------------------------------------------------------+
+| SYS_TRANSACTIONTYPE           | to get transaction type, is it a regular transaction or gadget?    |
++-------------------------------+--------------------------------------------------------------------+
+| SYS_ISBATCHTRANSACTION        | to check whether transaction is batch or not                       |
++-------------------------------+--------------------------------------------------------------------+
+| SYS_ISSERVERONLYTRANSACTION   | to check whether transaction is server only or not                 |
++-------------------------------+--------------------------------------------------------------------+
+| SYS_TRANCREATEDBY             | to get the user who created the transaction                        |
++-------------------------------+--------------------------------------------------------------------+
+| SYS_TRANCREATEDAT             | to get the time that transaction created                           |
++-------------------------------+--------------------------------------------------------------------+
+| SYS_TRANMODIFIEDBY            | to get the last user who modified the transaction                  |
++-------------------------------+--------------------------------------------------------------------+
+| SYS_TRANMODIFIEDAT            | to get the last time that transaction modified                     |
++-------------------------------+--------------------------------------------------------------------+
+
+For more useful system variables and functions that returns data about transaction please see related help documents.
+
+
 Exercise 1: Defining Transaction
 ------------------------------
 
