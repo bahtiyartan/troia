@@ -39,20 +39,6 @@ RMI Registry
 
 RMI Registry is a server side service that provides a communication infrastructure between all components of TROIA Platform. RMI Registry uses RMI Infrastructure of java which provides cummunicatation method for different java applications. Any two components of the platform uses RMI Registry (server to server, client to server, server to license server etc), so running a single RMI registry is a must to run other platform components properly.
 
-Other Components
-----------------
-
-Although most important tools and components are listed above, TROIA Platform has other components for load balancing, administration, single sign on, monitoring, SMS handling etc. Some of this components are listed below:
-
-**Load Balancer** is a server side service that redirects clients to best available server considering server resources and the rules that are defined its configuration.
-
-**SSO Gateway** is a server side service that provides single sign on options for TROIA Platform users.
-
-**SMS Gateway** is another server side service for handling SMS handling.
-
-**Workbench** is an administration tool(a kind of client) to manage and monitor server side components such as application server,license server,load balancer. Using this tool system administrators can view and manage application server cache, users sessions and their running applications etc.
-
-**System Reporter** is a tool that reports status of your server side components in a configurable period.
 
 Network Architecture Overview
 -----------------------------
@@ -71,6 +57,22 @@ Please discuss question below considering the network structure:
 
 	Is it possible to push an information to client side 
 	    when an instant message recieved from another user?
+
+
+Other Components
+----------------
+
+Although most important tools and components are listed above, TROIA Platform has other components for load balancing, administration, single sign on, monitoring, SMS handling etc. Some of this components are listed below:
+
+**Load Balancer** is a server side service that redirects clients to best available server considering server resources and the rules that are defined its configuration.
+
+**SSO Gateway** is a server side service that provides single sign on options for TROIA Platform users.
+
+**SMS Gateway** is another server side service for handling SMS handling.
+
+**Workbench** is an administration tool(a kind of client) to manage and monitor server side components such as application server,license server,load balancer. Using this tool system administrators can view and manage application server cache, users sessions and their running applications etc.
+
+**System Reporter** is a tool that reports status of your server side components in a configurable period.
 
 
 Software Architecture Overview
