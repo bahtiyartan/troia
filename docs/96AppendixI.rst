@@ -10,6 +10,7 @@ Appendix I - What's new in the book?
 List of Changes
 ---------------
 
-2019.05.19 - "Reading Transaction Info" title has been added to Transactions section.
+2019.05.19 - New title  : "Reading Transaction Info" to transactions section.
+2019.05.18 - New section: Appendix I
 
 
