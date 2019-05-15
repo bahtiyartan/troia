@@ -107,7 +107,8 @@ You can read your version number from the about dialog (Menu->About). Sample ver
 
 	3.08.05 021101 
 	5.01.02 012102 
-	5.02.04 041201 
+	5.02.04 041201
+	8.02.01 051501
 	
 TROIA Platform version numbers are consisted from two main parts "major version number" and "build number". As usual, version numbers are ordered, for example 3.08.05 0121101 is an older version than 5.02.04 012102, 5.02.04 101001 is younger than 5.02.04 090901.
 
