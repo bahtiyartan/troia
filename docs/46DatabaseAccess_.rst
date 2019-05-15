@@ -24,8 +24,7 @@ Briefly, system automatically establishes a database connection on user login to
 Selecting data from Database
 ----------------------------
 
-To run a select query on database, fetch all dataset and assign selected data to a table symbol, you must use SELECT command. SELECT command is very similar to SQL's select command and supports almost all stuff like where conditions, distict, inner/outer joins, system functions, group by and order by etc. But this does not mean that SELECT command of TROIA is identical with the SQL's select command, they are different and have different behaviours, features and own way for common behaviour. The most important thing to know about SELECT command is that TROIA SELECT command is interpreted and converted to SQL Select statements considering connected database system (oracle, mssql, mysql, postgresql etc.) to create cross database queries. 
-
+To run a select query on database, fetch all dataset and assign selected data to a table symbol, you must use SELECT command. SELECT command is very similar to SQL's select command and supports almost all stuff like where conditions, distict, inner/outer joins, system functions, group by and order by etc. But this does not mean that SELECT command of TROIA is identical with the SQL's select command, they have different behaviours, features and their own way for some common behaviour. One of the most important things to know about SELECT command is that TROIA SELECT command is interpreted and converted to SQL Select statements considering connected database system (oracle, mssql, mysql, postgresql etc.) to create cross database queries. 
 
 
 
