@@ -11,6 +11,7 @@ List of Changes
 ---------------
 
 2019.05.19 - New title  : "Reading Transaction Info" to transactions section.
+
 2019.05.18 - New section: Appendix I
 
 
