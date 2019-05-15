@@ -6,6 +6,7 @@ Database Access
 
 As a business level programming language, TROIA has high collaboration with databases. With TROIA it is possible to perform too many operations on databases, such as connecting different databases, managing database transactions or executing sql queries. This section aims to introduce database operations and persistency flags of tables.
 
+
 Database Connections of Session
 -------------------------------
 
@@ -15,14 +16,17 @@ This two connections are called "first db connection" and "second db connection"
 
 Actually it is not possible to run data manipulation (SELECT,UPDATE,INSERT, DELETE) and data definition (CREATE, ALTER etc.) queries using second database connection, except some special troia commands like ENQUE, DEQUE. Therefore you can just ignore second database connection as a TROIA programmer.
 
-As you may predict, database connection is a property or feature of user's session, so even if user opens more than one transaction all transactions uses same database connection. This means database connection is shared by all open transactions, and if a session changes state or a feature of connection this state/feature is valid for other transactions. Actually this is one of the main technical reasons of why it is not possible to run more than one processes on different transactions simultaneously. For some special cases like multithreading, it is possible to establish dedicated database connections for the transactions for more information please see the transactions and multithreading sections, but for now you can just ignore dedicated connections for transactions.
+As you may predict, database connection is a property or feature of user's session, so even if user opens more than one transaction all transactions uses same database connection. This means database connection is shared by all open transactions, and if a session changes state or a feature of connection this state/feature is valid for other transactions. Actually this is one of the main technical reasons of why it is not possible to run more than one processes on different transactions simultaneously. For some special cases like multithreading, it is possible to establish dedicated database connections for each transaction. We will discuss this advanced issue in next sections, but for now you can just ignore dedicated database connections for transactions.
 
 Briefly, system automatically establishes a database connection on user login to serve for all open TROIA applications and all SELECT, UPDATE, INSERT and DELETE commands uses this database connection.
 
 
 Selecting data from Database
 ----------------------------
-selecting data from database
+
+To run a select query on database, fetch all dataset and assign selected data to a table symbol, you must use SELECT command. SELECT command is very similar to SQL's select command and supports almost all stuff like where conditions, distict, inner/outer joins, system functions, group by and order by etc. But this does not mean that SELECT command of TROIA is identical with the SQL's select command, they are different and have different behaviours and features. The most importand thing to know about SELECT command is that TROIA SELECT command is interpreted and converted to SQL Select statements considering connected database system (oracle, mssql, mysql, postgresql etc.) to create cross database queries. 
+
+
 
 
 Persistency Flags in Detail
@@ -83,6 +87,12 @@ Defining Tables Using ODBA
 --------------------------
 
 odba.
+
+
+Dedicated Database Connections for Transactions
+-----------------------------------------------
+
+...
 
 
 Application Performance and Database
