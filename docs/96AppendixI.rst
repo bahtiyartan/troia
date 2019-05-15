@@ -10,10 +10,10 @@ Appendix I - What's new in the book?
 List of Changes
 ---------------
 
-2019.05.20 - Update : 802 version on "How to Read Version Number?"
+2019.05.15 - Update : 802 version on "How to Read Version Number?"
 
-2019.05.19 - New title  : "Reading Transaction Info" to transactions section.
+2019.05.15 - New title  : "Reading Transaction Info" to transactions section.
 
-2019.05.18 - New section: Appendix I
+2019.05.14 - New section: Appendix I
 
 
