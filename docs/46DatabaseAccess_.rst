@@ -24,10 +24,28 @@ Briefly, system automatically establishes a database connection on user login to
 Selecting data from Database
 ----------------------------
 
-To run a select query on database, fetch all dataset and assign selected data to a table symbol, you must use SELECT command. SELECT command is very similar to SQL's select command and supports almost all stuff like where conditions, distict, inner/outer joins, system functions, group by and order by etc. But this does not mean that SELECT command of TROIA is identical with the SQL's select command, they have different behaviours, features and their own way for some common behaviour. One of the most important things to know about SELECT command is that TROIA SELECT command is interpreted and converted to SQL Select statements considering connected database system (oracle, mssql, mysql, postgresql etc.) to create cross database queries. 
+To run a select query on database, fetch all dataset and assign selected data to a table symbol, you must use SELECT command. SELECT command is very similar to SQL's select command and supports almost all stuff like where conditions, distict, inner/outer joins, system functions, group by and order by etc. But this does not mean that SELECT command of TROIA is identical with the SQL's select command, they have different behaviours, features and their own way for some common behaviour. One of the most important things to know about SELECT command is that TROIA SELECT command is interpreted and converted to SQL Select statements considering connected database system (oracle, mssql, mysql, postgresql etc.) on runtime to create cross database queries. 
 
+Here is the basic syntax of SELECT command:
 
-ORDERBY or ORDER BY
+::
+
+	SELECT [ALL | DISTINCT] {selectlist}
+		FROM {table} [, {othertables}]
+		[INNER | OUTER JOIN {jointable} ON {onclause}]
+		[WHERE {condition}]
+		[ORDERBY {orderbycolumns} [ASC | DESC]]
+		[INTO {targettable}]
+		[ROWFETCHSTART {fetchstart}]
+		[ROWFETCHLIMIT {fetchstart}]
+		[WITHCONTROL]
+		[WITHCACHE]
+
+As you can see, it is very similar to a standard SQL syntax but still there are some special differences. One of the differences is about ORDER BY keyword.In TROIA you must use ORDERBY instead of "ORDER BY". Honestly, using ORDERBY instead of standard one is just a TROIA tradition which comes from old versions of troia platform, ORDER BY is also supported by new interpreter. Even though there is no difference between them, most of troia programmers still uses the one without space character. 
+
+INTO keyword is just for indicating the target table variable. SELECT command assigns selected data to target table. If target table is not given, SELECT command creates table variable with the name of selected database table.
+
+ROWFETCHSTART / ROWFETCHLIMIT keywords are very similar to MySQL's LIMIT and OFFSET keywords. ROWFETCHSTART commands just a kind of shift or offset to start fetching, for example if you pass 10 as ROWFETCHSTART, first nine records are ingored and fetching starts from tenth row. ROWFETCHLIMIT limits fetched row count, but of course if there are more rows than the given number. It is possible to use these keywords together or each one alone. Important point for these two keyword is that, they are totally handled on application server layer, in other words they are not affect sql query sent to database server even if database supports a similar behaviour like mysql.
 
 forcing indexes
 
@@ -39,8 +57,6 @@ using non-standart functions
 	concat
 	left
 	special date functions
-
-ROWFETCHSTART / ROWFETCHLIMIT
 
 WITHCONTROL
 
