@@ -47,24 +47,24 @@ INTO keyword is just for indicating the target table variable. SELECT command as
 
 ROWFETCHSTART / ROWFETCHLIMIT keywords are very similar to MySQL's LIMIT and OFFSET keywords. ROWFETCHSTART commands just a kind of shift or offset to start fetching, for example if you pass 10 as ROWFETCHSTART, first nine records are ingored and fetching starts from tenth row. ROWFETCHLIMIT limits fetched row count, but of course if there are more rows than the given number. It is possible to use these keywords together or each one alone. Important point for these two keyword is that, they are totally handled on application server layer, in other words they are not affect sql query sent to database server even if database supports a similar behaviour like mysql.
 
-forcing indexes
-
-complex select statements
-
-variables in select statement
-
-using non-standart functions
-	concat
-	left
-	special date functions
 
 WITHCONTROL
 
 WITHCACHE
 
-INTO
+
+variables in select statement
+
+forcing indexes
+
+complex select statements
 
 
+using non-standart functions
+	concat
+	left
+	special date functions
+	
 
 
 
