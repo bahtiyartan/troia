@@ -115,6 +115,13 @@ EXECUTESQL Command
 ------------------
 execute sql.
 
+
+SQL System Variable & Creating Scripts
+--------------------------------------
+
+..
+
+
 DB Transaction Management
 -------------------------
 db transaction management.
