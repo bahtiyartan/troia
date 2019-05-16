@@ -26,8 +26,8 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    35Class
    38Table
    42TableControl
-   44DateOperations
-   46DatabaseAccess
+   43DatabaseAccess
+   46DateOperations
    49DialogAdvanced
    50Controls
    52ReportsPrinting
