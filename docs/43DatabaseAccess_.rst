@@ -38,7 +38,7 @@ Here is the basic syntax of SELECT command:
 		[INTO {targettable}]
 		[ROWFETCHSTART {fetchstart}]
 		[ROWFETCHLIMIT {fetchstart}]
-		[WITHCONTROL]
+		[WITHCONTROL {rowcount}]
 		[WITHCACHE]
 
 As you can see, it is very similar to a standard SQL syntax but still there are some special differences. One of the differences is about ORDER BY keyword.In TROIA you must use ORDERBY instead of "ORDER BY". Honestly, using ORDERBY instead of standard one is just a TROIA tradition which comes from old versions of troia platform, ORDER BY is also supported by new interpreter. Even though there is no difference between them, most of troia programmers still uses the one without space character. 
@@ -47,31 +47,76 @@ INTO keyword is just for indicating the target table variable. SELECT command as
 
 ROWFETCHSTART / ROWFETCHLIMIT keywords are very similar to MySQL's LIMIT and OFFSET keywords. ROWFETCHSTART commands just a kind of shift or offset to start fetching, for example if you pass 10 as ROWFETCHSTART, first nine records are ingored and fetching starts from tenth row. ROWFETCHLIMIT limits fetched row count, but of course if there are more rows than the given number. It is possible to use these keywords together or each one alone. Important point for these two keyword is that, they are totally handled on application server layer, in other words they are not affect sql query sent to database server even if database supports a similar behaviour like mysql.
 
+WITHCONTROL variation, if your select statement selects more rows than given row count system returns to client and asks user to perform or cancel select operation to avoid possible memory problems on server and client side.
 
-WITHCONTROL
+WITHCACHE is a performance optimization parameter, we will discuss it on next sections.
 
-WITHCACHE
+Here is a sample select statement selects ten users who have maximum password validity with a hardcode where condition and assings final table to a table variable.
 
+::
 
-variables in select statement
-
-forcing indexes
-
-complex select statements
-
-
-using non-standart functions
-	concat
-	left
-	special date functions
+	OBJECT:
+		TABLE TABLEVARIABLE,
+		INTEGER ROWCOUNT;
+		
+	SELECT CLIENT, USERNAME, PWDVALIDITY 
+		FROM IASUSERS
+		WHERE CLIENT = '00'
+		ORDER BY PWDVALIDITY DESC
+		ROWFETCHLIMIT ROWCOUNT
+		INTO TABLEVARIABLE;
 	
+	
+SQL System Variable
+===================
+SQL system variable is a predefined string which is set by interpreter automatically, automatically.
 
+		
+
+Using Troia Variables on WHERE Condition
+========================================
+
+It is also possible to use TROIA variables in SELECT statements. Interpreter automatically binds your variables to final query considering data type.
+
+::
+
+	OBJECT:
+		TABLE TABLEVARIABLE,
+		STRING NAMEPREFIX,
+		INTEGER ROWCOUNT;
+		
+		NAMEPREFIX = 'a%';
+
+
+	SELECT CLIENT, USERNAME, PWDVALIDITY 
+		FROM IASUSERS
+		WHERE CLIENT = SYS_CLIENT AND USERNAME LIKE NAMEPREFIX
+		ORDER BY PWDVALIDITY DESC
+		ROWFETCHLIMIT ROWCOUNT
+		INTO TABLEVARIABLE;
+
+
+Forcing Indexes
+===============
+
+...
+
+
+Complex Select Statements
+=========================
+
+	
+	
+Select Rights
+=============
+.
 
 
 Persistency Flags in Detail
 ----------------------------
 
 All persistency flags are read-write, so its possible to set their values by code. All persistency flags are INTEGER (1 for true, 0 for false). For example: If DELETED flag is 1, it is deleted row  and programmer must send a delete query to database.
+
 
 DELETED Flag
 ============
@@ -109,6 +154,13 @@ Inserting data...
 
 Deleting data...
 
+
+
+USING Non-Standart Functions
+----------------------------
+	concat
+	left
+	special date functions
 
 
 EXECUTESQL Command
@@ -154,3 +206,5 @@ Application Performance and Database
 ------------------------------------
 
 performance.
+
+WITHCACHE ...
