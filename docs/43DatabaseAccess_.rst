@@ -69,7 +69,28 @@ Here is a sample select statement selects ten users who have maximum password va
 	
 SQL System Variable
 ===================
-SQL system variable is a predefined string which is set by interpreter automatically, automatically.
+When a database query is executed, system automatically the query is set to SQL, so its possible to read final database query from SQL system variable.
+This behavior is same for SELECT, DELETE, UPDATE and INSERT commands. Additionally, INSERTSQL, UPDATESQL, DELETESQL commands sets this SQL system variable without running query on database. They are mostly used for creting sql scripts.
+
+Here is a sample TROIA code that you can read value of SQL system variable.
+
+::
+
+	OBJECT:
+		TABLE TABLEVARIABLE,
+		INTEGER ROWCOUNT,
+		STRING STRINGVAR3;
+		
+	SELECT CLIENT, USERNAME, PWDVALIDITY 
+		FROM IASUSERS
+		WHERE CLIENT = '00'
+		ORDER BY PWDVALIDITY DESC
+		ROWFETCHLIMIT ROWCOUNT
+		INTO TABLEVARIABLE;
+		
+	STRINGVAR3 = SQL;
+
+	
 
 		
 
