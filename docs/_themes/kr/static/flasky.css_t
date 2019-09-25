@@ -14,7 +14,7 @@
 /* -- page layout ----------------------------------------------------------- */
 
 body {
-    font-family: 'Georgia', 'minion pro', 'bell mt', Georgia, 'Hiragino Mincho Pro';
+    font-family: Georgia, 'minion pro', 'bell mt', Georgia, 'Hiragino Mincho Pro';
     font-size: 17px;
     background-color: white;
     color: #000;
