@@ -10,6 +10,8 @@ Appendix I - What's new in the book?
 List of Changes
 ---------------
 
+2019.09.25 - Font and some other visual changes for better reading experience on web.
+
 2019.05.15 - Update: 802 version on "How to Read Version Number?"
 
 2019.05.15 - New title: "Reading Transaction Info" to transactions section.
