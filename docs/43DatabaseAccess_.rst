@@ -90,21 +90,22 @@ Here is a sample TROIA code that you can read value of SQL system variable.
 		
 	STRINGVAR3 = SQL;
 
-	
+
+SQL System variable is useful system variable that you can use while learning behaviour of TROIA database commands.
 
 		
 
 Using Troia Variables on WHERE Condition
 ========================================
 
-It is also possible to use TROIA variables in SELECT statements. Interpreter automatically binds your variables to final query considering data type.
+It is also possible to use TROIA variables in SELECT statements. Interpreter automatically binds your variables to final query considering data type. Here is a sample TROIA code that contains troia variables in its WHERE condition. As we discussed in previous sections we can analyse final sql statement from SQL system variable.
 
 ::
 
 	OBJECT:
 		TABLE TABLEVARIABLE,
 		STRING NAMEPREFIX,
-		INTEGER ROWCOUNT;
+		STRING STRINGVAR3;
 		
 		NAMEPREFIX = 'a%';
 
@@ -113,18 +114,24 @@ It is also possible to use TROIA variables in SELECT statements. Interpreter aut
 		FROM IASUSERS
 		WHERE CLIENT = SYS_CLIENT AND USERNAME LIKE NAMEPREFIX
 		ORDER BY PWDVALIDITY DESC
-		ROWFETCHLIMIT ROWCOUNT
 		INTO TABLEVARIABLE;
+		
+	STRINGVAR3 = SQL;
+	
+There is not any limitation related with the size, count or type of binded variables.
+
+As default, sql statement that passed to database server is same with the content of SQL variable. As an alternative binding method system can use "prepared" option, due to database configuration line which is defined on ServerSettings file of application server. In this "prepared" option, SQL variable is builded in additon to sql statement that is passed to database.
+
+
+Complex Select Statements
+=========================
+
 
 
 Forcing Indexes
 ===============
 
 ...
-
-
-Complex Select Statements
-=========================
 
 	
 	
