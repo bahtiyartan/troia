@@ -181,26 +181,75 @@ Briefly, although complex SELECT eases some operations, it has a negative effect
 Fething Manually
 ----------------
 
-selectline , fetch
+SELECT command performs all steps of select operation in an atomic way. But in some cases selected data is huge and fetching all data may consume too much memory. Assume that you will perform a specific operation for each row of a huge table and you don't need to fetch and store this huge data in memory. In this case you must run select query in database and fetch data row by row. To perform this kind of operation you must use SELECTLINE and FETCH commands instead of SELECT commmad. On the contrary of SELECT command, SELECTLINE command does not fetches selected data and waits for the FETCH command to fetch rows. As you can predict, FETCH command fetches a single row from result set to table on each execution.
 
+Syntax of SELECTLINE statement is totally same except the name, so its possible to use complex SELECTLINE statements similar to SELECT command. At the example below, while looping on whole resultset, table contains only single row at each iteration. Please write a similar code using SELECT and LOOP command and discuss the value of STRINGVAR3.
+
+::
+
+	OBJECT: 
+		STRING STRINGVAR3,
+		TABLE TMPTABLE;
+
+	STRINGVAR3 = '';
+	/**/
+	SELECTLINE USERNAME, PASSW, CREATEDBY 
+		FROM IASUSERS 
+		WHERE CLIENT = SYS_CLIENT AND CREATEDBY = 'btan' INTO TMPTABLE;
+
+	WHILE 1 
+	BEGIN
+		FETCH TMPTABLE;
+		IF SYS_STATUS THEN
+		   BREAK;
+		ENDIF;
+		/** do somehing with the row */
+		STRINGVAR3 = STRINGVAR3 + TMPTABLE_ROWCOUNT + ' ' + TMPTABLE_USERNAME + TOCHAR(10);
+	ENDWHILE;
+
+	SET TMPTABLE TO TABLE TMPTABLE;
+	
+	
+If you want to perform the operation block by block on the rows of the selected resultset, fetch command has also supports fetching in blocks with the given row size. This feature is only supported on 8.02.01 090301 and following versions. Here is the whole available syntax options of FETCH command.
+
+::
+
+	FETCH {tablename}
+	FETCH {tablename} SIZE {rowcounttofetch}
+
+
+Database Specific Syntax & Functions
+------------------------------------
+
+As mentioned on previous titles, TROIA SQL commands are not identical to SQL commands. They are just TROIA commands that are interpreted to sql statements considering database system that user is connected. In other words, if user is connected to X database system (MySQL, Oracle, MsSQL etc), system converts SELECT command to a valid select statement compatible with X.
+
+Lets discuss it with an example. CONCAT function which allows string concatenation on database layer and its supported on MySQL, but in MsSQL + operator and in Oracle || operators concatenate string variables. In TROIA applications developers have to use CONCAT() function but system converts it to + operator on MsSQL connections and || on Oracle connections. So there is no need to make manipulations on TROIA code to support multiple database systems. The list below contains some special function names that is manipulated by TROIA interpreter to support different database systems. This list is does not contains all special function names, for more information and up to date list please see help related help documents.
+
+::
+
+	CONCAT()
+	SUBSTRING()
+	LEFT()
+	YEAR()
+	MONTH()
+	DAYOFMONTH()
+	QUARTER()
+	HOUR()
+	MINUTE()
+	WEEK()
+	DATEADD()
+	DATESUB()
+	DATEDIFF()
+	DATEPART()
+	LEN()
+	
+Besides incompatibility cases on functions on different database systems, there are various types of differences. Another example is behaviour of 'IS' and '=' operators of Oracle for the NULL and empty string values. Since such incompatibility cases are handled by troia interpreter, implementing different codes for a specific database system is not recommended because of possible performance and code transfer problems.
 
 
 Forcing Indexes
----------------
+===============
 
 ...
-
-
-USING Non-Standart Functions
-----------------------------
-	concat
-	left
-	special date functions
-
-
-EXECUTESQL Command
-------------------
-execute sql.
 
 
 Application Performance and Database
