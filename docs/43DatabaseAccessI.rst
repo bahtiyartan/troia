@@ -288,7 +288,7 @@ In the example below, both SELECT statements of first block access database and 
 	SELECT * FROM IASUESERS WHERE CLIENT = SYS_CLIENT AND USERNAME = SYS_USER WITHCACHE;
 
 
-This kind of database access attempts are mostly used on loop statements of item tables to get data related with the head table. But the actual head record is same for all items and the select query result is same as well. ** The best practice about this kind of situations is not selecting head data, but in some cases WITHCACHE option allows programmers to refactor existing code easily. It is not recommended to use WITHCACHE option if there is an alternative solution.**
+This kind of database access attempts are mostly used on loop statements of item tables to get data related with the head table. But the actual head record is same for all items and the select query result is same as well. **The best practice about this kind of situations is not selecting head data, but in some cases WITHCACHE option allows programmers to refactor existing code easily. It is not recommended to use WITHCACHE option if there is an alternative solution.**
 
 Database selection caches which are created by the first SELECT statement that has WITHCACHE option, is valid for only one session and during only one user interaction. In other words, if a session caches data for a select statement, this cache cannot be used by other sessions even if they use same database connection for the same query. And this caches are cleared when action ends system returns to client side for a new user interaction like clicking button etc. Additionally, CLEARDBSELECTIONCACHE() TROIA function removes all cached data, if TROIA programmers need to clear cache.
 
