@@ -10,6 +10,10 @@ Appendix I - What's new in the book?
 List of Changes
 ---------------
 
+2019.09.27 - New section: Database Basics and Selecting Data.
+
+2019.09.27 - "Built-in Data Types and Structures" section renamed to "Built-in Data Types".
+
 2019.09.25 - Font and some other visual changes for better reading experience on web.
 
 2019.05.15 - Update: 802 version on "How to Read Version Number?"
