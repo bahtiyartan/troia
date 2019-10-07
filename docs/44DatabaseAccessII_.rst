@@ -93,96 +93,6 @@ Here is a sample TROIA code that you can read value of SQL system variable.
 
 SQL System variable is useful system variable that you can use while learning behaviour of TROIA database commands.
 
-		
-
-Using Troia Variables on WHERE Condition
-========================================
-
-It is also possible to use TROIA variables in SELECT statements. Interpreter automatically binds your variables to final query considering data type. Here is a sample TROIA code that contains troia variables in its WHERE condition. As we discussed in previous sections we can analyse final sql statement from SQL system variable.
-
-::
-
-	OBJECT:
-		TABLE TABLEVARIABLE,
-		STRING NAMEPREFIX,
-		STRING STRINGVAR3;
-		
-		NAMEPREFIX = 'a%';
-
-
-	SELECT CLIENT, USERNAME, PWDVALIDITY 
-		FROM IASUSERS
-		WHERE CLIENT = SYS_CLIENT AND USERNAME LIKE NAMEPREFIX
-		ORDER BY PWDVALIDITY DESC
-		INTO TABLEVARIABLE;
-		
-	STRINGVAR3 = SQL;
-	
-There is not any limitation related with the size, count or type of binded variables.
-
-As default, sql statement that passed to database server is same with the content of SQL variable. As an alternative binding method system can use "prepared" option, due to database configuration line which is defined on ServerSettings file of application server. In this "prepared" option, SQL variable is builded in additon to sql statement that is passed to database.
-
-
-Complex Select Statements
-=========================
-
-In regular SELECT statements the structure of select command is defined explicitly. In other words, in a regular SELECT statement column list, table name(s) and where condition are constants  and they can be read on development time by the programmer. The only dynamic content is variables that will be binded on runtime and this variables does not change the structure of SELECT statement.
-
-But in some cases,  some structural parts of SELECT statement are dynamic and final select statement is defined on runtime. This kind of implicit SELECT commands are called "complex select" as a TROIA jargon. Example below, shows a complex SELECT statement that contains dynamic column list, where condition and table name. Of course its possible to use only one dynamic part.
-
-::
-
-	OBJECT: 
-		STRING SELECTITEMSLIST,
-		STRING FROMTABLENAME,
-		STRING WHERECONDITION,
-		STRING STRCREATEDBY,
-		TABLE TMPTABLE;
-
-	SELECTITEMSLIST = 'USERNAME, PASSW, CREATEDBY, CREATEDAT';
-	FROMTABLENAME = 'IASUSERS';
-	WHERECONDITION = 'CREATEDBY = STRCREATEDBY';
-	STRCREATEDBY = 'btan';
-	/**/
-	SELECT @SELECTITEMSLIST 
-		FROM @FROMTABLENAME 
-		WHERE @WHERECONDITION 
-		INTO TMPTABLE;
-		
-In this example, none of the variable names are predefined; so programmers can use any variable name to indicate column list, table name and where condition. But in some cases, while first part of select statement is defined explicitly, programmers may need add an dynamic condition to WHERE condition. In this kind of cases, TROIA programmers have to use SYSADDITIONALCRITERIA system variable which is predefined additional condition variable. Here is an example that shows how to use SYSADDITIONALCRITERIA variable.
-
-::
-
-	OBJECT: 
-		STRING FROMTABLENAME,
-		STRING STRCREATEDBY,
-		TABLE TMPTABLE;
-
-	FROMTABLENAME = 'IASUSERS';
-	SYSADDITIONALCRITERIA = 'AND CREATEDBY = STRCREATEDBY';
-	STRCREATEDBY = 'btan';
-	/**/
-	SELECT USERNAME, PASSW, CREATEDBY, CREATEDAT 
-		FROM @FROMTABLENAME 
-		WHERE CLIENT = SYS_CLIENT @SYSADDITIONALCRITERIA 
-		INTO TMPTABLE;
-		
-It is not allowed to combine explicit and implicit parts together on select items list and from table name. Its just allowed for WHERE condition with SYSADDITIONALCRITERIA system variable.
-
-
-
-
-
-Forcing Indexes
-===============
-
-...
-
-	
-	
-Select Rights
-=============
-.
 
 
 Persistency Flags in Detail
@@ -241,21 +151,12 @@ EXECUTESQL Command
 execute sql.
 
 
-SQL System Variable & Creating Scripts
---------------------------------------
-
-..
-
 
 DB Transaction Management
 -------------------------
 db transaction management.
 
 
-Fething Manually
-----------------
-
-selectline , fetch
 
 Connecting Different Databases
 ------------------------------
@@ -275,9 +176,30 @@ Dedicated Database Connections for Transactions
 ...
 
 
-Application Performance and Database
-------------------------------------
+SQL System Variable & Creating Scripts
+--------------------------------------
 
-performance.
+..
 
-WITHCACHE ...
+
+SQL Related User Rights
+-----------------------
+
+
+Select Rights
+=============
+.
+
+Delete Rights
+=============
+.
+
+
+Insert Rights
+=============
+.
+
+
+Update Rights
+=============
+.

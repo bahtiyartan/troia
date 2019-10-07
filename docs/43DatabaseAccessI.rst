@@ -227,20 +227,13 @@ Lets discuss it with an example. CONCAT function which allows string concatenati
 
 ::
 
-	CONCAT()
-	SUBSTRING()
-	LEFT()
-	YEAR()
-	MONTH()
-	DAYOFMONTH()
-	QUARTER()
-	HOUR()
-	MINUTE()
-	WEEK()
-	DATEADD()
-	DATESUB()
-	DATEDIFF()
-	DATEPART()
+	CONCAT()            DATEPART()
+	SUBSTRING()         DATEDIFF()
+	LEFT()              YEAR()
+	MONTH()         	DAYOFMONTH()
+	QUARTER()       	HOUR()
+	MINUTE()        	WEEK()
+	DATEADD()       	DATESUB()
 	LEN()
 	
 Besides incompatibility cases on functions on different database systems, there are various types of differences. Another example is behavior of 'IS' and '=' operators of Oracle for the NULL and empty string values. Since such incompatibility cases are handled by troia interpreter, implementing different codes for a specific database system is not recommended because of possible performance and code transfer problems.
@@ -301,13 +294,6 @@ Select Rights
 -------------
 
 In TROIA Platform, it is possible to define some restrictions for users (or/and user profiles) to avoid unauthorized data access. This infrastructure is called "Select Rights" in TROIA jargon. Select Rights will be discussed in next sections with the other SQL rights. 
-
-
-
-
-
-
-
 
 
 
