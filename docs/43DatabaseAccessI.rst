@@ -278,6 +278,7 @@ In the example below, both SELECT statements of first block access database and 
 
 
 ::
+
 	/* Block 1 */
 	SELECT * FROM IASUESERS WHERE CLIENT = SYS_CLIENT;
 	SELECT * FROM IASUESERS WHERE CLIENT = SYS_CLIENT;
