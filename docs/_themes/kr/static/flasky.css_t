@@ -20,6 +20,8 @@ body {
     color: #000;
     margin: 0;
     padding: 0;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 div.document {
@@ -38,11 +40,6 @@ div.bodywrapper {
 
 div.sphinxsidebar {
     width: {{ sidebar_width }};
-}
-
-p {
-	text-align: justify;
-	text-justify: inter-word;
 }
 
 hr {
