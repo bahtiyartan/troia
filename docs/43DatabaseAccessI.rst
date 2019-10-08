@@ -21,7 +21,7 @@ As you may predict, database connection is a property or feature of user's sessi
 Briefly, system automatically establishes a database connection on user login to serve for all open TROIA applications and all SELECT, UPDATE, INSERT and DELETE commands uses this database connection.
 
 
-Selecting data from Database
+Selecting Data From Database
 ----------------------------
 
 To run a select query on database, fetch all dataset and assign selected data to a table symbol, you must use SELECT command. SELECT command is very similar to SQL's select command and supports almost all stuff like where conditions, distinct, inner/outer joins, system functions, group by and order by etc. But this does not mean that SELECT command of TROIA is identical with the SQL's select command, they have different behaviors, features and their own way for some common behavior. One of the most important things to know about SELECT command is that TROIA SELECT command is interpreted and converted to SQL Select statements considering connected database system (Oracle, MsQql, MySql, PostgreSql etc.) on runtime to create cross database queries. 
@@ -230,10 +230,10 @@ Lets discuss it with an example. CONCAT function which allows string concatenati
 	CONCAT()            DATEPART()
 	SUBSTRING()         DATEDIFF()
 	LEFT()              YEAR()
-	MONTH()         	DAYOFMONTH()
-	QUARTER()       	HOUR()
-	MINUTE()        	WEEK()
-	DATEADD()       	DATESUB()
+	MONTH()             DAYOFMONTH()
+	QUARTER()           HOUR()
+	MINUTE()            WEEK()
+	DATEADD()           DATESUB()
 	LEN()
 	
 Besides incompatibility cases on functions on different database systems, there are various types of differences. Another example is behavior of 'IS' and '=' operators of Oracle for the NULL and empty string values. Since such incompatibility cases are handled by troia interpreter, implementing different codes for a specific database system is not recommended because of possible performance and code transfer problems.
@@ -253,8 +253,8 @@ TROIA interpreter, automatically converts this syntax to the syntax that connect
 
 
 
-Application Performance and SELECT Statements
----------------------------------------------
+Application Performance and Database Operations
+-----------------------------------------------
 
 Database operations have huge affect on application performance in TROIA, like other similar programming languages. Database related performance bottlenecks may be in different layers such as database configuration, table indexing (wrong indexing) or the query (ineffective query). 
 
@@ -287,16 +287,5 @@ Database selection caches which are created by the first SELECT statement that h
 
 
 As default, database selection cache is enabled, but it is possible to disable this option with **EnableDBSelectionCache** on server configuration file (server settings file). When database selection cache disabled, TROIA interpreter ignores WITHCACHE parameter and performs all queries on database.
-
-
-
-Select Rights
--------------
-
-In TROIA Platform, it is possible to define some restrictions for users (or/and user profiles) to avoid unauthorized data access. This infrastructure is called "Select Rights" in TROIA jargon. Select Rights will be discussed in next sections with the other SQL rights. 
-
-
-
-
 
 
