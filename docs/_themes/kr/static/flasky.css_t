@@ -40,6 +40,11 @@ div.sphinxsidebar {
     width: {{ sidebar_width }};
 }
 
+p {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
 hr {
     border: 1px solid #B1B4B6;
 }
