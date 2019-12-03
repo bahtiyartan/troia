@@ -21,6 +21,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    21StringManipulations
    23ExceptionHandling
    24DialogBasics
+   26Domains.rst
    27Transactions
    30MessagesAlerts
    35Class
@@ -32,6 +33,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    49DialogAdvanced
    50Controls
    52ReportsPrinting
+   54Barcodes
    55InheritanceCross
    58File
    62Components

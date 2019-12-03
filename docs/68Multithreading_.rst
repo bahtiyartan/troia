@@ -54,10 +54,19 @@ Waiting for the Thread Group to End
 ...
 
 
+Defining Semaphores
+-------------------
+
+
+ACQUIRESEMAPHORE {semaphoreid} [SCOPE SERVER | SYSTEM]
+RELEASESEMAPHORE {semaphoreid} [SCOPE SERVER | SYSTEM]
+
+
+
 Useful Functions & Commands
 ---------------------------
 
-..
+ISTHREADGROUPALIVE()
 
 
 Some Facts About MultiThreading on TROIA
