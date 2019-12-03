@@ -38,6 +38,8 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    58File
    62Components
    66FTP
+   68Multithreading.rst
+   69IOT.rst
    70WebServices
    74XMLjson
    78HTTPOperations
