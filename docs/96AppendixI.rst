@@ -7,9 +7,6 @@ Appendix I - What's new in the book?
 *“Programming with TROIA” is a live book, so there are too many changes as corrections, new examples, new headings and even new sections. This appendix aims to list significant changes on book in a daily format from the latest to the first to help old readers.*
 
 
-List of Changes
----------------
-
 2019.12.09 - "Platform Basics" section updated considering new IOT Gateway & IOT Connector
 
 2019.09.27 - New section: Database Basics and Selecting Data.
