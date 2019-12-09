@@ -10,6 +10,8 @@ Appendix I - What's new in the book?
 List of Changes
 ---------------
 
+2019.12.09 - "Platform Basics" section updated considering new IOT Gateway & IOT Connector
+
 2019.09.27 - New section: Database Basics and Selecting Data.
 
 2019.09.27 - "Built-in Data Types and Structures" section renamed to "Built-in Data Types".
