@@ -70,6 +70,8 @@ Although most important tools and components are listed above, TROIA Platform ha
 
 **SMS Gateway** is another server side service for handling SMS handling.
 
+**IOT Gateway** is a service that communicates with iot devices through various protocols and passes events to application server considering its configuration. Even if it is a server side service, it is a kind of client of application server.
+
 **Workbench** is an administration tool(a kind of client) to manage and monitor server side components such as application server,license server,load balancer. Using this tool system administrators can view and manage application server cache, users sessions and their running applications etc.
 
 **System Reporter** is a tool that reports status of your server side components in a configurable period.
