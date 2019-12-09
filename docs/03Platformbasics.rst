@@ -46,7 +46,7 @@ Network Architecture Overview
 Here is an overview of all TROIA Plaform's main components and network structure from database to user interface. This overview clearly shows which components of TROIA Platform are server or client. Additionally, it is possible to see, directions of communication lines. Understanding this structure is too important to overcome some advanced questions about platform by yourself.
 
 .. figure:: images/platformbasics/troia-platform-network-architecture.png
-   :width: 600 px
+   :width: 650 px
    :target: images/platformbasics/troia-platform-network-architecture.png
    :align: center
 
@@ -81,7 +81,7 @@ Software Architecture Overview
 Basically, TROIA Platform allows programmer to develop applications that access data, manipulate it and save. To understand platform architecture its very important to understand the roles of application server and client(s). The graphic below, shows the main structures and layers of TROIA Platform from user interface to data. Also, it's possible to understand responsibility/functionality share of application server and client. 
 
 .. figure:: images/platformbasics/software-architecture.png
-   :width: 600 px
+   :width: 650 px
    :target: images/platformbasics/software-architecture.png
    :align: center
 
