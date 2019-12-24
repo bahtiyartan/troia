@@ -66,7 +66,7 @@ To call transaction with a new thread you must indicate and thread group for the
 ::
 
 
-	CALL TRANSACTION RDTT06 INSERVER [({commaseparatedinputparemeterlist})] ONTHREADGROUP {threadgroupid} EXCLUSIVEDB;
+	CALL TRANSACTION RDTT06 INSERVER [({inputparams})] ONTHREADGROUP {tgroupid} EXCLUSIVEDB;
 	
 
 If you don't define a thread group for transaction call, it is considered as an conventional single thread call transaction and does not performed by a  new thread. EXCLUSIVEDB parameter is not a must but if you need some database operations in your threads, it can cause some subtle problems, so it is recommended to use establish dedicated database connections for transaction called in a thread.
@@ -78,7 +78,7 @@ After calling a transaction with its own thread your code flows to the next line
 
 ::
 
-	JOINTHREADGROUP {threadgroupid};
+	JOINTHREADGROUP {tgroupid};
 	
 Waiting for all thread groups before returning to client is must, otherwise it is possible to encounter some subtle problems about threads lifecycle.
 
@@ -90,7 +90,7 @@ Here is a simple example below puts all of them together. In this example; THREA
 
 
 	OBJECT:
-		STRING THREADID;
+	    STRING THREADID;
 
 	TRACEON;
 	
@@ -115,16 +115,20 @@ Assume that TRANSCALLED function of RDTT06 transaction's first dialog is just a 
 Defining Semaphores
 -------------------
 
+::
 
-ACQUIRESEMAPHORE {semaphoreid} [SCOPE SERVER | SYSTEM]
-RELEASESEMAPHORE {semaphoreid} [SCOPE SERVER | SYSTEM]
+
+	ACQUIRESEMAPHORE {semaphoreid} [SCOPE SERVER | SYSTEM]
+	RELEASESEMAPHORE {semaphoreid} [SCOPE SERVER | SYSTEM]
 
 
 
 Useful Functions & Commands
 ---------------------------
 
-ISTHREADGROUPALIVE()
+::
+
+	ISTHREADGROUPALIVE()
 
 
 Some Facts About MultiThreading on TROIA
