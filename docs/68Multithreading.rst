@@ -58,13 +58,11 @@ Each troia thread must have a group name, but it is possible to define only one 
 Creating TROIA Threads
 ----------------------
 
-
 To start a new TROIA thread, firstly you need to call a new transaction in server with INSERVER variation of CALL TRANSACTION command. Calling a transaction in server, opens the transaction, starts first dialog it with BEFORE and AFTER events and then calls TRANSCALLED function if there is at least one parameter and calls TIMEPROCESS event due to given parameters on CALL TRANSACTION command. For more information about calling a transaction in server please review related section.
 
 To call transaction with a new thread you must indicate and thread group for the called transaction with the ONTHREADGROUP keyword and EXCLUSIVEDB parameter to establish dedicated database connections for first and second database connections. For more information about these two database connections please see related section. Here is a simplified syntax for calling transaction in a thread.
 
 ::
-
 
 	CALL TRANSACTION RDTT06 INSERVER [({inputparams})] ONTHREADGROUP {tgroupid} EXCLUSIVEDB;
 	
@@ -88,9 +86,8 @@ Here is a simple example below puts all of them together. In this example; THREA
 
 ::
 
-
 	OBJECT:
-	    STRING THREADID;
+	  STRING THREADID;
 
 	TRACEON;
 	
@@ -123,11 +120,37 @@ In TROIA; hread sensitive programming blocks are bounded with ACQUIRESEMAPHORE a
 
 ::
 
-
 	ACQUIRESEMAPHORE {semaphoreid} [SCOPE SERVER | SYSTEM]
 	RELEASESEMAPHORE {semaphoreid} [SCOPE SERVER | SYSTEM]
 	
 
+Scope of semaphore definitions can be application server wide or system wide (between all application server instances). In a regular concurrent application a server wide semaphore enough and works well. But in some cases programmers may need system wide semaphores to control a sensitive data between application servers. SCOPE variation of the commands states the scope of semaphore defintion.
+
+Here is an example about acquiring and releasing semaphores in TROIA. Assume that this is the TRANSCALLED method of a dialog and this dialog is the start dialog of a transaction that is called three times with its own thread like the example below. Each CALL TRANSACTION command calls an transaction for the same transaction.  The code block between ACQUIRESEMAPHORE and  RELEASESSEMAPHORE is an atomic block and only one thread can be inside of this block. (LOGDEBUG command just prints given text to application server console)
+
+::
+
+	OBJECT: 
+	 INTEGER NINDEX,
+	 INTEGER PERIOD,
+	 STRING PTEXT;
+
+	NINDEX = 5;
+	ACQUIRESEMAPHORE 'mysemaphore' SCOPE SYSTEM;
+
+	WHILE NINDEX > 0 
+	BEGIN
+		NINDEX = NINDEX -1;
+		PTEXT = THREADID + ' -> ' + NINDEX;
+		LOGDEBUG PTEXT;
+		PERIOD = RAND() % 1000;
+		DELAY PERIOD;
+	ENDWHILE;
+
+	RELEASESEMAPHORE 'mysemaphore' SCOPE SYSTEM;
+	
+	
+This function prints given THREADID parameter (which is just a text to define transaction and thread) and the NINDEX number from 5 to 1 for each thread. Please discuss and try to find the differences between the outputs, for the cases that code contains and does not contain semaphore block.
 
 
 Useful Functions & Commands
