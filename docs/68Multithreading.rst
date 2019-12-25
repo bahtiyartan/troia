@@ -115,11 +115,18 @@ Assume that TRANSCALLED function of RDTT06 transaction's first dialog is just a 
 Defining Semaphores
 -------------------
 
+In some cases, a particular code block can access some shared resources between threads. These kind of thread sensitive blocks must be performed by only one thread and other threads must wait until active thread finishes its operations. For better understanding, you can assume a kind of capture the flag game between the threads. A thread acquires the flag and performs the particular operation and then releases the flag, the period between acquiring and releasing, other threads which are waiting for same flag just waits to be the next acquirer. This flag like structures is called semaphore on cuncurrent programming. TROIA supports semaphores for implementing thread safe programming blocks.
+
+
+In TROIA; hread sensitive programming blocks are bounded with ACQUIRESEMAPHORE and RELEASESEMAPHORE commands:
+
+
 ::
 
 
 	ACQUIRESEMAPHORE {semaphoreid} [SCOPE SERVER | SYSTEM]
 	RELEASESEMAPHORE {semaphoreid} [SCOPE SERVER | SYSTEM]
+	
 
 
 
