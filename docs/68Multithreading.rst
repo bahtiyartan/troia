@@ -106,6 +106,9 @@ Here is a simple example below puts all of them together. In this example; THREA
 
 
 Assume that TRANSCALLED function of RDTT06 transaction's first dialog is just a "DELAY 10000;" (sleep for ten seconds). All this code takes about ten seconds. And TRACEOFF command runs when all threads end. But if you remove ONTHREADGROUP code takes at least thirty seconds, because all call transactions executed sequentially.
+
+In some cases, before the JOINTREADGROUP command programmers may need to check state whether it is still working. ISTHREADGROUPALIVE() function gets thread groupid and returns a boolean result that shows given thread  state.
+
 	
 
 
@@ -151,14 +154,6 @@ Here is an example about acquiring and releasing semaphores in TROIA. Assume tha
 	
 	
 This function prints given THREADID parameter (which is just a text to define transaction and thread) and the NINDEX number from 5 to 1 for each thread. Please discuss and try to find the differences between the outputs, for the cases that code contains and does not contain semaphore block.
-
-
-Useful Functions & Commands
----------------------------
-
-::
-
-	ISTHREADGROUPALIVE()
 
 
 Some Facts About MultiThreading on TROIA
