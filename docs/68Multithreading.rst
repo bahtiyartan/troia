@@ -156,8 +156,3 @@ Here is an example about acquiring and releasing semaphores in TROIA. Assume tha
 This function prints given THREADID parameter (which is just a text to define transaction and thread) and the NINDEX number from 5 to 1 for each thread. Please discuss and try to find the differences between the outputs, for the cases that code contains and does not contain semaphore block.
 
 
-Do You Really Need Concurrency?
--------------------------------
-
-
-
