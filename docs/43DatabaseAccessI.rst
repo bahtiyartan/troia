@@ -231,10 +231,10 @@ Lets discuss it with an example. CONCAT function which allows string concatenati
 	SUBSTRING()         DATEDIFF()
 	LEFT()              YEAR()
 	MONTH()             DAYOFMONTH()
-	QUARTER()           HOUR()
-	MINUTE()            WEEK()
-	DATEADD()           DATESUB()
-	LEN()
+	QUARTER()           DAYOFYEAR()
+	MINUTE()            HOUR()
+	DATEADD()           WEEK()
+	LEN()               DATESUB()
 	
 Besides incompatibility cases on functions on different database systems, there are various types of differences. Another example is behavior of 'IS' and '=' operators of Oracle for the NULL and empty string values. Since such incompatibility cases are handled by troia interpreter, implementing different codes for a specific database system is not recommended because of possible performance and code transfer problems.
 
