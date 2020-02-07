@@ -221,9 +221,9 @@ If you want to perform the operation block by block on the rows of the selected 
 Database Specific Syntax & Functions
 ------------------------------------
 
-As mentioned on previous titles, TROIA SQL commands are not identical to SQL commands. They are just TROIA commands that are interpreted to sql statements considering database system that user is connected. In other words, if user is connected to X database system (MySQL, Oracle, MsSQL etc.), system converts SELECT command to a valid select statement compatible with X.
+As mentioned on previous titles, TROIA SQL commands are not identical to SQL commands. They are just TROIA commands that are interpreted to sql statements considering database system that user is connected. In other words, if user is connected to X database system (MySQL, Oracle, MSSQL etc.), system converts SELECT command to a valid select statement compatible with X.
 
-Lets discuss it with an example. CONCAT function which allows string concatenation on database layer and it is supported on MySQL, but in MsSQL + operator and in Oracle || operators concatenate string variables. In TROIA applications developers have to use CONCAT() function but system converts it to + operator on MsSQL connections and || on Oracle connections. So there is no need to make manipulations on TROIA code to support multiple database systems. The list below contains some special function names that is manipulated by TROIA interpreter to support different database systems. This list is does not contains all special function names, for more information and up to date list please see help related help documents.
+Lets discuss it with an example. CONCAT function which allows string concatenation on database layer and it is supported on MySQL, but in MSSQL + operator and in Oracle || operators concatenate string variables. In TROIA applications developers have to use CONCAT() function but system converts it to + operator on MSSQL connections and || on Oracle connections. So there is no need to make manipulations on TROIA code to support multiple database systems. The list below contains some special function names that is manipulated by TROIA interpreter to support different database systems. This list is does not contains all special function names, for more information and up to date list please see help related help documents.
 
 ::
 
@@ -236,6 +236,30 @@ Lets discuss it with an example. CONCAT function which allows string concatenati
 	DATEADD()           WEEK()
 	LEN()               DATESUB()
 	
+
+Here is a more concrete example that shows how interpreter manipulates special functions considering database system. The table shows the value of STRINGVAR3 variable which contains the final SQL query for different database systems as a result of SELECT statement in the code. 
+
+::
+
+	OBJECT:
+		TABLE T1,
+		STRING STRINGVAR3;
+		
+	SELECT YEAR(CREATEDAT) AS YEARCOLUMN
+		FROM IASUSERS
+		INTO T1;
+		
+	STRINGVAR3 = SQL;
+	
+---------------------------------------------------------------------------------------------------
+| MSSQL      |  SELECT YEAR(CREATEDAT) AS YEARCOLUMN FROM IASUSERS                                |
+---------------------------------------------------------------------------------------------------
+| PostgreSQL |  SELECT CAST(EXTRACT(YEAR FROM CREATEDAT) AS INTEGER) AS YEARCOLUMN FROM IASUSERS  |
+---------------------------------------------------------------------------------------------------
+| MySQL      |  SELECT YEAR(CREATEDAT) AS YEARCOLUMN FROM IASUSERS                                |
+---------------------------------------------------------------------------------------------------
+
+
 Besides incompatibility cases on functions on different database systems, there are various types of differences. Another example is behavior of 'IS' and '=' operators of Oracle for the NULL and empty string values. Since such incompatibility cases are handled by troia interpreter, implementing different codes for a specific database system is not recommended because of possible performance and code transfer problems.
 
 
