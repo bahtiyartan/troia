@@ -251,13 +251,13 @@ Here is a more concrete example that shows how interpreter manipulates special f
 		
 	STRINGVAR3 = SQL;
 	
----------------------------------------------------------------------------------------------------
++------------+------------------------------------------------------------------------------------+
 | MSSQL      |  SELECT YEAR(CREATEDAT) AS YEARCOLUMN FROM IASUSERS                                |
----------------------------------------------------------------------------------------------------
++------------+------------------------------------------------------------------------------------+
 | PostgreSQL |  SELECT CAST(EXTRACT(YEAR FROM CREATEDAT) AS INTEGER) AS YEARCOLUMN FROM IASUSERS  |
----------------------------------------------------------------------------------------------------
++------------+------------------------------------------------------------------------------------+
 | MySQL      |  SELECT YEAR(CREATEDAT) AS YEARCOLUMN FROM IASUSERS                                |
----------------------------------------------------------------------------------------------------
++------------+------------------------------------------------------------------------------------+
 
 
 Besides incompatibility cases on functions on different database systems, there are various types of differences. Another example is behavior of 'IS' and '=' operators of Oracle for the NULL and empty string values. Since such incompatibility cases are handled by troia interpreter, implementing different codes for a specific database system is not recommended because of possible performance and code transfer problems.
