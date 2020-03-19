@@ -459,10 +459,10 @@ TROIA Platform, is able to show/present datetime data in a specific timezone due
 
 Although dates are presented on users' timezone on user interface layer, system stores dates in a standard timezone, this configuration is called as "Database Timezone" and it is configured on Database section of "SYST06 - System Parameters" transaction. **Although database transaction configurable, it is not recommended to change this configuration without a planned data migration, because it stores the timezone of all dates**
 
-Timezone information is a sensitive information because of data integrity, so if system senses some conflictions about user, system or client devices's timezone creates some warning messages. This messages can be disabled using IgnoreTimezoneWarnings parameter on server settings file, its default value is "false", so timezone warnings are on, if you set it to "true" this will turn warnings off.
+Timezone information is a sensitive information because of data integrity, so if system senses some conflictions about user, system or client devices' timezone creates some warning messages. This messages can be disabled using IgnoreTimezoneWarnings parameter on server settings file, its default value is "false", so timezone warnings are on, if you set it to "true" this will turn warnings off.
 
 
 Work Calendar
 -------------
 
-In TROIA, it is also possible to define some business layer calendars and make some date calculations like adding days hours considering constraints of this calendars. This kind of date calculations are called "Work Calendar", we will discuss Work Calendars in following sections.
+In TROIA, it is also possible to define some business layer calendars and make some date calculations like adding days, hours etc. considering constraints of this calendars. This kind of date calculations are called "Work Calendar", we will discuss Work Calendars in following sections.
