@@ -19,7 +19,7 @@ In contrary to some other programming languages, TROIA has more than one data ty
 	TIME           (Ex: 21:30)
 	TIMES          (Ex: 21:30:13)
 	
-As it is obvious, main difference between DATE and DATETIME type is time part which consisted by hour, minute and second. TIME and TIMES data types are used for storing only time information. Their main difference is second part. TIMES data type is relatively a new data type that is supported after 5.01.01 releases(not supported on 3.08.x releases.)
+As it is obvious, main difference between DATE and DATETIME type is time part which consisted by hour, minute and second. TIME and TIMES data types are used for storing only time information. Their main difference is second part. TIMES data type is relatively a new data type that is supported after 5.01.01 releases (not supported on 3.08.x releases.)
 
 
 Due to your application's requirements you must use the most primitive data type. It is not recommended that storing a date information in a DATETIME symbol and 00:00:00 as its time part.
@@ -343,7 +343,7 @@ As default, if a date/datetime variable is assigned to a string variable system 
 
 	STRINGVAR3 = DATETIMEVAR1;
 	
-**This is totally same with decimals, all programmers uses . as decimal separator inside TROIA code. It is hard coded and independent from language or any localization configuration**
+**This is totally same with decimals, all programmers uses . (dot) as decimal separator inside TROIA code. It is hard coded and independent from language or any localization configuration**
 	
 	
 Formatting Configurations & Related System Variables
