@@ -6,7 +6,9 @@ Appendix I - What's new in the book?
 
 *“Programming with TROIA” is a live book, so there are too many changes as corrections, new examples, new headings and even new sections. This appendix aims to list significant changes on book in a daily format from the latest to the first to help old readers.*
 
-2020.02.10 - New example for "Database Specific Syntax & Functions" title for "Database Basics" Section
+2020.03.20 - Some corrections on "Working With Date/Datetime" section.
+
+2020.02.10 - New example for "Database Specific Syntax & Functions" title for "Database Basics" section
 
 2019.12.24 - New section: Concurrency (Multi-Threading).
 
