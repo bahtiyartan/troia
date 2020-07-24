@@ -77,10 +77,44 @@ As it is obvious, messages shown on client side and needs a client side interact
 
 In batch transactions, there is no user that is able to interact or answer message dialog, therefore intepreter behavior is different on batch and inserver (INSERVER) transactions. In this kind of server only code executions, system automatically answer messages with default option, confirms (YES) all confirmation messages and ignores information/warning messages. Additionally inserts all messages to IASBATCHERR system table which is able to store message, session and server information.
 
+Here is an example how to get your messages from IASBATCHERR table on a batch transaction:
+
+::
+
+	SETBATCHTRAN TRUE;
+
+	MESSAGE BAS E110 WITH;
+	MESSAGE BAS E110 WITH;
+	MESSAGE BAS E110 WITH;
+
+	SELECT *
+			FROM IASBATCHERR
+			WHERE CLIENTCONNID = SYS_CLIENTCONNECTIONID 
+					AND TRANSID = SYS_TRANSACTIONID
+			INTO TMPTABLE;
+
+	SET TMPTABLE TO TABLE TMPTABLE;
+	SETBATCHTRAN FALSE;
+
 
 Message on Database Transactions
 --------------------------------
 Messages on "database transactions" (between BEGINTRAN-COMMITTRAN) are answered automatically by server and sent to client side as information messages after "database transaction" closed. All messages emerged in "database transaction" are transferred to client as a bulk information message. Messages on sql transactions are stored in SYSBATCHMESSAGES system variable whose type is table. It will be discussed detailly in database access section.
+
+Here is a sample code that shows how to get messages from SYSBATCHMESSAGES table which is a system variable:
+
+::
+
+	SETSERVERONLY(1);
+
+	MESSAGE BAS E110 WITH;
+	MESSAGE BAS E110 WITH;
+	MESSAGE BAS E110 WITH;
+
+	COPY TABLE SYSBATCHMESSAGES INTO TMPTABLE;
+	SET TMPTABLE TO TABLE TMPTABLE;
+
+	SETSERVERONLY(0);
 
 
 Other Alerting Options
