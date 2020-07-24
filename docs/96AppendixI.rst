@@ -6,7 +6,7 @@ Appendix I - What's new in the book?
 
 *“Programming with TROIA” is a live book, so there are too many changes as corrections, new examples, new headings and even new sections. This appendix aims to list significant changes on book in a daily format from the latest to the first to help old readers.*
 
-2020.07.24 - A new example for getting message list on batch messages.
+2020.07.24 - New examples for batch and server only transaction messages for "Messages and Alerts" section.
 
 2020.03.20 - Some corrections on "Working With Date/Datetime" section.
 
