@@ -22,7 +22,7 @@ poststring, url, encoding, contenttype, cookie,headers,requestmethod
 Reading HTTP Response
 =====================
 
-SYS_SENDHTTPPOSTRESPONSE
+SYS_HTTPPOSTRESPONSE
 
 SYS_HTTPPOSTCOOKIES
 
