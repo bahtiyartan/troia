@@ -98,7 +98,7 @@ Understand the roles of each component and their subsystems using this graphic a
 	- Desktop and web shares same troia application model layer.
 	
 
-What does The Platform Offers?
+What Does The Platform Offer?
 =============================
 
 Free of Technical Details 
@@ -151,7 +151,7 @@ There is no need to recompile or translate the system in order to run written ap
 Easy to Customize Without Editing Standard Source Codes
 -------------------------------------------------------
 
-The TROIA platform comes with a "substitution definition" feature called cross in its structure. The Cross structure allows the use of a customized version instead of a standard class. Thus, unlike classical programming languages, you can change the behavior of the class without changing the points where objects of this type are created or the references accessing them. Cross definitions can be made not only for classes but also for dialogs, components, reports, so it is possible to adapt not only the behavior but also the screen views and outputs. Cross definitions; It can be done on the basis of user, user profile and / or whole system.
+The TROIA platform comes with a "use x instead of y" definition feature called cross in its structure. The Cross structure allows the use of a customized version instead of a standard class. Thus, unlike classical programming languages, you can change the behavior of the class without changing the points where objects of this type are created or the references accessing them. Cross definitions can be made not only for classes but also for dialogs, components, reports, so it is possible to adapt not only the behavior but also the screen views and outputs. Cross definitions; It can be done on the basis of user, user profile and / or whole system.
 
 
 Easy to Integrated with Other Systems
