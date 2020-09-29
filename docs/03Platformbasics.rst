@@ -98,8 +98,8 @@ Understand the roles of each component and their subsystems using this graphic a
 	- Desktop and web shares same troia application model layer.
 	
 
-Main Advantages The Platform and Language
-=========================================
+What does The Platform Offers?
+=============================
 
 Free of Technical Details 
 -------------------------
@@ -119,8 +119,8 @@ Integrated Structure
 It is designed for the development of direct business applications. In this sense, it includes all structures and subsystems that may be needed. It largely eliminates the need for third party systems and programming languages. Training, support, maintenance and inter-system integrations are easily carried out within a system with the same approach.
 
 
-Platform Independent
---------------------
+Cross Platform (Platform Independent)
+-------------------------------------
 
 Application server and desktop client (native, desktop client) run on operating systems such as Windows, Linux, Unix. Web client-based client (web client) can be used over various internet browsers such as Chome and Safari. All applications written on caniasERP and TROIA platform can run on all systems supported by the platform without the need for an additional process.
 
@@ -143,8 +143,8 @@ Multi-Language Support, Time Zone Support and Localization
 The TROIA Platform offers a variety of infrastructures ready to developers. Even a business application that can be developed on the platform in minutes includes language support, time zone and all other localization features.
 
 
-Customize Without Recompilation)
------------------------------------------
+Customize Without Recompilation
+-------------------------------
 There is no need to recompile or translate the system in order to run written applications or make changes to existing applications. It enables application development with libraries, .dll, .jar files, modules, complex compilers without wasting time.
 
 
