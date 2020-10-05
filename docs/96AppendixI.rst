@@ -6,7 +6,7 @@ Appendix I - What's new in the book?
 
 *“Programming with TROIA” is a live book, so there are too many changes as corrections, new examples, new headings and even new sections. This appendix aims to list significant changes on book in a daily format from the latest to the first to help old readers.*
 
-2020.09.29 - "Platform Basics" section updated about main advantages of the platform.
+2020.09.29 - New title: "What Does The Platform Offer?" to "Platform Basics" section.
 
 2020.07.24 - New examples for batch and server only transaction messages for "Messages and Alerts" section.
 
