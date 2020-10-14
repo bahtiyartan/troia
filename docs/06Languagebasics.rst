@@ -4,21 +4,17 @@
 Language Basics
 =======================
 
-*This section aims to introduce language and it's basic terms. Most of subtopics will be discussed in detail in next chapters.*
+*This section aims to introduce concepts and key terms of TROIA Programming Language. Most of subtopics will be discussed in detail in next chapters.*
 
 
 Understanding the Purpose
 -------------------------
 
-TROIA is a high level programming language which is designed by IAS (Industrial Application Software) for developing business applications.
+TROIA is a high level programming language which is designed by IAS (Industrial Application Software. 
 
-As a fourth generation programming language (4GL), TROIA has strong abstraction from all hardware specific details, bytes and bits etc.
-It has strong ability to operate large collections of information, in a programmer-friendly manner.
+It's main purpose is for developing and maintaining business applications easily. As a fourth generation programming language (4GL), TROIA has strong abstraction from all hardware specific details, bytes and bits etc. It has strong ability to operate large collections of information, in a programmer-friendly manner.
 
-The main purpose of TROIA Language is developing business applications, so it contains too many useful features to access, operate and report business layer information.
-
-Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues.
-Time zone, localization, multi-language support, cross platform & database, formatters, validators, api&dlls etc. are the examples of these painful technnical details.
+TROIA contains too many useful features to access, operate and report business layer information. Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues. Time zone, localization, multi-language support, cross platform & database, formatters, validators, api&dlls etc. are the examples of these painful technnical details.
 
 
 Basic Language Elements
