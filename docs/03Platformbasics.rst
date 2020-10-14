@@ -8,7 +8,7 @@ Platform Basics
 
 
 Understanding the Purpose
--------------------------
+=============================
 
 TROIA is a high level programming language which is designed by IAS (Industrial Application Software. 
 
