@@ -14,7 +14,7 @@ TROIA is a high level programming language which is designed by IAS (Industrial 
 
 It's main purpose is for developing and maintaining business applications in an easy and efficient way. As a fourth generation programming language (4GL), TROIA has strong abstraction from all hardware specific details, bytes and bits etc. It has strong ability to operate large collections of information, in a programmer-friendly manner.
 
-TROIA contains too many useful features to access, operate and report business layer information. Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues. Time zone, localization, multi-language support, cross platform & database, formatters, validators, api&dlls etc. are the examples of these painful technnical details.
+TROIA contains too many useful features to access, operate and report business layer information. Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues. APIs&dlls, localization, supporting various platforms and databases are just the examples of these painful technnical details. These kind of details will be discussed in next sections.
 
 
 What Does The Platform Offer?
