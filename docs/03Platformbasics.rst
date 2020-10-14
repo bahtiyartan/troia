@@ -14,78 +14,71 @@ TROIA is a high level programming language which is designed by IAS (Industrial 
 
 It's main purpose is for developing and maintaining business applications in an easy and efficient way. As a fourth generation programming language (4GL), TROIA has strong abstraction from all hardware specific details, bytes and bits etc. It has strong ability to operate large collections of information, in a programmer-friendly manner.
 
-TROIA contains too many useful features to access, operate and report business layer information. Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues. APIs&dlls, localization, supporting various platforms and databases are just the examples of these painful technnical details. These kind of details will be discussed in next sections.
 
 
 What Does The Platform Offer?
 =============================
+
+TROIA contains too many useful features to access, operate and report business layer information. Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues. APIs&dlls, localization, supporting various platforms and databases are just the examples of these painful technnical details. Here are some basic advantages that the platform offers for developers, administrators and the users:
+
 
 **Free of Technical Details** 
 
 It has a structure that is easy to learn and resembles a natural speech language. Employees without a software and computer engineering background can learn quickly. They can install, configure and develop.
 
 
-Rapid Development and Maintenance
----------------------------------
+**Rapid Development and Maintenance**
 
 It has been developed with the aim of improving business processes and includes the tools needed for this purpose. Developers can focus on business processes rather than technical details they will encounter, and can carry out development and maintenance jobs more quickly and efficiently.
 
 
-Integrated Structure
---------------------
+**Integrated Structure**
 
 It is designed for the development of direct business applications. In this sense, it includes all structures and subsystems that may be needed. It largely eliminates the need for third party systems and programming languages. Training, support, maintenance and inter-system integrations are easily carried out within a system with the same approach.
 
 
-Cross Platform (Platform Independent)
--------------------------------------
+**Cross Platform (Platform Independent)**
 
 Application server and desktop client (native, desktop client) run on operating systems such as Windows, Linux, Unix. Web client-based client (web client) can be used over various internet browsers such as Chome and Safari. All applications written on caniasERP and TROIA platform can run on all systems supported by the platform without the need for an additional process.
 
 
-Cross Database (Database Independent)
--------------------------------------
+**Cross Database (Database Independent)**
 
 All applications on the platform are compatible with all frequently used database systems such as MsSQL, MySQL, PostgreSQL, Oracle, DB2 and all other database systems that can be accessed with the JDBC interface without any changes in their codes.
 
 
-Compatible with Emerging Systems
---------------------------------
+**Compatible with Emerging Systems**
 
 When the platform provides the newly released system, all applications written on it become running on this system without the need for a special compilation or conversion. The permanence of the investment made in the written applications is ensured.
 
 
-Multi-Language Support, Time Zone Support and Localization
-----------------------------------------------------------
+**Multi-Language Support, Time Zone Support and Localization**
 
 The TROIA Platform offers a variety of infrastructures ready to developers. Even a business application that can be developed on the platform in minutes includes language support, time zone and all other localization features.
 
 
-Customize Without Recompilation
--------------------------------
+**Customize Without Recompilation**
 There is no need to recompile or translate the system in order to run written applications or make changes to existing applications. It enables application development with libraries, .dll, .jar files, modules, complex compilers without wasting time.
 
 
-Easy to Customize Without Editing Standard Source Codes
--------------------------------------------------------
+**Easy to Customize Without Editing Standard Source Codes**
 
 The TROIA platform comes with a "use x instead of y" definition feature called cross in its structure. The Cross structure allows the use of a customized version instead of a standard class. Thus, unlike classical programming languages, you can change the behavior of the class without changing the points where objects of this type are created or the references accessing them. Cross definitions can be made not only for classes but also for dialogs, components, reports, so it is possible to adapt not only the behavior but also the screen views and outputs. Cross definitions; It can be done on the basis of user, user profile and / or whole system.
 
 
-Easy to Integrated with Other Systems
--------------------------------------
+**Easy to Integrated with Other Systems**
+
 One of the strengths of the Troia Platform is its flexibility and ease of integration. Within the details of the technologies and protocols to be used in integration, there are various integration options from automation systems, mail servers, telephone exchanges to ftp servers without wasting time.
 
 
-Scalable Structure
-------------------
+**Highly Scalable Infrastructure**
 Theoretically, hundreds of application servers working in cooperation with each other can work in parallel. With the help of the load balancer in the structure of the platform, users can be directed to the most suitable servers by taking into account the instant load distribution or various parameters. All applications developed using the TROIA Platform can serve one or thousands of users on this scalable structure without a significant performance difference.
 
 
-Easy Installation, Management and Monitoring
---------------------------------------------
+**Easy Installation, Management and Monitoring**
 
 System setup and update processes can be carried out with simple file copying operations or can be automated according to the need. Management and monitoring tools come ready-made with the TROIA platform and are in parallel with the other components of the system. Even, thanks to the various system functions, existing vehicles can be adapted and new ones developed using the TROIA language.
+
 
 Components and Network Architecture Overview
 ============================================
