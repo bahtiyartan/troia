@@ -4,7 +4,17 @@
 Platform Basics
 =======================
 
-*TROIA Platform is the software framework which TROIA Programming Language works on. This section introduces main components and architecture of TROIA Platform for better understanding of next sections.*
+*TROIA Platform is the software framework which TROIA Programming Language works on. This section introduces the platform and its main architecture of TROIA Platform for better understanding of next sections.*
+
+
+Understanding the Purpose
+-------------------------
+
+TROIA is a high level programming language which is designed by IAS (Industrial Application Software. 
+
+It's main purpose is for developing and maintaining business applications in an easy and efficient way. As a fourth generation programming language (4GL), TROIA has strong abstraction from all hardware specific details, bytes and bits etc. It has strong ability to operate large collections of information, in a programmer-friendly manner.
+
+TROIA contains too many useful features to access, operate and report business layer information. Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues. Time zone, localization, multi-language support, cross platform & database, formatters, validators, api&dlls etc. are the examples of these painful technnical details.
 
 
 What Does The Platform Offer?
