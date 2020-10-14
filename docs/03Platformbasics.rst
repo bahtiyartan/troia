@@ -20,8 +20,7 @@ TROIA contains too many useful features to access, operate and report business l
 What Does The Platform Offer?
 =============================
 
-Free of Technical Details 
--------------------------
+**Free of Technical Details** 
 
 It has a structure that is easy to learn and resembles a natural speech language. Employees without a software and computer engineering background can learn quickly. They can install, configure and develop.
 
