@@ -7,15 +7,13 @@ Language Basics
 *This section aims to introduce language and it's basic terms. Most of subtopics will be discussed in detail in next chapters.*
 
 
+Understanding the Purpose
+-------------------------
+
 TROIA is a high level programming language which is designed by IAS (Industrial Application Software) for developing business applications.
 
 As a fourth generation programming language (4GL), TROIA has strong abstraction from all hardware specific details, bytes and bits etc.
 It has strong ability to operate large collections of information, in a programmer-friendly manner.
-
-TROIA codes are executed by "TROIA Interpreter" which is one of **the main components of Application Server**.
-
-Understanding the Purpose
--------------------------
 
 The main purpose of TROIA Language is developing business applications, so it contains too many useful features to access, operate and report business layer information.
 
