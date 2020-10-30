@@ -99,25 +99,24 @@ As mentioned before; if login fails, system returns an error message in "login e
 +----+--------------------------------------+----+--------------------------------------+  
 | 7  | User Blocked                         | 8  | Invalid Timezone                     | 
 +----+--------------------------------------+----+--------------------------------------+  
-| 9  | Load Balancer Redirect               | 10 | No Suaitable Server Found            | 
+| 10 | No Suaitable Server Found            | 11 | User Count Error                     |
 +----+--------------------------------------+----+--------------------------------------+  
-| 11 | User Count Error                     | 12 | Load Balancer Error                  | 
+| 12 | Load Balancer Error                  | 15 | Max User Count Error                 | 
 +----+--------------------------------------+----+--------------------------------------+  
-| 15 | Max User Count Error                 | 16 | Version Inconsistency                | 
+| 16 | Version Inconsistency                | 17 | Maintenance Mode                     | 
 +----+--------------------------------------+----+--------------------------------------+   
-| 17 | Maintenance Mode                     | 18 | Ws Invalid License                   |
+| 18 | Ws Invalid License                   | 19 | Access Denied by Server Access File  |
 +----+--------------------------------------+----+--------------------------------------+        
-| 19 | Access Denied by Server Access File  | 20 | Max Session Count Error              | 
+| 20 | Max Session Count Error              | 21 | Module User Count Error              | 
 +----+--------------------------------------+----+--------------------------------------+    
-| 21 | Module User Count Error              | 22 | Invalid Module License               | 
+| 22 | Invalid Module License               | 23 | Invalid Server                       | 
 +----+--------------------------------------+----+--------------------------------------+    
-| 23 | Invalid Server                       | 24 | Invalid Input                        | 
+| 24 | Invalid Input                        | 25 | System Error                         | 
 +----+--------------------------------------+----+--------------------------------------+    
-| 25 | System Error                         | 26 | Invalid Client Type                  | 
-+----+--------------------------------------+----+--------------------------------------+    
-| 28 | Language License Error               |    |                                      |
-+----+--------------------------------------+----+--------------------------------------+ 
- 
+| 26 | Invalid Client Type                  | 28 | Language License Error               | 
++----+--------------------------------------+----+--------------------------------------+
+
+
  
 
 logout() Method
