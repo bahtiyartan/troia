@@ -83,12 +83,12 @@ login() method returns LoginResponse complex type which has members below:
  - **SessionId (String) :** This member returns user’s session id, otherwise. If login fails it is an empty string.
  - **SecurityKey (String) :** Application Server returns a random security key for each successful login. Client application must pass this security key parameter while calling callService () method, to indicate it’s an authenticated application.
  - **ContactNum (String) :** This member returns users ContactNum which is stored in CONTACTNUM column of IASUSERS table.
- - **ErrorMessage (String) :** If login fails, this field returns login error message in given language; else this field is an empty string.
+ - **ErrorMessage (String) :** If login fails, this field returns login error message in given language; else this field is an empty string.(please see the table below)
  - **EncryptionKey (String):** If client application connects an encrypted connection, application server returns an EncryptionKey which will be used at service interactions. Client application must convert EncryptionKey to byte array using UTF8 encoding before using this key as encryption key.
  
  
 
-Here are some error codes for possible login failures:
+As mentioned before; if login fails, system returns an error message in "login error: n" format. n is the error code. Here are the possible error codes:
 
 +----+--------------------------------------+----+--------------------------------------+  
 | 1  | User Not Found                       | 2  | Wrong Password                       | 
