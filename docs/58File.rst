@@ -76,6 +76,9 @@ Also its possible to read some useful information about server side to use on fi
 
 	File Sep: \
 	User Home: TRACES
+	
+
+With 8.03.x versions it is also possible to access server and client file separators using SYSCLIENTFSEPARATOR and SYSSERVERFSEPARATOR variables.
 
 
 Opening/Closing Files
