@@ -157,7 +157,7 @@ Software Architecture Overview
 Basically, TROIA Platform allows programmer to develop applications that access data, manipulate it and save. To understand platform architecture its very important to understand the roles of application server and client(s). The graphic below, shows the main structures and layers of TROIA Platform from user interface to data. Also, it's possible to understand responsibility/functionality share of application server and client. 
 
 .. figure:: images/platformbasics/software-architecture.png
-   :width: 660 px
+   :width: 650 px
    :target: images/platformbasics/software-architecture.png
    :align: center
 
