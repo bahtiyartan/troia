@@ -120,7 +120,7 @@ Network Architecture Overview
 Here is an overview of all TROIA Plaform's main components and network structure from database to user interface. This overview clearly shows which components of TROIA Platform are server or client. Additionally, it is possible to see, directions of communication lines. Understanding this structure is too important to overcome some advanced questions about platform by yourself.
 
 .. figure:: images/platformbasics/troia-platform-network-architecture.png
-   :width: 660 px
+   :width: 650 px
    :target: images/platformbasics/troia-platform-network-architecture.png
    :align: center
 
