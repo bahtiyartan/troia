@@ -10,6 +10,12 @@ TROIA programming language is a fourth generation (4GL) programming language. It
 
 
 
+**Deutsche**
+
+Die Programmiersprache TROIA ist eine Programmiersprache der vierten Generation (4GL). Hauptzweck ist die effiziente Durchführung von Wartungs- und Entwicklungsprozessen von Geschäftsanwendungen wie ERP-Lösungen. Hardware, Betriebssysteme, Datenbanksysteme und protokollspezifische technische Details wurden so weit wie möglich abstrahiert. Es hat einen programmiererfreundlichen Ansatz so weit wie möglich. Die Programmiersprache TROIA wird auf der TROIA-Plattform ausgeführt, die auf der Java Virtual Machine (JVM) ausgeführt wird. Dieses Buch wurde geschrieben, um die Programmiersprache und Plattform TROIA vom Anfänger bis zum Fortgeschrittenen zu unterrichten. Hoffe, es wird nützlich sein für diejenigen, die lernen wollen.
+
+
+
 **Français**
 
 Le langage de programmation TROIA est un langage de programmation de quatrième génération (4GL). Son objectif principal est de mener à bien les processus de maintenance et de développement d'applications métier telles que les solutions ERP. Le matériel, les systèmes d'exploitation, les systèmes de base de données, les détails techniques spécifiques aux protocoles ont été résumés autant que possible. Il a une approche conviviale pour les programmeurs autant que possible. Le langage de programmation TROIA fonctionne sur la plate-forme TROIA qui fonctionne sur la machine virtuelle Java (JVM). Ce livre a été écrit pour enseigner le langage de programmation et la plate-forme TROIA du débutant au avancé. J'espère que cela sera utile pour ceux qui veulent apprendre.
