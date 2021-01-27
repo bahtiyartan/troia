@@ -1,7 +1,7 @@
 
 
 =============================================
-Appendix II - International Book Presentation
+Appendix II - International Introductory Text
 =============================================
 
 **English**
