@@ -521,16 +521,37 @@ File Compression
 	COPYFILE  'ServerSourceFile5.txt' INTO STRPATH2;
 
 	DELETEFILE 'Demo.zip';
+	
 
+Example 1: Creating a HTML Document with BASE64 image.
+------------------------------------------------------
 
-Exercise 1: Writing Files
+Here is a samplecode that reads a png file as base64 and builds a HTM document that shows this image as embedded image.
+
+::
+
+	/*read binary image*/
+	OPEN FILE '*C:\TMP\sampleimage.png';
+	GETBLOCK STRINGVAR3,'' CODEPAGE 'BASE64';
+	CLOSE FILE;
+
+	/*add html tags */
+	STRINGVAR3 = '<img src="data:image/png;base64, ' + STRINGVAR3 + '"/>';
+
+	/*write html file*/
+	OPEN FILE '*C:\TMP\sampleimage.htm' FORNEW;
+	PUT STRINGVAR3 CODEPAGE 'UTF-8';
+	CLOSE FILE
+	
+
+Example 2: Writing Files
 ---------------------------------
 
 Write a piece of TROIA code that:
 
 	- Writes the list of files in a given folder to a file.
 
-Exercise 2: Working With Multiple Files
+Example 3: Working With Multiple Files
 -------------------------------------
 
 Modify the code that you write for previous exercise and write a TROIA code that
@@ -545,7 +566,7 @@ Modify the code that you write for previous exercise and write a TROIA code that
 	
 Please be sure that your code opens two files concurrently.
 
-Exercise 3: Prepare Zip Content
+Example 4: Prepare Zip Content
 -----------------------------
 
 	- Prepare two files that contains digest data (SHA1) of two files.
