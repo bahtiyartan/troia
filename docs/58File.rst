@@ -523,8 +523,8 @@ File Compression
 	DELETEFILE 'Demo.zip';
 	
 
-Example 1: Creating a HTML Document with BASE64 image.
-------------------------------------------------------
+Example 1: Read Image in BASE64 Encoding
+----------------------------------------
 
 Here is a samplecode that reads a png file as base64 and builds a HTM document that shows this image as embedded image.
 
