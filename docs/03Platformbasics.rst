@@ -184,7 +184,16 @@ How to Read Version Number?
 
 As an TROIA application developer or system administrator, it is important to know your version number. Because some new features revealed or bugs are fixed with new releases. And you must know whether your version supports the features that you need or all your components have same version to be sure that your installation is valid or not.
 
-You can read your version number on login screen or from about dialog (Menu->About). Sample version numbers are listed below:
+You can read your version number on login screen or from about dialog (Menu->About). 
+
+
+.. figure:: images/platformbasics/versionno.png
+   :width: 459 px
+   :target: images/platformbasics/versionno.png
+   :align: center
+
+
+Sample version numbers are listed below:
 
 ::
 
