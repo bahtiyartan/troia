@@ -156,11 +156,24 @@ All development tools ask programmer to select hotline before modification and m
 Comments in TROIA
 -------------------------
 
-Using /*  */ block is the only way to add comment to TROIA Code.
+TROIA supports several ways of commenting:
+
+Syntax for single-line comments:
 
 ::
 	
-	/* this is a single line comment */
+	#this is a single line comment
+	RESULT = THIS.CALCULATE(P1, P2);
+	//this is a single line comment
+	
+	RESULT = RESULT * 3;
+
+
+
+Syntax for multiple-line comments:
+
+::
+	
 	RESULT = THIS.CALCULATE(P1, P2);
 	
 	/* 
@@ -169,5 +182,3 @@ Using /*  */ block is the only way to add comment to TROIA Code.
 	*/
 	RESULT = RESULT * 3;
 	
-	
-Line comment with // , # or any other character(s) is not supported.
