@@ -53,7 +53,7 @@ Opening/Closing TCP Ports
 
 ::
 
-	OPENPORT TCP {portname} PORT {portnumber} [IPADDRESS {ipaddress}];
+	OPENPORT TCP {portname} PORT {portnumber} [IPADDRESS {ipaddress}] [ENCODING {encoding}];
 	
 
 ::
@@ -156,6 +156,58 @@ write data to a tcp port
 	OPENPORT TCP PORTNAME PORT 4848;
 	SENDTOPORT PORTNAME 'Hello World!';
 	CLOSEPORT PORTNAME;
+	
+	
+
+Example 1: Transfering File through Socket
+------------------------------------------
+
+This example transfers a single line of a file between two canias client through a TCP connection.
+
+Here is the code for transmitter, this transmitter reads the entire file and pass it to receiver.
+
+::
+
+	OPEN FILE '*C:\TMP\tcp-example\korean.txt';
+	GETBLOCK STRINGVAR3,'' CODEPAGE 'ISO8859_9';
+	CLOSE FILE;
+	
+	OBJECT: 
+		STRING PORTNAME;
+
+	PORTNAME = '*PORT1';
+	OPENPORT TCP PORTNAME PORT 50507 IPADDRESS '192.168.5.164' ENCODING 'ISO8859_9';
+	STRINGVAR1 = SYS_STATUS;
+	SENDTOPORT PORTNAME STRINGVAR3;
+	STRINGVAR2 = SYS_STATUS;
+	CLOSEPORT PORTNAME;
+	
+	
+	
+And the code for the receiver, this receiver reads a single line and breaks tcp connection, then writes the line to target file.
+
+::
+
+	OBJECT: 
+		STRING PORTNAME;
+
+	PORTNAME = '*PORT1';
+	OPENPORT TCP PORTNAME PORT 50507 ENCODING 'ISO8859_9';
+
+	STRINGVAR3 = '';
+	WHILE 1 == 1 
+	BEGIN
+		READFROMPORT PORTNAME INTO STRINGVAR3;
+
+		IF STRINGVAR3 != '' THEN
+			BREAK;
+		ENDIF;
+	ENDWHILE;
+	CLOSEPORT PORTNAME;
+
+	OPEN FILE '*C:\TMP\tcp-example\target.txt' FORNEW;
+	PUT STRINGVAR3,'' CODEPAGE 'ISO8859_9';
+	CLOSE FILE;
 
 
 
