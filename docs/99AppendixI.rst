@@ -15,7 +15,7 @@ Appendix I - Related Technologies
 +------------------------+----------------------------------------------------------------------------------+
 | **BROWSER**            | CHROME, EDGE, SAFARI, FIREFOX                                                    |
 +------------------------+----------------------------------------------------------------------------------+
-| **LOCALIZATION**       | MULTILANGUAGE, TIMEZONE, CALENDAR, DATE/NUMBER FORMATTING                        |
+| **LOCALIZATION**       | MULTILANGUAGE, TIMEZONE, CALENDAR, DATE/NUMBER/MONEY FORMATS                     |
 +------------------------+----------------------------------------------------------------------------------+
 | **IOT**                | MTCONNECT, MQTT, SIEMENS/S7, TCP-IP, OPC, COMM PORT                              |
 +------------------------+----------------------------------------------------------------------------------+
