@@ -1,10 +1,10 @@
 
 
-====================================
-Appendix I - Some Supported Protocols & File Types
-====================================
+=====================================
+Appendix I - Related Technologies
+=====================================
 
-*TROIA Programming Language supports too many protocols, algorithms, file extensions. This appendix aims to list some of them to ease developers to understand capabilities of the platform.*
+*TROIA Programming Language supports too many platforms, database systems, protocols, algorithms, file extensions. This appendix aims to list some of them to ease developers to understand capabilities of the platform.*
 
             
       
