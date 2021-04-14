@@ -4,7 +4,7 @@
 Appendix I - Related Technologies
 =====================================
 
-*TROIA Programming Language supports too many platforms, database systems, protocols, algorithms, file extensions. This appendix aims to list some of them to ease developers to understand capabilities of the platform.*
+*TROIA Programming Language supports too many platforms, database systems, protocols, algorithms, concepts and file extensions. This appendix aims to list some of them to ease developers to understand capabilities of the platform.*
 
             
       
@@ -15,6 +15,8 @@ Appendix I - Related Technologies
 +------------------------+----------------------------------------------------------------------------------+
 | **BROWSER**            | CHROME, EDGE, SAFARI, FIREFOX                                                    |
 +------------------------+----------------------------------------------------------------------------------+
+| **LOCALIZATION**       | MULTILANGUAGE, TIMEZONE, CALENDAR, DATE/NUMBER FORMATTING                        |
++------------------------+----------------------------------------------------------------------------------+
 | **IOT**                | MTCONNECT, MQTT, SIEMENS/S7, TCP-IP, OPC, COMM PORT                              |
 +------------------------+----------------------------------------------------------------------------------+
 |                        | HTTP,HTTPS, SOAP                                                                 |
@@ -23,15 +25,17 @@ Appendix I - Related Technologies
 +------------------------+----------------------------------------------------------------------------------+
 | **MAIL**               | SMTP, POP3, IMAP                                                                 |
 +------------------------+----------------------------------------------------------------------------------+
-| **CALENDAR/CONTACT**   | CALDAV, CARDDAV, WEBDAV                                                          |
+| **CALENDAR/CONTACT**   | CALDAV, CARDDAV, WEBDAV, EXCHANGE WS, ICS                                        |
 +------------------------+----------------------------------------------------------------------------------+
-|                        | PDF, XLS, XLSX, RTF                                                              |
+| **FILE**               | PDF, XLS, XLSX, RTF, ZIP                                                         |
++------------------------+----------------------------------------------------------------------------------+
+| **PDF STANDARDS**      | PDFA1 A/B, PDFA3 A/B, ZUGFERDBASIC, ZUGFERDCOMFORT, ZUGFERTEXTENDED              |
 +------------------------+----------------------------------------------------------------------------------+
 |                        | XML, JSON, CSV                                                                   |
 +------------------------+----------------------------------------------------------------------------------+
-| **ENCRYPTION**         | AES, AESCP, DES, BLF, PGP                                                        |
+| **ENCRYPTION-HASH**    | AES, AESCP, DES, BLF, PGP, MD5,SHA256                                            |
 +------------------------+----------------------------------------------------------------------------------+
-|                        | LDAP, ACTIVEDIRECTORY, EXCHANGE WS                                               |
+| **AUTHENTICATION**     | DATABASE, FILE, LDAP, ACTIVEDIRECTORY                                            |
 +------------------------+----------------------------------------------------------------------------------+
 | **TELEPHONY**          | SMS, TAPI, CTI                                                                   |
 +------------------------+----------------------------------------------------------------------------------+
