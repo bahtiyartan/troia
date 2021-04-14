@@ -47,9 +47,9 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    86Mailing
    90SMS
    92ProgramsLibraries
-   94ClientPlugin
-   96AppendixI
+   99AppendixI
    99AppendixII
+   99AppendixIII
    
    #Security
    #vectors
