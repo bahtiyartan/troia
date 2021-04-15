@@ -36,13 +36,14 @@ GETUSERINFO() system function returns some useful information for file operation
 		STRING S1,
 		STRING STRINGVAR3;
 
-	S1 = 'Client Temp Folder: ' + GETUSERINFO('client.temp.folder');
-	S1 = S1 + TOCHAR(10) + 'Client File Sep: ' + GETUSERINFO('file.separator');
-	S1 = S1 + TOCHAR(10) + 'Client User Home: ' + GETUSERINFO('user.home');
-	S1 = S1 + TOCHAR(10) + 'Client User Dir: ' + GETUSERINFO('user.dir');
-	S1 = S1 + TOCHAR(10) + 'Client Java Home: ' + GETUSERINFO('java.home');
-	S1 = S1 + TOCHAR(10) + 'Client File Enc: ' + GETUSERINFO('file.encoding');
-	S1 = S1 + TOCHAR(10) + 'Client SetGet Folder: ' + GETUSERINFO('user.setgetfolder');
+	S1 = '';
+	S1 = S1 + TOCHAR(10) + GETUSERINFO('client.temp.folder');
+	S1 = S1 + TOCHAR(10) + GETUSERINFO('file.separator');
+	S1 = S1 + TOCHAR(10) + GETUSERINFO('user.home');
+	S1 = S1 + TOCHAR(10) + GETUSERINFO('user.dir');
+	S1 = S1 + TOCHAR(10) + GETUSERINFO('java.home');
+	S1 = S1 + TOCHAR(10) + GETUSERINFO('file.encoding');
+	S1 = S1 + TOCHAR(10) + GETUSERINFO('user.setgetfolder');
 
 
 	STRINGVAR3 = S1;
@@ -51,13 +52,13 @@ And here is the result of sample code, please run the code on your own client an
 
 ::
 
-	Client Temp Folder: C:\Users\btan.IASRDDC\RESOURCES\TMP\
-	Client File Sep: \
-	Client User Home: C:\Users\btan.IASRDDC
-	Client User Dir: C:\603server\toWeb
-	Client Java Home: C:\Program Files\Java\jre7
-	Client File Enc: Cp1254
-	Client SetGet Folder: C:\603server\RESOURCES\SETGET\LOCAL\IAS604502\btan\
+	C:\Users\btan.IASRDDC\RESOURCES\TMP\
+	\
+	C:\Users\btan.IASRDDC
+	C:\603server\toWeb
+	C:\Program Files\Java\jre7
+	Cp1254
+	C:\603server\RESOURCES\SETGET\LOCAL\IAS604502\btan\
 	
 	
 Also its possible to read some useful information about server side to use on file operations. Server side information is provided by SYSGETSERVERINFO() method. Here is the sample code and its result for SYSGETSERVERINFO() method:
@@ -70,19 +71,20 @@ Also its possible to read some useful information about server side to use on fi
 		STRING STRINGVAR3;
 
 	SEP = SYSGETSERVERINFO('file.separator');
-	S1 = 'File Sep: ' + SEP;
-	S1 = S1 + TOCHAR(10) + 'Trace Folder: ' + SYSGETSERVERINFO('TraceFolder');
-	S1 = S1 + TOCHAR(10) + 'Temp Folder: ' + SYSGETSERVERINFO('ServerPath') + SEP + 'TempFiles' + SEP;
-	S1 = S1 + TOCHAR(10) + 'Temp Folder: ' + SYSGETSERVERINFO('server.temp.folder'); //after 8.03.02 04x
+	
+	S1 = S1 + TOCHAR(10) + SEP;
+	S1 = S1 + TOCHAR(10) + SYSGETSERVERINFO('TraceFolder');
+	S1 = S1 + TOCHAR(10) + SYSGETSERVERINFO('ServerPath') + SEP + 'TempFiles' + SEP; 
+	S1 = S1 + TOCHAR(10) + SYSGETSERVERINFO('server.temp.folder'); /*after 8.03.02 04x*/
 
 	STRINGVAR3 = S1;
 
 ::
 
-	File Sep: \
-	Trace Folder: TRACES
-	Temp Folder (1): C:\Users\btan\workspace\troia\TempFiles\
-	Temp Folder (2): C:\Users\btan\workspace\troia\TempFiles\
+	\
+	TRACES
+	C:\Users\btan\workspace\troia\TempFiles\
+	C:\Users\btan\workspace\troia\TempFiles\
 	
 
 With 8.03.x versions it is also possible to access server and client file separators using SYSCLIENTFSEPARATOR and SYSSERVERFSEPARATOR variables.
