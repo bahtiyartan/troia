@@ -65,24 +65,26 @@ Also its possible to read some useful information about server side to use on fi
 ::
 
 	OBJECT:
+		STRING SEP,
 		STRING S1,
 		STRING STRINGVAR3;
 
-	S1 = 'Server File Sep: ' + SYSGETSERVERINFO('file.separator');
+	SEP = SYSGETSERVERINFO('file.separator');
+	S1 = 'File Sep: ' + SEP;
 	S1 = S1 + TOCHAR(10) + 'Trace Folder: ' + SYSGETSERVERINFO('TraceFolder');
-	S1 = S1 + TOCHAR(10) + 'Server Temp Folder (1): ' + SYSGETSERVERINFO('ServerPath') + SYSGETSERVERINFO('file.separator') + 'TempFiles' + SYSGETSERVERINFO('file.separator');
-	S1 = S1 + TOCHAR(10) + 'Server Temp Folder (2): ' + SYSGETSERVERINFO('ServerPath') + SYSSERVERFSEPARATOR + 'TempFiles' + SYSSERVERFSEPARATOR; //after 8.03.x versions
-	S1 = S1 + TOCHAR(10) + 'Server Temp Folder (3): ' + SYSGETSERVERINFO('server.temp.folder'); //after 8.03.02 041501
+	S1 = S1 + TOCHAR(10) + 'Temp Folder (1): ' + SYSGETSERVERINFO('ServerPath') + SEP + 'TempFiles' + SEP;
+	S1 = S1 + TOCHAR(10) + 'Temp Folder (2): ' + SYSGETSERVERINFO('ServerPath') + SYSSERVERFSEPARATOR + 'TempFiles' + SYSSERVERFSEPARATOR; //after 8.03.x versions
+	S1 = S1 + TOCHAR(10) + 'Temp Folder (3): ' + SYSGETSERVERINFO('server.temp.folder'); //after 8.03.02 041501
 
 	STRINGVAR3 = S1;
 
 ::
 
-	Server File Sep: \
+	File Sep: \
 	Trace Folder: TRACES
-	Server Temp Folder (1): C:\Users\btan\workspace\troia\TempFiles\
-	Server Temp Folder (2): C:\Users\btan\workspace\troia\TempFiles\
-	Server Temp Folder (3): C:\Users\btan\workspace\troia\TempFiles\
+	Temp Folder (1): C:\Users\btan\workspace\troia\TempFiles\
+	Temp Folder (2): C:\Users\btan\workspace\troia\TempFiles\
+	Temp Folder (3): C:\Users\btan\workspace\troia\TempFiles\
 	
 
 With 8.03.x versions it is also possible to access server and client file separators using SYSCLIENTFSEPARATOR and SYSSERVERFSEPARATOR variables.
