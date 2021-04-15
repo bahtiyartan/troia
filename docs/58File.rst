@@ -39,6 +39,7 @@ GETUSERINFO() system function returns some useful information for file operation
 	S1 = '';
 	S1 = S1 + TOCHAR(10) + GETUSERINFO('client.temp.folder');
 	S1 = S1 + TOCHAR(10) + GETUSERINFO('file.separator');
+	S1 = S1 + TOCHAR(10) + SYSCLIENTFSEPARATOR; /* valid after 8.03 */
 	S1 = S1 + TOCHAR(10) + GETUSERINFO('user.home');
 	S1 = S1 + TOCHAR(10) + GETUSERINFO('user.dir');
 	S1 = S1 + TOCHAR(10) + GETUSERINFO('java.home');
@@ -53,6 +54,7 @@ And here is the result of sample code, please run the code on your own client an
 ::
 
 	C:\Users\btan.IASRDDC\RESOURCES\TMP\
+	\
 	\
 	C:\Users\btan.IASRDDC
 	C:\603server\toWeb
@@ -73,22 +75,21 @@ Also its possible to read some useful information about server side to use on fi
 	SEP = SYSGETSERVERINFO('file.separator');
 	
 	S1 = S1 + TOCHAR(10) + SEP;
+	S1 = S1 + TOCHAR(10) + SYSSERVERFSEPARATOR; /* valid after 8.03 */
 	S1 = S1 + TOCHAR(10) + SYSGETSERVERINFO('TraceFolder');
 	S1 = S1 + TOCHAR(10) + SYSGETSERVERINFO('ServerPath') + SEP + 'TempFiles' + SEP; 
-	S1 = S1 + TOCHAR(10) + SYSGETSERVERINFO('server.temp.folder'); /*after 8.03.02 04x*/
+	S1 = S1 + TOCHAR(10) + SYSGETSERVERINFO('server.temp.folder'); /*valid after 8.03.02 04xxxx*/
 
 	STRINGVAR3 = S1;
 
 ::
 
 	\
+	\
 	TRACES
 	C:\Users\btan\workspace\troia\TempFiles\
 	C:\Users\btan\workspace\troia\TempFiles\
 	
-
-With 8.03.x versions it is also possible to access server and client file separators using SYSCLIENTFSEPARATOR and SYSSERVERFSEPARATOR variables.
-
 
 Opening/Closing Files
 ---------------------
