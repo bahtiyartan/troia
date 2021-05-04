@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="de349950-3b58-4c3b-9bd5-d709a8c92e09" activeEnvironment="Default" name="canias.ws.dev.2" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="4a5a62d2-fb35-4c14-b599-3192477e0161" wsaVersion="NONE" name="CaniasWebServiceSoapBinding" type="wsdl" bindingName="{http://webservice.ias.com}CaniasWebServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://live-dev.canias.com/caniasLiveWS-v2/services/CaniasWebService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://live-dev.canias.com/caniasLiveWS-v2/services/CaniasWebService?wsdl"><con:part><con:url>https://live-dev.canias.com/caniasLiveWS-v2/services/CaniasWebService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://webservice.ias.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://webservice.ias.com" xmlns:intf="http://webservice.ias.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema targetNamespace="http://webservice.ias.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="LoginResponse">
+        <sequence>
+          <element name="SessionId" nillable="true" type="xsd:string"/>
+          <element name="ErrorMessage" nillable="true" type="xsd:string"/>
+          <element name="ContactNum" nillable="true" type="xsd:string"/>
+          <element name="EncryptionKey" nillable="true" type="xsd:string"/>
+          <element name="Success" type="xsd:boolean"/>
+          <element name="SecurityKey" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="StringResponse">
+        <sequence>
+          <element name="Value" nillable="true" type="xsd:string"/>
+          <element name="Comressed" type="xsd:boolean"/>
+        </sequence>
+      </complexType>
+      <complexType name="CaniasResponse">
+        <sequence>
+          <element name="Response" nillable="true" type="impl:StringResponse"/>
+          <element name="ExtraVariables" nillable="true" type="impl:StringResponse"/>
+          <element name="Messages" nillable="true" type="impl:StringResponse"/>
+          <element name="SYSStatus" type="xsd:int"/>
+          <element name="SYSStatusError" nillable="true" type="xsd:string"/>
+          <element name="RequestId" type="xsd:int"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOf_xsd_string">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="logoutRequest">
+    <wsdl:part name="SessionId" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="loginRequest">
+    <wsdl:part name="Client" type="xsd:string"/>
+    <wsdl:part name="Language" type="xsd:string"/>
+    <wsdl:part name="DBServer" type="xsd:string"/>
+    <wsdl:part name="DBName" type="xsd:string"/>
+    <wsdl:part name="ApplicationServer" type="xsd:string"/>
+    <wsdl:part name="Username" type="xsd:string"/>
+    <wsdl:part name="Password" type="xsd:string"/>
+    <wsdl:part name="Encrypted" type="xsd:boolean"/>
+    <wsdl:part name="Compression" type="xsd:boolean"/>
+    <wsdl:part name="LCheck" type="xsd:string"/>
+    <wsdl:part name="VKey" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part name="loginReturn" type="impl:LoginResponse"/>
+  </wsdl:message>
+  <wsdl:message name="logoutResponse">
+    <wsdl:part name="logoutReturn" type="xsd:boolean"/>
+  </wsdl:message>
+  <wsdl:message name="listServicesRequest">
+    <wsdl:part name="SessionId" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="callServiceRequest">
+    <wsdl:part name="SessionId" type="xsd:string"/>
+    <wsdl:part name="SecurityKey" type="xsd:string"/>
+    <wsdl:part name="ServiceId" type="xsd:string"/>
+    <wsdl:part name="Parameters" type="xsd:string"/>
+    <wsdl:part name="Compressed" type="xsd:boolean"/>
+    <wsdl:part name="Permanent" type="xsd:boolean"/>
+    <wsdl:part name="ExtraVariables" type="xsd:string"/>
+    <wsdl:part name="RequestId" type="xsd:int"/>
+  </wsdl:message>
+  <wsdl:message name="listServicesResponse">
+    <wsdl:part name="listServicesReturn" type="impl:ArrayOf_xsd_string"/>
+  </wsdl:message>
+  <wsdl:message name="callServiceResponse">
+    <wsdl:part name="callServiceReturn" type="impl:CaniasResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="CaniasWebService">
+    <wsdl:operation name="login" parameterOrder="Client Language DBServer DBName ApplicationServer Username Password Encrypted Compression LCheck VKey">
+      <wsdl:input message="impl:loginRequest" name="loginRequest"/>
+      <wsdl:output message="impl:loginResponse" name="loginResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="logout" parameterOrder="SessionId">
+      <wsdl:input message="impl:logoutRequest" name="logoutRequest"/>
+      <wsdl:output message="impl:logoutResponse" name="logoutResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="callService" parameterOrder="SessionId SecurityKey ServiceId Parameters Compressed Permanent ExtraVariables RequestId">
+      <wsdl:input message="impl:callServiceRequest" name="callServiceRequest"/>
+      <wsdl:output message="impl:callServiceResponse" name="callServiceResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="listServices" parameterOrder="SessionId">
+      <wsdl:input message="impl:listServicesRequest" name="listServicesRequest"/>
+      <wsdl:output message="impl:listServicesResponse" name="listServicesResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CaniasWebServiceSoapBinding" type="impl:CaniasWebService">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="login">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="loginRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.ias.com" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="loginResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.ias.com" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="logoutRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.ias.com" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="logoutResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.ias.com" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="callService">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="callServiceRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.ias.com" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="callServiceResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.ias.com" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listServices">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="listServicesRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.ias.com" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="listServicesResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.ias.com" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CaniasWebServiceService">
+    <wsdl:port binding="impl:CaniasWebServiceSoapBinding" name="CaniasWebService">
+      <wsdlsoap:address location="http://live-dev.canias.com/caniasLiveWS-v2/services/CaniasWebService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://live-dev.canias.com/caniasLiveWS-v2/services/CaniasWebService</con:endpoint></con:endpoints><con:operation id="122edb9a-2410-4a88-b468-2faddc5d7337" isOneWay="false" action="" name="callService" bindingOperationName="callService" type="Request-Response" outputName="callServiceResponse" inputName="callServiceRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2ce648f7-f5f7-4be8-96e4-e5b428e2ad0e" name="2.1 Call Service"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://live-dev.canias.com/caniasLiveWS-v2/services/CaniasWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.ias.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:callService soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <SessionId xsi:type="xsd:string">btan_401360</SessionId>\r
+         <SecurityKey xsi:type="xsd:string">1d5705a23f524954e62d9b91e70d1212</SecurityKey>\r
+         <ServiceId xsi:type="xsd:string">RDTEST</ServiceId>\r
+         <Parameters xsi:type="xsd:string"><![CDATA[<PARAMETERS><PARAM>this is a parameter</PARAM></PARAMETERS>]]]]>><![CDATA[</Parameters>\r
+         <Compressed xsi:type="xsd:boolean">false</Compressed>\r
+         <Permanent xsi:type="xsd:boolean">false</Permanent>\r
+         <ExtraVariables xsi:type="xsd:string"></ExtraVariables>\r
+         <RequestId xsi:type="xsd:int">0</RequestId>\r
+      </web:callService>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.ias.com/CaniasWebService/callServiceRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="d3831508-baad-4fe6-9f52-77cff36abddd" isOneWay="false" action="" name="listServices" bindingOperationName="listServices" type="Request-Response" outputName="listServicesResponse" inputName="listServicesRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="28ce4dfd-8a31-41df-bbea-fdce9b373200" name="2.0 List Services"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://live-dev.canias.com/caniasLiveWS-v2/services/CaniasWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.ias.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:listServices soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <SessionId xsi:type="xsd:string">?</SessionId>\r
+      </web:listServices>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.ias.com/CaniasWebService/listServicesRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="2139596f-f7b4-421e-b202-e1769d29dc25" isOneWay="false" action="" name="login" bindingOperationName="login" type="Request-Response" outputName="loginResponse" inputName="loginRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a16c97c7-3b6e-44f8-bae7-74d1423232b6" name="1 Login"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://live-dev.canias.com/caniasLiveWS-v2/services/CaniasWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.ias.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:login soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <Client xsi:type="xsd:string">?</Client>\r
+         <Language xsi:type="xsd:string">?</Language>\r
+         <DBServer xsi:type="xsd:string">?</DBServer>\r
+         <DBName xsi:type="xsd:string">?</DBName>\r
+         <ApplicationServer xsi:type="xsd:string">?</ApplicationServer>\r
+         <Username xsi:type="xsd:string">?</Username>\r
+         <Password xsi:type="xsd:string">?</Password>\r
+         <Encrypted xsi:type="xsd:boolean">?</Encrypted>\r
+         <Compression xsi:type="xsd:boolean">?</Compression>\r
+         <LCheck xsi:type="xsd:string">?</LCheck>\r
+         <VKey xsi:type="xsd:string">?</VKey>\r
+      </web:login>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.ias.com/CaniasWebService/loginRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="87062f08-560d-4977-bd0e-b64503d3721c" isOneWay="false" action="" name="logout" bindingOperationName="logout" type="Request-Response" outputName="logoutResponse" inputName="logoutRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c0f38d16-4560-4b79-b127-494dc83c40a2" name="3 Logout"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://live-dev.canias.com/caniasLiveWS-v2/services/CaniasWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.ias.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:logout soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <SessionId xsi:type="xsd:string">?</SessionId>\r
+      </web:logout>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.ias.com/CaniasWebService/logoutRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="5422d119-cc2d-4cc2-8d7e-a386b3114e11" name="Test"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ce8ecd46-81ab-4549-a4d7-09fd7345be7e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Basic Echo" searchProperties="true"><con:settings/><con:testStep type="properties" name="DefineProperties" id="0e2909ed-ce9a-411f-b48f-1f46ec655fd9"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>AppServer</con:name><con:value>192.168.50.7:44505/803DEVS2</con:value></con:property><con:property><con:name>DBServer</con:name><con:value>CANIAS</con:value></con:property><con:property><con:name>DBName</con:name><con:value>IAS803DEV</con:value></con:property><con:property><con:name>User</con:name><con:value>btan</con:value></con:property><con:property><con:name>Pass</con:name><con:value>1</con:value></con:property><con:property><con:name>SessionId</con:name><con:value>btan_401389</con:value></con:property><con:property><con:name>SecKey</con:name><con:value>796e2711d1b51def3d08f32b88a0d750</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="79544bdc-45f5-4ccc-9443-05a9c0d372bf" name="login"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CaniasWebServiceSoapBinding</con:interface><con:operation>login</con:operation><con:request name="login" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8398969d-b867-4be2-800b-23871672baa7"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://live-dev.canias.com/caniasLiveWS-v2/services/CaniasWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.ias.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:login soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <Client xsi:type="xsd:string">00</Client>
+         <Language xsi:type="xsd:string">E</Language>
+         <DBServer xsi:type="xsd:string">${DBServer}</DBServer>
+         <DBName xsi:type="xsd:string">${DBName}</DBName>
+         <ApplicationServer xsi:type="xsd:string">${AppServer}</ApplicationServer>
+         <Username xsi:type="xsd:string">${User}</Username>
+         <Password xsi:type="xsd:string">${Pass}</Password>
+         <Encrypted xsi:type="xsd:boolean">false</Encrypted>
+         <Compression xsi:type="xsd:boolean">false</Compression>
+         <LCheck xsi:type="xsd:string"></LCheck>
+         <VKey xsi:type="xsd:string"></VKey>
+      </web:login>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="bd9fcffe-a55b-4c88-969a-3263df0822f9" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.ias.com/CaniasWebService/loginRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="f7c3b729-53aa-48d2-85cb-9c3b54dca353"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>transfersessionid</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>login</con:sourceStep><con:sourcePath>//multiRef/SessionId</con:sourcePath><con:targetType>SessionId</con:targetType><con:targetStep>DefineProperties</con:targetStep><con:type>XPATH</con:type><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>transferSecKey</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>login</con:sourceStep><con:sourcePath>//multiRef/SecurityKey</con:sourcePath><con:targetType>SecKey</con:targetType><con:targetStep>DefineProperties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" id="33a01899-50f8-494d-a6df-7875c2be1443" name="call"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CaniasWebServiceSoapBinding</con:interface><con:operation>callService</con:operation><con:request name="call" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f8c4c995-7d5b-498f-bea6-9e4c303b793a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://live-dev.canias.com/caniasLiveWS-v2/services/CaniasWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.ias.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:callService soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <SessionId xsi:type="xsd:string">${SessionId}</SessionId>
+         <SecurityKey xsi:type="xsd:string">${SecKey}</SecurityKey>
+         <ServiceId xsi:type="xsd:string">RDTEST</ServiceId>
+         <Parameters xsi:type="xsd:string"><![CDATA[<PARAMETERS><PARAM>this is a parameter</PARAM></PARAMETERS>]]]]>><![CDATA[</Parameters>
+         <Compressed xsi:type="xsd:boolean">false</Compressed>
+         <Permanent xsi:type="xsd:boolean">false</Permanent>
+         <ExtraVariables xsi:type="xsd:string"></ExtraVariables>
+         <RequestId xsi:type="xsd:int">0</RequestId>
+      </web:callService>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="53fd4c87-bc55-4d4b-a930-a2ca36adf273" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.ias.com/CaniasWebService/callServiceRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="82effc41-a39f-4c91-8f55-61020e90a4ac" name="logout"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CaniasWebServiceSoapBinding</con:interface><con:operation>logout</con:operation><con:request name="logout" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="cf30e07b-f8d9-49c6-b2a9-b10db2ab4228"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://live-dev.canias.com/caniasLiveWS-v2/services/CaniasWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.ias.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:logout soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <SessionId xsi:type="xsd:string">${SessionId}</SessionId>
+      </web:logout>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9de94d03-3389-4ac8-9f83-ec3b0a24c315" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.ias.com/CaniasWebService/logoutRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
