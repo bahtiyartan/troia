@@ -53,10 +53,13 @@ Service Definition & Permissions
 
 To define a web service, firstly you must have a class with a method which will be called as web service. This class can be defined by using "TROIA IDE".
 
-WSRT01 - Web Services Definitions
-WSRT02 - Web Services User Rights
 
-..user rights
++-----------+----------------------------------------------------+
+| WSRT01    | Web Services Definitions                           |
++-----------+----------------------------------------------------+
+| WSRT02    | Web Services User Rights                           |
++-----------+----------------------------------------------------+
+
 
 Log-in/Log-out over Web Service
 -------------------------------
