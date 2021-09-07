@@ -93,18 +93,10 @@ SQL Related User Rights
 -----------------------
 
 
-Select Rights
-=============
+Select Rights & Delete Rigths
+=============================
 
 In TROIA Platform, it is possible to define some restrictions for users (or/and user profiles) to avoid unauthorized data access. This infrastructure is called "Select Rights" in TROIA jargon. Select Rights will be discussed in next sections with the other SQL rights. 
-
-
-
-
-
-Delete Rights
-=============
-.
 
 
 Insert Rights
