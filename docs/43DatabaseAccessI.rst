@@ -4,8 +4,7 @@
 Database Basics and Selecting Data
 ==================================
 
-As a business level programming language, TROIA has high collaboration with databases. With TROIA it is possible to perform too many operations on databases, such as connecting different databases, managing database transactions or executing SQL queries. This section aims to introduce basics of database concept in TROIA and select statement.
-
+*As a business level programming language, TROIA has high collaboration with databases. With TROIA it is possible to perform too many operations on databases, such as connecting different databases, managing database transactions or executing SQL queries. This section aims to introduce basics of database concept in TROIA and select statement.*
 
 Basics of Database Connection in TROIA
 --------------------------------------
