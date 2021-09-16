@@ -50,7 +50,48 @@ Briefly, system automatically establishes a database connection on user login to
 Connecting Different Databases
 ------------------------------
 
-connecting databases.
+To perform database operations on a database other than default connection you have to establish a custom database connection. In this case connect and disconnect operations are performed by TROIA Programmer, so *closing connection after db operations is in the responsibility of TROIA code*.
+
+
+To connect a database you can use MAKENEWCONNECTION command, and CLOSECONNECTION command to close database connection. As you may predict, MAKENEWCONNECTION command gets the id of the 
+database configuration line and a name for the new connection. CLOSECONNECTION command gets only connection name to close connection. Here are the basic syntaxes of the commands.
+
+
+::
+	
+	MAKENEWCONNECTION {connectionname} {user} {passw} {dbserver} {dbname};
+	CLOSECONNECTION {connectionname};
+	
+	//{user} and {passw} parameters are totally ignored, they are just for backward compatibility.
+
+
+It is also possible without defining a database configuration, but in this book we will totally ignore this option, for more information please see help documents of TROIA.
+
+
+::
+	
+	OBJECT: 
+	 STRING CONNECTIONNAME;
+
+	CONNECTIONNAME = 'NewConnection';
+	MAKENEWCONNECTION CONNECTIONNAME XXX XXX MYSQL U1;
+
+	IF SYS_STATUS THEN
+		STRINGVAR3 = SYS_STATUSERROR;
+	ELSE
+		STRINGVAR3 = 'ok.';
+		SETACTIVECONNECTION CONNECTIONNAME;
+		/**/
+		SELECT * FROM USERACCOUNTS INTO ACCOUNTS;
+		/**/
+		SETACTIVECONNECTION DEFAULT;
+	ENDIF;
+
+	CLOSECONNECTION CONNECTIONNAME;
+
+	SET TMPTABLE TO TABLE TMPTABLE;
+	STRINGVAR3 = SQL;
+
 
 
 Managing DB Transactions on Mulptiple Connections
