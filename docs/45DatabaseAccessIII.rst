@@ -50,7 +50,7 @@ Briefly, system automatically establishes a database connection on user login to
 Connecting Different Databases
 ------------------------------
 
-To perform database operations on a database other than default connection you have to establish a custom database connection. In this case connect and disconnect operations are performed by TROIA Programmer, so *closing connection after db operations is in the responsibility of TROIA code*.
+To perform database operations on a database other than default connection you have to establish a custom database connection. In this case connect and disconnect operations are performed by TROIA Programmer, so **closing connection after db operations is in the responsibility of TROIA code**.
 
 
 To connect a database you can use MAKENEWCONNECTION command, and CLOSECONNECTION command to close database connection. As you may predict, MAKENEWCONNECTION command gets the id of the 
@@ -65,10 +65,9 @@ database configuration line and a name for the new connection. CLOSECONNECTION c
 	//{user} and {passw} parameters are totally ignored, they are just for backward compatibility.
 	//{dbserver} and {dbname} are used to match a db configuration line in server config file.
 	
-Both commands sets SYS_STATUS and SYS_STATUSERROR if they encounters a problem while connecting and disconnecting process.
+It is also possible without defining a database configuration with additionaly syntaxes of MAKENEWCONNECTION, but in this book we will totally ignore this option, for more information please see help documents of TROIA. Both commands sets SYS_STATUS and SYS_STATUSERROR if they encounters a problem while connecting and disconnecting process. 
 
 
-It is also possible without defining a database configuration, but in this book we will totally ignore this option, for more information please see help documents of TROIA.
 
 
 ::
