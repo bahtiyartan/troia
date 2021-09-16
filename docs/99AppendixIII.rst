@@ -6,6 +6,8 @@ Appendix III - What's new in the book?
 
 *“Programming with TROIA” is a live book, so there are too many changes as corrections, new examples, new headings and even new sections. This appendix aims to list significant changes on book in a daily format from the latest to the first to help old readers.*
 
+2021.04.16 - New section: Database Connections.
+
 2021.04.07 - New examples for TCP Port on "Port Communication (Serial & TCP)" section.
 
 2020.12.04 - Graphics have been updated on "Platform Basics" section.
