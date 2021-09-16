@@ -75,7 +75,7 @@ When you establish a database connection, you just define a new connectiong with
 	SETACTIVECONNECTION DEFAULT;
 	
 
-Here is a sample code, that switch between default configuration and custom connection. In this code "SELECT 1" and "SELECT 3" are performed in default database configuration. "SELECT 2" is performed on custom connection which is connected to DBSERVER1.ARCHIVEDB. Like in this sample code, you must switch to default connection, before closing database connection. 
+Here is a sample code, that switch between default configuration and custom connection. In this code "SELECT A" and "SELECT C" are performed in default database configuration. "SELECT B" is performed on custom connection which is connected to DBSERVER1.ARCHIVEDB. Like in this sample code, you must switch to default connection, before closing database connection. 
 
 ::
 	
@@ -89,19 +89,19 @@ Here is a sample code, that switch between default configuration and custom conn
 		STRINGVAR3 = SYS_STATUSERROR;
 	ELSE
 		
-		/*SELECT 1*/
+		/*SELECT A*/
 		SELECT * FROM USERACCOUNTS INTO ACCOUNTS;
 		
 		
 		SETACTIVECONNECTION CONNECTIONNAME;
 		
-		/*SELECT 2*/
+		/*SELECT B*/
 		SELECT * FROM USERACCOUNTS INTO ACCOUNTS;
 	
 		SETACTIVECONNECTION DEFAULT;
 		
 		
-		/*SELECT 3*/
+		/*SELECT C*/
 		SELECT * FROM USERACCOUNTS INTO ACCOUNTS;
 		
 		CLOSECONNECTION CONNECTIONNAME;
