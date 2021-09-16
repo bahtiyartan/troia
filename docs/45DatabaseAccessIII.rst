@@ -67,7 +67,12 @@ database configuration line and a name for the new connection. CLOSECONNECTION c
 	
 It is also possible without defining a database configuration with additionaly syntaxes of MAKENEWCONNECTION, but in this book we will totally ignore this option, for more information please see help documents of TROIA. Both commands sets SYS_STATUS and SYS_STATUSERROR if they encounters a problem while connecting and disconnecting process. 
 
-When you establish a database connection, you just define a new connectiong with given name but your sql statements still uses default connection. To activate your connection to run queries on your custom connection you have to use SETACTIVECONNECTION command. SETACTIVECONNECTION gets the name of your connection that you want to activate, and this name must be  defined in your MAKENEWCONNECTION command before SETACTIVECONNECTION.
+When you establish a database connection, you just define a new connectiong with given name but your sql statements still uses default connection. To run queries on your new connection, you have to activate your db connection. SETACTIVECONNECTION command is used to switch between default connection and your custom connection. Here is the syntax for the command:
+
+::
+
+	SETACTIVECONNECTION {connectionname};
+	SETACTIVECONNECTION DEFAULT;
 
 
 ::
@@ -96,13 +101,13 @@ When you establish a database connection, you just define a new connectiong with
 
 
 
-# Managing DB Transactions on Mulptiple Connections
-# -------------------------------------------------
+Managing DB Transactions on Mulptiple Connections
+-------------------------------------------------
 
 
-# Dedicated Database Connections for Transactions
-# -----------------------------------------------
+Dedicated Database Connections for Transactions
+-----------------------------------------------
 
-# ...
+...
 
 
