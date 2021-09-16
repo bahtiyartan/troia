@@ -109,6 +109,12 @@ Here is a sample code, that switch between default configuration and custom conn
 	ENDIF;
 	
 	
+.. figure:: images/database/troia-custom-db-connection.png
+   :width: 574 px
+   :target: images/database/troia-custom-db-connection.png
+   :align: center
+	
+	
 With this approach, it is possible to create one or more custom connections and transfer data between two custom connections, with just managing active database connection. In this case "SELECT A" is performed on DBSERVER1.ARCHIVEDB, "SELECT B" is performed on DBSERVER2.ARCHIVEDB and "SELECT C" is performed on default database.
 
 
