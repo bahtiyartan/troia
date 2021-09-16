@@ -10,16 +10,16 @@ Database Connections
 Basics of DB Connection In TROIA
 --------------------------------
 
----------------------------------
-Database Configurations and Login
----------------------------------
+------------------------
+Configurations and Login
+------------------------
 
 Database configurations and database related login parameters are not directly related to TROIA Programming. But it is important to understand the whole process of database connection. The information of all database connections that can be made through the application server are defined in the [Databases] section of server configuration (settings) file. Each connection information has an unique id that distinguishes it from the other. This id consists of two parts, DBServer and DBName. 
 
 When a user logs in the system, system firstly finds database configuration using DBServer and DBName parameters from user's login parameters and then uses this configuration for database connection.
 
 ---------------------------
-Default Database Connection
+Default DB Connection
 ---------------------------
 
 Application server establishes two different database connections to same database using same configuration. Therefore; in ordinary cases, TROIA programmers do not need to make any operation to connect database to run queries, it automatically gets ready for TROIA programmers use without any TROIA level effort. It is also same for closing these connections, it is totally handled by the interpreter and closed while user logging out.
@@ -37,7 +37,7 @@ Second database connection is assigned for interpreter level database operations
 
 
 --------------------------------
-DB Connection Belongs To Session
+DB Connection Belongs to Session
 --------------------------------
 
 As you may predict, **database connection is a property or feature of user's session**, so even if user opens more than one transaction all transactions uses same database connection. This means database connection is shared by all open transactions, and if a session changes state or a feature of connection this state/feature is valid for other transactions. Actually this is one of the main technical reasons of why it is not possible to run more than one processes on different transactions simultaneously. For some special cases like multithreading, it is possible to establish dedicated database connections for each transaction. We will discuss this advanced issue in next sections, but for now you can just ignore dedicated database connections for transactions.
@@ -53,15 +53,13 @@ Connecting Different Databases
 connecting databases.
 
 
+Managing DB Transactions on Mulptiple Connections
+-------------------------------------------------
+
+
 Dedicated Database Connections for Transactions
 -----------------------------------------------
 
 ...
-
-
-SQL System Variable & Creating Scripts
---------------------------------------
-
-..
 
 
