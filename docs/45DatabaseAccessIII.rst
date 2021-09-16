@@ -50,6 +50,10 @@ Briefly, system automatically establishes a database connection on user login to
 Connecting Different Databases
 ------------------------------
 
+------------------------------
+Connecting / Disconnecting
+------------------------------
+
 To perform database operations on a database other than default connection you have to establish a custom database connection. In this case connect and disconnect operations are performed by TROIA Programmer, so **closing connection after db operations is in the responsibility of TROIA code**.
 
 
@@ -66,6 +70,12 @@ database configuration line and a name for the new connection. CLOSECONNECTION c
 	//{dbserver} and {dbname} are used to match a db configuration line in server config file.
 	
 It is also possible without defining a database configuration with additionaly syntaxes of MAKENEWCONNECTION, but in this book we will totally ignore this option, for more information please see help documents of TROIA. Both commands sets SYS_STATUS and SYS_STATUSERROR if they encounters a problem while connecting and disconnecting process. 
+
+
+-----------------------------
+Switching Between Connections
+-----------------------------
+
 
 When you establish a database connection, you just define a new connectiong with given name but your sql statements still uses default connection. To run queries on your new connection, you have to activate your db connection. SETACTIVECONNECTION command is used to switch between default connection and your custom connection. Here is the syntax for the command:
 
@@ -116,6 +126,9 @@ The graph below, illustrates database connection state while program cursor on "
    :target: images/database/troia-custom-db-connection.png
    :align: center
 	
+---------------------------
+Multiple Custom Connections
+---------------------------
 	
 With this approach, it is possible to create one or more custom connections and transfer data between two custom connections, with just managing active database connection. In this case "SELECT A" is performed on DBSERVER1.ARCHIVEDB, "SELECT B" is performed on DBSERVER2.ARCHIVEDB and "SELECT C" is performed on default database.
 
