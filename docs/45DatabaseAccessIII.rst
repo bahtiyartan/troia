@@ -25,9 +25,9 @@ Default DB Connection
 Application server establishes two different database connections to same database using same configuration. Therefore; in ordinary cases, TROIA programmers do not need to make any operation to connect database to run queries, it automatically gets ready for TROIA programmers use without any TROIA level effort. It is also same for closing these connections, it is totally handled by the interpreter and closed while user logging out.
 
 
-.. figure:: images/database/db-connection.png
+.. figure:: images/database/troia-db-connection.png
    :width: 574 px
-   :target: images/database/db-connection.png
+   :target: images/database/troia-db-connection.png
    :align: center
 
 
