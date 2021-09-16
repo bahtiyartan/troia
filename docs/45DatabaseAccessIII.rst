@@ -63,6 +63,9 @@ database configuration line and a name for the new connection. CLOSECONNECTION c
 	CLOSECONNECTION {connectionname};
 	
 	//{user} and {passw} parameters are totally ignored, they are just for backward compatibility.
+	//{dbserver} and {dbname} are used to match a database configuration line in server configuration file.
+	
+Both commands sets SYS_STATUS and SYS_STATUSERROR if they encounters a problem while connecting and disconnecting process.
 
 
 It is also possible without defining a database configuration, but in this book we will totally ignore this option, for more information please see help documents of TROIA.
@@ -74,7 +77,7 @@ It is also possible without defining a database configuration, but in this book 
 	 STRING CONNECTIONNAME;
 
 	CONNECTIONNAME = 'NewConnection';
-	MAKENEWCONNECTION CONNECTIONNAME XXX XXX MYSQL U1;
+	MAKENEWCONNECTION CONNECTIONNAME XXX XXX DBSERVER1 ARCHIVEDB;
 
 	IF SYS_STATUS THEN
 		STRINGVAR3 = SYS_STATUSERROR;
