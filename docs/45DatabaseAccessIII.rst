@@ -153,6 +153,45 @@ Managing DB Transactions on Mulptiple Connections
 -------------------------------------------------
 
 
+::
+	
+	OBJECT: 
+	 STRING CONNECTIONNAME;
+
+	CONNECTIONNAME = 'C1';
+	MAKENEWCONNECTION CONNECTIONNAME XXX XXX DBSERVER1 ARCHIVEDB;
+
+	/* Block A */
+	
+	BEGINTRAN;
+	
+	/* Block B */
+	
+	SETACTIVECONNECTION CONNECTIONNAME;
+	
+	/* Block C */
+	
+	BEGINTRAN; 
+	
+	/* Block D */
+	
+	COMMITTTRAN;
+	
+	/* Block E */
+
+	SETACTIVECONNECTION DEFAULT;
+	
+	/* Block F */
+	
+	COMMITTRAN;
+	
+	/* Block G */
+	
+	CLOSECONNECTION CONNECTIONNAME;
+		
+
+
+
 Dedicated Database Connections for Transactions
 -----------------------------------------------
 
