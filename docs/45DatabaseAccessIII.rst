@@ -96,13 +96,13 @@ When you establish a database connection, you just define a new connectiong with
 
 
 
-Managing DB Transactions on Mulptiple Connections
--------------------------------------------------
+#Managing DB Transactions on Mulptiple Connections
+#-------------------------------------------------
 
 
-Dedicated Database Connections for Transactions
------------------------------------------------
+#Dedicated Database Connections for Transactions
+#-----------------------------------------------
 
-...
+#...
 
 
