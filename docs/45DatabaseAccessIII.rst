@@ -10,9 +10,9 @@ Database Connections
 Basics of DB Connection In TROIA
 --------------------------------
 
-------------------------
-Configurations and Login
-------------------------
+---------------------------
+DB Configurations and Login
+---------------------------
 
 Database configurations and database related login parameters are not directly related to TROIA Programming. But it is important to understand the whole process of database connection. The information of all database connections that can be made through the application server are defined in the [Databases] section of server configuration (settings) file. Each connection information has an unique id that distinguishes it from the other. This id consists of two parts, DBServer and DBName. 
 
