@@ -74,11 +74,8 @@ When you establish a database connection, you just define a new connectiong with
 	SETACTIVECONNECTION {connectionname};
 	SETACTIVECONNECTION DEFAULT;
 	
-	
-With this approach, it is possible to create one or more custom connections and transfer data between two custom connections, with just managing active database connection.
 
-
-Here is a sample code, that switch between default configuration and custom connection. In this code "SELECT 1" and "SELECT 3" are performed in default database configuration. "SELECT 2" is performed on custom connection which is connected to DBSERVER1.ARCHIVEDB.
+Here is a sample code, that switch between default configuration and custom connection. In this code "SELECT 1" and "SELECT 3" are performed in default database configuration. "SELECT 2" is performed on custom connection which is connected to DBSERVER1.ARCHIVEDB. Like in this sample code, you must switch to default connection, before closing database connection. 
 
 ::
 	
@@ -110,6 +107,42 @@ Here is a sample code, that switch between default configuration and custom conn
 		CLOSECONNECTION CONNECTIONNAME;
 		
 	ENDIF;
+	
+	
+With this approach, it is possible to create one or more custom connections and transfer data between two custom connections, with just managing active database connection. 
+
+
+::
+	
+	OBJECT: 
+	 STRING C1,
+	 STRING C2;
+
+	C1 = 'NewConnection1';
+	C2 = 'NewConnection2';
+	
+	MAKENEWCONNECTION C1 XXX XXX DBSERVER1 ARCHIVEDB;
+	MAKENEWCONNECTION C2 XXX XXX DBSERVER2 ARCHIVEDB;
+		
+	SETACTIVECONNECTION C1;
+	
+	/*SELECT 1*/
+	SELECT * FROM USERACCOUNTS INTO ACCOUNTS;
+	
+	SETACTIVECONNECTION C2;
+	
+	/*SELECT 2*/
+	SELECT * FROM USERACCOUNTS INTO ACCOUNTS;
+
+	SETACTIVECONNECTION DEFAULT;
+	
+	/*SELECT 3*/
+	SELECT * FROM USERACCOUNTS INTO ACCOUNTS;
+		
+	CLOSECONNECTION C1;
+	CLOSECONNECTION C2;
+		
+	
 
 
 
