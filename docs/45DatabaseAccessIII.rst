@@ -108,6 +108,8 @@ Here is a sample code, that switch between default configuration and custom conn
 		
 	ENDIF;
 	
+The graph below, illustrates database connection state while program cursor on "SELECT B" line:
+	
 	
 .. figure:: images/database/troia-custom-db-connection.png
    :width: 574 px
