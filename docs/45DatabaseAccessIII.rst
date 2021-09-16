@@ -108,7 +108,7 @@ Here is a sample code, that switch between default configuration and custom conn
 		
 	ENDIF;
 	
-The graph below, illustrates database connection state while program cursor on "SELECT B" line:
+The graph below, illustrates database connection state while program cursor on "SELECT B" line. MAKENEWCONNECTION command adds a new database connection with "NewConnection1" name and SETACTIVECONNECTION command moves active database cursor to "NewConnection1".
 	
 	
 .. figure:: images/database/troia-custom-db-connection.png
