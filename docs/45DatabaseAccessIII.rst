@@ -78,6 +78,8 @@ When you establish a database connection, you just define a new connectiong with
 With this approach, it is possible to create one or more custom connections and transfer data between two custom connections, with just managing active database connection.
 
 
+Here is a sample code, that switch between default configuration and custom connection. In this code "SELECT 1" and "SELECT 3" are performed in default database configuration. "SELECT 2" is performed on custom connection which is connected to DBSERVER1.ARCHIVEDB.
+
 ::
 	
 	OBJECT: 
