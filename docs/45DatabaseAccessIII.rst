@@ -73,6 +73,9 @@ When you establish a database connection, you just define a new connectiong with
 
 	SETACTIVECONNECTION {connectionname};
 	SETACTIVECONNECTION DEFAULT;
+	
+	
+With this approach, it is possible to create one or more custom connections and transfer data between two custom connections, with just managing active database connection.
 
 
 ::
