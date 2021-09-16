@@ -14,12 +14,17 @@ Basics of DB Connection In TROIA
 Database Configurations and Login
 ---------------------------------
 
+Database configurations and database related login parameters are not directly related to TROIA Programming. But it is important to understand the whole process of database connection.
+The information of all database connections that can be made through the application server are defined in the [Databases] section of server configuration (settings) file. 
+
+ 
+
 When a user logs in the system, system firstly finds database configuration from database section of server settings file using DBServer and DBName parameters from user's login parameters. This configuration contains required parameters to establish database connection. Application server establishes two different database connections to same database using this configuration. Therefore; in ordinary cases, TROIA programmers do not need to make any operation to connect database to run queries, it automatically gets ready for TROIA programmers use without any TROIA level effort. It is also same for closing these connections, it is totally handled by the interpreter and closed while user logging out.
 
 
 .. figure:: images/database/db-connection.png
    :width: 574 px
-   :target: images/platformbasics/db-connection.png
+   :target: images/database/db-connection.png
    :align: center
 
 
