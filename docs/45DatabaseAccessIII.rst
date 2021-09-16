@@ -109,7 +109,9 @@ Here is a sample code, that switch between default configuration and custom conn
 	ENDIF;
 	
 	
-With this approach, it is possible to create one or more custom connections and transfer data between two custom connections, with just managing active database connection. 
+With this approach, it is possible to create one or more custom connections and transfer data between two custom connections, with just managing active database connection. In this case "SELECT A" is performed on DBSERVER1.ARCHIVEDB, "SELECT B" is performed on DBSERVER2.ARCHIVEDB and "SELECT C" is performed on default database.
+
+
 
 
 ::
@@ -126,24 +128,25 @@ With this approach, it is possible to create one or more custom connections and 
 		
 	SETACTIVECONNECTION C1;
 	
-	/*SELECT 1*/
+	/*SELECT A*/
 	SELECT * FROM USERACCOUNTS INTO ACCOUNTS;
 	
 	SETACTIVECONNECTION C2;
 	
-	/*SELECT 2*/
+	/*SELECT B*/
 	SELECT * FROM USERACCOUNTS INTO ACCOUNTS;
 
 	SETACTIVECONNECTION DEFAULT;
 	
-	/*SELECT 3*/
+	/*SELECT C*/
 	SELECT * FROM USERACCOUNTS INTO ACCOUNTS;
 		
 	CLOSECONNECTION C1;
 	CLOSECONNECTION C2;
-		
 	
-
+	/* In this example SYS_STATUS checks 
+	      are ignored to make the code easier. */
+		
 
 
 Managing DB Transactions on Mulptiple Connections
