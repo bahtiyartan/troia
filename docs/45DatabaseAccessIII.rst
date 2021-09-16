@@ -63,7 +63,7 @@ database configuration line and a name for the new connection. CLOSECONNECTION c
 	CLOSECONNECTION {connectionname};
 	
 	//{user} and {passw} parameters are totally ignored, they are just for backward compatibility.
-	//{dbserver} and {dbname} are used to match a database configuration line in server configuration file.
+	//{dbserver} and {dbname} are used to match a db configuration line in server config file.
 	
 Both commands sets SYS_STATUS and SYS_STATUSERROR if they encounters a problem while connecting and disconnecting process.
 
