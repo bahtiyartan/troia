@@ -216,6 +216,6 @@ Managing DB Transactions on Mulptiple Connections
 Dedicated Database Connections for Transactions
 -----------------------------------------------
 
-As default, database connection is shared by all transactions.
+As default, database connection is shared by all transactions, so there is not a dedicated connection for a transaction. But in some cases such as multithreading, programmers may need a dedicated database connection to reduce shared sources and manage threads easily. It is not recommended to create a dedicated connection except these kind of special cases. For more information about creating a dedicated database for a transaction, please review the section releated with multithreading.
 
 
