@@ -4,7 +4,7 @@
 Appendix III - What's new in the book?
 ====================================
 
-*“Programming with TROIA” is a live book, so there are too many changes as corrections, new examples, new headings and even new sections. This appendix aims to list significant changes on book in a daily format from the latest to the first to help old readers.*
+*“Programming with TROIA” is a live book, so there are too many changes as corrections, new examples, new headings and even new sections. This appendix aims to list significant changes on book in a daily format for last three years to help old readers.*
 
 2021.09.16 - New section: Database Connections.
 
@@ -31,11 +31,5 @@ Appendix III - What's new in the book?
 2019.09.27 - "Built-in Data Types and Structures" section renamed to "Built-in Data Types".
 
 2019.09.25 - Font and some other visual changes for better reading experience on web.
-
-2019.05.15 - Update: 802 version on "How to Read Version Number?"
-
-2019.05.15 - New title: "Reading Transaction Info" to transactions section.
-
-2019.05.14 - New section: Appendix I
 
 
