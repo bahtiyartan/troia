@@ -182,31 +182,29 @@ Managing DB Transactions on Mulptiple Connections
 	CONNECTIONNAME = 'C1';
 	MAKENEWCONNECTION CONNECTIONNAME XXX XXX DBSERVER1 ARCHIVEDB;
 
-	/* Block A */
 	
 	BEGINTRAN;
 	
-	/* Block B */
+	/* Block A */
 	
 	SETACTIVECONNECTION CONNECTIONNAME;
 	
-	/* Block C */
+	/* Block B */
 	
 	BEGINTRAN; 
 	
-	/* Block D */
+	/* Block C */
 	
 	COMMITTTRAN;
 	
-	/* Block E */
+	/* Block D */
 
 	SETACTIVECONNECTION DEFAULT;
 	
-	/* Block F */
+	/* Block E */
 	
 	COMMITTRAN;
 	
-	/* Block G */
 	
 	CLOSECONNECTION CONNECTIONNAME;
 		
