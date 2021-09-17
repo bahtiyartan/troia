@@ -199,7 +199,7 @@ BEGINTRAN / COMMITTRAN / ROLLBACKTRAN commands are performed on active database 
 	
 	/* Block C */
 	
-	COMMITTTRAN;
+	COMMITTRAN;
 	
 	/* Block D */
 
