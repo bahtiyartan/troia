@@ -77,7 +77,9 @@ Switching Between Connections
 -----------------------------
 
 
-When you establish a database connection, you just define a new connectiong with given name but your sql statements still uses default connection. To run queries on your new connection, you have to activate your db connection. SETACTIVECONNECTION command is used to switch between default connection and your custom connection. Here is the syntax for the command:
+When you establish a database connection, you just define a new connectiong with given name but your sql statements still uses default connection. To run queries on your new connection, you have to activate your db connection. SETACTIVECONNECTION command is used to switch between default connection and your custom connection. **After you switch your database connection, active connection is used by all transactions in session even they are already already opened before activating database.**
+
+Here is the syntax for the command:
 
 ::
 
@@ -214,6 +216,6 @@ Managing DB Transactions on Mulptiple Connections
 Dedicated Database Connections for Transactions
 -----------------------------------------------
 
-...
+As default, database connection is shared by all transactions.
 
 
