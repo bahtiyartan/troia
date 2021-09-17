@@ -175,6 +175,8 @@ With this approach, it is possible to create one or more custom connections and 
 Managing DB Transactions on Mulptiple Connections
 -------------------------------------------------
 
+BEGINTRAN / COMMITTRAN / ROLLBACKTRAN commands are performed on active database and SYS_INDBTRANSACTION variable returns transaction status for the active database. So in the code below, first BEGINTRAN command starts a db transaction in default database and the second BEGINTRAN command starts db transaction on "C1" connection. Likewise, first COMMITTRAN command is works for "C1" and second one works for default connection. In "Block A" value of SYS_INDBTRANSACTION is true, but it is false in "Block B". You can discuss the value of SYS_INDBTRANSACTION in other blocks to understand better.
+
 
 ::
 	
