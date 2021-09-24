@@ -24,7 +24,7 @@ Here is the basic syntax of SELECT command:
 		[ORDERBY {orderbycolumns} [ASC | DESC]]
 		[INTO {targettable}]
 		[ROWFETCHSTART {fetchstart}]
-		[ROWFETCHLIMIT {fetchstart}]
+		[ROWFETCHLIMIT {fetchlimit}]
 		[WITHCONTROL {rowcount}]
 		[WITHCACHE]
 
