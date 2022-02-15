@@ -428,7 +428,14 @@ Listing Files in a Directory
 	DESTROYTABLE TMPTABLE;
 	FILELIST STRPATH TO TMPTABLE;
 	SET TMPTABLE TO TABLE TMPTABLE;
-	
+
+::
+
+To check whether a file directory exists of not, you must read RETURNVALUE. In case of not existing file directory it will be set to 'notexist'.
+	IF RETURNVALUE == 'notexist' THEN
+		RETURN 0;
+	ENDIF;
+
 Checking File Existence
 ============================
 
