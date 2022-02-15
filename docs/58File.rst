@@ -38,6 +38,8 @@ GETUSERINFO() system function returns some useful information for file operation
 
 	S1 = '';
 	S1 = S1 + TOCHAR(10) + GETUSERINFO('client.temp.folder');
+	S1 = S1 + TOCHAR(10) + GETUSERINFO('client.setget.folder');			   //after 8.03 22.14.01-01
+	S1 = S1 + TOCHAR(10) + GETUSERINFO('client.local.iot.scripts.folder'); //after 8.03 22.14.01-01
 	S1 = S1 + TOCHAR(10) + GETUSERINFO('file.separator');
 	S1 = S1 + TOCHAR(10) + SYSCLIENTFSEPARATOR; /* valid after 8.03 */
 	S1 = S1 + TOCHAR(10) + GETUSERINFO('user.home');
@@ -45,6 +47,7 @@ GETUSERINFO() system function returns some useful information for file operation
 	S1 = S1 + TOCHAR(10) + GETUSERINFO('java.home');
 	S1 = S1 + TOCHAR(10) + GETUSERINFO('file.encoding');
 	S1 = S1 + TOCHAR(10) + GETUSERINFO('user.setgetfolder');
+	
 
 
 	STRINGVAR3 = S1;
@@ -54,6 +57,8 @@ And here is the result of sample code, please run the code on your own client an
 ::
 
 	C:\Users\btan.IASRDDC\RESOURCES\TMP\
+	C:\Users\btan.IASRDDC\RESOURCES\SETGET\LOCAL\803DEV\btan\
+	C:\Users\btan.IASRDDC\RESOURCES\LOCALIOTSCRIPTS\LOCAL\803DEV\00\
 	\
 	\
 	C:\Users\btan.IASRDDC
