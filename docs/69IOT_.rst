@@ -2,7 +2,7 @@
 IOT Infrastructure
 =============================
 
-*TROIA platform contains an IOT infrastructure that allows you to collect data via various protocols, storing data and take some actions due to collected data. This section aims to introduce you IOT infrascture in TROIA platform.*
+*TROIA platform contains an IOT infrastructure that allows you to collect data via various protocols, storing data and take some actions due to collected data. This section aims to introduce you IOT infrastructure in TROIA platform.*
 
 
 Main Architecture and Components
