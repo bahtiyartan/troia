@@ -8,6 +8,11 @@ IOT Infrastructure
 Main Architecture and Components
 --------------------------------
 
+.. figure:: images/iot/iot-gateway.png
+   :width: 650 px
+   :target: images/iot/iot-gateway.png
+   :align: center
+
 
 IOT Gateway
 ===========
