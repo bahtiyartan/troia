@@ -160,7 +160,7 @@ It is not allowed to combine explicit and implicit parts together on select item
 Performance of Complex SELECT Statements
 ========================================
 
-Like other TROIA commands SELECT statements are parsed and interpreted on convert process (for mor information please see Language Basics Section). Since converting is a development time operation, it does not consume time in runtime. When it comes to complex SELECT statements, all interpreting operation is performed on runtime, because final select statement is builded on runtime. Therefore, using complex SELECT statements has a potential to effect application performance, although it has a limited.
+Like other TROIA commands SELECT statements are parsed and interpreted on convert process (for more information please see Language Basics Section). Since converting is a development time operation, it does not consume time in runtime. When it comes to complex SELECT statements, all interpreting operation is performed on runtime, because final select statement is builded on runtime. Therefore, using complex SELECT statements has a potential to effect application performance, although it has a limited.
 
 Briefly, although complex SELECT eases some operations, it has a negative effect on application performance, so it is not recommended to use these kind of statements when they are unnecessary.
 
@@ -276,7 +276,7 @@ Query level performance problems may be related with the structure of your selec
 WITHCACHE Option (Database Selection Cache)
 ===========================================
 
-In some cases, TROIA programmers passes same SELECT statements more than once even the expected result is same. To solve this kind of performance bottlenecks **in short term**, WITHCONTROL variation is an option. If you use WITHCACHE option, the result of SELECT statement is cached by the interpreter and same result is used when SELECT statement is performed again. 
+In some cases, TROIA programmers passes same SELECT statements more than once even the expected result is same. To solve this kind of performance bottlenecks **in short term**, WITHCACHE variation is an option. If you use WITHCACHE option, the result of SELECT statement is cached by the interpreter and same result is used when SELECT statement is performed again. 
 
 In the example below, both SELECT statements of first block access database and executes corresponding select query on database, but in second block, first select is executed on database layer and the result is cached, then second SELECT statement uses the cached result without accessing database.
 

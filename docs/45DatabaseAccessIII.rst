@@ -33,7 +33,7 @@ Application server establishes two different database connections to same databa
 
 This two connections are called "first database connection" and "second database connection" in TROIA terminology (jargon) and they have different purposes. First database connection is assigned to TROIA operations. In other words if your application contains a SELECT statement, system runs select query using first database connection. All TROIA level SQL commands uses first database connection. 
 
-Second database connection is assigned for interpreter level database operations like inserting logs, gathering transaction's first dialog etc. It is not possible to run data manipulation (SELECT, UPDATE, INSERT, DELETE) and data definition (CREATE, ALTER etc.) queries using second database connection, but some some special troia commands like ENQUE, DEQUE. Therefore you can just ignore second database connection as a TROIA programmer.
+Second database connection is assigned for interpreter level database operations like inserting logs, gathering transaction's first dialog etc. It is not possible to run data manipulation (SELECT, UPDATE, INSERT, DELETE) and data definition (CREATE, ALTER etc.) queries using second database connection, but some special troia commands like ENQUE, DEQUE. Therefore you can just ignore second database connection as a TROIA programmer.
 
 
 --------------------------------
@@ -77,7 +77,7 @@ Switching Between Connections
 -----------------------------
 
 
-When you establish a database connection, you just define a new connectiong with given name but your sql statements still uses default connection. To run queries on your new connection, you have to activate your db connection. SETACTIVECONNECTION command is used to switch between default connection and your custom connection. **After you switch your database connection, active connection is used by all transactions in session even they are already already opened before activating database.**
+When you establish a database connection, you just define a new connectiong with given name but your sql statements still uses default connection. To run queries on your new connection, you have to activate your db connection. SETACTIVECONNECTION command is used to switch between default connection and your custom connection. **After you switch your database connection, active connection is used by all transactions in session even they are already opened before activating database.**
 
 Here is the syntax for the command:
 

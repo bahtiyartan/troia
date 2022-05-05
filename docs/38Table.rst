@@ -276,7 +276,7 @@ As it is obvious LOOP command, increases active row and executes condition new a
 		RESULT = RESULT + T1_CREATEDAT + TOCHAR(10);
 	ENDLOOP;
 	
-And another example that uses where condition. In this example, it prints users only created by 'BTAN'.
+And another example that uses where condition. In this example, it prints users only created by 'btan'.
 
 ::
 
@@ -289,7 +289,7 @@ And another example that uses where condition. In this example, it prints users 
 		FROM IASUSERS 
 		INTO T1;
 	
-	LOOP AT T1 WHERE T1_CREATEDBY == 'admin'
+	LOOP AT T1 WHERE T1_CREATEDBY == 'btan'
 	BEGIN
 		RESULT = RESULT + T1_USERNAME + ' created by ';
 		RESULT = RESULT + T1_CREATEDBY + ' at ';
@@ -838,7 +838,7 @@ COPY STRUCTURE command, adds five column to destiation table named COLNAME (colu
 Some Useful Functions
 =====================
 
-As mentioned before SELECTED flag shows whether user selected a row on user interface. To get selected row cound, programmers must loop on table and count selected rows. To get rid of this kind of useless loops, there is an SELECTEDROWCOUNT() system function that returns selected row count of table. Another useful function is GETCOLUMNCOUNT() for reading  column count of given table. Here is an example for two functions:
+As mentioned before SELECTED flag shows whether user selected a row on user interface. To get selected row count, programmers must loop on table and count selected rows. To get rid of this kind of useless loops, there is an SELECTEDROWCOUNT() system function that returns selected row count of table. Another useful function is GETCOLUMNCOUNT() for reading  column count of given table. Here is an example for two functions:
 
 ::
 

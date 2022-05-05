@@ -132,8 +132,8 @@ Performance problem of string concatenation is not about only '+' operator, its 
 	OBJECT:
 		STRINGBUILDER SBFINALSTRING;
 		
-	APPENDSTRING 'Hello' TO FINALSTRING;
-	APPENDSTRING ' World' TO FINALSTRING;
+	APPENDSTRING 'Hello' TO SBFINALSTRING;
+	APPENDSTRING ' World' TO SBFINALSTRING;
 	
 STRINGBUILDER is designed for only hi-performance string building operations, so it is not recommended to use STRINGBUILDER object instead of STRING. 
 

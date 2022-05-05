@@ -25,7 +25,7 @@ While defining a transaction you can also provide icon, color for user interface
 Transactions and Scope
 ----------------------
 
-Transaction is the only structure that is able to execute TROIA codes. In other words, to run a TROIA code at least one transaction must be opened in server side. Also, transactions are able to store store variables defined in TROIA applications. A transaction is the largest scope of a TROIA variable. A variable which is defined as global, can be accessed by any dialog or class code which is running on transaction.
+Transaction is the only structure that is able to execute TROIA codes. In other words, to run a TROIA code at least one transaction must be opened in server side. Also, transactions are able to store variables defined in TROIA applications. A transaction is the largest scope of a TROIA variable. A variable which is defined as global, can be accessed by any dialog or class code which is running on transaction.
 
 
 Running & Calling Transactions
@@ -74,7 +74,7 @@ Calling Transactions in Server
 
 As default CALL TRANSACTION command, fires opening a new transaction process drived by client, so new transaction is opened on client side with its user interface appears in client application. In this case,users are also able to interact with called transaction.
 
-But in some cases, programmers may need result of a process process which is already implemented on a transaction without any user interaction. In this cases, it is possible to call a transaction in server. When a transaction is called in server, server opens a transaction and it's first dialog, runs events and closes transaction; in other words server simulates all client requests which is called when a regular transaction opening process.
+But in some cases, programmers may need result of a process which is already implemented on a transaction without any user interaction. In this cases, it is possible to call a transaction in server. When a transaction is called in server, server opens a transaction and it's first dialog, runs events and closes transaction; in other words server simulates all client requests which is called when a regular transaction opening process.
 
 Calling a transaction with in server variation is very simple. Here is the syntax:
 
@@ -105,7 +105,7 @@ As mentioned before, transactions are the only structure that is able to execute
 
 Due to batch transaction concept, programmers are able to define a TROIA code block for a transction that will be configured as batch. This code is defined in "Batch Code" tab of "SYST00 - System Transactions & Gadgets" application. When a batch transaction is called, system starts transaction and opens it's first dialog as a regular transaction opening additionally runs transaction's "Batch Code".
 
-To run a batch transaction, there are two methods. First one is client based batch and this method allows users to see clien user interface. The other option is a console application which is defined as an Server Admin Utility variation. In both of two methods, scheduling is defined on operating system's scheduling tools like Window's task scheduler or linux's crontab (TROIA Platform does not have embedded scheduling tools).
+To run a batch transaction, there are two methods. First one is client based batch and this method allows users to see client user interface. The other option is a console application which is defined as an Server Admin Utility variation. In both of two methods, scheduling is defined on operating system's scheduling tools like Window's task scheduler or linux's crontab (TROIA Platform does not have embedded scheduling tools).
 
 For more configuration details about "batch transactions" please see help documents.
 
