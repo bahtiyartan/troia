@@ -17,7 +17,7 @@ Appendix I - Related Technologies
 +---------------------+----------------------------------------------------------------------------------+
 | **Localization**    | MULTILANGUAGE, TIMEZONE, CALENDAR, DATE/NUMBER/MONEY FORMATS                     |
 +---------------------+----------------------------------------------------------------------------------+
-| **IOT**             | MTCONNECT, MQTT, SIEMENS/S7, TCP-IP, OPC, COMM, I2C, MODBUS TCP/RTU              |
+| **IOT**             | MTCONNECT, MQTT, SIEMENS/S7, TCP-IP, OPC, OPC-UA, COMM, I2C, MODBUS TCP/RTU      |
 +---------------------+----------------------------------------------------------------------------------+
 | **Web**             | HTTP,HTTPS, SOAP, Web Services                                                   |
 +---------------------+----------------------------------------------------------------------------------+
