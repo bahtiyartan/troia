@@ -940,7 +940,7 @@ WITHFLAGS variation also transfers CHECKED, DELETED, INSERTED, CHANGE, READ, UPD
 Copying Cell/Row Data 
 =====================
 
-Copying a row to another table is a little bit complicated than copying whole table. Because table structures must be identical to copy a row directly, otherwise only corresponding cells can be transferred. For example, if source table has two columns COL1, COL2 and destination table has only one column COL1, only COL1 can be transferred to destination table. Actually, copying a row with assingment or MOVE command is possible like below:
+Copying a row to another table is a little bit complicated than copying whole table. Because table structures must be identical to copy a row directly, otherwise only corresponding cells can be transferred. For example, if source table has two columns COL1, COL2 and destination table has only one column COL1, only COL1 can be transferred to destination table. Actually, copying a row with assignment or MOVE command is possible like below:
 
 
 ::
@@ -968,7 +968,7 @@ Copying a row to another table is a little bit complicated than copying whole ta
 	TMPTABLE_USERNAME = SOURCE_USERNAME;
 	TMPTABLE_CREATEDBY = SOURCE_CREATEDBY;
 	
-But if there are too many corresponding columns between source and destination table, it becomes very hard to assing each column manually. TROIA has command named MOVE-CORRESPONDING to transfer all corresponding column values between active rows of source and destination table. Here is the syntax of MOVE-CORRESPONDING command and a sample that transfers a single row:
+But if there are too many corresponding columns between source and destination table, it becomes very hard to assign each column manually. TROIA has command named MOVE-CORRESPONDING to transfer all corresponding column values between active rows of source and destination table. Here is the syntax of MOVE-CORRESPONDING command and a sample that transfers a single row:
 
 ::
 	
