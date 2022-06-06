@@ -20,28 +20,27 @@ Domain Data
 
 The first type of domain data is mostly used for database fields and ui controls. All this information is same for all the database fields and controls that share same domain data. In other words, if you change one of these information, all fields and controls starts to use the new data in those related features after a simple convert/save and table convert operation in ODBA.
 
-+--------------------+----------------------------------------------------------------------------------------------------------------+
-| Field Name         | It is just a guide for developers for naming table columns, it is not used by TROIA interpreter                |
-+--------------------+----------------------------------------------------------------------------------------------------------------+
-| Field Type         | Stores data type ODBA or virtual table column that extend this domain.                                         |
-+--------------------+----------------------------------------------------------------------------------------------------------------+
-| Field Length       | Stores field length for ODBA or virtual table column. (for only valid types like string (varchar))             |
-+--------------------+----------------------------------------------------------------------------------------------------------------+
-| Field Decimal      | Stores number of decimal digits for ODBA columns that extend domain.                                           |
-+--------------------+----------------------------------------------------------------------------------------------------------------+
-| Check Table        | When a textfield or column info of a ui table extends this domain; uses zoom dialog, zoom field and            |
-| Zoom Dialog        |   check table data for zooming operations.                                                                     |
-| Zoom Field         |                                                                                                                |
-+--------------------+----------------------------------------------------------------------------------------------------------------+
-| Read/Zoom Only     | Shows ui control or table cell is read only or zoom only.                                                      |
-+--------------------+----------------------------------------------------------------------------------------------------------------+
-| Case Sensitivity   | Shows ui control or table cell is upper case/lower case.                                                       |
-+--------------------+----------------------------------------------------------------------------------------------------------------+
-| Field Picture      | Stores required data for virtual table column information, for columns that extend domain.                     |
-+--------------------+----------------------------------------------------------------------------------------------------------------+
-| Set-Get Id         | Stores setgetid, for textfields that extend domain.                                                            |
-|                    | Enabling/disabling "set" and "get" are defined for each control.                                               |
-+--------------------+----------------------------------------------------------------------------------------------------------------+
++-----------------------+-------------------------------------------------------------------------------------------------------------+
+| Field Name            | It is just a guide for developers for naming table columns, it is not used by TROIA interpreter             |
++-----------------------+-------------------------------------------------------------------------------------------------------------+
+| Field Type            | Stores data type ODBA or virtual table column that extend this domain.                                      |
++-----------------------+-------------------------------------------------------------------------------------------------------------+
+| Field Length          | Stores field length for ODBA or virtual table column. (for only valid types like string (varchar))          |
++-----------------------+-------------------------------------------------------------------------------------------------------------+
+| Field Decimal         | Stores number of decimal digits for ODBA columns that extend domain.                                        |
++-----------------------+-------------------------------------------------------------------------------------------------------------+
+| Check Table           | Stores related zoom information for zooming operations.                                                     |
+| Zoom Dialog           |                                                                                                             |
+| Zoom Field            |                                                                                                             |
++-----------------------+-------------------------------------------------------------------------------------------------------------+
+| Read/Zoom Only        | Shows ui control or table cell is read only or zoom only.                                                   |
++-----------------------+-------------------------------------------------------------------------------------------------------------+
+| Case Sensitivity      | Shows ui control or table cell is upper case/lower case.                                                    |
++-----------------------+-------------------------------------------------------------------------------------------------------------+
+| Field Picture         | Stores required data for virtual table column information, for columns that extend domain.                  |
++-----------------------+-------------------------------------------------------------------------------------------------------------+
+| Set-Get Id            | Stores setgetid, for textfields. (Enabling/disabling "set" and "get" are configured for each control.       |
++-----------------------+-------------------------------------------------------------------------------------------------------------+
 
 
 Domain Codes
