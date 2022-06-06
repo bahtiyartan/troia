@@ -53,7 +53,7 @@ Domain Codes
 Regular Event Codes
 =======================
 
-It is also possible to define some regular event codes on domain instead of defining them for each control. So, when it is needed, if programmer change the code defined for domain, this change affect behaviour for all control events whose control extends the domain. 
+It is also possible to define some regular event codes on domain instead of defining them for each control. So, when it is needed, if programmer change the code defined for domain, this change affect behaviour for all control events whose control uses the domain. 
 
 Codes defined in domain affect all controls that don't have a corresponding event implementation on control level. This means that there is no need to add a {D} like wildcard. And also it means, it is possible to add alternative behaviors for controls that extend same domain, on different dialogs and forms and components.
 
@@ -81,6 +81,9 @@ Defining Domains
 How are Domains Stored?
 =======================
 
+Inheriting Domains
+=======================
+
 
 Using Domains
 -------------
@@ -92,6 +95,10 @@ Domains in Dialog & Report Controls
 
 Domains in Table Column Information
 ===================================
+
+
+Domains in ODBA Fields
+======================
 
 
 Domains and Security
