@@ -18,16 +18,29 @@ It is very hard to manage such a problem in an efficient way. The most common wa
 Domain Data
 -----------
 
-Field Type
-Field Length
-Field Decimal
-Check Table
-Zoom Dialog
-Zoom Field
-Read Only / Zoom Only
-Case Sensitivity
-Field Picture
-Set-Get Id
+The first type of domain data is mostly used for database fields and ui controls. All this information is same for all the database fields and controls that share same domain data. In other words, if you change one of these information, all fields and controls starts to use the new data in those related features after a simple convert/save and table convert operation in ODBA.
+
++--------------------+----------------------------------------------------------------------------------------------------------------+
+| Field Name 	     |                                                                                                                |
++--------------------+----------------------------------------------------------------------------------------------------------------+
+| Field Type	     | When a ODBA field and virtual table column extend a domain; "Field Type" is used for defining data type        |
+| Field Length       |  "Field Length" is used for defining data length (for special types like string (varchar))                     |
++--------------------+----------------------------------------------------------------------------------------------------------------+
+| Field Decimal      |  When a ODBA field column extends a domain,  "Field Decimal" is used for defining decimal digit count.         |
++--------------------+----------------------------------------------------------------------------------------------------------------+
+| Check Table	     | When a textfield or column info of a ui table extends this domain, uses zoom dialog, zoom field and            |
+| Zoom Dialog	     |   check table data for zooming operations.                                                                     |
+| Zoom Field 	     |                                                                                                                |
++--------------------+----------------------------------------------------------------------------------------------------------------+
+| Read/Zoom Only 	 | Shows ui control or table cell is read only or zoom only.                                                      |
++--------------------+----------------------------------------------------------------------------------------------------------------+
+| Case Sensitivity   | Shows ui control or table cell is upper case/lower case.                                                       |
++--------------------+----------------------------------------------------------------------------------------------------------------+
+| Field Picture      | Stores required data for virtual table column information, for columns that extend domain.                     |
++--------------------+----------------------------------------------------------------------------------------------------------------+
+| Set-Get Id 	     | Stores setgetid, for textfields that extend domain.                                                            |
+|                    |	Enabling/disabling "set" and "get" are defined for each control.                                              |
++--------------------+----------------------------------------------------------------------------------------------------------------+
 
 
 Domain Codes
