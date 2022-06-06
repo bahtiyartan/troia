@@ -16,7 +16,7 @@ It is very hard to manage such a problem in an efficient way. The most common wa
 
 
 Domain Data
------------
+------------
 
 The first type of domain data is mostly used for database fields and ui controls. All this information is same for all the database fields and controls that share same domain data. In other words, if you change one of these information, all fields and controls starts to use the new data in those related features after a simple convert/save and table convert operation in ODBA.
 
@@ -32,7 +32,7 @@ The first type of domain data is mostly used for database fields and ui controls
 | Zoom Dialog	     |   check table data for zooming operations.                                                                     |
 | Zoom Field 	     |                                                                                                                |
 +--------------------+----------------------------------------------------------------------------------------------------------------+
-| Read/Zoom Only 	 | Shows ui control or table cell is read only or zoom only.                                                      |
+| Read/Zoom Only     | Shows ui control or table cell is read only or zoom only.                                                      |
 +--------------------+----------------------------------------------------------------------------------------------------------------+
 | Case Sensitivity   | Shows ui control or table cell is upper case/lower case.                                                       |
 +--------------------+----------------------------------------------------------------------------------------------------------------+
