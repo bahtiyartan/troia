@@ -53,6 +53,8 @@ Domain Codes
 Regular Event Codes
 =======================
 
+It is also possible to define some regular event codes on domain instead of defining them for each control. So, when it is needed, if programmer change the code defined for domain, this change affect behaviour for all control events whose control extends the domain. 
+
 
 
 +-----------------------+-----------------------------------+
