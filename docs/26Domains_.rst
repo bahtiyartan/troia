@@ -44,11 +44,16 @@ The first type of domain data is mostly used for database fields and ui controls
 +-----------------------+-------------------------------------------------------------------------------------------------------------+
 
 
+All these information can be overridden by the programmer for specific controls,ODBA fields and virtual table fields. To use values defined in domain string values must be defined as {D} and integer values must be defined as -10, otherwise values given in control, odba table or virtual table overrides the value that comes from domain. These {D} and -10 values are special values that are also used while inheriting domains from some base domains. We will discuss it, in next titles. 
+
+
 Domain Codes
 ------------
 
 Regular Event Codes
 =======================
+
+
 
 +-----------------------+-----------------------------------+
 | TEXTCHANGED           |                                   |
@@ -82,6 +87,8 @@ Transfer Codes
 
 Validation Code
 =======================
+
+
 
 
 Defining Domains
