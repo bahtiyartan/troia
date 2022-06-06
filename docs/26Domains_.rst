@@ -23,12 +23,13 @@ The first type of domain data is mostly used for database fields and ui controls
 +--------------------+----------------------------------------------------------------------------------------------------------------+
 | Field Name         |                                                                                                                |
 +--------------------+----------------------------------------------------------------------------------------------------------------+
-| Field Type         | When a ODBA field and virtual table column extend a domain; "Field Type" is used for defining data type        |
-| Field Length       |  "Field Length" is used for defining data length (for special types like string (varchar))                     |
+| Field Type         | When a ODBA field and virtual table column extend a domain;                                                    |
+| Field Length       |    "Field Type" is used for defining data type,                                                                |
+|                    |    "Field Length" is used for defining data length (for special types like string (varchar))                   |
 +--------------------+----------------------------------------------------------------------------------------------------------------+
-| Field Decimal      |  When a ODBA field column extends a domain,  "Field Decimal" is used for defining decimal digit count.         |
+| Field Decimal      | When a ODBA field column extends a domain,  "Field Decimal" is used for defining decimal digit count.          |
 +--------------------+----------------------------------------------------------------------------------------------------------------+
-| Check Table        | When a textfield or column info of a ui table extends this domain, uses zoom dialog, zoom field and            |
+| Check Table        | When a textfield or column info of a ui table extends this domain; uses zoom dialog, zoom field and            |
 | Zoom Dialog        |   check table data for zooming operations.                                                                     |
 | Zoom Field         |                                                                                                                |
 +--------------------+----------------------------------------------------------------------------------------------------------------+
@@ -39,7 +40,7 @@ The first type of domain data is mostly used for database fields and ui controls
 | Field Picture      | Stores required data for virtual table column information, for columns that extend domain.                     |
 +--------------------+----------------------------------------------------------------------------------------------------------------+
 | Set-Get Id         | Stores setgetid, for textfields that extend domain.                                                            |
-|                    |	Enabling/disabling "set" and "get" are defined for each control.                                              |
+|                    | Enabling/disabling "set" and "get" are defined for each control.                                               |
 +--------------------+----------------------------------------------------------------------------------------------------------------+
 
 
