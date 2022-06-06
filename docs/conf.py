@@ -46,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Programming with TROIA'
-copyright = u'2014-2021, Bahtiyar Tan'
+copyright = u'2014-2022, Bahtiyar Tan'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -259,7 +259,7 @@ texinfo_documents = [
 epub_title = u'Programming with TROIA'
 epub_author = u'Bahtiyar Tan'
 epub_publisher = u'Bahtiyar Tan'
-epub_copyright = u'2014-2021, Bahtiyar Tan'
+epub_copyright = u'2014-2022, Bahtiyar Tan'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

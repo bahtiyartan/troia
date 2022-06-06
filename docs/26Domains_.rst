@@ -55,28 +55,9 @@ Regular Event Codes
 
 It is also possible to define some regular event codes on domain instead of defining them for each control. So, when it is needed, if programmer change the code defined for domain, this change affect behaviour for all control events whose control extends the domain. 
 
+Codes defined in domain affect all controls that don't have a corresponding event implementation on control level. This means that there is no need to add a {D} like wildcard. And also it means, it is possible to add alternative behaviors for controls that extend same domain, on different dialogs and forms and components.
 
-
-+-----------------------+-----------------------------------+
-| TEXTCHANGED           |                                   |
-+-----------------------+-----------------------------------+
-| ZOOMBEFORE            |                                   |
-+-----------------------+-----------------------------------+
-| ZOOMAFTER             |                                   |
-+-----------------------+-----------------------------------+
-| LOSEFOCUS             |                                   |
-+-----------------------+-----------------------------------+
-| GAINFOCUS             |                                   |
-+-----------------------+-----------------------------------+
-| RIGHTCLICKMENU        |                                   |
-+-----------------------+-----------------------------------+
-| DRAG                  |                                   |
-+-----------------------+-----------------------------------+
-| DROP                  |                                   |
-+-----------------------+-----------------------------------+
-| PASTE                 |                                   |
-+-----------------------+-----------------------------------+
-
+TEXTCHANGED, ZOOMBEFORE, ZOOMAFTER, LOSEFOCUS, GAINFOCUS, RIGHTCLICKMENU, DRAG , DROP, PASTE are the events that programmers can define on a domain. For more up to date list of events for a domain, please see actual domain definition transaction that we will discuss in next sections.
 
 Transfer Codes
 =======================
