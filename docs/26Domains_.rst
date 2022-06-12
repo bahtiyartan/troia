@@ -62,11 +62,31 @@ TEXTCHANGED, ZOOMBEFORE, ZOOMAFTER, LOSEFOCUS, GAINFOCUS, RIGHTCLICKMENU, DRAG ,
 Transfer Codes
 =======================
 
-+-----------------------+-----------------------------------+
-| CLIENTTOSERVER CODE   |                                   |
-+-----------------------+-----------------------------------+
-| SERVERTOCLIENT CODE   |                                   |
-+-----------------------+-----------------------------------+
+In some special cases, programmers may need to store data in different formats on server and client side. Domain has two codes to transform data while transferring it between server and client. These codes are "CLIENT TO SERVER CODE" and "SERVER TO CLIENT CODE". While implementing these functions you must be careful that they must be inverse functions of each other, otherwise there will be data loss risks during data transfer.
+
+
+Here is two sample functions for transferring a decimal value. In this example, unit in the client is kilometers and unit in the server side is meter, so "SERVER TO CLIENT CODE" converts meter to kilometer.
+
+
+::
+
+	/* SERVER TO CLIENT CODE */
+	PARAMETERS:
+		DECIMAL PARAM;,
+		
+	RETURN PARAM * 0.001;
+	
+	
+::
+	
+	/* CLIENT TO SERVER CODE */
+	PARAMETERS:
+		DECIMAL PARAM;,
+		
+	RETURN PARAM * 1000;
+	
+
+Transfer codes can be used with all data types such as decimals, integers, strings etc, but parameter type and return type must same with the variable type of the domain.
 
 Validation Code
 =======================
