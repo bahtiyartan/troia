@@ -13,8 +13,8 @@ What is Java
 Java is a simple, high-level, object-oriented, general-purpose programming  language. It works on a virtual machine which is called JVM. So java applications work on anywhere which JVM works on, so it is a "write once, run anywhere" programming language.
 
 
-Main Advantages of Java
-=======================
+Main Advantages
+===============
 
 Java offers some economic and technical advantages and all this advantages become a part of the solutions that are devloped with Java. Here are some of the pros of Java programming language.
 
@@ -30,9 +30,20 @@ Java offers some economic and technical advantages and all this advantages becom
 **Simple and secure :** Memory management is handled by garbage collector, there is no complex concepts like pointers, it is easy to learn.
 
 
+Where java codes stored?
+========================
+
+Java codes are stored in files which has **.java** extension. These files can be edited via complex IDEs (eclipse,netbeans etc) or simple editors (notepad, vi). In a large application, there can be numerous .java files. After compilation process, .class files are generated.
+
+
+JVM (Java Virtual Machine)
+--------------------------
+
+JVM is a kind of native application that interprets .class files for the underlying platform. In other words it isolates .class file content from the host machine. .class files are loaded by class loader which is subcomponent of the JVM.
+
 
 Java SE/EE/ME
-What makes java different
+-------------
 
 JDK and JRE
 ------------
