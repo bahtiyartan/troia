@@ -36,17 +36,29 @@ Where java codes stored?
 Java codes are stored in files which has **.java** extension. These files can be edited via complex IDEs (eclipse,netbeans etc) or simple editors (notepad, vi). In a large application, there can be numerous .java files. After compilation process, .class files are generated.
 
 
-JVM (Java Virtual Machine)
---------------------------
 
-JVM is a kind of native application that interprets .class files for the underlying platform. In other words it isolates .class file content from the host machine. .class files are loaded by class loader which is subcomponent of the JVM.
+JVM / JRE / JDK
+----------------
+
+
+JVM (Java Virtual Machine)
+===========================
+
+JVM is a kind of native application that interprets .class files for the underlying platform. In other words, it isolates .class file content from the host machine. .class files are loaded by class loader which is subcomponent of the JVM.
+
+
+JRE (Java Runtime Environment)
+==============================
+
+
+JDK (Java Development Kit)
+===============================
 
 
 Java SE/EE/ME
 -------------
 
-JDK and JRE
-------------
+
 
 . . . 
 Server JRE
