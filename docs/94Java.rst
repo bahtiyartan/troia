@@ -23,7 +23,7 @@ Java offers some economic and technical advantages and all this advantages becom
 
 **Readible :** it is a high-level programming language, so it is human readible and reduces maintenance costs.
 
-**Platform-independent :** java applications work on anywhere which JVM works on.
+**Platform-independent :** java applications work on anywhere which JVM works on, so they are portable.
 
 **Supports multithreading :** multithreading helps us to gain the maximum utilization of CPU and allows handling larger data and more complex problems in relatively short running time.
 
@@ -44,15 +44,20 @@ JVM / JRE / JDK
 JVM (Java Virtual Machine)
 ===========================
 
-JVM is a kind of native application that interprets .class files for the underlying platform. In other words, it isolates .class file content from the host machine. .class files are loaded by class loader which is subcomponent of the JVM.
+JVM is a kind of native application that interprets .class files for the underlying platform. In other words, it isolates .class file content from the host machine. .class files are loaded by class loader which is subcomponent of the JVM. JVM is a subcomponent of JRE.
 
 
 JRE (Java Runtime Environment)
 ==============================
 
+JRE contains Java class libraries, Java virtual machines, and other tools that the programs need to execute. Development tools like compiler and debuggers are not included in JRE. It becomes operational at the moment when the application program is executed.
+
 
 JDK (Java Development Kit)
 ===============================
+
+
+
 
 
 Java SE/EE/ME
