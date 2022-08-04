@@ -18,7 +18,16 @@ Main Advantages of Java
 
 Java offers some economic and technical advantages and all this advantages become a part of the solutions that are devloped with Java. Here are some of the pros of Java programming language.
 
-Java is Object Oriented
+
+**Object oriented :** enhances the flexibility and reusability of the code.
+
+**Readible :** it is a high-level programming language, so it is human readible and reduces maintenance costs.
+
+**Platform-independent :** java applications work on anywhere which JVM works on.
+
+**Supports multithreading :** multithreading helps us to gain the maximum utilization of CPU and allows handling larger data and more complex problems in relatively short running time.
+
+**Simple and secure :** Memory management is handled by garbage collector, there is no complex concepts like pointers, it is easy to learn.
 
 
 
