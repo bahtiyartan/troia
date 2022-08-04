@@ -4,14 +4,25 @@
 Basic Java Concepts For TROIA Developers
 =========================================
 
-*TROIA Platform is developed with Java Programming Language, so to know about java saves time in some special cases such as performance optimization, debugging and deployment. This section aims to introduce basic and useful java concepts for troia developers or system administrators.*
+*TROIA Platform works on Java Virtual Machine, so to know about Java saves time in some special cases such as performance optimization, debugging and deployment. This section aims to introduce basic and useful java concepts for troia developers or system administrators.*
 
 
 What is Java
 ------------
 
-. . .
-Java SE/EE
+Java is a simple, high-level, object-oriented, general-purpose programming  language. It works on a virtual machine which is called JVM. So java applications work on anywhere which JVM works on, so it is a "write once, run anywhere" programming language.
+
+
+Main Advantages of Java
+=======================
+
+Java offers some economic and technical advantages and all this advantages become a part of the solutions that are devloped with Java. Here are some of the pros of Java programming language.
+
+Java is Object Oriented
+
+
+
+Java SE/EE/ME
 What makes java different
 
 JDK and JRE
@@ -37,8 +48,14 @@ Some Basic Java Terms
 ClassPath
 =========
 
-Jar
-==============
+.java Extension 
+===============
+
+ByteCode and .class File Extensions
+===================================
+
+.jar and .war Extensions
+=============================
 
 JNLP / codebase
 ================
@@ -60,13 +77,21 @@ Understanding Java Exceptions
 -----------------------------
 
 Java Exception Types, Compile/RunTime/Errors
+
 Exceptions/Error
+
 NullPointerException
+
 ArrayIndexBound
+
 ParseException
+
 NoSuchElement
-ClassCastExcept.
+
+ClassCastExcept
+
 ClassNotFoundError
+
 
 
 Logging
