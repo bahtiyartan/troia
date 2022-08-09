@@ -12,10 +12,6 @@ What is Java
 
 Java is a simple, high-level, object-oriented, general-purpose programming  language. It works on a virtual machine which is called JVM. So java applications work on anywhere which JVM works on, so it is a "write once, run anywhere" programming language.
 
-
-Main Advantages
-===============
-
 Java offers some economic and technical advantages and all this advantages become a part of the solutions that are devloped with Java. Here are some of the pros of Java programming language.
 
 
@@ -49,8 +45,6 @@ JVM is a subcomponent of JRE.
 JRE / JDK
 ----------------
 
-
-
 JRE (Java Runtime Environment)
 ==============================
 
@@ -68,9 +62,10 @@ In windows operating system, installed JRE versions are listed Control Panel-> J
 JDK (Java Development Kit)
 ===============================
 
-JDK is the key platform component for **building** Java applications, so it contains java compiler, java doc and some optimization tools. JDK
+JDK is the key platform component for **building** Java applications, so it contains java compiler, java doc and some optimization tools. JDK contains JRE, so if you install JDK you can build and run java applications. 
 
 
+Here is simple graph that shows the content of JDK and JDK and their main subcomponents:
 
 .. figure:: images/java/java-jdk.png
    :width: 385 px
