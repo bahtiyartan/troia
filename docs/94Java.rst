@@ -39,14 +39,12 @@ Java codes are stored in files which has **.java** extension. These files can be
 How java programs run?
 ======================
 
-Java is combination of compiled and interpreted languages. .java files are compiled by javac which is a component of JDK and .class files are generated. These .class files contains bytecodes which can be interpreted for the underlying platform that the application runs on. This interetation process is handled by JVM (Java Virtual Machine). So, .class file which is the result of compilation proces is isolated from the host machine. .class files are loaded by class loader which is subcomponent of the JVM. JVM has other complex subcomponents such as garbage collector, runtime memory etc., but these components and their running metodology is out of our scope.
+Java is combination of compiled and interpreted languages. .java files are compiled by javac which is a component of JDK and .class files are generated. These .class files contains bytecodes which can be interpreted for the underlying platform that the application runs on. 
+
+This interetation process is handled by JVM (Java Virtual Machine). This interpretation process isolates, .class file which is the result of compilation proces and the host machine. .class files are loaded by class loader and executed by Execution Engine. JVM has complex subcomponents such as class loader, execution engine, garbage collector, runtime memory etc., but these components and their running metodology is out of our scope.
+
 
 JVM is a subcomponent of JRE.
-
-
-After compilation process, .class files are generated.
-
-
 
 JRE / JDK
 ----------------
