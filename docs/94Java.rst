@@ -50,16 +50,22 @@ JRE / JDK
 ----------------
 
 
-JVM (Java Virtual Machine)
-===========================
-
 
 
 
 JRE (Java Runtime Environment)
 ==============================
 
-JRE contains Java class libraries, Java virtual machines, and other tools that the programs need to execute. Development tools like compiler and debuggers are not included in JRE. It becomes operational at the moment when the application program is executed.
+JRE is a software layer that runs on operating system and provides class libraries, virtual machines, and other tools that a particular java application needs to execute such as deployment solutions (Java Web Start), development tookit (java 2D, awt, swing),	integration libraries (JDBC,JNDI), 	language and utility libraries (logging, concurrency utils etc). JRE becomes operational at the moment when the application program is executed.
+
+In windows operating system, installed JRE versions are listed Control Panel-> Java -> Java Tab (Viev Button)
+
+.. figure:: images/java/installed-jre.png
+   :width: 385 px
+   :target: images/java/installed-jre.png
+   :align: center
+
+
 
 
 JDK (Java Development Kit)
