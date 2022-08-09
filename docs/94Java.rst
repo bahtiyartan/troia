@@ -33,18 +33,29 @@ Java offers some economic and technical advantages and all this advantages becom
 Where java codes stored?
 ========================
 
-Java codes are stored in files which has **.java** extension. These files can be edited via complex IDEs (eclipse,netbeans etc) or simple editors (notepad, vi). In a large application, there can be numerous .java files. After compilation process, .class files are generated.
+Java codes are stored in files which has **.java** extension. These files can be edited via complex IDEs (eclipse,netbeans etc) or simple editors (notepad, vi). In a large application, there can be numerous .java files. 
+
+
+How java programs run?
+======================
+
+Java is combination of compiled and interpreted languages. .java files are compiled by javac which is a component of JDK and .class files are generated. These .class files contains bytecodes which can be interpreted for the underlying platform that the application runs on. This interetation process is handled by JVM (Java Virtual Machine). So, .class file which is the result of compilation proces is isolated from the host machine. .class files are loaded by class loader which is subcomponent of the JVM. JVM has other complex subcomponents such as garbage collector, runtime memory etc., but these components and their running metodology is out of our scope.
+
+JVM is a subcomponent of JRE.
+
+
+After compilation process, .class files are generated.
 
 
 
-JVM / JRE / JDK
+JRE / JDK
 ----------------
 
 
 JVM (Java Virtual Machine)
 ===========================
 
-JVM is a kind of native application that interprets .class files for the underlying platform. In other words, it isolates .class file content from the host machine. .class files are loaded by class loader which is subcomponent of the JVM. JVM is a subcomponent of JRE.
+
 
 
 JRE (Java Runtime Environment)
