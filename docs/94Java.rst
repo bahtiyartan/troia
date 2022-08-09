@@ -86,19 +86,20 @@ Here is a simplified graph that shows the content of JDK and JJRE and their main
 
 
 
+Java Releases
+-------------
 
 . . . 
-Server JRE
+
+
+
 
 
 JVM Arguments
 -------------
 
 
-Java Releases
--------------
 
-. . . 
 
 
 Some Basic Java Terms
@@ -167,6 +168,8 @@ Monitoring Tools
 
 
 
+#. . . 
+#Server JRE
 
 References
 
