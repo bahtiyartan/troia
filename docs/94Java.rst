@@ -51,8 +51,6 @@ JRE / JDK
 
 
 
-
-
 JRE (Java Runtime Environment)
 ==============================
 
@@ -64,7 +62,6 @@ In windows operating system, installed JRE versions are listed Control Panel-> J
    :width: 385 px
    :target: images/java/installed-jre.png
    :align: center
-
 
 
 
