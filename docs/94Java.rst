@@ -46,9 +46,9 @@ JVM is a subcomponent of JRE.
 Java SE/EE/ME
 ==============
 
-Java platform has multiple packages due to different devices and operating systems. Java SE provides the core functionality of the java programming language such as basic types and objects of networking, security, database access, graphical user interface etc. 
+Java platform has multiple packages for different devices and operating systems. Java SE provides the core functionality of the java programming language such as basic types and objects of networking, security, database access, graphical user interface etc. 
 
-Java EE platform and provides an API and runtime environment for developing and running large-scale, multi-tiered, scalable, reliable, and secure network applications. 
+Java EE platform and provides an API and runtime environment for developing and running large-scale, multi-tiered, scalable, reliable, and secure network applications. Applications developed using Java EE can run on servers such as Tomcat, GlassFish, JBoss. We mostly use Tomcat to deploy our Java EE components.
 
 Troia platform has different components which aims to run on Java SE and Java EE. Java ME allows running java applications on small devices and it is out of our scope.
 
