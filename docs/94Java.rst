@@ -7,8 +7,8 @@ Basic Java Concepts For TROIA Developers
 *TROIA Platform works on Java Virtual Machine, so to know about Java saves time in some special cases such as performance optimization, debugging and deployment. This section aims to introduce basic and useful java concepts for troia developers or system administrators.*
 
 
-What is Java
-------------
+What is Java?
+-------------
 
 Java is a simple, high-level, object-oriented, general-purpose programming  language. It works on a virtual machine which is called JVM. So java applications work on anywhere which JVM works on, so it is a "write once, run anywhere" programming language.
 
@@ -42,6 +42,17 @@ This interetation process is handled by JVM (Java Virtual Machine). This interpr
 
 JVM is a subcomponent of JRE.
 
+
+Java SE/EE/ME
+==============
+
+Java platform has multiple packages due to different devices and operating systems. Java SE provides the core functionality of the java programming language such as basic types and objects of networking, security, database access, graphical user interface etc. 
+
+Java EE platform and provides an API and runtime environment for developing and running large-scale, multi-tiered, scalable, reliable, and secure network applications. 
+
+Troia platform has different components which aims to run on Java SE and Java EE. Java ME allows running java applications on small devices and it is out of our scope.
+
+
 JRE / JDK
 ----------------
 
@@ -65,7 +76,7 @@ JDK (Java Development Kit)
 JDK is the key platform component for **building** Java applications, so it contains java compiler, java doc and some optimization tools. JDK contains JRE, so if you install JDK you can build and run java applications. 
 
 
-Here is simple graph that shows the content of JDK and JDK and their main subcomponents:
+Here is a simplified graph that shows the content of JDK and JJRE and their main subcomponents:
 
 .. figure:: images/java/java-jdk.png
    :width: 385 px
@@ -73,8 +84,6 @@ Here is simple graph that shows the content of JDK and JDK and their main subcom
    :align: center
 
 
-Java SE/EE/ME
--------------
 
 
 
@@ -82,8 +91,8 @@ Java SE/EE/ME
 Server JRE
 
 
-JVM and JVM Arguments
----------------------
+JVM Arguments
+-------------
 
 
 Java Releases
@@ -155,6 +164,16 @@ Optimization Tools
 
 Monitoring Tools
 -----------------
+
+
+
+
+References
+
+*https://docs.oracle.com/javaee/6/firstcup/doc/gkhoy.html*
+https://www.theserverside.com/definition/JAVA_HOME#:~:text=JAVA_HOME%20is%20an%20operating%20system,JDK%20or%20JRE%20was%20installed.
+https://www.ibm.com/cloud/learn/jre
+https://www.freecodecamp.org/news/jvm-tutorial-java-virtual-machine-architecture-explained-for-beginners/#:~:text=The%20JVM%20consists%20of%20three,Execution%20Engine
 
 
 
