@@ -61,7 +61,7 @@ JDK (Java Development Kit)
 
 
 .. figure:: images/java/java-jdk.png
-   :width: 650 px
+   :width: 385 px
    :target: images/java/java-jdk.png
    :align: center
 
