@@ -62,13 +62,13 @@ In windows operating system, installed JRE versions are listed Control Panel-> J
    :width: 385 px
    :target: images/java/installed-jre.png
    :align: center
-
+   
 
 
 JDK (Java Development Kit)
 ===============================
 
-
+JDK is the key platform component for **building** Java applications, so it contains java compiler, java doc and some optimization tools.
 
 
 
