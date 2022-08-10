@@ -99,6 +99,17 @@ JVM Arguments
 -------------
 
 
+Java Memory Management
+-----------------------
+
+
+Garbage Collector
+=================
+
+
+Managing Memory In TROIA
+========================
+
 
 
 
