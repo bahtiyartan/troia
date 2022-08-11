@@ -95,7 +95,7 @@ Open JDK / Oracle JDK
 
 OpenJDK is a free and open-source implementation of the Java SE Platform Edition. It is developed by Oracle and the Java Community. The other and official alternative is Oracle JDK. Oracle JDK is developed based on OpenJDK, so they are technically very similar, even though some minor differences. Oracle claims that Oracle JDK has better performance and stability than Open JDK. 
 
-Although one of the main differences between these two releases, using Oracle JDK seems more stable hand responsive especially for enterprise usage.
+Although one of the main differences between these two releases, Oracle JDK seems more stable hand responsive especially for enterprise usage.
 
 Both Open JDK and Oracle JDK has different releases and versions, for now Oracle JDK 1.8 is the most used jdk release which is the last release published before Oracle's license strategy change. TROIA Platform works properly with Open JDK (after Open JDK 11) and Oracle JDK releses (oafter Oracle JDK 1.8.x)
 
@@ -110,9 +110,9 @@ What is Your Java Release?
    :align: center
    
 
-.. figure:: images/java/java-version-open-jdk.png
+.. figure:: images/java/java-version-openjdk.png
    :width: 650 px
-   :target: images/java/java-version-open-jdk.png
+   :target: images/java/java-version-openjdk.png
    :align: center
 
 
