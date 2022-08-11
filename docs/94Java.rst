@@ -108,6 +108,12 @@ What is Your Java Release?
    :width: 650 px
    :target: images/java/java-version.png
    :align: center
+   
+
+.. figure:: images/java/java-version-open-jdk.png
+   :width: 650 px
+   :target: images/java/java-version-open-jdk.png
+   :align: center
 
 
 
