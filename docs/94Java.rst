@@ -101,6 +101,16 @@ Both Open JDK and Oracle JDK has different releases and versions, for now Oracle
 
 
 
+What is Your Java Release?
+==========================
+
+.. figure:: images/java/java-version.png
+   :width: 650 px
+   :target: images/java/java-version.png
+   :align: center
+
+
+
 
 JVM Arguments
 -------------
