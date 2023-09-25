@@ -19,7 +19,7 @@ It's main purpose is for developing and maintaining business applications in an 
 What Does The Platform Offer?
 =============================
 
-TROIA contains too many useful features to access, operate and report business layer information. Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues. APIs&dlls, localization, supporting various platforms and databases are just the examples of these painful technnical details. Here are some basic advantages that the platform offers for developers, administrators and the users:
+TROIA contains too many useful features to access, operate and report business layer information. Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues. APIs&dlls, localization, supporting various platforms and databases are just the examples of these painful technical details. Here are some basic advantages that the platform offers for developers, administrators and the users:
 
 
 **Free of Technical Details** 
