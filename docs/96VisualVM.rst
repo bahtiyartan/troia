@@ -68,6 +68,10 @@ Yapılacak incelemeye niteliğine göre VisualVM başlatılırken, bellek parame
    :target: images/visualvm/visualvm_conf.png
    :align: center
    
+For the same purpose you can also enter -J<jvm_option> and --jdkhome parameters to the application while running VisualVM without changing the configuration file. Further, many operations can be performed via the interface with the VisualVM command line tools, and thus processes can be automated. You can examine the other VisualVM parameters by running the visualvm –help command in the folder where the VisualVM application is located. 
+
+The screen that appears when the application is running has two basic components. The first of these is the left section, which shows the running JVMs, snapshots or heapdumps. The other is the second section, which shows the status of the connected JVM or the operations to be performed on this JVM. When the application is first opened, the splash screen or a blank screen will appear because there is no connected JVM yet.
+   
 
 
 JDK (Java Development Kit)
