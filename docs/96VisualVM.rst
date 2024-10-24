@@ -80,17 +80,18 @@ The screen that appears when the application is running has two basic components
 It is also possible to connect to a remote JVM via VisualVM. In this document, we will focus only on operating on a locally running JVM.
    
 
+How to connect to the JVM to be examined?
+=========================================
 
-JDK (Java Development Kit)
-===============================
+In order to analyze your application, you must first connect to a JVM via VisualVM. To do this, you need to double-click on the application you want to analyze by selecting it from the local JVMs on the first left side of VisualVM.
 
-..
+If multiple instances of the same application are running on the operating system, you must ensure that you are connecting to the correct JVM. To do this, you need to know the name or process ID (pid) of your application. You can find this in the task manager. If you cannot see the PID of your application in the task manager, you can also make this column visible and access this data.
 
-.. figure:: images/java/java-jdk.png
-   :width: 385 px
-   :target: images/java/java-jdk.png
+
+.. figure:: images/visualvm/taskmanager.png
+   :width: 650 px
+   :target: images/visualvm/taskmanager.png
    :align: center
-
 
 
 
