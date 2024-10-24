@@ -121,6 +121,15 @@ What is HeapDump?
 
 One of the operations that can be done via the Monitor tab is to take a Heap Dump. Heap is the memory area allocated to an application during its operation and used dynamically by the application. When the Heap Dump button is pressed, all classes and their contents in the heap memory area are written to a file. This data includes almost everything currently in memory, and various analyses can be conducted on this data according to the target.
 
+When you create a heap dump, this heap dump appears with the time information under the server you are connected to. When you double-click it and open it, system firstly opens a summary of the data collected about the memory and application at the time the heap dump was taken.
+
+.. figure:: images/visualvm/heapdump.png
+   :width: 650 px
+   :target: images/visualvm/heapdump.png
+   :align: center
+   
+On this summary screen, if you select the "objects" option, you can see a list of all objects currently in memory. On this Objects screen, you can view the objects that use the most space in memory or all objects. Using the filters at the bottom of the page, the results can be filtered based on class or package name.
+
 
 
 
