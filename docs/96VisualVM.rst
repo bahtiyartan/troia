@@ -63,9 +63,9 @@ First, you should download VisualVM from https://visualvm.github.io/. After open
 Yapılacak incelemeye niteliğine göre VisualVM başlatılırken, bellek parametrelerini ve VisualVM’in çalışacağı JDK path’ini de konfigüre etmek gerekebilir. Bunun için \etc\visualvm.conf dosyası içindeki ilgili parametreleri ihtiyaçlarınıza göre düzenlemelisiniz. Bu configrürasyon dosyası içindeki önemli parametreler, visualvm_default_options ve visualvm_jdkhome parametreleridir. Diğer parametreler için VisualVM dokümantasyonunu inceleyiniz.
 
 
-.. figure:: images/java/installed-jre.png
+.. figure:: images/visualvm/visualvm_conf.png
    :width: 650 px
-   :target: images/java/installed-jre.png
+   :target: images/java/visualvm_conf.png
    :align: center
    
 
