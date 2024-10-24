@@ -298,6 +298,6 @@ epub_copyright = u'2014-2022, Bahtiyar Tan'
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'python': ('http://docs.python.org/3', None)}
-latex_preamble = """
-\usepackage{upquote}
-"""
+#latex_preamble = """
+#\usepackage{upquote}
+#"""
