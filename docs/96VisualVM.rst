@@ -65,7 +65,7 @@ Yapılacak incelemeye niteliğine göre VisualVM başlatılırken, bellek parame
 
 .. figure:: images/visualvm/visualvm_conf.png
    :width: 650 px
-   :target: images/java/visualvm_conf.png
+   :target: images/visualvm/visualvm_conf.png
    :align: center
    
 
