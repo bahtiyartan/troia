@@ -189,7 +189,33 @@ Additionally, in the Sampling tab, you can take snapshots at a moment in the sam
    :width: 650 px
    :target: images/visualvm/sampler_memory.png
    :align: center
+
+How to Perform Profiling?
+-------------------------
+
+Profiling collects data on CPU and memory usage in more detail and continuously, providing the necessary data for optimizing the application and correcting possible errors. In comparison to the sampling process, while data is collected at certain intervals in the sampling process, this data is collected continuously.  Therefore collected data is more detailed and larger in the profiling process.
+
+
+CPU Profiling
+=============
+
+For CPU profiling on VisualVM, you must go to the "Profiling" tab from the main tabs. Here, among the options on the right, a package should be written for the classes that will be the subject of the profiling process. With this option, the data coming from the basic Java libraries and other libraries are exclued.
+
+To start the profiling process, you must press the CPU button on the tab, then data collections starts. After the profiling process begins, you  must be trigger some actions on the profiled application in order to collect data. Depending on the configuration, profiling data will begin to accumulate once the actions are triggered.
+
+.. figure:: images/visualvm/profiling_cpu.png
+   :width: 650 px
+   :target: images/visualvm/profiling_cpu.png
+   :align: center
    
+While data is being collected, it is possible to temporarily pause the process or take a snapshot of the data collected up to a certain point, export the snapshots taken, or filter and plot the methods that stand out in the data. Data related to the functions that are run are listed under the threads that those functions are running on. To completely stop the profiling process, you must click the stop button.
+
+.. figure:: images/visualvm/profiling_cpu_snapshot.png
+   :width: 650 px
+   :target: images/visualvm/profiling_cpu_snapshot.png
+   :align: center
+
+
 
 
 
