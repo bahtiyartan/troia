@@ -43,7 +43,7 @@ STRINGBUILDER is a string like symbol type which is designed for only string bui
 Using a STRINGBUILDER variable instead of STRING increases string concatenation performance dramatically.
 To get higher performance on string concatenation, you must use APPENDSTRING command instead of '+' operator.
 
-Although there is not any other distinctive feature between STRINGBUILDER and STRING, it is not recommended to use STRINGBUILDER type instead of STRING on regular string opreations except string concateantion.
+Although there is not any other distinctive feature between STRINGBUILDER and STRING, it is not recommended to use STRINGBUILDER type instead of STRING on regular string opreations except string concatenation.
 
 Both STRING and STRINGBUILDER types don't have hard-coded maximum length. 
 

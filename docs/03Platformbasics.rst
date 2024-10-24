@@ -19,7 +19,7 @@ It's main purpose is for developing and maintaining business applications in an 
 What Does The Platform Offer?
 =============================
 
-TROIA contains too many useful features to access, operate and report business layer information. Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues. APIs&dlls, localization, supporting various platforms and databases are just the examples of these painful technnical details. Here are some basic advantages that the platform offers for developers, administrators and the users:
+TROIA contains too many useful features to access, operate and report business layer information. Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues. APIs&dlls, localization, supporting various platforms and databases are just the examples of these painful technical details. Here are some basic advantages that the platform offers for developers, administrators and the users:
 
 
 **Free of Technical Details** 
@@ -39,12 +39,12 @@ It is designed for the development of direct business applications. In this sens
 
 **Cross Platform (Platform Independent)**
 
-Application server and desktop client (native, desktop client) run on operating systems such as Windows, Linux, Unix. Web client-based client (web client) can be used over various internet browsers such as Chome and Safari. All applications written on caniasERP and TROIA platform can run on all systems supported by the platform without the need for an additional process.
+Application server and desktop client (native, desktop client) run on operating systems such as Windows, Linux, Unix. Web client-based client (web client) can be used over various internet browsers such as Chrome and Safari. All applications written on caniasERP and TROIA platform can run on all systems supported by the platform without the need for an additional process.
 
 
 **Cross Database (Database Independent)**
 
-All applications on the platform are compatible with all frequently used database systems such as MsSQL, MySQL, PostgreSQL, Oracle, DB2 and all other database systems that can be accessed with the JDBC interface without any changes in their codes.
+All applications on the platform are compatible with all frequently used database systems such as MSSQL, MySQL, PostgreSQL, Oracle, DB2 and all other database systems that can be accessed with the JDBC interface without any changes in their codes.
 
 
 **Compatible with Emerging Systems**
@@ -58,6 +58,7 @@ The TROIA Platform offers a variety of infrastructures ready to developers. Even
 
 
 **Customize Without Recompilation**
+
 There is no need to recompile or translate the system in order to run written applications or make changes to existing applications. It enables application development with libraries, .dll, .jar files, modules, complex compilers without wasting time.
 
 
@@ -72,6 +73,7 @@ One of the strengths of the Troia Platform is its flexibility and ease of integr
 
 
 **Highly Scalable Infrastructure**
+
 Theoretically, hundreds of application servers working in cooperation with each other can work in parallel. With the help of the load balancer in the structure of the platform, users can be directed to the most suitable servers by taking into account the instant load distribution or various parameters. All applications developed using the TROIA Platform can serve one or thousands of users on this scalable structure without a significant performance difference.
 
 
@@ -95,7 +97,7 @@ A single application server is able to serve multiple clients. User count that a
 Client(s)
 ---------
 
-It is not possible to log in an application server and run a troia application directly on application server. To do this operations you need a TROIA client. Most used TROIA client is desktop client (also called java client or swing client) that is able to connect application server and draw troia applications on user interface. The main functionality of this client is getting user actions passing them to application server and drawing resulting screen to user interface. Additonally, development environment of TROIA Language is a part of java client, in other words to develop a TROIA Application you have to connect application server via a desktop client.
+It is not possible to log in an application server and run a troia application directly on application server. To do this operations you need a TROIA client. Most used TROIA client is desktop client (also called java client or swing client) that is able to connect application server and draw troia applications on user interface. The main functionality of this client is getting user actions passing them to application server and drawing resulting screen to user interface. Additionally, development environment of TROIA Language is a part of java client, in other words to develop a TROIA Application you have to connect application server via a desktop client.
 
 There are different kind of clients such as desktop client, web client and web services. Clients are not able to run TROIA codes, their basic responsibility is transferring user interactions to server and handling application server response in ui or presentation layer.
 
@@ -111,7 +113,7 @@ To serve properly, license server and the application servers that it serves for
 RMI Registry
 ------------
 
-RMI Registry is a server side service that provides a communication infrastructure between all components of TROIA Platform. RMI Registry uses RMI Infrastructure of java which provides cummunicatation method for different java applications. Any two components of the platform uses RMI Registry (server to server, client to server, server to license server etc), so running a single RMI registry is a must to run other platform components properly.
+RMI Registry is a server side service that provides a communication infrastructure between all components of TROIA Platform. RMI Registry uses RMI Infrastructure of java which provides communication method for different java applications. Any two components of the platform uses RMI Registry (server to server, client to server, server to license server etc), so running a single RMI registry is a must to run other platform components properly.
 
 
 Network Architecture Overview
