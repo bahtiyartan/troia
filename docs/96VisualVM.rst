@@ -135,7 +135,9 @@ On this summary screen, if you select the "objects" option, you can see a list o
    :target: images/visualvm/heapdump_objects.png
    :align: center
 
+On this screen, you can view object count, consumed memory space, subfields of objects for each sample and the values ​​of these objects and their fields. **In this context, it is important to note that a heap dump data taken from a live environment poses information security risks.**
 
+When the heap dump is generated and examined, you will realize that the "retained size" information is not calculated at the first stage. Retained size refers to the amount of memory occupied by an object and its references, considering its relationships with other objects in the memory heap. In other words, when an object is deleted from memory, it determines whether all objects that directly or indirectly reference this object will also be deleted from memory.
 
 
 
