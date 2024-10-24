@@ -239,6 +239,8 @@ It is also possible to take a snapshot instantly and export this snapshot during
    :width: 650 px
    :target: images/visualvm/profiling_memory_snapshot.png
    :align: center
+   
+The purpose of memory profiling is generally to optimize the memory consumption of the system or to detect possible memory leakage problems. In this context, knowing the profiled application's memory structure, inter-class relationships and dependencies will be useful for making correct analyses. Additionally, in memory-related analyses, it is extremely important to use structures such as Garbage Collector, which are automatically triggered under normal conditions, carefully during the analysis process. Without GC, the number of some objects in the system that appear may be higher than it should be.
 
 
 
