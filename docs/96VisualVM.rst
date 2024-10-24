@@ -55,6 +55,14 @@ Alternative Tools
 As an alternative to VisualVM, YourKit is one of the most common and professional options. Other solutions such as JProfiler or Java Mission Control can also be considered as alternatives.
 
 
+How to run VisualVM?
+-----------------
+
+First, you should download VisualVM from https://visualvm.github.io/. After opening the compressed folder you downloaded, you can run the \bin\visalvm.exe file in this folder. For other operating systems, you need to follow the necessary instructions according to the structure of your system.
+
+Yapılacak incelemeye niteliğine göre VisualVM başlatılırken, bellek parametrelerini ve VisualVM’in çalışacağı JDK path’ini de konfigüre etmek gerekebilir. Bunun için \etc\visualvm.conf dosyası içindeki ilgili parametreleri ihtiyaçlarınıza göre düzenlemelisiniz. Bu configrürasyon dosyası içindeki önemli parametreler, visualvm_default_options ve visualvm_jdkhome parametreleridir. Diğer parametreler için VisualVM dokümantasyonunu inceleyiniz.
+
+
 .. figure:: images/java/installed-jre.png
    :width: 650 px
    :target: images/java/installed-jre.png
