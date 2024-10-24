@@ -139,6 +139,11 @@ On this screen, you can view object count, consumed memory space, subfields of o
 
 When the heap dump is generated and examined, you will realize that the "retained size" information is not calculated at the first stage. Retained size refers to the amount of memory occupied by an object and its references, considering its relationships with other objects in the memory heap. In other words, when an object is deleted from memory, it determines whether all objects that directly or indirectly reference this object will also be deleted from memory.
 
+.. figure:: images/visualvm/heapdump_objects_session.png
+   :width: 650 px
+   :target: images/visualvm/heapdump_objects_session.png
+   :align: center
+
 
 
 
