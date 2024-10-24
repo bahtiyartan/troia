@@ -46,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Programming with TROIA'
-copyright = u'2014-2022, Bahtiyar Tan'
+copyright = u'2014-2024, Bahtiyar Tan'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
