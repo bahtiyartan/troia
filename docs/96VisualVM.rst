@@ -235,6 +235,12 @@ To perform memory profiling, the memory option must be started in the "Profiling
 It is also possible to take a snapshot instantly and export this snapshot during the Memory Profiling process. After the Memory Profiling process, the profiling operation should be stopped with the stop button.
 
 
+.. figure:: images/visualvm/profiling_memory_snapshot.png
+   :width: 650 px
+   :target: images/visualvm/profiling_memory_snapshot.png
+   :align: center
+
+
 
 
 
