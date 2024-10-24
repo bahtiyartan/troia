@@ -71,6 +71,13 @@ Yapılacak incelemeye niteliğine göre VisualVM başlatılırken, bellek parame
 For the same purpose you can also enter -J<jvm_option> and --jdkhome parameters to the application while running VisualVM without changing the configuration file. Further, many operations can be performed via the interface with the VisualVM command line tools, and thus processes can be automated. You can examine the other VisualVM parameters by running the visualvm –help command in the folder where the VisualVM application is located. 
 
 The screen that appears when the application is running has two basic components. The first of these is the left section, which shows the running JVMs, snapshots or heapdumps. The other is the second section, which shows the status of the connected JVM or the operations to be performed on this JVM. When the application is first opened, the splash screen or a blank screen will appear because there is no connected JVM yet.
+
+.. figure:: images/visualvm/visualvmhome.png
+   :width: 650 px
+   :target: images/visualvm/visualvmhome.png
+   :align: center
+
+It is also possible to connect to a remote JVM via VisualVM. In this document, we will focus only on operating on a locally running JVM.
    
 
 
