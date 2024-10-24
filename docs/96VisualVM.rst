@@ -181,6 +181,16 @@ It is possible to perform performance or memory analysis by performing "CPU Samp
    :target: images/visualvm/sampler_cpu.png
    :align: center
    
+Sampling adds relatively less load to the currently running system because it is done by reading data from the JVM at certain intervals. It can be useful for certain scale analyses, such as monitoring the Garbage Collector effect or seeing the number of objects in memory, but sampling may be insufficient to detect some problems.
+
+Additionally, in the Sampling tab, you can take snapshots at a moment in the sampling process to compare changes step by step. It is also possible to take a heap dump, filter the snapshots or sampling data, etc. from this screen.
+
+.. figure:: images/visualvm/sampler_memory.png
+   :width: 650 px
+   :target: images/visualvm/sampler_memory.png
+   :align: center
+   
+
 
 
 
