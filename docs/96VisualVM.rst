@@ -4,14 +4,15 @@
 VisualVM for Optimization and Monitoring
 =========================================
 
-* visual vm .. *
+A profiling tool is an optimization tool which is used to determine resource problems about components of the sofware such as which components of software consume the most resources, which functions run the longest, and which processes cause bottlenecks. 
+
+Profiling tools focus primarily on performance analysis and memory management, because the primary bottleneck resources in a software systems are the CPU and memory. So in generalprofiling tools generally do not focus on resources such as disk or network.
 
 
 Profiling Tools
 -------------
 
-...
-
+Performance analysis is the whole analysis process based on the running time, such as the triggering order of functions within the application, the number of triggers, and the time spent in these functions. It measures the speed of the application and determine its efficiency in terms of processing load.
 
 Performance (CPU) Analysis
 ==========================
