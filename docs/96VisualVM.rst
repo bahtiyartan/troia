@@ -215,11 +215,17 @@ While data is being collected, it is possible to temporarily pause the process o
    :target: images/visualvm/profiling_cpu_snapshot.png
    :align: center
    
+If the analyzed JVM is a TROIA Application server, threads starting with the **RMI TCP Connection** prefix are threads created for the purpose of running processes occurring on the server due to user interaction.
+
+In the CPU Profiling data, the “Invocations” column shows how many times the relevant method was executed, and Total Time (CPU) is the measured/estimated value of the real CPU time. Total Time indicates the total time spent for this method. In other words, if the relevant thread is in the waiting state, it does not consume CPU and this time is not included in the CPU time. These periods include the time of the methods called by this method. “Self Time” shows only the time spent by this method. So the time spent in the methods called by the method is not included in the “Self Time” of the calling method.
+
+In the analyses to be made after the profiling process; the methodology depends on the type of the problem or the nature of the optimization to be made. Therefore, it is not possible to create a recepie that shows how to evaluate the results. However; there are points to be considered during the analysis process. In such analyses, processes carried out with long-term and large-scale data will produce a large amount of profiling data. And this makes the examination difficult. Therefore, according to the nature of the problem planned to be solved, performing analysis on a subset of the problem that is large enough to be analyzed will be beneficial in terms of speed and resources in the process of determining the problem. It would be correct to perform the comparisons to be made during the analysis process with similar system resources. If possible, on the same system, and not to compare different processes with each other in order to achieve effective results.
+   
 
 Memory Profiling
 ================
 
-To perform memory profiling, the memory option must be started in the "Profiling" tab. Before starting, it would be useful to enter a restrictive package for the classes that will be subject to the memory profiling process from the “memory settings” section on the right. The most basic package for the TROIA platform can be entered as ** com.ias.** **. This package means that all classes except libraries are monitored.
+To perform memory profiling, the memory option must be started in the "Profiling" tab. Before starting, it would be useful to enter a restrictive package for the classes that will be subject to the memory profiling process from the “memory settings” section on the right. The most basic package for the TROIA platform can be entered as com.ias.**. This package means that all classes except libraries are monitored.
 
 .. figure:: images/visualvm/profiling_memory.png
    :width: 650 px
