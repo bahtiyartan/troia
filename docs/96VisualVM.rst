@@ -29,16 +29,19 @@ Memory Analysis is the analysis process carried out to measure the memory usage 
 
 
 What is VisualVM?
-==============
+-----------------
 
-...
+Java applications run on a virtual machine called the "Java Virtual Machine" (JVM), which provides a platform-independent runtime environment for Java programs. It provides many tools for analyzing and using applications running on it.
+
+VisualVM is a profiling tool used to monitor and analyze applications running on the JVM. Structurally, it offers a user-friendly interface with all the profiling tools offered by the JVM. Since it offers some limited features in terms of monitoring, it can also be used as a monitoring tool when needed.
 
 
-JRE / JDK
-----------------
+Main Functionalities of VisualVM
+================================
 
-JRE (Java Runtime Environment)
-==============================
+it is possible to perform the following operations on VisualVM:
+
+
 
 ...
 
