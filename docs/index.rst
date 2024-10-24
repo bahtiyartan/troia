@@ -49,6 +49,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    90SMS
    92ProgramsLibraries
    94Java_
+   96VisualVM
    99AppendixI
    99AppendixII
    99AppendixIII

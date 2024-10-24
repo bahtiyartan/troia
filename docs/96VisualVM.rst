@@ -1,10 +1,10 @@
 
 
-=========================================
-Basic Java Concepts For TROIA Developers
-=========================================
+===============================================
+VisualVM as an Optimization and Monitoring Tool
+===============================================
 
-*TROIA Platform works on Java Virtual Machine, so to know about Java saves time in some special cases such as performance optimization, debugging and deployment. This section aims to introduce basic and useful java concepts for troia developers or system administrators.*
+* visual vm .. *
 
 
 What is Java?
