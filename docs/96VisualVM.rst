@@ -143,6 +143,16 @@ When the heap dump is generated and examined, you will realize that the "retaine
    :width: 650 px
    :target: images/visualvm/heapdump_objects_session.png
    :align: center
+   
+Calculating "Retained Size" is a long and costly process and is not calculated directly because it is not needed in every case. If you need this data in your analysis, you can calculate this data using the heap dump summary option and then continue your analysis process by switching to the objects tab.
+
+You can export and store your heap dump files to make comparative analysis between different heap dump files taken different times.
+
+
+How to analyse threads?
+-----------------------
+
+A thread is the smallest unit of execution that can run in parallel in a program. A program can perform multiple operations simultaneously using multiple threads. Threads share the same memory space allocated to the process they are attached to, making it easier and faster to exchange data.
 
 
 
