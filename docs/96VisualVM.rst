@@ -149,8 +149,8 @@ Calculating "Retained Size" is a long and costly process and is not calculated d
 You can export and store your heap dump files to make comparative analysis between different heap dump files taken different times.
 
 
-How to analyse threads?
------------------------
+What is ThreadDump?
+-------------------
 
 A thread is the smallest unit of execution that can run in parallel in a program. A program can perform multiple operations simultaneously using multiple threads. Threads share the same memory space allocated to the process they are attached to, making it easier and faster to exchange data.
 
@@ -160,6 +160,10 @@ After connecting to a JVM on VisualVM, the threads in the application and their 
    :width: 650 px
    :target: images/visualvm/threadtab.png
    :align: center
+   
+Thread dump is the data used to examine the current running state of an application. Especially in multi-threaded applications, thread dump shows what each thread is doing at a time and which resources it is accessing. When the application freezes or slows down unexpectedly, developers or system administrators can analyze this dump to identify problems. The thread dump contains important information such as the state of the thread and the call stack information of the currently executing code.
+
+On the TROIA Application Server, each user's instant operations are executed as a separate thread. In this context, threads starting with CANIAS(rmi) are user operations, and threads starting with CANIAS(checker) are threads opened to monitor user sessions.
 
 
 
