@@ -49,8 +49,11 @@ It is possible to perform the following operations on VisualVM:
 - Trigger the Garbage Collector operation or watch the moments when it is automatically triggered
 
 
+Alternative Tools
+=================
 
-...
+As an alternative to VisualVM, YourKit is one of the most common and professional options. Other solutions such as JProfiler or Java Mission Control can also be considered as alternatives.
+
 
 .. figure:: images/java/installed-jre.png
    :width: 650 px
