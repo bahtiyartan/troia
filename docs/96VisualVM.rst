@@ -165,6 +165,23 @@ Thread dump is the data used to examine the current running state of an applicat
 
 On the TROIA Application Server, each user's instant operations are executed as a separate thread. In this context, threads starting with CANIAS(rmi) are user operations, and threads starting with CANIAS(checker) are threads opened to monitor user sessions.
 
+.. figure:: images/visualvm/threaddump.png
+   :width: 650 px
+   :target: images/visualvm/threaddump.png
+   :align: center
+   
+
+Sampling
+--------
+
+It is possible to perform performance or memory analysis by performing "CPU Sampling" and "Memory Sampling" on VisualVM. To do this, you must open sampling operation for a certain time interval in the "Sampling" tab of VisualVM. When the sampling process is completed, it is possible to see which processes were executed during the sampling interval or which class instances are currently in memory.
+
+.. figure:: images/visualvm/sampler_cpu.png
+   :width: 650 px
+   :target: images/visualvm/sampler_cpu.png
+   :align: center
+   
+
 
 
 
