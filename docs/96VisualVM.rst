@@ -154,6 +154,14 @@ How to analyse threads?
 
 A thread is the smallest unit of execution that can run in parallel in a program. A program can perform multiple operations simultaneously using multiple threads. Threads share the same memory space allocated to the process they are attached to, making it easier and faster to exchange data.
 
+After connecting to a JVM on VisualVM, the threads in the application and their current status can be monitored in the "Threads" tab. Threads can be listed by filtering them according to their running status. Again, in this tab, thread dumps can be taken and the threads on the JVM can be reported instantly. The thread dumps taken will be listed under this link. These files can be saved differently and used in comparative analyses later.
+
+.. figure:: images/visualvm/threadtab.png
+   :width: 650 px
+   :target: images/visualvm/threadtab.png
+   :align: center
+
+
 
 
 
