@@ -13,6 +13,7 @@ A profiling tool is an optimization tool which is used to determine resource pro
 
 Profiling tools focus primarily on performance analysis and memory management, because the primary bottleneck resources in a software systems are the CPU and memory. So in generalprofiling tools generally do not focus on resources such as disk or network.
 
+Performance and memory analysis are performed to detect and resolve various errors or to optimize problematic parts of the code in terms of processor and memory usage. All profiling tools work for these purposes, however, they vary according to the characteristics and needs of the programming language or platform.
 
 Performance (CPU) Analysis
 ==========================
@@ -27,7 +28,7 @@ Memory Analaysis
 Memory Analysis is the analysis process carried out to measure the memory usage of the application, examine the data held in memory, and detect unnecessary memory usage or memory leaks.
 
 
-Java SE/EE/ME
+What is VisualVM?
 ==============
 
 ...
