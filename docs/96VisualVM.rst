@@ -103,6 +103,16 @@ After connecting to the correct JVM instance, a screen opens on the right side t
 The critical -Xms and -Xmx parameters are also listed here within the JVM Parameters. This screen can be used to check whether all critical parameters are reflected in the JVM as planned.
 
 
+How to monitor CPU and Memory Usage?
+------------------------------------
+
+After connecting to the JVM, if you switch from Overview to the Monitor tab, you can monitor some cpu and memory info about connected JVM. There are some simple and useful information on this tab such as JVM uptime, CPU and memory consumption instantly via graphical interfaces. In this screen, it is also possible to graphically monitor the number of threads and the number of loaded classes in the system at that moment.
+
+.. figure:: images/visualvm/monitortab.png
+   :width: 650 px
+   :target: images/visualvm/monitortab.png
+   :align: center
+
 
 
 
