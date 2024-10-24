@@ -39,7 +39,14 @@ VisualVM is a profiling tool used to monitor and analyze applications running on
 Main Functionalities of VisualVM
 ================================
 
-it is possible to perform the following operations on VisualVM:
+It is possible to perform the following operations on VisualVM:
+
+- Monitoring application's CPU and memory usage data in real time
+- Monitoring threads on the application and their status
+- Analysing which class functions consume more CPU
+- Take a dump of the class instances in memory
+- Analyzing memory/heap dumps
+- Trigger the Garbage Collector operation or watch the moments when it is automatically triggered
 
 
 
