@@ -221,6 +221,11 @@ Memory Profiling
 
 To perform memory profiling, the memory option must be started in the "Profiling" tab. Before starting, it would be useful to enter a restrictive package for the classes that will be subject to the memory profiling process from the “memory settings” section on the right. The most basic package for the TROIA platform can be entered as "com.ias.**". This package means that all classes except libraries are monitored.
 
+.. figure:: images/visualvm/profiling_memory.png
+   :width: 650 px
+   :target: images/visualvm/profiling_memory.png
+   :align: center
+
 
 
 
