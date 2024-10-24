@@ -92,6 +92,15 @@ If multiple instances of the same application are running on the operating syste
    :width: 650 px
    :target: images/visualvm/taskmanager.png
    :align: center
+   
+After connecting to the correct JVM instance, a screen opens on the right side that provides basic information for that JVM. In the data here, it is possible to see the configuration that will affect the system as a whole, such as java home, JVM version, JVM arguments and System properties.
+
+.. figure:: images/visualvm/justconnectedtojvm.png
+   :width: 650 px
+   :target: images/visualvm/justconnectedtojvm.png
+   :align: center
+
+The critical -Xms and -Xmx parameters are also listed here within the JVM Parameters. This screen can be used to check whether all critical parameters are reflected in the JVM as planned.
 
 
 
