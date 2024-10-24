@@ -130,6 +130,11 @@ When you create a heap dump, this heap dump appears with the time information un
    
 On this summary screen, if you select the "objects" option, you can see a list of all objects currently in memory. On this Objects screen, you can view the objects that use the most space in memory or all objects. Using the filters at the bottom of the page, the results can be filtered based on class or package name.
 
+.. figure:: images/visualvm/heapdump_objects.png
+   :width: 650 px
+   :target: images/visualvm/heapdump_objects.png
+   :align: center
+
 
 
 
