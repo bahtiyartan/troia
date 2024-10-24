@@ -104,7 +104,7 @@ The critical -Xms and -Xmx parameters are also listed here within the JVM Parame
 
 
 How to monitor CPU and Memory Usage?
-------------------------------------
+====================================
 
 After connecting to the JVM, if you switch from Overview to the Monitor tab, you can monitor some cpu and memory info about connected JVM. There are some simple and useful information on this tab such as JVM uptime, CPU and memory consumption instantly via graphical interfaces. In this screen, it is also possible to graphically monitor the number of threads and the number of loaded classes in the system at that moment.
 
@@ -112,6 +112,8 @@ After connecting to the JVM, if you switch from Overview to the Monitor tab, you
    :width: 650 px
    :target: images/visualvm/monitortab.png
    :align: center
+   
+Additionly, by triggering the Garbage Collector on the Monitor tab, unused class instances that are in memory can be cleared from memory. This process is an operation carried out by the JVM under normal conditions. However, when analyzing situations that are temporarily used for a process but are expected to be released later on the application, the Garbage Collector may need to be run manually. In other words, this tool can be used when investigating possible memory leak problems.
 
 
 
