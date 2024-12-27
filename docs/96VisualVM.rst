@@ -235,9 +235,9 @@ To perform memory profiling, the memory option must be started in the "Profiling
 It is also possible to take a snapshot instantly and export this snapshot during the Memory Profiling process. After the Memory Profiling process, the profiling operation should be stopped with the stop button.
 
 
-.. figure:: images/visualvm/profiling_memory_snapshot.png
+.. figure:: _images/visualvm/profiling_memory_snapshot.png
    :width: 650 px
-   :target: images/visualvm/profiling_memory_snapshot.png
+   :target: _images/visualvm/profiling_memory_snapshot.png
    :align: center
    
 The purpose of memory profiling is generally to optimize the memory consumption of the system or to detect possible memory leakage problems. In this context, knowing the profiled application's memory structure, inter-class relationships and dependencies will be useful for making correct analyses. Additionally, in memory-related analyses, it is extremely important to use structures such as Garbage Collector, which are automatically triggered under normal conditions, carefully during the analysis process. Without GC, the number of some objects in the system that appear may be higher than it should be.
