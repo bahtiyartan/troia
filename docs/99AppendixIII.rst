@@ -6,6 +6,8 @@ Appendix III - What's new in the book?
 
 *“Programming with TROIA” is a live book, so there are too many changes as corrections, new examples, new headings and even new sections. This appendix aims to list significant changes on book in a daily format for last three years to help old readers.*
 
+2024.12.26 - Push Notifications title on "Messages and Alerts" section.
+
 2024.10.25 - New section: VisualVM for Optimization and Monitoring
 
 2022.05.05 - Fixed various typos and incorrect codes.

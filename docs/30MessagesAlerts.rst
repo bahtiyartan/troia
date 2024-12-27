@@ -115,6 +115,12 @@ Here is a sample code that shows how to get messages from SYSBATCHMESSAGES table
 	SET TMPTABLE TO TABLE TMPTABLE;
 
 	SETSERVERONLY(0);
+	
+
+Push Notifications
+------------------
+
+After build 24.12.26-01, TROIA Platform supports push notifications. A push notification can be created by PUSHNOTIFICATION command due to business needs of the business application. This push notification can be delivered to the clients which have an user interface including desktop, web and mobile toolkit. For an up to date syntax please check TROIA help document.
 
 
 Other Alerting Options
