@@ -194,10 +194,11 @@ Builds numbers are listed below:
 					 
 	     YY.MM.DD.NN (compatible with all 8.02, 8.03, 9.03 CANIAS ERP versions)
 
+
 How to Follow Changes & Improvements?
 -------------------------------------
 
-Each version of TROIA Platform fixes some bugs or reveals some new features in different layers. In some cases, version upgrade requires some manual operations by administrators or developers. So you need to follow changes between version upgrades. All changes are listed in ReleaseNotes.txt document which is supplied/distributed with each version. Also it is possible to read release notes document from "SYST17 - Release Notes" TROIA application and "Relese Notes Analyser" tool on Workbench.
+Each build of TROIA Platform fixes some bugs or reveals some new features in different layers. In some cases, build upgrade requires some manual operations by administrators or developers. So you need to follow changes between builds. All changes are listed in ReleaseNotes.txt document which is supplied/distributed with each build. Also it is possible to read release notes document from "SYST17 - Release Notes" TROIA application and "Relese Notes Analyser" tool on Workbench.
 
 
 
