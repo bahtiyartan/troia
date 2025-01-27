@@ -178,26 +178,21 @@ Understand the roles of each component and their subsystems using this graphic a
 
 
 
-Versions of TROIA Platform
-==========================
+Builds of TROIA Platform
+========================
 
-Sample version numbers are listed below:
+Builds numbers are listed below:
 
 ::
 
-	3.08.05 021101 
-	5.01.02 012102 
-	5.02.04 041201  
-	8.02.01 051501   (deprecated format)
-	8.03.02 030201   (deprecated format)
-	
-	8.02 22.02.14-01 (new format)
-	8.03 22.02.14-01 (new format)
-	
-There are two different version number formats, the deprecated one is not used after December 2021, new format is more easy to understand. TROIA Platform version numbers are consisted from two main parts "major version number" and "build number", in new format build number is in YY.MM.DD-NN format(YY:two digit year, MM:two digit month, DD:two digit day, NN:two digit number of version on a single day). It is obvious that version numbers are ordered so you can compare between two dates to learn which version is older or younger.
-
-602, 603, 604, 802, 803 are names **CANIAS ERP** versions and all are designed to run on a major TROIA Platform version. (602 works on 3.08.xx xxxxxx, 603 works on 5.01.xx xxxxxx, 604 works on 5.02.xx xxxxxx, 802 works on 8.02 YY.MM.DD-NN, 803 works on 8.03 YY.MM.DD-NN). So; 602, 603, 604, 802, 803 are not valid version names for TROIA Platform.
-
+	3.08.xx xxxxxx
+	5.01.xx xxxxxx
+	5.02.xx xxxxxx
+	8.02 YY.MM.DD-NN (deprecated format)
+	8.03 YY.MM.DD-NN (deprecated format)
+	9.03 YY.MM.DD-NN (deprecated format)
+					 
+	     YY.MM.DD.NN (compatible with all 8.02, 8.03, 9.03 CANIAS ERP versions)
 
 How to Follow Changes & Improvements?
 -------------------------------------
