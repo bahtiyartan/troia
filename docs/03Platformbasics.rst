@@ -178,19 +178,19 @@ Understand the roles of each component and their subsystems using this graphic a
 
 
 
-Builds of TROIA Platform
-========================
+Major Builds of TROIA Platform
+==============================
 
 Builds numbers are listed below:
 
 ::
 
-	3.08.xx xxxxxx
-	5.01.xx xxxxxx
-	5.02.xx xxxxxx
-	8.02 YY.MM.DD-NN (deprecated format)
-	8.03 YY.MM.DD-NN (deprecated format)
-	9.03 YY.MM.DD-NN (deprecated format)
+	3.08.xx xxxxxx   (2006)
+	5.01.xx xxxxxx   (2011)
+	5.02.xx xxxxxx   (2014)
+	8.02 YY.MM.DD-NN (2018)
+	8.03 YY.MM.DD-NN (2020)
+	9.03 YY.MM.DD-NN (2023)
 					 
 	     YY.MM.DD.NN (compatible with all 8.02, 8.03, 9.03 CANIAS ERP versions)
 
