@@ -8,7 +8,7 @@ Appendix IV - Frequently Asked Questions
 
 
 How to read build number?
----------------------------
+=========================
 
 As an TROIA application developer or system administrator, it is important to know your build number. Because some new features revealed or bugs are fixed with new releases. And you must know whether your build supports the features that you need. For a valid deployment all TROIA platform components must have same build number.
 
@@ -20,10 +20,10 @@ First method that you can read your build number on login screen or from about d
    :align: center
    
 
-If you are aready logged in you can view your client and server build numbers from Settings->Deployment. At this tab you can also get some other useful information about your deployment.
+If you are aready logged in you can view your client and server build numbers from **Settings->Deployment**. At this tab you can also get some other useful information about your deployment.
 
 .. figure:: images/faq/version2.png
-   :width: 500 px
+   :width: 550 px
    :target: images/faq/version2.png
    :align: center
 
