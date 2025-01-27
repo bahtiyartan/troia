@@ -50,9 +50,10 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    92ProgramsLibraries
    94Java_
    96VisualVM
-   99AppendixI
-   99AppendixII
-   99AppendixIII
+   99Appendix1
+   99Appendix2
+   99Appendix3
+   99Appendix4
    
    #Security
    #vectors
