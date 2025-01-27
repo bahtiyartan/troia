@@ -28,7 +28,5 @@ If you are aready logged in you can view your client and server build numbers fr
    :align: center
    
    
-602, 603, 604, 802, 803 are names **CANIAS ERP** versions and all are designed to run on a major TROIA Platform build. (602 works on 3.08.xx xxxxxx, 603 works on 5.01.xx xxxxxx, 604 works on 5.02.xx xxxxxx, 802 works on 8.02 YY.MM.DD-NN, 803 works on 8.03 YY.MM.DD-NN). So; 602, 603, 604, 802, 803 are not valid build names for TROIA Platform.
-
-
+602, 603, 604, 802, 803 are names **CANIAS ERP** versions and all are designed to run on a major TROIA Platform build. (602 works on 3.08.xx xxxxxx, 603 works on 5.01.xx xxxxxx, 604 works on 5.02.xx xxxxxx, 802 works on 8.02 YY.MM.DD-NN, 803 works on 8.03 YY.MM.DD-NN). So; 602, 603, 604, 802, 803 are not valid build names for TROIA Platform. **After 23.02.10-01 builds TROIA Platform supports 8.02, 8.03, 9.03 versions of CANIAS ERP.**
 
