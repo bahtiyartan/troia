@@ -1,34 +1,47 @@
 
 
-========================================
-Appendix IV - Frequently Asked Questions
-========================================
+====================================
+Appendix IV - What's new in the book?
+====================================
 
-*TROIA Platform and TROIA Programming Language are huge tools, so there are too many challenging points. This section aims to give useful and practical responses to frequently asked questions to make you save time.*
+*“Programming with TROIA” is a live book, so there are too many changes as corrections, new examples, new headings and even new sections. This appendix aims to list significant changes on book in a daily format for last three years to help old readers.*
 
+2025.01.27 - New "Frequently Asked Questions" section.
 
-What is my build number?
--------------------------
+2024.12.26 - Push Notifications title on "Messages and Alerts" section.
 
-As an TROIA application developer or system administrator, it is important to know your build number. Because some new features revealed or bugs are fixed with new releases. And you must know whether your build supports the features that you need. For a valid deployment all TROIA platform components must have same build number.
+2024.10.25 - New section: VisualVM for Optimization and Monitoring
 
-First method that you can read your build number on login screen or from about dialog 
+2022.05.05 - Fixed various typos and incorrect codes.
 
-.. figure:: images/faq/build.png
-   :width: 400 px
-   :target: images/faq/build.png
-   :align: center
-   
+2022.02.15 - New Version Number Format on "Platform Basics" Section.
 
-If you are aready logged in you can view your client and server build numbers from **Settings->Deployment** . At this tab you can also get some other useful information about your deployment.
+2022.02.15 - New System Functions on "File Operations" Section.
 
-.. figure:: images/faq/build2.png
-   :width: 550 px
-   :target: images/faq/build2.png
-   :align: center
-   
-   
-602, 603, 604, 802, 803 are names **CANIAS ERP** versions and all are designed to run on a major TROIA Platform build. (602 works on 3.08.xx xxxxxx, 603 works on 5.01.xx xxxxxx, 604 works on 5.02.xx xxxxxx, 802 works on 8.02 YY.MM.DD-NN, 803 works on 8.03 YY.MM.DD-NN). So; 602, 603, 604, 802, 803 are not valid build names for TROIA Platform. 
+2021.09.16 - New section: Database Connections.
 
-**After 23.02.10-01 builds, TROIA Platform supports 8.02, 8.03, 9.03 versions of CANIAS ERP.**
+2021.04.07 - New examples for TCP Port on "Port Communication (Serial & TCP)" section.
+
+2020.12.04 - Graphics have been updated on "Platform Basics" section.
+
+2020.10.30 - Web service login error codes are now included in "Web Services" section.
+
+2020.09.29 - New title: "What Does The Platform Offer?" to "Platform Basics" section.
+
+2020.07.24 - New examples for batch and server only transaction messages for "Messages and Alerts" section.
+
+2020.03.20 - Some corrections on "Working With Date/Datetime" section.
+
+2020.02.10 - New example for "Database Specific Syntax & Functions" title for "Database Basics" section
+
+2019.12.24 - New section: Concurrency (Multi-Threading).
+
+2019.12.09 - "Platform Basics" section updated considering new IOT Gateway & IOT Connector
+
+2019.09.27 - New section: Database Basics and Selecting Data.
+
+2019.09.27 - "Built-in Data Types and Structures" section renamed to "Built-in Data Types".
+
+2019.09.25 - Font and some other visual changes for better reading experience on web.
+
 
