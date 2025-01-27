@@ -178,22 +178,8 @@ Understand the roles of each component and their subsystems using this graphic a
 
 
 
-About Deployment
-================
-
-How to Read Version Number?
----------------------------
-
-As an TROIA application developer or system administrator, it is important to know your version number. Because some new features revealed or bugs are fixed with new releases. And you must know whether your version supports the features that you need or all your components have same version to be sure that your installation is valid or not.
-
-You can read your version number on login screen or from about dialog (Menu->About). 
-
-
-.. figure:: images/platformbasics/version.png
-   :width: 459 px
-   :target: images/platformbasics/version.png
-   :align: center
-
+Versions of TROIA Platform
+==========================
 
 Sample version numbers are listed below:
 
