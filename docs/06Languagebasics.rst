@@ -34,8 +34,9 @@ Additionally they have predefined events. Events are TROIA methods which are cal
    :width: 700 px
    :target: images/languagebasics/dialog.png
    :align: center
-   
-Components
+
+
+Component
 ====================
 While developing user interfaces, programmers use ui items such as buttons, text fields, labels (ui controls). 
 But in some cases, programmers may need to reuse a set of controls on different dialogs to avoid copying and pasting existing codes for different dialogs. 
