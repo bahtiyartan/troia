@@ -140,7 +140,7 @@ Most used TROIA Applications are listed below, for all applications please check
 +----------+-------------------------------+----------------------------------------------------+
 | DEVT07   | Search on Codes               | also an TROIA IDE tool                             |
 +----------+-------------------------------+----------------------------------------------------+
-| DEVT11   | Runcode Test Transaction      |                                                    |
+| DEVT30   | Runcode Test Transaction      | (use DEVT11 for the releases before 9.03)          |
 +----------+-------------------------------+----------------------------------------------------+
 | DEVT31   | Trace (Files)                 | also an TROIA IDE tool                             |
 +----------+-------------------------------+----------------------------------------------------+
