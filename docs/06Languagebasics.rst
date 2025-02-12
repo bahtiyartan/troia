@@ -35,13 +35,6 @@ Additionally they have predefined events. Events are TROIA methods which are cal
    :target: images/languagebasics/dialog.png
    :align: center
 
-
-Component
-====================
-While developing user interfaces, programmers use ui items such as buttons, text fields, labels (ui controls). 
-But in some cases, programmers may need to reuse a set of controls on different dialogs to avoid copying and pasting existing codes for different dialogs. 
-A custom TROIA component is a reusable custom ui control which contains one or more simple controls to perform a specific action.
-
 Report
 ====================
 
