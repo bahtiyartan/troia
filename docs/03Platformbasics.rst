@@ -185,12 +185,12 @@ Builds numbers are listed below:
 
 ::
 
-	3.08.xx xxxxxx   (2006)
-	5.01.xx xxxxxx   (2011)
-	5.02.xx xxxxxx   (2014)
-	8.02 YY.MM.DD-NN (2018)
-	8.03 YY.MM.DD-NN (2020)
-	9.03 YY.MM.DD-NN (2023)
+	3.08.xx xxxxxx   (2006) (compatible with 6.02 CANIAS ERP version)
+	5.01.xx xxxxxx   (2011) (compatible with 6.03 CANIAS ERP version)
+	5.02.xx xxxxxx   (2014) (compatible with 6.04 CANIAS ERP version)
+	8.02 YY.MM.DD-NN (2018) (compatible with 8.02 CANIAS ERP version)
+	8.03 YY.MM.DD-NN (2020) (compatible with 8.03 CANIAS ERP version)
+	9.03 YY.MM.DD-NN (2023) (compatible with 9.03 CANIAS ERP version)
 					 
 	     YY.MM.DD.NN (compatible with all 8.02, 8.03, 9.03 CANIAS ERP versions)
 
