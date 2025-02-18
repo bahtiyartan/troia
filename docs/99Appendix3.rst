@@ -43,10 +43,8 @@ When dividing integers, the result depends on the data types of the numbers invo
 	OBJECT:
 		DECIMAL RESULT;
 
-	RESULT = 1 / 2;   // result is 0 (not 0.05)
-	RESULT = 1.0 / 2; // 0.5
-
-	DECIMALVAR1 = RESULT;
+	RESULT = 1 / 2;   // result is 0    (not 0.05)
+	RESULT = 1.0 / 2; // result is 0.5
 
 To get a decimal result, at least one of the numbers must be a DECIMAL. Please review the sample code above. 
 In this example dividend and divisor are hard coded, behaviour is same when these are integer variables. 
