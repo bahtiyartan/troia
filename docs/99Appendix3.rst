@@ -7,8 +7,8 @@ Appendix III - Frequently Asked Questions
 *TROIA Platform and TROIA Programming Language are huge tools, so there are too many challenging points. This section aims to give useful and practical responses to frequently asked questions to make you save time.*
 
 
-What is my build number?
--------------------------
+Question: What is my build number?
+----------------------------------
 
 As an TROIA application developer or system administrator, it is important to know your build number. Because some new features revealed or bugs are fixed with new releases. And you must know whether your build supports the features that you need. For a valid deployment all TROIA platform components must have same build number.
 
@@ -33,8 +33,8 @@ If you are aready logged in you can view your client and server build numbers fr
 **After 23.02.10-01 builds, TROIA Platform supports 8.02, 8.03, 9.03 versions of CANIAS ERP.**
 
 
-Division of Integers
---------------------
+Question: Division of Integers
+------------------------------
 
 When dividing integers, the result depends on the data types of the numbers involved. Since both dividend and divisor are integers, TROIA performs integer division and discards the decimal portion as in Java.
 
