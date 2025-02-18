@@ -32,3 +32,22 @@ If you are aready logged in you can view your client and server build numbers fr
 
 **After 23.02.10-01 builds, TROIA Platform supports 8.02, 8.03, 9.03 versions of CANIAS ERP.**
 
+
+Dividing Integers
+-----------------
+
+When dividing integers, the result depends on the data types of the numbers involved. Since both dividend and divisor are integers, TROIA performs integer division and discards the decimal portion as in Java.
+
+::
+
+	OBJECT:
+		DECIMAL RESULT;
+
+	RESULT = 1 / 2;   // result is 0 (not 0.05)
+	RESULT = 1.0 / 2; // 0.5
+
+	DECIMALVAR1 = RESULT;
+
+To get a decimal result, at least one of the numbers must be a DECIMAL. Please review the sample code above. 
+In this example dividend and divisor are hard coded, behaviour is same when these are integer variables. 
+
