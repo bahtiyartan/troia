@@ -33,8 +33,8 @@ If you are aready logged in you can view your client and server build numbers fr
 **After 23.02.10-01 builds, TROIA Platform supports 8.02, 8.03, 9.03 versions of CANIAS ERP.**
 
 
-Dividing Integers
------------------
+Division of Integers
+--------------------
 
 When dividing integers, the result depends on the data types of the numbers involved. Since both dividend and divisor are integers, TROIA performs integer division and discards the decimal portion as in Java.
 
