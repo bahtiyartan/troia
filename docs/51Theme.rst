@@ -180,7 +180,7 @@ TROIA Platform contains some predefined theme variables for certain purposes. He
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | TBORDERLINES       | Color          | Color of the lines betwenn cells in table.                                                               |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
-| TBORDERLINETYPE    | Border         | Vertical and horizontal border lines between cells. (sample: 11,10,00,01)                                |
+| TBORDERLINETYPE    | Border         | Vertical and horizontal border lines between cells. (sample: 11 or 10 etc.)                              |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | TFONT              | Font           | Font for table and tree.                                                                                 |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
