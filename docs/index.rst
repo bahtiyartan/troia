@@ -33,6 +33,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    46DateOperations
    49DialogAdvanced
    50Controls
+   50Theme
    52ReportsPrinting
    54Barcodes
    55InheritanceCross
