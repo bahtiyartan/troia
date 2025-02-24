@@ -1,12 +1,12 @@
 
 
-=======================
-UI Standards and Theme
-=======================
+===========================
+User Theme and UI Standards
+===========================
 
 *This sections aims to introduce details of user theme and ui development standards.*
 
-What is theme?
+What is User Theme?
 --------------------
 
 The theme is designed to provide the user interface with certain standards, in harmony but to offer various options to the end user in terms of the interface. Troia istemcisinin genel görünümünü ve stilini belirleyen tasarım öğelerinin bütünüdür. Tema, metin renkleri, arka plan renkleri, yazı tipleri, kenarlıklar ve genel stil kurallarını içerir.
@@ -14,8 +14,8 @@ The theme is designed to provide the user interface with certain standards, in h
 The TROIA platform comes with a set of built-in themes. In addition, it is possible to make various changes to these standard themes or define new themes. You can use the SYST13 transaction to define new themes or modify existing themes.
 
 
-What is "Theme Variable"?
-----------------------------
+Theme Variables
+--------------------
 
 A theme variable is a variable defined in theme, so its value can change depending on theme, but it is consistent inside a theme and harmonious. Therefore, all controls uses the same value defined in theme.
 
