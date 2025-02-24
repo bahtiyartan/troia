@@ -9,7 +9,7 @@ User Theme and UI Standards
 What is User Theme?
 --------------------
 
-The theme is designed to provide the user interface with certain standards, in harmony but to offer various options to the end user in terms of the interface. Troia istemcisinin genel görünümünü ve stilini belirleyen tasarım öğelerinin bütünüdür. Tema, metin renkleri, arka plan renkleri, yazı tipleri, kenarlıklar ve genel stil kurallarını içerir.
+The theme is designed to provide the user interface with certain standards, in harmony but to offer various options to the end user in terms of the interface. It is the set of design elements that determine the overall appearance and style of the TROIA Client. The theme includes text colors, background colors, fonts, borders and general style rules.
 
 The TROIA platform comes with a set of built-in themes. In addition, it is possible to make various changes to these standard themes or define new themes. You can use the SYST13 transaction to define new themes or modify existing themes.
 
@@ -52,9 +52,9 @@ TROIA Platform contains some predefined theme variables for certain purposes. He
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | BICONCOLOR         | Color          | Icon color, this value is used while loading svg icons instead of #242838.                               |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
-| BIGCAPTION         | Font           | Regular fontsize +3 font for the data to be emphasized.                                                  |
+| BIGCAPTION         | Font           | Regular font+3(size) for the data to be emphasized.                                                      |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
-| BIGCAPTIONB        | Font           | Regular fontsize +3+bold font for the data to be emphasized.                                             |
+| BIGCAPTIONB        | Font           | Regular font+3+bold for the data to be emphasized.                                                       |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | CHBACKGROUND       | Color          | Table column and row header background color.                                                            |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
@@ -170,9 +170,9 @@ TROIA Platform contains some predefined theme variables for certain purposes. He
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | SLINEWEIGHT        | Integer        | Line weight for shape controls.                                                                          |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
-| SMALLCAPTION       | Font           | Regular size -3 font value for the sub information or less emphasized info.                              |
+| SMALLCAPTION       | Font           | Regular font-3(size) for the sub information or less emphasized info.                                    |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
-| SMALLCAPTIONB      | Font           | Regular size -3 + bold font value for the sub information or less emphasized info.                       |
+| SMALLCAPTIONB      | Font           | Regular font-3+bold for the sub information or less emphasized info.                                     |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | SUBHEADERFONT      | Font           | Header font size -3 font for sub headers.                                                                |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
