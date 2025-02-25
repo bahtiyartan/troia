@@ -249,6 +249,17 @@ The other option,is using reading a theme variable to set a control property dyn
 	STRINGVAR2 = GETTHEMEVARIABLE(THEMEVARNAME);
 
 	SETSTYLE BACKCOLOR STRINGVAR1 TO BUTTON1;
+	
+	
+Font Cross
+----------
+
+Very similar to class and dialog crosses, it is possible to add cross references to font familes to solve font based problems for user interface and server operations such as creating pdf reports etc. If there is a font cross definition system uses assigned font instead of crossed font. For example if you have an font cross Arial to Malgun Gothic, system uses Malgun Gothic font everywhere Arial font is set.
+
+It is possible to define font cross for all users or a specific user and profile. Font crosses for all users is stored in SYSFONTREF database table, and you can manage them in SYST99 Check Tables -> SYS -> SYSFONTREF check table (for 9.03 releases). To set a font cross for a specific user or profile, you can use SYST03 System Users -> Font References application.
+
+
+
    
 
    
