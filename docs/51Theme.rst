@@ -256,7 +256,9 @@ Font Cross
 
 Very similar to class and dialog crosses, it is possible to add cross references to font familes to solve font based problems for user interface and server operations such as creating pdf reports etc. If there is a font cross definition system uses assigned font instead of crossed font. For example if you have a font cross Arial to Malgun Gothic, system uses Malgun Gothic font whereever Arial font is used.
 
-It is possible to define font cross for all users or a specific user and profile (after 25.02.25-01). Font crosses for all users is stored in SYSFONTREF database table, and you can manage them in SYST99 Check Tables -> SYS -> SYSFONTREF check table (for 9.03 releases). To set a font cross for a specific user or profile, you can use SYST03 System Users -> Font References application.
+It is possible to define font cross for all users or a specific user and profile (after 25.02.25-01). Font crosses for all users is stored in SYSFONTREF database table, and you can manage them in **SYST99 Check Tables -> SYS -> SYSFONTREF ** check table (for 9.03 releases). 
+
+To set a font cross for a specific user or profile, you can use **SYST03 System Users -> Font References** application. This kind of font crosses are stored in SYSUSERFONTREF table.
 
 
 
