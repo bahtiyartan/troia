@@ -13,6 +13,11 @@ The theme is designed to provide the user interface with certain standards, in h
 
 The TROIA platform comes with a set of built-in themes. In addition, it is possible to make various changes to these standard themes or define new themes. You can use the SYST13 transaction to define new themes or modify existing themes.
 
+How to Define a Custom Theme?
+=============================
+
+To define a new valid theme, you must create a new theme on SYST13 transaction and add all predefined theme variables with your own values. Theme variable concept and standart theme variable names will be discussed in this section. **If there is missing a default theme variable in your theme, it means that your theme is invalid.** Althought defining a theme is possible, it is not recommended bacause themes can require some effort to perform its maintenance and keep it harmonious.
+
 
 Theme Variables
 --------------------
