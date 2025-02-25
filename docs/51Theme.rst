@@ -224,4 +224,12 @@ TROIA Platform contains some predefined theme variables for certain purposes. He
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 
 
-	
+How to Use Theme Variables?
+----------------------------
+
+There are two different ways to use theme variables. First method is setting theme variables to controls on IDE. To perform this operation, on dialog desing panel of IDE you must select a control and then click "Theme Variables" property on properties panel.
+
+.. figure:: images/theme/theme_variable.png
+   :width: 700 px
+   :target: images/theme/theme_variable.png
+   :align: center
