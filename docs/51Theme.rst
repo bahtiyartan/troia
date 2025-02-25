@@ -227,9 +227,29 @@ TROIA Platform contains some predefined theme variables for certain purposes. He
 How to Use Theme Variables?
 ----------------------------
 
-There are two different ways to use theme variables. First method is setting theme variables to controls on IDE. To perform this operation, on dialog desing panel of IDE you must select a control and then click "Theme Variables" property on properties panel.
+There are two different ways to use theme variables. First method is setting theme variables to controls on IDE. To perform this operation, on dialog design panel of IDE you must select a control  then click "Theme Variables" property on properties panel and write the names of theme variables to available options. Each control type has its own option set that you can assing a theme variable to.
 
 .. figure:: images/theme/theme_variable.png
    :width: 700 px
    :target: images/theme/theme_variable.png
    :align: center
+   
+The other option,is using reading a theme variable to set a control property dynamically. To get a theme variable value you must use GETTHEMEVARIABLE() system function. This function gets theme variable name as its only parameter. Here is a sample code that reads user's theme variable and set background color of BUTTON1 with this variable's value.
+
+::
+
+	OBJECT:
+		STRING STRINGVAR1,
+		STRING STRINGVAR2,
+		STRING THEMEVARNAME;
+
+	STRINGVAR1 = GETTHEMEVARIABLE('HEADERBCK');
+
+	THEMEVARNAME = 'HEADERBCK';
+	STRINGVAR2 = GETTHEMEVARIABLE(THEMEVARNAME);
+
+	SETSTYLE BACKCOLOR STRINGVAR1 TO BUTTON1;
+   
+
+   
+ 
