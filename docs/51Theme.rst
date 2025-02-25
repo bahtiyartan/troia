@@ -16,7 +16,7 @@ The TROIA platform comes with a set of built-in themes. In addition, it is possi
 How to Define a Custom Theme?
 =============================
 
-To define a new valid theme, you must create a new theme on SYST13 transaction and add all predefined theme variables with your own values. Theme variable concept and standart theme variable names will be discussed in this section. **If there is missing a default theme variable in your theme, it means that your theme is invalid.** Althought defining a theme is possible, it is not recommended bacause themes can require some effort to perform its maintenance and keep it harmonious.
+To define a new valid theme, you must create a new theme on SYST13 transaction and add all predefined theme variables with your own values. Theme variable concept and standart theme variable names will be discussed in this section. **If there is missing a default theme variable in your theme, it means that your theme is invalid.** Althought defining a theme is possible and easy, distrubuting and keeping it harmonious require some efford. So **it is not recommended that you take on such a responsibility unless you have enough resources or time to undertake such an effort on a long-term basis.**
 
 
 Theme Variables
