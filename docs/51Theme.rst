@@ -141,6 +141,8 @@ TROIA Platform contains some predefined theme variables for certain purposes. He
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | HEADEROBJFR        | Color          | Foreground color for the non-button controls on header.                                                  |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
+| MAINBORDERCOLOR    | Color          | Border color for main window parts, tables, charts and orher large components                            |
++--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | MENUBACKCOLOR      | Color          | Background color for the menu.                                                                           |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | MENUFORECOLOR      | Color          | Foreground color for the menu.                                                                           |
