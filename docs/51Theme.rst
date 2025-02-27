@@ -26,9 +26,8 @@ A theme variable is a variable defined in theme, so its value can change dependi
 
 Developers can assign these variables to related control features. For example, a developer can set a theme variable control backcolor, like setting it to "red". And system reads actual background color from user theme and assingn to the control background.
 
-=======================
 Static Theme Variables
-=======================
+======================
 
 First group of theme variables are **static theme variables**. Static theme variables do not change theme from theme, in other words their values static and same for all themes. This kind of theme variables are mostly used for coloring data rows. Here are the list of static theme variables and their values. If you define a new theme you don't need to add these variables to your theme, your theme will include this values automatically. Althought it is not recommended, you can override the static theme variable, defining a same named variable in your custom theme.
 
@@ -92,6 +91,9 @@ First group of theme variables are **static theme variables**. Static theme vari
 | BACKCOLORWARNING       |                                                    | 16503651     |               |
 +------------------------+----------------------------------------------------+--------------+---------------+
 
+
+Predefined Theme Variables Names
+================================
 
 Second group of theme variables, changes theme to theme. There are some predefined theme variable names for certain purposes. If you define a new theme, you must define at least these theme varaibles for a valid theme. Here are the list of predefined theme variable names and their type and purpose.
 
