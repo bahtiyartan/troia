@@ -16,7 +16,7 @@ The TROIA platform comes with a set of built-in themes. In addition, it is possi
 How to Define a Custom Theme?
 =============================
 
-To define a new valid theme, you must create a new theme on SYST13 transaction and add all predefined theme variables with your own values. Theme variable concept and standart theme variable names will be discussed in this section. **If there is a missing default theme variable in your theme, it means that your theme is invalid.** Althought defining a theme is possible and easy, distrubuting and keeping it harmonious require some efford. So **it is not recommended that you take on such a responsibility unless you have enough resources or time to undertake such an effort on a long-term basis.**
+To define a new valid theme, you must create a new theme on SYST13 transaction and add all predefined theme variables with your own values. Theme variable concept and standard theme variable names will be discussed in this section. **If there is a missing default theme variable in your theme, it means that your theme is invalid.** Althought defining a theme is possible and easy, distrubuting and keeping it harmonious require some efford. So **it is not recommended that you take on such a responsibility unless you have enough resources or time to undertake such an effort on a long-term basis.**
 
 
 Theme Variables
@@ -92,10 +92,10 @@ First group of theme variables are **static theme variables**. Static theme vari
 +------------------------+----------------------------------------------------+--------------+---------------+
 
 
-Predefined Theme Variables Names
-================================
+Standard Theme Variables Names
+==============================
 
-Second group of theme variables, changes theme to theme. There are some predefined theme variable names for certain purposes. If you define a new theme, you must define at least these theme varaibles for a valid theme. Here are the list of predefined theme variable names and their type and purpose.
+Second group of theme variables, changes theme to theme. There are some standard theme variable names for certain purposes. If you define a new theme, you must define at least these theme varaibles for a valid theme. Here are the list of predefined theme variable names and their type and purpose.
 
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
