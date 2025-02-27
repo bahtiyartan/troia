@@ -24,7 +24,71 @@ Theme Variables
 
 A theme variable is a variable defined in theme, so its value can change depending on theme, but it is consistent inside a theme and harmonious. Therefore, all controls uses the same value defined in theme.
 
-Developers can assign these variables to related control features. For example, a developer can set a theme variable control backcolor, like setting it to "red". And system reads actual background color from user theme and assingn to the control background. 
+Developers can assign these variables to related control features. For example, a developer can set a theme variable control backcolor, like setting it to "red". And system reads actual background color from user theme and assingn to the control background.
+
+First group of theme variables are **static theme variables**. Static theme variables do not change theme from theme, in other words their values static and same for each theme. This kind of theme variables are mostly used for coloring data rows. Here are the list of static theme variables and their values. If you define a new theme you don't need to add these variables to your theme, your theme will include this values automatically. Althought it is not recommended, if you add one of this static theme variables to your theme your value overrides predefined value.
+
++------------------------+------------------------------------------+--------------+---------------+
+|**Name**                | **Description**                          | **Int Value**| **Hex Value** |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR1             |                                          | 5417436      |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR2             |                                          | 10738424     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR3             |                                          | 14736597     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR4             |                                          | 16768688     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR5             |                                          | 15778005     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR6             |                                          | 15986072     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR7             |                                          | 16702930     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR8             |                                          | 14084518     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR9             |                                          | 12835058     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR10            |                                          | 15597490     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR11            |                                          | 16775035     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR12            |                                          | 13762302     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR13            |                                          | 10092390     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR14            |                                          | 15437388     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR15            |                                          | 15520078     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR16            |                                          | 12409157     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR17            |                                          | 10325933     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR18            |                                          | 12247204     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR19            |                                          | 16494651     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR20            |                                          | 14530934     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR21            |                                          | 11978090     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOR22            |                                          | 9290200      |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLORERROR         |                                          | 15550776     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLOROK            |                                          | 4698982      |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLORSUBTOTAL0     |                                          | 14702848     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLORSUBTOTAL1     |                                          | 16754176     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLORSUBTOTAL2     |                                          | 16767809     |               |
++------------------------+------------------------------------------+--------------+---------------+
+| BACKCOLORWARNING       |                                          | 16503651     |               |
++------------------------+------------------------------------------+--------------+---------------+
+
+
 
 TROIA Platform contains some predefined theme variables for certain purposes. Here are the list of predefined theme variables and their type and purpose.
 
@@ -229,6 +293,10 @@ TROIA Platform contains some predefined theme variables for certain purposes. He
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | TZEBRABACKCOLOR2   | Color          | Table row background alternative, second color of zebra view.                                            |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
+
+
+
+
 
 
 How to Use Theme Variables?
