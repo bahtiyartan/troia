@@ -9,9 +9,23 @@ User Theme and UI Standards
 What is User Theme?
 --------------------
 
-The theme is designed to provide the user interface with certain standards, in harmony but to offer various options to the end user in terms of the interface. It is the set of design elements that determine the overall appearance and style of the TROIA Client. The theme includes text colors, background colors, fonts, borders and general style rules.
+The theme is designed to provide the user interface with certain standards, in harmony but to offer various options to the end user in terms of the interface. It is the set of design elements that determine the overall appearance and style of the TROIA Client. The theme includes text colors, background colors, fonts, borders and general style rules. Users can choose their own themes from **Settings-> User Configurations -> Change Theme** and it is also possible to a theme to a specific user on SYST03 System Users Transaction.
 
-The TROIA platform comes with a set of built-in themes. In addition, it is possible to make various changes to these standard themes or define new themes. You can use the SYST13 transaction to define new themes or modify existing themes.
+The TROIA platform comes with a set of built-in themes. In addition, it is possible to make various changes to these standard themes or define new themes. You can use the SYST13 transaction to define new themes or modify existing themes. Here is the list of embedded user themes:
+
+::
+
+	Blue Flat
+	CherryFlat
+	coffeeFlat
+	FDB-FLAT-WP
+	FLAT1
+	Flat Yellow
+	Green Flat
+	plumFlat
+	Surf Flat
+
+
 
 How to Define a Custom Theme?
 =============================
