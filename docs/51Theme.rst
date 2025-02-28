@@ -316,6 +316,13 @@ Second group of theme variables, changes theme to theme. There are some standard
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 
 
+Loading Order of Theme Variables
+================================
+
+The order in which theme variables are loaded is important in the final theme variable set. Thanks to loading order. it is possible to override some predefined values ​​in a particular database. The most recently uploaded ones have the highest priority. System load static theme variables firstly, so you can override them by adding a same named variable to your custom theme.
+
+If you use an embedded theme system fistly loads static theme variables, then embedded values for standard theme variable names. In this case if you define a theme that has same name with an embedded theme you can override an embedded value by defining a same named theme variable.
+
 
 How to Use Theme Variables?
 ----------------------------
