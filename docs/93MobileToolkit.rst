@@ -32,7 +32,16 @@ Enabling Mobile Toolkit access, there are two levels of operations. First one is
 Rest URL Configuration
 ======================
 
-As mentioned previous sections, system uses restful web services while transferring data between Mobile Toolkit and application servers.So you must definitely have a properly running restful web services in your installation and **these services neet to be accessible from any network environment that your clients uses Mobile Toolkit**.
+As mentioned previous sections, system uses restful web services while transferring data between Mobile Toolkit and application servers.So **you must definitely have a properly running restful web services** in your installation and **these services neet to be accessible from any network environment that your clients uses Mobile Toolkit**. 
+
+To have properly running restful web services deployment is not the subject of this section but if you have an web client deployment you probably have an restfull depoloyment. Because restful web service and web client are a bundle. If you visit a url  **{your_web_client_url}/rest/stateless/v1/** with your browser and see some message like below probably you have restful service deployment.
+
+::
+
+	{
+	  "response": "",
+	  "error": "service name is missing"
+	}
 
 
 User Permissions
