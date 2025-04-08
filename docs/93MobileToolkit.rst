@@ -20,7 +20,9 @@ Main Architecture
 Mobile Toolkit Support
 ======================
 
-...
+To run Mobile Toolkit, you must have a TROIA Platform build that supports Mobile Toolkit infrastructure. Builds after 25.04.20-01 support mobile toolkit and required restful services. If your release is older than this build, firstly you must upgrade to proper build.
+
+Mobile Toolkit has also business layer functions so it has some requirements on business layer.
 
 
 How to Enable Mobile Toolkit
