@@ -42,6 +42,9 @@ Downloading the app to your mobile device does not mean that you can access your
    :width: 600 px
    :target: images/mobiletoolkit/personal_qr.png
    :align: center
+   
+This personal code contains required info to contact with your servers, so users have to scan this code with the Mobile Toolkit application for once. Mobile toolkit is able to guide the user, so it is enough to follow the instructions on the application to use the application.
+
 
 Basic Functions and Customization
 ---------------------------------
