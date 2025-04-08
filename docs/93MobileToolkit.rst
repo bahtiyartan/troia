@@ -26,7 +26,18 @@ Does Your Build Supports Mobile Toolkit
 How to Enable Mobile Toolkit Access
 -----------------------------------
 
-...
+Enabling Mobile Toolkit access, there are two levels of operations. First one is Rest URL configuration which opens a channel between the application and your servers. Second level is about user permissions.
+
+
+Rest URL Configuration
+======================
+
+
+
+User Permissions
+================
+
+
 
 
 How to Install Mobile Toolkit to Your Mobile Device
