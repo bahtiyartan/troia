@@ -29,12 +29,19 @@ How to Enable Mobile Toolkit Access
 ...
 
 
-How to Download Mobile Toolkit to Your Mobile Device
-----------------------------------------------------
+How to Install Mobile Toolkit to Your Mobile Device
+---------------------------------------------------
 
 You can download and install the application on Google Play for your Android devices, or on Apple Store for your IOS devices. To do this you can search "Canias Mobile Tooolkit" on these platforms. Also, you can access the application by using the links or scanning the barcodes on Settings-> Mobile Toolkit page on main web and desktop client.
 
-Downloading the app to your mobile device does not mean that you can access your system immediately. To start using the application, your system administrator must allow you to connect via the Mobile Toolkit. **If you can access the Settings->Mobile Toolkit tab on the client and see an access link there, then you have access via the mobile toolkit.** Otherwise please contact with your system administrator.
+Downloading the app to your mobile device does not mean that you can access your system immediately. To start using the application, your system administrator must allow you to connect via the Mobile Toolkit. 
+
+**If you can access the Settings->Mobile Toolkit tab on the client and see a personal access link there, then you have access via the mobile toolkit.** Otherwise please contact with your system administrator.
+
+.. figure:: images/mobiletoolkit/personal_qr.png
+   :width: 650 px
+   :target: images/mobiletoolkit/personal_qr.png
+   :align: center
 
 Basic Functions and Customization
 ---------------------------------
