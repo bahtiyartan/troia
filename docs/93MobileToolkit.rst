@@ -37,6 +37,7 @@ Rest URL Configuration
 User Permissions
 ================
 
+To view mobile toolkit access url, users must have "MOBILETOOLKIT" transaction right. This right can be defined for users and profiles on "SYST03 - System Users" transaction. So it is possible to manage Mobile Toolkit users, considering users, profiles and databases that can be accessed from an application server.
 
 
 
