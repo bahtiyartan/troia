@@ -17,8 +17,8 @@ Main Architecture
 ...
 
 
-Does Your Build Supports Mobile Toolkit
-=======================================
+Mobile Toolkit Support
+======================
 
 ...
 
