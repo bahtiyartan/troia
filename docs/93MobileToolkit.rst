@@ -29,8 +29,8 @@ How to Enable Mobile Toolkit Access
 Enabling Mobile Toolkit access, there are two levels of operations. First one is Rest URL configuration which opens a channel between the application and your servers. Second level is about user permissions.
 
 
-Rest URL Configuration
-======================
+Restful Service
+===============
 
 As mentioned previous sections, system uses restful web services while transferring data between Mobile Toolkit and application servers.So **you must definitely have a properly running restful web services** in your installation and **these services neet to be accessible from any network environment that your clients uses Mobile Toolkit**. 
 
@@ -42,6 +42,13 @@ To have properly running restful web services deployment is not the subject of t
 	  "response": "",
 	  "error": "service name is missing"
 	}
+	
+For more information about TROIA restful web services please read the related section or contact with your system consultant.
+
+Mobile Toolkit URL
+==================
+
+
 
 
 User Permissions
