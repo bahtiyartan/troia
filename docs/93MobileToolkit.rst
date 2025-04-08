@@ -59,8 +59,8 @@ User Permissions
 
 
 
-How to Install Mobile Toolkit to Your Mobile Device
----------------------------------------------------
+How to Install Mobile Toolkit to Mobile Devices
+-----------------------------------------------
 
 You can download and install the application on Google Play for your Android devices, or on Apple Store for your IOS devices. To do this you can search "Canias Mobile Tooolkit" on these platforms. Also, you can access the application by using the links or scanning the barcodes on Settings-> Mobile Toolkit page on main web and desktop client.
 
