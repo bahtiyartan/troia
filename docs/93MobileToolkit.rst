@@ -32,12 +32,13 @@ Enabling Mobile Toolkit access, there are two levels of operations. First one is
 Rest URL Configuration
 ======================
 
+As mentioned previous sections, system uses restful web services while transferring data between Mobile Toolkit and application servers.So you must definitely have a properly running restful web services in your installation and **these services neet to be accessible from any network environment that your clients uses Mobile Toolkit**.
 
 
 User Permissions
 ================
 
-To view mobile toolkit access url, users must have "MOBILETOOLKIT" transaction right. This right can be defined for users and profiles on "SYST03 - System Users" transaction. So it is possible to manage Mobile Toolkit users, considering users, profiles and databases that can be accessed from an application server.
+**To view mobile toolkit access url, users must have "MOBILETOOLKIT" transaction right.** This right can be defined for users and profiles on "SYST03 - System Users" transaction. So it is possible to manage Mobile Toolkit users considering users, profiles and databases that can be accessed from an application server.
 
 
 
