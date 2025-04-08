@@ -36,7 +36,7 @@ You can download and install the application on Google Play for your Android dev
 
 Downloading the app to your mobile device does not mean that you can access your system immediately. To start using the application, your system administrator must allow you to connect via the Mobile Toolkit. 
 
-**If you can access the Settings->Mobile Toolkit tab on the client and see a personal access link there, then you have access via the mobile toolkit.** Otherwise please contact with your system administrator.
+**If you can access the Settings->Mobile Toolkit tab on the client and see a personal access link, that means you have access permission via the mobile toolkit.** Otherwise please contact with your system administrator.
 
 .. figure:: images/mobiletoolkit/personal_qr.png
    :width: 600 px
