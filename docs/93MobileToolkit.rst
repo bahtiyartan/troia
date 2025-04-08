@@ -39,7 +39,7 @@ Downloading the app to your mobile device does not mean that you can access your
 **If you can access the Settings->Mobile Toolkit tab on the client and see a personal access link there, then you have access via the mobile toolkit.** Otherwise please contact with your system administrator.
 
 .. figure:: images/mobiletoolkit/personal_qr.png
-   :width: 650 px
+   :width: 600 px
    :target: images/mobiletoolkit/personal_qr.png
    :align: center
 
