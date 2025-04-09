@@ -22,7 +22,7 @@ Mobile Toolkit Support
 
 To run Mobile Toolkit, you must have a TROIA Platform build that supports Mobile Toolkit infrastructure. Builds after 25.04.20-01 support mobile toolkit and required restful services. If your release is older than this build, firstly you must upgrade to proper build.
 
-Mobile Toolkit has also business layer functions so it has some requirements on business layer.
+Mobile Toolkit has also business layer functions so it has some requirements on business layer. If your Canias version is older than 9.03 it is not possible to run mobile toolkit, because 9.03 is the first release that supports Mobile Toolkit.
 
 
 How to Enable Mobile Toolkit
@@ -68,14 +68,14 @@ You can download and install the application on Google Play for your Android dev
 
 Downloading the app to your mobile device does not mean that you can access your system immediately. To start using the application, your system administrator must allow you to connect via the Mobile Toolkit. 
 
-**If you can access the Settings->Mobile Toolkit tab on the client and see a personal access link, that means you have access permission via the mobile toolkit.** Otherwise please contact with your system administrator.
+**If you can access the Settings->Mobile Toolkit tab on the client and see a personal access code as a QR Code, that means you have access permission via the mobile toolkit.** Otherwise please contact with your system administrator.
 
 .. figure:: images/mobiletoolkit/personal_qr.png
    :width: 600 px
    :target: images/mobiletoolkit/personal_qr.png
    :align: center
    
-This personal code contains required info to contact with your servers, so **users have to scan this code with the Mobile Toolkit application for once**. Mobile toolkit has some simple steps to guide the user, so it is enough to follow the instructions on the application to use the application.
+"Personal Mobile Toolkit Access Code" contains required info to contact with your servers, so **users have to scan this code with the Mobile Toolkit application for once**. Mobile toolkit has some simple steps to guide the user, so it is enough to follow the instructions on the application to use the application.
 
 
 Basic Functions and Customization
