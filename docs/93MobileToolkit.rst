@@ -51,6 +51,14 @@ For more information about TROIA restful web services please read the related se
 Configuring Mobile Toolkit URL
 ==============================
 
+After enabling your restful web service configuration, you need to configure a mobile toolkit access URL on your server configuration file (this file is usually called "ServerSettings" file). To do this you must add **MobileToolkitRestURL** keyword under [System] section of your server configuration file. Here is the syntax:
+
+::
+
+	{your_web_client_url}/rest/stateless/v1/?profile={profile_name_here}
+	
+In this syntax "{your_web_client_url}" URL must be accessible from any network environment that Mobile Toolkit is used on. And given profile ( {profile_name_here} ) name must be defined in your client-profiles.cfg file in your web client. Please be sure that given profile contains Application Server or Load Balancer addresss correctly.
+
 
 
 
