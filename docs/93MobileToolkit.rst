@@ -14,23 +14,6 @@ Introduction
 Main Architecture
 ==================
 
-...
-
-
-Mobile Toolkit Support
-======================
-
-To run Mobile Toolkit, you must have a TROIA Platform build that supports Mobile Toolkit infrastructure. Builds after 25.04.20-01 support mobile toolkit and required restful services. If your release is older than this build, firstly you must upgrade to proper build.
-
-Mobile Toolkit has also business layer functions so it has some requirements on business layer. If your Canias version is older than 9.03 it is not possible to run mobile toolkit, because 9.03 is the first release that supports Mobile Toolkit.
-
-
-How to Enable Mobile Toolkit
-----------------------------
-
-Enabling Mobile Toolkit access, there are two levels of operations. First one is Rest URL configuration which opens a channel between the application and your servers. Second level is about user permissions.
-
-
 Communication Channel: Restful Service
 ======================================
 
@@ -46,6 +29,20 @@ To have properly running restful web services deployment is not the subject of t
 	}
 	
 For more information about TROIA restful web services please read the related section or contact with your system consultant.
+
+
+Mobile Toolkit Support
+======================
+
+To run Mobile Toolkit, you must have a TROIA Platform build that supports Mobile Toolkit infrastructure. Builds after 25.04.20-01 support mobile toolkit and required restful services. If your release is older than this build, firstly you must upgrade to proper build.
+
+Mobile Toolkit has also business layer functions so it has some requirements on business layer. If your Canias version is older than 9.03 it is not possible to run mobile toolkit, because 9.03 is the first release that supports Mobile Toolkit. Additionally, to run business layer functions properly your system must have related business layer patches for Canias Modules, because the data requested by mobile toolkit is provided by classes defined in Canias. 
+
+
+How to Enable Mobile Toolkit
+----------------------------
+
+Enabling Mobile Toolkit access, there are two levels of operations. First one is Rest URL configuration which opens a channel between the application and your servers. Second level is about user permissions.
 
 
 Configuring Mobile Toolkit URL
