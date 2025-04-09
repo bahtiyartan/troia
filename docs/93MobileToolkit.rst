@@ -99,14 +99,3 @@ Mobile Toolkit is designed to make the most needed functions of the business lay
 - BPM Processes
 
 **It is not possible to make customizations on Mobile Toolkit for any level such as UI, basic functionality etc.**
-
-
-
-
-
-
-
-
-
-
-	
