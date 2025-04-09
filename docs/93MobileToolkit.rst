@@ -10,6 +10,8 @@ Mobile Toolkit
 Introduction
 ------------
 
+Mobile Toolkit communicates with TROIA Application Servers as if it were a third-party application via a fixed interface such as a restful web service. The restful service calls a TROIA class called SYSMOBILETOOLKIT prepared for Mobile Toolkit and transfers various processes in the business layer to the mobile device. Mobile Toolkit does not communicate other business layer classes directly.
+
 
 Main Architecture
 ==================
