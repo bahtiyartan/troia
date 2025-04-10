@@ -93,9 +93,9 @@ Downloading the app to your mobile device does not mean that you can access your
    
 "Personal Mobile Toolkit Access Code" contains required info to contact with your servers, so **users have to scan this code with the Mobile Toolkit application for once**. Mobile toolkit has some simple steps to guide the user, so it is enough to follow the instructions on the application to use the application.
 
-.. figure:: images/mobiletoolkit/appset2.png
+.. figure:: images/mobiletoolkit/appset-login.png
    :width: 600 px
-   :target: images/mobiletoolkit/appset2.png
+   :target: images/mobiletoolkit/appset-login.png
    :align: center
 
 
