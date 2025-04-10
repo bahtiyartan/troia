@@ -16,6 +16,11 @@ Mobile toolkit is an React Native based, mobile application that targets to prov
    :width: 200 px
    :target: images/mobiletoolkit/home-3.png
    :align: center
+  
+.. figure:: images/mobiletoolkit/BPM-4.png
+   :width: 200 px
+   :target: images/mobiletoolkit/BPM-4.png
+   :align: center
 
 It communicates with TROIA Application Servers as if it were a third-party application via a fixed interface such as a restful web service. The restful service calls a TROIA class called SYSMOBILETOOLKIT prepared for Mobile Toolkit and transfers various processes in the business layer to the mobile device. Mobile Toolkit does not communicate other business layer classes directly.
 
