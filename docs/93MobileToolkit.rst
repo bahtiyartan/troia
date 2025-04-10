@@ -12,6 +12,11 @@ What is Mobile Toolkit?
 
 Mobile toolkit is an React Native based, mobile application that targets to provide some personal functions of Canias ERP such as BPM processes, KPI's, calendar management, leave management etc.
 
+.. figure:: images/mobiletoolkit/home-3.png
+   :width: 600 px
+   :target: images/mobiletoolkit/home-3.png
+   :align: center
+
 It communicates with TROIA Application Servers as if it were a third-party application via a fixed interface such as a restful web service. The restful service calls a TROIA class called SYSMOBILETOOLKIT prepared for Mobile Toolkit and transfers various processes in the business layer to the mobile device. Mobile Toolkit does not communicate other business layer classes directly.
 
 .. figure:: images/mobiletoolkit/mobile-toolkit-architecture.png
