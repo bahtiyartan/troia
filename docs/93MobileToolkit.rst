@@ -13,7 +13,7 @@ What is Mobile Toolkit?
 Mobile toolkit is an React Native based, mobile application that targets to provide some personal functions of Canias ERP such as BPM processes, KPI's, calendar management, leave management etc.
 
 .. figure:: images/mobiletoolkit/app-set1.png
-   :width: 200 px
+   :width: 600 px
    :target: images/mobiletoolkit/app-set1.png
    :align: center
 
