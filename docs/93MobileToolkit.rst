@@ -45,9 +45,9 @@ For more information about TROIA restful web services please read the related se
 Mobile Toolkit Support
 ======================
 
-To run Mobile Toolkit, you must have a TROIA Platform build that supports Mobile Toolkit infrastructure. Builds after 25.04.20-01 support mobile toolkit and required restful services. If your release is older than this build, firstly you must upgrade to proper build.
+To run Mobile Toolkit, you must have a TROIA Platform build that supports Mobile Toolkit infrastructure. **Builds after 25.04.20-01 support mobile toolkit and required restful services.** If your build is older than 25.04.20-01, firstly you must upgrade to proper build.
 
-Mobile Toolkit has also business layer functions so it has some requirements on business layer. If your Canias version is older than 9.03 it is not possible to run mobile toolkit, because 9.03 is the first release that supports Mobile Toolkit. Additionally, to run business layer functions properly your system must have related business layer patches for Canias Modules, because the data requested by mobile toolkit is provided by classes defined in Canias. 
+Mobile Toolkit has also business layer functions so it has some requirements on business layer. If your Canias version is older than 9.03 it is not possible to run mobile toolkit, because 9.03 is the first Canias version that supports Mobile Toolkit. Additionally, to run business layer functions properly your system must have related business layer patches for Canias Modules, because the data requested by mobile toolkit is provided by classes defined in Canias. As mentioned, the most important TROIA Layer class is SYSMOBILETOOLKIT, because is a kind of gateway between your mobile device and business layer applications.
 
 
 How to Enable Mobile Toolkit
