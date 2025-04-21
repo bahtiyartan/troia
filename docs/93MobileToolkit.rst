@@ -59,7 +59,7 @@ Enabling Mobile Toolkit access, there are two levels of operations. First one is
 Configuring Mobile Toolkit URL
 ==============================
 
-After enabling your restful web service configuration, you need to configure a mobile toolkit access URL on your server configuration file (this file is usually called "ServerSettings" file). To do this you must add **MobileToolkitRestURL** keyword under [System] section of your server configuration file. Here is the syntax:
+After enabling your restful web service configuration, you need to configure a mobile toolkit access URL on your server configuration file (this file is usually called "ServerSettings" file). To do this you must add **MobileToolkitRestURL** keyword **under [System] section of your server configuration file.** Here is the syntax:
 
 ::
 
