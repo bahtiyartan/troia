@@ -30,7 +30,7 @@ Communication Channel: Restful Service
 
 As mentioned before, system uses restful web services while transferring data between Mobile Toolkit and application servers.So **you must definitely have a properly running restful web services** in your installation and **these services neet to be accessible from any network environment that your clients uses Mobile Toolkit**. 
 
-To have properly running restful web services deployment is not the subject of this section but if you have an web client deployment you probably have an restfull depoloyment. Because restful web service and web client are a bundle. If you visit a url  **{your_web_client_url}/rest/stateless/v1/** with your browser and see some message like below probably you have restful service deployment.
+To have properly running restful web services deployment is not the subject of this section but if you have an web client deployment you probably have an restfull depoloyment. Because restful web service and web client are a bundle. If you visit a url  **{your_webclient_url}/rest/stateless/v1/** with your browser and see some message like below probably you have restful service deployment.
 
 ::
 
@@ -63,9 +63,9 @@ After enabling your restful web service configuration, you need to configure a m
 
 ::
 
-	MobileToolkitRestURL = {your_web_client_url}/rest/stateless/v1/?profile={profile_name_here}
+	MobileToolkitRestURL = {your_webclient_url}/rest/stateless/v1/?profile={profile_name}
 	
-In this syntax "{your_web_client_url}" URL must be accessible from any network environment that Mobile Toolkit is used on. And given profile ( {profile_name_here} ) name must be defined in your client-profiles.cfg file in your web client. Please be sure that given profile contains Application Server or Load Balancer addresss correctly.
+In this syntax "{your_webclient_url}" URL must be accessible from any network environment that Mobile Toolkit is used on. And given profile ( {profile_name} ) name must be defined in your client-profiles.cfg file in your web client. Please be sure that given profile contains Application Server or Load Balancer addresss correctly.
 
 
 
