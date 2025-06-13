@@ -65,7 +65,7 @@ After enabling your restful web service configuration, you need to configure a m
 
 	MobileToolkitRestURL = {your_webclient_url}/rest/stateless/v1/?profile={profile_name}
 	
-In this syntax "{your_webclient_url}" **URL must be accessible from any network environment that Mobile Toolkit is used on.** And given profile ( {profile_name} ) name must be defined in your client-profiles.cfg file in your web client. Please be sure that given profile contains Application Server or Load Balancer addresss correctly.
+**URL must be accessible from any network environment that Mobile Toolkit is used on.** And given profile ( {profile_name} ) name must be defined in your client-profiles.cfg file in your web client. Please be sure that given profile contains Application Server or Load Balancer addresss correctly.
 
 
 
