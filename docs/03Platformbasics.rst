@@ -160,14 +160,22 @@ Database Configurations
 
 Database server and port configuration is located on your databasesettings.ias file or [Database] section of your server settings files. TROIA Platform does not force an exact db vendor or port number etc., it totally depends on your needs and security policies. But in any case your database servers must be accessible from your application servers.
 
-Application Server Configurations
----------------------------------
+Application Server / Load Balancer / RMI Registry Configurations
+----------------------------------------------------------------
 
 System does not use a specific port, it totally depends on your needs and security policies. It is also possible to define multiple port for an application server, all these port configuration is located on [Network] section your server settings file. 
 
 Additionally, server settings file contains rmi registry port number configuration (RMIRegistryPort), this is the port number of your RMI Registry which is another server side component for communications between clients and all server side components.
 
-The most important thing is that "your server must be accessible from load balancer, end user desktop computers, server side devices that your batches work on and web server that serves TROIA Platform's web client. So please be sure that your rmi registry port is accessible from all load balancer, client devices, batch application servers and your web server. Moreover, application server ports must be accessible considering their purposes (some servers may be internal only, for batches only etc.)
+The most important thing is that "your server must be accessible from license server, load balancer, end user desktop computers, server side devices that your batches work on and web server that serves TROIA Platform's web client. So please be sure that your rmi registry port is accessible from all license server, load balancer, client devices, batch application servers and your web server. Moreover, application server ports must be accessible considering their purposes (some servers may be internal only, for batches only etc.)
+
+Load Balancer configuration is very similar to your application server and has same kind of network configuration to make it accessible by clients. Port number is not constant, it is configurable and also possible to add multiple ports on load balancer settings file. Load balancer must be accessible by client computers and also from web server.
+
+License Server
+--------------
+
+Licence Server registers itself to the RMI Registry that runs on 1099. It has also its own communication port which is confirable by "internalrmiport" application parameter. These two ports must be accessible by application servers. ("internalrmiport" parameters is supported by the builds after 25.07.29-01, before this version this port is defined randomly on runtime) 
+
 
 Software Architecture Overview
 ==============================
