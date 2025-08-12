@@ -177,6 +177,12 @@ License Server
 Licence Server registers itself to the RMI Registry that runs on 1099. It has also its own communication port which is confirable by "internalrmiport" application parameter. These two ports must be accessible by application servers. ("internalrmiport" parameters is supported by the builds after 25.07.29-01, before this version this port is defined randomly on runtime) 
 
 
+Web Server
+----------
+
+Web server; hosts TROIA Web Services, Web Clients, JNLP Files and some minor components of TROIA Platform. Tomcat is the most popular and widely used web server that is used for serving troia web components. There is not constant port, it is configurable (mostly default tomcat port is used) and it depends on your needs. But at the and of the day your tomcat must be accessible by all your client computers (to browse jnlp or web client)
+
+
 Software Architecture Overview
 ==============================
 
