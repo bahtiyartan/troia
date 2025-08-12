@@ -160,6 +160,15 @@ Database Configurations
 
 Database server and port configuration is located on your databasesettings.ias file or [Database] section of your server settings files. TROIA Platform does not force an exact db vendor or port number etc., it totally depends on your needs and security policies. But in any case your database servers must be accessible from your application servers.
 
+Application Server Configurations
+---------------------------------
+
+System does not use a specific port, it totally depends on your needs and security policies. It is also possible to define multiple port for an application server, all these port configuration is located on [Network] section your server settings file. 
+
+Your server settings file contains rmi registry port number configuration (RMIRegistryPort), this is the port number of your RMI Registry which is another server side component for communications between clients and all server side components.
+
+The most important thing about your application server configuration is your server must be accessible from end user desktop computers, server side devices that your batches work on and web server that serves TROIA Platform's web client. So please be sure that your rmi registry port is accessible from all clients, batch application servers and your web server, also application server ports must be accessible considering their purposes (some servers may be internal only, for batches only etc.)
+
 Software Architecture Overview
 ==============================
 
