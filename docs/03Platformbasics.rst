@@ -155,7 +155,10 @@ Please discuss question below considering the network structure:
 Configuration Basics
 ====================
 
-.
+Database Configurations
+-----------------------
+
+Database server and port configuration is located on your databasesettings.ias file or [Database] section of your server settings files. TROIA Platform does not force an exact db vendor or port number etc., it totally depends on your needs and security policies. But in any case your database servers must be accessible from your application servers.
 
 Software Architecture Overview
 ==============================
