@@ -116,25 +116,6 @@ RMI Registry
 RMI Registry is a server side service that provides a communication infrastructure between all components of TROIA Platform. RMI Registry uses RMI Infrastructure of java which provides communication method for different java applications. Any two components of the platform uses RMI Registry (server to server, client to server, server to license server etc), so running a single RMI registry is a must to run other platform components properly.
 
 
-Network Architecture Overview
------------------------------
-
-Here is an overview of all TROIA Plaform's main components and network structure from database to user interface. This overview clearly shows which components of TROIA Platform are server or client. Additionally, it is possible to see, directions of communication lines. Understanding this structure is too important to overcome some advanced questions about platform by yourself.
-
-.. figure:: images/platformbasics/troia-platform-network-architecture-w.png
-   :width: 650 px
-   :target: images/platformbasics/troia-platform-network-architecture-w.png
-   :align: center
-
-   
-Please discuss question below considering the network structure:
-
-::
-
-	Is it possible to push an information to client side 
-	    when an instant message recieved from another user?
-
-
 Other Components
 ----------------
 
@@ -152,6 +133,24 @@ Although most important tools and components are listed above, TROIA Platform ha
 
 **System Reporter** is a tool that reports status of your server side components in a configurable period.
 
+
+Network Architecture Overview
+-----------------------------
+
+Here is an overview of all TROIA Plaform's main components and network structure from database to user interface. This overview clearly shows which components of TROIA Platform are server or client. Additionally, it is possible to see, directions of communication lines. Understanding this structure is too important to overcome some advanced questions about platform by yourself.
+
+.. figure:: images/platformbasics/troia-platform-network-architecture-w.png
+   :width: 650 px
+   :target: images/platformbasics/troia-platform-network-architecture-w.png
+   :align: center
+
+   
+Please discuss question below considering the network structure:
+
+::
+
+	Is it possible to push an information to client side 
+	    when an instant message recieved from another user?
 
 Software Architecture Overview
 ==============================
