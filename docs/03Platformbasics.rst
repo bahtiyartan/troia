@@ -134,12 +134,8 @@ Although most important tools and components are listed above, TROIA Platform ha
 **System Reporter** is a tool that reports status of your server side components in a configurable period.
 
 
-Network Architecture Overview and Configuration Basics
-======================================================
-
-
 Network Architecture Overview
------------------------------
+=============================
 
 Here is an overview of all TROIA Plaform's main components and network structure from database to user interface. This overview clearly shows which components of TROIA Platform are server or client. Additionally, it is possible to see, directions of communication lines. Understanding this structure is too important to overcome some advanced questions about platform by yourself.
 
@@ -157,7 +153,7 @@ Please discuss question below considering the network structure:
 	    when an instant message recieved from another user?
 		
 Configuration Basics
---------------------
+====================
 
 .
 
