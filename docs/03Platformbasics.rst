@@ -82,8 +82,8 @@ Theoretically, hundreds of application servers working in cooperation with each 
 System setup and update processes can be carried out with simple file copying operations or can be automated according to the need. Management and monitoring tools come ready-made with the TROIA platform and are in parallel with the other components of the system. Even, thanks to the various system functions, existing vehicles can be adapted and new ones developed using the TROIA language.
 
 
-Components and Network Architecture Overview
-============================================
+Main Components
+===============
 
 Application Server
 ------------------
@@ -134,6 +134,10 @@ Although most important tools and components are listed above, TROIA Platform ha
 **System Reporter** is a tool that reports status of your server side components in a configurable period.
 
 
+Network Architecture Overview and Configuration Basics
+======================================================
+
+
 Network Architecture Overview
 -----------------------------
 
@@ -151,6 +155,11 @@ Please discuss question below considering the network structure:
 
 	Is it possible to push an information to client side 
 	    when an instant message recieved from another user?
+		
+Configuration Basics
+--------------------
+
+.
 
 Software Architecture Overview
 ==============================
