@@ -182,6 +182,16 @@ Web Server
 
 Web server; hosts TROIA Web Services, Web Clients, JNLP Files and some minor components of TROIA Platform. Tomcat is the most popular and widely used web server that is used for serving troia web components. There is not constant port, it is configurable (mostly default tomcat port is used) and it depends on your needs. But at the and of the day your tomcat must be accessible by all your client computers (to browse jnlp or web client)
 
+Troia Platform is compatible with Apache Tomcat 9.x.x releases.
+
+
+Java Versions
+--------------
+
+TROIA Platform, is widely used on Java 1.8.x releases both for client and server side. Although its limited usage, TROIA Platform is totally compatible with Java 21 Updates and Open JDK 11 releases.
+
+To run JNLP files of Desktop Clients and TROIA IDE Java Web Start, Iced Tea or Open Web Start are supported.
+
 
 Software Architecture Overview
 ==============================
