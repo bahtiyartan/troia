@@ -188,7 +188,7 @@ Web server; hosts TROIA Web Services, Web Clients, JNLP Files and some minor com
 Java Versions
 --------------
 
-TROIA Platform, is widely used on Java 1.8.x releases both for client and server side. Although its limited usage, **TROIA Platform is totally compatible with Java 21 Updates and Open JDK 11 releases.**
+TROIA Platform, is widely used on all Java 1.8 updates (up to date or old releases) both for client and server side. Although its limited usage, **TROIA Platform is totally compatible with all Java 21 updates and Open JDK 11 updates, too.** (Java 1.8, Java 21 are both LTS versions of Oracle Java)
 
 To run JNLP files of Desktop Clients and TROIA IDE; **Java Web Start, Iced Tea or Open Web Start are supported.**
 
