@@ -60,8 +60,7 @@ How to run VisualVM?
 
 First, you should download VisualVM from https://visualvm.github.io/. After opening the compressed folder you downloaded, you can run the \bin\visalvm.exe file in this folder. For other operating systems, you need to follow the necessary instructions according to the structure of your system.
 
-Yapılacak incelemeye niteliğine göre VisualVM başlatılırken, bellek parametrelerini ve VisualVM’in çalışacağı JDK path’ini de konfigüre etmek gerekebilir. Bunun için \etc\visualvm.conf dosyası içindeki ilgili parametreleri ihtiyaçlarınıza göre düzenlemelisiniz. Bu configrürasyon dosyası içindeki önemli parametreler, visualvm_default_options ve visualvm_jdkhome parametreleridir. Diğer parametreler için VisualVM dokümantasyonunu inceleyiniz.
-
+Depending on the purpose of the analysis, when starting VisualVM, it may be necessary to configure the memory parameters and the JDK path where VisualVM will run. To do this, you should edit the relevant parameters in the etc/visualvm.conf file according to your needs. The most important parameters in this configuration file are visualvm_default_options and visualvm_jdkhome. For other parameters, please refer to the VisualVM documentation.
 
 .. figure:: images/visualvm/visualvm_conf.png
    :width: 650 px
