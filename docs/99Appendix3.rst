@@ -50,3 +50,99 @@ When dividing integers, the result depends on the data types of the numbers invo
 To get a decimal result, at least one of the numbers must be a DECIMAL. Please review the sample code above. 
 In this example dividend and divisor are hard coded, behaviour is same when these are integer variables. 
 
+
+Question: How to Delete Invalid .cls and .dlg files
+---------------------------------------------------
+
+In some cases, you need to delete .dlg and .cls files for non-existing classes. In this case you can delete all files in user's filepath and convert&save all class and dialogs.
+But if you don't have enough time for convert&save operation or can not delete files you can run the code below to clear redundant files
+
+::
+
+	OBJECT:
+		TABLE FOLDERLIST,
+		STRING FOLDERPATH,
+		STRING FILENAME,
+		STRING FPATH,
+		TABLE FLIST;
+
+	SELECT SYSPATH
+		FROM IASUSERS
+		WHERE CLIENT = SYS_CLIENT 
+			AND USERNAME = SYS_USER;
+
+	STRINGVAR3 = '';
+	/***************************  CLASS  ***************************/
+
+	OBJECT:
+		STRING CLASSFOLDER;
+
+	CLASSFOLDER = IASUSERS_SYSPATH + 'jcls/';
+	FILELIST CLASSFOLDER TO FOLDERLIST;
+
+	LOOP AT FOLDERLIST
+	BEGIN
+		FOLDERPATH = CLASSFOLDER + FOLDERLIST_NAME + '/';
+		CLEAR ALL FLIST;
+		FILELIST FOLDERPATH TO FLIST;
+
+		LOOP AT FLIST
+		BEGIN
+			FILENAME = FOLDERLIST_NAME + REPLACE(FLIST_NAME, '.cls', '');
+			SELECT CLASS
+				FROM SYSCLSHEAD
+				WHERE CLIENT = SYS_CLIENT 
+					AND CLASS = FILENAME;
+
+
+			IF SYSCLSHEAD_ROWCOUNT == 0 THEN
+				FPATH = FOLDERPATH + FLIST_NAME;
+				STRINGVAR3 = STRINGVAR3 + 'DELETEFILE ' + SYSSINGLEQUOTE + FPATH + SYSSINGLEQUOTE + TOCHAR(10);
+				DELETEFILE FPATH;
+			ENDIF;
+
+		ENDLOOP;
+
+	ENDLOOP;
+
+	/*************************** DIALOGS ***************************/
+
+	OBJECT:
+		STRING DIALOGFOLDER;
+
+	DIALOGFOLDER = IASUSERS_SYSPATH + 'jdlg/';
+	FILELIST DIALOGFOLDER TO FOLDERLIST;
+	STRINGVAR2 = SYS_STATUSERROR;
+
+	LOOP AT FOLDERLIST
+	BEGIN
+		FOLDERPATH = DIALOGFOLDER + FOLDERLIST_NAME + '/';
+		CLEAR ALL FLIST;
+		FILELIST FOLDERPATH TO FLIST;
+
+		LOOP AT FLIST
+		BEGIN
+			FILENAME = REPLACE(FLIST_NAME, '.dlg', '');
+			FILENAME = FOLDERLIST_NAME + STRSTR(FILENAME, 1, STRLEN(FILENAME) -1);
+			SELECT DIALOG
+				FROM SYSDIALOGS
+				WHERE CLIENT = SYS_CLIENT 
+					AND DIALOG = FILENAME;
+
+
+			IF SYSDIALOGS_ROWCOUNT == 0 THEN
+				FPATH = FOLDERPATH + FLIST_NAME;
+				STRINGVAR3 = STRINGVAR3 + 'DELETEFILE ' + SYSSINGLEQUOTE + FPATH + SYSSINGLEQUOTE + TOCHAR(10);
+				DELETEFILE FPATH;
+			ENDIF;
+
+		ENDLOOP;
+
+	ENDLOOP;
+
+	CLEARCLASSCACHE();
+	CLEARDIALOGCACHE();
+
+	RETURN;
+
+
