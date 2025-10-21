@@ -51,7 +51,7 @@ To get a decimal result, at least one of the numbers must be a DECIMAL. Please r
 In this example dividend and divisor are hard coded, behaviour is same when these are integer variables. 
 
 
-Question: How to Delete Invalid .cls and .dlg files
+Question: How to Delete Invalid .cls and .dlg Files
 ---------------------------------------------------
 
 In some cases, you need to delete .dlg and .cls files for non-existing classes. In this case you can delete all files in user's filepath and convert&save all class and dialogs.
