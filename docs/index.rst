@@ -47,6 +47,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    78HTTPOperations
    82Port
    86Mailing
+   88DigitalSigning
    90SMS
    92ProgramsLibraries
    93MobileToolkit
