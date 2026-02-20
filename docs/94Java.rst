@@ -144,14 +144,21 @@ JVM Arguments
 Some Basic Java Terms
 ---------------------
 
-ClassPath
-=========
-
 .java Extension 
 ===============
 
+The .java file extension refers to source code files written in the Java programming language. In other words, .java files contain raw (uncompiled) human-readable code written by the developer. Files with the .java extension cannot be directly executed by the JVM. These files are converted to bytecode by the Java compiler (javac) and written into files with the .class extension.
+
 ByteCode and .class File Extensions
 ===================================
+
+Bytecode is an intermediate and platform-independent language that the Java compiler (javac) generates from source code (from the .java file). While this code shares similarities with machine language, it is not executed directly by the computer's processor; it is executed by the Java Virtual Machine (JVM). 
+
+Files with the .class extension contain bytecode.
+
+ClassPath
+=========
+
 
 .jar and .war Extensions
 =============================
