@@ -97,7 +97,15 @@ Downloading the app to your mobile device does not mean that you can access your
    :width: 600 px
    :target: images/mobiletoolkit/appset-login.png
    :align: center
+   
 
+Managing Connected Devices
+--------------------------
+Once you configure Canias Mobile Toolkit access via a mobile device, the system will link your mobile device to your Canias account so it can send you push notifications. You can view the mobile devices linked to your account in Settings->Mobile Toolkit (Connected Devices). From this screen, you can manage or delete devices connected to your account.
+.. figure:: images/mobiletoolkit/connected-devices.png
+   :width: 600 px
+   :target: images/mobiletoolkit/connected-devices.png
+   :align: center
 
 Basic Functions and Customization
 ---------------------------------
@@ -107,5 +115,6 @@ Mobile Toolkit is designed to make the most needed functions of the business lay
 - User Push Notifications
 - KPI List
 - BPM Processes
+- Mail Management
 
 **It is not possible to make customizations on Mobile Toolkit for any level such as UI, basic functionality etc.**
