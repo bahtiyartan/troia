@@ -102,6 +102,7 @@ Downloading the app to your mobile device does not mean that you can access your
 Managing Connected Devices
 --------------------------
 Once you configure Canias Mobile Toolkit access via a mobile device, the system will link your mobile device to your Canias account so it can send you push notifications. You can view the mobile devices linked to your account in Settings->Mobile Toolkit (Connected Devices). From this screen, you can manage or delete devices connected to your account.
+
 .. figure:: images/mobiletoolkit/connected-devices.png
    :width: 600 px
    :target: images/mobiletoolkit/connected-devices.png
