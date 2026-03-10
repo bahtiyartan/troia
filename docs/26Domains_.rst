@@ -20,31 +20,39 @@ Domain Data
 
 The first type of domain data is mostly used for database fields and ui controls. All this information is same for all the database fields and controls that share same domain data. In other words, if you change one of these information, all fields and controls starts to use the new data in those related features after a simple convert/save and table convert operation in ODBA.
 
-+-----------------------+-------------------------------------------------------------------------------------------------------------+
-| Field Name            | It is just a guide for developers for naming table columns, it is not used by TROIA interpreter             |
-+-----------------------+-------------------------------------------------------------------------------------------------------------+
-| Field Type            | Stores data type ODBA or virtual table column that extend this domain.                                      |
-+-----------------------+-------------------------------------------------------------------------------------------------------------+
-| Field Length          | Stores field length for ODBA or virtual table column. (for only valid types like string (varchar))          |
-+-----------------------+-------------------------------------------------------------------------------------------------------------+
-| Field Decimal         | Stores number of decimal digits for ODBA columns that extend domain.                                        |
-+-----------------------+-------------------------------------------------------------------------------------------------------------+
-| Check Table           | Stores related zoom information for zooming operations.                                                     |
-| Zoom Dialog           |                                                                                                             |
-| Zoom Field            |                                                                                                             |
-| Zoom Filter           |                                                                                                             |
-+-----------------------+-------------------------------------------------------------------------------------------------------------+
-| Read/Zoom Only        | Shows ui control or table cell is read only or zoom only.                                                   |
-+-----------------------+-------------------------------------------------------------------------------------------------------------+
-| Case Sensitivity      | Shows ui control or table cell is upper case/lower case.                                                    |
-+-----------------------+-------------------------------------------------------------------------------------------------------------+
-| Field Picture         | Stores required data for virtual table column information, for columns that extend domain.                  |
-+-----------------------+-------------------------------------------------------------------------------------------------------------+
-| Set-Get Id            | Stores setgetid, for textfields. (Enabling/disabling "set" and "get" are configured for each control.       |
-+-----------------------+-------------------------------------------------------------------------------------------------------------+
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Field Name            | It is just a guide for developers for naming table columns, **it is not used by TROIA interpreter**         												   |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Field Type            | Stores data type ODBA or virtual table column that extend this domain. **This field is used on runtime to create dynamic search criteria variable types.**   |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Field Length          | Stores field length for ODBA or virtual table column. (for only valid types like string (varchar)). **It is used on runtime and dialog convert time**        |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Field Decimal         | Stores number of decimal digits for ODBA columns that extend domain. ** It is used on runtime while appending domain related column.                         |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Check Table /         | Stores related zoom information for zooming operations.                                  													                   |
+| Zoom Dialog /         | All these features used on runtime for dynamic form fields and convert time while setting zoom information of domain related textfields    	               |
+| Zoom Field  /         |                                                                                            													               |
+| Zoom Filter           |                                                                                            													               |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Read/Zoom Only        | Shows ui control or table cell is read only or zoom only. **It is used on runtime (for table fields and dynamic form controls and dialog convert time**      |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Case Sensitivity      | Shows ui control or table cell is upper case/lower case. **It is used on runtime (for table fields and dynamic form controls and dialog convert time**       |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Field Picture         | Stores required data for virtual table column information, for columns that extend domain. 																   |
+|                       | **It is used on runtime (for table fields and dynamic form controls and dialog convert time**                                                                |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Set-Get Id            | Stores setgetid, for textfields. (Enabling/disabling "set" and "get" are configured for each control.                                                        |
+|                       | **It is used on runtime (for table fields and dynamic form controls and dialog convert time**                                                                |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SLabel                | Stores label data for domain related controls. Domain related controls contains a flag data to select appropriate label between these labels.                |
+| MLabel                | **All these labels read by interpreter on runtime for dynamic form fields and convert time while setting zoom information of domain related textfields.**    |
+| LLabel                |                                                                                            													               |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| HLabel                | Header label for domain related table columns. **It is used on runtime for dynamic table fields and on compile time for tables that has static column info** |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-All these information can be overridden by the programmer for specific controls,ODBA fields and virtual table fields. To use values defined in domain string values must be defined as {D} and integer values must be defined as -10, otherwise values given in control, odba table or virtual table overrides the value that comes from domain. These {D} and -10 values are special values that are also used while inheriting domains from some base domains. We will discuss it, in next titles. 
+All these information can be overridden by the programmer for specific controls, ODBA fields and virtual table fields. To use values defined in domain string values must be defined as {D} and integer values must be defined as -10, otherwise values given in control, odba table or virtual table overrides the value that comes from domain. These {D} and -10 values are special values that are also used while inheriting domains from some base domains. We will discuss it, in next titles. 
 
 
 Domain Codes
@@ -57,7 +65,10 @@ It is also possible to define some regular event codes on domain instead of defi
 
 Codes defined in domain affect all controls that don't have a corresponding event implementation on control level. This means that there is no need to add a {D} like wildcard. And also it means, it is possible to add alternative behaviors for controls that extend same domain, on different dialogs and forms and components.
 
-TEXTCHANGED, ZOOMBEFORE, ZOOMAFTER, LOSEFOCUS, GAINFOCUS, RIGHTCLICKMENU, DRAG , DROP, PASTE are the events that programmers can define on a domain. For more up to date list of events for a domain, please see actual domain definition transaction that we will discuss in next sections.
+TEXTCHANGED, ZOOMBEFORE, ZOOMAFTER, LOSEFOCUS, GAINFOCUS, RIGHTCLICKMENU, DRAG , DROP, PASTE are the events that programmers can define on a domain. 
+For more up to date list of events for a domain, please see actual domain definition transaction that we will discuss in next sections.
+
+**All domain codes used on runtime for dynamic form fields and table columns and convert time for dialog components related with domains.**
 
 Transfer Codes
 =======================
@@ -91,11 +102,26 @@ Transfer codes can be used with all data types such as decimals, integers, strin
 Validation Code
 =======================
 
+Validation code must get a parameter with same data type of variable. After checking data validity it must return 1 for valid values, and 0 for invalid values. Here is a sample validity code just checks whether given value is greater than 0.001. It is also possible to use database operations to check data availability in database.
+
+::
+
+	/* VALIDITY CODE */
+	PARAMETERS:
+		DECIMAL PARAM;
+	
+		
+	RETURN PARAM > 0.001;
 
 
 
 Defining Domains
 ----------------
+
+To define domains you must use "DEVT10 System Domains" transaction.
+With this transaction it is also view and manage existing domains. 
+
+For more information please see transaction documentation.
 
 
 How are Domains Stored?
