@@ -52,7 +52,10 @@ The first type of domain data is mostly used for database fields and ui controls
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | HLabel                | Header label for domain related table columns. **It is used on runtime for dynamic table fields and on compile time for tables that has static column info** |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
+| Options               | Option values for combobox type domain related table fields and dialog controls. **It is used on runtime and on compile time**                               |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Tooltip (FYI Text)    | Tooltip Texts for controls and columns. **It is used on runtime and on compile time**                                                                        |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 All these information can be overridden by the programmer for specific controls, ODBA fields and virtual table fields. To use values defined in domain string values must be defined as {D} and integer values must be defined as -10, otherwise values given in control, odba table or virtual table overrides the value that comes from domain. These {D} and -10 values are special values that are also used while inheriting domains from some base domains. We will discuss it, in next titles. 
 
@@ -145,31 +148,4 @@ Domains are stored on database tables. Here are the database tables that TROIA I
 | SYSDOMAINLINKX        | Link texts for the domain.                                                                                    |
 +-----------------------+---------------------------------------------------------------------------------------------------------------+
 
-
-
-Inheriting Domains
-=======================
-
-
-Using Domains
--------------
-
-
-Domains in Dialog & Report Controls
-===================================
-
-
-Domains in Table Column Information
-===================================
-
-
-Domains in ODBA Fields
-======================
-
-
-Domains and Security
---------------------
-
-Is Personal
-Data Masking Function
-AccessControl       yxxx
+TROIA Interpreter reads domain data both on compile process and on runtime for dynamically created table fields and dynamic form components. So it is very important to have all and up to date domain information both on runtime and development environments.
