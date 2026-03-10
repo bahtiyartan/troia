@@ -47,6 +47,8 @@ The first type of domain data is mostly used for database fields and ui controls
 | SLabel /              | Stores label data for domain related controls. Domain related controls contains a flag data to select appropriate label between these labels.                |
 | MLabel /              | **All these labels read by interpreter on runtime for dynamic form fields and convert time while setting zoom information of domain related textfields.**    |
 | LLabel                |                                                                                                                                                              |
++-----------------------+                                                                                                                                                              |
+| LLabel                |                                                                                                                                                              |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | HLabel                | Header label for domain related table columns. **It is used on runtime for dynamic table fields and on compile time for tables that has static column info** |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -127,6 +129,23 @@ For more information please see transaction documentation.
 
 How are Domains Stored?
 =======================
+
+Domains are stored on database tables. Here are the database tables that TROIA Interpreter reads domains.
+
++-----------------------+---------------------------------------------------------------------------------------------------------------+
+| SYSDOMAINS            | Stores domain information.                                                                                    |
++-----------------------+---------------------------------------------------------------------------------------------------------------+
+| SYSDOMAINSX           | Domain description for different languages.                                                                   |        
+|                       | This table is for documentation purposes and is not read by troia interpreter.                                |
++-----------------------+---------------------------------------------------------------------------------------------------------------+
+| SYSDOMAINSTXT         | Stores texts of domains such as captions, field pictures or column header labels.                             |
++-----------------------+---------------------------------------------------------------------------------------------------------------+
+| SYSDOMAINLINK         | Links for the domain.                                                                                         |
++-----------------------+---------------------------------------------------------------------------------------------------------------+
+| SYSDOMAINLINKX        | Link texts for the domain.                                                                                    |
++-----------------------+---------------------------------------------------------------------------------------------------------------+
+
+
 
 Inheriting Domains
 =======================
