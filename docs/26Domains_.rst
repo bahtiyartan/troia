@@ -25,6 +25,8 @@ The first type of domain data is mostly used for database fields and ui controls
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Field Type            | Stores data type ODBA or virtual table column that extend this domain. **It is used on runtime to create dynamic form controls.**                            |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Def Sub Type          | It is control sub type for dynamic controls. **It is used on runtime to create dynamic form controls.**                                                      |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Field Length          | Stores field length for ODBA or virtual table column. (for only valid types like string (varchar)). **It is used on runtime and convert time**               |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Field Decimal         | Stores number of decimal digits for ODBA columns that extend domain. **It is used on runtime while appending domain related column.**                        |
