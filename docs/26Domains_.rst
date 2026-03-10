@@ -21,7 +21,7 @@ Domain Data
 The first type of domain data is mostly used for database fields and ui controls. All this information is same for all the database fields and controls that share same domain data. In other words, if you change one of these information, all fields and controls starts to use the new data in those related features after a simple convert/save and table convert operation in ODBA.
 
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Field Name            | It is just a guide for developers for naming table columns, **it is not used by TROIA interpreter**         												   |
+| Field Name            | It is just a guide for developers for naming table columns, **it is not used by TROIA interpreter**                                                          |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Field Type            | Stores data type ODBA or virtual table column that extend this domain. **This field is used on runtime to create dynamic search criteria variable types.**   |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -29,16 +29,16 @@ The first type of domain data is mostly used for database fields and ui controls
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Field Decimal         | Stores number of decimal digits for ODBA columns that extend domain. ** It is used on runtime while appending domain related column.                         |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Check Table /         | Stores related zoom information for zooming operations.                                  													                   |
-| Zoom Dialog /         | All these features used on runtime for dynamic form fields and convert time while setting zoom information of domain related textfields    	               |
-| Zoom Field  /         |                                                                                            													               |
-| Zoom Filter           |                                                                                            													               |
+| Check Table           | Stores related zoom information for zooming operations.                                                                                                      |
+| Zoom Dialog           | **All these features used on runtime for dynamic form fields and convert time while setting zoom information of domain related textfields**                  |
+| Zoom Field            |                                                                                                                                                              |
+| Zoom Filter           |                                                                                                                                                              |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Read/Zoom Only        | Shows ui control or table cell is read only or zoom only. **It is used on runtime (for table fields and dynamic form controls and dialog convert time**      |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Case Sensitivity      | Shows ui control or table cell is upper case/lower case. **It is used on runtime (for table fields and dynamic form controls and dialog convert time**       |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Field Picture         | Stores required data for virtual table column information, for columns that extend domain. 																   |
+| Field Picture         | Stores required data for virtual table column information, for columns that extend domain.                                                                   |
 |                       | **It is used on runtime (for table fields and dynamic form controls and dialog convert time**                                                                |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Set-Get Id            | Stores setgetid, for textfields. (Enabling/disabling "set" and "get" are configured for each control.                                                        |
@@ -46,7 +46,7 @@ The first type of domain data is mostly used for database fields and ui controls
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | SLabel                | Stores label data for domain related controls. Domain related controls contains a flag data to select appropriate label between these labels.                |
 | MLabel                | **All these labels read by interpreter on runtime for dynamic form fields and convert time while setting zoom information of domain related textfields.**    |
-| LLabel                |                                                                                            													               |
+| LLabel                |                                                                                                                                                              |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | HLabel                | Header label for domain related table columns. **It is used on runtime for dynamic table fields and on compile time for tables that has static column info** |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -110,6 +110,7 @@ Validation code must get a parameter with same data type of variable. After chec
 	PARAMETERS:
 		DECIMAL PARAM;
 	
+	/* do validation check and return 1 or 0 */
 		
 	RETURN PARAM > 0.001;
 
