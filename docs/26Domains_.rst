@@ -148,4 +148,4 @@ Domains are stored on database tables. Here are the database tables that TROIA I
 | SYSDOMAINLINKX        | Link texts for the domain.                                                                                    |
 +-----------------------+---------------------------------------------------------------------------------------------------------------+
 
-TROIA Interpreter reads domain data both on compile process and on runtime for dynamically created table fields and dynamic form components. So it is very important to have all and up to date domain information both on runtime and development environments.
+**TROIA Interpreter reads domain data both on compile process and on runtime for dynamically created table fields and dynamic form components. So it is very important to have all and up to date domain information both on live and development environments.**
