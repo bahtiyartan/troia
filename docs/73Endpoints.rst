@@ -149,7 +149,7 @@ Performing Operations on an Endpoint Connnection
 
 Communication with an endpoint can only be performed after establishing a connection and before closing it.
 
-This process varies depending on the type of endpoint being connected. You must use the correct command in the TROIA programming language according to the type of connection. For example, while VECTORDBACTION is used for the Qdrant Vector database, BUSACTION can be used for Kafka or RabbitMQ. To determine the correct command, you can refer to the current TROIA help files or the appropriate sections in this book.
+Once a connection to an endpoint is established, the operations that can be performed on that endpoint are not directly covered in this section. This process varies depending on the type of endpoint being connected. You must use the correct command in the TROIA programming language according to the type of connection. For example, while VECTORDBACTION is used for the Qdrant Vector database, BUSACTION can be used for Kafka or RabbitMQ. To determine the correct command, you can refer to the current TROIA help files or the appropriate sections in this book.
 
 
 Common Problems about Endpoint Connections
