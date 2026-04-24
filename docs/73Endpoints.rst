@@ -96,11 +96,34 @@ To create a new connection, you must use MAKEENDPOINTCONNECTION. This command cr
 ::
 
 	MAKEENDPOINTCONNECTION {connectionname} ENDPOINTID {endpointid};
+	
+When you establish a new connection, you should close it as soon as possible. In other words, the lifespan of a connection should be as short as the time interval it is needed.
 
+For connections established using the TROIA command, the longest lifetime is the time between the opening and closing of the transaction. When the transaction is terminated, the TROIA Platform automatically closes the connection even if it remains open.
 
 
 Closing Connections
 ===========================
+
+
+Connecting && Disconnecting Sample
+==================================
+
+MAKEENDPOINTCONNECTION CONNAME ENDPOINTID 'DEVQDRANT';
+
+IF SYS_STATUS == 0 THEN
+
+	//do your endpoint actions here
+
+	CLOSEENDPOINTCONNECTION CONNAME;
+
+	IF SYS_STATUS == 1 THEN
+		STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
+	ENDIF;
+ELSE
+	STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
+ENDIF;
+
 
 
 Performing Operations on an Endpoint Connnection
