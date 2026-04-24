@@ -6,6 +6,8 @@ Appendix IV - What's new in the book?
 
 *“Programming with TROIA” is a live book, so there are too many changes as corrections, new examples, new headings and even new sections. This appendix aims to list significant changes on book in a daily format for last three years to help old readers.*
 
+2026.04.26 - New section: Integration Endpoints
+
 2026.03.10 - New section: Domains
 
 2026.02.20 - "Canias Mobile Toolkit" section.
