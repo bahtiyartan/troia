@@ -1,5 +1,5 @@
 =============================
-Integration Edpoints
+Integration Endpoints
 =============================
 
 *TROIA platform is a flexible business application development platform with its integration facilities. Endpoint configurations is one of these integration facilities. This section aims to introduce integration endpoints infrastructure and related commands.*
@@ -19,11 +19,9 @@ There are several advantages to accessing external systems through the concept a
 How to Configure Endpoints?
 ===========================
 
-.. figure:: images/iot/iot-gateway.png
-   :width: 650 px
-   :target: images/iot/iot-gateway.png
-   :align: center
+Before establishing connections to an endpoint, you must create a definition for the endpoint. This definition requires its address, ports, protocols etc.
 
+To make an endpoint configuration, you can use "SYST51 - Integration Endpoints Configurations" system transaction. On this transaction you can create a definition from scratch or clone en existing definition.
 
 Where configurations stored?
 ============================
@@ -54,6 +52,12 @@ For more detailed and up to date list of SYSENDPOINTS table columns please brows
 
 Which Endpoint Types are Supported?
 -----------------------------------
+
+Endpoint types which are supported by the TROIA Platform are listed on *"Endpoint Type"* combobox while making a definition on SYST51. If you need supported endpoint types programmatically, GETENDPOINT TYPES() function returns whole list. The list that shown on "Enpoint Type" combobox on SYST51 is provided by this function already.
+
+Qdrant, RabbitMQ, Kafka, RedPanda, Mongo are main enpoint types that are supported. This list is updated with each new TROIA Platform build, for an up to date list of endpoint types that your TROIA Platform build supports, please see SYST51 transaction.
+
+**TROIA Platformu SYST51 de listelenen uç nokta türleri dışında birçok entegrasyon seçeneği sunmaktadır. Burada listelenen seçenekler yalnızca "Endpoint" altyapısı kullanarak oluşturulmuş entegrasyon seçenekleridir.**
 
 Authorization for Endpoint Configurations
 =========================================
