@@ -118,28 +118,28 @@ Here is a connection example:
 
 ::
 
-		OBJECT:
-			STRING MYCONNECTIONNAME,
-			STRING MYENDPOINTID;
-		
-		MYCONNECTIONNAME = 'Connection1';
-		MYENDPOINTID = 'DEVQDRANT';
-		
+	OBJECT:
+		STRING MYCONNECTIONNAME,
+		STRING MYENDPOINTID;
+	
+	MYCONNECTIONNAME = 'Connection1';
+	MYENDPOINTID = 'DEVQDRANT';
+	
 
-		MAKEENDPOINTCONNECTION MYCONNECTIONNAME ENDPOINTID MYENDPOINTID;
+	MAKEENDPOINTCONNECTION MYCONNECTIONNAME ENDPOINTID MYENDPOINTID;
 
-		IF SYS_STATUS == 0 THEN
+	IF SYS_STATUS == 0 THEN
 
-			//do your endpoint actions here
+		//do your endpoint actions here
 
-			CLOSEENDPOINTCONNECTION MYCONNECTIONNAME;
+		CLOSEENDPOINTCONNECTION MYCONNECTIONNAME;
 
-			IF SYS_STATUS == 1 THEN
-				STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
-			ENDIF;
-		ELSE
+		IF SYS_STATUS == 1 THEN
 			STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
 		ENDIF;
+	ELSE
+		STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
+	ENDIF;
 
 
 
@@ -154,4 +154,16 @@ This process varies depending on the type of endpoint being connected. You must 
 
 Common Problems about Endpoint Connections
 ------------------------------------------
+
+You may encounter various problems when establishing or closing endpoint connections. Throughout these steps, the SYS_STATUS system variable is set to 1, as is the general approach of the TROIA programming language. Additionally, information regarding the error details is written to the SYS_STATUSERROR variable. In all error scenarios, the trace contains all the details of the incident.
+
+However, the following checklist will be helpful:
+
+- Are you sure you are using the correct endpoint ID?
+
+- Do you already have a connection with the same connection name?
+
+- Do you have access to the endpoint you want to access via the TROIA Application server?
+
+- Does your user have the necessary permissions to access the endpoint you want to access?
 
