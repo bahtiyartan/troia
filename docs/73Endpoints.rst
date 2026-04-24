@@ -66,7 +66,7 @@ If you need supported endpoint types programmatically, GETENDPOINT TYPES() funct
 	SET TMPTABLE TO TABLE TMPTABLE;
 	RETURN;
 
-Qdrant, RabbitMQ, Kafka, RedPanda, Mongo are main enpoint types that are supported. This list is updated with each new TROIA Platform build, for an up to date list of endpoint types that your TROIA Platform build supports, please see SYST51 transaction.
+Qdrant, RabbitMQ, Kafka, RedPanda, Mongo are main enpoint types that are supported. This list is updated with each new TROIA Platform build, for an up to date list of endpoint types that your TROIA Platform build supports, please see SYST51 transaction. 
 
 **The TROIA Platform offers many integration options beyond the endpoint types listed in SYST51. The options listed here are only integration options created using the "Endpoint" infrastructure.**
 
@@ -76,7 +76,7 @@ Authorization for Endpoint Configurations
 
 Establishing connections to endpoints and transferring data requires endpoint access permission for the user performing the operation.
 
-To grant access permissions to endpoints, the **"SYST51 - Integration Endpoints Configurations"** application is used again.
+To grant access permissions for the endpoints, the **"SYST51 - Integration Endpoints Configurations"** application is used again. Permissions can be defined for users or profiles within this application. 
 
 
 
