@@ -28,6 +28,30 @@ How to Configure Endpoints?
 Where configurations stored?
 ============================
 
+Endpoint definitions are stored on SYSENDPOINTS table. Some main data columns of SYSENDPOINTS table are listed below.
+
++-------------------+-----------------------------------------------------------------------------------+
+| ENDPOINTID        | Id of an endpoint defintion. It is uniqe and used while establishing connections. | 
++-------------------+-----------------------------------------------------------------------------------+
+| ENDPOINTTYPE      | Type of the endpoint.                                                             |
++-------------------+-----------------------------------------------------------------------------------+
+| PROTOCOL          | Protocol which will be used while connecting.                                     | 
++-------------------+-----------------------------------------------------------------------------------+
+| HOSTNAME          | Host for the connection. IP or DNS name supported.                                | 
++-------------------+-----------------------------------------------------------------------------------+
+| PORT              | Port Number                                                                       | 
++-------------------+-----------------------------------------------------------------------------------+
+| ENDPOINTUSER      | User or api id for authentication or other connection security processes.         | 
++-------------------+-----------------------------------------------------------------------------------+
+| ENDPOINTPASS      | Pass or api key for authentication or other connection security processes.        | 
++-------------------+-----------------------------------------------------------------------------------+
+| ENDPOINTPARAMS    | Other params to make endpoint connection. Format depends on the endpoint type     | 
++-------------------+-----------------------------------------------------------------------------------+
+| STATUS            | Is it passive or active. Active is 1, passive is 0                                | 
++-------------------+-----------------------------------------------------------------------------------+
+
+For more detailed and up to date list of SYSENDPOINTS table columns please browse it from DEVT01 - Table Management transaction.
+
 Which Endpoint Types are Supported?
 -----------------------------------
 
