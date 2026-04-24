@@ -12,9 +12,9 @@ Endpoint is, in the simplest terms, an access point through which a system is ex
 
 From the perspective of the TROIA Platform, an endpoint is a definition you need to create when you want to access something outside of the TROIA Server.
 
-In TROIA Platform builds 26.05.XX-XX and earlier, accessing external systems was done using specific TROIA commands without the concept and definition of endpoints. However, after this build, many of these accesses are done through endpoint definitions.
+In TROIA Platform builds **26.05.15-01** and earlier, accessing external systems was done using specific TROIA commands without the concept and definition of endpoints. However, after this build, many of these accesses are done through endpoint definitions.
 
-There are several advantages to accessing external systems through the concept and definitions of endpoints. The first is the ability to manage very similar configuration structures with a single application. Another advantage of endpoint definitions is the ability to define access restrictions on a profile and user basis by defining user permissions for endpoints.Finally, the ability to use the same commands and functions when connecting to different endpoint types makes the learning process easier.
+There are several advantages to accessing external systems through the concept and definitions of endpoints. The first is the ability **to manage very similar configuration structures with a single application**. Another advantage of endpoint definitions is the **ability to define access restrictions on a profile and user basis** by defining user permissions for endpoints.Finally, the **ability to use the same commands and functions when connecting to different endpoint types** makes the learning process easier.
 
 How to Configure Endpoints?
 ===========================
