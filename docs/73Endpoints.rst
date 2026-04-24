@@ -97,39 +97,61 @@ To create a new connection, you must use MAKEENDPOINTCONNECTION. This command cr
 
 	MAKEENDPOINTCONNECTION {connectionname} ENDPOINTID {endpointid};
 	
-When you establish a new connection, you should close it as soon as possible. In other words, the lifespan of a connection should be as short as the time interval it is needed.
-
-For connections established using the TROIA command, the longest lifetime is the time between the opening and closing of the transaction. When the transaction is terminated, the TROIA Platform automatically closes the connection even if it remains open.
 
 
 Closing Connections
 ===========================
 
+When you establish a new connection, you should close it as soon as possible. In other words, the lifespan of a connection should be as short as the time interval it is needed.
+
+For connections established using the TROIA command, the longest lifetime is the time between the opening and closing of the transaction. When the transaction is terminated, the TROIA Platform automatically closes the connection even if it remains open until transaction close.
+
+::
+	
+	CLOSENDPOINTCONNECTION {connectionname};
+
 
 Connecting && Disconnecting Sample
 ==================================
 
-MAKEENDPOINTCONNECTION CONNAME ENDPOINTID 'DEVQDRANT';
+Here is a connection example:
 
-IF SYS_STATUS == 0 THEN
+::
 
-	//do your endpoint actions here
+		OBJECT:
+			STRING MYCONNECTIONNAME,
+			STRING MYENDPOINTID;
+		
+		MYCONNECTIONNAME = 'Connection1';
+		MYENDPOINTID = 'DEVQDRANT';
+		
 
-	CLOSEENDPOINTCONNECTION CONNAME;
+		MAKEENDPOINTCONNECTION MYCONNECTIONNAME ENDPOINTID MYENDPOINTID;
 
-	IF SYS_STATUS == 1 THEN
-		STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
-	ENDIF;
-ELSE
-	STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
-ENDIF;
+		IF SYS_STATUS == 0 THEN
+
+			//do your endpoint actions here
+
+			CLOSEENDPOINTCONNECTION MYCONNECTIONNAME;
+
+			IF SYS_STATUS == 1 THEN
+				STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
+			ENDIF;
+		ELSE
+			STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
+		ENDIF;
+
 
 
 
 Performing Operations on an Endpoint Connnection
 ================================================
 
+Communication with an endpoint can only be performed after establishing a connection and before closing it.
+
+This process varies depending on the type of endpoint being connected. You must use the correct command in the TROIA programming language according to the type of connection. For example, while VECTORDBACTION is used for the Qdrant Vector database, BUSACTION can be used for Kafka or RabbitMQ. To determine the correct command, you can refer to the current TROIA help files or the appropriate sections in this book.
 
 
-
+Common Problems about Endpoint Connections
+------------------------------------------
 
