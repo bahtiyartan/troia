@@ -43,6 +43,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    68Multithreading
    69IOT
    70WebServices
+   73Endpoints
    74XMLjson
    78HTTPOperations
    82Port
