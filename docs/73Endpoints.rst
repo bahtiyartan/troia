@@ -47,6 +47,10 @@ Endpoint definitions are stored on SYSENDPOINTS table. Some main data columns of
 +-------------------+-----------------------------------------------------------------------------------+
 | STATUS            | Is it passive or active. Active is 1, passive is 0                                | 
 +-------------------+-----------------------------------------------------------------------------------+
+| TIMEOUT           | Maximum waiting duration (as ms.) while establishing connection to the endpoint.  | 
++-------------------+-----------------------------------------------------------------------------------+
+| AUTOCONNECT       | System connects to endpoint automatically on user login                           | 
++-------------------+-----------------------------------------------------------------------------------+
 
 For more detailed and up to date list of SYSENDPOINTS table columns please browse it from DEVT01 - Table Management transaction.
 
@@ -95,7 +99,7 @@ To create a new connection, you must use MAKEENDPOINTCONNECTION. This command cr
 
 ::
 
-	MAKEENDPOINTCONNECTION {connectionname} ENDPOINTID {endpointid};
+	MAKEENDPOINTCONNECTION {connectionname} ENDPOINTID {endpointid} [TIMEOUT {timeout}];
 	
 
 
