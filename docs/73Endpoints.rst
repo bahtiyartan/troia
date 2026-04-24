@@ -83,9 +83,20 @@ To grant access permissions for the endpoints, the **"SYST51 - Integration Endpo
 Managing Endpoint Connections
 -----------------------------
 
+A connection is required for data exchange or, depending on its purpose, to perform an operation at an external endpoint. Depending on the endpoint type, automatic connections can be established by the TROIA infrastructure to certain endpoint definitions. Some endpoints require connection to be established at the development level within the TROIA code flow. In this case, the process of closing these connections must also be managed by the application level. In both cases, the TROIA Platform attempts to close open endpoint connections before logging out.
+
+It is possible to connect to different endpoints simultaneously. Furthermore, multiple connections can be established to the same endpoint at the same time. To enable this flexibility, a virtual name must be assigned to a connection when establishing one. This connection name must be used in every operation performed through that endpoint connection.
+
 
 Creating New Connections
 ===========================
+
+To create a new connection, you must use MAKEENDPOINTCONNECTION. This command creates a connection to given endpoint. This endpoint id is the same value that you defined in SYST51 and stored in SYSENDPOINTS.ENDPOINTID column. System gets all required data from endpoint definition.
+
+::
+
+	MAKEENDPOINTCONNECTION {connectionname} ENDPOINTID {endpointid};
+
 
 
 Closing Connections
