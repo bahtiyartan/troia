@@ -60,7 +60,7 @@ If you need supported endpoint types programmatically, GETENDPOINT TYPES() funct
 ::
 
 	OBJECT:
-    TABLE TMPTABLE;
+		TABLE TMPTABLE;
 		
 	TMPTABLE = GETENDPOINTTYPES();
 	SET TMPTABLE TO TABLE TMPTABLE;
@@ -73,6 +73,11 @@ Qdrant, RabbitMQ, Kafka, RedPanda, Mongo are main enpoint types that are support
 
 Authorization for Endpoint Configurations
 =========================================
+
+Establishing connections to endpoints and transferring data requires endpoint access permission for the user performing the operation.
+
+To grant access permissions to endpoints, the **"SYST51 - Integration Endpoints Configurations"** application is used again.
+
 
 
 Managing Endpoint Connections
