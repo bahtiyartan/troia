@@ -5,6 +5,10 @@ Working With Vector Databases
 *A vector database is a type of database that stores data as mathematical “vectors” rather than using the traditional row/column structure, and is designed to perform similarity searches. It is especially used in the field of artificial intelligence. This section aims to explain how vector database operations can be performed with TROIA.*
 
 
+Similarity Search
+-----------------
+
+...
 
 
 What is a "Vector Database"?
@@ -12,12 +16,13 @@ What is a "Vector Database"?
 
 ...
 
-What is Semantic Search?
-===========================
+What is "Embedding"?
+====================
 
 ...
 
-What is "Embedding"?
+What is Semantic Search?
+===========================
 
 ...
 
