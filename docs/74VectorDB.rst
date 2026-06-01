@@ -8,7 +8,13 @@ Working With Vector Databases
 Vector Similarity and Similarity Search
 ---------------------------------------
 
-...
+"Vector similarity" is the process of mathematically measuring how similar two vectors are to each other. The most common methods for calculating vector similarity are Euclidean Distance, Cosine Similarity, Dot Product etc. The calculation methods used for vectors may seem complex. However, to understand the approach, you can think of it using the Euclidean distance method, which is used to calculate the distance between two simple points.
+
+After understanding the concept of "Vector Similarity," let's imagine we convert any text into a sequence of numbers and compare different sequences to calculate their proximity. In this case, we can assume that the texts represented by two vectors that are close to each other are also close to each other.
+
+By setting a threshold value for this proximity comparison and only displaying results that exceed that threshold, we are essentially performing a "similarity search".
+
+It is clear that we should use the same approach when converting the texts we are working with for similarity searching into a new number vector.
 
 
 What is a "Vector Database"?
