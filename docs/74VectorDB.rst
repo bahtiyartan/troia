@@ -55,9 +55,37 @@ Bringing all these concepts together, Semantic Search is a search method that cr
 Managing Vector DB Connections
 ------------------------------
 
-...
+To access a vector database via TROIA and perform any operation, a connection must first be established. Once the connection is established, it is possible to create new collections, add or delete data from existing collections in vector databases. After the connection is established and the operation is performed, the connection must be closed. So managing vector db connection is on TROIA developer's' responsibility.
 
-**Qdrant**
+To establish a connection first you must have an endpoint definition. To learn more about endpoints please see the section "Integration Endpoints". 
+
+::
+
+	OBJECT:
+		STRING MYCONNECTIONNAME,
+		STRING MYENDPOINTID;
+	
+	MYCONNECTIONNAME = 'MyConnectionName';
+	MYENDPOINTID = 'DEVQDRANT';
+	
+
+	MAKEENDPOINTCONNECTION MYCONNECTIONNAME ENDPOINTID MYENDPOINTID;
+
+	IF SYS_STATUS == 0 THEN
+
+		//do your endpoint actions here
+
+		CLOSEENDPOINTCONNECTION MYCONNECTIONNAME;
+
+		IF SYS_STATUS == 1 THEN
+			STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
+		ENDIF;
+	ELSE
+		STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
+	ENDIF;
+
+
+In SYST51, endpoint type of the configuration must be a vector db product. Actual supported vector databses are listed on SYST51 - Integration Endpoints Configuration.
 
 
 Managing Collections
