@@ -91,11 +91,32 @@ In SYST51, endpoint type of the configuration must be a vector db product. Actua
 Managing Collections
 --------------------
 
-check collections
+Before querying a collection or inserting data into it, it's helpful to learn how to perform basic operations about collections. These basic operations are checking whether collection exists, creating and deleting collections. For all vector db opeations TROIA has VECTORDBACTION command.
 
-delete collections
+VECTORDBACTION command gets connection name and method and collection name for all operations. Other parameters depend on the method to be performed. 
 
-create collections
+{CONNECTIONNAME} is the connection that operation performed on. This parameters allows TROIA programmer working with multiple vector database connections simultaneously.
+
+{METHOD} is the operation code that to be performed such as deleting, creating, querying etc. This method names are predefined.
+
+{COLLECTIONNAME} is the collection name that the operation performed on.
+
+
+Checking Collection Existence
+=============================
+
+...
+
+
+Deleting Collections
+====================
+
+...
+
+Creating Collections
+====================
+
+...
 
 
 Inserting Data to a Collection
