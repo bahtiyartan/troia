@@ -30,7 +30,17 @@ Like relational databases, vector databases are offered by many vendors targetin
 What is "Embedding"?
 ====================
 
-...
+**An "embedding" is a vector** that represents the meaning of data within a mathematical coordinate system. Embedding is the representation of text, images, or other data as a high-dimensional digital vector that preserves its semantic properties. These vectors form the basis of similarity calculations and semantic search operations.
+
+The numbers in this embeddings themselves are not meaningful to humans. What matters is that the embeddings of semantically similar texts are close to each other. 
+
+To write text to a vector database, that text must first be converted into a digital vector. In other words, we need embeddings. So the next question is "How can we obtain the embedding of a text, in other words, its vector containing numerical values?"
+
+What is "Embedding Model"?
+==========================
+
+Embedding Model, bir metni, görseli veya başka bir veriyi alıp onu bir embedding (vektör) haline dönüştüren yapay zekâ modelidir.
+
 
 What is Semantic Search?
 ===========================
