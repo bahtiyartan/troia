@@ -8,7 +8,7 @@ Working With Vector Databases
 Vector Similarity and Similarity Search
 ---------------------------------------
 
-"Vector similarity" is the process of mathematically measuring how similar two vectors are to each other. The most common methods for calculating vector similarity are Euclidean Distance, Cosine Similarity, Dot Product etc. While cosine distance is commonly used in RAG and LLM applications, the calculation methods used may vary depending on the requirements. However, to understand the approach, you can think of it using the Euclidean distance method, which is used to calculate the distance between two simple points.
+**"Vector similarity" is the process of mathematically measuring how similar two vectors are to each other.** The most common methods for calculating vector similarity are Euclidean distance, cosine similarity, dot product etc. While "cosine similarity" is commonly used in RAG and LLM applications, the calculation methods used may vary depending on the requirements. However, to understand the approach, you can think of it using the Euclidean distance method, which is used to calculate the distance between two simple points.
 
 After understanding the concept of "Vector Similarity," let's imagine we convert any text into a sequence of numbers and compare different sequences to calculate their proximity. In this case, we can assume that the texts represented by two vectors that are close to each other are also close to each other.
 
@@ -20,7 +20,12 @@ It is clear that we should use the same approach when converting the texts we ar
 What is a "Vector Database"?
 ----------------------------
 
-...
+A vector database is a specialized type of database that stores data in vector (embedded) format and performs vector similarity calculations on these vectors to find the closest results. Vector DB performs searches using numerical vectors, and simultaneously stores the text associated with this numerical data. Thus, after converting a given text into a numerical vector, we can obtain clear, human- and LLM-readable versions of the resulting text.
+
+Vector databases are used in RAG applications because of these capabilities. RAG (Retrieval-Augmented Generation) is a technique that enables large language models (LLMs) to produce more accurate and up-to-date answers by bringing data from external information sources in addition to their own training data. RAG is an artificial intelligence architecture that retrieves relevant information from a data source (Retrieval) before answering a user question, and then uses this information to generate an answer (Generation).
+
+Like relational databases, vector databases are offered by many vendors targeting different markets, with varying licensing fees and data scale. Qdrant, Milvus, Weaviate Pinecone, and Chroma are among the most commonly used vector databases.
+
 
 What is "Embedding"?
 ====================
