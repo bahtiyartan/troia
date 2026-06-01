@@ -20,9 +20,9 @@ It is clear that we should use the same approach when converting the texts we ar
 What is a "Vector Database"?
 ----------------------------
 
-A vector database is a specialized type of database that stores data in vector (embedded) format and performs vector similarity calculations on these vectors to find the closest results. Vector DB performs searches using numerical vectors, and simultaneously stores the text associated with this numerical data. Thus, after converting a given text into a numerical vector, we can obtain clear, human- and LLM-readable versions of the resulting text.
+**A vector database is a specialized type of database that stores data in vector (embedded) format and performs vector similarity calculations on these vectors to find the closest results.** Vector DB performs searches using numerical vectors, and simultaneously stores the text associated with this numerical data. Thus, after converting a given text into a numerical vector, we can obtain clear, human- and LLM-readable versions of the resulting text.
 
-Vector databases are used in RAG applications because of these capabilities. RAG (Retrieval-Augmented Generation) is a technique that enables large language models (LLMs) to produce more accurate and up-to-date answers by bringing data from external information sources in addition to their own training data. RAG is an artificial intelligence architecture that retrieves relevant information from a data source (Retrieval) before answering a user question, and then uses this information to generate an answer (Generation).
+**Vector databases are used in RAG applications because of these capabilities. RAG (Retrieval-Augmented Generation) is a technique that enables large language models (LLMs) to produce more accurate and up-to-date answers by bringing data from external information sources in addition to their own training data.** RAG is an artificial intelligence architecture that retrieves relevant information from a data source (Retrieval) before answering a user question, and then uses this information to generate an answer (Generation).
 
 Like relational databases, vector databases are offered by many vendors targeting different markets, with varying licensing fees and data scale. Qdrant, Milvus, Weaviate Pinecone, and Chroma are among the most commonly used vector databases.
 
