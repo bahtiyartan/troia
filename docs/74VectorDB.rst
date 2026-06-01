@@ -119,6 +119,9 @@ Creating Collections
 ...
 
 
+For more and all supported opeations about collections please see TROIA help.
+
+
 Inserting Data to a Collection
 -------------------------------
 
