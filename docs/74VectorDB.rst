@@ -57,7 +57,7 @@ Managing Vector DB Connections
 
 To access a vector database via TROIA and perform any operation, a connection must first be established. Once the connection is established, it is possible to create new collections, add or delete data from existing collections in vector databases. After the connection is established and the operation is performed, the connection must be closed. So managing vector db connection is on TROIA developer's' responsibility.
 
-To establish a connection first you must have an endpoint definition. To learn more about endpoints please see the section "Integration Endpoints". 
+To establish a connection, first you must have an endpoint definition. To learn more about endpoints please see the section "Integration Endpoints" of this book. 
 
 ::
 
@@ -105,18 +105,94 @@ VECTORDBACTION command gets connection name and method and collection name for a
 Checking Collection Existence
 =============================
 
-...
+To check collection existence the method name must be COLLECTIONEXISTS. Here is the sample command.
+
+
+::
+
+	OBJECT:
+		STRING MYCONNECTIONNAME,
+		STRING MYENDPOINTID,
+		STRING MYCOLLECTIONNAME,
+		STRING MYERROR;
+
+	MYCONNECTIONNAME = 'MyConnection';
+	MYENDPOINTID = 'DEVQDRANT';             //this id is defined on SYST51, it does not matter which vector db type is used
+	MYCOLLECTIONNAME = 'testcollection';
+
+	MAKEENDPOINTCONNECTION MYCONNECTIONNAME ENDPOINTID MYENDPOINTID;
+
+	IF SYS_STATUS == 0 THEN
+		VECTORDBACTION CONNECTIONNAME MYCONNECTIONNAME METHOD 'COLLECTIONEXISTS' COLLECTIONNAME MYCOLLECTIONNAME;
+
+		IF SYS_STATUS == 1 THEN
+			MYERROR = SYS_STATUS + ' ' + SYS_STATUSERROR;
+		ENDIF;
+
+		CLOSEENDPOINTCONNECTION MYCONNECTIONNAME;
+	ENDIF;
+
 
 
 Deleting Collections
 ====================
 
-...
+To delete an existing collection, the method name must be DELETECOLLECTION. Here is the sample command.
+Of course you must have a db connection before running VECTORDBACTION command like the examples above.
+
+::
+
+	VECTORDBACTION CONNECTIONNAME MYCONNECTIONNAME METHOD 'DELETECOLLECTION' COLLECTIONNAME MYCOLLECTIONNAME;
+
 
 Creating Collections
 ====================
 
-...
+To create a new collection, the method name must be CREATECOLLECTION.
+While creating a collection some extra parameters are needed these paremeters are read from a json formatted parameter.
+These parameters may vary due to database product type. 
+Here is the sample code for creating a collection on a Qdrant DB. For different product names and actual sample codes please review TROIA Help.
+
+
+::
+
+	OBJECT:
+		STRING MYCONNECTIONNAME,
+		STRING MYENDPOINTID,
+		STRING MYCOLLECTIONNAME,
+		STRING MYJSONCOLLECIONPARAMS,
+		STRING MYERROR;
+
+	MYCONNECTIONNAME = 'MyQdrant';
+	MYENDPOINTID = 'DEVQDRANT';
+	MYCOLLECTIONNAME = 'test_collection';
+	MYJSONCOLLECIONPARAMS = '{
+		"vectors": {
+			"size": 4,
+			"distance": "Cosine",
+			"on_disk": true
+		},
+		"hnsw_config": {
+			"m": 16,
+			"ef_construct": 100
+		},
+		"optimizer_config": {
+			"indexing_threshold": 100
+		}
+	}';
+
+	MAKEENDPOINTCONNECTION MYCONNECTIONNAME ENDPOINTID MYENDPOINTID;
+
+	IF SYS_STATUS == 0 THEN
+		VECTORDBACTION CONNECTIONNAME MYCONNECTIONNAME METHOD 'CREATECOLLECTION' COLLECTIONNAME MYCOLLECTIONNAME COLLECTIONPARAMS MYJSONCOLLECIONPARAMS;
+
+		IF SYS_STATUS == 1 THEN
+			MYERROR = SYS_STATUS + ' ' + SYS_STATUSERROR;
+		ENDIF;
+
+		CLOSEENDPOINTCONNECTION MYCONNECTIONNAME;
+	ENDIF;
+
 
 
 For more and all supported opeations about collections please see TROIA help.
