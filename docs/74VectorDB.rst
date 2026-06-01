@@ -49,7 +49,7 @@ We will discuss the components and system tools needed to obtain text embedding 
 What is Semantic Search?
 ===========================
 
-Bringing all these concepts together, Semantic Search is a search method that creates embeddings of user queries and content, calculates vector similarity between them, and finds the most relevant results in terms of meaning. In other words, semantic search is a similarity search application performed on embeddings that are designed to represent meaning. This approach forms the basis of RAG (Retrieval-Augmented Generation) applications.
+Bringing all these concepts together, Semantic Search is a search method that creates embeddings of user queries and content, calculates vector similarity between them, and finds the most relevant results in terms of meaning. In other words, **semantic search is a similarity search application performed on embeddings that are designed to represent meaning.** This approach forms the basis of RAG (Retrieval-Augmented Generation) applications.
 
 
 Managing Vector DB Connections
