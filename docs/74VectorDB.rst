@@ -93,11 +93,11 @@ Managing Collections
 
 Before querying a collection or inserting data into it, it's helpful to learn how to perform basic operations about collections. These basic operations are checking whether collection exists, creating and deleting collections. For all vector db opeations TROIA has VECTORDBACTION command.
 
-VECTORDBACTION command gets connection name and method and collection name for all operations. Other parameters depend on the method to be performed. 
+VECTORDBACTION command gets action name, connection name and collection name for all operations. Other parameters depend on the method to be performed. 
+
+{action} is the operation code that to be performed such as querying and listing, deleting, creating collections, querying etc. This method names are predefined.
 
 {CONNECTIONNAME} is the connection that operation performed on. This parameters allows TROIA programmer working with multiple vector database connections simultaneously.
-
-{METHOD} is the operation code that to be performed such as deleting, creating, querying etc. This method names are predefined.
 
 {COLLECTIONNAME} is the collection name that the operation performed on.
 
@@ -123,7 +123,7 @@ To check collection existence the method name must be COLLECTIONEXISTS. Here is 
 	MAKEENDPOINTCONNECTION CONNAME ENDPOINTID EID;
 
 	IF SYS_STATUS == 0 THEN
-		VECTORDBACTION CONNECTIONNAME CONNAME METHOD 'COLLECTIONEXISTS' COLLECTIONNAME COLNAME;
+		VECTORDBACTION COLLECTIONEXISTS CONNECTIONNAME CONNAME COLLECTIONNAME COLNAME;
 
 		IF SYS_STATUS == 1 THEN
 			MYERROR = SYS_STATUS + ' ' + SYS_STATUSERROR;
@@ -142,7 +142,7 @@ Of course you must have a db connection before running VECTORDBACTION command li
 
 ::
 
-	VECTORDBACTION CONNECTIONNAME CONNAME METHOD 'DELETECOLLECTION' COLLECTIONNAME COLNAME;
+	VECTORDBACTION DELETECOLLECTION CONNECTIONNAME CONNAME COLLECTIONNAME COLNAME;
 
 
 Creating Collections
@@ -184,7 +184,7 @@ Here is the sample code for creating a collection on a Qdrant DB. For different 
 	MAKEENDPOINTCONNECTION CONNAME ENDPOINTID EID;
 
 	IF SYS_STATUS == 0 THEN
-		VECTORDBACTION CONNECTIONNAME CONNAME METHOD 'CREATECOLLECTION' COLLECTIONNAME COLNAME COLLECTIONPARAMS COLPARAMS;
+		VECTORDBACTION CREATECOLLECTION CONNECTIONNAME CONNAME COLLECTIONNAME COLNAME COLLECTIONPARAMS COLPARAMS;
 
 		IF SYS_STATUS == 1 THEN
 			MYERROR = SYS_STATUS + ' ' + SYS_STATUSERROR;
@@ -192,8 +192,6 @@ Here is the sample code for creating a collection on a Qdrant DB. For different 
 
 		CLOSEENDPOINTCONNECTION CONNAME;
 	ENDIF;
-
-
 
 For more and all supported opeations about collections please see TROIA help.
 
