@@ -119,7 +119,7 @@ To check collection existence the action name must be COLLECTIONEXISTS. Here is 
 		STRING MYERROR;
 
 	CONNAME = 'MyConnection';
-	EID = 'DEVQDRANT';             //this id is defined on SYST51, it does not matter which vector db type is used
+	EID = 'DEVQDRANT';             //this id is defined on SYST51
 	COLNAME = 'testcollection';
 
 	MAKEENDPOINTCONNECTION CONNAME ENDPOINTID EID;
@@ -149,7 +149,7 @@ To get collection list, the action name is COLLECTIONLIST. Action returns a tabl
 		STRING MYERROR;
 
 	CONNAME = 'MyConnection';
-	EID = 'DEVQDRANT';             //this id is defined on SYST51, it does not matter which vector db type is used
+	EID = 'DEVQDRANT';           //this id is defined on SYST51
 	
 	OBJECT:
 		TABLE TARGETTABLE;
