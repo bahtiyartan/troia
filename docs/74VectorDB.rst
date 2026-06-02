@@ -102,10 +102,12 @@ VECTORDBACTION command gets action name, connection name and collection name for
 {COLLECTIONNAME} is the collection name that the operation performed on.
 
 
+
+
 Checking Collection Existence
 =============================
 
-To check collection existence the method name must be COLLECTIONEXISTS. Here is the sample command.
+To check collection existence the action name must be COLLECTIONEXISTS. Here is the sample command.
 
 
 ::
@@ -124,6 +126,38 @@ To check collection existence the method name must be COLLECTIONEXISTS. Here is 
 
 	IF SYS_STATUS == 0 THEN
 		VECTORDBACTION COLLECTIONEXISTS CONNECTIONNAME CONNAME COLLECTIONNAME COLNAME;
+
+		IF SYS_STATUS == 1 THEN
+			MYERROR = SYS_STATUS + ' ' + SYS_STATUSERROR;
+		ENDIF;
+
+		CLOSEENDPOINTCONNECTION CONNAME;
+	ENDIF;
+	
+	
+Listing Collections
+===================
+
+To get collection list the action name is COLLECTIONLIST. Action returns a table that contains the list. Here is the sample command.
+
+
+::
+
+	OBJECT:
+		STRING CONNAME,
+		STRING EID,
+		STRING MYERROR;
+
+	CONNAME = 'MyConnection';
+	EID = 'DEVQDRANT';             //this id is defined on SYST51, it does not matter which vector db type is used
+	
+	OBJECT:
+		TABLE TARGETTABLE;
+
+	MAKEENDPOINTCONNECTION CONNAME ENDPOINTID EID;
+
+	IF SYS_STATUS == 0 THEN
+		VECTORDBACTION COLLECTIONLIST CONNECTIONNAME CONNAME INTO TARGETTABLE;
 
 		IF SYS_STATUS == 1 THEN
 			MYERROR = SYS_STATUS + ' ' + SYS_STATUSERROR;
