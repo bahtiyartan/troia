@@ -93,9 +93,9 @@ Managing Collections
 
 Before querying a collection or inserting data into it, it's helpful to learn how to perform basic operations about collections. These basic operations are checking whether collection exists, creating and deleting collections. For all vector db opeations TROIA has VECTORDBACTION command.
 
-VECTORDBACTION command gets action name, connection name and collection name for all operations. Other parameters depend on the method to be performed. 
+VECTORDBACTION command gets action name, connection name and collection name for all operations. Other parameters depend on the action to be performed. 
 
-{action} is the operation code that to be performed such as querying and listing, deleting, creating collections, querying etc. This method names are predefined.
+{action} is the operation code that to be performed such as querying and listing, deleting, creating collections, querying etc. This action names are predefined.
 
 {CONNECTIONNAME} is the connection that operation performed on. This parameters allows TROIA programmer working with multiple vector database connections simultaneously.
 
@@ -107,7 +107,7 @@ VECTORDBACTION command gets action name, connection name and collection name for
 Checking Collection Existence
 =============================
 
-To check collection existence the action name must be COLLECTIONEXISTS. Here is the sample command.
+To check collection existence the action name must be COLLECTIONEXISTS. Here is the sample code:
 
 
 ::
@@ -138,7 +138,7 @@ To check collection existence the action name must be COLLECTIONEXISTS. Here is 
 Listing Collections
 ===================
 
-To get collection list the action name is COLLECTIONLIST. Action returns a table that contains the list. Here is the sample command.
+To get collection list, the action name is COLLECTIONLIST. Action returns a table that contains the list. Here is the sample code:
 
 
 ::
@@ -171,7 +171,7 @@ To get collection list the action name is COLLECTIONLIST. Action returns a table
 Deleting Collections
 ====================
 
-To delete an existing collection, the method name must be DELETECOLLECTION. Here is the sample command.
+To delete an existing collection, the action name must be DELETECOLLECTION. Here is the sample command.
 Of course you must have a db connection before running VECTORDBACTION command like the examples above.
 
 ::
@@ -182,7 +182,7 @@ Of course you must have a db connection before running VECTORDBACTION command li
 Creating Collections
 ====================
 
-To create a new collection, the method name must be CREATECOLLECTION.
+To create a new collection, the action name must be CREATECOLLECTION.
 While creating a collection some extra parameters are needed these paremeters are read from a json formatted parameter.
 These parameters may vary due to database product type. 
 Here is the sample code for creating a collection on a Qdrant DB. For different product names and actual sample codes please review TROIA Help.
