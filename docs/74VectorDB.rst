@@ -466,7 +466,7 @@ Here is a sample code that prepares a search embeddings and then searches on vec
 		LOOP AT CHUNKSTABLE
 		BEGIN
 			SEARCHEMBEDDINGS = GETVECTOREMBEDDINGS(LLMCONNAME, 'ias:gpt-oss:20b',
-													TEXTTOSEARCH, 'nomic-embed-text:latest');
+                                     TEXTTOSEARCH, 'nomic-embed-text:latest');
 		ENDLOOP;
 
 		CLOSEENDPOINTCONNECTION LLMCONNAME;
