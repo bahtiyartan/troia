@@ -438,8 +438,11 @@ Here is the basic syntax:
 
 ::
 
-	VECTORDBACTION SEARCH CONNECTIONNAME {connectionname} 
-		COLLECTIONNAME {collection} EMBEDDINGS {embeddings} LIMIT {limit} THRESHOLD {threshold} RELATEDPOINTKEY {rpk} INTO {targettable};
+	VECTORDBACTION SEARCH 
+		CONNECTIONNAME {connectionname} COLLECTIONNAME {collection} 
+		EMBEDDINGS {embeddings} LIMIT {limit} THRESHOLD {threshold} 
+		RELATEDPOINTKEY {rpk} 
+		INTO {targettable};
 		
 		
 Here is a sample code that prepares a search embeddings and then searches on vector db:
