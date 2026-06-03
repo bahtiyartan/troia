@@ -306,6 +306,68 @@ To access the "Embedding AI Model" through the TROIA programming language, you n
 Since the LLM Gateway and how to define models on it are not directly related to the content of this chapter, you can read the relevant section of the book to understand these steps.In this section of the book, we will proceed assuming we have a properly configured and functioning LLM Gateway with an AI Model and an "Embedding AI Model" accessible through this configuration.
 
 
+To connect a LLM Gateway and performn an operation on it, MAKEENDPOINTCONNECTION command is used very similar to connecting a Vector database. So you have to define an LLM Gateway on "SYST51 - Integration Endpoints Configuration" transaction. You can review the "Integration Endpoints" section to understand how this process works.
+
+::
+
+	OBJECT:
+		STRING CONNAME;
+
+	CONNAME = 'myLLMConnection';
+
+	MAKEENDPOINTCONNECTION CONNAME ENDPOINTID 'DEVLLMGATEWAY';
+
+	IF SYS_STATUS == 0 THEN
+		
+		//now llm gateway connection is ready to calculate embeddings.
+		
+		CLOSEENDPOINTCONNECTION CONNAME;
+	ELSE
+		LLMRESPONSE = 'LLM-Gateway Connection error. ' + SYS_STATUSERROR;
+	ENDIF;
+
+
+After connecting a LLM Gateway you can just use GETVECTOREMBEDDINGS() system function to calculate embedding vector your text data. Here is the syntax of GETVECTOREMBEDDINGS() command.
+
+
+::
+	
+	GETVECTOREMBEDDINGS({endpointName}, {modelId}, {text}, {embeddingModel});
+	
+	{endpointName}	: endpoint connection name.
+	{modelId} 		: ModelId defined on LLM-Gateway.
+	{text} 			: The input text for which vector embeddings will be generated.
+	{embeddingModel} : Embedding model name on LLM-Gateway.
+	
+	
+{modelId} and {embeddingModel} parameters are dependent to the LLM Gateway configuration, so these paremeters must be ready before writing the code.
+	
+For more detail, please see TROIA Help for the function.
+
+::
+
+	OBJECT:
+		STRING CONNAME,
+		STRING MYMODELID,
+		STRING MYTEXT,
+		STRING MYEMBEDDINGMODEL,
+		STRING LLMRESPONSE;
+
+	CONNAME = 'myLLMConnection';
+	MYMODELID = 'ias-ai-model';
+	MYTEXT = 'This is a sample text.';
+	MYEMBEDDINGMODEL = 'qwen3-embedding:4b';
+
+	MAKEENDPOINTCONNECTION CONNAME ENDPOINTID 'DEVLLMGATEWAY';
+
+	IF SYS_STATUS == 0 THEN
+		LLMRESPONSE = GETVECTOREMBEDDINGS(CONNAME, MYMODELID, MYTEXT, MYEMBEDDINGMODEL);
+		CLOSEENDPOINTCONNECTION CONNAME;
+	ELSE
+		LLMRESPONSE = 'LLM-Gateway Connection error. ' + SYS_STATUSERROR;
+	ENDIF;
+
+
 Inserting to Collection
 =======================
 
