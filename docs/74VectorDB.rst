@@ -271,7 +271,7 @@ And it also have a variation that just creates empty table with this data struct
 
 ::
 	
-	//this variation creates only data structure
+	//EMPTY variation creates only data structure
 	GETHELPS INTO {targettable} EMPTY; 
 	
 	//this variation creates structure and exports internal help data as chunks
