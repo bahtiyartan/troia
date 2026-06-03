@@ -503,3 +503,6 @@ system first runs a regular similarity search and then adds all other records th
 
 When you run the example code above, the system first performs a similarity search. It then reads the values ​​in the "BOOKID" column of all the resulting rows and adds all records within the same collection whose BOOKID value matches those values ​​to the result.
 
+
+For other search options on Vector Databases and more up-to-date data, please refer to the TROIA Help documentation.
+
