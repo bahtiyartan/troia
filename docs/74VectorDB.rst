@@ -377,7 +377,7 @@ Here is a sample code that calculates embedding values for a simple text:
 Inserting to Collection
 =======================
 
-After ensuring that each row in the chunk table has been populated with embedding data, you can now write to the database. This operation is performed by using the ADDEMBEDDINGS action of the VECTORDBACTION command. ADDEMBEDDINGS action adds all rows of table to the given collection.
+After ensuring that each row in the chunk table has been populated with embedding data, you can now write to the database. This operation is performed by using the ADDEMBEDDINGS action of the VECTORDBACTION command. **ADDEMBEDDINGS action adds all rows of table to the given collection, so there is no need to write a loop to insert each row individually.**
 
 ::
 
