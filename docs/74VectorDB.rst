@@ -344,6 +344,10 @@ After connecting a LLM Gateway you can just use GETVECTOREMBEDDINGS() system fun
 	
 For more detail, please see TROIA Help for the function.
 
+Before adding data, the "Embedding Model" used must be compatible with the collection parameters given when creating the collection. Furthermore, the "Embedding Model" selection should be made according to the application's specifications.
+
+Here is a sample code that calculates embedding values for a simple text:
+
 ::
 
 	OBJECT:
@@ -366,6 +370,8 @@ For more detail, please see TROIA Help for the function.
 	ELSE
 		LLMRESPONSE = 'LLM-Gateway Connection error. ' + SYS_STATUSERROR;
 	ENDIF;
+	
+
 
 
 Inserting to Collection
