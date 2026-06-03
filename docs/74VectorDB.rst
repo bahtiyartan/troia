@@ -299,6 +299,12 @@ Here is a pseudocode that shows how you can build your chunk table easily
 Filling Embeddings
 ==================
 
+To calculate the embedding values, firstly we need an "Embedding AI Model". 
+
+To access the "Embedding AI Model" through the TROIA programming language, you need an LLM Gateway (which is a TROIA Platform Component) and some AI Model definitions on the LLM Gateway.
+
+Since the LLM Gateway and how to define models on it are not directly related to the content of this chapter, you can read the relevant section of the book to understand these steps.In this section of the book, we will proceed assuming we have a properly configured and functioning LLM Gateway with an AI Model and an "Embedding AI Model" accessible through this configuration.
+
 
 Inserting to Collection
 =======================
