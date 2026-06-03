@@ -233,9 +233,64 @@ For more and all supported opeations about collections please see TROIA help.
 Inserting Data to a Collection
 -------------------------------
 
+If you have a large and long text, writing it directly to a vector database may not produce very efficient results. Therefore, it is a more accurate method to divide the large data into smaller, meaningful pieces and add them to the database by calculating the "embedding" values ​​for each piece. These chunks are called "chunks". The performance of vector databases or AI models is directly proportional to how accurately you can transform data into chunks.
+
 
 Data Structure
 ==============
+
+TROIA has a predefined data structure in table form for these "chunks" that you will import into the database. The essential columns in this data structure are as follows:
+
+::
+
+	ID			: chunk id, to distinguish each record
+	TEXT		: text data
+	EMBEDDINGS	: calculated embedding values
+	
+EMBEDDINGS column is a text column. It contains a comma separated decimal value list. Before inserting data to a vector database, this embedding values must be calcaulated with an "Embedding Model"
+You have to provide at least these tree columns to insert to a vector database.
+
+
+The secondary columns listed below are attached as payloads to the main vector database records. Each of these data points is an additional parameter to be passed to the vector database.
+
+::
+
+	BOOKID		: to store source book id
+	SOURCE		: title/document or chapter under source the book
+	LANGUAGE	: language, it is troia language code
+	CHUNKINDEX	: number of the chunk that comes from same source
+	QUESTION	: if it is possible, contains a question that is answered by "TEXT" column
+	
+You can also add other columns. All extra columns added to the chunk table are associated with the record as a payload and are added to the result after the lookup operation.
+
+
+You can build this table structure using TROIA "APPEND COLUMN" command. Another useful alternative is using GETHELPS command. GETHELPS command exports all internal documents of TROIA Platform as chunks.
+And it also have a variation that just creates empty table with this data structure. Here is the syntax:
+
+
+::
+	
+	//this variation creates only data structure
+	GETHELPS INTO {targettable} EMPTY; 
+	
+	//this variation creates structure and exports internal help data as chunks
+	GETHELPS INTO {targettable};	
+
+	
+::
+
+	OBJECT:
+		TABLE MYCHUNKS;
+
+	GETHELPS INTO MYCHUNKS EMPTY;
+	
+	//fill your rows to MYCHUNKS table
+	
+	//for each row
+		//fill embeddings
+		//insert to vector db.
+		
+		
 
 
 Filling Embeddings
