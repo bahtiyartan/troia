@@ -243,7 +243,7 @@ TROIA has a predefined data structure in table form for these "chunks" that you 
 
 ::
 
-	ID			: chunk id, to distinguish each record
+	ID		: chunk id, to distinguish each record
 	TEXT		: text data
 	EMBEDDINGS	: calculated embedding values
 	
@@ -276,6 +276,8 @@ And it also have a variation that just creates empty table with this data struct
 	//this variation creates structure and exports internal help data as chunks
 	GETHELPS INTO {targettable};	
 
+	
+Here is a pseudocode that shows how you can build your chunk table easily
 	
 ::
 
