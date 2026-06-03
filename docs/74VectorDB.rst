@@ -247,8 +247,9 @@ TROIA has a predefined data structure in table form for these "chunks" that you 
 	TEXT		: text data
 	EMBEDDINGS	: calculated embedding values
 	
-EMBEDDINGS column is a text column. It contains a comma separated decimal value list. Before inserting data to a vector database, this embedding values must be calcaulated with an "Embedding Model"
-You have to provide at least these tree columns to insert to a vector database.
+EMBEDDINGS column is a text column. It contains a comma separated decimal value list. Before inserting data to a vector database, this embedding values must be calcaulated with an "Embedding Model". Filling Embeddings will be discussed in next titles.
+
+**You have to provide at least these tree columns to insert to a vector database.**
 
 
 The secondary columns listed below are attached as payloads to the main vector database records. Each of these data points is an additional parameter to be passed to the vector database.
