@@ -501,7 +501,11 @@ system first runs a regular similarity search and then adds all other records th
 
 ::
 
-	VECTORDBACTION SEARCH CONNECTIONNAME VECTORCONNAME COLLECTIONNAME 'testcollection' EMBEDDINGS SEARCHEMBEDDINGS THRESHOLD 0.95 RELATEDPOINTKEY 'BOOKID' INTO RESULTS;
+	VECTORDBACTION 
+		SEARCH CONNECTIONNAME VECTORCONNAME COLLECTIONNAME 'testcollection' 
+		EMBEDDINGS SEARCHEMBEDDINGS THRESHOLD 0.95 
+		RELATEDPOINTKEY 'BOOKID' 
+		INTO RESULTS;
 	
 
 When you run the example code above, the system first performs a similarity search. It then reads the values ​​in the "BOOKID" column of all the resulting rows and adds all records within the same collection whose BOOKID value matches those values ​​to the result.
