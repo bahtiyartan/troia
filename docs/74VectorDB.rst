@@ -377,6 +377,54 @@ Here is a sample code that calculates embedding values for a simple text:
 Inserting to Collection
 =======================
 
+After ensuring that each row in the chunk table has been populated with embedding data, you can now write to the database. This operation is performed by using the ADDEMBEDDINGS action of the VECTORDBACTION command. ADDEMBEDDINGS action adds all rows of table to the given collection.
+
+::
+
+	//STEP: fill helps
+	OBJECT:
+		TABLE CHUNKSTABLE;
+		
+	GETHELPS INTO CHUNKSTABLE;
+	
+	
+	//STEP: fill embeddings
+	OBJECT:
+		STRING LLMCONNAME,
+		STRING MYCOLLECTIONNAME;
+
+	LLMCONNAME = 'iasllmservice';
+	MAKEENDPOINTCONNECTION LLMCONNAME ENDPOINTID 'DEVLLMGATEWAY';
+	IF SYS_STATUS == 0 THEN
+		LOOP AT CHUNKSTABLE
+		BEGIN
+			CHUNKSTABLE_EMBEDDINGS = GETVECTOREMBEDDINGS(LLMCONNAME, 'ias:gpt-oss:20b', CHUNKSTABLE_TEXT, 'nomic-embed-text:latest');
+		ENDLOOP;
+
+		CLOSEENDPOINTCONNECTION LLMCONNAME;
+	ENDIF;
+	
+	
+	//STEP: insert to vector db
+	OBJECT:
+		STRING VECTORCONNAME;
+
+	VECTORCONNAME = 'MyQdrant';
+
+	MAKEENDPOINTCONNECTION VECTORCONNAME ENDPOINTID 'DEVQDRANT';
+
+	IF SYS_STATUS == 0 THEN
+		VECTORDBACTION ADDEMBEDDINGS CONNECTIONNAME VECTORCONNAME COLLECTIONNAME 'test_collection' CHUNKSTABLE CHUNKSTABLE;
+
+		IF SYS_STATUS == 1 THEN
+			STRINGVAR3 = STRINGVAR3 + ' ' + SYS_STATUSERROR;
+		ENDIF;
+
+		CLOSEENDPOINTCONNECTION VECTORCONNAME;
+	ENDIF;
+
+
+For actual syntax and detailed help please see command help on TROIA Help.
 
 
 Searching Data
