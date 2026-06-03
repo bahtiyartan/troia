@@ -424,10 +424,82 @@ After ensuring that each row in the chunk table has been populated with embeddin
 	ENDIF;
 
 
-For actual syntax and detailed help please see command help on TROIA Help.
+For more detail or actual syntax please see command help on TROIA Help.
 
 
 Searching Data
 --------------
 
+To perform search operation on a vector database collection, you must use SEARCH action. Essentially, to execute the SEARCH action, you need to calculate the embedding vector of the text you want to search for. Additionally, the number of data points returned as a result of the search can be determined using the LIMIT parameter, or the THRESHOD parameter can be used to define the similarity threshold of the returned records.
+
+The search action returns a table with the same structure as the chunk data structure used while insertion.
+
+Here is the basic syntax:
+
+::
+
+	VECTORDBACTION SEARCH CONNECTIONNAME {connectionname} 
+		COLLECTIONNAME {collection} EMBEDDINGS {embeddings} LIMIT {limit} THRESHOLD {threshold} RELATEDPOINTKEY {rpk} INTO {targettable};
+		
+		
+Here is a sample code that prepares a search embeddings and then searches on vector db:
+
+::
+	
+	//STEP: prepare search embeddings
+	OBJECT:
+		STRING LLMCONNAME,
+		STRING MYCOLLECTIONNAME;
+		
+	OBJECT:
+		STRING TEXTTOSEARCH,
+		STRING SEARCHEMBEDDINGS;
+		
+	TEXTTOSEARCH = 'search for this text';
+
+	LLMCONNAME = 'iasllmservice';
+	MAKEENDPOINTCONNECTION LLMCONNAME ENDPOINTID 'DEVLLMGATEWAY';
+	IF SYS_STATUS == 0 THEN
+		LOOP AT CHUNKSTABLE
+		BEGIN
+			SEARCHEMBEDDINGS = GETVECTOREMBEDDINGS(LLMCONNAME, 'ias:gpt-oss:20b', TEXTTOSEARCH, 'nomic-embed-text:latest');
+		ENDLOOP;
+
+		CLOSEENDPOINTCONNECTION LLMCONNAME;
+	ENDIF;
+	
+	
+	//STEP: search
+	OBJECT:
+		STRING VECTORCONNAME,
+		TABLE RESULTS;
+
+	VECTORCONNAME = 'MyQdrant';
+
+	MAKEENDPOINTCONNECTION VECTORCONNAME ENDPOINTID 'DEVQDRANT';
+
+	IF SYS_STATUS == 0 THEN
+		VECTORDBACTION SEARCH CONNECTIONNAME VECTORCONNAME COLLECTIONNAME 'testcollection' EMBEDDINGS SEARCHEMBEDDINGS LIMIT 4 THRESHOLD 0.95 INTO RESULTS;
+
+		IF SYS_STATUS == 1 THEN
+			STRINGVAR3 = STRINGVAR3 + ' ' + SYS_STATUSERROR;
+		ENDIF;
+
+		CLOSEENDPOINTCONNECTION VECTORCONNAME;
+	ENDIF;
+	
+	
+An Advanced Searching Option
+----------------------------
+	
+In TROIA Vector DB Search implementation there is an advanced search option called RELATEDPOINTKEY. This key's value must be a column name of inserted chunk table. If you provide this related point key,
+system first runs a regular similarity search and then adds all other records that have same value with the actual search result on given column.
+
+
+::
+
+	VECTORDBACTION SEARCH CONNECTIONNAME VECTORCONNAME COLLECTIONNAME 'testcollection' EMBEDDINGS SEARCHEMBEDDINGS THRESHOLD 0.95 RELATEDPOINTKEY 'BOOKID' INTO RESULTS;
+	
+
+When you run the example code above, the system first performs a similarity search. It then reads the values ​​in the "BOOKID" column of all the resulting rows and adds all records within the same collection whose BOOKID value matches those values ​​to the result.
 
