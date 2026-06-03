@@ -233,7 +233,7 @@ For more and all supported opeations about collections please see TROIA help.
 Inserting Data to a Collection
 -------------------------------
 
-If you have a large and long text, writing it directly to a vector database may not produce very efficient results. Therefore, it is a more accurate method to divide the large data into smaller, meaningful pieces and add them to the database by calculating the "embedding" values ​​for each piece. These chunks are called "chunks". The performance of vector databases or AI models is directly proportional to how accurately you can transform data into chunks.
+If you have a large and long text, writing it directly to a vector database may not produce very efficient results. Therefore, **it is a more accurate method to divide the large data into smaller, meaningful pieces and add them to the database by calculating the "embedding" values ​​for each piece. These chunks are called "chunks". The performance of vector databases or AI models is directly proportional to how accurately you can transform data into chunks.**
 
 
 Data Structure
