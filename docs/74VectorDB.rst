@@ -430,7 +430,7 @@ For more detail or actual syntax please see command help on TROIA Help.
 Searching Data
 --------------
 
-To perform search operation on a vector database collection, you must use SEARCH action. Essentially, to execute the SEARCH action, you need to calculate the embedding vector of the text you want to search for. Additionally, the number of data points returned as a result of the search can be determined using the LIMIT parameter, or the THRESHOD parameter can be used to define the similarity threshold of the returned records.
+To perform search operation on a vector database collection, you must use SEARCH action. Essentially, to execute the SEARCH action, you need to calculate the embedding vector of the text you want to search for. Additionally, the number of data points returned as a result of the search can be determined using the LIMIT parameter, or the THRESHOLD parameter can be used to define the similarity threshold of the returned records.
 
 The search action returns a table with the same structure as the chunk data structure used while insertion.
 
