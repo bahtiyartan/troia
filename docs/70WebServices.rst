@@ -94,18 +94,16 @@ login() method returns LoginResponse complex type which has members below:
 As mentioned before; if login fails, system returns an error message in "login error: n" format. n is the error code. Here are the possible error codes:
 
 +----+--------------------------------------+----+--------------------------------------+  
-| 1  | User Not Found                       | 2  | Wrong Password                       | 
+| 2  | Invalid Login Credentials            | 3  | Database Connection Error            | 
 +----+--------------------------------------+----+--------------------------------------+    
-| 3  | Database Connection Error            | 4  | Invalid Client                       | 
+| 4  | Invalid Client                       | 5  | System Table Error                   | 
 +----+--------------------------------------+----+--------------------------------------+  
-| 5  | System Table Error                   | 6  | License Error                        | 
+| 6  | License Error                        | 7  | User Blocked                         |                         
 +----+--------------------------------------+----+--------------------------------------+  
-| 7  | User Blocked                         | 8  | Invalid Timezone                     | 
+| 8  | Invalid Timezone                     | 10 | No Suaitable Server Found            | 
 +----+--------------------------------------+----+--------------------------------------+  
-| 10 | No Suaitable Server Found            | 11 | User Count Error                     |
-+----+--------------------------------------+----+--------------------------------------+  
-| 12 | Load Balancer Error                  | 15 | Max User Count Error                 | 
-+----+--------------------------------------+----+--------------------------------------+  
+| 11 | User Count Error                     | 15 | Max User Count Error                 |
++----+--------------------------------------+----+--------------------------------------+
 | 16 | Version Inconsistency                | 17 | Maintenance Mode                     | 
 +----+--------------------------------------+----+--------------------------------------+   
 | 18 | Ws Invalid License                   | 19 | Access Denied by Server Access File  |
@@ -114,9 +112,9 @@ As mentioned before; if login fails, system returns an error message in "login e
 +----+--------------------------------------+----+--------------------------------------+    
 | 22 | Invalid Module License               | 23 | Invalid Server                       | 
 +----+--------------------------------------+----+--------------------------------------+    
-| 24 | Invalid Input                        | 25 | System Error                         | 
+| 24 | Invalid Input                        | 26 | Invalid Client Type                  | 
 +----+--------------------------------------+----+--------------------------------------+    
-| 26 | Invalid Client Type                  | 28 | Language License Error               | 
+| 28 | Language License Error               |    |                                      |
 +----+--------------------------------------+----+--------------------------------------+
 
 
