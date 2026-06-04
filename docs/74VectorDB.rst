@@ -41,7 +41,7 @@ What is "Embedding Model"?
 
 To obtain text embedding data, we need an "Embedding Model". **An Embedding Model is an artificial intelligence model** that takes text, an image, or other data and transforms it into an embedding (vector). 
 
-As mentioned above, if we want to perform a "similarity search" on a vector database, we must write our data to the vector database using the same "Embedding Model" as the text we will use in the search. Writing data with embedding values ​​obtained using different methods to any collection in your vector database is not a correct approach.
+As mentioned above, if we want to perform a "similarity search" on a vector database, we must write our data to the vector database collection using the same "Embedding Model" as the text we will use in the search on this collection. Writing data with embedding values ​​obtained using different methods to any collection in your vector database is not a correct approach.
 
 We will discuss the components and system tools needed to obtain text embedding values ​​via the TROIA Platform in later sections of this chapter. For now, make sure you have a correct understanding of these basic concepts.
 
@@ -218,7 +218,9 @@ Here is the sample code for creating a collection on a Qdrant DB. For different 
 	MAKEENDPOINTCONNECTION CONNAME ENDPOINTID EID;
 
 	IF SYS_STATUS == 0 THEN
-		VECTORDBACTION CREATECOLLECTION CONNECTIONNAME CONNAME COLLECTIONNAME COLNAME COLLECTIONPARAMS COLPARAMS;
+		VECTORDBACTION 
+			CREATECOLLECTION CONNECTIONNAME CONNAME COLLECTIONNAME COLNAME 
+			COLLECTIONPARAMS COLPARAMS;
 
 		IF SYS_STATUS == 1 THEN
 			MYERROR = SYS_STATUS + ' ' + SYS_STATUSERROR;
