@@ -233,8 +233,8 @@ For more and all supported opeations about collections please see TROIA help.
 Inserting Data to a Collection
 -------------------------------
 
-If you have a large and long text, writing it directly to a vector database may not produce very efficient results. Therefore, **it is a more accurate method to divide the large data into smaller, meaningful pieces and add them to the database by calculating the "embedding" values ​​for each piece. These chunks are called "chunks". The performance of vector databases or AI models is directly proportional to how accurately you can transform data into chunks.**
-
+If you have a large and long text, writing it directly to a vector database may not produce very efficient results. Therefore, **it is a more accurate method to divide the large data into smaller, meaningful pieces and add them to the database by calculating the "embedding" values ​​for each piece. These pieces are called "chunks". The performance of vector databases or AI models is directly proportional to how accurately you can transform data into chunks.**
+
 
 Data Structure
 ==============
@@ -247,7 +247,7 @@ TROIA has a predefined data structure in table form for these "chunks" that you 
 	TEXT		: text data
 	EMBEDDINGS	: calculated embedding values
 	
-EMBEDDINGS column is a text column. It contains a comma separated decimal value list. Before inserting data to a vector database, this embedding values must be calcaulated with an "Embedding Model". Filling Embeddings will be discussed in next titles.
+EMBEDDINGS column's data type is TEXT. It contains a comma separated decimal value list. Before inserting data to a vector database, this embedding values must be calcaulated with an "Embedding Model". Filling Embeddings will be discussed in next titles.
 
 **You have to provide at least these tree columns to insert to a vector database.**
 
