@@ -400,7 +400,8 @@ After ensuring that each row in the chunk table has been populated with embeddin
 	IF SYS_STATUS == 0 THEN
 		LOOP AT CHUNKSTABLE
 		BEGIN
-			CHUNKSTABLE_EMBEDDINGS = GETVECTOREMBEDDINGS(LLMCONNAME, 'ias:gpt-oss:20b', CHUNKSTABLE_TEXT, 'nomic-embed-text:latest');
+			CHUNKSTABLE_EMBEDDINGS = GETVECTOREMBEDDINGS(LLMCONNAME, 'ias:gpt-oss:20b',
+                                         CHUNKSTABLE_TEXT, 'nomic-embed-text:latest');
 		ENDLOOP;
 
 		CLOSEENDPOINTCONNECTION LLMCONNAME;
