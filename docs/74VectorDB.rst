@@ -385,9 +385,9 @@ After ensuring that each row in the chunk table has been populated with embeddin
 
 	//STEP: fill helps
 	OBJECT:
-		TABLE CHUNKSTABLE;
+		TABLE CHUNKS;
 		
-	GETHELPS INTO CHUNKSTABLE;
+	GETHELPS INTO CHUNKS;
 	
 	
 	//STEP: fill embeddings
@@ -398,10 +398,10 @@ After ensuring that each row in the chunk table has been populated with embeddin
 	LLMCONNAME = 'iasllmservice';
 	MAKEENDPOINTCONNECTION LLMCONNAME ENDPOINTID 'DEVLLMGATEWAY';
 	IF SYS_STATUS == 0 THEN
-		LOOP AT CHUNKSTABLE
+		LOOP AT CHUNKS
 		BEGIN
-			CHUNKSTABLE_EMBEDDINGS = GETVECTOREMBEDDINGS(LLMCONNAME, 'ias:gpt-oss:20b',
-                                         CHUNKSTABLE_TEXT, 'nomic-embed-text:latest');
+			CHUNKS_EMBEDDINGS = GETVECTOREMBEDDINGS(LLMCONNAME, 'ias:gpt-oss:20b',
+                                         CHUNKS_TEXT, 'nomic-embed-text:latest');
 		ENDLOOP;
 
 		CLOSEENDPOINTCONNECTION LLMCONNAME;
@@ -419,7 +419,7 @@ After ensuring that each row in the chunk table has been populated with embeddin
 	IF SYS_STATUS == 0 THEN
 		VECTORDBACTION ADDEMBEDDINGS 
 			CONNECTIONNAME VECTORCONNAME 
-			COLLECTIONNAME 'testcollection' CHUNKSTABLE CHUNKSTABLE;
+			COLLECTIONNAME 'testcollection' CHUNKSTABLE CHUNKS;
 
 		IF SYS_STATUS == 1 THEN
 			STRINGVAR3 = STRINGVAR3 + ' ' + SYS_STATUSERROR;
@@ -468,12 +468,10 @@ Here is a sample code that prepares a search embeddings and then searches on vec
 	LLMCONNAME = 'iasllmservice';
 	MAKEENDPOINTCONNECTION LLMCONNAME ENDPOINTID 'DEVLLMGATEWAY';
 	IF SYS_STATUS == 0 THEN
-		LOOP AT CHUNKSTABLE
-		BEGIN
-			SEARCHEMBEDDINGS = GETVECTOREMBEDDINGS(LLMCONNAME, 'ias:gpt-oss:20b',
+	
+		SEARCHEMBEDDINGS = GETVECTOREMBEDDINGS(LLMCONNAME, 'ias:gpt-oss:20b',
                                      TEXTTOSEARCH, 'nomic-embed-text:latest');
-		ENDLOOP;
-
+									 
 		CLOSEENDPOINTCONNECTION LLMCONNAME;
 	ENDIF;
 	
