@@ -183,7 +183,7 @@ Creating Collections
 ====================
 
 To create a new collection, the action name must be CREATECOLLECTION.
-While creating a collection some extra parameters are needed these paremeters are read from a json formatted parameter.
+While creating a collection some extra parameters are needed these parameters are read from a json formatted parameter.
 These parameters may vary due to database product type. 
 Here is the sample code for creating a collection on a Qdrant DB. For different product names and actual sample codes please review TROIA Help.
 
@@ -249,9 +249,9 @@ TROIA has a predefined data structure in table form for these "chunks" that you 
 	TEXT		: text data
 	EMBEDDINGS	: calculated embedding values
 	
-EMBEDDINGS column's data type is TEXT. It contains a comma separated decimal value list. Before inserting data to a vector database, this embedding values must be calcaulated with an "Embedding Model". Filling Embeddings will be discussed in next titles.
+EMBEDDINGS column's data type is TEXT. It contains a comma separated decimal value list. Before inserting data to a vector database, this embedding values must be calculated with an "Embedding Model". Filling Embeddings will be discussed in next titles.
 
-**You have to provide at least these tree columns to insert to a vector database.**
+**You have to provide at least these three columns to insert to a vector database.**
 
 
 The secondary columns listed below are attached as payloads to the main vector database records. Each of these data points is an additional parameter to be passed to the vector database.
@@ -308,7 +308,7 @@ To access the "Embedding AI Model" through the TROIA programming language, you n
 Since the LLM Gateway and how to define models on it are not directly related to the content of this chapter, you can read the relevant section of the book to understand these steps.In this section of the book, we will proceed assuming we have a properly configured and functioning LLM Gateway with an AI Model and an "Embedding AI Model" accessible through this configuration.
 
 
-To connect a LLM Gateway and performn an operation on it, MAKEENDPOINTCONNECTION command is used very similar to connecting a Vector database. So you have to define an LLM Gateway on "SYST51 - Integration Endpoints Configuration" transaction. You can review the "Integration Endpoints" section to understand how this process works.
+To connect a LLM Gateway and perform an operation on it, MAKEENDPOINTCONNECTION command is used very similar to connecting a Vector database. So you have to define an LLM Gateway on "SYST51 - Integration Endpoints Configuration" transaction. You can review the "Integration Endpoints" section to understand how this process works.
 
 ::
 
@@ -342,7 +342,7 @@ After connecting a LLM Gateway you can just use GETVECTOREMBEDDINGS() system fun
 	{embeddingModel} : Embedding model name on LLM-Gateway.
 	
 	
-{modelId} and {embeddingModel} parameters are dependent to the LLM Gateway configuration, so these paremeters must be ready before writing the code.
+{modelId} and {embeddingModel} parameters are dependent to the LLM Gateway configuration, so these parameters must be ready before writing the code.
 	
 For more detail, please see TROIA Help for the function.
 
