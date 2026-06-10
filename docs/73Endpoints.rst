@@ -59,7 +59,7 @@ Which Endpoint Types are Supported?
 
 Endpoint types which are supported by the TROIA Platform are listed on *"Endpoint Type"* combobox while making a definition on SYST51. 
 
-If you need supported endpoint types programmatically, GETENDPOINT TYPES() function returns whole list. The list that shown on "Enpoint Type" combobox on SYST51 is provided by this function already.
+If you need supported endpoint types programmatically, GETENDPOINTTYPES() function returns whole list. The list that shown on "Enpoint Type" combobox on SYST51 is provided by this function already.
 
 ::
 
@@ -112,7 +112,7 @@ For connections established using the TROIA command, the longest lifetime is the
 
 ::
 	
-	CLOSENDPOINTCONNECTION {connectionname};
+	CLOSEENDPOINTCONNECTION {connectionname};
 
 
 Connecting && Disconnecting Sample
