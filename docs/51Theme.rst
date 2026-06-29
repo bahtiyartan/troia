@@ -109,7 +109,11 @@ First group of theme variables are **static theme variables**. Static theme vari
 Standard Theme Variables Names
 ==============================
 
-Second group of theme variables, changes theme to theme. There are some standard theme variable names for certain purposes. If you define a new theme, you must define at least these theme varaibles for a valid theme. Here are the list of predefined theme variable names and their type and purpose.
+Second group of theme variables, changes theme to theme. There are some standard theme variable names for certain purposes. If you define a new theme, you must define at least these theme varaibles for a valid theme. It is hard to review all standard theme variables under one simple title, so we will discuss them by grouping due to their purposes. Please see next title.
+
+
+List Of Standard Theme Variables
+--------------------------------
 
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
