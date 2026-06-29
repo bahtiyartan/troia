@@ -156,7 +156,7 @@ Here are the standard theme variable names related transaction and transaction t
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
-| TRASTABBCOLOR      | Color          | Selected transaction tab background color (on header bar of the frame).                                                                |
+| TRASTABBCOLOR      | Color          | Selected transaction tab background color (on header bar of the frame).                                  |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | TRASTABFCOLOR      | Color          | Seletted transaction tab foreground color.                                                               |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
