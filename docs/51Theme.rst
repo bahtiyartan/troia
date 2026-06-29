@@ -119,7 +119,7 @@ List Of Standard Theme Variables
 Theme Names Related With Frame
 ==============================
 
-Here are the standard theme variable names related with main frame, menu etc.
+Here are the standard theme variable names related with main frame, menu etc:
 
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
@@ -151,10 +151,12 @@ Here are the standard theme variable names related with main frame, menu etc.
 Theme Variables for Transaction
 ===============================
 
+Here are the standard theme variable names related transaction and transaction tabs:
+
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
-| TRASTABBCOLOR      | Color          | Selected transaction tab background color.                                                               |
+| TRASTABBCOLOR      | Color          | Selected transaction tab background color (on header bar of the frame).                                                                |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | TRASTABFCOLOR      | Color          | Seletted transaction tab foreground color.                                                               |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
@@ -167,10 +169,14 @@ Theme Variables for Transaction
 Theme Variables for Dialogs
 ===========================
 
+Here are the standard theme variables related with dialogs:
+
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | DBACKCOLOR         | Color          | Dialog background color.                                                                                 |
++--------------------+----------------+----------------------------------------------------------------------------------------------------------+
+| HEADERBCK          | Color          | Dialog header background color.                                                                          |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | DEVT40FONT         | Font           | Special font for code for code editors or console outputs.                                               |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
@@ -183,6 +189,8 @@ Theme Variables for Dialogs
 
 Theme Variables for Basic Controls
 ==================================
+
+Here are the standard theme variables related with basic controls, such as buttons, editors, labels etc:
 
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
@@ -238,6 +246,8 @@ Theme Variables for Basic Controls
 Theme Variable Names For Tables / Tree and Charts
 =================================================
 
+Here are the standar theme variables related with tables, tree and chart components:
+
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
@@ -272,6 +282,8 @@ Theme Variable Names For Tables / Tree and Charts
 Theme Variable Names For Groupboxes and Tabbed Panes
 ====================================================
 
+Here are the theme variables related with groupboxes and tabbed panes and tab dialogs:
+
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
@@ -301,6 +313,8 @@ Theme Variable Names For Groupboxes and Tabbed Panes
 
 Theme Variable Names Toolbars 
 =============================
+
+Here are the standard teheme variables related with groupboxes that named as "TOOLBAR". TOOLBAR is just an special groupbox that needs extra theme options.
 
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
@@ -332,10 +346,10 @@ Theme Variable Names Toolbars
 Theme Variable Names Headers 
 =============================
 
+Here are the standard teheme variables related with groupboxes that named as "HEADER". HEADER is just an special groupbox that needs extra theme options.
+
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
-+--------------------+----------------+----------------------------------------------------------------------------------------------------------+
-| HEADERBCK          | Color          | Dialog header background color.                                                                          |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | HEADERBRD          | Border         | All groupboxes named as "HEADER" must use this theme variable as background.                             |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
@@ -364,6 +378,8 @@ Theme Variable Names Headers
 Theme Variables for Control Fonts
 =================================
 
+Here are standard theme variables that defines some other useful fonts and colors.
+
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
@@ -389,7 +405,7 @@ Other Standard Variables
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
-| SBACKCOLOR         | Color          | Bakground color for shape controls.                                                                      |
+| SBACKCOLOR         | Color          | Bakground color for shape controls. All shape controls use this background color.                        |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | SLINEWEIGHT        | Integer        | Line weight for shape controls.                                                                          |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
