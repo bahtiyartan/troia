@@ -45,6 +45,23 @@ Static Theme Variables
 
 First group of theme variables are **static theme variables**. Static theme variables do not change theme from theme, in other words their values static and same for all themes. This kind of theme variables are mostly used for coloring data rows. Here are the list of static theme variables and their values. If you define a new theme you don't need to add these variables to your theme, your theme will include this values automatically. Althought it is not recommended, you can override the static theme variable, defining a same named variable in your custom theme.
 
+
+Standard Theme Variables Names
+==============================
+
+Second group of theme variables, changes theme to theme. There are some standard theme variable names for certain purposes. If you define a new theme, you must define at least these theme varaibles for a valid theme. It is hard to review all standard theme variables under one simple title, so we will discuss them by grouping due to their purposes. Please see next title.
+
+
+
+
+List Of Static Theme Variables
+------------------------------
+
+Basic Backcolors
+================
+
+Here is the list of basic static theme variables for basic backcolors.
+
 +------------------------+----------------------------------------------------+--------------+---------------+
 |**Name**                | **Description**                                    | **Int Value**| **Hex Value** |
 +------------------------+----------------------------------------------------+--------------+---------------+
@@ -92,6 +109,15 @@ First group of theme variables are **static theme variables**. Static theme vari
 +------------------------+----------------------------------------------------+--------------+---------------+
 | BACKCOLOR22            |                                                    | 9290200      |               |
 +------------------------+----------------------------------------------------+--------------+---------------+
+
+Colors for Special Purposes
+===========================
+
+Here is the list of basic static theme variables for special purpose colors.
+
++------------------------+----------------------------------------------------+--------------+---------------+
+|**Name**                | **Description**                                    | **Int Value**| **Hex Value** |
++------------------------+----------------------------------------------------+--------------+---------------+
 | BACKCOLORERROR         |                                                    | 15550776     |               |
 +------------------------+----------------------------------------------------+--------------+---------------+
 | BACKCOLOROK            |                                                    | 4698982      |               |
@@ -104,12 +130,6 @@ First group of theme variables are **static theme variables**. Static theme vari
 +------------------------+----------------------------------------------------+--------------+---------------+
 | BACKCOLORWARNING       |                                                    | 16503651     |               |
 +------------------------+----------------------------------------------------+--------------+---------------+
-
-
-Standard Theme Variables Names
-==============================
-
-Second group of theme variables, changes theme to theme. There are some standard theme variable names for certain purposes. If you define a new theme, you must define at least these theme varaibles for a valid theme. It is hard to review all standard theme variables under one simple title, so we will discuss them by grouping due to their purposes. Please see next title.
 
 
 List Of Standard Theme Variables
@@ -185,12 +205,10 @@ Here are the standard theme variables related with dialogs:
 | MUSTFIELD          | Color          | Mustfield background color.                                                                              |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 
+Theme Variables for Buttons
+===========================
 
-
-Theme Variables for Basic Controls
-==================================
-
-Here are the standard theme variables related with basic controls, such as buttons, editors, labels etc:
+Here are the standard theme variables related with buttons and multi buttons:
 
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | **Name**           | **Type**       | **Description**                                                                                          |
@@ -217,6 +235,18 @@ Here are the standard theme variables related with basic controls, such as butto
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | BIBACKCOLOR        | Color          | Background color for iconified buttons.                                                                  |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
+| BICONCOLOR         | Color          | Icon color, this value is used while loading svg icons instead of #242838.                               |
++--------------------+----------------+----------------------------------------------------------------------------------------------------------+
+
+
+Theme Variables for Basic Controls
+==================================
+
+Here are the standard theme variables related with basic controls such as editors, labels etc:
+
++--------------------+----------------+----------------------------------------------------------------------------------------------------------+
+| **Name**           | **Type**       | **Description**                                                                                          |
++--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | EBBORDERS          | Border         | Editor borders.                                                                                          |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | EFBACKCOLOR        | Color          | Textfield and editor background color.                                                                   |
@@ -239,8 +269,7 @@ Here are the standard theme variables related with basic controls, such as butto
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
 | SFFORECOLOR        | Color          | Foreground color for the labels.                                                                         |
 +--------------------+----------------+----------------------------------------------------------------------------------------------------------+
-| BICONCOLOR         | Color          | Icon color, this value is used while loading svg icons instead of #242838.                               |
-+--------------------+----------------+----------------------------------------------------------------------------------------------------------+
+
 
 
 Theme Variable Names For Tables / Tree and Charts
