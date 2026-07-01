@@ -22,12 +22,14 @@ What Does The Platform Offer?
 TROIA contains too many useful features to access, operate and report business layer information. Thanks to these features, TROIA reduces "the pain" caused by technical details of programming languages, so programmers can focus business layer issues. APIs&dlls, localization, supporting various platforms and databases are just the examples of these painful technical details. Here are some basic advantages that the platform offers for developers, administrators and the users:
 
 
-**Free of Technical Details** 
+**Free of Technical Details**
+-----------------------------
 
 It has a structure that is easy to learn and resembles a natural speech language. Employees without a software and computer engineering background can learn quickly. They can install, configure and develop.
 
 
-**Rapid Development and Maintenance**
+Rapid Development and Maintenance
+-------------------------------------
 
 It has been developed with the aim of improving business processes and includes the tools needed for this purpose. Developers can focus on business processes rather than technical details they will encounter, and can carry out development and maintenance jobs more quickly and efficiently.
 
