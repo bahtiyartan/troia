@@ -262,7 +262,7 @@ The secondary columns listed below are attached as payloads to the main vector d
 	SOURCE		: title/document or chapter under source the book
 	LANGUAGE	: language, it is troia language code
 	CHUNKINDEX	: number of the chunk that comes from same source
-	QUESTION	: if it is possible, contains a question that is answered by "CONTENT" column
+	QUESTION	: if it is possible, contains a question that is answered by "CONTENT"
 	
 You can also add other columns. All extra columns added to the chunk table are associated with the record as a payload and are added to the result after the lookup operation.
 
