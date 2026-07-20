@@ -334,7 +334,11 @@ After connecting a LLM Gateway you can just use LLMACTION GETEMBEDDINGS command 
 
 ::
 	
-	LLMACTION GETEMBEDDINGS CONNECTIONNAME {connectionName} MODELID {modelId} PROMPT {text} EMBEDDINGMODEL {embeddingModel} TO {targetSybol};
+	LLMACTION GETEMBEDDINGS CONNECTIONNAME {connectionName} 
+		MODELID {modelId} 
+		PROMPT {text} 
+		EMBEDDINGMODEL {embeddingModel} 
+		TO {targetSybol};
 	
 	{connectionName}	: endpoint connection name.
 	{modelId} 		: ModelId defined on LLM-Gateway.
@@ -401,7 +405,10 @@ After ensuring that each row in the chunk table has been populated with embeddin
 	IF SYS_STATUS == 0 THEN
 		LOOP AT CHUNKS
 		BEGIN
-			LLMACTION GETEMBEDDINGS CONNECTIONNAME LLMCONNAME MODELID 'ias:gpt-oss:20b' PROMPT CHUNKS_CONTENT EMBEDDINGMODEL 'nomic-embed-text:latest' TO CHUNKS_EMBEDDINGS;
+			LLMACTION GETEMBEDDINGS CONNECTIONNAME LLMCONNAME 
+					MODELID 'ias:gpt-oss:20b' PROMPT CHUNKS_CONTENT 
+					EMBEDDINGMODEL 'nomic-embed-text:latest' 
+					TO CHUNKS_EMBEDDINGS;
 		ENDLOOP;
 
 		CLOSEENDPOINTCONNECTION LLMCONNAME;
@@ -469,7 +476,10 @@ Here is a sample code that prepares a search embeddings and then searches on vec
 	MAKEENDPOINTCONNECTION LLMCONNAME ENDPOINTID 'DEVLLMGATEWAY';
 	IF SYS_STATUS == 0 THEN
 						 
-		LLMACTION GETEMBEDDINGS CONNECTIONNAME LLMCONNAME MODELID 'ias:gpt-oss:20b' PROMPT TEXTTOSEARCH EMBEDDINGMODEL 'nomic-embed-text:latest' TO SEARCHEMBEDDINGS;
+		LLMACTION GETEMBEDDINGS CONNECTIONNAME LLMCONNAME 
+				MODELID 'ias:gpt-oss:20b' PROMPT TEXTTOSEARCH 
+				EMBEDDINGMODEL 'nomic-embed-text:latest' 
+				TO SEARCHEMBEDDINGS;
 									 
 		CLOSEENDPOINTCONNECTION LLMCONNAME;
 	ENDIF;
