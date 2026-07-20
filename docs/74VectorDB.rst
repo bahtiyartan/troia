@@ -246,7 +246,7 @@ TROIA has a predefined data structure in table form for these "chunks" that you 
 ::
 
 	ID		: chunk id, to distinguish each record
-	TEXT		: text data
+	CONTENT		: text data
 	EMBEDDINGS	: calculated embedding values
 	
 EMBEDDINGS column's data type is TEXT. It contains a comma separated decimal value list. Before inserting data to a vector database, this embedding values must be calculated with an "Embedding Model". Filling Embeddings will be discussed in next titles.
@@ -262,7 +262,7 @@ The secondary columns listed below are attached as payloads to the main vector d
 	SOURCE		: title/document or chapter under source the book
 	LANGUAGE	: language, it is troia language code
 	CHUNKINDEX	: number of the chunk that comes from same source
-	QUESTION	: if it is possible, contains a question that is answered by "TEXT" column
+	QUESTION	: if it is possible, contains a question that is answered by "CONTENT" column
 	
 You can also add other columns. All extra columns added to the chunk table are associated with the record as a payload and are added to the result after the lookup operation.
 
@@ -329,17 +329,18 @@ To connect a LLM Gateway and perform an operation on it, MAKEENDPOINTCONNECTION 
 	ENDIF;
 
 
-After connecting a LLM Gateway you can just use GETVECTOREMBEDDINGS() system function to calculate embedding vector your text data. Here is the syntax of GETVECTOREMBEDDINGS() command.
+After connecting a LLM Gateway you can just use LLMACTION GETEMBEDDINGS command to calculate embedding vector your text data. Here is the syntax of LLMACTION GETEMBEDDINGS command.
 
 
 ::
 	
-	GETVECTOREMBEDDINGS({endpointName}, {modelId}, {text}, {embeddingModel});
+	LLMACTION GETEMBEDDINGS CONNECTIONNAME {connectionName} MODELID {modelId} PROMPT {text} EMBEDDINGMODEL {embeddingModel} TO {targetSybol};
 	
-	{endpointName}	: endpoint connection name.
+	{connectionName}	: endpoint connection name.
 	{modelId} 		: ModelId defined on LLM-Gateway.
 	{text} 			: The input text for which vector embeddings will be generated.
-	{embeddingModel} : Embedding model name on LLM-Gateway.
+	{embeddingModel}: Embedding model name on LLM-Gateway.
+	{targetSybol}   : String variable to set comma separated embeddings.
 	
 	
 {modelId} and {embeddingModel} parameters are dependent to the LLM Gateway configuration, so these parameters must be ready before writing the code.
@@ -367,7 +368,7 @@ Here is a sample code that calculates embedding values for a simple text:
 	MAKEENDPOINTCONNECTION CONNAME ENDPOINTID 'DEVLLMGATEWAY';
 
 	IF SYS_STATUS == 0 THEN
-		LLMRESPONSE = GETVECTOREMBEDDINGS(CONNAME, MYMODELID, MYTEXT, MYEMBEDDINGMODEL);
+		LLMACTION GETEMBEDDINGS CONNECTIONNAME CONNAME MODELID MYMODELID PROMPT MYTEXT EMBEDDINGMODEL MYEMBEDDINGMODEL TO LLMRESPONSE;
 		CLOSEENDPOINTCONNECTION CONNAME;
 	ELSE
 		LLMRESPONSE = 'LLM-Gateway Connection error. ' + SYS_STATUSERROR;
@@ -400,8 +401,7 @@ After ensuring that each row in the chunk table has been populated with embeddin
 	IF SYS_STATUS == 0 THEN
 		LOOP AT CHUNKS
 		BEGIN
-			CHUNKS_EMBEDDINGS = GETVECTOREMBEDDINGS(LLMCONNAME, 'ias:gpt-oss:20b',
-                                         CHUNKS_TEXT, 'nomic-embed-text:latest');
+			LLMACTION GETEMBEDDINGS CONNECTIONNAME LLMCONNAME MODELID 'ias:gpt-oss:20b' PROMPT CHUNKS_CONTENT EMBEDDINGMODEL 'nomic-embed-text:latest' TO CHUNKS_EMBEDDINGS;
 		ENDLOOP;
 
 		CLOSEENDPOINTCONNECTION LLMCONNAME;
@@ -468,9 +468,8 @@ Here is a sample code that prepares a search embeddings and then searches on vec
 	LLMCONNAME = 'iasllmservice';
 	MAKEENDPOINTCONNECTION LLMCONNAME ENDPOINTID 'DEVLLMGATEWAY';
 	IF SYS_STATUS == 0 THEN
-	
-		SEARCHEMBEDDINGS = GETVECTOREMBEDDINGS(LLMCONNAME, 'ias:gpt-oss:20b',
-                                     TEXTTOSEARCH, 'nomic-embed-text:latest');
+						 
+		LLMACTION GETEMBEDDINGS CONNECTIONNAME LLMCONNAME MODELID 'ias:gpt-oss:20b' PROMPT TEXTTOSEARCH EMBEDDINGMODEL 'nomic-embed-text:latest' TO SEARCHEMBEDDINGS;
 									 
 		CLOSEENDPOINTCONNECTION LLMCONNAME;
 	ENDIF;

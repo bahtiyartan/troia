@@ -19,41 +19,41 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    15Operators
    18Flowcontrol
    21StringManipulations
-   23ExceptionHandling
+   #23ExceptionHandling
    24DialogBasics
    26Domains
    27Transactions
    30MessagesAlerts
    35Class
    38Table
-   42TableControl
+   #42TableControl
    43DatabaseAccessI
-   44DatabaseAccessII
+   #44DatabaseAccessII
    45DatabaseAccessIII
    46DateOperations
-   49DialogAdvanced
-   50Controls
+   #49DialogAdvanced
+   #50Controls
    51Theme
-   52ReportsPrinting
-   54Barcodes
+   #52ReportsPrinting
+   #54Barcodes
    55InheritanceCross
    58File
    62Components
    66FTP
    68Multithreading
-   69IOT
+   #69IOT
    70WebServices
    73Endpoints
    74VectorDB
    76XMLjson
    78HTTPOperations
    82Port
-   86Mailing
-   88DigitalSigning
-   90SMS
+   #86Mailing
+   #88DigitalSigning
+   #90SMS
    92ProgramsLibraries
    93MobileToolkit
-   94Java_
+   #94Java_
    96VisualVM
    99Appendix1
    99Appendix2
