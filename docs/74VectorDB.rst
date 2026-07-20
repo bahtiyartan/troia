@@ -337,13 +337,11 @@ After connecting a LLM Gateway you can just use LLMACTION GETEMBEDDINGS command 
 	LLMACTION GETEMBEDDINGS CONNECTIONNAME {connectionName} 
 		MODELID {modelId} 
 		PROMPT {text} 
-		EMBEDDINGMODEL {embeddingModel} 
 		TO {targetSybol};
 	
 	{connectionName}	: endpoint connection name.
-	{modelId} 		: ModelId defined on LLM-Gateway.
+	{modelId} 		: Embedding model id on LLM-Gateway.
 	{text} 			: The input text for which vector embeddings will be generated.
-	{embeddingModel}: Embedding model name on LLM-Gateway.
 	{targetSybol}   : String variable to set comma separated embeddings.
 	
 	
@@ -361,20 +359,18 @@ Here is a sample code that calculates embedding values for a simple text:
 		STRING CONNAME,
 		STRING MYMODELID,
 		STRING MYTEXT,
-		STRING MYEMBEDDINGMODEL,
 		STRING LLMRESPONSE;
 
 	CONNAME = 'myLLMConnection';
-	MYMODELID = 'ias-ai-model';
+	MYMODELID = 'qwen3-embedding:4b';
 	MYTEXT = 'This is a sample text.';
-	MYEMBEDDINGMODEL = 'qwen3-embedding:4b';
 
 	MAKEENDPOINTCONNECTION CONNAME ENDPOINTID 'DEVLLMGATEWAY';
 
 	IF SYS_STATUS == 0 THEN
 		LLMACTION GETEMBEDDINGS CONNECTIONNAME CONNAME 
-				MODELID MYMODELID PROMPT MYTEXT 
-				EMBEDDINGMODEL MYEMBEDDINGMODEL 
+				MODELID MYMODELID
+				PROMPT MYTEXT 
 				TO LLMRESPONSE;
 		CLOSEENDPOINTCONNECTION CONNAME;
 	ELSE
@@ -409,8 +405,8 @@ After ensuring that each row in the chunk table has been populated with embeddin
 		LOOP AT CHUNKS
 		BEGIN
 			LLMACTION GETEMBEDDINGS CONNECTIONNAME LLMCONNAME 
-					MODELID 'ias:gpt-oss:20b' PROMPT CHUNKS_CONTENT 
-					EMBEDDINGMODEL 'nomic-embed-text:latest' 
+					MODELID 'nomic-embed-text:latest' 
+					PROMPT CHUNKS_CONTENT
 					TO CHUNKS_EMBEDDINGS;
 		ENDLOOP;
 
@@ -480,8 +476,8 @@ Here is a sample code that prepares a search embeddings and then searches on vec
 	IF SYS_STATUS == 0 THEN
 						 
 		LLMACTION GETEMBEDDINGS CONNECTIONNAME LLMCONNAME 
-				MODELID 'ias:gpt-oss:20b' PROMPT TEXTTOSEARCH 
-				EMBEDDINGMODEL 'nomic-embed-text:latest' 
+				MODELID 'nomic-embed-text:latest' 
+				PROMPT TEXTTOSEARCH 
 				TO SEARCHEMBEDDINGS;
 									 
 		CLOSEENDPOINTCONNECTION LLMCONNAME;
