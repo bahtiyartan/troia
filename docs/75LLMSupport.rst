@@ -2,19 +2,26 @@
 Working With LLM Models
 =============================
 
-*A vector database is a type of database that stores data as mathematical “vectors” rather than using the traditional row/column structure, and is designed to perform similarity searches. It is especially used in the field of artificial intelligence. This section aims to explain how vector database operations can be performed with TROIA.*
+*The LLM (Large Language Model) is an artificial intelligence model trained on very large amounts of text and capable of understanding and generating natural language. This section aims to explain how to connect to an AI model via the TROIA Platform.*
 
 
-Header?
-----------------------------
+What is an Large Language Model?
+--------------------------------
 
-**A vector database is a specialized type of database that stores data in vector (embedded) format and performs vector similarity calculations on these vectors to find the closest results.** Vector DB performs searches using numerical vectors, and simultaneously stores the text associated with this numerical data. Thus, after converting a given text into a numerical vector, we can obtain clear, human- and LLM-readable versions of the resulting text.
+...
 
 
-Subheader?
-====================
+How to interact with an LLM Model?
+==================================
 
-test
+
+LLM Gateway
+---------------------------
+
+
+How to configure LLMGateway
+============================
+
 
 ::
 
