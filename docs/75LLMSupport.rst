@@ -14,21 +14,38 @@ What is an Large Language Model?
 How to interact with an LLM Model?
 ==================================
 
+...
 
-LLM Gateway
+
+TROIA LLM Gateway
 ---------------------------
 
+...
 
-How to configure LLMGateway
+
+How to configure LLM Gateway
 ============================
+...
+
+
+Working with LLM Services
+=========================
+...
+
+
+Working with Local Models
+=========================
+...
 
 
 How to Define an LLMGateway as an Endpoint
 ==========================================
+...
 
 
 Interaction Methods with LLM Gateway
 ------------------------------------
+...
 
 
 LLM Prompt on Clients
@@ -38,57 +55,13 @@ LLM Prompt on Clients
 Accessing LLM Gateway Programmatically
 =======================================
 
-In SYST51, endpoint type of the configuration must be a vector db product. Actual supported vector databses are listed on SYST51 - Integration Endpoints Configuration.
-
-Deleting Collections
-====================
-
-To delete an existing collection, the action name must be DELETECOLLECTION. Here is the sample command.
-Of course you must have a db connection before running VECTORDBACTION command like the examples above.
-
 ::
 
-	VECTORDBACTION DELETECOLLECTION CONNECTIONNAME CONNAME COLLECTIONNAME COLNAME;
+	LLMACTION PROMPT CONNECTIONNAME CONNAME COLLECTIONNAME COLNAME;
 
-::
+.
 
-	OBJECT:
-		STRING CONNAME,
-		STRING EID,
-		STRING COLNAME,
-		STRING COLPARAMS,
-		STRING MYERROR;
+Managing LLM Chat History and Context Window
+--------------------------------------------
 
-	CONNAME = 'MyQdrant';
-	EID = 'DEVQDRANT';
-	COLNAME = 'testcollection';
-	COLPARAMS = '{
-		"vectors": {
-			"size": 4,
-			"distance": "Cosine",
-			"on_disk": true
-		},
-		"hnsw_config": {
-			"m": 16,
-			"ef_construct": 100
-		},
-		"optimizer_config": {
-			"indexing_threshold": 100
-		}
-	}';
-
-	MAKEENDPOINTCONNECTION CONNAME ENDPOINTID EID;
-
-	IF SYS_STATUS == 0 THEN
-		VECTORDBACTION
-			CREATECOLLECTION CONNECTIONNAME CONNAME COLLECTIONNAME COLNAME
-			COLLECTIONPARAMS COLPARAMS;
-
-		IF SYS_STATUS == 1 THEN
-			MYERROR = SYS_STATUS + ' ' + SYS_STATUSERROR;
-		ENDIF;
-
-		CLOSEENDPOINTCONNECTION CONNAME;
-	ENDIF;
-
-For more and all supported opeations about collections please see TROIA help.
+...
