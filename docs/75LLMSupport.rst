@@ -23,31 +23,20 @@ How to configure LLMGateway
 ============================
 
 
-::
-
-	OBJECT:
-		STRING CONNAME,
-		STRING EID;
-
-	CONNAME = 'MyConnectionName';
-	EID = 'DEVQDRANT';
+How to Define an LLMGateway as an Endpoint
+==========================================
 
 
-	MAKEENDPOINTCONNECTION CONNAME ENDPOINTID EID;
+Interaction Methods with LLM Gateway
+------------------------------------
 
-	IF SYS_STATUS == 0 THEN
 
-		//do your endpoint actions here
+LLM Prompt on Clients
+=====================
 
-		CLOSEENDPOINTCONNECTION CONNAME;
 
-		IF SYS_STATUS == 1 THEN
-			STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
-		ENDIF;
-	ELSE
-		STRINGVAR3 = SYS_STATUS + ' ' + SYS_STATUSERROR;
-	ENDIF;
-
+Accessing LLM Gateway Programmatically
+=======================================
 
 In SYST51, endpoint type of the configuration must be a vector db product. Actual supported vector databses are listed on SYST51 - Integration Endpoints Configuration.
 
