@@ -7,13 +7,13 @@ Programming with TROIA
 ==================================
 
 This is an open and unofficial book to learn TROIA Platform and Programming Language. Although it targets the programmers who are new to TROIA, it also contains useful information for experienced programmers, consultants and system administrators.
- 
- 
+
+
 .. toctree::
    :maxdepth: 2
 
-   03Platformbasics
-   06Languagebasics
+   02Platformbasics
+   04Languagebasics
    09Datatypes
    12Variablesscope
    15Operators
@@ -59,6 +59,6 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    99Appendix2
    99Appendix3
    99Appendix4
-   
+
    #Security
    #vectors
