@@ -89,4 +89,4 @@ Number of these attributes may vary due to your TROIA Platform build number and 
 How to Check JMX MBeans
 =======================
 
-...
+JMX is supported for too many monitoring tools to monitor java applications. 
