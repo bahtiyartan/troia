@@ -89,4 +89,11 @@ Number of these attributes may vary due to your TROIA Platform build number and 
 How to Check JMX MBeans
 =======================
 
-JMX is supported for too many monitoring tools to monitor java applications. 
+JMX is supported for too many monitoring tools such as JConsole, VisualVM, JMC to monitor java applications. It is also possible to use Zabbix or other monitoring tools to get data from jvm over JMX.
+
+From our perspective, JConsole will be sufficient to display the data provided by TROIA, so we can conduct our tests via JConsole. JConsole is an JDK tool, so you can launch it from your JDK\bin folder.
+
+.. figure:: images/monitoring/jconsole-connection.png
+   :width: 300 px
+   :target: images/monitoring/jconsole-connection.png
+   :align: center
