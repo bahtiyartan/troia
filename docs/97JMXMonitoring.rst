@@ -100,7 +100,14 @@ From our perspective, JConsole will be sufficient to display the data provided b
 
 The screeshot above shows hot to connect an local process as an example. If your configuration requires some security credentials or you connect to a remote service, use required credentials considering JConsole documentation. After connection established on MBeans tab you can see **Application Server** class attributes like the image below:
 
-.. figure:: images/monitoring/jconsole-server.png
+.. figure:: images/monitoring/jconsole-appserver.png
    :width: 650 px
-   :target: images/monitoring/jconsole-server.png
+   :target: images/monitoring/jconsole-appserver.png
+   :align: center
+
+Very similar to Application Server you can connect your LicenseServer and view it's MBean Attributes.
+
+.. figure:: images/monitoring/jconsole-license-server.png
+   :width: 650 px
+   :target: images/monitoring/jconsole-license-server.png
    :align: center
