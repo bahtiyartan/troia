@@ -56,7 +56,7 @@ This is an open and unofficial book to learn TROIA Platform and Programming Lang
    93MobileToolkit
    #94Java_
    96VisualVM
-   #97JMXMonitoring
+   97JMXMonitoring
    99Appendix1
    99Appendix2
    99Appendix3
