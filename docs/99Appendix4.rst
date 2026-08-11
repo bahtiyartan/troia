@@ -6,6 +6,8 @@ Appendix IV - What's new in the book?
 
 *“Programming with TROIA” is a live book, so there are too many changes as corrections, new examples, new headings and even new sections. This appendix aims to list significant changes on book in a daily format for last three years to help old readers.*
 
+2026.08.11 - New section: Monitoring with JMX
+
 2026.06.04 - New section: Working With Vector Databases
 
 2026.04.26 - New section: Integration Endpoints
@@ -51,5 +53,3 @@ Appendix IV - What's new in the book?
 2019.09.27 - "Built-in Data Types and Structures" section renamed to "Built-in Data Types".
 
 2019.09.25 - Font and some other visual changes for better reading experience on web.
-
-

@@ -12,11 +12,11 @@ What is JMX?
 
 JMX (Java Management Extensions) is a Java technology used to monitor and manage running Java applications. It is a standard mechanism that allows us to observe the internal state of a running Java application from the outside and manage it when necessary.
 
-It allows monitoring JVM information such as RAM/heap usage, number of threads, garbage collection, and CPU. It can also export application-specific metrics via a structures called MBeans.
+It allows monitoring JVM information such as RAM/heap usage, the number of threads, garbage collection, and CPU usage. It can also expose application-specific metrics via structures called MBeans.
 
-JConsole, VisualVM, and Prometheus JMX Exporter are the widely used tools to monitor Java Applications that supports JMX.
+JConsole, VisualVM, and Prometheus JMX Exporter are widely used tools for monitoring Java applications that support JMX.
 
-TROIA Platform is also a java based system so it is possible to observer TROIA Platform components using JMX as any java application. Some components such as License Server and Application Server also provides some special MBean data in addition to attributes that a standart Java appliation provides. These **troia specific MBeans are supported 26.08.11-01 and following builds.** If your TROIA Platform build is older than this build you can monitor TROIA Server side components withoud troia specific MBeans.
+TROIA Platform is also a Java-based system, so it is possible to monitor TROIA Platform components using JMX just like any other Java application. Some components, such as License Server and Application Server also provide special MBean data in addition to attributes provided by standard Java application. **These TROIA-specific MBeans are supported in build 26.08.11-01 and later builds.** If your TROIA Platform build is older than this build, you can monitor server-side components, but TROIA-specific MBeans will not be available.
 
 How to Enable JMX?
 ==================
@@ -39,7 +39,7 @@ TROIA Platform, checks two system properties to decide whether jmx enabled or no
 TROIA Specific MBeans
 =============================
 
-All TROIA Platform components supports JMX, but Application Server and License Server also provides custom JMX MBean attributes about their internal operations.
+All TROIA Platform components supports JMX, but Application Server and License Server also provide custom JMX MBean attributes about their internal operations.
 
 Application Server
 ------------------
