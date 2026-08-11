@@ -94,6 +94,13 @@ JMX is supported for too many monitoring tools such as JConsole, VisualVM, JMC t
 From our perspective, JConsole will be sufficient to display the data provided by TROIA, so we can conduct our tests via JConsole. JConsole is an JDK tool, so you can launch it from your JDK\bin folder.
 
 .. figure:: images/monitoring/jconsole-connection.png
-   :width: 300 px
+   :width: 400 px
    :target: images/monitoring/jconsole-connection.png
+   :align: center
+
+The screeshot above shows hot to connect an local process as an example. If your configuration requires some security credentials or you connect to a remote service, use required credentials considering JConsole documentation. After connection established on MBeans tab you can see **Application Server** class attributes like the image below:
+
+.. figure:: images/monitoring/jconsole-server.png
+   :width: 650 px
+   :target: images/monitoring/jconsole-server.png
    :align: center
