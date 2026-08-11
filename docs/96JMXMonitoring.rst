@@ -31,20 +31,20 @@ To enable JMX for a JVM you must provide required JMX parameters, you must at le
     -Dcom.sun.management.jmxremote.ssl=false
 
 
-In production environment you must make more secure configuration, with ssl and authentication options, or port restriction methods. But for local envirionments this minimal configuration is enough for testing. **For production, please review all security options and port restriction methods about JMX.**
+In a production environment you must use a more secure configuration, with SSL and authentication options, or port restriction methods. However for local environment this minimal configuration is sufficient for testing. **For production, please review JMX security options and port restriction methods about JMX.**
 
-TROIA Platform, checks two system properties to decide whether jmx enabled or not : **com.sun.management.jmxremote** and **com.sun.management.jmxremote.port**. If both these two parameters are provided for the vm, system enables MBeans and its TROIA specific attributes.
+TROIA Platform checks two system properties to determine whether JMX enabled or not: **com.sun.management.jmxremote** and **com.sun.management.jmxremote.port**. If both parameters are provided for the JVM, the system enables MBeans and their TROIA specific attributes.
 
 
 TROIA Specific MBeans
 =============================
 
-All TROIA Platform components supports JMX, but Application Server and License Server also provide custom JMX MBean attributes about their internal operations.
+All TROIA Platform components support JMX, but the application server and license server also provide custom MBean attributes related to their internal operations.
 
 Application Server
 ------------------
 
-Application Server provides a JMX MBean named **ApplicationServer** under **com.ias.server.appserver.monitoring.jmx** package and this bean contains some paraters about application servers state. Here is the list of the attributes:
+Application Server provides a MBean named **ApplicationServer** in **com.ias.server.appserver.monitoring.jmx** package and this MBean contains some attributes about application servers state. Here is the list of the attributes:
 
 +-----------------------------+-----------------------------------------------------------------------+
 | ServerSessionCount          | Session Count on Application Server                                   |
@@ -60,12 +60,12 @@ Application Server provides a JMX MBean named **ApplicationServer** under **com.
 | DialogCacheSize             | Current Size of Application Server Dialog                             |
 +-----------------------------+-----------------------------------------------------------------------+
 
-These attribute list may vary, due to your TROIA Platform build number. For more and up to date list please check actual JMX Bean for your build.
+The list of attributes may vary, depending on your TROIA Platform build. For the most complete and up-to-date list please check actual JMX MBean available in your build.
 
 License Server
 ---------------
 
-Another TROIA Platform Component that provides some special data for JMX is LicenseServer. JMX Bean Name is **LicenseServer** and it is under the "com.ias.server.controller.monitoring.jmx". The attributes provided by the License Server are slightly different from those provided by the Application Server, because License Server has dynamic attribute names due to your license definitons. But prefixes are always same here is th list:
+Another TROIA Platform component that provides custom data for JMX is License Server. JMX MBean Name is **LicenseServer** and it is under the "com.ias.server.controller.monitoring.jmx". The attributes provided by the License Server are slightly different from those provided by the application server, because the license server has dynamic attribute names based on your license definitions. Howewer, the attribute prefixes are always the same. Here is the list:
 
 +-----------------------------+-----------------------------------------------------------------------+
 | MaxRegularUserCount         | Maximum Number of Regular Users                                       |
