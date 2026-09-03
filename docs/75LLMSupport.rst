@@ -8,7 +8,16 @@ Working With LLM Models
 What is an Large Language Model?
 --------------------------------
 
-...
+A Large Language Model (LLM) is an artificial intelligence model that learns language patterns from vast amounts of text, enabling it to understand and generate text and perform various language-related tasks.
+
+An LLM learns to predict the next word or token based on the text it is given. Although this mechanism may seem simple, when combined with large amounts of data and a sufficiently large model, it can lead to highly advanced capabilities. Here is some functionalitys that an LLM Model:
+
+::
+
+	- Answer questions.
+	- Write, summarize, and translate text.
+	- Write and explain code.
+	- Identify relationships between information and assist with reasoning.
 
 
 How to interact with an LLM Model?
