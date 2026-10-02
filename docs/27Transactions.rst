@@ -84,6 +84,21 @@ Calling a transaction with in server variation is very simple. Here is the synta
 	CALL TRANSACTION {transaction} INSERVER ({input_params});
 	CALL TRANSACTION {transaction} ({input_params}) INSERVER ({output_params});
 	
+
+Getting the ID of Called Transaction
+====================================
+
+When you make a transaction CALL, in some cases you need the id of the transaction instance which is opened when you call. In these cases right after CALL operation you can read SYS_CALLEDTRANSACTIONID system variable which stores id of newly opened transaction. Here is a sample code to get the called transaction id.
+
+OBJECT:
+	STRING STRINGVAR1;
+	
+CALL TRANSACTION SALT01;
+STRINGVAR1 = SYS_CALLEDTRANSACTIONID;
+
+This system variable is supported after build number 26.10.02-01.
+
+	
 Input Parameters & TRANSCALLED Event
 --------------------------------------
 
