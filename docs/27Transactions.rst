@@ -98,8 +98,8 @@ When you make a transaction CALL, in some cases you need the id of the transacti
 		
 	CALL TRANSACTION SALT01;
 	STRINGVAR1 = SYS_CALLEDTRANSACTIONID;
-
-This system variable is supported after build number 26.10.02-01.
+	
+Value of this system variable becomes invalid after another CALL TRANSACTION command, so it is recommended that reading its value right after the call operation. This system variable is supported after build number 26.10.02-01.
 
 	
 Input Parameters & TRANSCALLED Event
