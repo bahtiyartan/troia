@@ -130,18 +130,20 @@ When you click this configration button system shows configuration dialog. In th
 This custom log configuration is stored on SYSLOGTOPICS table. In login attempt system reads custom log configuration, therefore changes are applied for the users who logs in after configuration change.
 
 	
-
-
 Writing Logs with TROIA
 =======================
 
-This command is avaliable on 26.10.06-01 and following builds.
+In some instances, it is necessary to generate log messages within TROIA code itself. These logs must undergo the same processes as other logs—such as validation checks, transmission to third-party SIEM software, and triggering of various alert mechanisms.
+
+The ADDLOGENTRY command is used for such scenarios. After performing the necessary checks, the ADDLOGENTRY command writes the log generated within the TROIA code to the target tables and transmits it to the relevant systems. Therefore, directly inserting log data into the SYSIASLOGS table is not a correct practice and is not recommended. This command is avaliable on 26.10.06-01 and following builds. Here is the syntax of ADDLOGENTRY command.
 
 ::
 	
 	ADDLOGENTRY {message};
 	ADDLOGENTRY {message} LOGLEVEL {loglevel};
 	
+And here is a sample code that appends an log message.
+
 ::
 
 	OBJECT:
