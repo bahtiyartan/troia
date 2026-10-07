@@ -31,9 +31,9 @@ The SYSIASLOGS table contains many details regarding user actions; here is the l
 	SESSIONID		: session id
 	TRANS			: transaction
 	TRANSACTIONID		: transaction id
-	MESSAGE		: log content / log message
+	MESSAGE			: log content / log message
 	LOGTOPIC		: lot topic
-	LOGTIME		: log time as milliseconds
+	LOGTIME			: log time as milliseconds
 	CREATEDAT		: log time
 	CREATEDBY		: username (similar to USERN column)
 	
