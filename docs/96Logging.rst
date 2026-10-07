@@ -119,6 +119,12 @@ Custom Log Configuration
    :width: 650 px
    :target: images/logs/logconfig.png
    :align: center
+   
+
+.. figure:: images/logs/customlogoptions.png
+   :width: 650 px
+   :target: images/logs/customlogoptions.png
+   :align: center
 
 	
 
