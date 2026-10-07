@@ -126,6 +126,8 @@ When you click this configration button system shows configuration dialog. In th
    :width: 650 px
    :target: images/logs/customlogoptions.png
    :align: center
+   
+This custom log configuration is stored on SYSLOGTOPICS table. In login attempt system reads custom log configuration, therefore changes are applied for the users who logs in after configuration change.
 
 	
 
