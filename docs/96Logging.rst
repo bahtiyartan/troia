@@ -162,10 +162,11 @@ To configure SIEM at the server layer, the following variables in the Server Con
 
 ::
 
-	SIEM			: d
-	SIEMLogLevel	: c
-	SIEMLogSubjects	: b
-	SIEMAdapter		: a
+	SIEM		: SIEM System Protocol and address
+	SIEMLogLevel	: Log Severity to filter logs passed to SIEM
+	SIEMAdapter	: a
+	
+	SIEMLogSubjects	: Log Subjects fo filter logs passed to SIEM
 
 
 Log Analyse Applications
