@@ -31,7 +31,7 @@ The SYSIASLOGS table contains many details regarding user actions; here is the l
 	SESSIONID		: session id
 	MACHINE			: client device
 	TRANS			: transaction
-	TRANSACTIONID	: transaction id
+	TRANSACTIONID		: transaction id
 	SERVERID		: server id (the unique id for the connected app server)
 	MESSAGE			: log content / log message
 	LOGTOPIC		: lot topic
