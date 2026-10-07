@@ -70,17 +70,18 @@ Here are some log topics:
 	Invalid Service Call
 
 
-Reading Log Topics Programmatically
------------------------------------
+Getting Actual List of Log Topics
+---------------------------------
 
 Most of the logs are generated internally by TROIA Platform, therefore log topics are internal. To get the actual list of log topics programmatically you can call GETLOGTOPICS() system function. This system function returns id and description of all available log topics.
 
-Triggering this system function is not the only way to view all log topic options. It is also possible to get list on "SYS06 - System Parameters" trasanction which is used for also log configuration.
+Triggering this system function is not the only way to view all log topic options. It is also possible to get list on "SYS06 - System Parameters" trasanction which is used for also log configuration. This transaction also uses GETLOGTOPICS() in the background.
 
 
 Log Configuration
 -----------------
 
+As we mentioned before it is possible to implement different logging strategies for different databases.
 
 Writing Logs with TROIA
 =======================
