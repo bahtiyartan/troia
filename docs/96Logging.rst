@@ -154,7 +154,7 @@ And here is a sample code that appends an log message.
 	ADDLOGENTRY LOGMESSAGE LOGLEVEL 'ERROR';
 
 SIEM Integration
-----------------
+================
 
 It is possible to send log messages to SIEM systems. To do this, the log topics to be sent to the SIEM must be marked on SYST06, and the connected server must have a valid SIEM configuration. 
 
@@ -162,11 +162,19 @@ To configure SIEM at the server layer, the following variables in the Server Con
 
 ::
 
+	SIEMProtocol	:
+	SIEMAddress		:
+	SIEMLogLevel	:
+	SIEMAdapter		:
+	SIEMLogTopics	:
+
 	SIEM		: SIEM System Protocol and address
 	SIEMLogLevel	: Log Severity to filter logs passed to SIEM
 	SIEMAdapter	: a
 	
 	SIEMLogSubjects	: Log Subjects fo filter logs passed to SIEM
+	
+SIEMLogLevel
 
 
 Log Analyse Applications
