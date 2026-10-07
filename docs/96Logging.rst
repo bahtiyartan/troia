@@ -97,9 +97,16 @@ In "System Logs" section on SYST06, there are some options **Closed**,**Brief**,
 	Invalid 2nd Factor Cridential
 	
 	**Detail (Transaction)**
+	+ Brief Mode
+	Transaction Open
+	Invalid Transaction Open Attempt
+	Transaction Close
+	Unauthorized Transaction Open Attepmt
 	
 	**Detail (Transaction+Mesages)**
-	
+	+ Detail (Transaction)
+	TROIA Messages
+	Invalid Service Call
 	
 
 
