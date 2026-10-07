@@ -27,17 +27,17 @@ This logs are stored on SYSIALOGS table on database that user requests to log in
 The SYSIASLOGS table contains many details regarding user actions; here is the list of featured columns and their details.
 ::
 
-	**USERN			: username**
-	**SESSIONID		: session id**
-	MACHINE			: client device
+	USERN			: username
+	SESSIONID		: session id
 	TRANS			: transaction
 	TRANSACTIONID		: transaction id
-	SERVERID		: server id (the unique id for the connected app server)
-	**MESSAGE		: log content / log message**
-	**LOGTOPIC		: lot topic**
-	**LOGTIME		: log time as milliseconds**
-	**CREATEDAT		: log time**
+	MESSAGE		: log content / log message
+	LOGTOPIC		: lot topic
+	LOGTIME		: log time as milliseconds
+	CREATEDAT		: log time
 	CREATEDBY		: username (similar to USERN column)
+	
+For the full column list of SYSIASLOGS, please see the table on "DEVT01 - System Tables" transaction.
 
 Log Topics
 ============
