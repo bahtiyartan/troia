@@ -83,27 +83,27 @@ Log Configuration
 
 As we mentioned before it is possible to implement different logging strategies for different databases. So the main key of logging options is stored on database on ISSYSLOG column of IASSYSTEM table. This value is managed under "SYST06 - System Parameters" -> "System Logs".
 
-In "System Logs" section on SYST06, there are some options **Closed**,**Brief**,**Detail (Transaction)**, **Detail (Transaction+Mesages)**,**Custom**. It is obvious that in "Closed" option system does not store logs. 
+In "System Logs" section on SYST06, there are some options **Closed**, **Brief**, **Detail (Transaction)**, **Detail (Transaction+Mesages)**,**Custom**. It is obvious that in "Closed" option system does not store logs. 
 
-**Brief**,**Detail (Transaction)**, **Detail (Transaction+Mesages)** options enables some predefined log topics. Here is the available log topics for these predefined sets:
+**Brief**, **Detail (Transaction)**, **Detail (Transaction+Mesages)** options enables some predefined log topics. Here is the available log topics for these predefined sets:
 
 ::
 	
-	**Brief**
+	 **Brief**
 	
 	User Login
 	User Logout
 	Invalid Username/Password
 	Invalid 2nd Factor Cridential
 	
-	**Detail (Transaction)**
+	 **Detail (Transaction)**
 	+ Brief Mode
 	Transaction Open
 	Invalid Transaction Open Attempt
 	Transaction Close
 	Unauthorized Transaction Open Attepmt
 	
-	**Detail (Transaction+Mesages)**
+	 **Detail (Transaction+Mesages)**
 	+ Detail (Transaction)
 	TROIA Messages
 	Invalid Service Call
