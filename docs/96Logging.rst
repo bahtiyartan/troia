@@ -116,10 +116,11 @@ Custom Log Configuration
 **Custom** option is only available 9.03+ canias versions. And enables more detailed logging configuration options. If you select custom option system shows "Custom Log Options" button.
 
 .. figure:: images/logs/logconfig.png
-   :width: 650 px
+   :width: 450 px
    :target: images/logs/logconfig.png
    :align: center
    
+When you click this configration button system shows configuration dialog. In this dialog it is possible to decide whether this log data will be stored on database or send to SIEM system for each log topic. So it is possible to make more detailed custom log configuration.
 
 .. figure:: images/logs/customlogoptions.png
    :width: 650 px
