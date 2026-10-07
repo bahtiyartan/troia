@@ -42,9 +42,41 @@ For the full column list of SYSIASLOGS, please see the table on "DEVT01 - System
 Log Topics
 ============
 
+"Log Topic" is a kind of subject id for the log. System administrators can configure log strategies topic by topic. 
+
+All log messages inserted in the source code of the TROIA Platform contains a log topic. When the action (the subject of the log) occurs, system checks loggin configuration for the topic and decides to store or ignore the log. This confiuration also contains sending or not sending a log to SIEM systems.
+
+Here are some log topics:
+
+::
+
+	User Login
+	Invalid Username or Password
+	Invalid 2nd Factor Cridential
+	2nd Factor Timeout or Cancel
+	Re-Authentication Failure (on AUTHENTICATE Command)
+	User Session Terminated By System Administrator
+	User Login After a Long Time
+	User Login From a New Device
+	User Trace Status Change By System Administrator
+	User not found
+	User Logout
+	Transaction Open
+	Invalid Transaction Open Attempt
+	Transaction Close
+	Unauthorized Transaction Open Attepmt
+	Active Transaction Process Terminated by Administrator
+	Troia Messages
+	Invalid Service Call
+
 
 Reading Log Topics Programmatically
 -----------------------------------
+
+Most of the logs are generated internally by TROIA Platform, therefore log topics are internal. To get the actual list of log topics programmatically you can call GETLOGTOPICS() system function. This system function returns id and description of all available log topics.
+
+Triggering this system function is not the only way to view all log topic options. It is also possible to get list on "SYS06 - System Parameters" trasanction which is used for also log configuration.
+
 
 Log Configuration
 -----------------
