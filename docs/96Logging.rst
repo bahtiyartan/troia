@@ -79,7 +79,7 @@ Triggering this system function is not the only way to view all log topic option
 
 
 Log Configuration
------------------
+=================
 
 As we mentioned before it is possible to implement different logging strategies for different databases. So the main key of logging options is stored on database on ISSYSLOG column of IASSYSTEM table. This value is managed under "SYST06 - System Parameters" -> "System Logs".
 
@@ -109,6 +109,17 @@ In "System Logs" section on SYST06, there are some options **Closed**, **Brief**
 	+ Detail (Transaction)
 	TROIA Messages
 	Invalid Service Call
+	
+Custom Log Configuration
+------------------------
+	
+**Custom** option is only available 9.03+ canias versions. And enables more detailed logging configuration options. If you select custom option system shows "Custom Log Options" button.
+
+.. figure:: images/logs/logconfig.png
+   :width: 650 px
+   :target: images/logs/logconfig.png
+   :align: center
+
 	
 
 
