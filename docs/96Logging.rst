@@ -163,9 +163,9 @@ To configure SIEM at the server layer, the following variables in the Server Con
 ::
 
 	SIEMProtocol	:
-	SIEMAddress		:
+	SIEMAddress	:
 	SIEMLogLevel	:
-	SIEMAdapter		:
+	SIEMAdapter	:
 	SIEMLogTopics	:
 
 	SIEM		: SIEM System Protocol and address
