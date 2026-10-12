@@ -192,6 +192,14 @@ SIEM type is a kind of protocol definition to communicate with different types o
 SIEM Address
 ------------
 
+SIEM Address is the address of SIEM System. Host and port are separated by a column (:) char. Two sample configuration lines are below:
+
+::
+	
+	SIEMAddress = 192.168.10.10:9999
+	
+	SIEMAddress = mysiemhost.com:9999
+
 SIEM Log Level
 --------------
 
