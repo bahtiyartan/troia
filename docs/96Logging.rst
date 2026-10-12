@@ -95,6 +95,7 @@ In "System Logs" section on SYST06, there are some options **Closed**, **Brief**
 	User Logout
 	Invalid Username/Password
 	Invalid 2nd Factor Cridential
+	Logs From APPENDLOGENTRY Command (Topic Id : 10000+))
 	
 	Detail (Transaction)
 	--------------------
@@ -141,6 +142,8 @@ The ADDLOGENTRY command is used for such scenarios. After performing the necessa
 	
 	ADDLOGENTRY {message};
 	ADDLOGENTRY {message} LOGLEVEL {loglevel};
+	ADDLOGENTRY {message} LOGTOPIC {logtopic};
+	ADDLOGENTRY {message} LOGLEVEL {loglevel} LOGTOPIC {logtopic};
 	
 And here is a sample code that appends an log message.
 
@@ -152,6 +155,15 @@ And here is a sample code that appends an log message.
 	LOGMESSAGE = 'invalid check table content';
 
 	ADDLOGENTRY LOGMESSAGE LOGLEVEL 'ERROR';
+	
+{loglevel} is a string typed parameter. This parameter's value must be ERROR, WARN or INFO. System applies log level filters due to this it's value. If it is not provided default level is INFO.
+
+Log Topic on ADDLOGENTRY Command
+--------------------------------
+Log Topic is an optional integer parameter. If it is not provided default value is 10000. [0-9999] interval is reserved for TROIA Platform log topics, so in business layer this value must be greater than 10000. Otherwise system ignores ADDLOGENTRY log command and writes an error to trace. Using different numbers on TROIA layer logs can be distingished topic by topic. 
+
+It is also possible to enable/disable logs that comes from ADDLOGENTRY command. To enable these kind of logs "Logs From APPENDLOGENTRY Command (Topic Id : 10000+))" must be enabled on "SYS06 - System Parameters" -> "Custom Log Options".
+
 
 SIEM Integration
 ================
@@ -162,19 +174,35 @@ To configure SIEM at the server layer, the following variables in the Server Con
 
 ::
 
-	SIEMProtocol	:
-	SIEMAddress	:
-	SIEMLogLevel	:
-	SIEMAdapter	:
-	SIEMLogTopics	:
+	SIEMType
+	SIEMAddress
+	SIEMLogLevel
+	SIEMAdapter
+	SIEMLogTopics
+	
+SIEM Type
+---------
 
-	SIEM		: SIEM System Protocol and address
-	SIEMLogLevel	: Log Severity to filter logs passed to SIEM
-	SIEMAdapter	: a
+SIEM type is a kind of protocol definition to communicate with different types of SIEM Systems. "UDP" is the only available option. Here is sample configuration line for SIEM Type.
+
+::
+
+	SIEMType = UDP
+
+SIEM Address
+------------
+
+SIEM Log Level
+--------------
+
+SIEM Adapter
+-------------
+
+SIEM Log Topics
+----------------
 	
-	SIEMLogSubjects	: Log Subjects fo filter logs passed to SIEM
-	
-SIEMLogLevel
+
+As other server settings parameters, key and value must be separated by equals (=) char.
 
 
 Log Analyse Applications
