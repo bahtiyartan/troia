@@ -258,24 +258,22 @@ SYSLOG RFC5424 and SYSLOG RFC5425
 
 RFC 5424 is the modern Syslog Protocol standard, standardized by the IETF (Internet Engineering Task Force) and used for the transmission of event notification (syslog) messages. Here is the syntax and sample
 
-::
+SYSLOGRFC5424 HOST {hostname} [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
 
-	#syntax
-	#SYSLOGRFC5424 HOST {hostname} [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
+::
 	
 	#sample configuration line
-	SIEMAdapter = SYSLOGRFC5424 HOST troiaserver1 PEN your.pen.number ENTERPRISEID your.enterpriseId TZKNOWN true ISSYNCED true SYNCACCURACY syncAccuracyAsNumber
+	SIEMAdapter = SYSLOGRFC5424 HOST server1 PEN pen.number ENTERPRISEID eid TZKNOWN true ISSYNCED true SYNCACCURACY saAsNumber
 
 
 RFC 5425 is very similar to RFC 5425. Here is the syntax and sample
 
+SYSLOGRFC5425 HOST {hostname} [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
+
 ::
 
-	#syntax
-	#SYSLOGRFC5425 HOST {hostname} [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
-	
 	#sample configuration line
-	SIEMAdapter = SYSLOGRFC5425 HOST troiaserver1 PEN your.pen.number ENTERPRISEID your.enterpriseId TZKNOWN true ISSYNCED true SYNCACCURACY syncAccuracyAsNumber
+	SIEMAdapter = SYSLOGRFC5425 HOST server1 PEN pen.number ENTERPRISEID eid TZKNOWN true ISSYNCED true SYNCACCURACY saAsNumber
 
 
 
