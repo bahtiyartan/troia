@@ -234,7 +234,50 @@ Here is a sample line:
 
 SIEM Adapter
 -------------
+
+SIEM Adapter allows system administrators to select log format that will be passed to SIEM System. Supported protocols are SYSLOG RFC3164, SYSLOG RFC5424, SYSLOG RFC5425 all these standards has different customization options and their own formats. For more information about SYSLOG Formats please apply specific resources.
+
+SYSLOG RFC3164
+--------------
+
+RFC 3164 (BSD Syslog Protocol) defines the legacy message format used to send event notification messages over IP networks. Characteristically, it contains host name that generating the log. Here is the syntax and sample for server configuration:
+
+::
+
+	#syntax
+	#SYSLOGRFC3154 HOST {hostname}
+
+	#sample configuration line
+	SIEMAdapter = SYSLOGRFC3154 HOST troiaserver1
 	
+Now your log content contains "troiaserver1" is added to log content as hostname.
+
+
+SYSLOG RFC5424 and SYSLOG RFC5425
+----------------------------------
+
+RFC 5424 is the modern Syslog Protocol standard, standardized by the IETF (Internet Engineering Task Force) and used for the transmission of event notification (syslog) messages. Here is the syntax and sample
+
+::
+
+	#syntax
+	#SYSLOGRFC5424 HOST {hostname} [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
+	
+	#sample configuration line
+	SIEMAdapter = SYSLOGRFC5424 HOST troiaserver1 PEN your.pen.number ENTERPRISEID your.enterpriseId TZKNOWN true ISSYNCED true SYNCACCURACY syncAccuracyAsNumber
+
+
+RFC 5425 is very similar to RFC 5425. Here is the syntax and sample
+
+::
+
+	#syntax
+	#SYSLOGRFC5425 HOST {hostname} [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
+	
+	#sample configuration line
+	SIEMAdapter = SYSLOGRFC5425 HOST troiaserver1 PEN your.pen.number ENTERPRISEID your.enterpriseId TZKNOWN true ISSYNCED true SYNCACCURACY syncAccuracyAsNumber
+
+
 
 Sending Logs Directly to SIEM
 =============================
