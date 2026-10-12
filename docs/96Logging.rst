@@ -226,6 +226,8 @@ SIEM Log Level is another filter option to manage logs transferred to SIEM syste
 
 Here is a sample line:
 
+::
+
 	# filter DEBUG logs and send INFO,WARN and ERROR to SIEM. 
 	SIEMLogLevel = INFO
 
