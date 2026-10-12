@@ -280,13 +280,31 @@ SYSLOGRFC5425 HOST {hostname} [PEN {privateEnterpriseNumber}] [ENTERPRISEID {ent
 Sending Logs Directly to SIEM
 =============================
 
-...
+It is also possible to pass data to configured SIEM system directly, by TROIA. In this case, logs are not filtered due to SIEMLogTopics and SIEMLogLevel configurations, because this is a kind of forcing to send log to SIEM System.
+
+It direcly for communicates with SIEM not adds log to the logging subsystem and IASSYSTEM table which stores log files.
+
+Here is the syntax:
+
+::
+
+	SIEMAPPEND MESSAGE {logcontent};
+	SIEMAPPEND MESSAGE {logcontent} LOGLEVEL {level};
+	
+
+Default log level is INFO for SIEMAPPEND command. 
+
+::
+
+	It is not recommended to use SIEMAPPEND command unless passing only to SIEM is must.
+	
 
 
 Some Useful Functions and Commands
 ----------------------------------
 
-...
+SIEMAPPEND Command
+------------
 
 
 Log Analyse Applications
