@@ -200,14 +200,30 @@ SIEM Address is the address of SIEM System. Host and port are separated by a col
 	
 	SIEMAddress = mysiemhost.com:9999
 
+SIEM Log Topics
+----------------
+
+SIEM Log Topics are a kind of filter string that allows system administrators reduce log count by topics. It is a comma(,) separated log topic id list that contains only allowed log topic ids. If it is not provided or set to asterisk(*) char, system sends all log topics to SIEM system. Here is sample configuration lines:
+
+::
+
+	#all topics transferred to SIEM
+	SIEMLogTopics = *
+	
+	#only business level logs transferred to SIEM
+	SIEMLogTopics = 10000
+	
+	#only login and logout
+	SIEMLogTopics = 1000, 1900
+
+	
+
 SIEM Log Level
 --------------
 
+
 SIEM Adapter
 -------------
-
-SIEM Log Topics
-----------------
 	
 
 As other server settings parameters, key and value must be separated by equals (=) char.
