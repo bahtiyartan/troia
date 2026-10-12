@@ -231,11 +231,14 @@ Here is a sample line:
 	# filter DEBUG logs and send INFO,WARN and ERROR to SIEM. 
 	SIEMLogLevel = INFO
 
+
 SIEM Adapter
 -------------
 	
 
-As other server settings parameters, key and value must be separated by equals (=) char.
+Sending Logs Directly to SIEM
+=============================
+...
 
 
 Log Analyse Applications
