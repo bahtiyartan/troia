@@ -176,9 +176,10 @@ To configure SIEM at the server layer, the following variables in the Server Con
 
 	SIEMType
 	SIEMAddress
+	SIEMLogTopics
 	SIEMLogLevel
 	SIEMAdapter
-	SIEMLogTopics
+
 	
 SIEM Type
 ---------
@@ -221,6 +222,12 @@ SIEM Log Topics are a kind of filter string that allows system administrators re
 SIEM Log Level
 --------------
 
+SIEM Log Level is another filter option to manage logs transferred to SIEM system. Value of this parameter must be one of ERROR,WARN,INFO,DEBUG. Sysem sends only logs those severity level is higher and equal. Default value is DEBUG and does not apply any filter and sends all logs to SIEM.
+
+Here is a sample line:
+
+	# filter DEBUG logs and send INFO,WARN and ERROR to SIEM. 
+	SIEMLogLevel = INFO
 
 SIEM Adapter
 -------------
