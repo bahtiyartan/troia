@@ -327,11 +327,6 @@ FILLLOGTABLE Command gets and table variable and returns same table with an extr
 				
 	FILLLOGTOPICS TABLE TMPTABLE;
 
-
-SIEMAPPEND Command
-------------------
-
-
 Log Analyse Applications
 ========================
 
