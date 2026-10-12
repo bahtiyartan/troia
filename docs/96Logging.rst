@@ -253,8 +253,8 @@ RFC 3164 (BSD Syslog Protocol) defines the legacy message format used to send ev
 Now your log content contains "troiaserver1" is added to log content as hostname.
 
 
-SYSLOG RFC5424 and SYSLOG RFC5425
-----------------------------------
+SYSLOG RFC5424 / RFC5425
+------------------------
 
 RFC 5424 is the modern Syslog Protocol standard, standardized by the IETF (Internet Engineering Task Force) and used for the transmission of event notification (syslog) messages. Here is the syntax and sample
 
@@ -279,6 +279,13 @@ SYSLOGRFC5425 HOST {hostname} [PEN {privateEnterpriseNumber}] [ENTERPRISEID {ent
 
 Sending Logs Directly to SIEM
 =============================
+
+...
+
+
+Some Useful Functions and Commands
+----------------------------------
+
 ...
 
 
