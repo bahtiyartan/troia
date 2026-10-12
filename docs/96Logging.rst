@@ -282,7 +282,7 @@ Sending Logs Directly to SIEM
 
 It is also possible to pass data to configured SIEM system directly, by TROIA. In this case, logs are not filtered due to SIEMLogTopics and SIEMLogLevel configurations, because this is a kind of forcing to send log to SIEM System.
 
-It direcly for communicates with SIEM not adds log to the logging subsystem and IASSYSTEM table which stores log files.
+**It is not recommended to use SIEMAPPEND command unless passing only to SIEM is must.** It direcly for communicates with SIEM not adds log to the logging subsystem and IASSYSTEM table which stores log files.
 
 Here is the syntax:
 
@@ -294,17 +294,42 @@ Here is the syntax:
 
 Default log level is INFO for SIEMAPPEND command. 
 
-::
 
-	It is not recommended to use SIEMAPPEND command unless passing only to SIEM is must.
-	
 
 
 Some Useful Functions and Commands
-----------------------------------
+==================================
+
+For optimizing log analysis performance, TROIA some special commands and functions.
+
+FILLLOGTABLE Command
+--------------------
+
+FILLLOGTABLE Command gets and table variable and returns same table with an extra colum named LOGTOPICTEST. This colum contains calculated human readible Log Topic text due to LOGTOPIC column of parameter table. Command loops whole table, finds correspoinding log topic text for each row internally. Here is the syntax and sample code.
+
+::
+
+	FILLLOGTABLE TABLE {table};
+	
+::
+
+	OBJECT: 
+	TABLE LOGTABLE,
+	DATETIME LAST1HOUR;
+	
+	LAST1HOUR = SYS_CURRENTDATE - (60 * 60 * 1000);
+		
+	SELECT * FROM SYSIASLOGS 
+		WHERE CLIENT = SYS_CLIENT 
+				AND USERN = SYS_USER
+				AND CREATEDAT > LAST1HOUR
+				INTO TMPTABLE;
+				
+	FILLLOGTOPICS TABLE TMPTABLE;
+
 
 SIEMAPPEND Command
-------------
+------------------
 
 
 Log Analyse Applications
