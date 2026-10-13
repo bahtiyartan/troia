@@ -36,13 +36,13 @@ The SYSIASLOGS table contains many details regarding user actions; here is the l
 	LOGTIME			: log time as milliseconds
 	CREATEDAT		: log time
 	CREATEDBY		: username (similar to USERN column)
-	
+
 For the full column list of SYSIASLOGS, please see the table on "DEVT01 - System Tables" transaction.
 
 Log Topics
 ============
 
-"Log Topic" is a kind of subject id for the log. System administrators can configure log strategies topic by topic. 
+"Log Topic" is a kind of subject id for the log. System administrators can configure log strategies topic by topic.
 
 All log messages inserted in the source code of the TROIA Platform contains a log topic. When the action (the subject of the log) occurs, system checks loggin configuration for the topic and decides to store or ignore the log. This confiuration also contains sending or not sending a log to SIEM systems.
 
@@ -83,12 +83,12 @@ Log Configuration
 
 As we mentioned before it is possible to implement different logging strategies for different databases. So the main key of logging options is stored on database on ISSYSLOG column of IASSYSTEM table. This value is managed under "SYST06 - System Parameters" -> "System Logs".
 
-In "System Logs" section on SYST06, there are some options **Closed**, **Brief**, **Detail (Transaction)**, **Detail (Transaction+Mesages)**,**Custom**. It is obvious that in "Closed" option system does not store logs. 
+In "System Logs" section on SYST06, there are some options **Closed**, **Brief**, **Detail (Transaction)**, **Detail (Transaction+Mesages)**,**Custom**. It is obvious that in "Closed" option system does not store logs.
 
 **Brief**, **Detail (Transaction)**, **Detail (Transaction+Mesages)** options enables some predefined log topics. Here is the available log topics for these predefined sets:
 
 ::
-	
+
 	Brief
 	---------
 	User Login
@@ -96,7 +96,7 @@ In "System Logs" section on SYST06, there are some options **Closed**, **Brief**
 	Invalid Username/Password
 	Invalid 2nd Factor Cridential
 	Logs From APPENDLOGENTRY Command (Topic Id : 10000+))
-	
+
 	Detail (Transaction)
 	--------------------
 	+ Brief Mode
@@ -104,33 +104,33 @@ In "System Logs" section on SYST06, there are some options **Closed**, **Brief**
 	Invalid Transaction Open Attempt
 	Transaction Close
 	Unauthorized Transaction Open Attepmt
-	
+
 	Detail (Transaction+Mesages)
 	---------------------------
 	+ Detail (Transaction)
 	TROIA Messages
 	Invalid Service Call
-	
+
 Custom Log Configuration
 ------------------------
-	
+
 **Custom** option is only available 9.03+ canias versions. And enables more detailed logging configuration options. If you select custom option system shows "Custom Log Options" button.
 
 .. figure:: images/logs/logconfig.png
    :width: 450 px
    :target: images/logs/logconfig.png
    :align: center
-   
+
 When you click this configration button system shows configuration dialog. In this dialog it is possible to decide whether this log data will be stored on database or send to SIEM system for each log topic. So it is possible to make more detailed custom log configuration.
 
 .. figure:: images/logs/customlogoptions.png
    :width: 650 px
    :target: images/logs/customlogoptions.png
    :align: center
-   
+
 This custom log configuration is stored on SYSLOGTOPICS table. In login attempt system reads custom log configuration, therefore changes are applied for the users who logs in after configuration change.
 
-	
+
 Writing Logs with TROIA
 =======================
 
@@ -139,28 +139,28 @@ In some instances, it is necessary to generate log messages within TROIA code it
 The ADDLOGENTRY command is used for such scenarios. After performing the necessary checks, the ADDLOGENTRY command writes the log generated within the TROIA code to the target tables and transmits it to the relevant systems. Therefore, directly inserting log data into the SYSIASLOGS table is not a correct practice and is not recommended. This command is avaliable on 26.10.06-01 and following builds. Here is the syntax of ADDLOGENTRY command.
 
 ::
-	
+
 	ADDLOGENTRY {message};
 	ADDLOGENTRY {message} LOGLEVEL {loglevel};
 	ADDLOGENTRY {message} LOGTOPIC {logtopic};
 	ADDLOGENTRY {message} LOGLEVEL {loglevel} LOGTOPIC {logtopic};
-	
+
 And here is a sample code that appends an log message.
 
 ::
 
 	OBJECT:
 		STRING LOGMESSAGE;
-	
+
 	LOGMESSAGE = 'invalid check table content';
 
 	ADDLOGENTRY LOGMESSAGE LOGLEVEL 'ERROR';
-	
+
 {loglevel} is a string typed parameter. This parameter's value must be ERROR, WARN or INFO. System applies log level filters due to this it's value. If it is not provided default level is INFO.
 
 Log Topic on ADDLOGENTRY Command
 --------------------------------
-Log Topic is an optional integer parameter. If it is not provided default value is 10000. [0-9999] interval is reserved for TROIA Platform log topics, so in business layer this value must be greater than 10000. Otherwise system ignores ADDLOGENTRY log command and writes an error to trace. Using different numbers on TROIA layer logs can be distingished topic by topic. 
+Log Topic is an optional integer parameter. If it is not provided default value is 10000. [0-9999] interval is reserved for TROIA Platform log topics, so in business layer this value must be greater than 10000. Otherwise system ignores ADDLOGENTRY log command and writes an error to trace. Using different numbers on TROIA layer logs can be distingished topic by topic.
 
 It is also possible to enable/disable logs that comes from ADDLOGENTRY command. To enable these kind of logs "Logs From APPENDLOGENTRY Command (Topic Id : 10000+))" must be enabled on "SYST06 - System Parameters" -> "Custom Log Options".
 
@@ -168,7 +168,7 @@ It is also possible to enable/disable logs that comes from ADDLOGENTRY command. 
 SIEM Integration
 ================
 
-It is possible to send log messages to SIEM systems. To do this, the log topics to be sent to the SIEM must be marked on SYST06, and the connected server must have a valid SIEM configuration. 
+It is possible to send log messages to SIEM systems. To do this, the log topics to be sent to the SIEM must be marked on SYST06, and the connected server must have a valid SIEM configuration.
 
 To configure SIEM at the server layer, the following variables in the Server Configuration must be edited.
 
@@ -180,7 +180,7 @@ To configure SIEM at the server layer, the following variables in the Server Con
 	SIEMLogLevel
 	SIEMAdapter
 
-	
+
 SIEM Type
 ---------
 
@@ -196,9 +196,9 @@ SIEM Address
 SIEM Address is the address of SIEM System. Host and port are separated by a column (:) char. Two sample configuration lines are below:
 
 ::
-	
+
 	SIEMAddress = 192.168.10.10:9999
-	
+
 	SIEMAddress = mysiemhost.com:9999
 
 SIEM Log Topics
@@ -210,14 +210,14 @@ SIEM Log Topics are a kind of filter string that allows system administrators re
 
 	#all topics transferred to SIEM
 	SIEMLogTopics = *
-	
+
 	#only business level logs transferred to SIEM
 	SIEMLogTopics = 10000
-	
+
 	#only login and logout
 	SIEMLogTopics = 1000, 1900
 
-	
+
 
 SIEM Log Level
 --------------
@@ -228,7 +228,7 @@ Here is a sample line:
 
 ::
 
-	# filter DEBUG logs and send INFO,WARN and ERROR to SIEM. 
+	# filter DEBUG logs and send INFO,WARN and ERROR to SIEM.
 	SIEMLogLevel = INFO
 
 
@@ -249,7 +249,7 @@ RFC 3164 (BSD Syslog Protocol) defines the legacy message format used to send ev
 
 	#sample configuration line
 	SIEMAdapter = SYSLOGRFC3154 HOST troiaserver1
-	
+
 Now your log content contains "troiaserver1" is added to log content as hostname.
 
 
@@ -261,7 +261,7 @@ RFC 5424 is the modern Syslog Protocol standard, standardized by the IETF (Inter
 SYSLOGRFC5424 HOST {hostname} [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
 
 ::
-	
+
 	#sample configuration line
 	SIEMAdapter = SYSLOGRFC5424 HOST server1 PEN pen.number ENTERPRISEID eid TZKNOWN true ISSYNCED true SYNCACCURACY saAsNumber
 
@@ -282,7 +282,7 @@ Sending Logs Directly to SIEM
 
 It is also possible to pass data to configured SIEM system directly, by TROIA. In this case, logs are not filtered due to SIEMLogTopics and SIEMLogLevel configurations, because this is a kind of forcing to send log to SIEM System.
 
-**It is not recommended to use SIEMAPPEND command unless passing only to SIEM is must.** It direcly for communicates with SIEM not adds log to the logging subsystem and IASSYSTEM table which stores log files.
+**It is not recommended to use SIEMAPPEND command unless passing only to SIEM is a must.** It communicates directly with SIEM not adds log to the logging subsystem and IASSYSTEM table which stores log files.
 
 Here is the syntax:
 
@@ -290,9 +290,9 @@ Here is the syntax:
 
 	SIEMAPPEND MESSAGE {logcontent};
 	SIEMAPPEND MESSAGE {logcontent} LOGLEVEL {level};
-	
 
-Default log level is INFO for SIEMAPPEND command. 
+
+Default log level is INFO for SIEMAPPEND command.
 
 
 
@@ -310,20 +310,19 @@ FILLLOGTOPICS Command gets a table variable and returns same table with an extra
 ::
 
 	FILLLOGTOPICS TABLE {table};
-	
+
 ::
 
-	OBJECT: 
+	OBJECT:
 		TABLE LOGTABLE,
 		DATETIME LAST1HOUR;
-	
+
 	LAST1HOUR = SYS_CURRENTDATE - (60 * 60 * 1000);
-		
-	SELECT * FROM SYSIASLOGS 
-		WHERE CLIENT = SYS_CLIENT 
+
+	SELECT * FROM SYSIASLOGS
+		WHERE CLIENT = SYS_CLIENT
 				AND USERN = SYS_USER
 				AND CREATEDAT > LAST1HOUR
 				INTO LOGTABLE;
-				
-	FILLLOGTOPICS TABLE LOGTABLE;
 
+	FILLLOGTOPICS TABLE LOGTABLE;
