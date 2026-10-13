@@ -302,14 +302,14 @@ Some Useful Functions and Commands
 
 For optimizing log analysis performance, TROIA some special commands and functions.
 
-FILLLOGTABLE Command
+FILLLOGTOPICS Command
 --------------------
 
-FILLLOGTABLE Command gets and table variable and returns same table with an extra colum named LOGTOPICTEST. This colum contains calculated human readible Log Topic text due to LOGTOPIC column of parameter table. Command loops whole table, finds correspoinding log topic text for each row internally. Here is the syntax and sample code.
+FILLLOGTOPICS Command gets and table variable and returns same table with an extra colum named LOGTOPICTEST. This colum contains calculated human readible Log Topic text due to LOGTOPIC column of parameter table. Command loops whole table, finds correspoinding log topic text for each row internally. Here is the syntax and sample code.
 
 ::
 
-	FILLLOGTABLE TABLE {table};
+	FILLLOGTOPICS TABLE {table};
 	
 ::
 
