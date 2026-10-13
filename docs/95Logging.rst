@@ -314,8 +314,8 @@ FILLLOGTOPICS Command gets and table variable and returns same table with an ext
 ::
 
 	OBJECT: 
-	TABLE LOGTABLE,
-	DATETIME LAST1HOUR;
+		TABLE LOGTABLE,
+		DATETIME LAST1HOUR;
 	
 	LAST1HOUR = SYS_CURRENTDATE - (60 * 60 * 1000);
 		
@@ -323,7 +323,7 @@ FILLLOGTOPICS Command gets and table variable and returns same table with an ext
 		WHERE CLIENT = SYS_CLIENT 
 				AND USERN = SYS_USER
 				AND CREATEDAT > LAST1HOUR
-				INTO TMPTABLE;
+				INTO LOGTABLE;
 				
-	FILLLOGTOPICS TABLE TMPTABLE;
+	FILLLOGTOPICS TABLE LOGTABLE;
 
