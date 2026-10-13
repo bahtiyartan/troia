@@ -327,8 +327,3 @@ FILLLOGTABLE Command gets and table variable and returns same table with an extr
 				
 	FILLLOGTOPICS TABLE TMPTABLE;
 
-Log Analyse Applications
-========================
-
-...log analysis application
-
