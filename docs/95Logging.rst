@@ -162,7 +162,7 @@ Log Topic on ADDLOGENTRY Command
 --------------------------------
 Log Topic is an optional integer parameter. If it is not provided default value is 10000. [0-9999] interval is reserved for TROIA Platform log topics, so in business layer this value must be greater than 10000. Otherwise system ignores ADDLOGENTRY log command and writes an error to trace. Using different numbers on TROIA layer logs can be distingished topic by topic. 
 
-It is also possible to enable/disable logs that comes from ADDLOGENTRY command. To enable these kind of logs "Logs From APPENDLOGENTRY Command (Topic Id : 10000+))" must be enabled on "SYS06 - System Parameters" -> "Custom Log Options".
+It is also possible to enable/disable logs that comes from ADDLOGENTRY command. To enable these kind of logs "Logs From APPENDLOGENTRY Command (Topic Id : 10000+))" must be enabled on "SYST06 - System Parameters" -> "Custom Log Options".
 
 
 SIEM Integration
