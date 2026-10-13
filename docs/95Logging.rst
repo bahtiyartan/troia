@@ -22,7 +22,7 @@ Whether or not such logs are kept can be configured on a per-database basis. In 
 Log Content
 -----------
 
-This logs are stored on SYSIALOGS table on database that user requests to log in. It is also possible to pass these logs to 3rd party SIEM systems, we will discuss it under another title in this section.
+This logs are stored on SYSIASLOGS table on database that user requests to log in. It is also possible to pass these logs to 3rd party SIEM systems, we will discuss it under another title in this section.
 
 The SYSIASLOGS table contains many details regarding user actions; here is the list of featured columns and their details.
 ::
@@ -305,7 +305,7 @@ For optimizing log analysis performance, TROIA some special commands and functio
 FILLLOGTOPICS Command
 --------------------
 
-FILLLOGTOPICS Command gets and table variable and returns same table with an extra colum named LOGTOPICTEST. This colum contains calculated human readible Log Topic text due to LOGTOPIC column of parameter table. Command loops whole table, finds correspoinding log topic text for each row internally. Here is the syntax and sample code.
+FILLLOGTOPICS Command gets a table variable and returns same table with an extra colum named LOGTOPICTEST. This colum contains calculated human readible Log Topic text due to LOGTOPIC column of parameter table. Command loops whole table, finds correspoinding log topic text for each row internally. Here is the syntax and sample code.
 
 ::
 
