@@ -246,6 +246,7 @@ RFC 5424 is the modern Syslog Protocol standard, standardized by the IETF (Inter
 SYSLOGRFC5424 [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
 
 ::
+
 	#sample configuration line without parameters
 	SIEMAdapter = SYSLOGRFC5424
 
