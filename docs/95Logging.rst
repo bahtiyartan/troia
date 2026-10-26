@@ -299,7 +299,7 @@ A single line of RFC5424 Log Contains all useful data for log analysis. Using th
 	HOSTNAME			: ServerId
 	APP-NAME			: LogTopicId:HumanReadableLogTopic
 	PROCID				: transactionId@sessionId
-	MSGID				: unavailable
+	MSGID				
 	SD
 		ORIGIN			
 			SOFTWARE	: CANIAS-SERVER or CANIAS-USER
@@ -308,9 +308,20 @@ A single line of RFC5424 Log Contains all useful data for log analysis. Using th
 		LANGUAGE		: EN (logs are in english as default)
 		SEQUENCEID		: Long SequenceId
 		SYSUPTIME		: Milliseconds from start.
-	LOGMESSAGE
+	LOGMESSAGE			: json (mostly) or plain text log message
 	
+
+**HOSTNAME** is the server id which is the default network configuration of application server.
 	
+**APP-NAME** shows the id number and human readible description of log topic. For more information about log topic please review related titles in this section.
+
+**PROCID** if this log is realeted  with a user transaction it contains transactionId@sessionId. If it is direcly about session not a specific transaction it contains only sessionid without @ char. But if log is related with app server it is only a dash (-) char.
+
+**SD->ORIGIN->SOFTWARE** is a text value and if log is related with a user session this data starts with CANIAS-USER and contains dbserver, dbname, client and username. Otherwise, if it is direcly about application server it starts with CANIAS-SERVER.
+
+**META->SYSUPTIME** shows the up time period in milliseconds. This value shows period between server start and the moment that log appends if log is related with application server. If log is related with a user session it shows the period between session start and logging moment.
+
+**LOGMESSAGE** is mostly a json string to describe the action. In some cases it can be a plain text.
 
 
 Sending Logs Directly to SIEM
