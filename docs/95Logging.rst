@@ -245,7 +245,7 @@ RFC 3164 (BSD Syslog Protocol) defines the legacy message format used to send ev
 ::
 
 	#syntax
-	#SYSLOGRFC3154 HOST {hostname}
+	#SYSLOGRFC3154
 
 	#sample configuration line
 	SIEMAdapter = SYSLOGRFC3154 HOST troiaserver1
@@ -258,12 +258,12 @@ SYSLOG RFC5424 / RFC5425
 
 RFC 5424 is the modern Syslog Protocol standard, standardized by the IETF (Internet Engineering Task Force) and used for the transmission of event notification (syslog) messages. Here is the syntax and sample
 
-SYSLOGRFC5424 HOST {hostname} [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
+SYSLOGRFC5424 [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
 
 ::
 
 	#sample configuration line
-	SIEMAdapter = SYSLOGRFC5424 HOST server1 PEN pen.number ENTERPRISEID eid TZKNOWN true ISSYNCED true SYNCACCURACY saAsNumber
+	SIEMAdapter = SYSLOGRFC5424 PEN pen.number ENTERPRISEID eid TZKNOWN true ISSYNCED true SYNCACCURACY saAsNumber
 
 
 RFC 5425 is very similar to RFC 5425. Here is the syntax and sample
@@ -273,7 +273,10 @@ SYSLOGRFC5425 HOST {hostname} [PEN {privateEnterpriseNumber}] [ENTERPRISEID {ent
 ::
 
 	#sample configuration line
-	SIEMAdapter = SYSLOGRFC5425 HOST server1 PEN pen.number ENTERPRISEID eid TZKNOWN true ISSYNCED true SYNCACCURACY saAsNumber
+	SIEMAdapter = SYSLOGRFC5425 PEN pen.number ENTERPRISEID eid TZKNOWN true ISSYNCED true SYNCACCURACY saAsNumber
+	
+
+**SYSLOGRFC5424 is the default adapter for SIEM Integration**, so if SIEM is enabled but there is not a configured adapter system uses SYSLOGRFC5424 with default parameters.
 
 
 
