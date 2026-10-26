@@ -324,7 +324,7 @@ A single line of RFC5424 Log Contains all useful data for log analysis. Using th
 **LOGMESSAGE** is mostly a json string to describe the action. In some cases it can be a plain text.
 
 
-Some sample log messages listed below:
+Some sample log messages with RFC5424 are listed below:
 
 ::
 
