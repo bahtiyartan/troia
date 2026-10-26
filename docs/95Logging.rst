@@ -268,8 +268,8 @@ A single line of RFC5424 Log Contains all useful data for log analysis. Using th
 	TIMESTAMP			: LogTime
 	HOSTNAME			: ServerId
 	APP-NAME			: LogTopicId:HumanReadableLogTopic
-	PROCID				: transactionId@sessionId
-	MSGID				: - (unavailable)
+	PROCID				: TransactionId@SessionId
+	MSGID				: - (Unavailable)
 	SD
 	  ORIGIN			
 	    SOFTWARE			: CANIAS-SERVER or CANIAS-USER
@@ -278,7 +278,7 @@ A single line of RFC5424 Log Contains all useful data for log analysis. Using th
 	  LANGUAGE			: EN (logs are in english as default)
 	  SEQUENCEID			: Long SequenceId
 	  SYSUPTIME			: Milliseconds from start.
-	LOGMESSAGE			: json (mostly) or plain text log message
+	LOGMESSAGE			: JSON (mostly) or plain text log message
 	
 
 **HOSTNAME** is the server id which is the default network configuration of application server.
