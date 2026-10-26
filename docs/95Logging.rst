@@ -180,20 +180,13 @@ To configure SIEM at the server layer, the following variables in the Server Con
 	SIEMLogLevel
 	SIEMAdapter
 
-
-SIEM Type
----------
-
-SIEM type is a kind of protocol definition to communicate with different types of SIEM Systems. "UDP" is the only available option. Here is sample configuration line for SIEM Type.
+**SIEM Type** is a kind of protocol definition to communicate with different types of SIEM Systems. "UDP" is the only available option. Here is sample configuration line for SIEM Type.
 
 ::
 
 	SIEMType = UDP
 
-SIEM Address
-------------
-
-SIEM Address is the address of SIEM System. Host and port are separated by a column (:) char. Two sample configuration lines are below:
+**SIEM Address** is the address of SIEM System. Host and port are separated by a column (:) char. Two sample configuration lines are below:
 
 ::
 
@@ -201,10 +194,7 @@ SIEM Address is the address of SIEM System. Host and port are separated by a col
 
 	SIEMAddress = mysiemhost.com:9999
 
-SIEM Log Topics
-----------------
-
-SIEM Log Topics are a kind of filter string that allows system administrators reduce log count by topics. It is a comma(,) separated log topic id list that contains only allowed log topic ids. If it is not provided or set to asterisk(*) char, system sends all log topics to SIEM system. Here is sample configuration lines:
+**SIEM Log Topics** are a kind of filter string that allows system administrators reduce log count by topics. It is a comma(,) separated log topic id list that contains only allowed log topic ids. If it is not provided or set to asterisk(*) char, system sends all log topics to SIEM system. Here is sample configuration lines:
 
 ::
 
@@ -217,12 +207,7 @@ SIEM Log Topics are a kind of filter string that allows system administrators re
 	#only login and logout
 	SIEMLogTopics = 1000, 1900
 
-
-
-SIEM Log Level
---------------
-
-SIEM Log Level is another filter option to manage logs transferred to SIEM system. Value of this parameter must be one of ERROR,WARN,INFO,DEBUG. Sysem sends only logs those severity level is higher and equal. Default value is DEBUG and does not apply any filter and sends all logs to SIEM.
+**SIEM Log Level** is another filter option to manage logs transferred to SIEM system. Value of this parameter must be one of ERROR,WARN,INFO,DEBUG. Sysem sends only logs those severity level is higher and equal. Default value is DEBUG and does not apply any filter and sends all logs to SIEM.
 
 Here is a sample line:
 
