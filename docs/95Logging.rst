@@ -293,21 +293,21 @@ A single line of RFC5424 Log Contains all useful data for log analysis. Using th
 
 ::
 
-	PRI						: Priority
-	VERSION					: LogVersion
-	TIMESTAMP				: LogTime
-	HOSTNAME				: ServerId
-	APP-NAME				: LogTopicId:HumanReadableLogTopic
-	PROCID					: transactionId@sessionId
-	MSGID					: unavailable
-	SD (structured data)
-		ORIGIN				
-			SOFTWARE		: CANIAS-SERVER or CANIAS-USER
-			SWVERSION		: TROIABuildNumber
+	PRI				: Priority
+	VERSION				: LogVersion
+	TIMESTAMP			: LogTime
+	HOSTNAME			: ServerId
+	APP-NAME			: LogTopicId:HumanReadableLogTopic
+	PROCID				: transactionId@sessionId
+	MSGID				: unavailable
+	SD
+		ORIGIN			
+			SOFTWARE	: CANIAS-SERVER or CANIAS-USER
+			SWVERSION	: TROIABuildNumber
 	META					
-		LANGUAGE			: EN (logs are in english as default)
-		SEQUENCEID			: Long SequenceId
-		SYSUPTIME			: Milliseconds from start.
+		LANGUAGE		: EN (logs are in english as default)
+		SEQUENCEID		: Long SequenceId
+		SYSUPTIME		: Milliseconds from start.
 	LOGMESSAGE
 	
 	
