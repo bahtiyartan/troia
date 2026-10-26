@@ -256,38 +256,8 @@ SYSLOGRFC5424 [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZK
 
 **SYSLOGRFC5424 is the default adapter for SIEM Integration**, so if SIEM is enabled but there is not a configured adapter system uses SYSLOGRFC5424 with default parameters.
 
-
-SYSLOG RFC5425
----------------
-
-RFC 5425 is very similar to RFC 5425. Here is the syntax and sample:
-
-SYSLOGRFC5425 [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
-
-::
-
-	#sample configuration line
-	SIEMAdapter = SYSLOGRFC5425 PEN pen.number ENTERPRISEID eid TZKNOWN true ISSYNCED true SYNCACCURACY saAsNumber
-	
-
-SYSLOG RFC3164
---------------
-
-RFC 3164 (BSD Syslog Protocol) defines the legacy message format used to send event notification messages over IP networks. Characteristically, it contains host name that generating the log. Here is the syntax and sample for server configuration:
-
-::
-
-	#syntax
-	#SYSLOGRFC3154
-
-	#sample configuration line
-	SIEMAdapter = SYSLOGRFC3154 HOST troiaserver1
-
-Now your log content contains "troiaserver1" is added to log content as hostname.
-
-
 Log Structure for Default RFC5424
-=================================
+---------------------------------
 
 A single line of RFC5424 Log Contains all useful data for log analysis. Using this log line you can get priority, log time, session, transaction, log topic, log content etc. If a type of data is unavailable due to logs topic, system adds dash(-) character instead of the data. Here is the sections of log line:
 
@@ -334,6 +304,37 @@ Some sample log messages with RFC5424 are listed below:
 	<134>1 2026-10-26T06:14:34.102Z 192.168.X.X:1099/S1 10000:LogsByADDLOGENTRYCommand btan_RNDT01_503@btan_5C965010017F8C - [origin software="CANIAS-USER:CANIAS/903DEV/00/btan" swVersion="00.00.00-01"][meta language="EN" sequenceId="8" sysUpTime="8115"] this is a troia log content
 	<134>1 2026-10-26T06:14:35.580Z 192.168.X.X:1099/S1 4000:TroiaMessage btan_RNDT01_503@btan_5C965010017F8C - [origin software="CANIAS-USER:CANIAS/903DEV/00/btan" swVersion="00.00.00-01"][meta language="EN" sequenceId="9" sysUpTime="8263"] [BAS E110] Country %s %s not found!(btan_5C965010017F8C)
 	<134>1 2026-10-26T06:15:25.972Z 192.168.X.X:1099/S1 2900:TransactionClose btan_RNDT01_503@btan_5C965010017F8C - [origin software="CANIAS-USER:CANIAS/903DEV/00/btan" swVersion="00.00.00-01"][meta language="EN" sequenceId="10" sysUpTime="13302"] {"Action":"TransactionClose","Transaction":"RNDT01","Id":"btan_RNDT01_503"}
+
+
+
+SYSLOG RFC5425
+---------------
+
+RFC 5425 is very similar to RFC 5425. Here is the syntax and sample:
+
+SYSLOGRFC5425 [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
+
+::
+
+	#sample configuration line
+	SIEMAdapter = SYSLOGRFC5425 PEN pen.number ENTERPRISEID eid TZKNOWN true ISSYNCED true SYNCACCURACY saAsNumber
+	
+
+SYSLOG RFC3164
+--------------
+
+RFC 3164 (BSD Syslog Protocol) defines the legacy message format used to send event notification messages over IP networks. Characteristically, it contains host name that generating the log. Here is the syntax and sample for server configuration:
+
+::
+
+	#syntax
+	#SYSLOGRFC3154
+
+	#sample configuration line
+	SIEMAdapter = SYSLOGRFC3154 HOST troiaserver1
+
+Now your log content contains "troiaserver1" is added to log content as hostname.
+
 
 
 Sending Logs Directly to SIEM
