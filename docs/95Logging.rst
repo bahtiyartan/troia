@@ -324,6 +324,18 @@ A single line of RFC5424 Log Contains all useful data for log analysis. Using th
 **LOGMESSAGE** is mostly a json string to describe the action. In some cases it can be a plain text.
 
 
+Some sample log messages listed below:
+
+::
+
+	<134>1 2026-10-26T06:13:05.754Z 192.168.X.X:1099/S1 7000:ServerStart - - [origin software="CANIAS-SERVER" swVersion="00.00.00-01"][meta language="EN" sequenceId="1" sysUpTime="26"] Application Server started successfully
+	<134>1 2026-10-26T06:13:16.011Z 192.168.X.X:1099/S1 1000:UserLogin btan_5C965010017F8C - [origin software="CANIAS-USER:CANIAS/903DEV/00/btan" swVersion="00.00.00-01"][meta language="EN" sequenceId="2" sysUpTime="306"] {"Action":"UserLogin","User":"CANIAS/903DEV/00/btan","SessionId":"btan_5C965010017F8C","SPID1":"449134","SPID2":"449133","ClientAddress":"RD-WIN10-BTAN@192.168.5.164"}
+	<134>1 2026-10-26T06:14:22.423Z 192.168.X.X:1099/S1 2000:TransactionOpen btan_RNDT01_503@btan_5C965010017F8C - [origin software="CANIAS-USER:CANIAS/903DEV/00/btan" swVersion="00.00.00-01"][meta language="EN" sequenceId="5" sysUpTime="6947"] {"Action":"TransactionOpen","Transaction":"RNDT01","Id":"btan_RNDT01_503"}
+	<134>1 2026-10-26T06:14:34.102Z 192.168.X.X:1099/S1 10000:LogsByADDLOGENTRYCommand btan_RNDT01_503@btan_5C965010017F8C - [origin software="CANIAS-USER:CANIAS/903DEV/00/btan" swVersion="00.00.00-01"][meta language="EN" sequenceId="8" sysUpTime="8115"] this is a troia log content
+	<134>1 2026-10-26T06:14:35.580Z 192.168.X.X:1099/S1 4000:TroiaMessage btan_RNDT01_503@btan_5C965010017F8C - [origin software="CANIAS-USER:CANIAS/903DEV/00/btan" swVersion="00.00.00-01"][meta language="EN" sequenceId="9" sysUpTime="8263"] [BAS E110] Country %s %s not found!(btan_5C965010017F8C)
+	<134>1 2026-10-26T06:15:25.972Z 192.168.X.X:1099/S1 2900:TransactionClose btan_RNDT01_503@btan_5C965010017F8C - [origin software="CANIAS-USER:CANIAS/903DEV/00/btan" swVersion="00.00.00-01"][meta language="EN" sequenceId="10" sysUpTime="13302"] {"Action":"TransactionClose","Transaction":"RNDT01","Id":"btan_RNDT01_503"}
+
+
 Sending Logs Directly to SIEM
 =============================
 
