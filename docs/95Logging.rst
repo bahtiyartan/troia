@@ -302,12 +302,12 @@ A single line of RFC5424 Log Contains all useful data for log analysis. Using th
 	MSGID				
 	SD
 	  ORIGIN			
-	    SOFTWARE		: CANIAS-SERVER or CANIAS-USER
-	    SWVERSION		: TROIABuildNumber
+	    SOFTWARE			: CANIAS-SERVER or CANIAS-USER
+	    SWVERSION			: TROIABuildNumber
 	META					
-		LANGUAGE		: EN (logs are in english as default)
-		SEQUENCEID		: Long SequenceId
-		SYSUPTIME		: Milliseconds from start.
+	  LANGUAGE			: EN (logs are in english as default)
+	  SEQUENCEID		: Long SequenceId
+	  SYSUPTIME			: Milliseconds from start.
 	LOGMESSAGE			: json (mostly) or plain text log message
 	
 
