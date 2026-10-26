@@ -306,7 +306,7 @@ A single line of RFC5424 Log Contains all useful data for log analysis. Using th
 	    SWVERSION			: TROIABuildNumber
 	META					
 	  LANGUAGE			: EN (logs are in english as default)
-	  SEQUENCEID		: Long SequenceId
+	  SEQUENCEID			: Long SequenceId
 	  SYSUPTIME			: Milliseconds from start.
 	LOGMESSAGE			: json (mostly) or plain text log message
 	
