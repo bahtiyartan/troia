@@ -238,7 +238,7 @@ SIEM Adapter
 SIEM Adapter allows system administrators to select log format that will be passed to SIEM System. Supported protocols are SYSLOG RFC3164, SYSLOG RFC5424, SYSLOG RFC5425 all these standards has different customization options and their own formats. For more information about SYSLOG Formats please apply specific resources.
 
 
-SYSLOG RFC5424 / RFC5425
+SYSLOG RFC5424
 ------------------------
 
 RFC 5424 is the modern Syslog Protocol standard, standardized by the IETF (Internet Engineering Task Force) and used for the transmission of event notification (syslog) messages. Here is the syntax and sample
@@ -252,9 +252,15 @@ SYSLOGRFC5424 [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZK
 
 	#sample configuration line with parameters
 	SIEMAdapter = SYSLOGRFC5424 PEN pen.number ENTERPRISEID eid TZKNOWN true ISSYNCED true SYNCACCURACY saAsNumber
+	
+
+**SYSLOGRFC5424 is the default adapter for SIEM Integration**, so if SIEM is enabled but there is not a configured adapter system uses SYSLOGRFC5424 with default parameters.
 
 
-RFC 5425 is very similar to RFC 5425. Here is the syntax and sample
+SYSLOG RFC5425
+---------------
+
+RFC 5425 is very similar to RFC 5425. Here is the syntax and sample:
 
 SYSLOGRFC5425 [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZKNOWN {tzKnown}] [ISSYNCED {isSynced}] [SYNCACCURACY {syncAccuracy}]
 
@@ -263,9 +269,6 @@ SYSLOGRFC5425 [PEN {privateEnterpriseNumber}] [ENTERPRISEID {enterpriseId}] [TZK
 	#sample configuration line
 	SIEMAdapter = SYSLOGRFC5425 PEN pen.number ENTERPRISEID eid TZKNOWN true ISSYNCED true SYNCACCURACY saAsNumber
 	
-
-**SYSLOGRFC5424 is the default adapter for SIEM Integration**, so if SIEM is enabled but there is not a configured adapter system uses SYSLOGRFC5424 with default parameters.
-
 
 SYSLOG RFC3164
 --------------
@@ -282,6 +285,32 @@ RFC 3164 (BSD Syslog Protocol) defines the legacy message format used to send ev
 
 Now your log content contains "troiaserver1" is added to log content as hostname.
 
+
+Log Structure for Default RFC5424
+=================================
+
+A single line of RFC5424 Log Contains all useful data for log analysis. Using this log line you can get priority, log time, session, transaction, log topic, log content etc. If a type of data is unavailable due to logs topic, system adds dash(-) character instead of the data. Here is the sections of log line:
+
+::
+
+	PRI						: Priority
+	VERSION					: LogVersion
+	TIMESTAMP				: LogTime
+	HOSTNAME				: ServerId
+	APP-NAME				: LogTopicId:HumanReadableLogTopic
+	PROCID					: transactionId@sessionId
+	MSGID					: unavailable
+	SD (structured data)
+		ORIGIN				
+			SOFTWARE		: CANIAS-SERVER or CANIAS-USER
+			SWVERSION		: TROIABuildNumber
+	META					
+		LANGUAGE			: EN (logs are in english as default)
+		SEQUENCEID			: Long SequenceId
+		SYSUPTIME			: Milliseconds from start.
+	LOGMESSAGE
+	
+	
 
 
 Sending Logs Directly to SIEM
