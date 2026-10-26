@@ -299,7 +299,7 @@ A single line of RFC5424 Log Contains all useful data for log analysis. Using th
 	HOSTNAME			: ServerId
 	APP-NAME			: LogTopicId:HumanReadableLogTopic
 	PROCID				: transactionId@sessionId
-	MSGID				
+	MSGID				: - (unavailable)
 	SD
 	  ORIGIN			
 	    SOFTWARE			: CANIAS-SERVER or CANIAS-USER
