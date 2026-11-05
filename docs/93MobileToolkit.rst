@@ -113,13 +113,15 @@ Basic Functions and Customization
 
 Mobile Toolkit is designed to make the most needed functions of the business layer modules accessible on mobile devices. **These functions are compatible with the standard version of Canias and customer-specific customizations are not included.** These functions will change over time depending on the version of the application used. You can review the list below for the current functions of Mobile Toolkit:
 
-- User Push Notifications
-- KPI List
-- BPM Processes				(if user has BPMT08 access)
-- Mail Management			(if user has MAMT01 access)
-- Agenda					(if user has CLBT01 access)
-- Cash Flow					(if user has FRMT12 access)
-- Online Banking Summary	(if user has OBMT01 access)
-- Leaves					(if user has SSMT04 access)
+::
+
+	- User Push Notifications
+	- KPI List
+	- BPM Processes				(if user has BPMT08 access)
+	- Mail Management			(if user has MAMT01 access)
+	- Agenda					(if user has CLBT01 access)
+	- Cash Flow					(if user has FRMT12 access)
+	- Online Banking Summary	(if user has OBMT01 access)
+	- Leaves					(if user has SSMT04 access)
 
 **It is not possible to make customizations on Mobile Toolkit for any level such as UI, basic functionality etc.**
